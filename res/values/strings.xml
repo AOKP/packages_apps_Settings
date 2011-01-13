@@ -4853,6 +4853,7 @@
     <!-- Cell Broadcast settings title [CHAR LIMIT=50] -->
     <string name="cell_broadcast_settings">Cell broadcasts</string>
 
+<<<<<<< HEAD
     <!-- User app limits screen title [CHAR LIMIT=35] -->
     <string name="user_restrictions_title">Application and content restrictions</string>
     <!-- User limits screen, user name rename text [CHAR LIMIT=15] -->
@@ -4899,4 +4900,5 @@
 
     <!-- Text to display in regulatory info screen (from device overlay). -->
     <string name="regulatory_info_text"></string>
+
 </resources>
