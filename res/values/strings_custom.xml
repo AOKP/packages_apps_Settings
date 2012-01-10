@@ -35,6 +35,9 @@
     <string name="mod_version">AOKP version</string>
     <!-- About phone screen,  AOKP unknown name-->
     <string name="mod_version_default">Unknown</string>
+    <!-- About phone screen, build date of ROM -->
+    <string name="build_date">Build date</string>
+    <string name="build_date_default">2012-01-01-0000</string>
     <!-- Device specific settings -->
     <string name="quick_links_title">Quick Links</string>
     <string name="advanced_settings_title">Device options</string>
