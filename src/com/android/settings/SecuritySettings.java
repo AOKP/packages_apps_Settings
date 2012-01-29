@@ -37,9 +37,13 @@ import android.provider.Settings;
 import android.security.KeyStore;
 import android.telephony.TelephonyManager;
 import android.util.Log;
+import android.widget.Toast;
 
+
+import com.android.internal.widget.AuthentecLoader;
 import com.android.internal.telephony.Phone;
 import com.android.internal.widget.LockPatternUtils;
+import android.content.ComponentName;
 
 import java.util.ArrayList;
 
@@ -56,9 +60,11 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private static final String KEY_LOCK_ENABLED = "lockenabled";
     private static final String KEY_VISIBLE_PATTERN = "visiblepattern";
     private static final String KEY_TACTILE_FEEDBACK_ENABLED = "unlock_tactile_feedback";
+    private static final String KEY_START_DATABASE_ADMINISTRATION = "start_database_administration";
     private static final String KEY_SECURITY_CATEGORY = "security_category";
     private static final String KEY_LOCK_AFTER_TIMEOUT = "lock_after_timeout";
     private static final int SET_OR_CHANGE_LOCK_METHOD_REQUEST = 123;
+    private static final int TSM_RESULT = 195;
     private static final int CONFIRM_EXISTING_FOR_BIOMETRIC_IMPROVE_REQUEST = 124;
 
     // Misc Settings
@@ -76,6 +82,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
 
     private CheckBoxPreference mVisiblePattern;
     private CheckBoxPreference mTactileFeedback;
+    private Preference mStartDatabaseAdministration;
 
     private CheckBoxPreference mShowPassword;
 
@@ -84,6 +91,9 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private CheckBoxPreference mToggleAppInstallation;
     private DialogInterface mWarnInstallApps;
     private CheckBoxPreference mPowerButtonInstantlyLocks;
+
+    private Class AM_STATUS = null;
+    private AuthentecLoader loader;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -94,6 +104,11 @@ public class SecuritySettings extends SettingsPreferenceFragment
         mDPM = (DevicePolicyManager)getSystemService(Context.DEVICE_POLICY_SERVICE);
 
         mChooseLockSettingsHelper = new ChooseLockSettingsHelper(getActivity());
+
+	 // load AM_STATUS
+        loader = AuthentecLoader.getInstance(null);
+        AM_STATUS = loader.getAMStatus();
+
     }
 
     private PreferenceScreen createPreferenceHierarchy() {
@@ -119,6 +134,10 @@ public class SecuritySettings extends SettingsPreferenceFragment
             switch (mLockPatternUtils.getKeyguardStoredPasswordQuality()) {
                 case DevicePolicyManager.PASSWORD_QUALITY_SOMETHING:
                     resid = R.xml.security_settings_pattern;
+                    break;
+ 		case DevicePolicyManager.PASSWORD_QUALITY_FINGER:
+                    //addPreferencesFromResource(R.xml.security_settings_finger);
+		    resid = R.xml.security_settings_finger;
                     break;
                 case DevicePolicyManager.PASSWORD_QUALITY_NUMERIC:
                     resid = R.xml.security_settings_pin;
@@ -182,6 +201,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
                 securityCategory.removePreference(mTactileFeedback);
             }
         }
+	mStartDatabaseAdministration = (Preference) findPreference(KEY_START_DATABASE_ADMINISTRATION);
 
         // Append the rest of the settings
         addPreferencesFromResource(R.xml.security_settings_misc);
@@ -362,6 +382,14 @@ public class SecuritySettings extends SettingsPreferenceFragment
             lockPatternUtils.setTactileFeedbackEnabled(isToggled(preference));
         } else if (KEY_POWER_INSTANTLY_LOCKS.equals(key)) {
             lockPatternUtils.setPowerButtonInstantlyLocks(isToggled(preference));
+        } else if (KEY_START_DATABASE_ADMINISTRATION.equals(key)) {
+            // invoke the external activity
+            Intent intent = new Intent();
+            ComponentName component = new ComponentName("com.authentec.TrueSuiteMobile",
+                                "com.authentec.TrueSuiteMobile.DatabaseAdministration");
+            intent.setComponent(component);
+            intent.setAction(Intent.ACTION_MAIN);
+            startActivityForResult(intent, TSM_RESULT);
         } else if (preference == mShowPassword) {
             Settings.System.putInt(getContentResolver(), Settings.System.TEXT_SHOW_PASSWORD,
                     mShowPassword.isChecked() ? 1 : 0);
@@ -384,6 +412,22 @@ public class SecuritySettings extends SettingsPreferenceFragment
         return ((CheckBoxPreference) pref).isChecked();
     }
 
+    // The toast() function is provided to allow non-UI thread code to
+    // conveniently raise a toast...
+
+    
+    private void toast(final String s)
+    {
+        getActivity().runOnUiThread(new Runnable() {
+            public void run()
+            {
+                //Toast.makeText(SecuritySettings.this, s, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), s, Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+     
+    
     /**
      * see confirmPatternThenDisableAndClear
      */
@@ -395,6 +439,27 @@ public class SecuritySettings extends SettingsPreferenceFragment
             startBiometricWeakImprove();
             return;
         }
+
+	if (TSM_RESULT == requestCode)
+        {
+            // NOTE: the result has a bias of 100!
+            int iResult = resultCode - 100;
+            try {
+                if (iResult == AM_STATUS.getDeclaredField("eAM_STATUS_OK").getInt(AM_STATUS)) {
+                    // Disable the fingerprint unlock mode if all fingers have been deleted.
+                    if (!mLockPatternUtils.savedFingerExists()) {
+                        mLockPatternUtils.setLockFingerEnabled(false);
+                    }
+                } else if (iResult == AM_STATUS.getDeclaredField("eAM_STATUS_LIBRARY_NOT_AVAILABLE").getInt(AM_STATUS)) {
+                    toast(getString(R.string.lockfinger_tsm_library_not_available_toast));
+                } else if (iResult == AM_STATUS.getDeclaredField("eAM_STATUS_USER_CANCELED").getInt(AM_STATUS)) {
+                    // Do nothing!
+                } else {
+                    toast(getString(R.string.lockfinger_dbadmin_failure_default_toast, iResult));
+                }
+            } catch (Exception e) {e.printStackTrace();}
+        }
+
         createPreferenceHierarchy();
     }
 

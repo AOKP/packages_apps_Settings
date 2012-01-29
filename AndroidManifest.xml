@@ -892,8 +892,19 @@
         <activity android:name="ConfirmLockPassword"
             android:windowSoftInputMode="stateVisible|adjustResize"/>
 
-        <activity android:name="ChooseLockGeneric"
+        
+	 <activity android:name="ConfirmLockFinger"
+            android:label="@string/lockpattern_change_lock_finger_label"
+            android:configChanges="orientation|keyboardHidden"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+	<activity android:name="ChooseLockGeneric"
             android:label="@string/lockpassword_choose_lock_generic_header"
+            android:configChanges="orientation|keyboardHidden"
             android:excludeFromRecents="true" >
             <intent-filter>
                 <action android:name="android.app.action.SET_NEW_PASSWORD" />
@@ -903,10 +914,26 @@
 
         <activity android:name="ChooseLockPattern" android:exported="false"/>
 
+        <activity android:name="ChooseLockFinger"
+            android:configChanges="orientation|keyboardHidden"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+
         <activity android:name="ChooseLockPassword" android:exported="false"
             android:windowSoftInputMode="stateVisible|adjustResize"/>
 
         <activity android:name="ChooseLockPatternTutorial" android:exported="false"/>
+
+	  <service android:name="com.android.settings.GfxEngineRelayService">
+            <intent-filter>
+                <action android:name="com.authentec.KeyguardSettings" />
+            </intent-filter>
+        </service>
 
         <!-- Runs in the phone process since it needs access to the Phone object -->
         <activity android:name=".deviceinfo.Status"

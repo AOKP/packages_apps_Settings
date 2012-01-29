@@ -58,6 +58,9 @@ public final class ChooseLockSettingsHelper {
             case DevicePolicyManager.PASSWORD_QUALITY_SOMETHING:
                 launched = confirmPattern(request, message, details);
                 break;
+ 	    case DevicePolicyManager.PASSWORD_QUALITY_FINGER:
+                launched = confirmFinger(request, message, details);
+                break;
             case DevicePolicyManager.PASSWORD_QUALITY_NUMERIC:
             case DevicePolicyManager.PASSWORD_QUALITY_ALPHABETIC:
             case DevicePolicyManager.PASSWORD_QUALITY_ALPHANUMERIC:
@@ -92,6 +95,30 @@ public final class ChooseLockSettingsHelper {
         }
         return true;
     }
+
+    /**
+     * Launch screen to confirm the existing lock finger.
+     * @param message shown in header of ConfirmLockFinger if not null
+     * @param details shown in footer of ConfirmLockFinger if not null
+     * @see #onActivityResult(int, int, android.content.Intent)
+     * @return true if we launched an activity to confirm finger
+     */
+    private boolean confirmFinger(int request, CharSequence message, CharSequence details) {
+        if (!mLockPatternUtils.isLockFingerEnabled() || !mLockPatternUtils.savedFingerExists()) {
+            return false;
+        }
+        final Intent intent = new Intent();
+        intent.setClassName("com.android.settings", "com.android.settings.ConfirmLockFinger");
+        //mActivity.startActivityForResult(intent, request);
+	if (mFragment != null) {
+            mFragment.startActivityForResult(intent, request);
+        } else {
+            mActivity.startActivityForResult(intent, request);
+        }
+
+        return true;
+    }
+
 
     /**
      * Launch screen to confirm the existing lock password.

@@ -41,6 +41,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TabWidget;
+import android.util.Log;
 
 import java.net.InetAddress;
 import java.util.Iterator;
@@ -224,6 +225,11 @@ public class Utils {
             PackageManager pm = context.getPackageManager();
             List<ResolveInfo> list = pm.queryIntentActivities(intent, PackageManager.GET_META_DATA);
             int listSize = list.size();
+
+	    // Atrix Device_debug
+	    if (listSize == 0)
+	    	Log.w ("Settings/Util", "queryIntentActivities returned a list of 0 for " + header.id );
+
             for (int i = 0; i < listSize; i++) {
                 ResolveInfo resolveInfo = list.get(i);
                 if ((resolveInfo.activityInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM)
@@ -242,7 +248,15 @@ public class Utils {
                             icon = res.getDrawable(metaData.getInt(META_DATA_PREFERENCE_ICON));
                             title = res.getString(metaData.getInt(META_DATA_PREFERENCE_TITLE));
                             summary = res.getString(metaData.getInt(META_DATA_PREFERENCE_SUMMARY));
-                        }
+
+	    		    // Atrix Device_debug
+	    	            Log.w ("Settings/Util", "icon:" + icon.toString() );
+	    	            Log.w ("Settings/Util", "title:" + title );
+	    	            Log.w ("Settings/Util", "summary:" + summary );
+                        } else
+	    	            Log.w ("Settings/Util", "res or metaData null for: " + resolveInfo.activityInfo.packageName   );
+				
+
                     } catch (NameNotFoundException e) {
                         // Ignore
                     } catch (NotFoundException e) {
@@ -265,13 +279,18 @@ public class Utils {
                             resolveInfo.activityInfo.name);
 
                     return true;
-                }
+                } else
+	    	    // Atrix Device_debug
+	    	    Log.w ("Settings/Util", "ApplicationInfo flags not aligned:" + resolveInfo.activityInfo.packageName );
+			
             }
         }
 
         // Did not find a matching activity, so remove the preference
         if (target.remove(header)) System.err.println("Removed " + header.id);
-
+	// Atrix Device_debug
+	Log.w ("Settings/Util", "Removed header: " + header.id );
+	
         return false;
     }
 
