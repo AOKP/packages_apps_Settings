@@ -325,11 +325,7 @@ public class Settings extends PreferenceActivity implements ButtonBarHandler {
                     target.remove(header);
             } else if (id == R.id.operator_settings || id == R.id.manufacturer_settings) {
                 Utils.updateHeaderToSpecificActivityFromMetaDataOrRemove(this, target, header);
-		if (id == R.id.device_settings)
-		{
-			Log.w (LOG_TAG, "Settings: Found  device settings and run update Header or Remove : id : " + id 
-					+ "Header Dump" + header.toString() );
-		}
+		
             } else if (id == R.id.wifi_settings) {
                 // Remove WiFi Settings if WiFi service is not available.
                 if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_WIFI)) {
