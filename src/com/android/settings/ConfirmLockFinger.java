@@ -253,7 +253,7 @@ public class ConfirmLockFinger extends Activity {
                         {
                             // If the thread state is TERMINATED, it cannot be start() again.
                             // Create a thread for verification.
-			                mExecutionThread = new Thread(mVerifyRunner);
+                            mExecutionThread = new Thread(mVerifyRunner);
                             mExecutionThread.start();
                         }
                         else

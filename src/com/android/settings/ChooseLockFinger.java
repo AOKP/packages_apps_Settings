@@ -78,20 +78,20 @@ public class ChooseLockFinger extends PreferenceActivity {
         AM_STATUS = loader.getAMStatus();
         TSM = loader.getTSM();
 
-	if (loader == null)
-		Log.e("ChooseLockFinger", "Authentec Loader - Null");
-	else
-		Log.w("ChooseLockFinger", "Authentec Loader: " + loader.toString() );
-	
-	if (TSM == null )
-		Log.e ("ChooseLockFinger", "TSM - Null");
-	else
-		Log.w ("ChooseLockFinger", "TSM: " + TSM.toString() );
+    if (loader == null)
+        Log.e("ChooseLockFinger", "Authentec Loader - Null");
+    else
+        Log.w("ChooseLockFinger", "Authentec Loader: " + loader.toString() );
 
-	if (AM_STATUS == null )
-		Log.e ("ChooseLockFinger", "AM_STATUS - Nulll");
-	else
-		Log.w ("ChooseLockFinger", "AM_STATUS: " + AM_STATUS.toString() );
+    if (TSM == null )
+        Log.e ("ChooseLockFinger", "TSM - Null");
+    else
+        Log.w ("ChooseLockFinger", "TSM: " + TSM.toString() );
+
+    if (AM_STATUS == null )
+        Log.e ("ChooseLockFinger", "AM_STATUS - Nulll");
+    else
+        Log.w ("ChooseLockFinger", "AM_STATUS: " + AM_STATUS.toString() );
 
 
         if (mLockPatternUtils.savedFingerExists()) {
@@ -203,9 +203,9 @@ public class ChooseLockFinger extends PreferenceActivity {
                         toast(getString(R.string.lockfinger_enrollment_failure_default_toast, miResult));
                     }
                 } catch (Exception e) {
-			Log.e ("ChooseLockFinger", "Exception occured: " + e.toString() );
-			e.printStackTrace();
-			}
+                    Log.e ("ChooseLockFinger", "Exception occured: " + e.toString() );
+                    e.printStackTrace();
+                    }
 
                 // Destroy the activity.
                 mChooseLockFinger.finish();
@@ -253,9 +253,9 @@ public class ChooseLockFinger extends PreferenceActivity {
                         });
                     }
                 } catch (Exception e) {
-			Log.e ("ChooseLockFinger", "Exception occured: " + e.toString());
-			e.printStackTrace();
-			}
+                    Log.e ("ChooseLockFinger", "Exception occured: " + e.toString());
+                    e.printStackTrace();
+                }
 
                 // Destroy the activity.
                 mChooseLockFinger.finish();

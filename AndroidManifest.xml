@@ -892,8 +892,8 @@
         <activity android:name="ConfirmLockPassword"
             android:windowSoftInputMode="stateVisible|adjustResize"/>
 
-        
-	 <activity android:name="ConfirmLockFinger"
+
+        <activity android:name="ConfirmLockFinger"
             android:label="@string/lockpattern_change_lock_finger_label"
             android:configChanges="orientation|keyboardHidden"
             >
@@ -902,7 +902,7 @@
             </intent-filter>
         </activity>
 
-	<activity android:name="ChooseLockGeneric"
+        <activity android:name="ChooseLockGeneric"
             android:label="@string/lockpassword_choose_lock_generic_header"
             android:configChanges="orientation|keyboardHidden"
             android:excludeFromRecents="true" >

@@ -17,6 +17,7 @@
 package com.android.settings;
 
 import com.android.internal.widget.LockPatternUtils;
+import android.os.SystemProperties;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -58,7 +59,7 @@ public final class ChooseLockSettingsHelper {
             case DevicePolicyManager.PASSWORD_QUALITY_SOMETHING:
                 launched = confirmPattern(request, message, details);
                 break;
- 	    case DevicePolicyManager.PASSWORD_QUALITY_FINGER:
+            case DevicePolicyManager.PASSWORD_QUALITY_FINGER:
                 launched = confirmFinger(request, message, details);
                 break;
             case DevicePolicyManager.PASSWORD_QUALITY_NUMERIC:
@@ -70,6 +71,11 @@ public final class ChooseLockSettingsHelper {
                 break;
         }
         return launched;
+    }
+    
+    public boolean isFingerprintInstalled() {
+      return  !SystemProperties.get("ro.authentec.fingerprint.jar", "").equals("");
+      
     }
 
     /**
@@ -110,7 +116,7 @@ public final class ChooseLockSettingsHelper {
         final Intent intent = new Intent();
         intent.setClassName("com.android.settings", "com.android.settings.ConfirmLockFinger");
         //mActivity.startActivityForResult(intent, request);
-	if (mFragment != null) {
+        if (mFragment != null) {
             mFragment.startActivityForResult(intent, request);
         } else {
             mActivity.startActivityForResult(intent, request);
