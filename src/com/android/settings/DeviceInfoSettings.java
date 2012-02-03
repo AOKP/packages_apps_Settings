@@ -126,6 +126,18 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
         removePreferenceIfPropertyMissing(getPreferenceScreen(), KEY_SELINUX_STATUS,
                 PROPERTY_SELINUX_STATUS);
 
+        if (!SELinux.isSELinuxEnabled()) {
+            String status = getResources().getString(R.string.selinux_status_disabled);
+            setStringSummary(KEY_SELINUX_STATUS, status);
+        } else if (!SELinux.isSELinuxEnforced()) {
+            String status = getResources().getString(R.string.selinux_status_permissive);
+            setStringSummary(KEY_SELINUX_STATUS, status);
+        }
+
+        // Remove selinux information if property is not present
+        removePreferenceIfPropertyMissing(getPreferenceScreen(), KEY_SELINUX_STATUS,
+                PROPERTY_SELINUX_STATUS);
+
         // Remove Safety information preference if PROPERTY_URL_SAFETYLEGAL is not set
         removePreferenceIfPropertyMissing(getPreferenceScreen(), "safetylegal",
                 PROPERTY_URL_SAFETYLEGAL);
