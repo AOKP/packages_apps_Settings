@@ -356,7 +356,8 @@ public class Settings extends PreferenceActivity
         PaymentSettings.class.getName(),
         KeyboardLayoutPickerFragment.class.getName(),
         QuietHours.class.getName(),
-        ThemeSettings.class.getName()
+        ThemeSettings.class.getName(),
+        ApnSettings.class.getName()
     };
 
     @Override
@@ -1160,4 +1161,6 @@ public class Settings extends PreferenceActivity
     public static class AnonymousStatsActivity extends Settings { /* empty */ }
     public static class ThemeSettingsActivity extends Settings { /* empty */ }
     public static class QuietHoursSettingsActivity extends Settings { /* empty */ }
+    public static class ApnSettingsActivity extends Settings { /* empty */ }
+    public static class ApnEditorActivity extends Settings { /* empty */ }
 }
