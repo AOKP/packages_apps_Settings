@@ -52,8 +52,8 @@ public class ChooseLockFinger extends PreferenceActivity {
     private boolean mbFingerSetting = false;
     private String msTempPasscode = null;
 
-    private Class AM_STATUS = null;
-    private Class TSM = null;
+    private Class<?> AM_STATUS = null;
+    private Class<?> TSM = null;
     private AuthentecLoader loader;
 
     @Override
@@ -150,7 +150,7 @@ public class ChooseLockFinger extends PreferenceActivity {
         new Thread(new Runnable() {
             public void run() {
                 try {
-                    Class partTypes[] = new Class[1];
+                    Class<?> partTypes[] = new Class[1];
                     Object argList[] = new Object[1];
 
                     partTypes[0] = Context.class;
@@ -220,7 +220,7 @@ public class ChooseLockFinger extends PreferenceActivity {
             public void run() {
                 try {
                     //miResult = TSM.LAP(ChooseLockFinger.this).verify().viaGfxScreen("lap-verify").exec();
-                    Class partTypes[] = new Class[1];
+                    Class<?> partTypes[] = new Class[1];
                     Object argList[] = new Object[1];
 
                     partTypes[0] = Context.class;
