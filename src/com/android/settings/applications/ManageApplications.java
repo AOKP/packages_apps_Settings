@@ -66,12 +66,12 @@ import java.util.Comparator;
 final class CanBeOnSdCardChecker {
     final IPackageManager mPm;
     int mInstallLocation;
-    
+
     CanBeOnSdCardChecker() {
         mPm = IPackageManager.Stub.asInterface(
                 ServiceManager.getService("package"));
     }
-    
+
     void init() {
         try {
             mInstallLocation = mPm.getInstallLocation();
@@ -80,7 +80,7 @@ final class CanBeOnSdCardChecker {
             return;
         }
     }
-    
+
     boolean check(ApplicationInfo info) {
         boolean canBe = false;
         if ((info.flags & ApplicationInfo.FLAG_EXTERNAL_STORAGE) != 0) {
@@ -92,7 +92,7 @@ final class CanBeOnSdCardChecker {
                         info.installLocation == PackageInfo.INSTALL_LOCATION_AUTO) {
                     canBe = true;
                 } else if (info.installLocation
-                        == PackageInfo.INSTALL_LOCATION_UNSPECIFIED) {
+                == PackageInfo.INSTALL_LOCATION_UNSPECIFIED) {
                     if (mInstallLocation == PackageHelper.APP_INSTALL_EXTERNAL) {
                         // For apps with no preference and the default value set
                         // to install on sdcard.
@@ -106,20 +106,21 @@ final class CanBeOnSdCardChecker {
 }
 
 /**
- * Activity to pick an application that will be used to display installation information and
- * options to uninstall/delete user data for system applications. This activity
- * can be launched through Settings or via the ACTION_MANAGE_PACKAGE_STORAGE
- * intent.
+ * Activity to pick an application that will be used to display installation
+ * information and options to uninstall/delete user data for system
+ * applications. This activity can be launched through Settings or via the
+ * ACTION_MANAGE_PACKAGE_STORAGE intent.
  */
 public class ManageApplications extends Fragment implements
         OnItemClickListener,
         TabHost.TabContentFactory, TabHost.OnTabChangeListener {
     static final String TAG = "ManageApplications";
     static final boolean DEBUG = false;
-    
-    // attributes used as keys when passing values to InstalledAppDetails activity
+
+    // attributes used as keys when passing values to InstalledAppDetails
+    // activity
     public static final String APP_CHG = "chg";
-    
+
     // constant value that can be used to check return code from sub activity.
     private static final int INSTALLED_APP_DETAILS = 1;
 
@@ -127,7 +128,8 @@ public class ManageApplications extends Fragment implements
     public static final int SIZE_INTERNAL = 1;
     public static final int SIZE_EXTERNAL = 2;
 
-    // sort order that can be changed through the menu can be sorted alphabetically
+    // sort order that can be changed through the menu can be sorted
+    // alphabetically
     // or size(descending)
     private static final int MENU_OPTIONS_BASE = 0;
     // Filter options used for displayed list of applications
@@ -143,19 +145,20 @@ public class ManageApplications extends Fragment implements
     private int mSortOrder = SORT_ORDER_ALPHA;
     // Filter value
     private int mFilterApps = FILTER_APPS_THIRD_PARTY;
-    
+
     private ApplicationsState mApplicationsState;
     private ApplicationsAdapter mApplicationsAdapter;
-    
-    // Size resource used for packages whose size computation failed for some reason
+
+    // Size resource used for packages whose size computation failed for some
+    // reason
     private CharSequence mInvalidSizeStr;
     private CharSequence mComputingSizeStr;
-    
+
     // layout inflater object used to inflate views
     private LayoutInflater mInflater;
-    
+
     private String mCurrentPkgName;
-    
+
     private View mLoadingContainer;
 
     private View mListContainer;
@@ -164,21 +167,21 @@ public class ManageApplications extends Fragment implements
     private ListView mListView;
     // Custom view used to display running processes
     private RunningProcessesView mRunningProcessesView;
-    
+
     LinearColorBar mColorBar;
     TextView mStorageChartLabel;
     TextView mUsedStorageText;
     TextView mFreeStorageText;
 
     private Menu mOptionsMenu;
-    
+
     // These are for keeping track of activity and tab switch state.
     private int mCurView;
     private boolean mCreatedRunning;
 
     private boolean mResumedRunning;
     private boolean mActivityResumed;
-    
+
     private StatFs mDataFileStats;
     private StatFs mSDCardFileStats;
     private boolean mLastShowedInternalStorage = true;
@@ -191,7 +194,7 @@ public class ManageApplications extends Fragment implements
     private View mRootView;
 
     private boolean mShowBackground = false;
-    
+
     // -------------- Copied from TabActivity --------------
 
     private TabHost mTabHost;
@@ -200,6 +203,7 @@ public class ManageApplications extends Fragment implements
     // -------------- Copied from TabActivity --------------
 
     final Runnable mRunningProcessesAvail = new Runnable() {
+        @Override
         public void run() {
             handleRunningProcessesAvail();
         }
@@ -213,10 +217,11 @@ public class ManageApplications extends Fragment implements
         TextView appSize;
         TextView disabled;
         CheckBox checkBox;
-        
+
         void updateSizeText(ManageApplications ma, int whichSize) {
-            if (DEBUG) Log.i(TAG, "updateSizeText of " + entry.label + " " + entry
-                    + ": " + entry.sizeStr);
+            if (DEBUG)
+                Log.i(TAG, "updateSizeText of " + entry.label + " " + entry
+                        + ": " + entry.sizeStr);
             if (entry.sizeStr != null) {
                 switch (whichSize) {
                     case SIZE_INTERNAL:
@@ -234,15 +239,16 @@ public class ManageApplications extends Fragment implements
             }
         }
     }
-    
+
     /*
-     * Custom adapter implementation for the ListView
-     * This adapter maintains a map for each displayed application and its properties
-     * An index value on each AppInfo object indicates the correct position or index
-     * in the list. If the list gets updated dynamically when the user is viewing the list of
-     * applications, we need to return the correct index of position. This is done by mapping
-     * the getId methods via the package name into the internal maps and indices.
-     * The order of applications in the list is mirrored in mAppLocalList
+     * Custom adapter implementation for the ListView This adapter maintains a
+     * map for each displayed application and its properties An index value on
+     * each AppInfo object indicates the correct position or index in the list.
+     * If the list gets updated dynamically when the user is viewing the list of
+     * applications, we need to return the correct index of position. This is
+     * done by mapping the getId methods via the package name into the internal
+     * maps and indices. The order of applications in the list is mirrored in
+     * mAppLocalList
      */
     class ApplicationsAdapter extends BaseAdapter implements Filterable,
             ApplicationsState.Callbacks, AbsListView.RecyclerListener {
@@ -251,16 +257,16 @@ public class ManageApplications extends Fragment implements
         private ArrayList<ApplicationsState.AppEntry> mBaseEntries;
         private ArrayList<ApplicationsState.AppEntry> mEntries;
         private boolean mResumed;
-        private int mLastFilterMode=-1, mLastSortMode=-1;
+        private int mLastFilterMode = -1, mLastSortMode = -1;
         private boolean mWaitingForData;
         private int mWhichSize = SIZE_TOTAL;
         CharSequence mCurFilterPrefix;
 
-        private Filter mFilter = new Filter() {
+        private final Filter mFilter = new Filter() {
             @Override
             protected FilterResults performFiltering(CharSequence constraint) {
                 ArrayList<ApplicationsState.AppEntry> entries
-                        = applyPrefixFilter(constraint, mBaseEntries);
+                = applyPrefixFilter(constraint, mBaseEntries);
                 FilterResults fr = new FilterResults();
                 fr.values = entries;
                 fr.count = entries.size();
@@ -270,7 +276,7 @@ public class ManageApplications extends Fragment implements
             @Override
             protected void publishResults(CharSequence constraint, FilterResults results) {
                 mCurFilterPrefix = constraint;
-                mEntries = (ArrayList<ApplicationsState.AppEntry>)results.values;
+                mEntries = (ArrayList<ApplicationsState.AppEntry>) results.values;
                 notifyDataSetChanged();
                 updateStorageUsage();
             }
@@ -281,7 +287,8 @@ public class ManageApplications extends Fragment implements
         }
 
         public void resume(int filter, int sort) {
-            if (DEBUG) Log.i(TAG, "Resume!  mResumed=" + mResumed);
+            if (DEBUG)
+                Log.i(TAG, "Resume!  mResumed=" + mResumed);
             if (!mResumed) {
                 mResumed = true;
                 mState.resume(this);
@@ -308,9 +315,10 @@ public class ManageApplications extends Fragment implements
             mLastSortMode = sort;
             rebuild(true);
         }
-        
+
         public void rebuild(boolean eraseold) {
-            if (DEBUG) Log.i(TAG, "Rebuilding app list...");
+            if (DEBUG)
+                Log.i(TAG, "Rebuilding app list...");
             ApplicationsState.AppFilter filterObj;
             Comparator<AppEntry> comparatorObj;
             boolean emulated = Environment.isExternalStorageEmulated();
@@ -351,8 +359,8 @@ public class ManageApplications extends Fragment implements
                     comparatorObj = ApplicationsState.ALPHA_COMPARATOR;
                     break;
             }
-            ArrayList<ApplicationsState.AppEntry> entries
-                    = mState.rebuild(filterObj, comparatorObj);
+            ArrayList<ApplicationsState.AppEntry> entries = mState
+                    .rebuild(filterObj, comparatorObj);
             if (entries == null && !eraseold) {
                 // Don't have new list yet, but can continue using the old one.
                 return;
@@ -383,9 +391,8 @@ public class ManageApplications extends Fragment implements
             } else {
                 String prefixStr = ApplicationsState.normalize(prefix.toString());
                 final String spacePrefixStr = " " + prefixStr;
-                ArrayList<ApplicationsState.AppEntry> newEntries
-                        = new ArrayList<ApplicationsState.AppEntry>();
-                for (int i=0; i<origEntries.size(); i++) {
+                ArrayList<ApplicationsState.AppEntry> newEntries = new ArrayList<ApplicationsState.AppEntry>();
+                for (int i = 0; i < origEntries.size(); i++) {
                     ApplicationsState.AppEntry entry = origEntries.get(i);
                     String nlabel = entry.getNormalizedLabel();
                     if (nlabel.startsWith(prefixStr) || nlabel.indexOf(spacePrefixStr) != -1) {
@@ -431,8 +438,8 @@ public class ManageApplications extends Fragment implements
 
         @Override
         public void onPackageSizeChanged(String packageName) {
-            for (int i=0; i<mActive.size(); i++) {
-                AppViewHolder holder = (AppViewHolder)mActive.get(i).getTag();
+            for (int i = 0; i < mActive.size(); i++) {
+                AppViewHolder holder = (AppViewHolder) mActive.get(i).getTag();
                 if (holder.entry.info.packageName.equals(packageName)) {
                     synchronized (holder.entry) {
                         holder.updateSizeText(ManageApplications.this, mWhichSize);
@@ -440,7 +447,7 @@ public class ManageApplications extends Fragment implements
                     if (holder.entry.info.packageName.equals(mCurrentPkgName)
                             && mLastSortMode == SORT_ORDER_SIZE) {
                         // We got the size information for the last app the
-                        // user viewed, and are sorting by size...  they may
+                        // user viewed, and are sorting by size... they may
                         // have cleared data, so we immediately want to resort
                         // the list with the new size to reflect it to the user.
                         rebuild(false);
@@ -457,35 +464,43 @@ public class ManageApplications extends Fragment implements
                 rebuild(false);
             }
         }
-        
+
+        @Override
         public int getCount() {
             return mEntries != null ? mEntries.size() : 0;
         }
-        
+
+        @Override
         public Object getItem(int position) {
             return mEntries.get(position);
         }
-        
+
         public ApplicationsState.AppEntry getAppEntry(int position) {
             return mEntries.get(position);
         }
 
+        @Override
         public long getItemId(int position) {
             return mEntries.get(position).id;
         }
-        
+
+        @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            // A ViewHolder keeps references to children views to avoid unnecessary calls
+            // A ViewHolder keeps references to children views to avoid
+            // unnecessary calls
             // to findViewById() on each row.
             AppViewHolder holder;
 
-            // When convertView is not null, we can reuse it directly, there is no need
-            // to reinflate it. We only inflate a new View when the convertView supplied
+            // When convertView is not null, we can reuse it directly, there is
+            // no need
+            // to reinflate it. We only inflate a new View when the convertView
+            // supplied
             // by ListView is null.
             if (convertView == null) {
                 convertView = mInflater.inflate(R.layout.manage_applications_item, null);
 
-                // Creates a ViewHolder and store references to the two children views
+                // Creates a ViewHolder and store references to the two children
+                // views
                 // we want to bind data to.
                 holder = new AppViewHolder();
                 holder.appName = (TextView) convertView.findViewById(R.id.app_name);
@@ -543,7 +558,7 @@ public class ManageApplications extends Fragment implements
             mActive.remove(view);
         }
     }
-    
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -573,24 +588,24 @@ public class ManageApplications extends Fragment implements
             // Select the all-apps tab, with the default sorting
             defaultTabTag = TAB_ALL;
         }
-        
+
         if (savedInstanceState != null) {
             mSortOrder = savedInstanceState.getInt("sortOrder", mSortOrder);
             mFilterApps = savedInstanceState.getInt("filterApps", mFilterApps);
             String tmp = savedInstanceState.getString("defaultTabTag");
-            if (tmp != null) defaultTabTag = tmp;
+            if (tmp != null)
+                defaultTabTag = tmp;
             mShowBackground = savedInstanceState.getBoolean("showBackground", false);
         }
-        
+
         mDefaultTab = defaultTabTag;
-        
+
         mDataFileStats = new StatFs("/data");
         mSDCardFileStats = new StatFs(Environment.getExternalStorageDirectory().toString());
 
         mInvalidSizeStr = getActivity().getText(R.string.invalid_size_value);
         mComputingSizeStr = getActivity().getText(R.string.computing_size);
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -605,7 +620,6 @@ public class ManageApplications extends Fragment implements
         if (emptyView != null) {
             lv.setEmptyView(emptyView);
         }
-        lv.setOnItemClickListener(this);
         lv.setSaveEnabled(true);
         lv.setItemsCanFocus(true);
         lv.setOnItemClickListener(this);
@@ -613,11 +627,11 @@ public class ManageApplications extends Fragment implements
         mListView = lv;
         lv.setRecyclerListener(mApplicationsAdapter);
         mListView.setAdapter(mApplicationsAdapter);
-        mColorBar = (LinearColorBar)mListContainer.findViewById(R.id.storage_color_bar);
-        mStorageChartLabel = (TextView)mListContainer.findViewById(R.id.storageChartLabel);
-        mUsedStorageText = (TextView)mListContainer.findViewById(R.id.usedStorageText);
-        mFreeStorageText = (TextView)mListContainer.findViewById(R.id.freeStorageText);
-        mRunningProcessesView = (RunningProcessesView)mRootView.findViewById(
+        mColorBar = (LinearColorBar) mListContainer.findViewById(R.id.storage_color_bar);
+        mStorageChartLabel = (TextView) mListContainer.findViewById(R.id.storageChartLabel);
+        mUsedStorageText = (TextView) mListContainer.findViewById(R.id.usedStorageText);
+        mFreeStorageText = (TextView) mListContainer.findViewById(R.id.freeStorageText);
+        mRunningProcessesView = (RunningProcessesView) mRootView.findViewById(
                 R.id.running_processes);
 
         mCreatedRunning = mResumedRunning = false;
@@ -696,18 +710,18 @@ public class ManageApplications extends Fragment implements
             mApplicationsState.requestSize(mCurrentPkgName);
         }
     }
-    
+
     // utility method used to start sub activity
     private void startApplicationDetailsActivity() {
         // start new fragment to display extended information
         Bundle args = new Bundle();
         args.putString(InstalledAppDetails.ARG_PACKAGE_NAME, mCurrentPkgName);
 
-        PreferenceActivity pa = (PreferenceActivity)getActivity();
+        PreferenceActivity pa = (PreferenceActivity) getActivity();
         pa.startPreferencePanel(InstalledAppDetails.class.getName(), args,
                 R.string.application_info_label, null, this, INSTALLED_APP_DETAILS);
     }
-    
+
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         Log.i(TAG, "onCreateOptionsMenu in " + this + ": " + menu);
@@ -715,10 +729,10 @@ public class ManageApplications extends Fragment implements
         // note: icons removed for now because the cause the new action
         // bar UI to be very confusing.
         menu.add(0, SORT_ORDER_ALPHA, 1, R.string.sort_order_alpha)
-                //.setIcon(android.R.drawable.ic_menu_sort_alphabetically)
+                // .setIcon(android.R.drawable.ic_menu_sort_alphabetically)
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
         menu.add(0, SORT_ORDER_SIZE, 2, R.string.sort_order_size)
-                //.setIcon(android.R.drawable.ic_menu_sort_by_size)
+                // .setIcon(android.R.drawable.ic_menu_sort_by_size)
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
         menu.add(0, SHOW_RUNNING_SERVICES, 3, R.string.show_running_services)
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
@@ -726,25 +740,25 @@ public class ManageApplications extends Fragment implements
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
         updateOptionsMenu();
     }
-    
+
     @Override
     public void onPrepareOptionsMenu(Menu menu) {
         updateOptionsMenu();
     }
-    
+
     @Override
     public void onDestroyOptionsMenu() {
         mOptionsMenu = null;
     }
-    
+
     void updateOptionsMenu() {
         if (mOptionsMenu == null) {
             return;
         }
-        
+
         /*
-         * The running processes screen doesn't use the mApplicationsAdapter
-         * so bringing up this menu in that case doesn't make any sense.
+         * The running processes screen doesn't use the mApplicationsAdapter so
+         * bringing up this menu in that case doesn't make any sense.
          */
         if (mCurView == VIEW_RUNNING) {
             boolean showingBackground = mRunningProcessesView != null
@@ -779,14 +793,16 @@ public class ManageApplications extends Fragment implements
         updateOptionsMenu();
         return true;
     }
-    
+
+    @Override
     public void onItemClick(AdapterView<?> parent, View view, int position,
             long id) {
         ApplicationsState.AppEntry entry = mApplicationsAdapter.getAppEntry(position);
         mCurrentPkgName = entry.info.packageName;
         startApplicationDetailsActivity();
     }
-    
+
+    @Override
     public View createTabContent(String tag) {
         return mRootView;
     }
@@ -812,15 +828,15 @@ public class ManageApplications extends Fragment implements
             newLabel = getActivity().getText(R.string.sd_card_storage);
             mSDCardFileStats.restat(Environment.getExternalStorageDirectory().toString());
             try {
-                totalStorage = (long)mSDCardFileStats.getBlockCount() *
+                totalStorage = (long) mSDCardFileStats.getBlockCount() *
                         mSDCardFileStats.getBlockSize();
                 freeStorage = (long) mSDCardFileStats.getAvailableBlocks() *
-                mSDCardFileStats.getBlockSize();
+                        mSDCardFileStats.getBlockSize();
             } catch (IllegalArgumentException e) {
                 // use the old value of mFreeMem
             }
             final int N = mApplicationsAdapter.getCount();
-            for (int i=0; i<N; i++) {
+            for (int i = 0; i < N; i++) {
                 ApplicationsState.AppEntry ae = mApplicationsAdapter.getAppEntry(i);
                 appStorage += ae.externalCodeSize + ae.externalDataSize;
             }
@@ -831,15 +847,15 @@ public class ManageApplications extends Fragment implements
             newLabel = getActivity().getText(R.string.internal_storage);
             mDataFileStats.restat("/data");
             try {
-                totalStorage = (long)mDataFileStats.getBlockCount() *
+                totalStorage = (long) mDataFileStats.getBlockCount() *
                         mDataFileStats.getBlockSize();
                 freeStorage = (long) mDataFileStats.getAvailableBlocks() *
-                    mDataFileStats.getBlockSize();
+                        mDataFileStats.getBlockSize();
             } catch (IllegalArgumentException e) {
             }
             final boolean emulatedStorage = Environment.isExternalStorageEmulated();
             final int N = mApplicationsAdapter.getCount();
-            for (int i=0; i<N; i++) {
+            for (int i = 0; i < N; i++) {
                 ApplicationsState.AppEntry ae = mApplicationsAdapter.getAppEntry(i);
                 appStorage += ae.codeSize + ae.dataSize;
                 if (emulatedStorage) {
@@ -852,8 +868,8 @@ public class ManageApplications extends Fragment implements
             mStorageChartLabel.setText(newLabel);
         }
         if (totalStorage > 0) {
-            mColorBar.setRatios((totalStorage-freeStorage-appStorage)/(float)totalStorage,
-                    appStorage/(float)totalStorage, freeStorage/(float)totalStorage);
+            mColorBar.setRatios((totalStorage - freeStorage - appStorage) / (float) totalStorage,
+                    appStorage / (float) totalStorage, freeStorage / (float) totalStorage);
             long usedStorage = totalStorage - freeStorage;
             if (mLastUsedStorage != usedStorage) {
                 mLastUsedStorage = usedStorage;
@@ -943,7 +959,7 @@ public class ManageApplications extends Fragment implements
         } else if (TAB_SDCARD.equalsIgnoreCase(tabId)) {
             newOption = FILTER_APPS_SDCARD;
         } else if (TAB_RUNNING.equalsIgnoreCase(tabId)) {
-            ((InputMethodManager)getActivity().getSystemService(Context.INPUT_METHOD_SERVICE))
+            ((InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE))
                     .hideSoftInputFromWindow(
                             getActivity().getWindow().getDecorView().getWindowToken(), 0);
             selectView(VIEW_RUNNING);
@@ -952,13 +968,14 @@ public class ManageApplications extends Fragment implements
             // Invalid option. Do nothing
             return;
         }
-        
+
         mFilterApps = newOption;
         selectView(VIEW_LIST);
         updateStorageUsage();
         updateOptionsMenu();
     }
 
+    @Override
     public void onTabChanged(String tabId) {
         showCurrentTab();
     }
