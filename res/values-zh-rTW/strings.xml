@@ -609,6 +609,8 @@
     <string name="sound_effects_enable_title" msgid="1171590821131077296">"觸控音效"</string>
     <string name="lock_sounds_enable_title" msgid="450098505659399520">"螢幕鎖定音效"</string>
     <string name="haptic_feedback_enable_title" msgid="2438293710530828760">"觸控時震動"</string>
+    <string name="camera_sounds_title">相機快門聲</string>
+    <string name="camera_sounds_summary">提醒：部分地區快門無聲可能觸法。</string>
     <string name="audio_record_proc_title" msgid="4271091199976457534">"噪音消除"</string>
     <string name="volume_media_description" msgid="7949355934788807863">"音樂、影片、遊戲及其他媒體"</string>
     <string name="volume_ring_description" msgid="5936851631698298989">"鈴聲與通知"</string>
@@ -1621,8 +1623,8 @@
     <string name="ll_bad_levels">數值太低。</string>
     <string name="ll_num_levels">設定數值</string>
     <string name="mod_version">Mod 版本</string>
-    <string name="link_volume_ringtones">鈴聲與通知音量相同</string>
-    <string name="link_volume_mutes">靜音模式時暫停通知音</string>
+    <string name="link_volume_ringtones">鈴聲與通知\n音量相同</string>
+    <string name="link_volume_mutes">靜音模式時\n暫停通知音</string>
     <string name="volume_ring_only_description">鈴聲</string>
     <string name="quiet_hours_title">自動靜音</string>
     <string name="quiet_hours_summary">設定自動切入靜音時間。</string>
