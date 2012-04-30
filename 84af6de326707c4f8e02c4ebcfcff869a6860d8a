@@ -1,0 +1,9 @@
+Change-Id: I84af6de326707c4f8e02c4ebcfcff869a6860d8a
+Code-Review+2: Roman Birg <romanbirg@gmail.com>
+Verified+1: Roman Birg <romanbirg@gmail.com>
+Code-Review+1: Esa Laukkanen <ele.linux@gmail.com>
+Submitted-by: Roman Birg <romanbirg@gmail.com>
+Submitted-at: Mon, 30 Apr 2012 17:48:11 -0500
+Reviewed-on: http://gerrit.sudoservers.com/164
+Project: AOKP/packages_apps_Settings
+Branch: refs/heads/ics
