@@ -67,6 +67,16 @@
                 android:targetPackage="com.aokp.romcontrol" />
     </header>
 
+    <header
+        android:id="@+id/device_settings"
+        android:title="@string/device_settings_title"
+        android:icon="@drawable/ic_settings_cmdevice">
+        <intent
+            android:action="com.aokp.action.LAUNCH_DEVICE_SETTINGS"
+            android:targetPackage="com.aokp.settings.device"
+            android:targetClass="com.aokp.settings.device.DeviceSettings" />
+    </header>
+
     <!-- DEVICE -->
     <header android:title="@string/header_category_device" />
 
