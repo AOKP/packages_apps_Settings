@@ -67,6 +67,14 @@
                 android:targetPackage="com.aokp.romcontrol" />
     </header>
 
+    <header android:icon="@drawable/ic_settings_hybrid_manager"
+            android:title="@string/hybrid_manager_title">
+        <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.encounterpc.hybridmanager"
+                android:targetClass="com.encounterpc.hybridmanager.HybridPreferenceActivity" />
+    </header>
+
     <header android:icon="@drawable/ic_settings_themes"
             android:title="@string/themes_title">
         <intent
