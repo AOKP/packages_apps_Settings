@@ -1,0 +1,9 @@
+Change-Id: I100e93955355cc4a085269fbdb22034804e4d6c8
+Code-Review+2: Roman Birg <romanbirg@gmail.com>
+Verified+1: Roman Birg <romanbirg@gmail.com>
+Code-Review+1: Gu Yanfeng <gu.yanfeng@gmail.com>
+Submitted-by: Roman Birg <romanbirg@gmail.com>
+Submitted-at: Wed, 16 May 2012 13:04:13 -0500
+Reviewed-on: http://gerrit.sudoservers.com/798
+Project: AOKP/packages_apps_Settings
+Branch: refs/heads/ics
