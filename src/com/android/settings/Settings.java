@@ -566,6 +566,9 @@ public class Settings extends PreferenceActivity
                 } catch (RemoteException e) {
                     // ignored
                 }
+            } else if (id == R.id.advanced_settings) {
+                if (!needsAdvancedSettings())
+                    target.remove(header);
             } else if (id == R.id.battery_settings) {
                 // Remove battery settings when battery is not available. (e.g. TV)
 
@@ -723,6 +726,10 @@ public class Settings extends PreferenceActivity
 
         sp.edit().putBoolean(HomeSettings.HOME_PREFS_DO_SHOW, true).apply();
         return true;
+    }
+
+    private boolean needsAdvancedSettings() {
+        return getResources().getBoolean(R.bool.has_advanced_settings);
     }
 
     private void getMetaData() {
