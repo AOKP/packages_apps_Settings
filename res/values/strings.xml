@@ -3843,8 +3843,11 @@ found in the list of installed apps.</string>
     <string name="link_volume_ringtones">Link volumes</string>
     <string name="link_volume_mutes">Link mute states</string>
     <string name="toast_link_volume_ringtones">"Make sure to change your volume to re-set your notification volume to match your ringtone volume."</string>
-    
-        <!-- Quiet hours #CM -->
+   
+    <!-- Advanced, Device specific (DeviceParts) settings #CM -->
+    <string name="advanced_settings_title">Advanced</string>
+
+    <!-- Quiet hours #CM -->
     <string name="quiet_hours_title">Quiet hours</string>
     <string name="quiet_hours_summary">Configure the hours the device should be quiet</string>
     <string name="quiet_hours_enabled_title">Enable quiet hours</string>
