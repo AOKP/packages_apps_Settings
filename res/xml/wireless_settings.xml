@@ -44,17 +44,6 @@
     </PreferenceScreen>
 
     <CheckBoxPreference
-        android:key="toggle_nfc"
-        android:title="@string/nfc_quick_toggle_title"
-        android:summary="@string/nfc_quick_toggle_summary"
-        android:persistent="false" />
-
-    <PreferenceScreen
-        android:fragment="com.android.settings.nfc.AndroidBeam"
-        android:key="android_beam_settings"
-        android:title="@string/android_beam_settings_title" />
-
-    <CheckBoxPreference
         android:key="toggle_wifi_p2p"
         android:title="@string/wifi_p2p_settings_title"
         android:persistent="false" />
@@ -75,6 +64,25 @@
             android:targetPackage="com.android.phone"
             android:targetClass="com.android.phone.Settings" />
     </PreferenceScreen>
+    
+    <CheckBoxPreference
+        android:key="toggle_nfc"
+        android:title="@string/nfc_quick_toggle_title"
+        android:summary="@string/nfc_quick_toggle_summary"
+        android:persistent="false" />
+
+    <PreferenceScreen
+        android:fragment="com.android.settings.nfc.AndroidBeam"
+        android:key="android_beam_settings"
+        android:title="@string/android_beam_settings_title" />
+
+	<ListPreference
+        android:key="nfc_polling_mode"
+        android:title="@string/nfc_polling_mode_title"
+        android:summary="@string/nfc_polling_mode_summary"
+        android:entries="@array/nfc_polling_mode_entries"
+        android:entryValues="@array/nfc_polling_mode_values"
+        android:persistent="false" />
 
     <PreferenceScreen
         android:fragment="com.android.settings.ProxySelector"
