@@ -317,7 +317,7 @@ public class WifiConfigController implements TextWatcher,
         } else {
             config.networkId = mAccessPoint.networkId;
         }
-        config.mode = mAccessPoint.mode;
+        config.mode = mAccessPoint == null ? 0 : mAccessPoint.mode;
 
         switch (mAccessPointSecurity) {
             case AccessPoint.SECURITY_NONE:
