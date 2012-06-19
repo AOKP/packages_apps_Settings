@@ -940,6 +940,9 @@
     <string name="lock_title" product="default" msgid="4059246467204273930">"Telefon sichern"</string>
     <string name="lock_intro_message" product="tablet" msgid="1075370160667458122">"Schützen Sie Ihr Tablet vor unbefugtem Zugriff: Erstellen Sie ein persönliches Entsperrungsmuster für Ihren Bildschirm. Verbinden Sie auf dem nächsten Bildschirm in beliebiger Reihenfolge mindestens vier Punkte mit dem Finger."\n\n"Bereit? Tippen Sie auf \"Weiter\"."</string>
     <string name="lock_intro_message" product="default" msgid="8393155371327584659">"Schützen Sie Ihr Telefon vor unbefugtem Zugriff! Erstellen Sie ein persönliches Entsperrungsmuster für Ihren Bildschirm. Verbinden Sie auf dem nächsten Bildschirm in beliebiger Reihenfolge mindestens vier Punkte mit dem Finger. "\n\n"Bereit? Dann tippen Sie auf \"Weiter\"."</string>
+
+<!-- Device specific settings -->
+    <string name="advanced_settings_title">Geräteeinstellungen</string>
     <string name="manageapplications_settings_title" msgid="7041951105633616745">"Apps verwalten"</string>
     <string name="manageapplications_settings_summary" msgid="1794401500935451259">"Installierte Apps verwalten und entfernen"</string>
     <string name="applications_settings" msgid="1721442176406964682">"Apps"</string>
@@ -1585,11 +1588,12 @@
     <string name="quick_links_title">Schnellzugriffe</string>
     <string name="rom_control_title">ROM konfigurieren</string>
 
-    <!-- Display | Backlight -->
+<string name="themes_title">Themen</string>
+        <!-- Display | Backlight -->
      <string name="backlight_title">Eigene Hintergrundbeleuchtung</string>
     <string name="backlight_settings">Auto. Hintergrundbeleuchtung</string>
     <string name="backlight_settings_title">Auto. Hintergrundbeleuchtung</string>
-    <string name="backlight_summary">Tweak levels and filtering</string>
+    <string name="backlight_summary">Tweak Stufen und Filterung</string>
     <string name="light_filter_title">Lichtsensor Filter</string>
     <string name="light_filter_enabled_title">Aktiviert</string>
     <string name="light_filter_enabled_summary">Apply moving average filter to sensor data to reduce flicker</string>
@@ -1606,11 +1610,11 @@
     <string name="light_levels_editor_title">Andere Stufen bearbeiten\u2026</string>
     <string name="light_decrease_enabled_title">Allow light decrease</string>
     <string name="light_decrease_enabled_summary">Enable to allow lights to decrease. Use hysteresis to reduce flicker</string>
-    <string name="light_decrease_hysteresis_title">Decrease hysteresis</string>
+    <string name="light_decrease_hysteresis_title">Hysterese verringern</string>
     <string name="light_decrease_hysteresis_summary">Sensor levels overlap this much downwards</string>
     
     <!-- Light sensor levels  -->
-    <string name="ll_title">Lichtsensor Stufen</string>
+    <string name="ll_title">Stufen für Lichtsensor</string>
     <string name="ll_header_upper">Höher</string>
     <string name="ll_header_lower">Niedriger</string>
     <string name="ll_header_lcd">Bildschirm</string>
@@ -1621,7 +1625,7 @@
     <string name="ll_btn">Tasten:</string>
     <string name="ll_kb">Tastatur:</string>
     <string name="ll_disabled">deaktiviert</string>
-    <string name="ll_default">Lade Standardeinstellungen</string>
+    <string name="ll_default">Standardeinstellungen laden</string>
     <string name="ll_save">Save &amp; apply</string>
     <string name="ll_reload">Aktuelle neu laden</string>
     <string name="ll_bad_levels">Stufen müssen aufsteigend sein</string>
@@ -1630,4 +1634,51 @@
     <string name="mod_version">Mod Version</string>
     <string name="link_volume_ringtones">Link volumes</string>
     <string name="link_volume_mutes">Link mute states</string>
+    <string name="toast_link_volume_ringtones">"Make sure to change your volume to re-set your notification volume to match your ringtone volume."</string>
+    
+        <!-- Quiet hours #CM -->
+    <string name="quiet_hours_title">Ruhezeiten</string>
+    <string name="quiet_hours_summary">Konfiguriere die Ruhezeiten für das Gerät</string>
+    <string name="quiet_hours_enabled_title">Ruhezeiten aktivieren</string>
+    <string name="quiet_hours_start">Start der Ruhezeit</string>
+    <string name="quiet_hours_start_summary">Zeit wann die Ruhezeit erzwungen werden soll.</string>
+    <string name="quiet_hours_end">Ende der Ruhezeit</string>
+    <string name="quiet_hours_end_summary">Zeit wann das Erzwingen der Ruhezeit beendet wreden soll.</string>
+    <string name="quiet_hours_notifications_title">Benachrichtungstöne stummschalten</string>
+    <string name="quiet_hours_ringer_title">Klingeltöne stummschalten</string>
+    <string name="quiet_hours_still_title">Vibrationen deaktivieren</string>
+    <string name="quiet_hours_dim_title">Benachrichtungslicht deaktivieren</string>
+    <string name="quiet_hours_active_from">Aktiv von</string>
+    <string name="quiet_hours_active_to">bis</string>
+
+    <!-- time range preference -->
+    <string name="start_time_title">Start</string>
+    <string name="end_time_title">Ende</string>
+
+    <!-- Hostname setting -->
+    <string name="device_hostname">Gerät Hostname</string>
+    
+    <!-- Anonymous Statistics #CM -->
+    <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
+    <string name="anonymous_statistics_title">AOKP Statistiken</string>
+    <string name="anonymous_statistics_summary">Helfe AOKP zu verbessern indem Du zustimmst anonyme Statistiken zu übermitteln.</string>
+    <string name="anonymous_statistics_warning_title">Über</string>
+    <string name="anonymous_statistics_warning">Opting into AOKP Statistics will allow non-personal data to be submitted to the
+        developers of AOKP to track unique installations across devices. The information submitted includes an unique identifier,
+        which does not compromise your privacy or personal data. The data is submitted once weekly, during boot.\n\nFor an example of the data that is submitted, tap on Preview Data.</string>
+    <string name="enable_reporting_title">Protokollieren aktivieren</string>
+    <string name="preview_data_title">Vorschau der Daten</string>
+    <string name="preview_data_summary">%s</string>
+    <string name="view_stats_title">Statistik anschauen</string>
+    <string name="anonymous_learn_more">Mehr lernen</string>
+
+    <!-- Anonymous Statistics - Notification -->
+    <string name="anonymous_notification_desc">Aktiviere oder Deaktiviere die AOKP Statistiken</string>
+
+    <!-- Anonymous Statistics - Preview -->
+    <string name="preview_id_title">Unique ID</string>
+    <string name="preview_device_title">Gerät</string>
+    <string name="preview_version_title">Version</string>
+    <string name="preview_country_title">Land</string>
+    <string name="preview_carrier_title">Anbieter</string>
 </resources>
