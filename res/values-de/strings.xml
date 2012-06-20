@@ -610,6 +610,10 @@
     <string name="sound_effects_enable_title" msgid="1171590821131077296">"Töne bei Berührung"</string>
     <string name="lock_sounds_enable_title" msgid="450098505659399520">"Ton bei Displaysperre"</string>
     <string name="haptic_feedback_enable_title" msgid="2438293710530828760">"Bei Berührung vibrieren"</string>
+    <string name="volume_adjust_sounds_enable_title">Ton für Lautstärkenanpassung</string>
+    <string name="volume_adjust_sounds_enable_summary">Töne beim Verändern der Lautstärke</string>
+    <string name="camera_sounds_title">Töne der Kamera</string>
+    <string name="camera_sounds_summary">WARNUNG: Das Deaktivieren der Töne für die Kamera kann in einigen Regionen illegal sein!</string>
     <string name="audio_record_proc_title" msgid="4271091199976457534">"Geräuschunterdrückung"</string>
     <string name="volume_media_description" msgid="7949355934788807863">"Musik, Video, Spiele und andere Medien"</string>
     <string name="volume_ring_description" msgid="5936851631698298989">"Klingelton &amp; Benachrichtigungen"</string>
@@ -1137,6 +1141,11 @@
     <string name="development_settings_summary" msgid="1815795401632854041">"Optionen zur App-Entwicklung festlegen"</string>
     <string name="enable_adb" msgid="7982306934419797485">"USB-Debugging"</string>
     <string name="enable_adb_summary" msgid="4881186971746056635">"Debugmodus bei Anschluss über USB"</string>
+    <!-- Setting checkbox title for Whether debugging should run over TCP/IP. -->
+    <string name="adb_over_network">Debugmodus über Netzwerk</string>
+    <string name="adb_over_network_summary">Aktiviert TCP/IP Debugmodus über Netzwerk (WLAN, USB Netzwerke). Diese Einstellung wird bei einem Neustart zurückgesetzt.</string>
+    <!-- Warning for Adb over Network -->
+    <string name="adb_over_network_warning">WARNUNG: Wenn Debugmodus über Netzwerk aktiviert ist, ist Dein Telefon ungesichert in allen verbundenen Netzwerken (GSM Netz ebenfalls) !\n\nVerwende diese Funktion ausschließlich in sicheren Netzwerken.\n\nMöchtest Du wirklich diese Funktion aktivieren?</string>
     <string name="verifier_device_identifier" msgid="5079997701152411060">"Entwicklungsgerät-ID"</string>
     <string name="verifier_device_identifier_not_available" msgid="1272065992066977324">"Geräteinformationen nicht verfügbar"</string>
     <string name="keep_screen_on" msgid="1146389631208760344">"Aktiv lassen"</string>
@@ -1593,7 +1602,7 @@
      <string name="backlight_title">Eigene Hintergrundbeleuchtung</string>
     <string name="backlight_settings">Auto. Hintergrundbeleuchtung</string>
     <string name="backlight_settings_title">Auto. Hintergrundbeleuchtung</string>
-    <string name="backlight_summary">Tweak Stufen und Filterung</string>
+    <string name="backlight_summary">Stufen und Filterung anpassen</string>
     <string name="light_filter_title">Lichtsensor Filter</string>
     <string name="light_filter_enabled_title">Aktiviert</string>
     <string name="light_filter_enabled_summary">Apply moving average filter to sensor data to reduce flicker</string>
@@ -1625,9 +1634,9 @@
     <string name="ll_btn">Tasten:</string>
     <string name="ll_kb">Tastatur:</string>
     <string name="ll_disabled">deaktiviert</string>
-    <string name="ll_default">Standardeinstellungen laden</string>
-    <string name="ll_save">Save &amp; apply</string>
-    <string name="ll_reload">Aktuelle neu laden</string>
+    <string name="ll_default">Standard</string>
+    <string name="ll_save">Speichern</string>
+    <string name="ll_reload">Aktuelle aktualisieren</string>
     <string name="ll_bad_levels">Stufen müssen aufsteigend sein</string>
     <string name="ll_num_levels">Anzahl an Stufen festlegen</string>
     
@@ -1663,20 +1672,20 @@
     <string name="anonymous_statistics_title">AOKP Statistiken</string>
     <string name="anonymous_statistics_summary">Helfe AOKP zu verbessern indem Du zustimmst anonyme Statistiken zu übermitteln.</string>
     <string name="anonymous_statistics_warning_title">Über</string>
-    <string name="anonymous_statistics_warning">Opting into AOKP Statistics will allow non-personal data to be submitted to the
-        developers of AOKP to track unique installations across devices. The information submitted includes an unique identifier,
-        which does not compromise your privacy or personal data. The data is submitted once weekly, during boot.\n\nFor an example of the data that is submitted, tap on Preview Data.</string>
+    <string name="anonymous_statistics_warning">Das Zustimmen der AOKP Statistiken erlaubt das Übermitteln von nicht-personalisierten Daten an die
+        Entwickler von AOKP um spezifische Geräteinstallationen nachvollziehen zu können. Die übermittelten Informationen beinhalten eine eigene Kennung,
+        die nicht Deine Privatsphäre oder persöhnliche Daten gefährdet. Die Daten werden einmal pro Woche während des Startvorgangs übermittelt.\n\nFür ein Beispiel der übermittelten Daten, klicke "Vorschau der Daten".</string>
     <string name="enable_reporting_title">Protokollieren aktivieren</string>
     <string name="preview_data_title">Vorschau der Daten</string>
     <string name="preview_data_summary">%s</string>
     <string name="view_stats_title">Statistik anschauen</string>
-    <string name="anonymous_learn_more">Mehr lernen</string>
+    <string name="anonymous_learn_more">Mehr erfahren</string>
 
     <!-- Anonymous Statistics - Notification -->
     <string name="anonymous_notification_desc">Aktiviere oder Deaktiviere die AOKP Statistiken</string>
 
     <!-- Anonymous Statistics - Preview -->
-    <string name="preview_id_title">Unique ID</string>
+    <string name="preview_id_title">Eigene ID</string>
     <string name="preview_device_title">Gerät</string>
     <string name="preview_version_title">Version</string>
     <string name="preview_country_title">Land</string>
