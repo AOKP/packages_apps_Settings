@@ -66,6 +66,7 @@ public class TetherSettings extends SettingsPreferenceFragment
 
     private static final int DIALOG_TETHER_HELP = 1;
     private static final int DIALOG_AP_SETTINGS = 2;
+    private static final int DIALOG_TETHER_WARNING = 3;
 
     private WebView mView;
     private CheckBoxPreference mUsbTether;
@@ -204,56 +205,68 @@ public class TetherSettings extends SettingsPreferenceFragment
 
     @Override
     public Dialog onCreateDialog(int id) {
-        if (id == DIALOG_TETHER_HELP) {
-            Locale locale = Locale.getDefault();
+        switch (id) {
+            case DIALOG_TETHER_HELP: 
+                Locale locale = Locale.getDefault();
 
-            // check for the full language + country resource, if not there, try just language
-            final AssetManager am = getActivity().getAssets();
-            String path = HELP_PATH.replace("%y", locale.getLanguage().toLowerCase());
-            path = path.replace("%z", '_'+locale.getCountry().toLowerCase());
-            boolean useCountry = true;
-            InputStream is = null;
-            try {
-                is = am.open(path);
-            } catch (Exception ignored) {
-                useCountry = false;
-            } finally {
-                if (is != null) {
-                    try {
-                        is.close();
-                    } catch (Exception ignored) {}
+                // check for the full language + country resource, if not there, try just language
+                final AssetManager am = getActivity().getAssets();
+                String path = HELP_PATH.replace("%y", locale.getLanguage().toLowerCase());
+                path = path.replace("%z", '_'+locale.getCountry().toLowerCase());
+                boolean useCountry = true;
+                InputStream is = null;
+                try {
+                    is = am.open(path);
+                } catch (Exception ignored) {
+                    useCountry = false;
+                } finally {
+                    if (is != null) {
+                        try {
+                            is.close();
+                        } catch (Exception ignored) {}
+                    }
                 }
-            }
-            String url = HELP_URL.replace("%y", locale.getLanguage().toLowerCase());
-            url = url.replace("%z", useCountry ? '_'+locale.getCountry().toLowerCase() : "");
-            if ((mUsbRegexs.length != 0) && (mWifiRegexs.length == 0)) {
-                url = url.replace("%x", USB_HELP_MODIFIER);
-            } else if ((mWifiRegexs.length != 0) && (mUsbRegexs.length == 0)) {
-                url = url.replace("%x", WIFI_HELP_MODIFIER);
-            } else {
-                // could assert that both wifi and usb have regexs, but the default
-                // is to use this anyway so no check is needed
-                url = url.replace("%x", "");
-            }
+                String url = HELP_URL.replace("%y", locale.getLanguage().toLowerCase());
+                url = url.replace("%z", useCountry ? '_'+locale.getCountry().toLowerCase() : "");
+                if ((mUsbRegexs.length != 0) && (mWifiRegexs.length == 0)) {
+                    url = url.replace("%x", USB_HELP_MODIFIER);
+                } else if ((mWifiRegexs.length != 0) && (mUsbRegexs.length == 0)) {
+                    url = url.replace("%x", WIFI_HELP_MODIFIER);
+                } else {
+                    // could assert that both wifi and usb have regexs, but the default
+                    // is to use this anyway so no check is needed
+                    url = url.replace("%x", "");
+                }
 
-            mView.loadUrl(url);
-            // Detach from old parent first
-            ViewParent parent = mView.getParent();
-            if (parent != null && parent instanceof ViewGroup) {
-                ((ViewGroup) parent).removeView(mView);
-            }
-            return new AlertDialog.Builder(getActivity())
-                .setCancelable(true)
-                .setTitle(R.string.tethering_help_button_text)
-                .setView(mView)
-                .create();
-        } else if (id == DIALOG_AP_SETTINGS) {
-            final Activity activity = getActivity();
-            mDialog = new WifiApDialog(activity, this, mWifiConfig);
-            return mDialog;
+                mView.loadUrl(url);
+                // Detach from old parent first
+                ViewParent parent = mView.getParent();
+                if (parent != null && parent instanceof ViewGroup) {
+                    ((ViewGroup) parent).removeView(mView);
+                }
+                return new AlertDialog.Builder(getActivity())
+                    .setCancelable(true)
+                    .setTitle(R.string.tethering_help_button_text)
+                    .setView(mView)
+                    .create();
+            case DIALOG_AP_SETTINGS:
+                final Activity activity = getActivity();
+                mDialog = new WifiApDialog(activity, this, mWifiConfig);
+                return mDialog;
+            case DIALOG_TETHER_WARNING:     // shown for BT and USB tethering as they use wifi data if it's on
+                return new AlertDialog.Builder(getActivity())
+                    .setCancelable(true)
+                    .setTitle(R.string.tethering_warning_dialog_title)
+                    .setMessage(R.string.tethering_warning_dialog_text)
+                    .setPositiveButton(R.string.tethering_warning_dialog_button, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            dialog.dismiss();
+                        }
+                    })
+                    .create();
+            default:
+                return null;
         }
-
-        return null;
     }
 
     private class TetherChangeReceiver extends BroadcastReceiver {
@@ -517,6 +530,8 @@ public class TetherSettings extends SettingsPreferenceFragment
                 mWifiApEnabler.setSoftapEnabled(true);
                 break;
             case BLUETOOTH_TETHERING:
+                // show the data warning dialog
+                showDialog(DIALOG_TETHER_WARNING);
                 // turn on Bluetooth first
                 BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
                 if (adapter.getState() == BluetoothAdapter.STATE_OFF) {
@@ -530,6 +545,8 @@ public class TetherSettings extends SettingsPreferenceFragment
                 }
                 break;
             case USB_TETHERING:
+                // show the data warning dialog
+                showDialog(DIALOG_TETHER_WARNING);
                 setUsbTethering(true);
                 break;
             default:
