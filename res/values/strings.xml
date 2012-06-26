@@ -2123,6 +2123,13 @@
 
     <!-- Tethering help button - calls up a web view with general tethering info -->
     <string name="tethering_help_button_text">Help</string>
+    
+    <!-- Tethering warning dialog - title -->
+    <string name="tethering_warning_dialog_title">Warning</string>
+    <!-- Tethering warning dialog - warns about Wifi/mobile data tethering usage -->
+    <string name="tethering_warning_dialog_text">Tethering over Bluetooth or USB while connected to a Wi-Fi network will use the Wi-Fi connection rather than mobile data</string>
+    <!-- Tethering warning dialog - confirmation button -->
+    <string name="tethering_warning_dialog_button">OK</string>
 
     <!-- Wireless controls, item title to go into the network settings -->
     <string name="network_settings_title">Mobile networks</string>
