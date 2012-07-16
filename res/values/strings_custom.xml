@@ -93,6 +93,12 @@
     <string name="start_time_title">Start</string>
     <string name="end_time_title">End</string>
 
+    <!-- Quick links separator -->
+    <string name="quick_links_title">Quick Links</string>
+
+    <!-- Rom Control -->
+    <string name="rom_control_title">ROM Control</string>
+
     <!-- Themes settings  -->
     <string name="themes_settings_title">Themes</string>
 </resources>
