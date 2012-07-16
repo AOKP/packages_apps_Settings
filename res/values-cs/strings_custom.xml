@@ -70,5 +70,6 @@
     <string name="start_time_title">Začátek</string>
     <string name="end_time_title">Konec</string>
 
+    <string name="rom_control_title">Nastavení ROM</string>
     <string name="themes_settings_title">Témata vzhledu</string>
 </resources>
