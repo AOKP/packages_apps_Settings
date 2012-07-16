@@ -4899,4 +4899,8 @@
 
     <!-- Text to display in regulatory info screen (from device overlay). -->
     <string name="regulatory_info_text"></string>
+
+    <string name="quick_links_title">Quick Links</string>
+    <string name="rom_control_title">ROM Control</string>
+
 </resources>
