@@ -1986,6 +1986,10 @@
     <string name="build_number">Build number</string>
     <!-- About phone screen,  setting option name-->
     <string name="selinux_status">SELinux status</string>
+    <!-- About phone screen,  AOKP version name-->
+    <string name="mod_version">AOKP version</string>
+    <!-- About phone screen,  AOKP unknown name-->
+    <string name="mod_version_default">Unknown</string>
 
     <!-- About phone screen, show when a value of some status item is unavailable. -->
     <string name="device_info_not_available">Not available</string>
