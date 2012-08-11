@@ -86,9 +86,7 @@
     <string name="battery_info_status_charging_usb" msgid="4059070156126770959">"(USB)"</string>
     <string name="battery_info_status_discharging" msgid="6222697503392774475">"放電中"</string>
     <string name="battery_info_status_not_charging" msgid="2820070506621483576">"充電していません"</string>
-    <!-- String.format failed for translation -->
-    <!-- no translation found for battery_info_status_full (2824614753861462808) -->
-    <skip />
+    <string name="battery_info_status_full">充電完了</string>
     <string name="battery_info_power_unplugged" msgid="5987246575519551081">"電池使用時間:"</string>
     <string name="battery_info_power_ac" msgid="6808516193001604634">"AC"</string>
     <string name="battery_info_power_usb" msgid="8012931702516331797">"USB"</string>
@@ -165,11 +163,11 @@
     <string name="date_time_12_hour_sample" msgid="3259617262618020574">"1:00 PM"</string>
     <string name="date_time_24_hour_sample" msgid="8916857570746212357">"13:00"</string>
     <string name="choose_timezone" msgid="1362834506479536274">"タイムゾーンの選択"</string>
+    <string name="default_date_format"><xliff:g id="default_date_format">yyyy/MM/dd</xliff:g></string>
     <string name="normal_date_format" msgid="7636406984925498359">"地域（<xliff:g id="DATE">%s</xliff:g>）"</string>
     <string name="display_preview_label" msgid="1127597250917274792">"プレビュー:"</string>
     <string name="display_font_size_label" msgid="8941851418397475389">"フォントサイズ:"</string>
-    <!-- no translation found for intent_sender_data_label (6332324780477289261) -->
-    <skip />
+    <string name="intent_sender_data_label"><xliff:g id="data">データ:</xliff:g></string>
     <string name="intent_sender_sendbroadcast_text" msgid="1415735148895872715">"<xliff:g id="BROADCAST">broadcast</xliff:g>を送信"</string>
     <string name="intent_sender_action_label" msgid="616458370005452389">"<xliff:g id="ACTION">Action</xliff:g>:"</string>
     <string name="intent_sender_startactivity_text" msgid="5080516029580421895">"<xliff:g id="ACTIVITY">activity</xliff:g>を開始"</string>
@@ -493,6 +491,8 @@
     <string name="android_beam_disabled_summary" msgid="1737782116894793393">"NFCがOFFのため使用できません"</string>
     <string name="android_beam_label" msgid="6257036050366775040">"Androidビーム"</string>
     <string name="android_beam_explained" msgid="6981652347448777459">"この機能をONにすると、別のNFC対応の端末を近づけて持ち、アプリのコンテンツをビームすることができます。たとえば、ブラウザのページ、YouTubeの動画、連絡帳の連絡先などをビームできます。"\n\n"2 つの端末を近づけて（通常は背面を向かい合わせにして）、画面をタップします。何をビームするかはアプリが判断します。"</string>
+    <string name="nfc_polling_mode_title">NFCポーリングモード</string>
+    <string name="nfc_polling_mode_summary">実際にNFCを有効にするのに必要最低限の設定をします</string>
     <string name="nsd_quick_toggle_title" msgid="3125572815278848258">"ネットワークサービスの検出"</string>
     <string name="nsd_quick_toggle_summary" msgid="155692215972781276">"別の端末上のアプリにこの端末上のアプリを検出することを許可する"</string>
     <string name="wifi_quick_toggle_title" msgid="874495178395350104">"Wi-Fi"</string>
@@ -634,6 +634,8 @@
     <string name="sound_effects_enable_title" msgid="1171590821131077296">"タッチ操作音"</string>
     <string name="lock_sounds_enable_title" msgid="450098505659399520">"画面ロックの音"</string>
     <string name="haptic_feedback_enable_title" msgid="2438293710530828760">"タッチ操作バイブ"</string>
+    <string name="camera_sounds_title">シャッター音</string>
+    <string name="camera_sounds_summary">危険: カメラのシャッター音を無効にすることは一部の場所で違法です。</string>
     <string name="audio_record_proc_title" msgid="4271091199976457534">"ノイズキャンセル"</string>
     <string name="volume_media_description" msgid="7949355934788807863">"音楽、動画、ゲーム、その他のメディア"</string>
     <string name="volume_ring_description" msgid="5936851631698298989">"着信音と通知音"</string>
@@ -714,6 +716,15 @@
     <string name="device_info_settings" product="default" msgid="475872867864762157">"端末の状態"</string>
     <string name="system_update_settings_list_item_title" msgid="3342887311059985961">"システムアップデート"</string>
     <string name="system_update_settings_list_item_summary" msgid="3853057315907710747"></string>
+    <string name="hardware_info">ハードウェア情報</string>
+    <!--  About device Screen, hardware info, rear camera -->
+    <string name="device_rear_camera">バックカメラ</string>
+    <!--  About device Screen, hardware info, front camera -->
+    <string name="device_front_camera">フロントカメラ</string>
+    <!--  About device Screen, hardware info, screen res -->
+    <string name="device_screen_resolution">画面解像度</string>
+    <!-- About phone screen, Free memory info -->
+    <string name="mem_info">メモリ</string>
     <string name="firmware_version" msgid="4801135784886859972">"Androidバージョン"</string>
     <string name="model_number" msgid="3765737700545384794">"モデル番号"</string>
     <string name="baseband_version" msgid="1848990160763524801">"ベースバンドバージョン"</string>
@@ -971,6 +982,7 @@
     <string name="lock_title" product="default" msgid="4059246467204273930">"携帯端末の保護"</string>
     <string name="lock_intro_message" product="tablet" msgid="8616353869251700776">"秘密の画面ロック解除パターンを作成してタブレットを不正使用から守ります。次の画面で指を使って、4つ以上の点を好きな順序で結んでください。"\n\n"準備ができたら[次へ]をタップしてください。"</string>
     <string name="lock_intro_message" product="default" msgid="8393155371327584659">"秘密の画面ロック解除パターンを作成して端末を不正使用から守ります。次の画面で指を使って点を好きな順序で結んでください。4つ以上の点を結ぶ必要があります。"\n\n"準備ができたら[次へ]をタップしてください。"</string>
+    <string name="advanced_settings_title">端末オプション</string>
     <string name="manageapplications_settings_title" msgid="7041951105633616745">"アプリを管理"</string>
     <string name="manageapplications_settings_summary" msgid="1794401500935451259">"インストール済みアプリを管理、削除する"</string>
     <string name="applications_settings" msgid="1721442176406964682">"アプリ"</string>
@@ -1086,13 +1098,9 @@
     <string name="cached" msgid="1059590879740175019">"キャッシュしたバックグラウンドプロセス"</string>
     <string name="no_running_services" msgid="2059536495597645347">"実行中のサービスはありません"</string>
     <string name="service_started_by_app" msgid="818675099014723551">"アプリによって起動されたサービス。"</string>
-    <!-- no translation found for service_client_name (4037193625611815517) -->
-    <skip />
     <string name="service_background_processes" msgid="6844156253576174488">"<xliff:g id="MEMORY">%1$s</xliff:g>空き"</string>
     <string name="service_foreground_processes" msgid="7583975676795574276">"<xliff:g id="MEMORY">%1$s</xliff:g>使用中"</string>
     <string name="memory" msgid="6609961111091483458">"RAM"</string>
-    <!-- no translation found for service_process_name (4098932168654826656) -->
-    <skip />
     <string name="running_processes_item_description_s_s" msgid="5790575965282023145">"<xliff:g id="NUMPROCESS">%1$d</xliff:g>個のプロセスと<xliff:g id="NUMSERVICES">%2$d</xliff:g>個のサービス"</string>
     <string name="running_processes_item_description_s_p" msgid="8019860457123222953">"<xliff:g id="NUMPROCESS">%1$d</xliff:g>個のプロセスと<xliff:g id="NUMSERVICES">%2$d</xliff:g>個のサービス"</string>
     <string name="running_processes_item_description_p_s" msgid="744424668287252915">"<xliff:g id="NUMPROCESS">%1$d</xliff:g>個のプロセスと<xliff:g id="NUMSERVICES">%2$d</xliff:g>個のサービス"</string>
@@ -1270,8 +1278,6 @@
     <string name="battery_stats_wifi_running_label" msgid="3093545080361658269">"Wi-Fi"</string>
     <string name="battery_stats_wake_lock_label" msgid="1908942681902324095">"スリープなし"</string>
     <string name="battery_stats_phone_signal_label" msgid="4137799310329041341">"モバイルネットワークの電波"</string>
-    <!-- no translation found for battery_stats_last_duration (1535831453827905957) -->
-    <skip />
     <string name="awake" msgid="387122265874485088">"端末使用時間"</string>
     <string name="wifi_on_time" msgid="6310209835617490616">"Wi-FiをONにしている時間"</string>
     <string name="bluetooth_on_time" msgid="6157799524996162271">"Wi-FiをONにしている時間"</string>
@@ -1507,8 +1513,6 @@
     <string name="remove_account_failed" product="tablet" msgid="3086620478225952725">"このアカウントは一部のアプリに必要です。アカウントを削除するには、タブレットを出荷時設定にリセットする必要があります（個人データはすべて削除されます）。リセットは[設定] &gt; [バックアップとリセット]で行います。"</string>
     <string name="remove_account_failed" product="default" msgid="6217238709175617517">"このアカウントは一部のアプリに必要です。アカウントを削除するには、携帯端末を出荷時設定にリセットする必要があります（個人データはすべて削除されます）。リセットは[設定] &gt; [バックアップとリセット]で行います。"</string>
     <string name="provider_label" msgid="7724593781904508866">"プッシュ型登録"</string>
-    <!-- no translation found for sync_item_title (4782834606909853006) -->
-    <skip />
     <string name="cant_sync_dialog_title" msgid="8923508322291625282">"手動では同期できません"</string>
     <string name="cant_sync_dialog_message" msgid="1938380442159016449">"このアイテムの同期は現在無効になっています。この設定を変更するには、バックグラウンドデータと自動同期を一時的にONにします。"</string>
     <string name="wimax_settings" msgid="1574837328738396794">"4G設定"</string>
@@ -1701,4 +1705,54 @@
     <string name="help_label" msgid="1107174367904110532">"ヘルプ"</string>
     <string name="cell_broadcast_settings" msgid="8415582011920085222">"エリアメール"</string>
     <string name="cell_broadcast_settings_summary" msgid="3301339398950905913">"表示する緊急警報の種類を選択してください。"</string>
+    <string name="safe_headset_restore_title">セーフヘッドセットボリューム</string>
+    <string name="safe_headset_restore_summary">ヘッドホンが始めて接続されたときに大音量にならないようにします</string>
+
+    <string name="quick_links_title">クイックリンク</string>
+    <string name="themes_title">テーマ</string>
+
+    <string name="mod_version">AOKPバージョン</string>
+    <string name="mod_version_default">不明</string>
+
+    <!-- Anonymous Statistics #CM -->
+    <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
+    <string name="anonymous_statistics_title">AOKP統計</string>
+    <string name="anonymous_statistics_summary">匿名統計報告を選択することによる援助がAOKPをよりよくします</string>
+    <string name="anonymous_statistics_warning_title">AOKPについて</string>
+    <string name="anonymous_statistics_warning">AOKP統計を選択すると個人情報でないデーターがデバイスを隔てず一つ一つのインストールを追跡するために
+        AOKPの開発者に提出されるのを許可します。その提出される情報はあなたのプライバシーや個人情報を妥協するようなものではない
+        固体識別情報を含んでおります。そのデーターは一週間に一回,起動する間に提出されます。\n\n提出されるデーターの例を見るには、データプレビューをタップしてください。</string>
+    <string name="enable_reporting_title">レポートを有効にする</string>
+    <string name="preview_data_title">データプレビュー</string>
+    <string name="preview_data_summary">%s</string>
+    <string name="view_stats_title">統計を見る</string>
+    <string name="anonymous_learn_more">もっと学ぶ</string>
+
+    <!-- Anonymous Statistics - Notification -->
+    <string name="anonymous_notification_desc">"AOKP統計を有効/無効にする"</string>
+
+    <!-- Anonymous Statistics - Preview -->
+    <string name="preview_id_title">固有ID</string>
+    <string name="preview_device_title">端末</string>
+    <string name="preview_version_title">バージョン</string>
+    <string name="preview_country_title">国</string>
+    <string name="preview_carrier_title">キャリア</string>
+
+        <!-- Quiet hours #CM -->
+    <string name="quiet_hours_summary">端末が無音になる時間を設定します</string>
+    <string name="quiet_hours_enabled_title">Enable quiet hours</string>
+    <string name="quiet_hours_start">Quiet hoursの開始時間</string>
+    <string name="quiet_hours_start_summary">Quiet hoursを開始する時間です</string>
+    <string name="quiet_hours_end">Quiet hoursの終了時間</string>
+    <string name="quiet_hours_end_summary">Quit hoursを停止する時間です</string>
+    <string name="quiet_hours_notifications_title">通知音をミュートにする</string>
+    <string name="quiet_hours_ringer_title">着信音をミュートにする</string>
+    <string name="quiet_hours_still_title">バイブレーションを無効にする</string>
+    <string name="quiet_hours_dim_title">通知ライトを無効にする</string>
+    <string name="quiet_hours_active_from">動作時間:</string>
+    <string name="quiet_hours_active_to">～</string>
+
+    <!-- time range preference -->
+    <string name="start_time_title">開始</string>
+    <string name="end_time_title">終了</string>
 </resources>
