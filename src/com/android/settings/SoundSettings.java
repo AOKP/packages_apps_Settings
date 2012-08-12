@@ -287,6 +287,9 @@ public class SoundSettings extends SettingsPreferenceFragment implements
 
         final int vibrateMode = mAudioManager.getVibrateSetting(AudioManager.VIBRATE_TYPE_RINGER);
 
+        mVibrateWhenRinging.setChecked(Settings.System.getInt(resolver,
+            Settings.System.VIBRATE_WHEN_RINGING, 0) != 0);
+
         if (Settings.AOKP.getInt(resolver, Settings.AOKP.QUIET_HOURS_ENABLED, 0) == 1) {
             mQuietHours.setSummary(getString(R.string.quiet_hours_active_from) + " " +
                     returnTime(Settings.AOKP.getString(resolver, Settings.AOKP.QUIET_HOURS_START))
