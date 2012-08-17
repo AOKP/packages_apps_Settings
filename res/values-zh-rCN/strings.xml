@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!--  Copyright (C) 2007 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
-
+  
           http://www.apache.org/licenses/LICENSE-2.0
-
+  
      Unless required by applicable law or agreed to in writing, software
      distributed under the License is distributed on an "AS IS" BASIS,
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -369,7 +368,7 @@
     <string name="lockpassword_continue_label" msgid="4602203784934526940">"继续"</string>
     <string name="lockpassword_password_too_long" msgid="7016906583950201704">"密码必须少于 <xliff:g id="NUMBER">%d</xliff:g> 个字符。"</string>
     <string name="lockpassword_pin_too_long" msgid="6419879099090294052">"PIN 必须少于 <xliff:g id="NUMBER">%d</xliff:g> 位数。"</string>
-    <string name="lockpassword_pin_contains_non_digits" msgid="1079053457942945709">"PIN 只能包含 0-9 的数字。"</string>
+    <string name="lockpassword_pin_contains_non_digits" msgid="1079053457942945709">"PIN 只能包含 0-9 的数字。"</string> 
     <string name="lockpassword_pin_recently_used" msgid="7909781183925861119">"设备管理员不允许使用最近用过的 PIN。"</string>
     <string name="lockpassword_illegal_character" msgid="8742901630116866738">"密码包含非法字符。"</string>
     <string name="lockpassword_password_requires_alpha" msgid="5203836082520634764">"密码必须包含至少 1 个字母。"</string>
@@ -413,10 +412,11 @@
     <string name="bluetooth_settings" msgid="1810521656168174329">"蓝牙"</string>
     <string name="bluetooth_settings_title" msgid="1908745291161353016">"蓝牙"</string>
     <string name="bluetooth_settings_summary" msgid="2091062709530570462">"管理连接、设置设备名称和可检测性"</string>
+    <string name="bluetooth_enable_alphanumeric_pin" msgid="7222713483058171357">"PIN 由字母或符号组成"</string>
     <string name="bluetooth_pairing_request" msgid="6385750334766370310">"蓝牙配对请求"</string>
     <string name="bluetooth_enter_pin_msg" msgid="5698297871117529185">"要与 <xliff:g id="BOLD_0">&lt;br&gt;&lt;b&gt;</xliff:g><xliff:g id="DEVICE_NAME">%1$s</xliff:g><xliff:g id="END_BOLD">&lt;/b&gt;&lt;br&gt;&lt;br&gt;</xliff:g> 设备配对，请键入该设备所需的 PIN："</string>
     <string name="bluetooth_enter_passkey_msg" msgid="2220143735340367939">"要与 <xliff:g id="BOLD_0">&lt;br&gt;&lt;b&gt;</xliff:g><xliff:g id="DEVICE_NAME">%1$s</xliff:g><xliff:g id="END_BOLD">&lt;/b&gt;&lt;br&gt;&lt;br&gt;</xliff:g> 设备配对，请键入该设备所需的配对密钥："</string>
-    <string name="bluetooth_enable_alphanumeric_pin" msgid="7222713483058171357">"PIN 由字母或符号组成"</string>
+    <string name="bluetooth_enable_alphanumeric_pin">PIN 含字母或符号</string>
     <string name="bluetooth_pin_values_hint" msgid="3815897557875873646">"通常为 0000 或 1234"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="4637977124526813470">"您可能还需要在另一台设备上输入此 PIN。"</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="2798719004030279602">"您可能还需要在另一台设备上输入此密钥。"</string>
@@ -491,6 +491,8 @@
     <string name="android_beam_disabled_summary" msgid="1737782116894793393">"无法使用，因为 NFC 已关闭"</string>
     <string name="android_beam_label" msgid="6257036050366775040">"Android Beam"</string>
     <string name="android_beam_explained" msgid="6981652347448777459">"打开此功能后，您只需将自己的设备与另一台支持 NFC 的设备靠在一起，即可将您设备上的应用内容同步分享给对方。例如，您可以发送网页、YouTube 视频、联系人等等。"\n\n"您只需将设备靠在一起（通常是背靠背）然后触摸屏幕即可，所分享的内容由相应的应用确定。"</string>
+    <string name="nfc_polling_mode_title">NFC 侦测模式</string>
+    <string name="nfc_polling_mode_summary">配置当 NFC 启用时的最低侦测模式</string>
     <string name="nsd_quick_toggle_title" msgid="3125572815278848258">"网络服务发现"</string>
     <string name="nsd_quick_toggle_summary" msgid="155692215972781276">"允许其他设备上的应用发现此设备上的应用"</string>
     <string name="wifi_quick_toggle_title" msgid="874495178395350104">"Wi-Fi"</string>
@@ -632,6 +634,8 @@
     <string name="sound_effects_enable_title" msgid="1171590821131077296">"触摸提示音"</string>
     <string name="lock_sounds_enable_title" msgid="450098505659399520">"锁屏提示音"</string>
     <string name="haptic_feedback_enable_title" msgid="2438293710530828760">"触摸时振动"</string>
+    <string name="camera_sounds_title">相机声音</string>
+    <string name="camera_sounds_summary">警告: 在某些国家或地区，禁用相机快门音是非法行为！</string>
     <string name="audio_record_proc_title" msgid="4271091199976457534">"降噪"</string>
     <string name="volume_media_description" msgid="7949355934788807863">"音乐、视频、游戏和其他媒体"</string>
     <string name="volume_ring_description" msgid="5936851631698298989">"铃声和通知"</string>
@@ -712,6 +716,11 @@
     <string name="device_info_settings" product="default" msgid="475872867864762157">"手机状态"</string>
     <string name="system_update_settings_list_item_title" msgid="3342887311059985961">"系统更新"</string>
     <string name="system_update_settings_list_item_summary" msgid="3853057315907710747"></string>
+    <string name="hardware_info">硬件信息</string>
+    <string name="device_rear_camera">后置摄像头</string>
+    <string name="device_front_camera">前置摄像头</string>
+    <string name="device_screen_resolution">屏幕分辨率</string>
+    <string name="mem_info">内存</string>
     <string name="firmware_version" msgid="4801135784886859972">"Android 版本"</string>
     <string name="model_number" msgid="3765737700545384794">"型号"</string>
     <string name="baseband_version" msgid="1848990160763524801">"基带版本"</string>
@@ -909,6 +918,8 @@
     <string name="assisted_gps_disabled" msgid="6982698333968010748">"使用服务器来辅助 GPS（取消选中可提高 GPS 性能）"</string>
     <string name="use_location_title" msgid="5206937465504979977">"位置和 Google 搜索"</string>
     <string name="use_location_summary" msgid="3978805802386162520">"允许 Google 使用您的位置信息改善搜索结果和其他服务"</string>
+    <string name="location_gps_source_title">GPS 来源</string>
+    <string name="location_gps_source_summary">选择外部蓝牙 GPS 设备或内置 GPS 设备作为位置提供源</string>
     <string name="about_settings" product="tablet" msgid="593457295516533765">"关于平板电脑"</string>
     <string name="about_settings" product="default" msgid="1743378368185371685">"关于手机"</string>
     <string name="about_settings_summary" msgid="3371517697156165959">"查看法律信息、状态和软件版本"</string>
@@ -969,6 +980,7 @@
     <string name="lock_title" product="default" msgid="4059246467204273930">"手机安全设置"</string>
     <string name="lock_intro_message" product="tablet" msgid="8616353869251700776">"创建个人屏幕解锁图案可防止他人未经许可使用您的平板电脑。在下一屏幕上用手指以任意顺序连接至少四个点。"\n\n"准备好开始了吗？请触摸“下一步”。"</string>
     <string name="lock_intro_message" product="default" msgid="8393155371327584659">"创建个人屏幕解锁图案可防止他人未经许可使用您的手机。在下一屏幕上滑动手指以任意顺序连接至少四个点。"\n\n"准备好开始了吗？请触摸“下一步”。"</string>
+    <string name="advanced_settings_title">设备选项</string>
     <string name="manageapplications_settings_title" msgid="7041951105633616745">"管理应用"</string>
     <string name="manageapplications_settings_summary" msgid="1794401500935451259">"管理和删除已安装的应用"</string>
     <string name="applications_settings" msgid="1721442176406964682">"应用"</string>
@@ -1699,4 +1711,55 @@
     <string name="help_label" msgid="1107174367904110532">"帮助"</string>
     <string name="cell_broadcast_settings" msgid="8415582011920085222">"小区广播"</string>
     <string name="cell_broadcast_settings_summary" msgid="3301339398950905913">"请选择要显示的紧急消息类型。"</string>
+
+    <!-- Safe headset volume restore checkbox -->
+    <string name="safe_headset_restore_title">耳机安全音量</string>
+    <string name="safe_headset_restore_summary">防止当耳机插入时音量过大</string>
+
+    <string name="quick_links_title">快速链接</string>
+    <string name="rom_control_title">ROM 设置</string>
+    <string name="themes_title">主题</string>
+
+    <string name="mod_version">AOKP 版本</string>
+    <string name="mod_version_default">未知</string>
+
+    <!-- Anonymous Statistics #CM -->
+    <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
+    <string name="anonymous_statistics_title">AOKP 统计</string>
+    <string name="anonymous_statistics_summary">发送匿名的统计报告帮助 AOKP 更好发展</string>
+    <string name="anonymous_statistics_warning_title">关于</string>
+    <string name="anonymous_statistics_warning">AOKP 统计允许将非个人数据提交给开发者用于统计使用设备的数量。提交的数据包括设备唯一ID，这不会损害您的隐私和个人数据。数据将在设备启动引导时提交，每周提交一次。\n\n提交的数据示例请查看预览数据。</string>
+    <string name="enable_reporting_title">启用报告</string>
+    <string name="preview_data_title">预览数据</string>
+    <string name="view_stats_title">查看统计信息</string>
+    <string name="anonymous_learn_more">更多信息</string>
+
+
+    <!-- Anonymous Statistics - Notification -->
+    <string name="anonymous_notification_desc">启用/禁用 AOKP 统计</string>
+
+    <!-- Anonymous Statistics - Preview -->
+    <string name="preview_id_title">设备唯一 ID</string>
+    <string name="preview_device_title">设备</string>
+    <string name="preview_version_title">版本</string>
+    <string name="preview_country_title">国家或地区</string>
+    <string name="preview_carrier_title">运营商</string>
+
+
+    <!-- Quiet hours #CM -->
+    <string name="quiet_hours_title">免打扰模式</string>
+    <string name="quiet_hours_summary">设置一段时间内不受到本设备的任何打扰</string>
+    <string name="quiet_hours_enabled_title">启用免打扰模式</string>
+    <string name="quiet_hours_start">开始时间</string>
+    <string name="quiet_hours_start_summary">免打扰模式的开始时间</string>
+    <string name="quiet_hours_end">结束时间</string>
+    <string name="quiet_hours_end_summary">免打扰模式的结束时间</string>
+    <string name="quiet_hours_notifications_title">通知静音</string>
+    <string name="quiet_hours_ringer_title">来电静音</string>
+    <string name="quiet_hours_still_title">禁止振动</string>
+    <string name="quiet_hours_dim_title">禁止通知灯</string>
+    <string name="quiet_hours_active_from">从</string>
+    <string name="quiet_hours_active_to">至</string>
+    <string name="start_time_title">开始</string>
+    <string name="end_time_title">结束</string>
 </resources>
