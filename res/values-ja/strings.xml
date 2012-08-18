@@ -493,6 +493,8 @@
     <string name="android_beam_disabled_summary" msgid="1737782116894793393">"NFCがOFFのため使用できません"</string>
     <string name="android_beam_label" msgid="6257036050366775040">"Androidビーム"</string>
     <string name="android_beam_explained" msgid="6981652347448777459">"この機能をONにすると、別のNFC対応の端末を近づけて持ち、アプリのコンテンツをビームすることができます。たとえば、ブラウザのページ、YouTubeの動画、連絡帳の連絡先などをビームできます。"\n\n"2 つの端末を近づけて（通常は背面を向かい合わせにして）、画面をタップします。何をビームするかはアプリが判断します。"</string>
+    <string name="nfc_polling_mode_title">"NFCポーリングモード"</string>
+    <string name="nfc_polling_mode_summary">"実際にNFCを有効にするための最低限の要求を設定"</string>
     <string name="nsd_quick_toggle_title" msgid="3125572815278848258">"ネットワークサービスの検出"</string>
     <string name="nsd_quick_toggle_summary" msgid="155692215972781276">"別の端末上のアプリにこの端末上のアプリを検出することを許可する"</string>
     <string name="wifi_quick_toggle_title" msgid="874495178395350104">"Wi-Fi"</string>
@@ -714,6 +716,13 @@
     <string name="device_info_settings" product="default" msgid="475872867864762157">"端末の状態"</string>
     <string name="system_update_settings_list_item_title" msgid="3342887311059985961">"システムアップデート"</string>
     <string name="system_update_settings_list_item_summary" msgid="3853057315907710747"></string>
+    <string name="hardware_info">"ハードウェア"</string>
+    <string name="device_rear_camera">"リアカメラ"</string>
+    <string name="device_front_camera">"フロントカメラ"</string>
+    <string name="device_screen_resolution">"画面解像度"</string>
+    <string name="gpu_info">"GPU"</string>
+    <string name="cpu_info">"CPU"</string>
+    <string name="mem_info">"メモリ"</string>
     <string name="firmware_version" msgid="4801135784886859972">"Androidバージョン"</string>
     <string name="model_number" msgid="3765737700545384794">"モデル番号"</string>
     <string name="baseband_version" msgid="1848990160763524801">"ベースバンドバージョン"</string>
@@ -874,6 +883,8 @@
     <string name="media_format_gesture_explanation" product="default" msgid="6288926293245938415">"SDカード内のデータを消去してよいか確認するため、ロック解除パターンを入力する必要があります。"</string>
     <string name="call_settings_title" msgid="5188713413939232801">"通話設定"</string>
     <string name="call_settings_summary" msgid="7291195704801002886">"ボイスメール、着信転送、発信者番号など"</string>
+    <string name="camera_sounds_title">"カメラのシャッター音を有効にする"</string>
+    <string name="camera_sounds_summary">"警告: カメラのシャッター音を無効にすることは一部の地域では違法です"</string>
     <string name="tether_settings_title_usb" msgid="6688416425801386511">"USBテザリング"</string>
     <string name="tether_settings_title_wifi" msgid="3277144155960302049">"ポータブルアクセスポイント"</string>
     <string name="tether_settings_title_bluetooth" msgid="355855408317564420">"Bluetoothテザリング"</string>
@@ -911,6 +922,10 @@
     <string name="assisted_gps_disabled" msgid="6982698333968010748">"サーバーでGPSを補助します（OFFにするとGPS性能が向上します）"</string>
     <string name="use_location_title" msgid="5206937465504979977">"位置情報とGoogle検索"</string>
     <string name="use_location_summary" msgid="3978805802386162520">"検索結果やサービスの品質向上にGoogleが現在地情報を使用することを許可する"</string>
+    <string name="location_gps_source_title">"GPSソース"</string>
+    <string name="location_gps_source_summary">"外部のBluetooth GPSアンテナを使用するか内部のGPSアンテナを利用するかの選択"</string>
+    <string name="location_gps_source_notification_title">"警告"</string>
+    <string name="location_gps_source_notification">"GPSソースが変更されました! GPSは無効にされます。使用する前に再度有効にしてください!"</string>
     <string name="about_settings" product="tablet" msgid="593457295516533765">"タブレット情報"</string>
     <string name="about_settings" product="default" msgid="1743378368185371685">"端末情報"</string>
     <string name="about_settings_summary" msgid="3371517697156165959">"規約、ステータス、ソフトウェアバージョン"</string>
@@ -982,6 +997,7 @@
     <string name="install_all_warning" product="default" msgid="8113734576826384682">"提供元不明のアプリから携帯端末や個人データが攻撃を受ける可能性が高くなります。このようなアプリの使用により生じる可能性がある携帯端末への損害やデータの損失について、ユーザーご自身が単独で責任を負うことに同意するものとします。"</string>
     <string name="advanced_settings" msgid="1777249286757067969">"詳細設定"</string>
     <string name="advanced_settings_summary" msgid="4016682978071086747">"詳細設定オプションを有効にする"</string>
+    <string name="advanced_settings_title">"デバイスオプション"</string>
     <string name="application_info_label" msgid="5736524913065714880">"アプリ情報"</string>
     <string name="storage_label" msgid="8700867073480107253">"メモリ"</string>
     <string name="auto_launch_label" msgid="3012617472833815382">"デフォルトでの起動"</string>
@@ -1701,4 +1717,40 @@
     <string name="help_label" msgid="1107174367904110532">"ヘルプ"</string>
     <string name="cell_broadcast_settings" msgid="8415582011920085222">"エリアメール"</string>
     <string name="cell_broadcast_settings_summary" msgid="3301339398950905913">"表示する緊急警報の種類を選択してください。"</string>
+    <string name="safe_headset_restore_title">"セーフヘッドセットボリューム"</string>
+    <string name="safe_headset_restore_summary">"最初にヘッドセットを接続した時に音量が大きくなりすぎることを防止する"</string>
+    <string name="quick_links_title">クイックリンク</string>
+    <string name="rom_control_title">ROMコントロール</string>
+    <string name="themes_title">テーマ</string>
+    <string name="mod_version">AOKPバージョン</string>
+    <string name="mod_version_default">不明</string>
+    <string name="anonymous_statistics_summary">"匿名の統計レポートを有効にしAOKPをより良くするのを手伝う"</string>
+    <string name="anonymous_statistics_title">"AOKP統計"</string>
+    <string name="anonymous_statistics_warning">"AOKP統計を有効にするとデバイスをまたいで個々のインストールを追跡できる非個人情報データがAOKP開発者に送信されることを許可することになります。その送信されるデータにはあなたのプライバシーや個人情報を含んでいない個別識別子が含まれます。データは週一回起動中に送信されます。\n\n送信されるデータの例を確認するためにはプレビューデータをタップしてみてください。"</string>
+    <string name="anonymous_statistics_warning_title">"AOKP統計について"</string>
+    <string name="enable_reporting_title">"レポートを有効にする"</string>
+    <string name="preview_data_title">"データのプレビュー"</string>
+    <string name="view_stats_title">"統計を参照"</string>
+    <string name="anonymous_learn_more">"もっと詳しく"</string>
+    <string name="anonymous_notification_desc">"AOKP統計を有効/無効にする"</string>
+    <string name="preview_id_title">"ユニークID"</string>
+    <string name="preview_device_title">"デバイス"</string>
+    <string name="preview_version_title">"バージョン"</string>
+    <string name="preview_country_title">"国"</string>
+    <string name="preview_carrier_title">"キャリア"</string>
+    <string name="quiet_hours_title">"静かにする時間帯"</string>
+    <string name="quiet_hours_summary">"デバイスを静かにさせる時間帯を設定"</string>
+    <string name="quiet_hours_enabled_title">"静かにする時間帯機能を有効にする"</string>
+    <string name="quiet_hours_start">"静かにする時間帯の開始時刻"</string>
+    <string name="quiet_hours_start_summary">"いつ静かにする時間帯を開始するか"</string>
+    <string name="quiet_hours_end">"静かにする時間帯の終了時刻"</string>
+    <string name="quiet_hours_end_summary">"いつ静かにする時間帯を終了するか"</string>
+    <string name="quiet_hours_notifications_title">"通知音を消音する"</string>
+    <string name="quiet_hours_ringer_title">"着信音を消音する"</string>
+    <string name="quiet_hours_still_title">"バイブを無効にする"</string>
+    <string name="quiet_hours_dim_title">"通知LEDを無効にする"</string>
+    <string name="quiet_hours_active_from">"開始時刻"</string>
+    <string name="quiet_hours_active_to">"終了時刻"</string>
+    <string name="start_time_title">"開始"</string>
+    <string name="end_time_title">"終了"</string>
 </resources>
