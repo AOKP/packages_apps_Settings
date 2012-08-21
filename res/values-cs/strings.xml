@@ -1760,4 +1760,6 @@
     <string name="location_gps_source_summary">Zvolit zda používat vnitřní nebo externí bluetooth GPS pro určování polohy</string>
     <string name="location_gps_source_notification_title">Pozor</string>
     <string name="location_gps_source_notification">Zdroj GPS byl změněn! GPS bude vypnuta. Před použitím je třeba ji opět zapnout!</string>
+
+    <string name="device_hostname">Jméno zařízení</string>
 </resources>
