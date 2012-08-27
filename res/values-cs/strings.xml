@@ -1706,7 +1706,6 @@
     <string name="themes_title">Témata vzhledu</string>
     <string name="mod_version">Verze AOKP</string>
     <string name="mod_version_default">Neznámá</string>
-    
     <string name="quiet_hours_title">Hodiny klidu</string>
     <string name="quiet_hours_summary">Zvolit hodiny, během kterých by mělo být zařízení v tichém režimu</string>
     <string name="quiet_hours_enabled_title">Zapnout hodiny klidu</string>
@@ -1722,7 +1721,6 @@
     <string name="quiet_hours_active_to">do</string>
     <string name="start_time_title">Začátek</string>
     <string name="end_time_title">Konec</string>
-    
     <string name="anonymous_statistics_title">AOKP statistiky</string>
     <string name="anonymous_statistics_summary">Pomáhá vylepšovat AOKP odesíláním anonymních statistik</string>
     <string name="anonymous_statistics_warning_title">O odesílání</string>
@@ -1738,7 +1736,6 @@
     <string name="preview_version_title">Verze</string>
     <string name="preview_country_title">Země</string>
     <string name="preview_carrier_title">Operátor</string>
-    
     <string name="hardware_info">Informace o hardwaru</string>
     <string name="device_rear_camera">Zadní kamera</string>
     <string name="device_front_camera">Přední kamera</string>
@@ -1746,27 +1743,27 @@
     <string name="gpu_info">GPU</string>
     <string name="cpu_info">CPU</string>
     <string name="mem_info">Operační paměť</string>
-    
     <string name="nfc_polling_mode_title">Režim NFC</string>
-    <string name="nfc_polling_mode_summary">Nastavit minimální požadavky pro zapnutí NFC</string>
-    
+    <string name="nfc_polling_mode_screen_off">Vypnutá obrazovka</string>
+    <string name="nfc_polling_mode_screen_locked">Zapnutá obrazovka, uzamčeno</string>
+    <string name="nfc_polling_mode_screen_unlocked">Zapnutá obrazovka, odemčeno (výchozí)</string>
     <string name="camera_sounds_title">Zvuky fotoaparátu</string>
     <string name="camera_sounds_summary">POZOR: Vypnutí zvuku fotoaparátu/kamery je v některých zemích nelegální!</string>
-
     <string name="safe_headset_restore_title">Bezpečná hlasitost sluchátek</string>
     <string name="safe_headset_restore_summary">Zabránit nastavení příliš vysoké hlasistoti pokud jsou připojena sluchátka</string>
-
     <string name="location_gps_source_title">Zdroj GPS</string>
     <string name="location_gps_source_summary">Zvolit zda používat vnitřní nebo externí bluetooth GPS pro určování polohy</string>
     <string name="location_gps_source_notification_title">Pozor</string>
     <string name="location_gps_source_notification">Zdroj GPS byl změněn! GPS bude vypnuta. Před použitím je třeba ji opět zapnout!</string>
-
     <string name="device_hostname">Jméno zařízení</string>
-
     <string name="adb_over_network">ADB po síti</string>
     <string name="adb_over_network_summary">Povolit ladění TCP/IP po síťovém rozhraní (Wi-Fi, USB sítě). Nastavení je resetováno při restartu.</string>
     <string name="adb_over_network_warning">POZOR: Pokud je ADB po síti povoleno, telefon je otevřen ke všem zásáhům v síti, kde je připojen!\n\nTento režim je doporučené provozovat pouze v důvěryhodných sítích.\n\nOpravdu se má tato funkčnost zapnout?</string>
-    
     <string name="adb_notify">Notifikace ladění</string>
     <string name="adb_notify_summary">Zobrazit notifikaci, pokud je zapnuto ladění Android</string>
+    <string name="volume_adjust_sounds_enable_title">Zvuk změny hlasitosti</string>
+    <string name="volume_adjust_sounds_enable_summary">Přehrát zvuk při změně hlasitosti pomocí hw. tlačítek</string>
+    <string name="volume_ring_only_description">Vyzvánění</string>
+    <string name="link_volume_ringtones">Spojit hlasitosti</string>
+    <string name="link_volume_mutes">Spojit tiché režimy</string>
 </resources>
