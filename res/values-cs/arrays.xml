@@ -278,11 +278,6 @@
     <item msgid="7664124146786465092">"Neúspěšné"</item>
   </string-array>
   
-  <string-array name="nfc_polling_mode_entries">
-    <item>Vypnutá obrazovka</item>
-    <item>Zapnutá obrazovka, uzamčeno</item>
-    <item>Zapnutá obrazovka, odemčeno (výchozí)</item>
-  </string-array>
   <string-array name="location_entries_gps_source">
     <item>Použít interní GPS</item>
   </string-array>
