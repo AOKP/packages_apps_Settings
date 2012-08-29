@@ -1598,11 +1598,7 @@
     <!-- Sound settings screen, setting check box label -->
     <string name="haptic_feedback_enable_title">Vibrate on touch</string>
     <!-- Sound settings screen, setting check box label -->
-    <string name="volume_adjust_sounds_enable_title">Volume adjust sound</string>
-    <!-- Sound settings screen, setting check box summary -->
-    <string name="volume_adjust_sounds_enable_summary">Play sound when adjusting volume with hard keys</string>
-    <!-- Sound settings screen, setting check box label -->
-    <string name="camera_sounds_title">Camera sounds</string>
+    <string name="camera_sounds_title">Enable camera sounds</string>
     <string name="camera_sounds_summary">WARNING: Disabling camera shutter sound is illegal in some areas!</string>
     <!-- Sound settings screen, setting option name checkbox to enable/disable audio recording features that improve audio recording in noisy environments -->
     <string name="audio_record_proc_title">Noise cancellation</string>
@@ -4204,8 +4200,4 @@
     <string name="adb_over_network_summary">Enable TCP/IP debugging over network interfaces (Wi-Fi, USB networks). This setting is reset on reboot</string>
     <!-- Warning for Adb over Network -->
     <string name="adb_over_network_warning">WARNING: When ADB over network is enabled, your phone is open for intrusions on all connected networks, including GSM data network !\n\nOnly use this feature when you are connected on trusted networks.\n\nDo you really want to enable this function?</string>
-     <!-- Stylus Icon -->
-    <string name="stylus_icon_enabled_title">Show icon when using stylus</string>
-    <string name="stylus_icon_enabled_summary">Show the pointer icon when hovering or drawing with t
-he stylus</string>
 </resources>
