@@ -1787,7 +1787,7 @@
     <string name="light_filter_enabled_title">启用</string>
     <string name="light_filter_enabled_summary">启用光传感器数据移动平均数过滤，以减少频繁调节亮度引起的屏幕闪烁</string>
     <string name="light_filter_window_title">取值周期</string>
-    <string name="light_filter_window_summary">过滤后的值是此周期内的传感器数据平均值/string>
+    <string name="light_filter_window_summary">过滤后的值是此周期内的传感器数据平均值</string>
     <string name="light_filter_reset_title">重置阀值</string>
     <string name="light_filter_reset_summary">采样值与平均值偏差过大时重置过滤器</string>
     <string name="light_filter_interval_title">采样间隔</string>
