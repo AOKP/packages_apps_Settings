@@ -1819,4 +1819,6 @@
     <string name="ll_reload">读取当前值</string>
     <string name="ll_bad_levels">等级必须递增</string>
     <string name="ll_num_levels">设置亮度等级数</string>
+
+    <string name="vibration_title">振动</string>
 </resources>
