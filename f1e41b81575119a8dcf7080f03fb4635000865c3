@@ -1,0 +1,12 @@
+Change-Id: If1e41b81575119a8dcf7080f03fb4635000865c3
+Code-Review+2: Jonathan Steadman <xxwhitehawk@gmail.com>
+Verified+1: Jonathan Steadman <xxwhitehawk@gmail.com>
+Code-Review+1: Pierpaolo Pernici (pier) <pierpaolo@gmail.com>
+Code-Review+1: Brandon McAnsh <bmc08gt.teamb00sted@gmail.com>
+Code-Review+1: Bajee Baskararasa <bajee11@gmail.com>
+Code-Review+1: Chris Yeninas <projectsundergaming@gmail.com>
+Submitted-by: Jonathan Steadman <xxwhitehawk@gmail.com>
+Submitted-at: Fri, 28 Sep 2012 22:29:56 +0100
+Reviewed-on: http://gerrit.sudoservers.com/3712
+Project: AOKP/packages_apps_Settings
+Branch: refs/heads/jb
