@@ -76,6 +76,17 @@
                 android:targetClass="com.tmobile.themechooser.ThemeChooser" />
     </header>
 
+     <!-- ParanoidAndroid Header -->
+    <header
+        android:id="@+id/paranoid_settings"
+        android:icon="@drawable/ic_settings_paranoid"
+        android:title="@string/paranoid_settings">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.paranoid.preferences"
+            android:targetClass="com.paranoid.preferences.PreferenceListActivity" />
+    </header>
+    
     <header android:id="@+id/advanced_settings"
             android:title="@string/advanced_settings_title"
             android:icon="@drawable/ic_settings_advanced">
