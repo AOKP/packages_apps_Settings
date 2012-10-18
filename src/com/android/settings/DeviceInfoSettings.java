@@ -87,7 +87,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
         setValueSummary(KEY_EQUIPMENT_ID, PROPERTY_EQUIPMENT_ID);
         setStringSummary(KEY_DEVICE_MODEL, Build.MODEL);
         setStringSummary(KEY_BUILD_NUMBER, Build.DISPLAY);
-        setStringSummary(KEY_KERNEL_VERSION, getFormattedKernelVersion());
+        setStringSummary(KEY_KERNEL_VERSION, getKernelVersion());
         findPreference(KEY_KERNEL_VERSION).setEnabled(true);
         setValueSummary(KEY_MOD_VERSION, "ro.aokp.version");
         findPreference(KEY_MOD_VERSION).setEnabled(true);
