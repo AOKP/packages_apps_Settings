@@ -66,4 +66,6 @@
     <string name="preview_country_title">Country</string>
     <string name="preview_carrier_title">Carrier</string>
 
+    <!-- Themes settings  -->
+    <string name="themes_settings_title">Themes</string>
 </resources>
