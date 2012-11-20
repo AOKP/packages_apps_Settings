@@ -74,4 +74,6 @@
     <string name="font_size_sample">Sample</string>
     <string name="summary_font_size" translatable="false">%1$s</string>
 
+    <!-- Themes settings  -->
+    <string name="themes_settings_title">Themes</string>
 </resources>

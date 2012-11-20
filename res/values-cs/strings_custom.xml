@@ -29,4 +29,5 @@
     <string name="mod_version_default">Neznámá</string>
     <string name="quick_links_title">Rychlé odkazy</string>
     <string name="advanced_settings_title">Možnosti zařízení</string>
+    <string name="themes_settings_title">Témata vzhledu</string>
 </resources>
