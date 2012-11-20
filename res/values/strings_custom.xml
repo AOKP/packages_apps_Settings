@@ -93,4 +93,8 @@
     <string name="start_time_title">Start</string>
     <string name="end_time_title">End</string>
 
+
+    <!-- Themes settings  -->
+    <string name="themes_settings_title">Themes</string>
+
 </resources>
