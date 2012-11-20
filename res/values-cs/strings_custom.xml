@@ -31,6 +31,7 @@
     <string name="build_date_default">2012-01-01-0000</string>
     <string name="quick_links_title">Rychlé odkazy</string>
     <string name="advanced_settings_title">Možnosti zařízení</string>
+
     <!-- Anonymous Statistics #CM -->
     <string name="anonymous_statistics_title">AOKP statistiky</string>
     <string name="anonymous_statistics_summary">Pomáhá vylepšovat AOKP odesíláním anonymních statistik</string>
@@ -68,4 +69,6 @@
     <!-- time range preference -->
     <string name="start_time_title">Začátek</string>
     <string name="end_time_title">Konec</string>
+
+    <string name="themes_settings_title">Témata vzhledu</string>
 </resources>
