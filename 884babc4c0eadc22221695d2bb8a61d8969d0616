@@ -1,0 +1,8 @@
+Change-Id: I884babc4c0eadc22221695d2bb8a61d8969d0616
+Code-Review+2: Gergely Szell (sethyx) <sethyx@gmail.com>
+Verified+1: Gergely Szell (sethyx) <sethyx@gmail.com>
+Submitted-by: Gergely Szell (sethyx) <sethyx@gmail.com>
+Submitted-at: Wed, 28 Nov 2012 12:05:29 +0000
+Reviewed-on: http://gerrit.sudoservers.com/4409
+Project: AOKP/packages_apps_Settings
+Branch: refs/heads/jb-mr1
