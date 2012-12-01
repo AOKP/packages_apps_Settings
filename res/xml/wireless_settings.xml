@@ -39,6 +39,13 @@
         android:key="android_beam_settings"
         android:title="@string/android_beam_settings_title" />
 
+    <ListPreference
+        android:key="nfc_polling_mode"
+        android:title="@string/nfc_polling_mode_title"
+        android:entries="@array/nfc_polling_mode_entries"
+        android:entryValues="@array/nfc_polling_mode_values"
+        android:persistent="false" />
+
     <PreferenceScreen
         android:fragment="com.android.settings.TetherSettings"
         android:key="tether_settings"
