@@ -77,6 +77,10 @@
   <string name="lockscreen_quick_unlock_control_title">Rychlé odemčení pomocí PINu</string>
   <string name="lockscreen_quick_unlock_control_summary">Odemknout zamčenou obrazovku pomocí hesla/pinu bez stisku tlačítka enter</string>
   <string name="device_hostname">Jméno zařízení</string>
+  <string name="nfc_polling_mode_title">Režim NFC</string>
+  <string name="nfc_polling_mode_screen_off">Vypnutá obrazovka</string>
+  <string name="nfc_polling_mode_screen_locked">Zapnutá obrazovka, uzamčeno</string>
+  <string name="nfc_polling_mode_screen_unlocked">Zapnutá obrazovka, odemčeno (výchozí)</string>
   <string name="wifi_menu_forget_all">Odstranit všechny sítě</string>
   <string name="data_usage_lengths_spinner_subtitle">Délka období:</string>
   <string name="checkbox_increasing_ring">Zapnout</string>
