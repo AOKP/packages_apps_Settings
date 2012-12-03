@@ -1834,7 +1834,6 @@
     <string name="user_picture_title" msgid="7297782792000291692">"ID fotografie"</string>
     <string name="cell_broadcast_settings" msgid="8415582011920085222">"Hromadné zasílání zpráv v rámci buňky"</string>
     <string name="cell_broadcast_settings_summary" msgid="3301339398950905913">"Vyberte typy mimořádných upozornění, která chcete zobrazovat."</string>
-    
     <string name="hardware_info">Informace o hardwaru</string>
     <string name="device_rear_camera">Zadní kamera</string>
     <string name="device_front_camera">Přední kamera</string>
@@ -1890,4 +1889,16 @@
     <string name="adb_notify_summary">Zobrazit upozornění v notifikační liště při zapnutém ladění přes USB</string>
     <string name="safe_headset_volume_title">Bezpečná hlasitost sluchátek</string>
     <string name="device_hostname">Název zařízení</string>
+    <string name="increasing_ring_title">Vzrůstající vyzvánění</string>
+    <string name="checkbox_increasing_ring">Zapnout</string>
+    <string name="increasing_ring_min_volume_title">Počáteční hlasitost vyzvánění</string>
+    <string name="increasing_ring_volume_notice">Upozornění:\nPokud je počáteční hlasitost nastavena na vyšší hodnotu než hlasitost normální, bude při vyzvýnění použita normální (nevzrůstající) hlasitost.</string>
+    <string name="increasing_ring_interval_title">Interval vzrůstání</string>
+    <string name="increasing_ring_interval_eachring">Při každém zazvonění</string>
+    <string name="increasing_ring_interval_half_second">0,5 sekundy</string>
+    <string name="increasing_ring_interval_1second">1 sekunda</string>
+    <string name="increasing_ring_interval_2seconds">2 sekundy</string>
+    <string name="increasing_ring_interval_3seconds">3 sekundy</string>
+    <string name="increasing_ring_interval_5seconds">5 sekund</string>
+    <string name="increasing_ring_interval_10seconds">10 sekund</string>
 </resources>
