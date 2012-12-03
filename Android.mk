@@ -8,6 +8,23 @@ LOCAL_MODULE_TAGS := optional
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
+BLUETOOTH_SRC := \
+        src/com/android/settings/bluetooth \
+
+BLUETOOTH_MSM_SRC := \
+        src/com/android/settings/bluetooth_msm \
+
+ifeq ($(BOARD_HAVE_BLUETOOTH_BLUEZ), true)
+    LOCAL_SRC_FILES := $(filter-out \
+                        $(call find-other-java-files, $(BLUETOOTH_SRC)) \
+                        ,$(LOCAL_SRC_FILES))
+else
+    LOCAL_SRC_FILES := $(filter-out \
+                        $(call find-other-java-files, $(BLUETOOTH_MSM_SRC)) \
+                        ,$(LOCAL_SRC_FILES))
+endif
+
+
 LOCAL_PACKAGE_NAME := Settings
 LOCAL_CERTIFICATE := platform
 

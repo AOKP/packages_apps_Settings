@@ -222,6 +222,8 @@
     <string name="bluetooth_is_discoverable">Visible to all nearby Bluetooth devices (<xliff:g id="discoverable_time_period">%1$s</xliff:g>)</string>
     <!-- Bluetooth settings screen, summary when Discoverable duration is set to "forever" [CHAR LIMIT=50] -->
     <string name="bluetooth_is_discoverable_always">Visible to all nearby Bluetooth devices</string>
+	<!-- Bluetooth devices settings. Text that appears when scanning for devices is finished and no nearby device was found [CHAR LIMIT=40]-->
+    <string name="bluetooth_devices_no_devices_found">No nearby Bluetooth devices were found.</string>
     <!-- Bluetooth settings screen, summary text when not discoverable and no paired devices [CHAR LIMIT=50] -->
     <string name="bluetooth_not_visible_to_other_devices">Not visible to other Bluetooth devices</string>
     <!-- Bluetooth settings screen, summary text when not discoverable with paired devices [CHAR LIMIT=50] -->
@@ -339,6 +341,20 @@
     <!-- Activity label of BluetoothPermissionActivity [CHAR LIMIT=none]-->
     <string name="bluetooth_connection_permission_request">"Bluetooth connection request"</string>
 
+    <!-- Activity label of BluetoothPermissionActivity for PBAP [CHAR LIMIT=none]-->
+    <string name="bluetooth_pbap_connection_permission_request">"Pbap connection request"</string>
+
+    <!-- Activity label of BluetoothPermissionActivity for FTP [CHAR LIMIT=none]-->
+    <string name="bluetooth_ftp_connection_permission_request">"Ftp connection request"</string>
+
+    <!-- Activity label of BluetoothPermissionActivity for MAP [CHAR LIMIT=none]-->
+    <string name="bluetooth_map_connection_permission_request">"Map connection request"</string>
+
+    <!-- Activity label of BluetoothPermissionActivity for SAP [CHAR LIMIT=none]-->
+    <string name="bluetooth_sap_connection_permission_request">"Sap connection request"</string>
+
+    <string name="bluetooth_dun_connection_permission_request">"Dun connection request"</string>
+
     <!-- Notification message when a remote Bluetooth device wants to connect to a Bluetooth profile [CHAR LIMIT=none]-->
     <string name="bluetooth_connection_notif_message">"Touch to connect to \u0022<xliff:g id="device_name">%1$s</xliff:g>\u0022."</string>
 
@@ -353,6 +369,37 @@
 
     <!-- Bluetooth phone book permission Alert Activity checkbox text [CHAR LIMIT=none] -->
     <string name="bluetooth_pb_remember_choice">Don\'t ask again</string>
+
+    <!-- Activity label of BluetoothFtpPermissionActivity, also used as Strings in the permission dialog [CHAR LIMIT=none] -->
+    <string name="bluetooth_ftp_request">"Ftp request"</string>
+
+    <!-- Bluetooth FTP permission Alert Activity text [CHAR LIMIT=none] -->
+    <string name="bluetooth_ftp_acceptance_dialog_text">%1$s would like to access your files and folders. Give access to %2$s?</string>
+
+    <!-- Bluetooth FTP permission Alert Activity checkbox text [CHAR LIMIT=none] -->
+    <string name="bluetooth_ftp_remember_choice">Don\'t ask again</string>
+
+    <!-- Activity label of BluetoothMasPermissionActivity, also used as Strings in the permission dialog [CHAR LIMIT=none] -->
+    <string name="bluetooth_mas_request">"Message Access request"</string>
+
+    <!-- Bluetooth MAS permission Alert Activity text [CHAR LIMIT=none] -->
+    <string name="bluetooth_mas_acceptance_dialog_text">%1$s would like to access your messages. Give access to %2$s?</string>
+
+    <!-- Bluetooth MAS permission Alert Activity checkbox text [CHAR LIMIT=none] -->
+    <string name="bluetooth_mas_remember_choice">Don\'t ask again</string>
+    <!-- Activity label of BluetoothSapPermissionActivity, also used as Strings in the permission di
+alog [CHAR LIMIT=none] -->
+    <string name="bluetooth_sap_request">"SAP request"</string>
+    <!-- Bluetooth SAP permission Alert Activity text [CHAR LIMIT=none] -->
+    <string name="bluetooth_sap_acceptance_dialog_text">%1$s would like to access your SIM. Give access to %2$s?</string>
+    <!-- Bluetooth SAP permission Alert Activity checkbox text [CHAR LIMIT=none] -->
+    <string name="bluetooth_sap_remember_choice">Don\'t ask again</string>
+
+    <string name="bluetooth_dun_request">"DUN request"</string>
+    <!-- Bluetooth DUN permission Alert Activity text [CHAR LIMIT=none] -->
+    <string name="bluetooth_dun_acceptance_dialog_text">%1$s would like to use DUN. Give access to %2$s?</string>
+    <!-- Bluetooth DUN permission Alert Activity checkbox text [CHAR LIMIT=none] -->
+    <string name="bluetooth_dun_remember_choice">Don\'t ask again</string>
 
     <!-- Date & time settings screen title -->
     <string name="date_and_time">Date &amp; time settings</string>
@@ -1004,6 +1051,9 @@
     <!-- Message when bluetooth dialog for pin entry is showing. [CHAR LIMIT=NONE] -->
     <string name="bluetooth_enter_pin_msg">To pair with:<xliff:g id="bold">&lt;br>&lt;b></xliff:g><xliff:g id="device_name">%1$s</xliff:g><xliff:g id="end_bold">&lt;/b>&lt;br>&lt;br></xliff:g>Type the device\'s required PIN:</string>
 
+    <!-- Message when bluetooth dialog for pin entry is showing  when HIGH security enabled-->
+    <string name="bluetooth_enter_pin_msg_hs">\nType PIN to pair with \u0022<xliff:g id="device_name">%1$s</xliff:g>\u0022. [High Security Enabled: Needs 16 character key] </string>
+
     <!-- Message when bluetooth dialog for passkey entry is showing. [CHAR LIMIT=NONE] -->
     <string name="bluetooth_enter_passkey_msg">To pair with:<xliff:g id="bold">&lt;br>&lt;b></xliff:g><xliff:g id="device_name">%1$s</xliff:g><xliff:g id="end_bold">&lt;/b>&lt;br>&lt;br></xliff:g>Type the device\'s required passkey:</string>
 
@@ -1094,7 +1144,10 @@
     <string name="bluetooth_profile_pan">Internet access</string>
     <!-- Bluetooth settings. The user-visible string that is used whenever referring to the PAN profile (sharing this device's Internet connection). [CHAR LIMIT=40]-->
     <string name="bluetooth_profile_pan_nap">Internet connection sharing</string>
-
+    <!-- Bluetooth settings.  The user-visible string that is used whenever referring to the SAP profile. -->
+    <string name="bluetooth_profile_sap">SIM Access</string>
+    <!-- Bluetooth settings.  The user-visible string that is used whenever referring to the DUN profile. -->
+    <string name="bluetooth_profile_dun">Dial-up Network Access</string>
     <!-- Bluetooth settings.  Message for disconnecting from the A2DP profile. [CHAR LIMIT=80] -->
     <string name="bluetooth_disconnect_a2dp_profile"><xliff:g id="device_name">%1$s</xliff:g> will be disconnected from media audio.</string>
     <!-- Bluetooth settings.  Message for disconnecting from the headset profile. [CHAR LIMIT=80] -->
@@ -1126,8 +1179,16 @@
     <string name="bluetooth_headset_profile_summary_connected">Connected to phone audio</string>
     <!-- Bluetooth settings.  Connection options screen.  The summary for the OPP checkbox preference when OPP is connected. -->
     <string name="bluetooth_opp_profile_summary_connected">Connected to file transfer server</string>
+    <!-- Bluetooth settings.  Connection options screen.  The summary for the SAP checkbox preference when SAP is connected. -->
+    <string name="bluetooth_sap_profile_summary_connected">Connected to SIM Access Server</string>
+    <!-- Bluetooth settings.  Connection options screen.  The summary for the DUN checkbox preference when DUN is connected. -->
+    <string name="bluetooth_dun_profile_summary_connected">Connected to DUN Server</string>
     <!-- Bluetooth settings.  Connection options screen.  The summary for the OPP checkbox preference when OPP is not connected. -->
     <string name="bluetooth_opp_profile_summary_not_connected">Not connected to file transfer server</string>
+    <!-- Bluetooth settings.  Connection options screen.  The summary for the SAP checkbox preference when SAP is not connected. -->
+    <string name="bluetooth_sap_profile_summary_not_connected">Not connected to SIM Access Server</string>
+    <!-- Bluetooth settings.  Connection options screen.  The summary for the DUN checkbox preference when DUN is not connected. -->
+    <string name="bluetooth_dun_profile_summary_not_connected">Not connected to DUN Server</string>
     <!-- Bluetooth settings. Connection options screen. The summary for the HID checkbox preference when HID is connected. -->
     <string name="bluetooth_hid_profile_summary_connected">Connected to input device</string>
     <!-- Bluetooth settings. Connection options screen. The summary for the checkbox preference when PAN is connected (user role). [CHAR LIMIT=25]-->
@@ -1141,6 +1202,10 @@
     <string name="bluetooth_headset_profile_summary_use_for">Use for phone audio</string>
     <!-- Bluetooth settings.  Connection options screen.  The summary for the OPP checkbox preference that describes how checking it will set the OPP profile as preferred. -->
     <string name="bluetooth_opp_profile_summary_use_for">Use for file transfer</string>
+    <!-- Bluetooth settings.  Connection options screen.  The summary for the SAP checkbox preference that describes how checking it will set the SAP profile as preferred. -->
+    <string name="bluetooth_sap_profile_summary_use_for">Use for SIM Access</string>
+    <!-- Bluetooth settings.  Connection options screen.  The summary for the DUN checkbox preference that describes how checking it will set the DUN profile as preferred. -->
+    <string name="bluetooth_dun_profile_summary_use_for">Use for Dial-up Network Access</string>
     <!-- Bluetooth settings. Connection options screen. The summary
          for the HID checkbox preference that describes how checking it
          will set the HID profile as preferred. -->
