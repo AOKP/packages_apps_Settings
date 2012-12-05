@@ -165,6 +165,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
     private static final String TERMINAL_APP_PACKAGE = "com.android.terminal";
 
+    private static final String DEVELOPMENT_TOOLS = "development_tools";
+
     private static final int RESULT_DEBUG_APP = 1000;
 
     private static final String PERSISTENT_DATA_BLOCK_PROP = "ro.frp.pst";
@@ -239,6 +241,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
     private ListPreference mRootAccess;
     private Object mSelectedRootValue;
+    private PreferenceScreen mDevelopmentTools;
 
     private PreferenceScreen mProcessStats;
     private final ArrayList<Preference> mAllPrefs = new ArrayList<Preference>();
@@ -389,6 +392,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             mAllPrefs.add(mRootAccess);
         }
 
+        mDevelopmentTools = (PreferenceScreen) findPreference(DEVELOPMENT_TOOLS);
+        mAllPrefs.add(mDevelopmentTools);
     }
 
     private ListPreference addListPreference(String prefKey) {
