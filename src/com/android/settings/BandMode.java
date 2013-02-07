@@ -43,7 +43,9 @@ public class BandMode extends Activity {
             "USA Band",
             "JAPAN Band",
             "AUS Band",
-            "AUS2 Band"
+            "AUS2 Band",
+	    "Cellular (800-MHz)",
+	    "PCS (1900-MHz)"
     };
 
     private ListView mBandList;
@@ -144,7 +146,7 @@ public class BandMode extends Activity {
             int size = bands[0];
 
             if (size > 0) {
-                for (int i=1; i<size; i++) {
+                for (int i=1; i<=size; i++) {
                     item = new BandListItem(bands[i]);
                     mBandListAdapter.add(item);
                     if (DBG) log("Add " + item.toString());
