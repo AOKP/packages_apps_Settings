@@ -98,4 +98,8 @@
 
     <!-- Themes settings  -->
     <string name="themes_settings_title">Themes</string>
+
+    <!-- Quick Unlock -->
+    <string name="lockscreen_quick_unlock_control_title">Quick pin unlock</string>
+    <string name="lockscreen_quick_unlock_control_summary">Unlock password/pin lockscreen without pressing enter button</string>
 </resources>
