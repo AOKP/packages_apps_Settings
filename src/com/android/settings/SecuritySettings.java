@@ -62,6 +62,7 @@ public class SecuritySettings extends RestrictedSettingsFragment
     private static final String KEY_BIOMETRIC_WEAK_LIVELINESS = "biometric_weak_liveliness";
     private static final String KEY_LOCK_ENABLED = "lockenabled";
     private static final String KEY_VISIBLE_PATTERN = "visiblepattern";
+    private static final String KEY_QUICK_UNLOCK = "lockscreen_quick_unlock_control";
     private static final String KEY_SECURITY_CATEGORY = "security_category";
     private static final String KEY_DEVICE_ADMIN_CATEGORY = "device_admin_category";
     private static final String KEY_LOCK_AFTER_TIMEOUT = "lock_after_timeout";
@@ -94,6 +95,7 @@ public class SecuritySettings extends RestrictedSettingsFragment
 
     private CheckBoxPreference mBiometricWeakLiveliness;
     private CheckBoxPreference mVisiblePattern;
+    private CheckBoxPreference mQuickUnlock;
 
     private CheckBoxPreference mShowPassword;
 
@@ -210,9 +212,20 @@ public class SecuritySettings extends RestrictedSettingsFragment
         // visible pattern
         mVisiblePattern = (CheckBoxPreference) root.findPreference(KEY_VISIBLE_PATTERN);
 
+        // Quick Unlock for PIN and Password Lockscreens
+        mQuickUnlock = (CheckBoxPreference) root.findPreference(KEY_QUICK_UNLOCK);
+
         // lock instantly on power key press
         mPowerButtonInstantlyLocks = (CheckBoxPreference) root.findPreference(
                 KEY_POWER_INSTANTLY_LOCKS);
+
+        // if we aren't using a pin or password remove quick unlock
+        if (!usingPinOrPassword(resid)) {
+            PreferenceGroup securityCategory = (PreferenceGroup) root.findPreference(KEY_SECURITY_CATEGORY);
+            if (securityCategory != null && mQuickUnlock != null) {
+                securityCategory.removePreference(root.findPreference(KEY_QUICK_UNLOCK));
+            }
+        }
 
         // don't display visible pattern if biometric and backup is not pattern
         if (resid == R.xml.security_settings_biometric_weak &&
@@ -348,6 +361,14 @@ public class SecuritySettings extends RestrictedSettingsFragment
         if (flat == null || "".equals(flat)) return 0;
         final String[] components = flat.split(":");
         return components.length;
+    }
+
+    // Why? cuz I hate negative logic.
+    private boolean usingPinOrPassword(int resid) {
+        if (resid == R.xml.security_settings_pattern || resid == R.xml.security_settings_pin) {
+            return true;
+        }
+        return false;
     }
 
     private boolean isNonMarketAppsAllowed() {
@@ -491,6 +512,10 @@ public class SecuritySettings extends RestrictedSettingsFragment
         if (mVisiblePattern != null) {
             mVisiblePattern.setChecked(lockPatternUtils.isVisiblePatternEnabled());
         }
+        if (mQuickUnlock != null) {
+            mQuickUnlock.setChecked(Settings.AOKP.getBoolean(getContentResolver(),
+                    Settings.AOKP.LOCKSCREEN_QUICK_UNLOCK_CONTROL, false));
+        }
         if (mPowerButtonInstantlyLocks != null) {
             mPowerButtonInstantlyLocks.setChecked(lockPatternUtils.getPowerButtonInstantlyLocks());
         }
@@ -555,6 +580,9 @@ public class SecuritySettings extends RestrictedSettingsFragment
             lockPatternUtils.setLockPatternEnabled(isToggled(preference));
         } else if (KEY_VISIBLE_PATTERN.equals(key)) {
             lockPatternUtils.setVisiblePatternEnabled(isToggled(preference));
+        } else if (KEY_QUICK_UNLOCK.equals(key)) {
+            Settings.AOKP.putBoolean(getContentResolver(),
+                 Settings.AOKP.LOCKSCREEN_QUICK_UNLOCK_CONTROL, isToggled(preference));
         } else if (KEY_POWER_INSTANTLY_LOCKS.equals(key)) {
             lockPatternUtils.setPowerButtonInstantlyLocks(isToggled(preference));
         } else if (KEY_ENABLE_WIDGETS.equals(key)) {
