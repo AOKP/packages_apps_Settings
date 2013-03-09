@@ -4546,4 +4546,7 @@
     <string name="auto_brightness_menu_split">Split</string>
     <string name="auto_brightness_menu_remove">Remove</string>
     <string name="ok">OK</string>
+
+    <!-- Permissions Management -->
+    <string name="permissions_settings_title">Permissions Management</string>
 </resources>
