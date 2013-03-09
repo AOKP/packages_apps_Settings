@@ -778,6 +778,9 @@ public class Settings extends PreferenceActivity
         } else {
             mLastHeader = header;
         }
+        if (header.id == R.id.trds_settings) {
+            mTRDSSwitch.toggle();
+        }
     }
 
     @Override
