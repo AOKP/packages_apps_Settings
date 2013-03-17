@@ -1890,4 +1890,8 @@
     <string name="sms_security_check_limit_title">Limit počtu SMS</string>
     <string name="sms_security_check_limit_summary">Zobrazit upozornění při častém odesílání SMS jinými aplikacemi. Aktuální limit: %d zpráv během 15 minut (vyžaduje restart)</string>
     <string name="sms_security_check_limit_default">30 (výchozí)</string>
+    <string name="volume_adjust_sounds_enable_title">Zvuk při změně hlasitosti</string>
+    <string name="volume_adjust_sounds_enable_summary">Při změně hlasitosti hw tlačítky přehrát zvukové upozornění</string>
+    <string name="usb_mass_storage_title">Mass storage</string>
+    <string name="usb_mass_storage_summary">Zapnout USB mass storage</string>
 </resources>
