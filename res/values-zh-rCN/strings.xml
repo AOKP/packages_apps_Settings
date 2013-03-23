@@ -1916,4 +1916,12 @@
 
     <!-- Sprint Tools -->
     <string name="sprint_tools_title">Sprint 工具</string>
+
+    <!-- USB Mass Storage -->
+    <string name="usb_mass_storage_title">大容量存储</string>
+    <string name="usb_mass_storage_summary">启用 USB 大容量存储设备</string>
+
+    <string name="volume_adjust_sounds_enable_title">音量调节提示音</string>
+    <!-- Sound settings screen, setting check box summary -->
+    <string name="volume_adjust_sounds_enable_summary">使用实体音量键调节音量时发出提示音</string>
 </resources>
