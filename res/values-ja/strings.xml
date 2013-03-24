@@ -1926,6 +1926,9 @@
     <string name="camera_sounds">シャッター音</string> ** TODO ** -->
     <string name="safe_headset_volume_title">安全なヘッドセット音量</string>
 
+    <string name="lockscreen_quick_unlock_control_title">クイックPINロック解除</string>
+    <string name="lockscreen_quick_unlock_control_summary">エンターボタンを押さなくてもパスワード/PINロックを解除する</string>
+
     <!-- Hostname setting -->
     <string name="device_hostname">デバイスのホスト名</string>
 
@@ -1941,4 +1944,8 @@
     <!-- USB Mass Storage -->
     <string name="usb_mass_storage_title">マスストレージ</string>
     <string name="usb_mass_storage_summary">USBマスストレージを有効にする</string>
+
+    <string name="volume_adjust_sounds_enable_title">ボリューム調整音</string>
+    <!-- Sound settings screen, setting check box summary -->
+    <string name="volume_adjust_sounds_enable_summary">ハードキーで音量を調整するときに音を鳴らす</string>
 </resources>
