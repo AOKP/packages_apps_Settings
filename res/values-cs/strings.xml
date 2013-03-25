@@ -1894,4 +1894,7 @@
     <string name="volume_adjust_sounds_enable_summary">Při změně hlasitosti hw tlačítky přehrát zvukové upozornění</string>
     <string name="usb_mass_storage_title">Mass storage</string>
     <string name="usb_mass_storage_summary">Zapnout USB mass storage</string>
+    <string name="lockscreen_quick_unlock_control_title">Rychlé odemčení pomocí PINu</string>
+    <string name="lockscreen_quick_unlock_control_summary">Odemknout zamčenou obrazovku pomocí hesla/pinu bez stisku tlačítka enter</string>
+    <string name="screensaver_settings_summary_wireless">Během bezdrátového nabíjení</string>
 </resources>
