@@ -19,13 +19,6 @@ package com.android.settings.aokpstats;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.http.NameValuePair;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
-
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -35,6 +28,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.IBinder;
 import android.util.Log;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.google.analytics.tracking.android.GoogleAnalytics;
+import com.google.analytics.tracking.android.Tracker;
 
 import com.android.settings.R;
 import com.android.settings.Settings;
@@ -80,25 +78,12 @@ public class ReportingService extends Service {
         Log.d(TAG, "SERVICE: Carrier=" + deviceCarrier);
         Log.d(TAG, "SERVICE: Carrier ID=" + deviceCarrierId);
 
-        HttpClient httpclient = new DefaultHttpClient();
-        HttpPost httppost = new HttpPost("http://stats.aokp.co/submit.php");
-        try {
-            List<NameValuePair> kv = new ArrayList<NameValuePair>(5);
-            kv.add(new BasicNameValuePair("hash", deviceId));
-            kv.add(new BasicNameValuePair("device", deviceName));
-            kv.add(new BasicNameValuePair("aokp_version", deviceVersion));
-            kv.add(new BasicNameValuePair("country", deviceCountry));
-            kv.add(new BasicNameValuePair("carrier", deviceCarrier));
-            kv.add(new BasicNameValuePair("carrier_id", deviceCarrierId));
-            httppost.setEntity(new UrlEncodedFormEntity(kv));
-            httpclient.execute(httppost);
-            getSharedPreferences("AOKPStats", 0).edit().putLong(AnonymousStats.ANONYMOUS_LAST_CHECKED,
-                    System.currentTimeMillis()).apply();
-            getSharedPreferences("AOKPStats", 0).edit().putString(AnonymousStats.ANONYMOUS_REPORTED_VERSION,
-                    deviceVersion).apply();
-        } catch (Exception e) {
-            Log.e(TAG, "Got Exception", e);
-        }
+        // report to google analytics
+        GoogleAnalytics ga = GoogleAnalytics.getInstance(this);
+        Tracker tracker = ga.getTracker(getString(R.string.ga_trackingId));
+        tracker.sendEvent(deviceName, deviceVersion, deviceCountry, null);
+        tracker.close();
+
         ReportingServiceManager.setAlarm(this);
         stopSelf();
     }
