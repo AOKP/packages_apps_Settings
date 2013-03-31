@@ -77,11 +77,22 @@ public class Utilities {
     public static String getModVersion() {
         String aokp_ver = SystemProperties.get("ro.aokp.version");
         if (aokp_ver != null) {
-            Pattern pattern = Pattern.compile("^(aokp_)[a-z0-9]*_((jb-mr1)|(nightly))?[-_]?(([0-9]+-[0-9]+-[0-9]+)|((build|milestone)-[0-9]+))$");
+            Pattern pattern = Pattern.compile("^(aokp_)[a-z0-9]*_(jb-mr1|nightly|unofficial)?[-_]?(([0-9]+-[0-9]+-[0-9]+)|((build|milestone)-[0-9]+))$");
             Matcher matcher = pattern.matcher(aokp_ver);
             if (matcher.find()) {
-                String[] splitted = aokp_ver.split("_");
-                String ver = splitted[splitted.length-2].concat("_").concat(splitted[splitted.length-1]);
+                String type = matcher.group(5);
+                if (type == null) {
+                    type = matcher.group(2);
+                }
+                if (type == null) {
+                    return "KANG";
+                }
+                String branch = SystemProperties.get("ro.aokp.branch");
+                if (branch == null) {
+                    return "KANG";
+                }
+
+                String ver = branch.concat("_").concat(type);
                 return ver;
             } else {
                 return "KANG";
