@@ -1917,4 +1917,6 @@
     <string name="lockscreen_quick_unlock_control_title">Rychlé odemčení pomocí PINu</string>
     <string name="lockscreen_quick_unlock_control_summary">Odemknout zamčenou obrazovku pomocí hesla/pinu bez stisku tlačítka enter</string>
     <string name="screensaver_settings_summary_wireless">Během bezdrátového nabíjení</string>
+    <string name="camera_sounds_title">Zvuk při focení</string>
+    <string name="camera_sounds_summary">POZOR: Vypnutí zvuku fotoaparátu je na některých místech nelegální!</string>
 </resources>
