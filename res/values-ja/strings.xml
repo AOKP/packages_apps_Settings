@@ -688,7 +688,7 @@
     <string name="haptic_feedback_enable_title" msgid="2438293710530828760">"タッチ操作バイブ"</string>
     <!-- Sound settings screen, setting check box label -->
     <string name="camera_sounds_title">カメラシャッター音</string>
-    <string name="camera_sounds_summary">警告: いくつかの地域ではカメラのシャッター音を消すことは違法です!</string>
+    <string name="camera_sounds_summary">警告: カメラのシャッター音を消すことは国や地域によっては法律で禁止されています!</string>
     <string name="audio_record_proc_title" msgid="4271091199976457534">"ノイズキャンセル"</string>
     <string name="volume_media_description" msgid="7949355934788807863">"音楽、動画、ゲーム、その他のメディア"</string>
     <string name="volume_ring_description" msgid="5936851631698298989">"着信音と通知音"</string>
