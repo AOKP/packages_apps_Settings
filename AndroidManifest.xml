@@ -94,6 +94,21 @@
             android:hardwareAccelerated="true"
             android:supportsRtl="true">
 
+        <activity
+            android:name="com.koushikdutta.superuser.MainActivity"
+            android:taskAffinity=""
+            android:label="@string/superuser"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.settings.SUPERUSER" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.android.settings.SHORTCUT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.koushikdutta.superuser.MainActivity" />
+        </activity>
         <!-- Only system/su can open this activity -->
         <!-- This activity will then call the MultitaskSuRequestActivity to create a new task stack -->
         <activity
