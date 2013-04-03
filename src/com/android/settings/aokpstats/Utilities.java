@@ -24,25 +24,19 @@ import java.util.regex.Pattern;
 
 import android.content.Context;
 import android.os.SystemProperties;
+import android.provider.Settings;
 import android.telephony.TelephonyManager;
 
 public class Utilities {
     public static String getUniqueID(Context ctx) {
-        TelephonyManager tm = (TelephonyManager) ctx
-                .getSystemService(Context.TELEPHONY_SERVICE);
-
-        String device_id = digest(tm.getDeviceId());
-        if (device_id == null) {
-            String wifiInterface = SystemProperties.get("wifi.interface");
-            try {
-                String wifiMac = new String(NetworkInterface.getByName(
-                        wifiInterface).getHardwareAddress());
-                device_id = digest(wifiMac);
-            } catch (Exception e) {
-                device_id = null;
-            }
+        String device_id = null;
+        String wifiInterface = SystemProperties.get("wifi.interface");
+        try {
+            String wifiMac = new String(NetworkInterface.getByName(
+                    wifiInterface).getHardwareAddress());
+            device_id = digest(wifiMac);
+        } catch (Exception e) {
         }
-
         return device_id;
     }
 
