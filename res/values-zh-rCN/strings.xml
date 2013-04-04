@@ -624,6 +624,9 @@
     <string name="wifi_setting_frequency_band_title" msgid="7493768705046080060">"Wi-Fi 频带"</string>
     <string name="wifi_setting_frequency_band_summary" msgid="3250740757118009784">"指定操作的频率范围"</string>
     <string name="wifi_setting_frequency_band_error" msgid="837281974489794378">"设置频带时出现问题。"</string>
+    <string name="wifi_setting_countrycode_title">Wi-Fi 区域代码</string>
+    <string name="wifi_setting_countrycode_summary">设置 Wi-Fi 区域代码</string>
+    <string name="wifi_setting_countrycode_error">设置区域代码时出现问题。</string>
     <string name="wifi_advanced_mac_address_title" msgid="6571335466330978393">"MAC 地址"</string>
     <string name="wifi_advanced_ip_address_title" msgid="6215297094363164846">"IP 地址"</string>
     <string name="wifi_advanced_settings_label" msgid="3654366894867838338">"IP 设置"</string>
