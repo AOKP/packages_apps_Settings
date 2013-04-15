@@ -77,11 +77,11 @@ public class Utilities {
     public static String getModVersion() {
         String aokp_ver = SystemProperties.get("ro.aokp.version");
         if (aokp_ver != null) {
-            Pattern pattern = Pattern.compile("^(aokp_)[a-z0-9]*_((jb-mr1)|(unofficial))?[-_]?(((Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)+-[0-9]+-[0-9]+)|((build|milestone)-[0-9]+))$");
+            Pattern pattern = Pattern.compile("^(aokp_)[a-z0-9]*_((jb-mr1)|(nightly))?[-_]?(((Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)+-[0-9]+-[0-9]+)|((build|milestone)-[0-9]+))$");
             Matcher matcher = pattern.matcher(aokp_ver);
             if (matcher.find()) {
                 String[] splitted = aokp_ver.split("_");
-                String ver = splitted[splitted.length-2].concat(splitted[splitted.length-1]);
+                String ver = splitted[splitted.length-2].concat("_").concat(splitted[splitted.length-1]);
                 return ver;
             } else {
                 return "KANG";
