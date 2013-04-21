@@ -170,6 +170,18 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
         mIm = (InputManager)getActivity().getSystemService(Context.INPUT_SERVICE);
         updateInputDevices();
 
+        mStylusIconEnabled = (CheckBoxPreference) findPreference(KEY_STYLUS_ICON_ENABLED);
+        mStylusGestures = (PreferenceScreen) findPreference(KEY_STYLUS_GESTURES);
+        // remove stylus preference for non stylus devices
+        if (!getResources().getBoolean(com.android.internal.R.bool.config_stylusGestures)) {
+            PreferenceCategory pointerSettingsCategory = (PreferenceCategory)
+                    findPreference(KEY_POINTER_SETTINGS_CATEGORY);
+            if(pointerSettingsCategory != null) {
+                pointerSettingsCategory.removePreference(mStylusGestures);
+                pointerSettingsCategory.removePreference(mStylusIconEnabled);
+            }
+        }
+
         // Spell Checker
         final Intent intent = new Intent(Intent.ACTION_MAIN);
         intent.setClass(getActivity(), SpellCheckersSettingsActivity.class);
