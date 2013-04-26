@@ -1919,4 +1919,5 @@
     <string name="screensaver_settings_summary_wireless">Během bezdrátového nabíjení</string>
     <string name="camera_sounds_title">Zvuk při focení</string>
     <string name="camera_sounds_summary">POZOR: Vypnutí zvuku fotoaparátu je na některých místech nelegální!</string>
+    <string name="permissions_settings_title">Oprávnění</string>
 </resources>
