@@ -1976,5 +1976,5 @@
     <string name="ok">确定</string>
 
     <!-- Permissions Management -->
-    <string name="permissions_settings_title">权限</string>
+    <string name="permissions_settings_title">权限管理</string>
 </resources>
