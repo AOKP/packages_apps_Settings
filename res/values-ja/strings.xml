@@ -1968,7 +1968,7 @@
     <string name="auto_brightness_reset_confirmation">すべてのライトレベルがデフォルト設定にリセットされます</string>
     <string name="auto_brightness_split_lux_format">分割位置 (<xliff:g id="min">%1$d</xliff:g> 〜 <xliff:g id="max">%2$d</xliff:g> lux)</string>
     <string name="auto_brightness_level_options">ライトレベルオプション</string>
-    <string name="auto_brightness_menu_edit_lux">調整</string>
+    <string name="auto_brightness_menu_edit">編集</string>
     <string name="auto_brightness_menu_split">分割</string>
     <string name="auto_brightness_menu_remove">削除</string>
     <string name="auto_brightness_preview">プレビュー</string>
@@ -1989,7 +1989,7 @@
 各ライトレベルは輝度カーブのそれぞれの<i>制御点</i>に相当し、スライダーで輝度を編集することができます。
 スライダーをタッチしている間は確認のためにレベルに応じて画面輝度が変化します。\n
 各行を長押しすることで追加オプションを利用できます。
-『調整』を選択することで制御点のライトレベルと画面輝度をマニュアルで編集することができます。
+『編集』を選択することで制御点のライトレベルと画面輝度をマニュアルで編集することができます。
 『分割』を選択すると制御点を追加してライトレベルを複製します。
 『削除』は選択したライトレベルを削除します。
     </string>
