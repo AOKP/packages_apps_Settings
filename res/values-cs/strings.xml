@@ -1942,4 +1942,5 @@
     <string name="camera_sounds_title">Zvuk při focení</string>
     <string name="camera_sounds_summary">POZOR: Vypnutí zvuku fotoaparátu je na některých místech nelegální!</string>
     <string name="permissions_settings_title">Oprávnění</string>
+    <string name="trds_settings_title">Tmavý vzhled</string>
 </resources>
