@@ -1997,4 +1997,7 @@
 
     <!-- Permissions Management -->
     <string name="permissions_settings_title">パーミッション</string>
+
+    <!-- TRDS Settings -->
+    <string name="trds_settings_title">ダークAOKP</string>
 </resources>
