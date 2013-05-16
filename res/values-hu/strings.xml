@@ -1915,5 +1915,14 @@
     <!-- Wi-Fi settings screen, setting summary for setting the wifi frequency band [CHAR LIMIT=50]-->
     <string name="wifi_setting_countrycode_summary">Adja meg a Wi-fi régió kódját</string>
 
+    <!-- USB Mass Storage -->
+    <string name="usb_mass_storage_title">Háttértár</string>
+    <string name="usb_mass_storage_summary">Engedélyezi az USB háttértárat</string>
+
+    <!-- Permissions Management -->
+    <string name="permissions_settings_title">Engedélyek</string>
+
+    <!-- TRDS Settings -->
+    <string name="trds_settings_title">Sötét AOKP</string>
 
 </resources>
