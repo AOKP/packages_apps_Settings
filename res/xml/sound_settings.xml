@@ -103,7 +103,7 @@
     <CheckBoxPreference
             android:key="safe_headset_volume"
             android:title="@string/safe_headset_volume_title"
-            android:defaultValue="true" />
+            android:defaultValue="false" />
 
     <CheckBoxPreference
             android:key="volume_adjust_sounds"
