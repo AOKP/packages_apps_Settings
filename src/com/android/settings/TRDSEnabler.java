@@ -21,7 +21,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.provider.Settings;
-import android.util.Slog;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import com.android.settings.util.Helpers; 
@@ -32,6 +31,24 @@ public class TRDSEnabler implements CompoundButton.OnCheckedChangeListener {
     private final Context mContext;
     private Switch mSwitch;
     private boolean mStateMachineEvent;
+
+    // list off apps which we restart just to be sure due that AOSP
+    // does not every time reload all resources on onConfigurationChanged
+    // or because some apps are just not programmed well on that part.
+    private String mTRDSApps[] = new String[] {
+        "com.android.contacts",
+        "com.android.calendar",
+        "com.android.email",
+        "com.android.vending",
+        "com.android.mms",
+        "com.google.android.talk",
+        "com.google.android.gm",
+        "com.google.android.googlequicksearchbox",
+        "com.google.android.youtube",
+        "com.google.android.apps.genie.geniewidget",
+        "com.google.android.apps.plus",
+        "com.google.android.apps.maps"
+    };
 
     public TRDSEnabler(Context context, Switch switch_) {
         mContext = context;
@@ -76,32 +93,10 @@ public class TRDSEnabler implements CompoundButton.OnCheckedChangeListener {
         List<ActivityManager.RunningAppProcessInfo> pids = am.getRunningAppProcesses();
            for(int i = 0; i < pids.size(); i++) {
                ActivityManager.RunningAppProcessInfo info = pids.get(i);
-               if(info.processName.equalsIgnoreCase("com.android.contacts")) {
-                    am.killBackgroundProcesses("com.android.contacts");
-               }
-               if(info.processName.equalsIgnoreCase("com.google.android.gm")) {
-                    am.killBackgroundProcesses("com.google.android.gm");
-               }
-               if(info.processName.equalsIgnoreCase("com.android.email")) {
-                    am.killBackgroundProcesses("com.android.email");
-               }
-               if(info.processName.equalsIgnoreCase("com.android.vending")) {
-                    am.killBackgroundProcesses("com.android.vending");
-               }
-               if(info.processName.equalsIgnoreCase("com.google.android.talk")) {
-                    am.killBackgroundProcesses("com.google.android.talk");
-               }
-               if(info.processName.equalsIgnoreCase("com.android.mms")) {
-                    am.killBackgroundProcesses("com.android.mms");
-               }
-               if(info.processName.equalsIgnoreCase("com.google.android.googlequicksearchbox")) {
-                    am.killBackgroundProcesses("com.google.android.googlequicksearchbox");
-               }
-               if(info.processName.equalsIgnoreCase("com.google.android.youtube")) {
-                    am.killBackgroundProcesses("com.google.android.youtube");
-               }
-               if(info.processName.equalsIgnoreCase("com.google.android.apps.plus")) {
-                    am.killBackgroundProcesses("com.google.android.apps.plus");
+               for (int j = 0; j < mTRDSApps.length; j++) {
+                   if(info.processName.equalsIgnoreCase(mTRDSApps[j])) {
+                        am.killBackgroundProcesses(mTRDSApps[j]);
+                   }
                }
            }
     }
