@@ -1973,6 +1973,14 @@
 选择“拆分”，将当前行重复为两个实现插入新的控制点。
 选择“移除”，删除选定的行。
     </string>
+
+    <string name="auto_brightness_sensitivity_title">调节敏感度</string>
+    <string name="auto_brightness_sensitivity_verylow">极低</string>
+    <string name="auto_brightness_sensitivity_low">低</string>
+    <string name="auto_brightness_sensitivity_medium">中</string>
+    <string name="auto_brightness_sensitivity_high">高</string>
+    <string name="auto_brightness_sensitivity_veryhigh">极高</string>
+
     <string name="ok">确定</string>
 
     <!-- Permissions Management -->
