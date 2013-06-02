@@ -1993,6 +1993,14 @@
 『分割』を選択すると制御点を追加してライトレベルを複製します。
 『削除』は選択したライトレベルを削除します。
     </string>
+
+    <string name="auto_brightness_sensitivity_title">調整感度</string>
+    <string name="auto_brightness_sensitivity_verylow">とても低い</string>
+    <string name="auto_brightness_sensitivity_low">低い</string>
+    <string name="auto_brightness_sensitivity_medium">標準</string>
+    <string name="auto_brightness_sensitivity_high">高い</string>
+    <string name="auto_brightness_sensitivity_veryhigh">とても高い</string>
+
     <string name="ok">OK</string>
 
     <!-- Permissions Management -->
