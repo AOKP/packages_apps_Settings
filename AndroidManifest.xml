@@ -361,7 +361,8 @@
 
         <activity android:name="Settings$ApnSettingsActivity" android:label="@string/apn_settings"
                   android:configChanges="orientation|keyboardHidden|screenSize"
-                  android:launchMode="singleTask" android:clearTaskOnLaunch="true">
+                  android:launchMode="singleTask" android:clearTaskOnLaunch="true"
+                  android:parentActivityName="Settings$WirelessSettingsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.settings.APN_SETTINGS" />
@@ -717,6 +718,20 @@
             <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
                 android:resource="@id/display_settings" />
         </activity-alias>
+
+        <!-- Multi Sim (Subscription) Settings -->
+        <activity android:name="MultiSimSettings"
+                android:label="@string/multi_sim_settings_title"
+                android:process="com.android.phone"
+                android:clearTaskOnLaunch="true">
+           <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="com.android.settings.MULTI_SIM_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.VOICE_LAUNCH" />
+                <category android:name="com.android.settings.SHORTCUT" />
+            </intent-filter>
+        </activity>
 
         <activity android:name="Settings$DeviceInfoSettingsActivity"
                 android:theme="@android:style/Theme.Holo.DialogWhenLarge"
@@ -1108,6 +1123,30 @@
 
         <activity android:name="ChooseLockPassword" android:exported="false"
             android:windowSoftInputMode="stateVisible|adjustResize"/>
+
+        <!-- Runs in the phone process since it needs access to the Phone object -->
+        <activity android:name=".deviceinfo.MSimSubscriptionStatus"
+                android:label="@string/device_status_activity_title"
+                android:theme="@android:style/Theme.Holo.DialogWhenLarge"
+                android:process="com.android.phone">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.VOICE_LAUNCH" />
+            </intent-filter>
+        </activity>
+
+        <!-- Runs in the phone process since it needs access to the Phone object -->
+        <activity android:name=".deviceinfo.MSimStatus"
+                android:label="@string/device_status_activity_title"
+                android:theme="@android:style/Theme.Holo.DialogWhenLarge"
+                android:process="com.android.phone">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.VOICE_LAUNCH" />
+            </intent-filter>
+        </activity>
 
         <!-- Runs in the phone process since it needs access to the Phone object -->
         <activity android:name=".deviceinfo.Status"
@@ -1636,6 +1675,18 @@
                 android:clearTaskOnLaunch="true">
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.aokpstats.AnonymousStats" />
+        </activity>
+
+        <!-- Select Subscription (SUB1 or SUB2) Screen -->
+        <activity android:name=".SelectSubscription"
+                android:label="@string/subs_settings"
+                android:process="com.android.phone"
+                android:clearTaskOnLaunch="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.VOICE_LAUNCH" />
+            </intent-filter>
         </activity>
 
         <activity android:name="Settings$DreamSettingsActivity"
