@@ -1830,4 +1830,153 @@
     <string name="user_picture_title" msgid="7297782792000291692">"Foto-ID"</string>
     <string name="cell_broadcast_settings" msgid="8415582011920085222">"Cell broadcasts"</string>
     <string name="cell_broadcast_settings_summary" msgid="3301339398950905913">"Välj vilka typer av varningsmeddelanden som ska visas."</string>
+
+   <!-- AOKP extra -->
+    <string name="quick_links_title">Snabblänkar</string>
+    <string name="rom_control_title">ROM Kontroll</string>
+    <string name="trds_settings_title">Mörk AOKP</string>
+    <string name="themes_title">Teman</string>
+    <string name="advanced_settings_title">Enhets alternativ</string>
+    <string name="permissions_settings_title">Behörigheter</string>
+
+    <string name="camera_sounds_title">Kamera slutarljud</string>
+    <string name="camera_sounds_summary">VARNING: Avaktivera ljud i kamerans slutare är olagligt i vissa områden!</string>
+
+    <!--  About device screen, Hardware info -->
+    <string name="hardware_info">Hårdvaru information</string>
+    <!--  About device Screen, hardware info, rear camera -->
+    <string name="device_rear_camera">Bakre kamera</string>
+    <!--  About device Screen, hardware info, front camera -->
+    <string name="device_front_camera">Front kamera</string>
+    <!--  About device Screen, hardware info, screen res -->
+    <string name="device_screen_resolution">Skärmupplösning</string>
+    <!-- About phone screen, Free memory info -->
+    <string name="mem_info">Minne</string>
+
+    <!-- Anonymous Statistics #CM -->
+    <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
+    <string name="anonymous_statistics_title">AOKP Statistik</string>
+    <string name="anonymous_statistics_summary">Hjälp till att göra AOKP bättre genom att aktivera anonym statistik rapportering</string>
+    <string name="anonymous_statistics_warning_title">Om</string>
+    <string name="anonymous_statistics_warning">Att aktivera AOKP statistik kommer att ge icke-personliga uppgifter som ska lämnas till
+         utvecklare av AOKP för att spåra unika installationer mellan enheter. De uppgifter som lämnats inkluderar en unik identifierare, som inte äventyrar din integritet eller personliga uppgifter. Uppgifterna lämnas under varje uppstart.\n\nFör ett exempel på de data som lämnats, peka på Förhandsgranska Data.</string>
+    <string name="enable_reporting_title">Aktivera rapportering</string>
+    <string name="preview_data_title">Förhandsgranska uppgifter</string>
+    <string name="preview_data_summary">%s</string>
+    <string name="view_stats_title">Se statistik</string>
+    <string name="anonymous_learn_more">Läs mer</string>
+
+    <!-- Anonymous Statistics - Notification -->
+    <string name="anonymous_notification_desc">Aktivera eller Avaktivera AOKP Statistik</string>
+
+    <!-- Anonymous Statistics - Preview -->
+    <string name="preview_id_title">Unik ID</string>
+    <string name="preview_device_title">Enhet</string>
+    <string name="preview_version_title">Version</string>
+    <string name="preview_country_title">Land</string>
+    <string name="preview_carrier_title">Mobilnätsleverantör</string>
+
+    <!-- Quiet hours #CM -->
+    <string name="quiet_hours_title">Tysta timmar</string>
+    <string name="quiet_hours_summary">Konfigurera de timmar då enheten skall vara tyst</string>
+    <string name="quiet_hours_enabled_title">Aktivera tysta timmar</string>
+    <string name="quiet_hours_start">Börja med tysta timmar</string>
+    <string name="quiet_hours_start_summary">När ska tyst timme börja</string>
+    <string name="quiet_hours_end">Slut på tysta timmar</string>
+    <string name="quiet_hours_end_summary">När ska tysta timmar upphöra</string>
+    <string name="quiet_hours_notifications_title">Stäng av notifikations ljud</string>
+    <string name="quiet_hours_ringer_title">Stäng av ringsignal</string>
+    <string name="quiet_hours_still_title">Inaktivera vibrationer</string>
+    <string name="quiet_hours_dim_title">Inaktivera notifikations ljus</string>
+    <string name="quiet_hours_active_from">Aktiv från</string>
+    <string name="quiet_hours_active_to">till</string>
+
+    <!-- time range preference -->
+    <string name="start_time_title">Start</string>
+    <string name="end_time_title">Slut</string>
+
+    <string name="vibration_title">Telefon vibration</string>
+    <string name="link_volume_ringtones">Länka volym</string>
+    <string name="link_volume_mutes">Länka dämpade lägen</string>
+
+    <!-- AOKP specific sound settings
+    <string name="camera_sounds">Camera sounds</string> ** TODO ** -->
+    <string name="safe_headset_volume_title">Säker headsets volym</string>
+
+    <string name="lockscreen_quick_unlock_control_title">Snabb pin upplåsning</string>
+    <string name="lockscreen_quick_unlock_control_summary">Lås upp lösenord/pin låsskärm utan att trycka in knappen</string>
+
+    <!-- Hostname setting -->
+    <string name="device_hostname">Enhetens värdnamn</string>
+
+    <!--- Sms security limit -->
+    <string name="app_security_title">App säkerhet</string>
+    <string name="sms_security_check_limit_title">SMS meddelande gräns</string>
+    <string name="sms_security_check_limit_summary">Visa en varning dialogruta för att hindra program från att skicka SMS-meddelanden för ofta. Nuvarande gräns: %d meddelanden i 30 minuter (kräver omstart)</string>
+    <string name="sms_security_check_limit_default">30 (Standard)</string>
+
+    <!-- Sprint Tools -->
+    <string name="sprint_tools_title">Sprint Verktyg</string>
+
+    <!-- USB Mass Storage -->
+    <string name="usb_mass_storage_title">USB-Lagring</string>
+    <string name="usb_mass_storage_summary">Aktivera USB lagring</string>
+
+    <string name="volume_adjust_sounds_enable_title">Volym justera ljudet</string>
+    <!-- Sound settings screen, setting check box summary -->
+    <string name="volume_adjust_sounds_enable_summary">Spela upp ljud när du justerar volymen med hårda tangenter</string>
+
+    <!-- Automatic brightness customization -->
+    <string name="light_sensor_current_value">Aktuellt ljussensor värde: <xliff:g id="light_level">%d</xliff:g> lux</string>
+    <string name="auto_brightness_dialog_title">Automatisk ljusstyrka</string>
+    <string name="auto_brightness_adjust_button">Justera</string>
+    <string name="auto_brightness_close_button">Stäng</string>
+    <string name="auto_brightness_reset_button">Återställ</string>
+    <string name="auto_brightness_split_dialog_title">Dela upp ljusstyrkan</string>
+    <string name="auto_brightness_level_dialog_title">Ljus nivå inställning</string>
+    <string name="auto_brightness_lux">Omgivande ljusstyrka (lux)</string>
+    <string name="auto_brightness_backlight">Skärm ljusstyrka (%)</string>
+    <string name="auto_brightness_reset_dialog_title">Återställa nivåer?</string>
+    <string name="auto_brightness_reset_confirmation">Alla ljusstyrkenivåer återställs till standardinställningarna.</string>
+    <string name="auto_brightness_split_lux_format">Delat läge (mellan <xliff:g id="min">%1$d</xliff:g> and <xliff:g id="max">%2$d</xliff:g> lux)</string>
+    <string name="auto_brightness_level_options">Ljusnivå alternativ</string>
+    <string name="auto_brightness_menu_edit">Editera</string>
+    <string name="auto_brightness_menu_split">Dela</string>
+    <string name="auto_brightness_menu_remove">Ta bort</string>
+    <string name="auto_brightness_preview">Förhandsgranska</string>
+    <string name="auto_brightness_preview_dialog_title">Ljusstyrka kurva förhandsvisning</string>
+    <string name="auto_brightness_help_dialog_title">Hjälp</string>
+    <string name="auto_brightness_help_text"><b>Hur beräknas ljusstyrkan?</b>
+\n\n
+Ljusstyrkans kurva beräknas genom att utföra en <i>kubisk spline interpolering</i>
+på ett givet antal <i>kontroll punkter</i>. Det\' är inte en \'hink-typs\' beräkning där
+skärmens ljusstyrka förblir konstant för ett visst utbud av omgivningens ljusstyrka. På så sätt,
+små förändringar i omgivningsljuset inte orsakar ett stort hopp i skärmens ljusstyrka; dock,
+det kan vara lite svårt att förutsäga de exakta konsekvenserna av förändrade kontrollpunkter.\n
+Att hjälpa till med det, kan en förhandsvisning av den beräknade kurvan undersökas. Observera att det
+förhandsvisning visar kurvan i <i>logaritmisk</i> skala, så att alla kontrollpunkter kan visas
+distinkt. När du använder en linjär skala, skulle det\'inte vara möjligt att särskilja tendentiellt
+viktigare kontrollpunkter i det lägre intervallet av omgivningens ljusstyrka.
+\n\n
+<b>Hur man redigerar ljusstyrkan i kurvan?</b>
+\n\n
+Varje rad i ljusstyrkans lista motsvarar en <i>kontroll punkt</i> av
+ljusstyrkans kurva. För att redigera ljusstyrke punkten, du kan använda skjutreglaget
+närvarande i varje rad. Skärmens ljusstyrka ändras i enlighet med detta medan du rör
+reglaget för att ge en förhandsvisning av ljusnivån.\n
+Ytterligare alternativ är tillgängliga genom att länge trycka en linje. Genom att välja \'Editera\', du kan
+både redigera omgivningens ljusstyrka kontrollpunkten samt manuellt mata in
+önskad ljusstyrka. Välja \'Dela\' kan du duplicera en linje i
+två för att infoga ytterligare kontrollpunkter. \'Ta bort\' raderar den valda linjen.
+    </string>
+
+    <string name="auto_brightness_sensitivity_title">Justering känslighet</string>
+    <string name="auto_brightness_sensitivity_verylow">Mycket låg</string>
+    <string name="auto_brightness_sensitivity_low">Låg</string>
+    <string name="auto_brightness_sensitivity_medium">Medium</string>
+    <string name="auto_brightness_sensitivity_high">Hög</string>
+    <string name="auto_brightness_sensitivity_veryhigh">Mycket hög</string>
+
+    <string name="adb_notify">USB-felöknings notifikation</string>
+    <string name="adb_notify_summary">Visa ett meddelande när USB-felsökning är ansluten</string>
 </resources>
