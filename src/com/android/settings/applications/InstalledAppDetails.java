@@ -1190,8 +1190,7 @@ public class InstalledAppDetails extends Fragment
                     .setNegativeButton(R.string.dlg_cancel,
                         new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            // Re-enable the checkbox
-                            getOwner().mNotificationSwitch.setChecked(true);
+                            dialog.cancel();
                         }
                     })
                     .create();
@@ -1224,13 +1223,27 @@ public class InstalledAppDetails extends Fragment
                     .setNegativeButton(R.string.dlg_cancel,
                         new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            // Re-enable the checkbox
-                            getOwner().mPrivacyGuardSwitch.setChecked(false);
+                            dialog.cancel();
                         }
                     })
                     .create();
             }
             throw new IllegalArgumentException("unknown id " + id);
+        }
+
+        @Override
+        public void onCancel(DialogInterface dialog) {
+            int id = getArguments().getInt("id");
+            switch (id) {
+                case DLG_DISABLE_NOTIFICATIONS:
+                    // Re-enable the checkbox
+                    getOwner().mNotificationSwitch.setChecked(true);
+                    break;
+                case DLG_PRIVACY_GUARD:
+                    // Re-enable the checkbox
+                    getOwner().mPrivacyGuardSwitch.setChecked(false);
+                    break;
+            }
         }
     }
 
