@@ -16,8 +16,11 @@
 
 package com.android.settings;
 
+import android.app.AlertDialog;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.database.ContentObserver;
 import android.os.Bundle;
 import android.os.Handler;
@@ -25,8 +28,10 @@ import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
+import android.widget.EditText;
 
 import com.android.settings.R;
+import com.android.settings.service.SmsService;
 import com.android.settings.SettingsPreferenceFragment;
 
 public class QuietHours extends SettingsPreferenceFragment implements
@@ -46,6 +51,13 @@ public class QuietHours extends SettingsPreferenceFragment implements
 
     private static final String KEY_QUIET_HOURS_TIMERANGE = "quiet_hours_timerange";
 
+    private static final String KEY_AUTO_SMS = "auto_sms";
+
+    private static final String KEY_AUTO_SMS_MESSAGE = "auto_sms_message";
+
+    public static final String DEFAULT_SMS_MESSAGE = getResources()
+            .getString(R.string.quiet_hours_auto_sms_null);
+
     private CheckBoxPreference mQuietHoursEnabled;
 
     private CheckBoxPreference mQuietHoursNotifications;
@@ -56,11 +68,18 @@ public class QuietHours extends SettingsPreferenceFragment implements
 
     private CheckBoxPreference mQuietHoursDim;
 
+    private ListPreference mAutoSms;
+
+    private Preference mAutoSmsMessage;
+
     private TimeRangePreference mQuietHoursTimeRange;
 
     protected Handler mHandler;
     private SettingsObserver mSettingsObserver;
     private Context mContext;
+
+    SharedPreferences prefs;
+    String mAutoText = null;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -72,6 +91,7 @@ public class QuietHours extends SettingsPreferenceFragment implements
             mContext = getActivity().getApplicationContext();
             ContentResolver resolver = mContext.getContentResolver();
             PreferenceScreen prefSet = getPreferenceScreen();
+            prefs = PreferenceManager.getDefaultSharedPreferences(mContext);
 
             // Load the preferences
             mQuietHoursEnabled = (CheckBoxPreference) prefSet.findPreference(KEY_QUIET_HOURS_ENABLED);
@@ -80,6 +100,8 @@ public class QuietHours extends SettingsPreferenceFragment implements
             mQuietHoursRinger = (CheckBoxPreference) prefSet.findPreference(KEY_QUIET_HOURS_RINGER);
             mQuietHoursStill = (CheckBoxPreference) prefSet.findPreference(KEY_QUIET_HOURS_STILL);
             mQuietHoursDim = (CheckBoxPreference) findPreference(KEY_QUIET_HOURS_DIM);
+            mAutoSms = (ListPreference) findPreference(KEY_AUTO_SMS);
+            mAutoSmsMessage (Preference) findPreference(KEY_AUTO_SMS_MESSAGE);
 
             mSettingsObserver = new SettingsObserver(new Handler());
 
@@ -90,6 +112,9 @@ public class QuietHours extends SettingsPreferenceFragment implements
             mQuietHoursNotifications.setChecked(Settings.System.getInt(resolver, Settings.System.QUIET_HOURS_NOTIFICATIONS, 0) == 1);
             mQuietHoursRinger.setChecked(Settings.System.getInt(resolver, Settings.System.QUIET_HOURS_RINGER, 0) == 1);
             mQuietHoursStill.setChecked(Settings.System.getInt(resolver, Settings.System.QUIET_HOURS_STILL, 0) == 1);
+            mAutoSms.setOnPreferenceChangeListener(this);
+            mAutoSms.setValue((prefs.getString(KEY_AUTO_SMS, "0")));
+            mAutoSmsMessage.setEnabled(Integer.parseInt(prefs.getString(KEY_AUTO_SMS, "0")) != 0);
 
             // Remove the notification light setting if the device does not support it 
             if (mQuietHoursDim != null && getResources().getBoolean(com.android.internal.R.bool.config_intrusiveNotificationLed) == false) {
@@ -97,6 +122,7 @@ public class QuietHours extends SettingsPreferenceFragment implements
             } else {
                 mQuietHoursDim.setChecked(Settings.System.getInt(resolver, Settings.System.QUIET_HOURS_DIM, 0) == 1);
             }
+            updateAutoText();
         }
     }
 
@@ -124,6 +150,24 @@ public class QuietHours extends SettingsPreferenceFragment implements
             Settings.System.putInt(resolver, Settings.System.QUIET_HOURS_DIM,
                     mQuietHoursDim.isChecked() ? 1 : 0);
             return true;
+        } else if (preference == mAutoSmsMessage) {
+            AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
+            alert.setTitle(R.string.quiet_hours_auto_string_title);
+            alert.setMessage(R.string.quiet_hours_auto_string_explain);
+
+            final EditText input = new EditText(getActivity());
+            input.setText(mAutoText);
+            alert.setView(input);
+            alert.setPositiveButton(getResources().getString(R.string.ok),
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int whichButton) {
+                            String value = input.getText().toString();
+                            SharedPreferences.Editor editor = prefs.edit();
+                            editor.putString(KEY_AUTO_SMS_MESSAGE, value);
+                            updateAutoText();
+                        }
+                    });
+            alert.show();
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
@@ -136,8 +180,24 @@ public class QuietHours extends SettingsPreferenceFragment implements
             Settings.System.putInt(resolver, Settings.System.QUIET_HOURS_END,
                     mQuietHoursTimeRange.getEndTime());
             return true;
+        } else if (preference == mAutoSms) {
+            int val = Integer.parseInt((String) newValue);
+            if (val != 0) {
+                mAutoSmsMessage.setEnabled(true);
+                if (SmsService.isStarted()) {
+                    mContext.stopService(new Intent(mContext, SmsService.class));
+                }
+                mContext.startService(new Intent(mContext, SmsService.class));
+            } else {
+                mAutoSmsMessage.setEnabled(false);
+            }
+            return true;
         }
         return false;
+    }
+
+    private void updateAutoText() {
+        mAutoText = prefs.getString(KEY_AUTO_SMS_MESSAGE, DEFAULT_SMS_MESSAGE);
     }
 
     class SettingsObserver extends ContentObserver {
