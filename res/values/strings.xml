@@ -4489,6 +4489,13 @@
     <string name="quiet_hours_dim_title">Disable notification light</string>
     <string name="quiet_hours_active_from">Active from</string>
     <string name="quiet_hours_active_to">to</string>
+    <string name="quiet_hours_auto_sms_title">Automatic text message</string>
+    <string name="quiet_hours_auto_sms_summary">Your phone will respond to text messages while active</string>
+    <string name="quiet_hours_auto_string_title">Message to respond with</string>
+    <string name="quiet_hours_auto_string_explain">This message will be sent to anyone who texts you while
+            quiet hours are active</string>
+    <string name="quiet_hours_auto_sms_null">Automated Message enabled. QuietHours are active.
+            I\'ll get back to you when I am able.</string>
 
     <!-- time range preference -->
     <string name="start_time_title">Start</string>
@@ -4504,6 +4511,8 @@
 
     <string name="lockscreen_quick_unlock_control_title">Quick pin unlock</string>
     <string name="lockscreen_quick_unlock_control_summary">Unlock password/pin lockscreen without pressing enter button</string>
+    <string name="disabled">Disabled</string>
+    <string name="enabled">Enabled</string>
 
     <!-- Hostname setting -->
     <string name="device_hostname">Device hostname</string>
