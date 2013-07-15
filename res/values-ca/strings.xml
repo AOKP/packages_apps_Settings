@@ -1831,4 +1831,146 @@
     <string name="user_picture_title" msgid="7297782792000291692">"Identificador de la foto"</string>
     <string name="cell_broadcast_settings" msgid="8415582011920085222">"Emissions mòbils"</string>
     <string name="cell_broadcast_settings_summary" msgid="3301339398950905913">"Selecciona els tipus d\'alertes d\'emergència que es mostraran."</string>
+    <string name="font_size_preview_text">Doneu-li a aquest senyor una cervesa i uns kiwis.</string>
+    <string name="default_date_format"><xliff:g id="default_date_format">MM/dd/yyyy</xliff:g></string>
+    <string name="intent_sender_data_label"><xliff:g id="data">Dades:</xliff:g></string>
+    <string name="debug_intent_sender_label">Enviament d\'intent de depuració</string>
+    <string name="nfc_polling_mode_title">Mode de votació NFC</string>
+    <string name="nfc_polling_mode_screen_off">Pantalla desactivada</string>
+    <string name="nfc_polling_mode_screen_locked">Pantalla desactivada, bloquejat</string>
+    <string name="nfc_polling_mode_screen_unlocked">Pantalla activada, desbloquejat (per defecte)</string>
+    <string name="wifi_security_short_wep">WEP</string>
+    <string name="wifi_security_short_wpa">WPA</string>
+    <string name="wifi_security_short_wpa2">WPA2</string>
+    <string name="wifi_security_short_wpa_wpa2">WPA/WPA2</string>
+    <string name="wifi_security_short_psk_generic">@string/wifi_security_short_wpa_wpa2</string>
+    <string name="wifi_security_short_eap">802.1x</string>
+    <string name="wifi_security_wep">WEP</string>
+    <string name="wifi_security_wpa">WPA PSK</string>
+    <string name="wifi_security_wpa2">WPA2 PSK</string>
+    <string name="wifi_security_wpa_wpa2">WPA/WPA2 PSK</string>
+    <string name="wifi_security_psk_generic">@string/wifi_security_wpa_wpa2</string>
+    <string name="wifi_security_eap">802.1x EAP</string>
+    <string name="wifi_mode">Mode</string>
+    <string name="wifi_mode_ibss">Xarxa Ad-Hoc (IBSS)</string>
+    <string name="wifi_mode_ibss_short">Ad-Hoc</string>
+    <string name="wifi_ibss_freq_title">Canal/Freqüència</string>
+    <string name="wifi_channel">Canal</string>
+    <string name="wifi_mhz">MHz</string>
+    <string name="wifi_setting_countrycode_title">Codi de regió de xarxa sense fils</string>
+    <string name="wifi_setting_countrycode_summary">Especifiqueu el codi de regió de la xarxa sense fils</string>
+    <string name="wifi_setting_countrycode_error">Hi ha hagut un problema en establir el codi de regió</string>
+    <string name="camera_sounds_title">So de l\'obturador de la càmera</string>
+    <string name="camera_sounds_summary">AVÍS: La inhabilitació del so de l\'obturador de la càmera és il·legal a algunes àrees!</string>
+    <string name="screensaver_settings_summary_wireless">Mentre s\'està carregant sense fils</string>
+    <string name="hardware_info">Informació del maquinari</string>
+    <string name="device_rear_camera">Càmera posterior</string>
+    <string name="device_front_camera">Càmera anterior</string>
+    <string name="device_screen_resolution">Resolució de pantalla</string>
+    <string name="gpu_info">GPU</string>
+    <string name="cpu_info">CPU</string>
+    <string name="chipset_info">Joc de xips</string>
+    <string name="mem_info">Memòria</string>
+    <string name="status_imei">IMEI</string>
+    <string name="status_imei_sv">IMEI SV</string>
+    <string name="status_latest_area_info">Informació de l\'operador</string>
+    <string name="lockpattern_need_to_unlock_footer">[empty string]</string>
+    <string name="lockpattern_need_to_unlock_wrong_footer">[empty string]</string>
+    <string name="skip_button_label">Cancel·la</string>
+    <string name="next_button_label">Següent</string>
+    <string name="lock_title" product="tablet">S\'està protegint la tauleta</string>
+    <string name="lock_title" product="default">S\'està protegint la tauleta</string>
+    <string name="lock_intro_message" product="tablet">Protegiu la tauleta d\'usos no autoritzats creant un patró de desbloqueig de pantalla personal. Llisqueu el dit per connectar els punts en qualsevol ordre a la pantalla següent. Heu de connectar almenys quatre punts.\n\n\nEsteu preparat per començar? Toqueu a Següent.</string>
+    <string name="lock_intro_message" product="default">Protegiu la tauleta d\'usos no autoritzats creant un patró de desbloqueig de pantalla personal. Llisqueu el dit per connectar els punts en qualsevol ordre a la pantalla següent. Heu de connectar almenys quatre punts.\n\n\nEsteu preparat per començar? Toqueu a Següent.</string>
+    <string name="advanced_settings_title">Opcions del dispositiu</string>
+    <string name="service_client_name"><xliff:g id="client_name">%1$s</xliff:g></string>
+    <string name="service_process_name"><xliff:g id="process">%1$s</xliff:g></string>
+    <string name="testing_sim_toolkit">Joc d\'eines de la SIM</string>
+    <string name="adb_notify">Avís de depuració USB</string>
+    <string name="adb_notify_summary">Mostra un avís quan es connecti la depuració USB</string>
+    <string name="accessibility_home_button_answers_call_title">El botó Inici contesta una trucada</string>
+    <string name="battery_stats_last_duration">@string/menu_stats_last_unplugged</string>
+    <string name="sync_item_title"><xliff:g id="authority" example="Calendari">%s</xliff:g></string>
+    <string name="quick_links_title">Enllaços ràpids</string>
+    <string name="rom_control_title">Control de la ROM</string>
+    <string name="themes_title">Temes</string>
+    <string name="mod_version">Versió d\'AOKP</string>
+    <string name="mod_version_default">Desconegut</string>
+    <string name="anonymous_statistics_title">Estadístiques d\'AOKP</string>
+    <string name="anonymous_statistics_summary">Ajudeu a millorar l\'AOKP activant la comunicació d\'estadístiques anònimes</string>
+    <string name="anonymous_statistics_warning_title">Quant a</string>
+    <string name="anonymous_statistics_warning">Si activeu les estadístiques d\'AOKP permetreu que s\'enviïn dades no personals als\ndesenvolupadors d\'AOKP per seguir instal·lacions úniques entre dispositius. La\ninformació subministrada inclou un identificador únic, que no compromet la vostra\nprivacitat ni les dades personals. Les dades s\'envien un cop per setmana durant l\'inici.\n\nPer veure un exemple de les dades que s\'envien, toqueu a Visualització prèvia de dades.</string>
+    <string name="enable_reporting_title">Habilita l\'enviament d\'informes</string>
+    <string name="preview_data_title">Visualització prèvia de dades</string>
+    <string name="preview_data_summary">%s</string>
+    <string name="view_stats_title">Visualització d\'estadístiques</string>
+    <string name="anonymous_learn_more">Més informació</string>
+    <string name="anonymous_notification_desc">Habilita o inhabilita les estadístiques d\'AOKP</string>
+    <string name="preview_id_title">ID única</string>
+    <string name="preview_device_title">Dispositiu</string>
+    <string name="preview_version_title">Versió</string>
+    <string name="preview_country_title">País</string>
+    <string name="preview_carrier_title">Proveïdor</string>
+    <string name="quiet_hours_title">Hores de silenci</string>
+    <string name="quiet_hours_summary">Configureu les hores que el dispositiu ha d\'estar en silenci</string>
+    <string name="quiet_hours_enabled_title">Habilita les hores de silenci</string>
+    <string name="quiet_hours_start">Inici de les hores de silenci</string>
+    <string name="quiet_hours_start_summary">Quan s\'ha de començar a fer complir les hores de silenci</string>
+    <string name="quiet_hours_end">Final de les hores de silenci</string>
+    <string name="quiet_hours_end_summary">Quan s\'ha d\'acabar de fer complir les hores de silenci</string>
+    <string name="quiet_hours_notifications_title">Silencia els sons d\'avís</string>
+    <string name="quiet_hours_ringer_title">Silencia els sons de trucada del telèfon</string>
+    <string name="quiet_hours_still_title">Inhabilita la vibració</string>
+    <string name="quiet_hours_dim_title">Inhabilita la llum d\'avís</string>
+    <string name="quiet_hours_active_from">Actiu des de</string>
+    <string name="quiet_hours_active_to">fins</string>
+    <string name="start_time_title">Inicia</string>
+    <string name="end_time_title">Final</string>
+    <string name="vibration_title">Vibració del telèfon</string>
+    <string name="link_volume_ringtones">Enllaça els volums</string>
+    <string name="link_volume_mutes">Enllaça els estats de silenci</string>
+    <string name="safe_headset_volume_title">Volum d\'auriculars segur</string>
+    <string name="lockscreen_quick_unlock_control_title">Desbloqueig ràpid per PIN</string>
+    <string name="lockscreen_quick_unlock_control_summary">Desbloqueja la pantalla amb la contrasenya/PIN sense prémer la tecla de retorn</string>
+    <string name="device_hostname">Nom d\'amfitrió del dispositiu</string>
+    <string name="app_security_title">Seguretat de l\'app</string>
+    <string name="sms_security_check_limit_title">Límit de missatges SMS</string>
+    <string name="sms_security_check_limit_summary">Mostra un quadre l\'alerta per evitar que les aplicacions enviïn missatges SMS massa sovint. Límit actual: %d missatges en 30 minuts (cal reiniciar)</string>
+    <string name="sms_security_check_limit_default">30 (per defecte)</string>
+    <string name="sprint_tools_title">Eines Sprint</string>
+    <string name="usb_mass_storage_title">Emmagatzematge massiu</string>
+    <string name="usb_mass_storage_summary">Habilita l\'emmagatzematge massiu USB</string>
+    <string name="volume_adjust_sounds_enable_title">Ajusta el volum del so</string>
+    <string name="volume_adjust_sounds_enable_summary">Reprodueix un so en ajustar el volum amb les tecles del dispositiu</string>
+    <string name="light_sensor_current_value">Valor actual del sensor de llum: <xliff:g id="light_level">%d</xliff:g> lux</string>
+    <string name="auto_brightness_dialog_title">Nivells de brillantor automàtics</string>
+    <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g> lux</string>
+    <string name="auto_brightness_last_level_format"><xliff:g id="level">%1$d</xliff:g> -\n\u221e lux</string>
+    <string name="auto_brightness_brightness_format"><xliff:g id="percent">%s</xliff:g>%%</string>
+    <string name="auto_brightness_adjust_button">Ajusta</string>
+    <string name="auto_brightness_close_button">Tanca</string>
+    <string name="auto_brightness_reset_button">Restableix</string>
+    <string name="auto_brightness_split_dialog_title">Divideix l\'interval de brillantor</string>
+    <string name="auto_brightness_level_dialog_title">Configuració del nivell de llum</string>
+    <string name="auto_brightness_lux">Llum ambiental (lux)</string>
+    <string name="auto_brightness_backlight">Brillantor de la pantalla (%)</string>
+    <string name="auto_brightness_reset_dialog_title">S\'ha de restablir els nivells?</string>
+    <string name="auto_brightness_reset_confirmation">Tots els nivells de brillantor es restabliran als seus valors per defecte.</string>
+    <string name="auto_brightness_split_lux_format">Punt de divisió (entre <xliff:g id="min">%1$d</xliff:g> i <xliff:g id="max">%2$d</xliff:g> lux)</string>
+    <string name="auto_brightness_level_options">Opcions de nivell de llum</string>
+    <string name="auto_brightness_menu_edit">Edita</string>
+    <string name="auto_brightness_menu_split">Divideix</string>
+    <string name="auto_brightness_menu_remove">Suprimeix</string>
+    <string name="auto_brightness_preview">Vista prèvia</string>
+    <string name="auto_brightness_preview_dialog_title">Vista prèvia de la corba de brillantor</string>
+    <string name="auto_brightness_help_dialog_title">Ajuda</string>
+    <string name="auto_brightness_sensitivity_title">Ajustament de la sensibilitat</string>
+    <string name="auto_brightness_sensitivity_verylow">Molt baixa</string>
+    <string name="auto_brightness_sensitivity_low">Baixa</string>
+    <string name="auto_brightness_sensitivity_medium">Mitjana</string>
+    <string name="auto_brightness_sensitivity_high">Alta</string>
+    <string name="auto_brightness_sensitivity_veryhigh">Molt alta</string>
+    <string name="ok">D\'acord</string>
+    <string name="permissions_settings_title">Permisos</string>
+    <string name="trds_settings_title">AOKP fosc</string>
 </resources>
