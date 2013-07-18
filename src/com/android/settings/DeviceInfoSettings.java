@@ -123,6 +123,7 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
             String status = getResources().getString(R.string.selinux_status_permissive);
             setStringSummary(KEY_SELINUX_STATUS, status);
         }
+        findPreference(KEY_SELINUX_STATUS).setEnabled(true);
 
         // Remove selinux information if property is not present
         removePreferenceIfPropertyMissing(getPreferenceScreen(), KEY_SELINUX_STATUS,
@@ -211,6 +212,22 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
         } else if (prefKey.equals(KEY_KERNEL_VERSION)) {
             setStringSummary(KEY_KERNEL_VERSION, getKernelVersion());
             return true;
+        } else if (preference.getKey().equals(KEY_SELINUX_STATUS)) {
+            System.arraycopy(mHits, 1, mHits, 0, mHits.length-1);
+            mHits[mHits.length-1] = SystemClock.uptimeMillis();
+            if (mHits[0] >= (SystemClock.uptimeMillis()-500)) {
+                    SELinux.setSELinuxEnforce(!SELinux.isSELinuxEnforced());
+                    if (!SELinux.isSELinuxEnabled()) {
+                            String status = getResources().getString(R.string.selinux_status_disabled);
+                            setStringSummary(KEY_SELINUX_STATUS, status);
+                    } else if (!SELinux.isSELinuxEnforced()) {
+                            String status = getResources().getString(R.string.selinux_status_permissive);
+                            setStringSummary(KEY_SELINUX_STATUS, status);
+                    } else if (SELinux.isSELinuxEnforced()) {
+                            String status = getResources().getString(R.string.selinux_status_enforcing);
+                            setStringSummary(KEY_SELINUX_STATUS, status);
+                    }
+            }
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
