@@ -54,6 +54,8 @@ import android.telephony.TelephonyManager;
 import android.text.format.DateFormat;
 import android.util.Log;
 
+import com.android.settings.cyanogenmod.VibratorIntensity;
+
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -89,6 +91,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private static final String PROP_CAMERA_SOUND = "persist.sys.camera-sound";
     private static final String KEY_SAFE_HEADSET_VOLUME = "safe_headset_volume";
     private static final String KEY_VOLUME_ADJUST_SOUNDS = "volume_adjust_sounds";
+    private static final String KEY_VIBRATOR_INTENSITY = "vibrator_intensity";
 
     private static final String[] NEED_VOICE_CAPABILITY = {
             KEY_RINGTONE, KEY_DTMF_TONE, KEY_CATEGORY_CALLS,
@@ -240,6 +243,11 @@ public class SoundSettings extends SettingsPreferenceFragment implements
             removePreference(KEY_VIBRATE);
             removePreference(KEY_HAPTIC_FEEDBACK);
             removePreference(KEY_VIBRATION);
+            removePreference(KEY_VIBRATOR_INTENSITY);
+        }
+
+        if (!VibratorIntensity.isSupported()) {
+            removePreference(KEY_VIBRATOR_INTENSITY);
         }
 
         if (!Utils.isVoiceCapable(getActivity())) {

@@ -117,6 +117,12 @@
             android:entries="@array/emergency_tone_entries"
             android:entryValues="@array/emergency_tone_values" />
 
+    <com.android.settings.cyanogenmod.VibratorIntensity
+            android:key="vibrator_intensity"
+            android:title="@string/vibrator_intensity_title"
+            android:dialogTitle="@string/vibrator_intensity_title"
+            android:persistent="false" />
+
     <!-- Dock -->
     <PreferenceCategory
         android:key="dock_category"
