@@ -1686,6 +1686,9 @@
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                        android:value="com.android.settings.ThemeSettings" />
         </activity>
+        <activity android:name=".AutoBrightnessSetup"
+                android:excludeFromRecents="true"
+                android:theme="@*android:style/Theme.Holo.Dialog.Alert" />
 
         <!-- Pseudo-activity used to provide an intent-filter entry point to encryption settings -->
         <activity android:name="Settings$CryptKeeperSettingsActivity"
