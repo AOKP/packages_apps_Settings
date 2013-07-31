@@ -99,7 +99,7 @@ public class DreamSettings extends SettingsPreferenceFragment {
 
         final int padding = activity.getResources().getDimensionPixelSize(
                 R.dimen.action_bar_switch_padding);
-        mSwitch.setPadding(0, 0, padding, 0);
+        mSwitch.setPaddingRelative(0, 0, padding, 0);
         activity.getActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM,
                 ActionBar.DISPLAY_SHOW_CUSTOM);
         activity.getActionBar().setCustomView(mSwitch, new ActionBar.LayoutParams(
@@ -122,6 +122,8 @@ public class DreamSettings extends SettingsPreferenceFragment {
         super.onActivityCreated(savedInstanceState);
 
         ListView listView = getListView();
+
+        listView.setItemsCanFocus(true);
 
         TextView emptyView = (TextView) getView().findViewById(android.R.id.empty);
         emptyView.setText(R.string.screensaver_settings_disabled_prompt);
@@ -327,8 +329,9 @@ public class DreamSettings extends SettingsPreferenceFragment {
 
             ImageView settingsButton = (ImageView) row.findViewById(android.R.id.button2);
             settingsButton.setVisibility(showSettings ? View.VISIBLE : View.INVISIBLE);
-            settingsButton.setAlpha(dreamInfo.isActive ? 1f : 0.33f);
+            settingsButton.setAlpha(dreamInfo.isActive ? 1f : Utils.DISABLED_ALPHA);
             settingsButton.setEnabled(dreamInfo.isActive);
+            settingsButton.setFocusable(dreamInfo.isActive);
             settingsButton.setOnClickListener(new OnClickListener(){
                 @Override
                 public void onClick(View v) {
@@ -340,7 +343,8 @@ public class DreamSettings extends SettingsPreferenceFragment {
 
         private View createDreamInfoRow(ViewGroup parent) {
             final View row =  mInflater.inflate(R.layout.dream_info_row, parent, false);
-            row.setOnClickListener(new OnClickListener(){
+            final View header = row.findViewById(android.R.id.widget_frame);
+            header.setOnClickListener(new OnClickListener(){
                 @Override
                 public void onClick(View v) {
                     v.setPressed(true);

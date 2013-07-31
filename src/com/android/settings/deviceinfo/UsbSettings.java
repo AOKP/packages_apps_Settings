@@ -16,22 +16,21 @@
 
 package com.android.settings.deviceinfo;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.BroadcastReceiver;
-import android.content.ContentQueryMap;
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.hardware.usb.UsbManager;
 import android.os.Bundle;
+<<<<<<< HEAD
 import android.os.storage.StorageManager;
 import android.os.storage.StorageVolume;
+=======
+import android.os.UserManager;
+>>>>>>> af15aaea7ac6848942a582d0ef4419bb3da58a81
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
-import android.provider.Settings;
 import android.util.Log;
 
 import com.android.settings.R;
@@ -83,6 +82,12 @@ public class UsbSettings extends SettingsPreferenceFragment {
             root.removePreference(mUms);
         }
 
+        UserManager um = (UserManager) getActivity().getSystemService(Context.USER_SERVICE);
+        if (um.hasUserRestriction(UserManager.DISALLOW_USB_FILE_TRANSFER)) {
+            mMtp.setEnabled(false);
+            mPtp.setEnabled(false);
+        }
+
         return root;
     }
 
@@ -131,8 +136,12 @@ public class UsbSettings extends SettingsPreferenceFragment {
             mPtp.setChecked(false);
             mUms.setChecked(false);
         }
-
-        if (!mUsbAccessoryMode) {
+        UserManager um = (UserManager) getActivity().getSystemService(Context.USER_SERVICE);
+        if (um.hasUserRestriction(UserManager.DISALLOW_USB_FILE_TRANSFER)) {
+            Log.e(TAG, "USB is locked down");
+            mMtp.setEnabled(false);
+            mPtp.setEnabled(false);
+        } else if (!mUsbAccessoryMode) {
             //Enable MTP and PTP switch while USB is not in Accessory Mode, otherwise disable it
             Log.e(TAG, "USB Normal Mode");
             mMtp.setEnabled(true);
@@ -142,7 +151,6 @@ public class UsbSettings extends SettingsPreferenceFragment {
             mMtp.setEnabled(false);
             mPtp.setEnabled(false);
         }
-
     }
 
     @Override
@@ -153,15 +161,13 @@ public class UsbSettings extends SettingsPreferenceFragment {
         if (Utils.isMonkeyRunning()) {
             return true;
         }
-        // temporary hack - using check boxes as radio buttons
-        // don't allow unchecking them
-        if (preference instanceof CheckBoxPreference) {
-            CheckBoxPreference checkBox = (CheckBoxPreference)preference;
-            if (!checkBox.isChecked()) {
-                checkBox.setChecked(true);
-                return true;
-            }
+        // If this user is disallowed from using USB, don't handle their attempts to change the
+        // setting.
+        UserManager um = (UserManager) getActivity().getSystemService(Context.USER_SERVICE);
+        if (um.hasUserRestriction(UserManager.DISALLOW_USB_FILE_TRANSFER)) {
+            return true;
         }
+<<<<<<< HEAD
         if (preference == mMtp) {
             Settings.Secure.putInt(getContentResolver(), Settings.Secure.USB_MASS_STORAGE_ENABLED, 0 );
             mUsbManager.setCurrentFunction(UsbManager.USB_FUNCTION_MTP, true);
@@ -174,7 +180,19 @@ public class UsbSettings extends SettingsPreferenceFragment {
             Settings.Secure.putInt(getContentResolver(), Settings.Secure.USB_MASS_STORAGE_ENABLED, 1 );
             mUsbManager.setCurrentFunction(UsbManager.USB_FUNCTION_MASS_STORAGE, true);
             updateToggles(UsbManager.USB_FUNCTION_MASS_STORAGE);
+=======
+
+        String function = "none";
+        if (preference == mMtp && mMtp.isChecked()) {
+            function = UsbManager.USB_FUNCTION_MTP;
+        } else if (preference == mPtp && mPtp.isChecked()) {
+            function = UsbManager.USB_FUNCTION_PTP;
+>>>>>>> af15aaea7ac6848942a582d0ef4419bb3da58a81
         }
+
+        mUsbManager.setCurrentFunction(function, true);
+        updateToggles(function);
+
         return true;
     }
 }
