@@ -4688,9 +4688,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
     <string name="ok">OK</string>
 
-    <!-- Permissions Management -->
-    <string name="permissions_settings_title">Permissions</string>
-
     <!-- TRDS Settings -->
     <string name="trds_settings_title">Dark AOKP</string>
 
@@ -4740,4 +4737,5 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
     <!-- Text to display in regulatory info screen (from device overlay). -->
     <string name="regulatory_info_text"></string>
+
 </resources>
