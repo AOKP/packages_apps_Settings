@@ -37,6 +37,7 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Switch;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import com.android.settings.R;
@@ -140,7 +141,7 @@ public class AppOpsDetails extends Fragment {
                         entry.getSwitchText(mState));
                 ((TextView)view.findViewById(R.id.op_time)).setText(
                         entry.getTimeText(res, true));
-                Switch sw = (Switch)view.findViewById(R.id.switchWidget);
+                CheckBox sw = (CheckBox)view.findViewById(R.id.switchWidget);
                 final int switchOp = AppOpsManager.opToSwitch(firstOp.getOp());
                 sw.setChecked(mAppOps.checkOp(switchOp, entry.getPackageOps().getUid(),
                         entry.getPackageOps().getPackageName()) == AppOpsManager.MODE_ALLOWED);

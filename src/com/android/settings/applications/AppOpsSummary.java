@@ -39,11 +39,8 @@ public class AppOpsSummary extends Fragment {
     private ViewPager mViewPager;
 
     CharSequence[] mPageNames;
-    static AppOpsState.OpsTemplate[] sPageTemplates = new AppOpsState.OpsTemplate[] {
-        AppOpsState.LOCATION_TEMPLATE,
-        AppOpsState.PERSONAL_TEMPLATE,
-        AppOpsState.MESSAGING_TEMPLATE,
-        AppOpsState.DEVICE_TEMPLATE
+    static AppOpsState.OpsTemplate[] sPageTemplates = new AppOpsState.OpsTemplate[] {        
+        AppOpsState.PERMISSIONS_TEMPLATE
     };
 
     int mCurPos;
@@ -104,6 +101,7 @@ public class AppOpsSummary extends Fragment {
         mViewPager.setOnPageChangeListener(adapter);
         PagerTabStrip tabs = (PagerTabStrip) rootView.findViewById(R.id.tabs);
         tabs.setTabIndicatorColorResource(android.R.color.holo_blue_light);
+        tabs.setVisibility(View.GONE);
 
         // We have to do this now because PreferenceFrameLayout looks at it
         // only when the view is added.
