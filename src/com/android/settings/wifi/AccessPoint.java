@@ -344,36 +344,24 @@ class AccessPoint extends Preference {
         setTitle(ssid);
 
         Context context = getContext();
-<<<<<<< HEAD
-        StringBuilder summary = new StringBuilder();
-
-        if (isIBSS)
-            summary.append(context.getString(R.string.wifi_mode_ibss_short)).append(" ");
-
-        if (mState != null) { // This is the active connection
-            summary.append(Summary.get(context, mState));
-        } else if (mRssi == Integer.MAX_VALUE) { // Wifi out of range
-            summary.append(context.getString(R.string.wifi_not_in_range));
-        } else if (mConfig != null && mConfig.status == WifiConfiguration.Status.DISABLED) {
-=======
         if (mConfig != null && mConfig.status == WifiConfiguration.Status.DISABLED) {
->>>>>>> af15aaea7ac6848942a582d0ef4419bb3da58a81
             switch (mConfig.disableReason) {
                 case WifiConfiguration.DISABLED_AUTH_FAILURE:
-                    summary.append(context.getString(R.string.wifi_disabled_password_failure));
+                    setSummary(context.getString(R.string.wifi_disabled_password_failure));
                     break;
                 case WifiConfiguration.DISABLED_DHCP_FAILURE:
                 case WifiConfiguration.DISABLED_DNS_FAILURE:
-                    summary.append(context.getString(R.string.wifi_disabled_network_failure));
+                    setSummary(context.getString(R.string.wifi_disabled_network_failure));
                     break;
                 case WifiConfiguration.DISABLED_UNKNOWN_REASON:
-                    summary.append(context.getString(R.string.wifi_disabled_generic));
+                    setSummary(context.getString(R.string.wifi_disabled_generic));
             }
         } else if (mRssi == Integer.MAX_VALUE) { // Wifi out of range
             setSummary(context.getString(R.string.wifi_not_in_range));
         } else if (mState != null) { // This is the active connection
             setSummary(Summary.get(context, mState));
         } else { // In range, not disabled.
+            StringBuilder summary = new StringBuilder();
             if (mConfig != null) { // Is saved network
                 summary.append(context.getString(R.string.wifi_remembered));
             }
@@ -395,8 +383,8 @@ class AccessPoint extends Preference {
                     summary.append(context.getString(R.string.wifi_wps_available_second_item));
                 }
             }
+            setSummary(summary.toString());
         }
-        setSummary(summary.toString());
     }
 
     /**

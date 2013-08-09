@@ -148,7 +148,7 @@ public class MiscFilesHandler extends ListActivity {
                     final IMediaContainerService imcs = IMediaContainerService.Stub.asInterface(
                             service);
                     try {
-                        imcs.deleteFile(mPath); // Works for file and directory   
+                        imcs.deleteFile(mPath); // Works for file and directory
                     } catch (Exception e) {
                         Log.w(TAG, "Problem in container service", e);
                     }
@@ -166,8 +166,8 @@ public class MiscFilesHandler extends ListActivity {
                 mPath = path;
                 Intent service = new Intent().setComponent(
                         StorageMeasurement.DEFAULT_CONTAINER_COMPONENT);
-                bindService(service, mDefContainerConn, Context.BIND_AUTO_CREATE,
-                        UserHandle.USER_OWNER);
+                bindServiceAsUser(service, mDefContainerConn, Context.BIND_AUTO_CREATE,
+                        new UserHandle(UserHandle.USER_OWNER));
             }
         }
 

@@ -185,6 +185,7 @@ public class WirelessSettings extends SettingsPreferenceFragment
 
     private void log(String s) {
         Log.d(TAG, s);
+    }
 
     public static boolean isRadioAllowed(Context context, String type) {
         if (!AirplaneModeEnabler.isAirplaneModeOn(context)) {

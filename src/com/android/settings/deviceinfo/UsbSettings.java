@@ -22,12 +22,9 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.hardware.usb.UsbManager;
 import android.os.Bundle;
-<<<<<<< HEAD
 import android.os.storage.StorageManager;
 import android.os.storage.StorageVolume;
-=======
 import android.os.UserManager;
->>>>>>> af15aaea7ac6848942a582d0ef4419bb3da58a81
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
@@ -167,27 +164,12 @@ public class UsbSettings extends SettingsPreferenceFragment {
         if (um.hasUserRestriction(UserManager.DISALLOW_USB_FILE_TRANSFER)) {
             return true;
         }
-<<<<<<< HEAD
-        if (preference == mMtp) {
-            Settings.Secure.putInt(getContentResolver(), Settings.Secure.USB_MASS_STORAGE_ENABLED, 0 );
-            mUsbManager.setCurrentFunction(UsbManager.USB_FUNCTION_MTP, true);
-            updateToggles(UsbManager.USB_FUNCTION_MTP);
-        } else if (preference == mPtp) {
-            Settings.Secure.putInt(getContentResolver(), Settings.Secure.USB_MASS_STORAGE_ENABLED, 0 );
-            mUsbManager.setCurrentFunction(UsbManager.USB_FUNCTION_PTP, true);
-            updateToggles(UsbManager.USB_FUNCTION_PTP);
-        } else if (preference == mUms) {
-            Settings.Secure.putInt(getContentResolver(), Settings.Secure.USB_MASS_STORAGE_ENABLED, 1 );
-            mUsbManager.setCurrentFunction(UsbManager.USB_FUNCTION_MASS_STORAGE, true);
-            updateToggles(UsbManager.USB_FUNCTION_MASS_STORAGE);
-=======
 
         String function = "none";
         if (preference == mMtp && mMtp.isChecked()) {
             function = UsbManager.USB_FUNCTION_MTP;
         } else if (preference == mPtp && mPtp.isChecked()) {
             function = UsbManager.USB_FUNCTION_PTP;
->>>>>>> af15aaea7ac6848942a582d0ef4419bb3da58a81
         }
 
         mUsbManager.setCurrentFunction(function, true);
