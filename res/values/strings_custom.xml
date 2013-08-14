@@ -66,4 +66,10 @@
     <string name="preview_country_title">Country</string>
     <string name="preview_carrier_title">Carrier</string>
 
+    <!-- Delete apn confirmation dialog message -->
+    <string name="confirm_delete_apn">The APN will be deleted.</string>
+
+    <!-- Sound & display settings screen, setting option summary displaying the currently selected font size -->
+    <string name="summary_font_size" translatable="false">%1$s - %2$d%%</string>
+
 </resources>
