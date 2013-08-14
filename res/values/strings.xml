@@ -4868,4 +4868,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Toast message warning user why they cannot disable the last usable launcher app -->
     <string name="last_launcher">Please install or enable another launcher before you can disable or uninstall this one</string>
 
+    <!-- Font size sample text. This needs to be a very short string, as it is shown in
+    multiple font sizes in a limited amount of space. -->
+    <string name="font_size_sample">Sample</string>
+
 </resources>
