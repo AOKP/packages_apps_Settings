@@ -92,6 +92,7 @@ public class BypassAlarm extends Activity implements OnDismissListener {
 
     private void startAlertDialog(String phoneNumber) {
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setCancelable(false);
         alert.setTitle(R.string.quiet_hours_alarm_dialog_title);
         alert.setMessage(phoneNumber + getResources().getString(
                 R.string.quiet_hours_alarm_message));
