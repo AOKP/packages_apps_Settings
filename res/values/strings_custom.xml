@@ -69,7 +69,9 @@
     <!-- Delete apn confirmation dialog message -->
     <string name="confirm_delete_apn">The APN will be deleted.</string>
 
-    <!-- Sound & display settings screen, setting option summary displaying the currently selected font size -->
-    <string name="summary_font_size" translatable="false">%1$s - %2$d%%</string>
+    <!-- Font size sample text. This needs to be a very short string, as it is shown in
+    multiple font sizes in a limited amount of space. -->
+    <string name="font_size_sample">Sample</string>
+    <string name="summary_font_size" translatable="false">%1$s</string>
 
 </resources>
