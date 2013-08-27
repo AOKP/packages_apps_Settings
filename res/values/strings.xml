@@ -376,6 +376,9 @@
     <string name="display_preview_label">Preview:</string>
     <!-- Label for chosen font size -->
     <string name="display_font_size_label">Font size:</string>
+    <!-- Font size sample text. This needs to be a very short string, as it is shown in
+    multiple font sizes in a limited amount of space. -->
+    <string name="font_size_sample">Sample</string>
 
     <!-- Used for diagnostic screens, precise translation is not necessary -->
     <string name="intent_sender_data_label"><xliff:g id="data">Data:</xliff:g></string>
@@ -1870,7 +1873,7 @@
     <!-- [CHAR LIMIT=30] Sound & display settings screen, setting option name to change font size -->
     <string name="title_font_size">Font size</string>
     <!-- Sound & display settings screen, setting option summary displaying the currently selected font size -->
-    <string name="summary_font_size" translatable="false">%1$s - %2$d%%</string>
+    <string name="summary_font_size" translatable="false">%1$s</string>
     <!-- [CHAR LIMIT=40] Sound & display settings screen, title of dialog for picking font size -->
     <string name="dialog_title_font_size">Font size</string>
 
