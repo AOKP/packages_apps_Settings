@@ -2022,7 +2022,6 @@
     <string name="auto_brightness_sensitivity_veryhigh">Molt alta</string>
     <string name="ok">D\'acord</string>
     <string name="permissions_settings_title">Permisos</string>
-    <string name="trds_settings_title">AOKP fosc</string>
     <string name="user_restrictions_title" msgid="7745810037152772035">"Restriccions d\'aplicacions i de contingut"</string>
     <string name="user_rename" msgid="8523499513614655279">"CANVIA EL NOM"</string>
     <string name="app_restrictions_custom_label" msgid="6160672982086584261">"Defineix les restriccions d\'aplicacions"</string>

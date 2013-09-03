@@ -2037,9 +2037,6 @@
     <!-- Permissions Management -->
     <string name="permissions_settings_title">权限管理</string>
 
-    <!-- TRDS Settings -->
-    <string name="trds_settings_title">暗黑 AOKP</string>
-
     <string name="cell_broadcast_settings_summary" msgid="3301339398950905913">"选择要显示的紧急消息类型。"</string>
     <string name="user_restrictions_title" msgid="7745810037152772035">"应用和内容限制"</string>
     <string name="user_rename" msgid="8523499513614655279">"重命名"</string>

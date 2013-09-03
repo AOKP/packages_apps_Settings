@@ -1973,9 +1973,6 @@
     <!-- Permissions Management -->
     <string name="permissions_settings_title">Engedélyek</string>
 
-    <!-- TRDS Settings -->
-    <string name="trds_settings_title">Sötét AOKP</string>
-
     <string name="user_restrictions_title" msgid="7745810037152772035">"Alkalmazás- és tartalomkorlátozások"</string>
     <string name="user_rename" msgid="8523499513614655279">"ÁTNEVEZÉS"</string>
     <string name="app_restrictions_custom_label" msgid="6160672982086584261">"Alkalmazáskorlátozások beállítása"</string>

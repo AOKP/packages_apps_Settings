@@ -1885,7 +1885,6 @@
    <!-- AOKP extra -->
     <string name="quick_links_title">Snabblänkar</string>
     <string name="rom_control_title">ROM Kontroll</string>
-    <string name="trds_settings_title">Mörk AOKP</string>
     <string name="themes_title">Teman</string>
     <string name="advanced_settings_title">Enhets alternativ</string>
     <string name="permissions_settings_title">Behörigheter</string>
