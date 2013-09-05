@@ -50,6 +50,7 @@ import android.os.Bundle;
 import android.os.INetworkManagementService;
 import android.os.RemoteException;
 import android.os.ServiceManager;
+import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.preference.Preference;
@@ -91,6 +92,8 @@ public class Settings extends PreferenceActivity
         "com.android.settings.PARENT_FRAGMENT_TITLE";
     private static final String META_DATA_KEY_PARENT_FRAGMENT_CLASS =
         "com.android.settings.PARENT_FRAGMENT_CLASS";
+
+    private static final String GLOBAL_PROP = "persist.env.phone.global";
 
     private static final String EXTRA_UI_OPTIONS = "settings:ui_options";
 
@@ -480,6 +483,10 @@ public class Settings extends PreferenceActivity
             } else if (id == R.id.multi_sim_settings) {
                 if (!MSimTelephonyManager.getDefault().isMultiSimEnabled())
                     target.remove(header);
+            } else if (id == R.id.global_roaming_settings) {
+                if (!SystemProperties.getBoolean(GLOBAL_PROP, false)) {
+                    target.remove(header);
+                }
             }
 
             if (i < target.size() && target.get(i) == header
