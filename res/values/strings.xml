@@ -4862,6 +4862,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Delete apn confirmation dialog message -->
     <string name="confirm_delete_apn">The APN will be deleted.</string>
 
+    <!-- Roaming Date Settings -->
+    <string name="label_global_roaming_settings">Global roaming settings</string>
+
     <!-- Toast message warning user why they cannot disable the last usable launcher app -->
     <string name="last_launcher">Please install or enable another launcher before you can disable or uninstall this one</string>
 
