@@ -4848,4 +4848,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Delete apn confirmation dialog message -->
     <string name="confirm_delete_apn">The APN will be deleted.</string>
 
+    <!-- Roaming Date Settings -->
+    <string name="label_global_roaming_settings">Global roaming settings</string>
 </resources>
