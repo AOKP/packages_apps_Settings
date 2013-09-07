@@ -78,6 +78,12 @@
             android:dependency="enable_adb"/>
 
         <CheckBoxPreference
+            android:key="change_logging_status"
+            android:title="@string/change_logging_status_title"
+            android:summary="@string/change_logging_status_summary"
+            android:dependency="enable_adb"/>
+
+        <CheckBoxPreference
             android:key="bugreport_in_power"
             android:title="@string/bugreport_in_power"
             android:summary="@string/bugreport_in_power_summary"/>
