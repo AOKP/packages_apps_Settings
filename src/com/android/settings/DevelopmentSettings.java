@@ -130,6 +130,8 @@ public class DevelopmentSettings extends PreferenceFragment
     private static final String DEBUG_DEBUGGING_CATEGORY_KEY = "debug_debugging_category";
     private static final String DEBUG_APPLICATIONS_CATEGORY_KEY = "debug_applications_category";
 
+    private static final String CHANGE_LOGGING_STATUS_KEY = "change_logging_status";
+
     private static final String OPENGL_TRACES_KEY = "enable_opengl_traces";
 
     private static final String IMMEDIATELY_DESTROY_ACTIVITIES_KEY
@@ -170,6 +172,7 @@ public class DevelopmentSettings extends PreferenceFragment
     private CheckBoxPreference mWaitForDebugger;
     private CheckBoxPreference mVerifyAppsOverUsb;
 
+    private CheckBoxPreference mChangeLoggingStatus;
     private CheckBoxPreference mStrictMode;
     private CheckBoxPreference mPointerLocation;
     private CheckBoxPreference mShowTouches;
@@ -311,6 +314,18 @@ public class DevelopmentSettings extends PreferenceFragment
         if (hdcpChecking != null) {
             mAllPrefs.add(hdcpChecking);
         }
+        mChangeLoggingStatus = (CheckBoxPreference) findPreference(
+                CHANGE_LOGGING_STATUS_KEY);
+        mChangeLoggingStatus.setChecked(Log.getStatus() == Log.ALLOW_LOGGING);
+        mChangeLoggingStatus.setOnPreferenceClickListener(
+                new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                Log.setLogability(getActivity(),
+                        mChangeLoggingStatus.isEnabled() ? 1 : 0);
+                return true;
+            }
+        });
         removeHdcpOptionsForProduction();
     }
 
