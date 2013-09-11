@@ -1999,7 +1999,6 @@
     <string name="camera_sounds_title">Zvuk při focení</string>
     <string name="camera_sounds_summary">POZOR: Vypnutí zvuku fotoaparátu je na některých místech nelegální!</string>
     <string name="permissions_settings_title">Oprávnění</string>
-    <string name="trds_settings_title">Tmavý vzhled</string>
     <string name="user_restrictions_title" msgid="7745810037152772035">"Omezení aplikací a obsahu"</string>
     <string name="user_rename" msgid="8523499513614655279">"PŘEJMENOVAT"</string>
     <string name="app_restrictions_custom_label" msgid="6160672982086584261">"Nastavit omezení aplikací"</string>
