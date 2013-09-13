@@ -170,6 +170,8 @@ public class UsbSettings extends SettingsPreferenceFragment {
             function = UsbManager.USB_FUNCTION_MTP;
         } else if (preference == mPtp && mPtp.isChecked()) {
             function = UsbManager.USB_FUNCTION_PTP;
+        } else if (preference == mUms && mUms.isChecked()) {
+            function = UsbManager.USB_FUNCTION_MASS_STORAGE;
         }
 
         mUsbManager.setCurrentFunction(function, true);
