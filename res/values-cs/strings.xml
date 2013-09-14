@@ -1930,7 +1930,38 @@
     <string name="quiet_hours_active_to">do</string>
     <string name="start_time_title">Začátek</string>
     <string name="end_time_title">Konec</string>
+    <string name="quiet_hours_auto_sms_group">Automatická odpověď</string>
+    <string name="quiet_hours_auto_sms_title">Příchozí textové zprávy</string>
+    <string name="quiet_hours_auto_sms_call_title">Příchozí volání</string>
+    <string name="quiet_hours_auto_string_title">Response to send</string>
+    <string name="quiet_hours_auto_string_explain">Tato zpráva budu odeslána každému, kdo se pokusí o kontakt během hodin klidu</string>
+    <string name="quiet_hours_auto_sms_null">[Automatická odpověď] Jakmile budu moci, ozvu se.</string>
+    <string name="quiet_hours_auto_disabled">Vypnuta</string>
+    <string name="quiet_hours_auto_enabled">Všechna čísla</string>
+    <string name="quiet_hours_auto_contacts">Pouze kontakty</string>
+    <string name="quiet_hours_bypass_group">Vynechání hodin klidu</string>
+    <string name="quiet_hours_sms_code_null">[Alarm]</string>
+    <string name="quiet_hours_sms_bypass_title">Vyjmout textovou zprávu</string>
+    <string name="quiet_hours_sms_code_explain">Pokud příchozí zpráva obsahuje tento text, zařízení přehraje zvukový signál</string>
+    <string name="quiet_hours_call_bypass_title">Vyjmout příchozí volání</string>
+    <string name="quiet_hours_calls_required_title">Počet hovorů během 30 minut</string>
+    <string name="quiet_hours_calls_required_summary">" hovory/ů vyjmuty/o z hodin klidu"</string>
+    <string name="quiet_hours_bypass_ringtone_title">Melodie k přehrání</string>
+    <string name="quiet_hours_bypass_ringtone_loop_title">Opakování melodie</string>
+    <string name="quiet_hours_bypass_ringtone_loop_summary_on">Melodie se bude opakovat až do zavření</string>
+    <string name="quiet_hours_bypass_ringtone_loop_summary_off">Melodie bude přehrána pouze jednou</string>
+    <string name="quiet_hours_alarm_dismiss">Zavřít alarm</string>
+    <string name="quiet_hours_alarm_dialog_title">HODINY KLIDU VYNECHÁNY</string>
+    <string name="quiet_hours_alarm_message">" splnilo podmínku pro vynechání hodin klidu!"</string>
+    <string name="two">dva</string>
+    <string name="three">tři</string>
+    <string name="four">čtyři</string>
+    <string name="five">pět</string>
+    <string name="six">šest</string>
     <!-- Automatic brightness customization -->
+    <string name="auto_brightness_setup_title">Automatický jas</string>
+    <string name="auto_brightness_adjustment_title">Úprava jasu</string>
+    <string name="auto_brightness_twilight_adjustment">Upravit pro východ a západ slunce</string>
     <string name="light_sensor_current_value">Aktuální hodnota světelného senzoru: <xliff:g id="light_level">%d</xliff:g> lux</string>
     <string name="auto_brightness_dialog_title">Úrovně automatického podsvícení</string>
     <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g> lux</string>
