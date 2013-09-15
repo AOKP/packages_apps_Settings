@@ -37,6 +37,9 @@
         android:title="@string/advanced_reboot_title"
         android:summary="@string/advanced_reboot_summary" />
 
+    <Preference android:key="restart_systemui"
+        android:title="@string/restart_systemui" />
+
     <PreferenceScreen
             android:key="local_backup_password"
             android:title="@string/local_backup_password_title"
