@@ -91,6 +91,9 @@
         android:title="@string/update_recovery_title"
         android:summary="@string/update_recovery_summary" />
 
+    <Preference android:key="restart_systemui"
+        android:title="@string/restart_systemui" />
+
     <com.android.settings.ColorModePreference
         android:key="color_mode"
         android:title="@string/picture_color_mode"

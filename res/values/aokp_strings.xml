@@ -185,4 +185,7 @@
     <string name="lockscreen_shortcuts_double_tap">Double tap</string>
     <string name="lockscreen_shortcuts_longpress">Longpress</string>
 
+    <!-- Restart SystemUI -->
+    <string name="restart_systemui">Restart SystemUI</string>
+
 </resources>
