@@ -78,11 +78,7 @@ public class Utilities {
             return "KANG";
         } else {
             String[] splitVer = version.split("_");
-            if (version.contains("milestone")) {
-                return branch + "_" + splitVer[3]; // exact milestone version
-            } else {
-                return branch + "_" + splitVer[2]; // nightly || unofficial
-            }
+            return branch + "_" + splitVer[3]; // exact milestone version || nightly || unofficial
         }
     }
 
