@@ -65,9 +65,62 @@ public class SmsCallService extends Service {
             if (state == TelephonyManager.CALL_STATE_RINGING) {
                 mIncomingCall = true;
                 mIncomingNumber = incomingNumber;
+                int bypassPreference = SmsCallHelper.returnUserCallBypass(SmsCallService.this);
+                boolean isContact = SmsCallHelper.isContact(SmsCallService.this, mIncomingNumber);
+
+                if (!mKeepCounting) {
+                    mKeepCounting = true;
+                    mBypassCallCount = 0;
+                    mDay = SmsCallHelper.returnDayOfMonth();
+                    mMinutes = SmsCallHelper.returnTimeInMinutes();
+                }
+
+                boolean timeConstraintMet = SmsCallHelper.returnTimeConstraintMet(
+                        SmsCallService.this, mMinutes, mDay);
+                if (timeConstraintMet) {
+                    switch (bypassPreference) {
+                        case SmsCallHelper.DEFAULT_DISABLED:
+                            break;
+                        case SmsCallHelper.ALL_NUMBERS:
+                            mBypassCallCount++;
+                            break;
+                        case SmsCallHelper.CONTACTS_ONLY:
+                            if (isContact) {
+                                mBypassCallCount++;
+                            }
+                            break;
+                    }
+                } else {
+                    switch (bypassPreference) {
+                        case SmsCallHelper.DEFAULT_DISABLED:
+                            break;
+                        case SmsCallHelper.ALL_NUMBERS:
+                            mBypassCallCount = 1;
+                            break;
+                        case SmsCallHelper.CONTACTS_ONLY:
+                            if (isContact) {
+                                mBypassCallCount = 1;
+                            } else {
+                                // Reset call count and time at next call
+                                mKeepCounting = false;
+                            }
+                            break;
+                    }
+                    mDay = SmsCallHelper.returnDayOfMonth();
+                    mMinutes = SmsCallHelper.returnTimeInMinutes();
+                }
+                if ((mBypassCallCount
+                        == SmsCallHelper.returnUserCallBypassCount(SmsCallService.this))
+                        && SmsCallHelper.inQuietHours(SmsCallService.this)
+                        && timeConstraintMet) {
+                    // Don't auto-respond if alarm fired
+                    mIncomingCall = false;
+                    mKeepCounting = false;
+                    startAlarm(SmsCallService.this, mIncomingNumber);
+                }
             }
             if (state == TelephonyManager.CALL_STATE_OFFHOOK) {
-                // Don't message if call was answered
+                // Don't message or alarm if call was answered
                 mIncomingCall = false;
                 // Call answered, reset Incoming number
                 // Stop AlarmSound
@@ -78,67 +131,13 @@ public class SmsCallService extends Service {
             if (state == TelephonyManager.CALL_STATE_IDLE && mIncomingCall) {
                 // Call Received and now inactive
                 mIncomingCall = false;
-                int bypassPreference = SmsCallHelper.returnUserCallBypass(SmsCallService.this);
                 int userAutoSms = SmsCallHelper.returnUserAutoCall(SmsCallService.this);
-                if ((bypassPreference != SmsCallHelper.DEFAULT_DISABLED
-                        || userAutoSms != SmsCallHelper.DEFAULT_DISABLED)
+
+                if (userAutoSms != SmsCallHelper.DEFAULT_DISABLED
                         && SmsCallHelper.inQuietHours(SmsCallService.this)) {
                     boolean isContact = SmsCallHelper.isContact(SmsCallService.this, mIncomingNumber);
-
-                    if (!mKeepCounting) {
-                        mKeepCounting = true;
-                        mBypassCallCount = 0;
-                        mDay = SmsCallHelper.returnDayOfMonth();
-                        mMinutes = SmsCallHelper.returnTimeInMinutes();
-                    }
-
-                    boolean timeConstraintMet = SmsCallHelper.returnTimeConstraintMet(
-                            SmsCallService.this, mMinutes, mDay);
-                    if (timeConstraintMet) {
-                        switch (bypassPreference) {
-                            case SmsCallHelper.DEFAULT_DISABLED:
-                                break;
-                            case SmsCallHelper.ALL_NUMBERS:
-                                mBypassCallCount++;
-                                break;
-                            case SmsCallHelper.CONTACTS_ONLY:
-                                if (isContact) {
-                                    mBypassCallCount++;
-                                }
-                                break;
-                        }
-                    } else {
-                        switch (bypassPreference) {
-                            case SmsCallHelper.DEFAULT_DISABLED:
-                                break;
-                            case SmsCallHelper.ALL_NUMBERS:
-                                mBypassCallCount = 1;
-                                break;
-                            case SmsCallHelper.CONTACTS_ONLY:
-                                if (isContact) {
-                                    mBypassCallCount = 1;
-                                } else {
-                                    // Reset call count and time at next call
-                                    mKeepCounting = false;
-                                }
-                                break;
-                        }
-                        mDay = SmsCallHelper.returnDayOfMonth();
-                        mMinutes = SmsCallHelper.returnTimeInMinutes();
-                    }
-                    if (mBypassCallCount
-                            == SmsCallHelper.returnUserCallBypassCount(SmsCallService.this)
-                            && timeConstraintMet) {
-                        mKeepCounting = false;
-                        // Sound the Alarm
-                        startAlarm(SmsCallService.this, mIncomingNumber);
-                    } else {
-                        // Let's not auto-respond if an alarm fired
-                        if (userAutoSms != SmsCallHelper.DEFAULT_DISABLED) {
-                            checkTimeAndNumber(
-                                    SmsCallService.this, mIncomingNumber, userAutoSms, isContact);
-                        }
-                    }
+                    checkTimeAndNumber(
+                            SmsCallService.this, mIncomingNumber, userAutoSms, isContact);
                 }
             }
             super.onCallStateChanged(state, incomingNumber);
