@@ -649,6 +649,9 @@
     <string name="wifi_setting_frequency_band_title" msgid="3655327399028584656">"Wi-Fi周波数帯域"</string>
     <string name="wifi_setting_frequency_band_summary" msgid="3250740757118009784">"使用する周波数帯域を指定する"</string>
     <string name="wifi_setting_frequency_band_error" msgid="837281974489794378">"周波数帯域の設定中に問題が発生しました。"</string>
+    <string name="wifi_setting_countrycode_title">Wi-Fiリージョンコード</string>
+    <string name="wifi_setting_countrycode_summary">Wi-Fiのリージョンコードを指定する</string>
+    <string name="wifi_setting_countrycode_error">リージョンコードの設定に問題があります。</string>
     <string name="wifi_advanced_mac_address_title" msgid="6571335466330978393">"MACアドレス"</string>
     <string name="wifi_advanced_ip_address_title" msgid="6215297094363164846">"IPアドレス"</string>
     <string name="wifi_advanced_settings_label" msgid="3654366894867838338">"IP設定"</string>
@@ -757,6 +760,7 @@
     <string name="screensaver_settings_summary_either_short" msgid="6140527286137331478">"いずれか"</string>
     <string name="screensaver_settings_summary_sleep" msgid="9086186698140423493">"充電時"</string>
     <string name="screensaver_settings_summary_dock" msgid="2072657401664633283">"ホルダー装着時"</string>
+    <string name="screensaver_settings_summary_wireless">ワイヤレス充電時</string>
     <string name="screensaver_settings_summary_off" msgid="2481581696365146473">"OFF"</string>
     <string name="screensaver_settings_disabled_prompt" msgid="3857507943322777651">"携帯端末のホルダー装着時やスリープ時の動作を管理するにはスクリーンセーバーをONにします。"</string>
     <string name="screensaver_settings_when_to_dream" msgid="8352267826043957746">"起動のタイミング"</string>
@@ -1952,6 +1956,13 @@
     <string name="preview_country_title">国</string>
     <string name="preview_carrier_title"> キャリア</string>
 
+    <!-- Basic Numbers -->
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+
     <!-- Quiet hours #CM -->
     <string name="quiet_hours_title">サイレントタイム</string>
     <string name="quiet_hours_summary">デバイスがサイレントモードになる時間の参照や変更</string>
@@ -1966,6 +1977,35 @@
     <string name="quiet_hours_dim_title">通知LEDを無効</string>
     <string name="quiet_hours_active_from">有効時間</string>
     <string name="quiet_hours_active_to">から</string>
+    <string name="quiet_hours_auto_sms_group">自動応答</string>
+    <string name="quiet_hours_auto_sms_title">SMS受信時</string>
+    <string name="quiet_hours_auto_sms_call_title">電話着信時</string>
+    <string name="quiet_hours_auto_string_title">自動返信メッセージの編集</string>
+    <string name="quiet_hours_auto_string_explain">このメッセージはサイレントタイムが有効になってる間に
+        あなたにコンタクトをとった人に送られます。
+    </string>
+    <string name="quiet_hours_auto_sms_null">【自動返信】また後程ご連絡致します。</string>
+    <string name="quiet_hours_auto_disabled">無効</string>
+    <string name="quiet_hours_auto_enabled">全ての電話番号</string>
+    <string name="quiet_hours_auto_contacts">登録済みの電話番号</string>
+    <string name="quiet_hours_bypass_group">サイレントタイム回避設定</string>
+    <string name="quiet_hours_sms_code_null">[アラーム]</string>
+    <string name="quiet_hours_sms_bypass_title">SMS受信時の回避対象</string>
+    <string name="quiet_hours_sms_code_title">キーワードの編集</string>
+    <string name="quiet_hours_sms_code_explain">SMSにキーワードが含まれている場合は携帯電話の
+        アラームを鳴らします。
+    </string>
+    <string name="quiet_hours_call_bypass_title">着信時の回避対象</string>
+    <string name="quiet_hours_calls_required_title">30分間の呼び出し回数</string>
+    <string name="quiet_hours_calls_required_summary">回の呼び出しでサイレントタイムを回避する</string>
+    <string name="quiet_hours_bypass_ringtone_title">着信音の選択</string>
+    <string name="quiet_hours_bypass_ringtone_loop_title">着信音をループ再生</string>
+    <string name="quiet_hours_bypass_ringtone_loop_summary_on">拒否するまで着信音をループ再生する</string>
+    <string name="quiet_hours_bypass_ringtone_loop_summary_off">1度だけ着信音を再生する</string>
+    <string name="quiet_hours_alarm_dismiss">アラームを拒否</string>
+    <string name="quiet_hours_alarm_and">と</string>
+    <string name="quiet_hours_alarm_dialog_title">サイレントタイムを回避しました。</string>
+    <string name="quiet_hours_alarm_message">はサイレントタイムを回避する条件を満たしています。</string>
 
     <!-- time range preference -->
     <string name="start_time_title">開始</string>
@@ -2003,6 +2043,9 @@
     <string name="volume_adjust_sounds_enable_summary">ハードキーで音量を調整するときに音を鳴らす</string>
 
     <!-- Automatic brightness customization -->
+    <string name="auto_brightness_setup_title">自動明るさ調整</string>
+    <string name="auto_brightness_adjustment_title">明るさ調整</string>
+    <string name="auto_brightness_twilight_adjustment">日の出と日没に合わせて調整</string>
     <string name="light_sensor_current_value">現在のライトセンサー値: <xliff:g id="light_level">%d</xliff:g> lux</string>
     <string name="auto_brightness_dialog_title">明るさの自動調整レベル</string>
     <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g> lux</string>
@@ -2053,9 +2096,6 @@
     <string name="auto_brightness_sensitivity_veryhigh">とても高い</string>
 
     <string name="ok">OK</string>
-
-    <!-- Permissions Management -->
-    <string name="permissions_settings_title">パーミッション</string>
 
     <!-- TRDS Settings -->
     <string name="trds_settings_title">ダークAOKP</string>
