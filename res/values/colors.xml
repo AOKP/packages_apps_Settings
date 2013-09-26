@@ -15,6 +15,7 @@
 -->
 
 <resources>
+    <color name="white">#FFF</color>
     <color name="black">#000</color>
     <color name="red">#F00</color>
 

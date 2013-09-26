@@ -192,11 +192,11 @@
 
         <activity
             android:name=".service.BypassAlarm"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:excludeFromRecents="true"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:taskAffinity="com.android.settings.service.BypassAlarm"
-            android:theme="@android:style/Theme.Holo.Dialog" />
+            android:taskAffinity="com.android.settings.service.BypassAlarm" />
 
         <!-- Wireless Controls -->
 
