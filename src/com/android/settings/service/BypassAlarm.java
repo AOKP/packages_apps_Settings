@@ -17,94 +17,140 @@
 package com.android.settings.service;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.KeyguardManager;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.android.settings.R;
 
-public class BypassAlarm extends Activity implements OnDismissListener {
+public class BypassAlarm extends Activity {
 
-    private KeyguardManager mKeyguardManager;
+    private Handler mHandler;
 
-    private boolean mFirstRun;
+    private ImageView mDismissButton;
+
+    private String mNumbers;
+
+    private boolean mFirstPause;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        mFirstRun = true;
-        mKeyguardManager =
-                (KeyguardManager) this.getSystemService(Context.KEYGUARD_SERVICE);
+
+        mHandler = new Handler();
+        mFirstPause = false;
 
         final Window win = getWindow();
         win.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
                 | WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON
+                | WindowManager.LayoutParams.FLAG_FULLSCREEN
                 | WindowManager.LayoutParams.FLAG_ALLOW_LOCK_WHILE_SCREEN_ON);
 
+        if (SmsCallHelper.returnUserRingtoneLoop(this)) {
+            win.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        }
+
         Bundle extras = getIntent().getExtras();
-        String phoneNumber = extras.getString("number");
-        startAlertDialog(phoneNumber);
+        mNumbers = extras.getString("number");
+
+        final LayoutInflater inflater = LayoutInflater.from(this);
+        final View view = inflater.inflate(getLayoutResId(), null);
+        view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE);
+        setContentView(view);
+
+        mDismissButton = ((ImageView)
+                this.findViewById(R.id.dismissalert));
+        mDismissButton.setOnClickListener(mDismissButtonListener);
+
+        setAlertText(mNumbers);
+
+        startService();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        if (mFirstRun) {
-            startService();
+        // If phone was asleep - On resume is called twice.
+        // Cancel the onPause() finish() request.
+        if (mFirstPause) {
+            mHandler.removeCallbacks(stopFinal);
         }
-        mFirstRun = false;
     }
 
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
+        Bundle extras = intent.getExtras();
+        String newNumber = extras.getString("number");
+        if (!mNumbers.contains(newNumber)) {
+            mNumbers += getResources().getString(
+                    R.string.quiet_hours_alarm_and) + newNumber;
+            setAlertText(mNumbers);
+        }
         startService();
     }
 
     @Override
-    public void onDestroy() {
+    public void onPause() {
+        super.onPause();
+        // If looping is set, screen won't turn off until the user tells it to.
+        // This allows long ringers > short screen-off to finish but they'll
+        // always finish themselves.  This will thus catch all onPause activities
+        // for a looping ringtone - including the stubborn last-app intent.
+        if (SmsCallHelper.returnUserRingtoneLoop(this)) {
+            mHandler.postDelayed(stopFinal, 1000);
+        }
+        mFirstPause = true;
+    }
+
+    @Override
+    protected void onDestroy() {
         super.onDestroy();
         stopService();
     }
 
     @Override
-    public void onPause() {
-        keyguardStop();
-        super.onPause();
+    public void onBackPressed() {
+        // Don't allow dismissal
+        return;
     }
 
     @Override
-    public void onStop() {
-        keyguardStop();
-        super.onStop();
-    }
-
-    @Override
-    public void onDismiss(DialogInterface dialog) {
+    public void onUserLeaveHint() {
         finish();
+        super.onUserLeaveHint();
+        return;
     }
 
-    private void startAlertDialog(String phoneNumber) {
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setCancelable(false);
-        alert.setTitle(R.string.quiet_hours_alarm_dialog_title);
-        alert.setMessage(phoneNumber + getResources().getString(
-                R.string.quiet_hours_alarm_message));
-        alert.setPositiveButton(getResources().getString(R.string.quiet_hours_alarm_dismiss),
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int whichButton) {
-                        finish();
-                    }
-                });
-        alert.setOnDismissListener(this);
-        alert.show();
+    final Runnable stopFinal = new Runnable() {
+        public void run() {
+            finish();
+        }
+    };
+
+    protected int getLayoutResId() {
+        return R.layout.bypass_alarm;
     }
+
+    private void setAlertText(String numbers) {
+        TextView alertText = (TextView) findViewById(R.id.bypasstext);
+        alertText.setText(numbers + getResources().getString(
+                R.string.quiet_hours_alarm_message));
+    }
+
+    private ImageView.OnClickListener mDismissButtonListener = new ImageView.OnClickListener() {
+        public void onClick(View v) {
+            finish();
+        }
+    };
 
     private void startService() {
         Intent serviceIntent = new Intent(this, AlarmService.class);
@@ -114,13 +160,5 @@ public class BypassAlarm extends Activity implements OnDismissListener {
     private void stopService() {
         Intent serviceIntent = new Intent(this, AlarmService.class);
         this.stopService(serviceIntent);
-    }
-
-    private void keyguardStop() {
-        boolean screenLocked =
-                mKeyguardManager != null && mKeyguardManager.isKeyguardLocked();
-        if (!screenLocked) {
-            stopService();
-        }
     }
 }
