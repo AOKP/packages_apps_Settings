@@ -26,19 +26,25 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
-
 import com.android.settings.R;
 
 public class BypassAlarm extends Activity implements OnDismissListener {
 
     private KeyguardManager mKeyguardManager;
 
+    private AlertDialog mAlert;
+
     private boolean mFirstRun;
+
+    private boolean mWeDismissed;
+
+    private String mNumbers;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         mFirstRun = true;
+        mWeDismissed = false;
         mKeyguardManager =
                 (KeyguardManager) this.getSystemService(Context.KEYGUARD_SERVICE);
 
@@ -48,8 +54,8 @@ public class BypassAlarm extends Activity implements OnDismissListener {
                 | WindowManager.LayoutParams.FLAG_ALLOW_LOCK_WHILE_SCREEN_ON);
 
         Bundle extras = getIntent().getExtras();
-        String phoneNumber = extras.getString("number");
-        startAlertDialog(phoneNumber);
+        mNumbers = extras.getString("number");
+        startAlertDialog(mNumbers);
     }
 
     @Override
@@ -64,6 +70,15 @@ public class BypassAlarm extends Activity implements OnDismissListener {
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
+        Bundle extras = intent.getExtras();
+        String newNumber = extras.getString("number");
+        if (!mNumbers.contains(newNumber) && mAlert != null) {
+            mWeDismissed = true;
+            mNumbers += getResources().getString(
+                    R.string.quiet_hours_alarm_and) + newNumber;
+            mAlert.dismiss();
+            startAlertDialog(mNumbers);
+        }
         startService();
     }
 
@@ -87,14 +102,17 @@ public class BypassAlarm extends Activity implements OnDismissListener {
 
     @Override
     public void onDismiss(DialogInterface dialog) {
-        finish();
+        if (!mWeDismissed) {
+            finish();
+        }
+        mWeDismissed = false;
     }
 
-    private void startAlertDialog(String phoneNumber) {
+    private void startAlertDialog(String numbers) {
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setCancelable(false);
         alert.setTitle(R.string.quiet_hours_alarm_dialog_title);
-        alert.setMessage(phoneNumber + getResources().getString(
+        alert.setMessage(numbers + getResources().getString(
                 R.string.quiet_hours_alarm_message));
         alert.setPositiveButton(getResources().getString(R.string.quiet_hours_alarm_dismiss),
                 new DialogInterface.OnClickListener() {
@@ -103,7 +121,8 @@ public class BypassAlarm extends Activity implements OnDismissListener {
                     }
                 });
         alert.setOnDismissListener(this);
-        alert.show();
+        mAlert = alert.create();
+        mAlert.show();
     }
 
     private void startService() {
