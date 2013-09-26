@@ -90,6 +90,10 @@ public class SmsCallService extends Service {
                             }
                             break;
                     }
+
+                    if (mBypassCallCount == 0) {
+                        mKeepCounting = false;
+                    }
                 } else {
                     switch (bypassPreference) {
                         case SmsCallHelper.DEFAULT_DISABLED:
