@@ -17,110 +17,114 @@
 package com.android.settings.service;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.KeyguardManager;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 import com.android.settings.R;
 
-public class BypassAlarm extends Activity implements OnDismissListener {
+public class BypassAlarm extends Activity {
 
-    private KeyguardManager mKeyguardManager;
+    private TextView mDismissButton;
 
-    private boolean mFirstRun;
+    private String mNumbers;
+
+    private boolean mUserDestroy;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        mFirstRun = true;
-        mKeyguardManager =
-                (KeyguardManager) this.getSystemService(Context.KEYGUARD_SERVICE);
+
+        mUserDestroy = false;
 
         final Window win = getWindow();
         win.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
                 | WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON
+                | WindowManager.LayoutParams.FLAG_FULLSCREEN
                 | WindowManager.LayoutParams.FLAG_ALLOW_LOCK_WHILE_SCREEN_ON);
 
+        if (SmsCallHelper.returnUserRingtoneLoop(this)) {
+            win.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        }
+
         Bundle extras = getIntent().getExtras();
-        String phoneNumber = extras.getString("number");
-        startAlertDialog(phoneNumber);
+        mNumbers = extras.getString("number");
+
+        final LayoutInflater inflater = LayoutInflater.from(this);
+        final View view = inflater.inflate(getLayoutResId(), null);
+        view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE);
+        setContentView(view);
+
+        mDismissButton = ((TextView)
+                this.findViewById(R.id.dismissalert));
+        mDismissButton.setOnClickListener(mDismissButtonListener);
+
+        setAlertText(mNumbers);
+
+        startService();
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-        if (mFirstRun) {
-            startService();
+    protected void onDestroy() {
+        if (mUserDestroy) {
+            stopService();
         }
-        mFirstRun = false;
+        super.onDestroy();
     }
 
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        startService();
+        Bundle extras = intent.getExtras();
+        boolean noSound = intent.getBooleanExtra("norun", false);
+        String newNumber = extras.getString("number");
+        if (!mNumbers.contains(newNumber)) {
+            mNumbers += getResources().getString(
+                    R.string.quiet_hours_alarm_and) + newNumber;
+            setAlertText(mNumbers);
+        }
+        if (!noSound) {
+            startService();
+        }
     }
 
     @Override
-    public void onDestroy() {
-        super.onDestroy();
-        stopService();
+    public void onBackPressed() {
+        // Don't allow dismissal
+        return;
     }
 
-    @Override
-    public void onPause() {
-        keyguardStop();
-        super.onPause();
+    protected int getLayoutResId() {
+        return R.layout.bypass_alarm;
     }
 
-    @Override
-    public void onStop() {
-        keyguardStop();
-        super.onStop();
-    }
-
-    @Override
-    public void onDismiss(DialogInterface dialog) {
-        finish();
-    }
-
-    private void startAlertDialog(String phoneNumber) {
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setCancelable(false);
-        alert.setTitle(R.string.quiet_hours_alarm_dialog_title);
-        alert.setMessage(phoneNumber + getResources().getString(
+    private void setAlertText(String numbers) {
+        TextView alertText = (TextView) findViewById(R.id.bypasstext);
+        alertText.setText(numbers + getResources().getString(
                 R.string.quiet_hours_alarm_message));
-        alert.setPositiveButton(getResources().getString(R.string.quiet_hours_alarm_dismiss),
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int whichButton) {
-                        finish();
-                    }
-                });
-        alert.setOnDismissListener(this);
-        alert.show();
     }
+
+    private TextView.OnClickListener mDismissButtonListener = new TextView.OnClickListener() {
+        public void onClick(View v) {
+            mUserDestroy = true;
+            finish();
+        }
+    };
 
     private void startService() {
         Intent serviceIntent = new Intent(this, AlarmService.class);
+        serviceIntent.putExtra("number", mNumbers);
         this.startService(serviceIntent);
     }
 
     private void stopService() {
         Intent serviceIntent = new Intent(this, AlarmService.class);
         this.stopService(serviceIntent);
-    }
-
-    private void keyguardStop() {
-        boolean screenLocked =
-                mKeyguardManager != null && mKeyguardManager.isKeyguardLocked();
-        if (!screenLocked) {
-            stopService();
-        }
     }
 }
