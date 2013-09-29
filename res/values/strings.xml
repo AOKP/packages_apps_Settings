@@ -4602,6 +4602,7 @@
     <string name="quiet_hours_ringer_title">Mute phone ringtones</string>
     <string name="quiet_hours_still_title">Disable vibrations</string>
     <string name="quiet_hours_dim_title">Disable notification light</string>
+    <string name="quiet_hours_ad_title">Disable active display</string>
     <string name="quiet_hours_active_from">Active from</string>
     <string name="quiet_hours_active_to">to</string>
     <string name="quiet_hours_auto_sms_group">Automatic response</string>
