@@ -62,6 +62,8 @@ public class QuietHours extends SettingsPreferenceFragment implements
 
     private static final String KEY_QUIET_HOURS_DIM = "quiet_hours_dim";
 
+    private static final String KEY_QUIET_HOURS_ACTIVE_DISPLAY = "quiet_hours_ad";
+
     private static final String KEY_LOOP_BYPASS_RINGTONE = "loop_bypass_ringtone";
 
     private static final String KEY_QUIET_HOURS_TIMERANGE = "quiet_hours_timerange";
@@ -91,6 +93,8 @@ public class QuietHours extends SettingsPreferenceFragment implements
     private CheckBoxPreference mQuietHoursStill;
 
     private CheckBoxPreference mQuietHoursDim;
+
+    private CheckBoxPreference mQuietHoursActiveDisplay;
 
     private CheckBoxPreference mRingtoneLoop;
 
@@ -143,6 +147,7 @@ public class QuietHours extends SettingsPreferenceFragment implements
             mQuietHoursRinger = (CheckBoxPreference) prefSet.findPreference(KEY_QUIET_HOURS_RINGER);
             mQuietHoursStill = (CheckBoxPreference) prefSet.findPreference(KEY_QUIET_HOURS_STILL);
             mQuietHoursDim = (CheckBoxPreference) findPreference(KEY_QUIET_HOURS_DIM);
+            mQuietHoursActiveDisplay = (CheckBoxPreference) findPreference(KEY_QUIET_HOURS_ACTIVE_DISPLAY);
             mRingtoneLoop = (CheckBoxPreference) findPreference(KEY_LOOP_BYPASS_RINGTONE);
             mAutoSms = (ListPreference) findPreference(KEY_AUTO_SMS);
             mAutoSmsCall = (ListPreference) findPreference(KEY_AUTO_SMS_CALL);
@@ -162,6 +167,7 @@ public class QuietHours extends SettingsPreferenceFragment implements
             mQuietHoursNotifications.setChecked(Settings.System.getInt(resolver, Settings.System.QUIET_HOURS_NOTIFICATIONS, 0) == 1);
             mQuietHoursRinger.setChecked(Settings.System.getInt(resolver, Settings.System.QUIET_HOURS_RINGER, 0) == 1);
             mQuietHoursStill.setChecked(Settings.System.getInt(resolver, Settings.System.QUIET_HOURS_STILL, 0) == 1);
+            mQuietHoursActiveDisplay.setChecked(Settings.getInt(resolver, Settings.System.QUIET_HOURS_ACTIVE_DISPLAY, 0) == 1);
             mAutoSms.setValue(mPrefs.getString(KEY_AUTO_SMS, "0"));
             mAutoSms.setOnPreferenceChangeListener(this);
             mAutoSmsCall.setValue(mPrefs.getString(KEY_AUTO_SMS_CALL, "0"));
@@ -265,6 +271,10 @@ public class QuietHours extends SettingsPreferenceFragment implements
             Settings.System.putInt(resolver, Settings.System.QUIET_HOURS_DIM,
                     mQuietHoursDim.isChecked() ? 1 : 0);
             return true;
+        } else if (preference == mQuietHoursActiveDisplay) {
+            Settings.SystemPutInt(resolver, Settings.System.QUIET_HOURS_ACTIVE_DISPLAY,
+                    mQuietHoursActiveDisplay.isChecked() ? 1 : 0);
+            return;
         } else if (preference == mRingtoneLoop) {
             mRingtoneLoop.setSummary(mRingtoneLoop.isChecked()
                     ? R.string.quiet_hours_bypass_ringtone_loop_summary_on
