@@ -1975,6 +1975,10 @@
 
     <!-- TRDS Settings -->
     <string name="trds_settings_title">Sötét AOKP</string>
+    <!-- Setting checkbox summary for displaying USB debugging notification -->
+    <string name="adb_notify">USB hibakeresési értesítés</string>
+    <string name="adb_notify_summary">Értesítés a kijelzőn, ha az USB hibakeresés csatlakoztatva van</string>
+
 
     <string name="user_restrictions_title" msgid="7745810037152772035">"Alkalmazás- és tartalomkorlátozások"</string>
     <string name="user_rename" msgid="8523499513614655279">"ÁTNEVEZÉS"</string>
