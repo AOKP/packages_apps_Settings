@@ -83,4 +83,12 @@
     </declare-styleable>
 
     <attr name="apnPreferenceStyle" format="reference" />
+
+    <declare-styleable name="IntervalSeekBar">
+        <attr name="min" format="float" />
+        <attr name="max" format="float" />
+        <attr name="defaultValue" format="float" />
+        <attr name="digits" format="integer" />
+    </declare-styleable>
+
 </resources>
