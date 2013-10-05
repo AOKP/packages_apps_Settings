@@ -588,11 +588,7 @@
 
     <!-- Names of categories of app ops tabs -->
     <string-array name="app_ops_categories">
-        <item>Location</item>
-        <item>Personal</item>
-        <item>Messaging</item>
-        <item>Media</item>
-        <item>Device</item>
+        <item>Operations</item>
     </string-array>
 
     <!-- User display names for app ops codes -->
