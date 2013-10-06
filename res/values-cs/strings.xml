@@ -1950,9 +1950,10 @@
     <string name="quiet_hours_bypass_ringtone_loop_title">Opakování melodie</string>
     <string name="quiet_hours_bypass_ringtone_loop_summary_on">Melodie se bude opakovat až do zavření</string>
     <string name="quiet_hours_bypass_ringtone_loop_summary_off">Melodie bude přehrána pouze jednou</string>
-    <string name="quiet_hours_alarm_dismiss">Zavřít alarm</string>
+    <string name="quiet_hours_alarm_dismiss">Zrušit alarm</string>
+    <string name="quiet_hours_alarm_and">" a "</string>
     <string name="quiet_hours_alarm_dialog_title">HODINY KLIDU VYNECHÁNY</string>
-    <string name="quiet_hours_alarm_message">" splnilo podmínku pro vynechání hodin klidu!"</string>
+    <string name="quiet_hours_alarm_message">" aplikace splnila podmínku pro vynechání hodin klidu!"</string>
     <string name="two">dva</string>
     <string name="three">tři</string>
     <string name="four">čtyři</string>
