@@ -1935,6 +1935,13 @@
     <string name="preview_country_title">国家或地区</string>
     <string name="preview_carrier_title">运营商</string>
 
+    <!-- Basic Numbers -->
+    <string name="two">二</string>
+    <string name="three">三</string>
+    <string name="four">四</string>
+    <string name="five">五</string>
+    <string name="six">六</string>
+
     <!-- Quiet hours #CM -->
     <string name="quiet_hours_title">静音时段</string>
     <string name="quiet_hours_summary">设置设备自动进入静音状态的时间段</string>
@@ -1949,6 +1956,31 @@
     <string name="quiet_hours_dim_title">关闭通知灯</string>
     <string name="quiet_hours_active_from">静音时间从</string>
     <string name="quiet_hours_active_to">到</string>
+    <string name="quiet_hours_auto_sms_group">自动应答</string>
+    <string name="quiet_hours_auto_sms_title">收到短信</string>
+    <string name="quiet_hours_auto_sms_call_title">收到来电</string>
+    <string name="quiet_hours_auto_string_title">应答并发送</string>
+    <string name="quiet_hours_auto_string_explain">在静音时段启用时，这条消息将发送给在此期间联系你的人。</string>
+    <string name="quiet_hours_auto_sms_null">[自动消息] 我现在正忙，稍后再回复你。</string>
+    <string name="quiet_hours_auto_disabled">禁用</string>
+    <string name="quiet_hours_auto_enabled">全部号码</string>
+    <string name="quiet_hours_auto_contacts">仅联系人</string>
+    <string name="quiet_hours_bypass_group">静音时段例外</string>
+    <string name="quiet_hours_sms_code_null">[提醒]</string>
+    <string name="quiet_hours_sms_bypass_title">短信例外</string>
+    <string name="quiet_hours_sms_code_title">短息关键字</string>
+    <string name="quiet_hours_sms_code_explain">收到短信包含该关键字时手机将发出声音提醒</string>
+    <string name="quiet_hours_call_bypass_title">来电例外</string>
+    <string name="quiet_hours_calls_required_title">30分钟内呼叫的次数</string>
+    <string name="quiet_hours_calls_required_summary">" 次的呼叫将例外于静音时段"</string>
+    <string name="quiet_hours_bypass_ringtone_title">播放铃声</string>
+    <string name="quiet_hours_bypass_ringtone_loop_title">铃声循环</string>
+    <string name="quiet_hours_bypass_ringtone_loop_summary_on">取消前铃声始终循环</string>
+    <string name="quiet_hours_bypass_ringtone_loop_summary_off">铃声只播放一次</string>
+    <string name="quiet_hours_alarm_dismiss">取消提醒</string>
+    <string name="quiet_hours_alarm_and">" 和 "</string>
+    <string name="quiet_hours_alarm_dialog_title">静音时段例外</string>
+    <string name="quiet_hours_alarm_message">" 满足静音时段例外条件！"</string>
 
     <!-- time range preference -->
     <string name="start_time_title">开始</string>
@@ -1986,6 +2018,9 @@
     <string name="volume_adjust_sounds_enable_summary">使用实体音量键调节音量时发出提示音</string>
 
     <!-- Automatic brightness customization -->
+    <string name="auto_brightness_setup_title">自动亮度</string>
+    <string name="auto_brightness_adjustment_title">亮度调整</string>
+    <string name="auto_brightness_twilight_adjustment">调整以适应日出日落</string>
     <string name="light_sensor_current_value">当前感光器值：<xliff:g id="light_level">%d</xliff:g> lux</string>
     <string name="auto_brightness_dialog_title">自动亮度等级</string>
     <string name="auto_brightness_adjust_button">调整</string>
