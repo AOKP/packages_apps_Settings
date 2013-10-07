@@ -1902,4 +1902,84 @@
     <string name="user_image_take_photo" msgid="1280274310152803669">"Foto maken"</string>
     <string name="user_image_choose_photo" msgid="7940990613897477057">"Foto kiezen in Galerij"</string>
     <string name="regulatory_info_text" msgid="5623087902354026557"></string>
+    
+    <!-- Device specific settings -->
+    <string name="advanced_settings_title">Apparaat instellingen</string>
+    
+    <string name="rom_control_title">ROM Control</string>
+    <string name="themes_title">Themas</string>
+
+    <string name="mod_version">AOKP version</string>
+    <string name="mod_version_default">Unknown</string>
+    
+    <!-- Anonymous Statistics #CM -->
+    <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
+    <string name="anonymous_statistics_title">AOKP Statistieken</string>
+    <string name="anonymous_statistics_summary">Help AOKP beter te maken door anonieme statistieken te raporteren</string>
+    <string name="anonymous_statistics_warning_title">Over</string>
+    <string name="anonymous_statistics_warning">Toestemming geven voor AOKP Statistieken staat toe dat niet persoonlijke data
+    wordt ingediend bij AOKP ontwikkelaars om unieke installaties van verschillende apparaten te volgen.
+	De informatie die wordt ingediend is voorzien van een unieke sleutel die uw privacy niet in geding brengt.
+    De data wordt wekelijks verstuurd, tijdens het opstarten.\n\nVoor een voorbeeld van de data, klik op Data voorvertonen.</string>
+    <string name="enable_reporting_title">Raporteren inschakelen</string>
+    <string name="preview_data_title">Data voorvertonen</string>
+    <string name="preview_data_summary">%s</string>
+    <string name="view_stats_title">Geef stats weer</string>
+    <string name="anonymous_learn_more">Kom meer te weten</string>
+
+    <!-- Anonymous Statistics - Notification -->
+    <string name="anonymous_notification_desc">In- of uitschakelen van AOKP Statistieken</string>
+
+    <!-- Anonymous Statistics - Preview -->
+    <string name="preview_id_title">Unieke ID</string>
+    <string name="preview_device_title">Apparaat</string>
+    <string name="preview_version_title">Versie</string>
+    <string name="preview_country_title">Land</string>
+    <string name="preview_carrier_title">Provider</string>
+    
+    <!-- Quiet hours #CM -->
+    <string name="quiet_hours_title">Stille uren</string>
+    <string name="quiet_hours_summary">Configureer de uren waarop het apparaat stil moet zijn</string>
+    <string name="quiet_hours_enabled_title">Stille uren inschakelen</string>
+    <string name="quiet_hours_start">Begin van de stille uren</string>
+    <string name="quiet_hours_start_summary">Wanneer beginnen met het afdwingen van de stille uren</string>
+    <string name="quiet_hours_end">Einde van de stille uren</string>
+    <string name="quiet_hours_end_summary">Wanneer stoppen met het afdwingen van de stille uren</string>
+    <string name="quiet_hours_notifications_title">Demp notificatie geluiden</string>
+    <string name="quiet_hours_ringer_title">Demp telefoon beltonen</string>
+    <string name="quiet_hours_still_title">Trillen uitschakelen</string>
+    <string name="quiet_hours_dim_title">Notificatielicht uitschakelen</string>
+    <string name="quiet_hours_active_from">Actief van</string>
+    <string name="quiet_hours_active_to">tot</string>
+    <string name="quiet_hours_auto_sms_group">Automatische reactie</string>
+    <string name="quiet_hours_auto_sms_title">Binnenkomende berichten</string>
+    <string name="quiet_hours_auto_sms_call_title">Binnenkomende oproepen</string>
+    <string name="quiet_hours_auto_string_title">Reactie die wordt verstuurd</string>
+    <string name="quiet_hours_auto_string_explain">Dit bericht wordt verzonden naar iedereen die jou probeert
+            te bereiken wanneer de stille uren actief zijn</string>
+    <string name="quiet_hours_auto_sms_null">[Automatisch bericht] Ik neem zo snel mogelijk bericht met je op.</string>
+    <string name="quiet_hours_auto_disabled">Uitgeschakeld</string>
+    <string name="quiet_hours_auto_enabled">Alle nummers</string>
+    <string name="quiet_hours_auto_contacts">Alleen contacten</string>
+    <string name="quiet_hours_bypass_group">Stille uren omzeilen</string>
+    <string name="quiet_hours_sms_code_null">[Alarm]</string>
+    <string name="quiet_hours_sms_bypass_title">Bericht omzeilen</string>
+    <string name="quiet_hours_sms_code_title">Bericht sleutel</string>
+    <string name="quiet_hours_sms_code_explain">Als een binnenkomend bericht deze sleutel bevat
+            zal er een alarm afgaan</string>
+    <string name="quiet_hours_call_bypass_title">Binnenkomende oproepen omzeilen</string>
+    <string name="quiet_hours_calls_required_title">Aantal oproepen binnen 30 minuten</string>
+    <string name="quiet_hours_calls_required_summary">" oproepen om stille uren te omzeilen"</string>
+    <string name="quiet_hours_bypass_ringtone_title">Beltoon die wordt afgespeeld</string>
+    <string name="quiet_hours_bypass_ringtone_loop_title">Beltoon herhalen</string>
+    <string name="quiet_hours_bypass_ringtone_loop_summary_on">Beltoon wordt herhaalt tot deze wordt afgezet</string>
+    <string name="quiet_hours_bypass_ringtone_loop_summary_off">Beltoon wordt eenmalig afgespeeld</string>
+    <string name="quiet_hours_alarm_dismiss">Alarm negeren</string>
+    <string name="quiet_hours_alarm_and">" en "</string>
+    <string name="quiet_hours_alarm_dialog_title">STILLE UREN OMZEILD</string>
+    <string name="quiet_hours_alarm_message">" voldeed aan de vereisten om de stille uren te omzeilen!"</string>
+    
+        <!-- TRDS Settings -->
+    <string name="trds_settings_title">Donker AOKP</string>
+
 </resources>
