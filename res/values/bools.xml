@@ -19,6 +19,8 @@
     <bool name="has_dock_settings">false</bool>
     <!-- Whether or not device settings should be displayed or not for the device -->
     <bool name="has_advanced_settings">false</bool>
+    <!-- Whether or not device needs a USSD Dialer shortcut from Settings screen -->
+    <bool name="needs_ussd_dialer">false</bool>
     <!-- Whether there is a silent mode checkbox  -->
     <bool name="has_silent_mode">true</bool>
     <!-- Whether the power control widget is enabled for this device. Should be overridden for

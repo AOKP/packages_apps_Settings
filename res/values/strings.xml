@@ -2558,6 +2558,10 @@
     <!-- Device specific settings -->
     <string name="advanced_settings_title">Device options</string>
 
+    <!-- USSD Dialer -->
+    <string name="ussd_dialer_title">USSD Dialer</string>
+
+
     <!-- Applications Settings --> <skip />
     <!-- Applications settings screen, setting option name for the user to go to the screen to manage installed applications  -->
     <string name="manageapplications_settings_title">Manage apps</string>
