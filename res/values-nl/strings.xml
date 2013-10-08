@@ -1972,11 +1972,11 @@
     <string name="quiet_hours_calls_required_summary">" oproepen om stille uren te omzeilen"</string>
     <string name="quiet_hours_bypass_ringtone_title">Beltoon die wordt afgespeeld</string>
     <string name="quiet_hours_bypass_ringtone_loop_title">Beltoon herhalen</string>
-    <string name="quiet_hours_bypass_ringtone_loop_summary_on">Beltoon wordt herhaalt tot deze wordt afgezet</string>
+    <string name="quiet_hours_bypass_ringtone_loop_summary_on">Beltoon wordt herhaalt totdat deze wordt afgezet</string>
     <string name="quiet_hours_bypass_ringtone_loop_summary_off">Beltoon wordt eenmalig afgespeeld</string>
     <string name="quiet_hours_alarm_dismiss">Alarm negeren</string>
     <string name="quiet_hours_alarm_and">" en "</string>
-    <string name="quiet_hours_alarm_dialog_title">STILLE UREN OMZEILD</string>
+    <string name="quiet_hours_alarm_dialog_title">STILLE UREN ZIJN OMZEILD</string>
     <string name="quiet_hours_alarm_message">" voldeed aan de vereisten om de stille uren te omzeilen!"</string>
     
         <!-- TRDS Settings -->
