@@ -19,29 +19,15 @@ package com.android.settings.service;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.os.PowerManager;
 import android.util.Log;
 
 public class AlarmReceiver extends BroadcastReceiver {
 
     private final static String TAG = "AlarmReceiver";
 
-    private static final String SCHEDULE_SERVICE_COMMAND =
-            "com.android.settings.service.SCHEDULE_SERVICE_COMMAND";
-
     @Override
     public void onReceive(Context context, Intent intent) {
-        if (SmsCallService.mWakeLock == null) {
-            PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
-            SmsCallService.mWakeLock = pm.newWakeLock(
-                    PowerManager.PARTIAL_WAKE_LOCK, SmsCallService.WAKE_TAG);
-            if (!SmsCallService.mWakeLock.isHeld()) {
-                SmsCallService.mWakeLock.acquire();
-            }
-        }
-
         SmsCallHelper.scheduleService(context);
-
     }
 
 }

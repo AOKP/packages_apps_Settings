@@ -22,7 +22,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.IBinder;
-import android.os.PowerManager;
 import android.provider.Telephony.Sms.Intents;
 import android.telephony.PhoneStateListener;
 import android.telephony.SmsMessage;
@@ -36,11 +35,7 @@ public class SmsCallService extends Service {
 
     private final static String TAG = "SmsCallService";
 
-    public final static String WAKE_TAG = "SmsCallServiceWakeLock";
-
     private static TelephonyManager mTelephony;
-
-    public static PowerManager.WakeLock mWakeLock;
 
     private boolean mIncomingCall = false;
 
@@ -207,13 +202,11 @@ public class SmsCallService extends Service {
         }
         mPhoneStateListener = null;
         unregisterReceiver(smsReceiver);
-        killWakeLock();
         super.onDestroy();
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        killWakeLock();
         return START_STICKY;
     }
 
@@ -242,14 +235,6 @@ public class SmsCallService extends Service {
                 mMinuteSent = SmsCallHelper.returnTimeInMinutes();
                     SmsCallHelper.checkSmsQualifiers(
                             context, incomingNumber, userSetting, isContact);
-            }
-        }
-    }
-
-    private void killWakeLock() {
-        if (mWakeLock != null) {
-            if (mWakeLock.isHeld()) {
-                mWakeLock.release();
             }
         }
     }
