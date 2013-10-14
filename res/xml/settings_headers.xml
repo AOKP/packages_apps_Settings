@@ -76,6 +76,7 @@
             android:icon="@drawable/ic_settings_darkui"
             android:title="@string/trds_settings_title" />
 
+    <!-- ThemeChooser -->
     <header android:id="@+id/themes"
             android:title="@string/themes_title"
             android:icon="@drawable/ic_settings_themes" >
@@ -85,6 +86,7 @@
                 android:targetClass="com.tmobile.themechooser.ThemeChooser" />
     </header>
 
+    <!-- Device Settings -->
     <header android:id="@+id/advanced_settings"
             android:title="@string/advanced_settings_title"
             android:icon="@drawable/ic_settings_advanced">
@@ -93,6 +95,17 @@
                 android:targetPackage="com.cyanogenmod.settings.device"
                 android:targetClass="com.cyanogenmod.settings.device.DeviceSettings" />
     </header>
+
+    <!-- USSD Dialer -->
+    <header android:id="@+id/ussd_dialer"
+            android:title="@string/ussd_dialer_title"
+            android:icon="@drawable/ic_settings_ussd_dialer">
+        <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.dialer"
+                android:targetClass="com.android.dialer.DialtactsActivity" />
+    </header>
+
 
     <header android:id="@+id/sprint_tools"
             android:title="@string/sprint_tools_title"
