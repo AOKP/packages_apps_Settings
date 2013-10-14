@@ -5970,4 +5970,8 @@
     <!-- Message for encryption dialog telling the user that Talkback and other accessibility services will be disabled. -->
     <string name="encrypt_talkback_dialog_message_password">When you enter your password to start this device, accessibility services like <xliff:g id="service" example="TalkBack">%1$s</xliff:g> won\'t yet be available.</string>
 
+    <!-- UI debug setting: show CPU info? [CHAR LIMIT=25] -->
+    <string name="show_cpu_info">Show CPU info</string>
+    <!-- UI debug setting: show cpu usage summary [CHAR LIMIT=50] -->
+    <string name="show_cpu_info_summary">Screen overlay showing current CPU info</string>
 </resources>
