@@ -68,9 +68,9 @@ final class CachedBluetoothDevice implements Comparable<CachedBluetoothDevice> {
 
     private int mMessagePermissionChoice;
 
-    private int mPhonebookRejectedTimes;
+    private int mPhonebookRejectedTimes = 0;
 
-    private int mMessageRejectedTimes;
+    private int mMessageRejectedTimes = 0;
 
     private final Collection<Callback> mCallbacks = new ArrayList<Callback>();
 
@@ -665,7 +665,6 @@ final class CachedBluetoothDevice implements Comparable<CachedBluetoothDevice> {
         // if user reject it, only save it when reject exceed limit.
         if (permissionChoice == ACCESS_REJECTED) {
             mPhonebookRejectedTimes++;
-            savePhonebookRejectTimes();
             if (mPhonebookRejectedTimes < PERSIST_REJECTED_TIMES_LIMIT) {
                 return;
             }
@@ -716,7 +715,6 @@ final class CachedBluetoothDevice implements Comparable<CachedBluetoothDevice> {
         // if user reject it, only save it when reject exceed limit.
         if (permissionChoice == ACCESS_REJECTED) {
             mMessageRejectedTimes++;
-            saveMessageRejectTimes();
             if (mMessageRejectedTimes < PERSIST_REJECTED_TIMES_LIMIT) {
                 return;
             }
