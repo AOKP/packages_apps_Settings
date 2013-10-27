@@ -67,6 +67,7 @@ import android.util.Log;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
+
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -83,6 +84,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Activity to display application information from Settings. This activity presents
@@ -316,29 +318,45 @@ public class InstalledAppDetails extends Fragment
 
     private boolean handleDisableable(Button button) {
         boolean disableable = false;
-        try {
-            // Try to prevent the user from bricking their phone
-            // by not allowing disabling of apps signed with the
-            // system cert and any launcher app in the system.
-            PackageInfo sys = mPm.getPackageInfo("android",
-                    PackageManager.GET_SIGNATURES);
-            Intent intent = new Intent(Intent.ACTION_MAIN);
-            intent.addCategory(Intent.CATEGORY_HOME);
-            intent.setPackage(mAppEntry.info.packageName);
-            List<ResolveInfo> homes = mPm.queryIntentActivities(intent, 0);
-            if ((homes != null && homes.size() > 0) || isThisASystemPackage()) {
-                // Disable button for core system applications.
-                button.setText(R.string.disable_text);
-            } else if (mAppEntry.info.enabled) {
-                button.setText(R.string.disable_text);
-                disableable = true;
-            } else {
-                button.setText(R.string.enable_text);
-                disableable = true;
+
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setPackage(mAppEntry.info.packageName);
+        List<ResolveInfo> homes = mPm.queryIntentActivities(intent, 0);
+        if ((homes != null && homes.size() > 0)) {
+            button.setText(R.string.disable_text);
+
+            int totalHomes = 0;
+            Intent totalHomesIntent = new Intent(Intent.ACTION_MAIN);
+            totalHomesIntent.addCategory(Intent.CATEGORY_HOME);
+            totalHomesIntent.addCategory(Intent.CATEGORY_DEFAULT);
+            List<ResolveInfo> totalHomesList = mPm.queryIntentActivities(totalHomesIntent, 0);
+            if ((totalHomesList != null && totalHomesList.size() > 0)) {
+                totalHomes = totalHomesList.size();
             }
-        } catch (PackageManager.NameNotFoundException e) {
-            Log.w(TAG, "Unable to get package info", e);
+
+            if(totalHomes <= 1) {
+                // do not allow disabling/uninstalling of last available launcher for UX
+                Toast.makeText(getActivity(), R.string.last_launcher, Toast.LENGTH_LONG).show();
+                disableable = false;
+            } else {
+                if(isThisASystemPackage() && button == mUninstallButton) {
+                    // fall back to default behavior
+                    disableable = false;
+                } else {
+                    disableable = true;
+                }
+            }
+        } else if(isThisASystemPackage()) {
+            button.setText(R.string.disable_text);
+        } else if (mAppEntry.info.enabled) {
+            button.setText(R.string.disable_text);
+            disableable = true;
+        } else {
+            button.setText(R.string.enable_text);
+            disableable = true;
         }
+
         return disableable;
     }
 
