@@ -16,23 +16,17 @@
 
 package com.android.settings;
 
-import android.content.ContentUris;
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.preference.Preference;
-import android.provider.Telephony;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.View.OnClickListener;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
-import android.widget.RelativeLayout;
 
 public class ApnPreference extends Preference implements
-        CompoundButton.OnCheckedChangeListener, OnClickListener {
+        CompoundButton.OnCheckedChangeListener {
     final static String TAG = "ApnPreference";
 
     /**
@@ -42,7 +36,6 @@ public class ApnPreference extends Preference implements
      */
     public ApnPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        init();
     }
 
     /**
@@ -51,7 +44,6 @@ public class ApnPreference extends Preference implements
      */
     public ApnPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init();
     }
 
     /**
@@ -59,7 +51,6 @@ public class ApnPreference extends Preference implements
      */
     public ApnPreference(Context context) {
         super(context);
-        init();
     }
 
     private static String mSelectedKey = null;
@@ -71,9 +62,10 @@ public class ApnPreference extends Preference implements
     public View getView(View convertView, ViewGroup parent) {
         View view = super.getView(convertView, parent);
 
-        View widget = view.findViewById(R.id.apn_radiobutton);
+        View widget = view.findViewById(android.R.id.checkbox);
         if ((widget != null) && widget instanceof RadioButton) {
             RadioButton rb = (RadioButton) widget;
+            rb.setClickable(true);
             if (mSelectable) {
                 rb.setOnCheckedChangeListener(this);
 
@@ -91,16 +83,7 @@ public class ApnPreference extends Preference implements
             }
         }
 
-        View textLayout = view.findViewById(R.id.text_layout);
-        if ((textLayout != null) && textLayout instanceof RelativeLayout) {
-            textLayout.setOnClickListener(this);
-        }
-
         return view;
-    }
-
-    private void init() {
-        setLayoutResource(R.layout.apn_preference_layout);
     }
 
     public boolean isChecked() {
@@ -127,17 +110,6 @@ public class ApnPreference extends Preference implements
         } else {
             mCurrentChecked = null;
             mSelectedKey = null;
-        }
-    }
-
-    public void onClick(android.view.View v) {
-        if ((v != null) && (R.id.text_layout == v.getId())) {
-            Context context = getContext();
-            if (context != null) {
-                int pos = Integer.parseInt(getKey());
-                Uri url = ContentUris.withAppendedId(Telephony.Carriers.CONTENT_URI, pos);
-                context.startActivity(new Intent(Intent.ACTION_EDIT, url));
-            }
         }
     }
 
