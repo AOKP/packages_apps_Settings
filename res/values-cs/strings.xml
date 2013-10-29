@@ -2052,4 +2052,11 @@
     <string name="user_image_take_photo" msgid="1280274310152803669">"Vyfotit"</string>
     <string name="user_image_choose_photo" msgid="7940990613897477057">"Vybrat fotografii z Galerie"</string>
     <string name="regulatory_info_text" msgid="5623087902354026557"></string>
+    <string name="bluetooth_enter_pin_msg_hs">\nVložit PIN pro spárování s \u0022<xliff:g id="device_name">%1$s</xliff:g>\u0022. [Povoleno vysoké zabezpečení: Vyžaduje heslo o délce 16 znaků] </string>
+    <string name="bluetooth_profile_sap">Přístup k SIM</string>
+    <string name="bluetooth_sap_profile_summary_connected">Připojeno k SIM přístupovému serveru</string>
+    <string name="bluetooth_sap_profile_summary_use_for">Použít pro přístup k SIM</string>
+    <string name="bluetooth_profile_dun">Přístup k vytáčené síti</string>
+    <string name="bluetooth_dun_profile_summary_connected">Připojeno k serveru vytáčené sítě</string>
+    <string name="bluetooth_dun_profile_summary_use_for">Použít pro přístup k vytáčené síti</string>
 </resources>
