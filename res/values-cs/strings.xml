@@ -755,9 +755,9 @@
     <string name="automatic_brightness" msgid="5014143533884135461">"Automatický jas"</string>
     <string name="title_font_size" msgid="4405544325522105222">"Velikost písma"</string>
     <string name="dialog_title_font_size" msgid="2231507851258955038">"Velikost písma"</string>
-    <string name="sim_lock_settings" msgid="3392331196873564292">"Nastavení zámku SIM karty"</string>
-    <string name="sim_lock_settings_category" msgid="5136244267576697004">"Nastavení zámku SIM karty"</string>
-    <string name="sim_lock_settings_title" msgid="9018585580955414596">"Zámek SIM karty"</string>
+    <string name="sim_lock_settings" msgid="3392331196873564292">"Nastavení zámku SIM/RUIM karty"</string>
+    <string name="sim_lock_settings_category" msgid="5136244267576697004">"Nastavení zámku SIM/RUIM karty"</string>
+    <string name="sim_lock_settings_title" msgid="9018585580955414596">"Zámek SIM/RUIM karty"</string>
     <string name="sim_pin_toggle" msgid="1742123478029451888">"Zamykat SIM kartu"</string>
     <string name="sim_lock_on" product="tablet" msgid="5058355081270397764">"K použití tabletu je vyžadován kód PIN"</string>
     <string name="sim_lock_on" product="default" msgid="2503536505568814324">"K použití telefonu je vyžadován PIN"</string>
@@ -793,7 +793,7 @@
     <string name="device_status_activity_title" msgid="1411201799384697904">"Stav"</string>
     <string name="device_status" msgid="607405385799807324">"Stav"</string>
     <string name="device_status_summary" product="tablet" msgid="3292717754497039686">"Stav baterie, sítě a další údaje"</string>
-    <string name="device_status_summary" product="default" msgid="2599162787451519618">"Telefonní číslo, signál, atd."</string>
+    <string name="device_status_summary" product="default" msgid="2599162787451519618">"Stav baterie, signál, atd."</string>
     <string name="storage_settings" msgid="4211799979832404953">"Úložiště"</string>
     <string name="storage_settings_title" msgid="8746016738388094064">"Nastavení úložiště"</string>
     <string name="storage_settings_summary" product="nosdcard" msgid="3543813623294870759">"Odpojení úložiště USB a zobrazení dostupného úložiště"</string>
@@ -2059,4 +2059,43 @@
     <string name="bluetooth_profile_dun">Přístup k vytáčené síti</string>
     <string name="bluetooth_dun_profile_summary_connected">Připojeno k serveru vytáčené sítě</string>
     <string name="bluetooth_dun_profile_summary_use_for">Použít pro přístup k vytáčené síti</string>
+    <string name="last_launcher">Před odinstalací tohoto launcheru je nejprve nutné nainstalovat a povolit jiný</string>
+    <string name="confirm_delete_apn">APN bude smazáno.</string>
+    <string name="sim_absent">Žádná SIM/RUIM karta</string>
+    <string name="sim_pin_change_failed_enable_sim_lock">Zapnout zámek SIM/RUIM karty před změnou PINu</string>
+    <string name="sim_enable_disable_lock_not_supported">Zamknutí není touto SIM/RUIM kartou podporováno</string>
+    <string name="sim_pin_attempts">\nZbývajících pokusů :</string>
+    <string name="sim_pin_enabled">PIN zapnut</string>
+    <string name="sim_pin_disabled">PIN vypnut</string>
+    <string name="device_additional_status_summary">Telefonní číslo, signál, IMEI, atd.</string>
+    <string name="device_additional_status">Dodatečné stavové informace</string>
+    <string name="sel_sub_title">Konfigurovat předplatné </string>
+    <string name="sel_sub_summary">Vybrat předplatné SUB1, SUB2, atd.</string>
+    <string name="select_subscription">Vybrat předplatné</string>
+    <string name="subs_settings">Stav předplatného</string>
+    <string name="multi_sim_settings_title">Nastavení více SIM</string>
+    <string name="multi_sim_settings_summary">Nastavit více SIM pro hlas, data a SMS</string>
+    <string name="voice_title">Hlas/USSD/MMI</string>
+    <string name="voice_summary">Vybrat předplatné pro hlasové hovory</string>
+    <string name="data_title">Datové hovory</string>
+    <string name="data_summary">Vybrat předplatné pro datové hovory</string>
+    <string name="sms_title">SMS</string>
+    <string name="sms_summary">Vybrat předplatné pro posílání SMS</string>
+    <string name="set_data_subscription_progress">Nastavuje se datové předplatné..</string>
+    <string name="set_dds_success">Datové předplatné nastaveno</string>
+    <string name="set_dds_failed">Nastavení datového předplatného se nezdařilo. Je třeba odstranit všechna existující datová spojení a zkusit znovu.</string>
+    <string name="set_dds_error">Nastavení datového předplatného se nezdařilo</string>
+    <string name="set_sms_error">Nastavení SMS předplatného se nezdařilo, předplatné není aktivní</string>
+    <string name="set_voice_error">Nastavení hlasového předplatného se nezdařilo, předplatné není aktivní</string>
+    <string name="set_priority_sub_error">Nastavení prioritního předplatného se nezdařilo, předplatné není aktivní</string>
+    <string name="prompt">Zobrazit</string>
+    <string name="prompt_user">Zobrazit uživateli</string>
+    <string name="tune_away_title">Tune Away</string>
+    <string name="tune_away_Default">Vypnout</string>
+    <string name="tune_away_enabled">TuneAway zapnuto!</string>
+    <string name="tune_away_disabled">TuneAway vypnuto!</string>
+    <string name="priority_sub_title">Prioritní předplatné</string>
+    <string name="priority_sub_summary">Vybrat prioritní předplatné</string>
+    <string name="data_usage_tab_slot">SIM </string>
+    <string name="label_global_roaming_settings">Globální nastavení roamingu</string>
 </resources>
