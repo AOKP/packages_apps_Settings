@@ -373,29 +373,17 @@ public class ApnEditor extends SettingsPreferenceFragment
         }
     }
 
-    private String mvnoDescription(String newValue) {
-        int mvnoIndex = mMvnoType.findIndexOfValue(newValue);
-        String oldValue = mMvnoType.getValue();
-
+    private String mvnoDescription(String raw) {
+        int mvnoIndex = mMvnoType.findIndexOfValue(raw);
         if (mvnoIndex == -1) {
             return null;
         } else {
             String[] values = mRes.getStringArray(R.array.mvno_type_entries);
             if (values[mvnoIndex].equals("None")) {
                 mMvnoMatchData.setEnabled(false);
+                mMvnoMatchData.setText("");
             } else {
                 mMvnoMatchData.setEnabled(true);
-            }
-            if (newValue != null && newValue.equals(oldValue) == false) {
-                if (values[mvnoIndex].equals("SPN")) {
-                    mMvnoMatchData.setText(mTelephonyManager.getSimOperatorName());
-                } else if (values[mvnoIndex].equals("IMSI")) {
-                    String numeric =
-                            SystemProperties.get(TelephonyProperties.PROPERTY_ICC_OPERATOR_NUMERIC);
-                    mMvnoMatchData.setText(numeric + "x");
-                } else if (values[mvnoIndex].equals("GID")) {
-                    mMvnoMatchData.setText(mTelephonyManager.getGroupIdLevel1());
-                }
             }
 
             try {
