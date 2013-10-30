@@ -67,7 +67,7 @@
             android:icon="@drawable/ic_settings_rom_control" >
         <intent
                 android:action="android.intent.action.MAIN"
-                android:targetClass="com.aokp.romcontrol.ROMControlActivity"
+                android:targetClass="com.aokp.romcontrol.FragmentDrawer"
                 android:targetPackage="com.aokp.romcontrol" />
     </header>
 
