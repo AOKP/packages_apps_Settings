@@ -36,6 +36,7 @@ public class ApnPreference extends Preference implements
      */
     public ApnPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
+        init();
     }
 
     /**
@@ -44,6 +45,7 @@ public class ApnPreference extends Preference implements
      */
     public ApnPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
+        init();
     }
 
     /**
@@ -51,6 +53,7 @@ public class ApnPreference extends Preference implements
      */
     public ApnPreference(Context context) {
         super(context);
+        init();
     }
 
     private static String mSelectedKey = null;
@@ -62,7 +65,7 @@ public class ApnPreference extends Preference implements
     public View getView(View convertView, ViewGroup parent) {
         View view = super.getView(convertView, parent);
 
-        View widget = view.findViewById(android.R.id.checkbox);
+        View widget = view.findViewById(R.id.apn_radiobutton);
         if ((widget != null) && widget instanceof RadioButton) {
             RadioButton rb = (RadioButton) widget;
             rb.setClickable(true);
@@ -84,6 +87,10 @@ public class ApnPreference extends Preference implements
         }
 
         return view;
+    }
+
+    private void init() {
+        setLayoutResource(R.layout.apn_preference_layout);
     }
 
     public boolean isChecked() {
