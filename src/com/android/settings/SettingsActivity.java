@@ -301,7 +301,11 @@ public class SettingsActivity extends Activity
 
     private static final String[] ENTRY_FRAGMENTS = {
             ActionListViewSettings.class.getName(),
+            DragSortController.class.getName(),
+            DragSortItemView.class.getName(),
+            DragSortListView.class.getName(),
             ShortcutPickerHelper.class.getName(),
+            SimpleFloatViewManager.class.getName(),
             WirelessSettings.class.getName(),
             WifiSettings.class.getName(),
             AdvancedWifiSettings.class.getName(),
