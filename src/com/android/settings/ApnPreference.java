@@ -65,7 +65,7 @@ public class ApnPreference extends Preference implements
     public View getView(View convertView, ViewGroup parent) {
         View view = super.getView(convertView, parent);
 
-        View widget = view.findViewById(R.id.apn_radiobutton);
+        View widget = view.findViewById(android.R.id.checkbox);
         if ((widget != null) && widget instanceof RadioButton) {
             RadioButton rb = (RadioButton) widget;
             rb.setClickable(true);
@@ -90,7 +90,7 @@ public class ApnPreference extends Preference implements
     }
 
     private void init() {
-        setLayoutResource(R.layout.apn_preference_layout);
+        setWidgetLayoutResource(R.layout.preference_profiles_widget);
     }
 
     public boolean isChecked() {
