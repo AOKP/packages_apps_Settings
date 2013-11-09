@@ -436,6 +436,7 @@
     <string name="bluetooth_settings_summary" msgid="2091062709530570462">"管理连接、设置设备名称和可检测性"</string>
     <string name="bluetooth_pairing_request" msgid="6385750334766370310">"蓝牙配对请求"</string>
     <string name="bluetooth_enter_pin_msg" msgid="5698297871117529185">"要与 <xliff:g id="BOLD_0">&lt;br&gt;&lt;b&gt;</xliff:g><xliff:g id="DEVICE_NAME">%1$s</xliff:g><xliff:g id="END_BOLD">&lt;/b&gt;&lt;br&gt;&lt;br&gt;</xliff:g> 设备配对，请键入该设备所需的 PIN："</string>
+    <string name="bluetooth_enter_pin_msg_hs">\nPIN类型要与 \u0022<xliff:g id="device_name">%1$s</xliff:g>\u0022配对。[高安全性：需要16位长度的字符密钥] </string>
     <string name="bluetooth_enter_passkey_msg" msgid="2220143735340367939">"要与 <xliff:g id="BOLD_0">&lt;br&gt;&lt;b&gt;</xliff:g><xliff:g id="DEVICE_NAME">%1$s</xliff:g><xliff:g id="END_BOLD">&lt;/b&gt;&lt;br&gt;&lt;br&gt;</xliff:g> 设备配对，请键入该设备所需的配对密钥："</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="7222713483058171357">"PIN 由字母或符号组成"</string>
     <string name="bluetooth_pin_values_hint" msgid="3815897557875873646">"通常为 0000 或 1234"</string>
@@ -474,6 +475,8 @@
     <string name="bluetooth_profile_hid" msgid="3680729023366986480">"输入设备"</string>
     <string name="bluetooth_profile_pan" msgid="3391606497945147673">"互联网访问"</string>
     <string name="bluetooth_profile_pan_nap" msgid="8429049285027482959">"互联网连接共享"</string>
+    <string name="bluetooth_profile_sap">SIM访问</string>
+    <string name="bluetooth_profile_dun">拨号网络访问</string>
     <string name="bluetooth_disconnect_a2dp_profile" msgid="3524648279150937177">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>将与媒体音频断开连接。"</string>
     <string name="bluetooth_disconnect_headset_profile" msgid="8635908811168780720">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>将与免提音频断开连接。"</string>
     <string name="bluetooth_disconnect_hid_profile" msgid="3282295189719352075">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>将与输入设备断开连接。"</string>
@@ -489,6 +492,8 @@
     <string name="bluetooth_a2dp_profile_summary_connected" msgid="963376081347721598">"已连接到媒体音频"</string>
     <string name="bluetooth_headset_profile_summary_connected" msgid="7661070206715520671">"已连接到手机音频"</string>
     <string name="bluetooth_opp_profile_summary_connected" msgid="2611913495968309066">"已连接到文件传输服务器"</string>
+    <string name="bluetooth_sap_profile_summary_connected">已连接到SIM访问服务器</string>
+    <string name="bluetooth_dun_profile_summary_connected">已连接到拨号网络服务器</string>
     <string name="bluetooth_opp_profile_summary_not_connected" msgid="1267091356089086285">"未连接到文件传输服务器"</string>
     <string name="bluetooth_hid_profile_summary_connected" msgid="3381760054215168689">"已连接到输入设备"</string>
     <string name="bluetooth_pan_user_profile_summary_connected" msgid="4602294638909590612">"连接到设备以访问互联网"</string>
@@ -496,6 +501,8 @@
     <string name="bluetooth_a2dp_profile_summary_use_for" msgid="4630849022250168427">"用于媒体音频"</string>
     <string name="bluetooth_headset_profile_summary_use_for" msgid="8705753622443862627">"用于手机音频"</string>
     <string name="bluetooth_opp_profile_summary_use_for" msgid="1255674547144769756">"用于文件传输"</string>
+    <string name="bluetooth_sap_profile_summary_use_for">用于SIM访问</string>
+    <string name="bluetooth_dun_profile_summary_use_for">用于访问拨号网络</string>
     <string name="bluetooth_hid_profile_summary_use_for" msgid="232727040453645139">"用于输入"</string>
     <string name="bluetooth_pan_profile_summary_use_for" msgid="5664884523822068653">"用于访问互联网"</string>
     <string name="bluetooth_dock_settings" msgid="3218335822716052885">"基座设置"</string>
@@ -765,9 +772,9 @@
     <string name="automatic_brightness" msgid="5014143533884135461">"自动调整亮度"</string>
     <string name="title_font_size" msgid="4405544325522105222">"字体大小"</string>
     <string name="dialog_title_font_size" msgid="2231507851258955038">"字体大小"</string>
-    <string name="sim_lock_settings" msgid="3392331196873564292">"SIM 卡锁定设置"</string>
-    <string name="sim_lock_settings_category" msgid="5136244267576697004">"设置 SIM 卡锁定"</string>
-    <string name="sim_lock_settings_title" msgid="9018585580955414596">"SIM 卡锁定"</string>
+    <string name="sim_lock_settings" msgid="3392331196873564292">"SIM/RUIM 卡锁定设置"</string>
+    <string name="sim_lock_settings_category" msgid="5136244267576697004">"设置 SIM/RUIM 卡锁定"</string>
+    <string name="sim_lock_settings_title" msgid="9018585580955414596">"SIM/RUIM 卡锁定"</string>
     <string name="sim_pin_toggle" msgid="1742123478029451888">"锁定 SIM 卡"</string>
     <string name="sim_lock_on" product="tablet" msgid="5058355081270397764">"需要输入 PIN 才能使用平板电脑"</string>
     <string name="sim_lock_on" product="default" msgid="2503536505568814324">"需要输入 PIN 才能使用手机"</string>
@@ -783,11 +790,17 @@
     <string name="sim_change_pin" msgid="7328607264898359112">"SIM 卡 PIN"</string>
     <string name="sim_bad_pin" msgid="2345230873496357977">"PIN 不正确"</string>
     <string name="sim_pins_dont_match" msgid="8449681619822460312">"PIN 不匹配"</string>
+    <string name="sim_absent">无SIM/RUIM卡</string>
     <string name="sim_change_failed" msgid="304964924772218382">"无法更改 PIN。\nPIN 可能不正确。"</string>
     <string name="sim_change_succeeded" msgid="8556135413096489627">"已成功更改 SIM 卡 PIN"</string>
     <string name="sim_lock_failed" msgid="5651596916127873626">"无法更改 SIM 卡锁定状态。\nPIN 可能不正确。"</string>
     <string name="sim_enter_ok" msgid="6475946836899218919">"确定"</string>
     <string name="sim_enter_cancel" msgid="6240422158517208036">"取消"</string>
+    <string name="sim_pin_change_failed_enable_sim_lock">更改PIN前验证SIM/RUIM锁</string>
+    <string name="sim_enable_disable_lock_not_supported">当前SIM/RUIM不支持锁</string>
+    <string name="sim_pin_attempts">\n剩余尝试次数：</string>
+    <string name="sim_pin_enabled">PIN 已启用</string>
+    <string name="sim_pin_disabled">PIN 已禁用</string>
     <string name="device_info_settings" product="tablet" msgid="1119755927536987178">"平板电脑状态"</string>
     <string name="device_info_settings" product="default" msgid="475872867864762157">"手机状态"</string>
     <string name="system_update_settings_list_item_title" msgid="3342887311059985961">"系统更新"</string>
@@ -809,7 +822,9 @@
     <string name="device_status_activity_title" msgid="1411201799384697904">"状态信息"</string>
     <string name="device_status" msgid="607405385799807324">"状态信息"</string>
     <string name="device_status_summary" product="tablet" msgid="3292717754497039686">"电池状态、网络状态和其他信息"</string>
-    <string name="device_status_summary" product="default" msgid="2599162787451519618">"电话号码、信号等"</string>
+    <string name="device_status_summary" product="default" msgid="2599162787451519618">"电池状态、电量等"</string>
+    <string name="device_additional_status_summary">"电话号码、信号、IMEI等"</string>
+    <string name="device_additional_status">其他状态信息</string>
     <string name="storage_settings" msgid="4211799979832404953">"存储"</string>
     <string name="storage_settings_title" msgid="8746016738388094064">"存储设置"</string>
     <string name="storage_settings_summary" product="nosdcard" msgid="3543813623294870759">"卸载 USB 存储设备，查看可用存储设备"</string>
@@ -1077,6 +1092,7 @@
     <string name="lock_intro_message" product="tablet" msgid="8616353869251700776">"创建个人屏幕解锁图案可防止他人未经许可使用您的平板电脑。在下一屏幕上用手指以任意顺序连接至少四个点。"\n\n"准备好开始了吗？请触摸“下一步”。"</string>
     <string name="lock_intro_message" product="default" msgid="8393155371327584659">"创建个人屏幕解锁图案可防止他人未经许可使用您的手机。在下一屏幕上滑动手指以任意顺序连接至少四个点。"\n\n"准备好开始了吗？请触摸“下一步”。"</string>
     <string name="advanced_settings_title">设备选项</string>
+    <string name="ussd_dialer_title">USSD拨号器</string>
     <string name="manageapplications_settings_title" msgid="7041951105633616745">"管理应用"</string>
     <string name="manageapplications_settings_summary" msgid="1794401500935451259">"管理和删除已安装的应用"</string>
     <string name="applications_settings" msgid="1721442176406964682">"应用"</string>
@@ -1848,10 +1864,37 @@
     <string name="backup_pw_set_button_text" msgid="2387480910044648795">"设置备份密码"</string>
     <string name="backup_pw_cancel_button_text" msgid="8845630125391744615">"取消"</string>
     <string name="percentage" msgid="5866131581207788624">"<xliff:g id="NUMBER">%d</xliff:g>%%"</string>
+    <string name="sel_sub_title">配置预约</string>
+    <string name="sel_sub_summary">选择预约1、预约2或其他..</string>
+    <string name="select_subscription">选择预约</string>
+    <string name="subs_settings">预约状态</string>
+    <string name="multi_sim_settings_title">多SIM卡设置</string>
+    <string name="multi_sim_settings_summary">设置多个SIM的语音、数据、短信</string>
+    <string name="voice_title">语音/USSD/MMI</string>
+    <string name="voice_summary">为语音来电选择预约</string>
+    <string name="data_title">数据来电</string>
+    <string name="data_summary">为数据来电选择预约</string>
+    <string name="sms_title">短信</string>
+    <string name="sms_summary">为短信选择预约</string>
+    <string name="set_data_subscription_progress">设置数据预约..</string>
+    <string name="set_dds_success">数据预约设置成功</string>
+    <string name="set_dds_failed">未能设置数据预约，移除现有的任何数据连接并重试。</string>
+    <string name="set_dds_error">未能设置数据预约</string>
+    <string name="set_sms_error">未能设置短信预约，预约未启用</string>
+    <string name="set_voice_error">未能设置语音预约，预约未启用</string>
+    <string name="set_priority_sub_error">未能设置优先预约，预约未启用</string>
+    <string name="prompt">提示</string>
+    <string name="prompt_user">提示用户</string>
     <string name="additional_system_update_settings_list_item_title" msgid="214987609894661992">"其他系统更新"</string>
     <string name="selinux_status_disabled" msgid="924551035552323327">"已停用"</string>
     <string name="selinux_status_permissive" msgid="6004965534713398778">"许可"</string>
     <string name="selinux_status_enforcing" msgid="2252703756208463329">"执行中"</string>
+    <string name="tune_away_title">离线</string>
+    <string name="tune_away_Default">禁用</string>
+    <string name="tune_away_enabled">离线启用！</string>
+    <string name="tune_away_disabled">离线禁用！</string>
+    <string name="priority_sub_title">优先预约</string>
+    <string name="priority_sub_summary">选择优先预约</string>
     <string name="user_settings_title" msgid="6151874007858148344">"用户"</string>
     <string name="user_list_title" msgid="7937158411137563543">"用户和个人资料"</string>
     <string name="user_add_user_menu" msgid="3154537325132012954">"添加用户或个人资料"</string>
@@ -2097,6 +2140,9 @@
     <string name="user_image_take_photo" msgid="1280274310152803669">"拍照"</string>
     <string name="user_image_choose_photo" msgid="7940990613897477057">"从图库中选择照片"</string>
     <string name="regulatory_info_text" msgid="5623087902354026557"></string>
+    <string name="confirm_delete_apn">这个 APN 将要被删除。</string>
     <!-- Roaming Date Settings -->
     <string name="label_global_roaming_settings">国际漫游设置</string>
+
+    <string name="last_launcher">在卸载或禁用当前启动器之前请安装或启用其他启动器。</string>
 </resources>
