@@ -856,6 +856,10 @@
     <string name="qs_brightness_slider_enabled">Enabled</string>
     <string name="qs_brightness_slider_disabled">Disabled</string>
 
+    <!-- Gesture Settings -->
+    <!-- Settings main menu entry -->
+    <string name="gesture_settings_title">Gestures</string>
+
     <!-- Themes Settings -->
     <!-- Settings main menu entry -->
     <string name="themes_settings_title">Themes</string>
