@@ -32,11 +32,16 @@ import android.util.Log;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.Utils;
+
+import com.android.internal.util.slim.DeviceUtils;
 
 public class StatusBar extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
     private static final String TAG = "StatusBarSettings";
+
+    private static final String STATUS_BAR_BRIGHTNESS_CONTROL = "status_bar_brightness_control";
+
+    private SwitchPreference mStatusBarBrightnessControl;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -44,15 +49,72 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
 
         addPreferencesFromResource(R.xml.status_bar_settings);
 
+        PreferenceScreen prefSet = getPreferenceScreen();
+
+        // Start observing for changes on auto brightness
+        StatusBarBrightnessChangedObserver statusBarBrightnessChangedObserver =
+                new StatusBarBrightnessChangedObserver(new Handler());
+        statusBarBrightnessChangedObserver.startObserving();
+
+        mStatusBarBrightnessControl =
+            (SwitchPreference) prefSet.findPreference(STATUS_BAR_BRIGHTNESS_CONTROL);
+        mStatusBarBrightnessControl.setChecked((Settings.System.getInt(getContentResolver(),
+                            Settings.System.STATUS_BAR_BRIGHTNESS_CONTROL, 0) == 1));
+        mStatusBarBrightnessControl.setOnPreferenceChangeListener(this);
+
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mStatusBarBrightnessControl) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.STATUS_BAR_BRIGHTNESS_CONTROL,
+                    (Boolean) newValue ? 1 : 0);
+            return true;
+        }
         return false;
     }
 
     @Override
     public void onResume() {
         super.onResume();
+        updateStatusBarBrightnessControl();
+    }
+
+    private void updateStatusBarBrightnessControl() {
+        try {
+            if (mStatusBarBrightnessControl != null) {
+                int mode = Settings.System.getIntForUser(getContentResolver(),
+                    Settings.System.SCREEN_BRIGHTNESS_MODE,
+                    Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
+
+                if (mode == Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC) {
+                    mStatusBarBrightnessControl.setEnabled(false);
+                    mStatusBarBrightnessControl.setSummary(R.string.status_bar_toggle_info);
+                } else {
+                    mStatusBarBrightnessControl.setEnabled(true);
+                    mStatusBarBrightnessControl.setSummary(
+                        R.string.status_bar_toggle_brightness_summary);
+                }
+            }
+        } catch (SettingNotFoundException e) {
+        }
+    }
+
+    private class StatusBarBrightnessChangedObserver extends ContentObserver {
+        public StatusBarBrightnessChangedObserver(Handler handler) {
+            super(handler);
+        }
+
+        @Override
+        public void onChange(boolean selfChange) {
+            updateStatusBarBrightnessControl();
+        }
+
+        public void startObserving() {
+            getContentResolver().registerContentObserver(
+                    Settings.System.getUriFor(Settings.System.SCREEN_BRIGHTNESS_MODE),
+                    false, this);
+        }
     }
 
 }
