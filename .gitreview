@@ -1,0 +1,8 @@
+[gerrit]
+host=gerrit.aokp.co
+port=29418
+project=AOKP/packages_apps_Settings
+defaultbranch=jb-mr2
+defaultremote=review
+defaultrebase=0
+
