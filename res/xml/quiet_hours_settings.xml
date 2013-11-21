@@ -48,6 +48,11 @@
         android:title="@string/quiet_hours_dim_title"
         android:dependency="quiet_hours_enabled" />
 
+    <CheckBoxPreference
+        android:key="quiet_hours_active_display"
+        android:title="@string/quiet_hours_active_display_title"
+        android:dependency="quiet_hours_enabled" />
+
     <PreferenceCategory
         android:key="sms_respond"
         android:title="@string/quiet_hours_auto_sms_group">
