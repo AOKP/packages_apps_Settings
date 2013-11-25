@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (c) 2013, The Android Open Kang Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="hardware_info">Informace o hardwaru</string>
+    <string name="device_rear_camera">Zadní kamera</string>
+    <string name="device_front_camera">Přední kamera</string>
+    <string name="device_screen_resolution">Rozlišení obrazovky</string>
+    <string name="gpu_info">GPU</string>
+    <string name="cpu_info">CPU</string>
+    <string name="mem_info">Operační paměť</string>
+    <string name="mod_version">Verze AOKP</string>
+    <string name="mod_version_default">Neznámá</string>
+    <string name="quick_links_title">Rychlé odkazy</string>
+    <string name="advanced_settings_title">Možnosti zařízení</string>
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (c) 2013, The Android Open Kang Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!--  About device screen, Hardware info -->
+    <string name="hardware_info">Hardware info</string>
+    <!--  About device Screen, hardware info, rear camera -->
+    <string name="device_rear_camera">Rear camera</string>
+    <!--  About device Screen, hardware info, front camera -->
+    <string name="device_front_camera">Front facing camera</string>
+    <!--  About device Screen, hardware info, screen res -->
+    <string name="device_screen_resolution">Screen resolution</string>
+    <!--  About device Screen, hardware info, GPU info -->
+    <string name="gpu_info">GPU</string>
+    <!-- About device screen, Cpu info. -->
+    <string name="cpu_info">CPU</string>
+    <!-- About phone screen, Free memory info -->
+    <string name="mem_info">Memory</string>
+    <!-- About phone screen,  AOKP version name-->
+    <string name="mod_version">AOKP version</string>
+    <!-- About phone screen,  AOKP unknown name-->
+    <string name="mod_version_default">Unknown</string>
+    <!-- Device specific settings -->
+    <string name="quick_links_title">Quick Links</string>
+    <string name="advanced_settings_title">Device options</string>
+</resources>
