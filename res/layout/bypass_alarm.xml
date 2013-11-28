@@ -18,7 +18,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="50sp"
+    android:layout_marginTop="50dip"
     android:background="@color/black"
     android:orientation="vertical">
 
@@ -27,14 +27,14 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:orientation="vertical"
-        android:layout_marginTop="32sp">
+        android:layout_marginTop="32dip">
 
         <TextView
             android:id="@+id/bypasstitle"
             android:ellipsize="end"
             android:singleLine="true"
             android:paddingBottom="20dp"
-            android:textColor="@color/holo_light"
+            android:textColor="@color/holo_blue"
             android:text="@string/quiet_hours_alarm_dialog_title"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="match_parent"
@@ -49,7 +49,7 @@
             android:paddingRight="30dp"
             android:paddingBottom="200dp"
             android:textColor="@color/white"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal|top"/>
 
@@ -58,23 +58,23 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dip"
-        android:layout_marginLeft="20sp"
-        android:layout_marginRight="20sp"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
         android:background="@color/white"/>
 
     <FrameLayout
+        android:id="@+id/dismissalert"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/holo_light"
+        android:background="@drawable/button_holo"
         android:paddingTop="15dip"
         android:paddingBottom="15dip"
-        android:layout_marginTop="3sp"
-        android:layout_marginBottom="3sp"
-        android:layout_marginLeft="25sp"
-        android:layout_marginRight="25sp">
+        android:layout_marginTop="3dip"
+        android:layout_marginBottom="3dip"
+        android:layout_marginLeft="25dip"
+        android:layout_marginRight="25dip">
 
         <TextView
-            android:id="@+id/dismissalert"
             android:text="@string/quiet_hours_alarm_dismiss"
             android:singleLine="true"
             android:gravity="center"
@@ -88,9 +88,9 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dip"
-        android:layout_marginLeft="20sp"
-        android:layout_marginRight="20sp"
-        android:layout_marginBottom="150sp"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginBottom="150dip"
         android:background="@color/white"/>
 
 </LinearLayout>

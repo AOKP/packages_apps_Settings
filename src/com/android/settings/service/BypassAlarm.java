@@ -25,13 +25,14 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.android.settings.R;
 
 public class BypassAlarm extends Activity {
 
-    private TextView mDismissButton;
+    private FrameLayout mDismissButton;
 
     private String mNumbers;
 
@@ -61,7 +62,7 @@ public class BypassAlarm extends Activity {
         view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE);
         setContentView(view);
 
-        mDismissButton = ((TextView)
+        mDismissButton = ((FrameLayout)
                 this.findViewById(R.id.dismissalert));
         mDismissButton.setOnClickListener(mDismissButtonListener);
 
@@ -110,7 +111,7 @@ public class BypassAlarm extends Activity {
                 R.string.quiet_hours_alarm_message));
     }
 
-    private TextView.OnClickListener mDismissButtonListener = new TextView.OnClickListener() {
+    private FrameLayout.OnClickListener mDismissButtonListener = new FrameLayout.OnClickListener() {
         public void onClick(View v) {
             mUserDestroy = true;
             finish();
