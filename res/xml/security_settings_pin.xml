@@ -44,6 +44,14 @@
             android:title="@string/lockpattern_settings_enable_power_button_instantly_locks"/>
 
         <CheckBoxPreference
+        <ListPreference
+            android:key="lock_numpad_random"
+            android:entries="@array/lock_numpad_random_entries"
+            android:entryValues="@array/lock_numpad_random_values"
+            android:title="@string/lock_numpad_random_title"
+            android:dialogTitle="@string/lock_numpad_random_dialog_title" />
+
+        <PreferenceScreen
             android:key="keyguard_enable_widgets"
             android:title="@string/security_enable_widgets_title"/>
 
