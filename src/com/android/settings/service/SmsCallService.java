@@ -26,7 +26,6 @@ import android.provider.Telephony.Sms.Intents;
 import android.telephony.PhoneStateListener;
 import android.telephony.SmsMessage;
 import android.telephony.TelephonyManager;
-import android.text.TextUtils;
 
 import com.android.settings.R;
 import java.util.Calendar;
