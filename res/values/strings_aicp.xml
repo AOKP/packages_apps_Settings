@@ -60,6 +60,9 @@
     <string name="default_string">Default</string>
     <string name="nothing_title">Nothing to see here yet. Move along!!!</string>
 
+     <!-- Advanced, Device specific (DeviceParts) settings  -->
+    <string name="device_settings_title">Device</string>
+
     <!-- Sound settings screen -->
     <string name="ring_mode_title">Ring mode</string>
     <string name="ring_mode_normal">Normal</string>
@@ -302,5 +305,10 @@
     <!-- Volume Keys Media Control -->
     <string name="volume_keys_control_media_stream">Media control</string>
     <string name="volume_keys_control_media_stream_summary">Volume keys control media volume rather than notifications</string>
+
+    <!-- Preference category for LAN development settings. [CHAR LIMIT=25] -->
+    <string name="debug_LAN_category">LAN Settings</string>
+    <!-- Hostname setting -->
+    <string name="device_hostname">Device hostname</string>
 
 </resources>
