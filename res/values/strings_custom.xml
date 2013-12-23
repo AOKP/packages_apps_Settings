@@ -113,4 +113,7 @@
     <string name="lock_numpad_random_always">Always</string>
     <string name="lock_numpad_random_on_request">On request</string>
 
+    <!-- WiFi forget all networks -->
+    <string name="wifi_menu_forget_all">Forget all networks</string>
+
 </resources>
