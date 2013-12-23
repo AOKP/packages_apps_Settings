@@ -106,4 +106,7 @@
     <!-- Hostname setting -->
     <string name="device_hostname">Device hostname</string>
 
+    <!-- WiFi forget all networks -->
+    <string name="wifi_menu_forget_all">Forget all networks</string>
+
 </resources>
