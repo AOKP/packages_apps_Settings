@@ -72,4 +72,7 @@
 
     <string name="rom_control_title">Nastavení ROM</string>
     <string name="themes_settings_title">Témata vzhledu</string>
+    <!-- Quick Unlock -->
+    <string name="lockscreen_quick_unlock_control_title">Rychlé odemčení pomocí PINu</string>
+    <string name="lockscreen_quick_unlock_control_summary">Odemknout zamčenou obrazovku pomocí hesla/pinu bez stisku tlačítka enter</string>
 </resources>
