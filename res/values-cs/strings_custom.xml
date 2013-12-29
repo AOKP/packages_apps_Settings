@@ -75,4 +75,6 @@
     <!-- Quick Unlock -->
     <string name="lockscreen_quick_unlock_control_title">Rychlé odemčení pomocí PINu</string>
     <string name="lockscreen_quick_unlock_control_summary">Odemknout zamčenou obrazovku pomocí hesla/pinu bez stisku tlačítka enter</string>
+    <!-- Hostname setting -->
+    <string name="device_hostname">Jméno zařízení</string>
 </resources>
