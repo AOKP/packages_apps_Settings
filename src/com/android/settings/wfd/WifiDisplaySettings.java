@@ -253,6 +253,19 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment {
             invalidateOptions = true;
         }
 
+
+            // The wifi display enabled setting may have changed.
+            invalidateOptions = true;
+        }
+
+        // Update wifi display state.
+        if ((changes & CHANGE_WIFI_DISPLAY_STATUS) != 0) {
+            mWifiDisplayStatus = mDisplayManager.getWifiDisplayStatus();
+
+            // The wifi display feature state may have changed.
+            invalidateOptions = true;
+        }
+
         // Rebuild the routes.
         final PreferenceScreen preferenceScreen = getPreferenceScreen();
         preferenceScreen.removeAll();
@@ -265,6 +278,19 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment {
                 preferenceScreen.addPreference(createRoutePreference(route));
             }
         }
+
+        // Additional features for wifi display routes.
+        if (mWifiDisplayStatus != null
+                && mWifiDisplayStatus.getFeatureState() == WifiDisplayStatus.FEATURE_STATE_ON) {
+            // Add all unpaired wifi displays.
+            for (WifiDisplay display : mWifiDisplayStatus.getDisplays()) {
+                if (!display.isRemembered() && display.isAvailable()
+                        && !display.equals(mWifiDisplayStatus.getActiveDisplay())) {
+                    preferenceScreen.addPreference(new UnpairedWifiDisplayPreference(
+                            getActivity(), display));
+                }
+            }
+
 
         // Additional features for wifi display routes.
         if (mWifiDisplayStatus != null
@@ -631,6 +657,13 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment {
         public void onRouteChanged(MediaRouter router, RouteInfo info) {
             scheduleUpdate(CHANGE_ROUTES);
         }
+
+        @Override
+        public void onRouteRemoved(MediaRouter router, RouteInfo info) {
+            scheduleUpdate(CHANGE_ROUTES);
+        }
+
+        @Override
 
         @Override
         public void onRouteRemoved(MediaRouter router, RouteInfo info) {
