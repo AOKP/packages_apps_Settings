@@ -77,4 +77,6 @@
     <string name="lockscreen_quick_unlock_control_summary">Odemknout zamčenou obrazovku pomocí hesla/pinu bez stisku tlačítka enter</string>
     <!-- Hostname setting -->
     <string name="device_hostname">Jméno zařízení</string>
+    <!-- WiFi forget all networks -->
+    <string name="wifi_menu_forget_all">Odstranit všechny sítě</string>
 </resources>
