@@ -186,16 +186,16 @@ public class SecuritySettings extends RestrictedSettingsFragment
         }
 
         if (mIsPrimary) {
-            switch (mDPM.getStorageEncryptionStatus()) {
-            case DevicePolicyManager.ENCRYPTION_STATUS_ACTIVE:
+//            switch (mDPM.getStorageEncryptionStatus()) {
+//            case DevicePolicyManager.ENCRYPTION_STATUS_ACTIVE:
                 // The device is currently encrypted.
-                addPreferencesFromResource(R.xml.security_settings_encrypted);
-                break;
-            case DevicePolicyManager.ENCRYPTION_STATUS_INACTIVE:
+//                addPreferencesFromResource(R.xml.security_settings_encrypted);
+//                break;
+//            case DevicePolicyManager.ENCRYPTION_STATUS_INACTIVE:
                 // This device supports encryption but isn't encrypted.
                 addPreferencesFromResource(R.xml.security_settings_unencrypted);
-                break;
-            }
+//                break;
+//            }
         }
 
         // lock after preference
@@ -268,15 +268,15 @@ public class SecuritySettings extends RestrictedSettingsFragment
                     mEnableKeyguardWidgets = null;
                 }
             } else {
-                final boolean disabled = (0 != (mDPM.getKeyguardDisabledFeatures(null)
-                        & DevicePolicyManager.KEYGUARD_DISABLE_WIDGETS_ALL));
-                if (disabled) {
-                    mEnableKeyguardWidgets.setSummary(
-                            R.string.security_enable_widgets_disabled_summary);
-                } else {
+//                final boolean disabled = (0 != (mDPM.getKeyguardDisabledFeatures(null)
+//                        & DevicePolicyManager.KEYGUARD_DISABLE_WIDGETS_ALL));
+//                if (disabled) {
+//                    mEnableKeyguardWidgets.setSummary(
+//                            R.string.security_enable_widgets_disabled_summary);
+//                } else {
                     mEnableKeyguardWidgets.setSummary("");
-                }
-                mEnableKeyguardWidgets.setEnabled(!disabled);
+//                }
+//                mEnableKeyguardWidgets.setEnabled(!disabled);
             }
         }
 
