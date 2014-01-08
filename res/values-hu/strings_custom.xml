@@ -102,4 +102,10 @@
     <!-- Quick Unlock -->
     <string name="lockscreen_quick_unlock_control_title">Gyors PIN feloldás</string>
     <string name="lockscreen_quick_unlock_control_summary">Jelszó/PIN zárképernyő feloldása Enter nélkül</string>
+
+    <!-- Hostname setting -->
+    <string name="device_hostname">Eszköz neve</string>
+
+    <!-- WiFi forget all networks -->
+    <string name="wifi_menu_forget_all">Összes hálózat elfelejtése</string>
 </resources>
