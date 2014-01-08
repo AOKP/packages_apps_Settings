@@ -502,16 +502,16 @@
     <string name="interface_settings_animation_title">Opzioni Animazione</string>
     <string name="listview_animation_title">ListView Animazioni</string>
     <string name="listview_off">Default</string>
-    <string name="listview_wave_left">Wave (left)</string>
-    <string name="listview_wave_right">Wave (right)</string>
-    <string name="listview_alpha">Alpha</string>
-    <string name="listview_scale">Scale</string>
-    <string name="listview_stack_top">Stack (top)</string>
-    <string name="listview_stack_bottom">Stack (bottom)</string>
-    <string name="listview_unfold">Unfold</string>
-    <string name="listview_fold">Fold</string>
-    <string name="listview_translate_left">Translate (left)</string>
-    <string name="listview_translate_right">Translate (right)</string>
+    <string name="listview_wave_left">Onda (Sinistra)</string>
+    <string name="listview_wave_right">Onda (Destra)</string>
+    <string name="listview_alpha">Alfa</string>
+    <string name="listview_scale">Scala</string>
+    <string name="listview_stack_top">Pila (sopra)</string>
+    <string name="listview_stack_bottom">Pila (sotto)</string>
+    <string name="listview_unfold">Spiega</string>
+    <string name="listview_fold">Piega</string>
+    <string name="listview_translate_left">Transita (sinistra)</string>
+    <string name="listview_translate_right">Transita (destra)</string>
 
     <!-- ListView interpolator -->
     <string name="listview_interpolator_title">Velocità effetto ListView</string>
@@ -607,20 +607,23 @@
     <string name="toast_animation_title">Animazioni Toast</string>
     <string name="toast_none_animation">Nome</string>
     <string name="toast_default_animation">Default</string>
-    <string name="toast_fade_animation">Fade</string>
-    <string name="toast_SlideRight_animation">Slide right</string>
-    <string name="toast_SlideLeft_animation">Slide left</string>
+    <string name="toast_fade_animation">Dissolvenza</string>
+    <string name="toast_SlideRight_animation">Scivola destra</string>
+    <string name="toast_SlideLeft_animation">Scivola sinistra</string>
     <string name="toast_Xylon_animation">Xylon</string>
     <string name="toast_Toko_animation">Toko</string>
     <string name="toast_Tn_animation">Tn</string>
     <string name="toast_Honami_animation">Honami</string>
-    <string name="toast_FastFade_animation">Fast fade</string>
-    <string name="toast_GrowFade_animation">Grow fade</string>
-    <string name="toast_GrowFadeCenter_animation">Grow fade center</string>
-    <string name="toast_GrowFadeBottom_animation">Grow fade bottom</string>
-    <string name="toast_Translucent_animation">Translucent</string>
-    <string name="toast_SlideLeftRight_animation">Slide left to right</string>
-    <string name="toast_SlideRightLeft_animation">Slide right to left</string>
+    <string name="toast_FastFade_animation">Dissolvenza veloce</string>
+    <string name="toast_GrowFade_animation">Dissolvenza crescente</string>
+    <string name="toast_GrowFadeCenter_animation">Dissolvenza crescente centrale</string>
+    <string name="toast_GrowFadeBottom_animation">Dissolvenza crescente in basso</string>
+    <string name="toast_Translucent_animation">Trasparenza</string>
+    <string name="toast_SlideLeftRight_animation">Scivola sinistra destra</string>
+    <string name="toast_SlideRightLeft_animation">Scivola destra sinistra</string>
+  
+    <!-- Toast Icons -->
+    <string name="toast_icon_title">Icona APP Toast</string>
 
     <!-- Volume Steps -->
     <string name="volume_steps_title">Step Volume</string>
@@ -788,7 +791,7 @@
     <string name="qs_battery_saver_tile">Salva Batteria</string>
     <string name="qs_brightness_tile">Luminosità</string>
     <string name="qs_expanded_desktop_tile">Desktop Esteso</string>
-    <string name="qs_Notification_tile">Notifiche</string>
+    <string name="qs_Notifications_tile">Notifiche</string>
     <string name="qs_screen_off_tile">Spegni Schermo</string>
     <string name="qs_systemui_restart_tile">Riavvia SystemUI</string>
     <string name="qs_tile_slim_floats">Slim Floats</string>
@@ -876,7 +879,7 @@
     <string name="doze_time_mode_title">Visualizza Data e Ora</string>
     <string name="doze_time_mode_summary">Forza data e ora se non sono presenti notifiche</string>
 
-    <string name="doze_brightness_title">Livello di luminosità in Doze Mode </string>
+    <string name="doze_brightness_title">Livello di luminosità con notifica</string>
     <string name="doze_brightness_summary">Livello di luminosià del display (% massima)</string>
 
     <string name="twohundred_ms">200 ms</string>
@@ -920,6 +923,10 @@
     <string name="status_bar_aicp_logo_title">AICP logo</string>
     <string name="status_bar_aicp_logo_summary">Abilita AICP logo a sinistra nella barra di notifiche</string>
     <string name="status_bar_aicp_logo_color">Colore AICP logo</string>
+    <string name="status_bar_aicp_logo_position">Posizione</string>
+    <string name="status_bar_aicp_logo_position_summary">Scegli la posizione del logo AICP</string>
+    <string name="status_bar_logo_position_right">Destra</string>
+    <string name="status_bar_logo_position_left">Sinistra</string>
 
     <!-- Volume pane timeout -->
     <string name="volume_panel_time_out_title">Mostra pannello volume (secondi)</string>
@@ -1033,7 +1040,7 @@
     <string name="nfc_polling_mode_screen_unlocked">Schermo acceso, sbloccato (default)</string>
 
     <!-- Network traffic -->
-    <string name="network_traffic_vector_title">Network traffic</string>
+    <string name="network_traffic_vector_title">Traffico Rete</string>
     <string name="network_traffic_vector_summary">Abilita traffico rete nella barra notifiche</string>
     <string name="show_network_traffic_disable">Disabilita</string>
     <string name="network_traffic_hide_arrow">Nascondi Freccine</string>
@@ -1041,8 +1048,8 @@
     <string name="show_network_traffic_meter">Meter</string>
     <string name="show_network_traffic_text">Testo</string>
     <string name="show_network_traffic_both">Entrambi</string>
-    <string name="show_network_traffic_display">Scelta visualizzazione network traffic</string>
-    <string name="show_network_traffic_monitor">Monitor network traffic</string>
+    <string name="show_network_traffic_display">Scelta visualizzazione traffico rete</string>
+    <string name="show_network_traffic_monitor">Monitor traffico rete</string>
     <string name="show_network_traffic_unit">Unità visualizzata</string>
     <string name="show_network_traffic_frequency">Intervallo update</string>
     <string name="show_network_traffic_up">Upload</string>
@@ -1057,11 +1064,11 @@
     <string name="show_network_traffic_bit">Bits per secondo</string>
     <string name="show_network_traffic_byte">Bytes per secondo</string>
     <string name="network_traffic_autohide">Nascondi automaticamente</string>
-    <string name="network_traffic_autohide_summary">Nascondi monitor traffic se non c\'è attività</string>
+    <string name="network_traffic_autohide_summary">Nascondi monitor traffico se non c\'è attività</string>
     <string name="network_traffic_autohide_threshold">Dataout - inserisci soglia</string>
     <string name="network_traffic_color_style">Colore testo</string>
     <string name="network_traffic_color_reset">Resetta colore</string>
-    <string name="network_traffic_color_reset_message">Resetta colore network traffic come default?</string>
+    <string name="network_traffic_color_reset_message">Resetta colore traffico rete come default?</string>
 
     <!-- Battery saver -->
     <string name="battery_saver_title">Colore di allarme</string>
@@ -1296,7 +1303,10 @@
     <string name="status_bar_temperature_location_left">Sinistra</string>
     <string name="status_bar_weather_color_title">Colore temperatura</string>
     <string name="status_bar_weather_size_title">Dimensione Font</string>
-
+    <string name="status_bar_weather_font_style_title">Carattere</string>
+    <string name="status_bar_weather_font_normal">Normale</string>
+    <string name="status_bar_weather_font_bold">Grossetto</string>
+  
     <!-- SlimDim -->
     <string name="dim_nav_buttons_category">SlimDim</string>
     <string name="dim_nav_buttons_title">Abilita ombra tasti dopo inattività</string>
@@ -1360,6 +1370,11 @@
     <!-- Aicp Settings Tabs -->
     <string name="aicp_settings_tab1">Altro</string>
     <string name="aicp_settings_tab2">Interfaccia</string>
-    <string name="aicp_settings_tab3">Barra notifiche</string>
+    <string name="aicp_settings_tab3">Notifiche</string>
     <string name="aicp_settings_tab4">Sistema</string>
+
+   <!-- Long press on lock screen lock icon to launch torch-->
+   <string name="longpress_lock_icon_torch_title">Pressione prolungata lucchetto attiva la torcia</string>
+   <string name="longpress_lock_icon_torch_summary">Questa opzione non funziona con smart lock</string>
+
 </resources>

@@ -722,6 +722,7 @@
   <string name="qs_tile_airplane_mode">Modalità aereo</string>
   <string name="qs_tile_display_rotation">Rotazione</string>
   <string name="qs_tile_flashlight">Torcia</string>
+  <string name="qs_tile_volume_panel">Volumi</string>
   <string name="qs_tile_location">Localizzazione</string>
   <string name="qs_tile_cast_screen">Trasmetti schermo</string>
   <string name="qs_tile_hotspot">Hotspot</string>
