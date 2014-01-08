@@ -61,6 +61,8 @@ import com.android.internal.util.ArrayUtils;
 import com.android.settings.R;
 import com.android.settings.Utils;
 
+import cyanogenmod.hardware.CMHardwareManager;
+
 import java.lang.ref.WeakReference;
 
 /**
@@ -389,7 +391,7 @@ public class Status extends PreferenceActivity {
 
         updateConnectivity();
 
-        String serial = Build.SERIAL;
+        String serial = getSerialNumber();
         if (serial != null && !serial.equals("")) {
             setSummaryText(KEY_SERIAL_NUMBER, serial);
         } else {
@@ -711,6 +713,15 @@ public class Status extends PreferenceActivity {
 
     private boolean isMultiSimEnabled() {
         return (SubscriptionController.getInstance().getActiveSubInfoCount() > 1);
+    }
+
+    private String getSerialNumber() {
+        CMHardwareManager hardware = CMHardwareManager.getInstance(this);
+        if (hardware.isSupported(CMHardwareManager.FEATURE_SERIAL_NUMBER)) {
+            return hardware.getSerialNumber();
+        } else {
+            return Build.SERIAL;
+        }
     }
 
     public static String getSarValues(Resources res) {
