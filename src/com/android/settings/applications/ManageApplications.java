@@ -911,7 +911,7 @@ public class ManageApplications extends Fragment implements
         mViewPager.setAdapter(adapter);
         mViewPager.setOnPageChangeListener(adapter);
         PagerTabStrip tabs = (PagerTabStrip) rootView.findViewById(R.id.tabs);
-        tabs.setTabIndicatorColorResource(R.color.tab_selector);
+        tabs.setTabIndicatorColorResource(android.R.color.holo_blue_light);
 
         // We have to do this now because PreferenceFrameLayout looks at it
         // only when the view is added.
