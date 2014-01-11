@@ -104,4 +104,7 @@
     <!-- Hostname setting -->
     <string name="device_hostname">设备名称</string>
 
+    <!-- WiFi forget all networks -->
+    <string name="wifi_menu_forget_all">所有网络都不记住</string>
+
 </resources>
