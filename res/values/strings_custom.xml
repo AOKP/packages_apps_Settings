@@ -93,8 +93,8 @@
     <string name="start_time_title">Start</string>
     <string name="end_time_title">End</string>
 
-    <!-- Rom Control -->
-    <string name="rom_control_title">ROM Control</string>
+    <!-- ROM control -->
+    <string name="rom_control_title">ROM control</string>
 
     <!-- Themes settings  -->
     <string name="themes_settings_title">Themes</string>
