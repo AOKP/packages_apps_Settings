@@ -45,8 +45,10 @@ import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
+import android.provider.Settings.SettingNotFoundException;
 import android.provider.Settings.System;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.InputDevice;
 import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
@@ -65,8 +67,11 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
     private static final String KEY_CURRENT_INPUT_METHOD = "current_input_method";
     private static final String KEY_INPUT_METHOD_SELECTOR = "input_method_selector";
     private static final String KEY_USER_DICTIONARY_SETTINGS = "key_user_dictionary_settings";
+    private static final String TAG = "KeyboardInputSettings";
     // false: on ICS or later
     private static final boolean SHOW_INPUT_METHOD_SWITCHER_SETTINGS = false;
+
+    private static final String PREF_FULLSCREEN_KEYBOARD = "fullscreen_keyboard";
 
     private static final String[] sSystemSettingNames = {
         System.TEXT_AUTO_REPLACE, System.TEXT_AUTO_CAPS, System.TEXT_AUTO_PUNCTUATE,
@@ -92,6 +97,7 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
     private Handler mHandler;
     private SettingsObserver mSettingsObserver;
     private Intent mIntentWaitingForResult;
+    private CheckBoxPreference mFullscreenKeyboard;
     private InputMethodSettingValuesWrapper mInputMethodSettingValues;
 
     private final OnPreferenceChangeListener mOnImePreferenceChangedListener =
@@ -111,6 +117,10 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
         super.onCreate(icicle);
 
         addPreferencesFromResource(R.xml.language_settings);
+
+        mFullscreenKeyboard = (CheckBoxPreference) findPreference(PREF_FULLSCREEN_KEYBOARD);
+        mFullscreenKeyboard.setChecked(Settings.AOKP.getInt(getActivity().getContentResolver(),
+                Settings.AOKP.FULLSCREEN_KEYBOARD, 0) == 1);
 
         try {
             mDefaultInputMethodSelectorVisibility = Integer.valueOf(
@@ -340,6 +350,11 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
                         getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.showInputMethodPicker();
             }
+        } else if (preference == mFullscreenKeyboard) {
+            boolean checked = ((CheckBoxPreference) preference).isChecked();
+            Settings.AOKP.putInt(getActivity().getContentResolver(),
+                    Settings.AOKP.FULLSCREEN_KEYBOARD, checked ? 1 : 0);
+            return true;
         } else if (preference instanceof CheckBoxPreference) {
             final CheckBoxPreference chkPref = (CheckBoxPreference) preference;
             if (!mHardKeyboardPreferenceList.isEmpty()) {
