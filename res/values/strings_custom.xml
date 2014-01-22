@@ -111,4 +111,7 @@
     <!-- WiFi forget all networks -->
     <string name="wifi_menu_forget_all">Forget all networks</string>
 
+    <!-- Subtitle of dialog for editing data usage cycle length. [CHAR LIMIT=32] -->
+    <string name="data_usage_lengths_spinner_subtitle">Cycle length:</string>
+
 </resources>
