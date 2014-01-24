@@ -69,12 +69,14 @@
                 android:targetPackage="com.aokp.romcontrol" />
     </header>
 
-    <!-- Home -->
-    <header
-        android:id="@+id/home_settings"
-        android:icon="@drawable/ic_settings_home"
-        android:fragment="com.android.settings.HomeSettings"
-        android:title="@string/home_settings" />
+    <header android:id="@+id/advanced_settings"
+            android:title="@string/advanced_settings_title"
+            android:icon="@drawable/ic_settings_advanced">
+        <intent
+                android:action="com.cyanogenmod.action.LAUNCH_DEVICE_SETTINGS"
+                android:targetPackage="com.cyanogenmod.settings.device"
+                android:targetClass="com.cyanogenmod.settings.device.DeviceSettings" />
+    </header>
 
     <!-- Themes -->
     <header
@@ -87,19 +89,16 @@
             android:targetClass="com.tmobile.themechooser.ThemeChooser" />
     </header>
 
-    <!-- Advanced Settings -->
-    <header android:id="@+id/advanced_settings"
-            android:title="@string/advanced_settings_title"
-            android:icon="@drawable/ic_settings_advanced">
-        <intent
-                android:action="com.cyanogenmod.action.LAUNCH_DEVICE_SETTINGS"
-                android:targetPackage="com.cyanogenmod.settings.device"
-                android:targetClass="com.cyanogenmod.settings.device.DeviceSettings" />
-    </header>
-
     <!-- DEVICE -->
     <header android:id="@+id/device_section"
         android:title="@string/header_category_device" />
+
+    <!-- Home -->
+    <header
+        android:id="@+id/home_settings"
+        android:icon="@drawable/ic_settings_home"
+        android:fragment="com.android.settings.HomeSettings"
+        android:title="@string/home_settings" />
 
     <!-- Sound -->
     <header
