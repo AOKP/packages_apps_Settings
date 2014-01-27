@@ -16,44 +16,45 @@
 
 package com.android.settings;
 
-import com.android.internal.widget.LockPatternUtils;
-import com.android.internal.widget.LockPatternView;
-import com.android.internal.widget.LinearLayoutWithDefaultTouchRecepient;
-import com.android.internal.widget.LockPatternView.Cell;
-
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
+import android.gesture.Gesture;
+import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.SystemClock;
-import android.os.Bundle;
 import android.preference.PreferenceActivity;
-import android.widget.TextView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+import com.android.internal.widget.LinearLayoutWithDefaultTouchRecepient;
+import com.android.internal.widget.LockGestureView;
+import com.android.internal.widget.LockPatternUtils;
+import com.android.internal.widget.LockPatternView;
+import com.android.internal.widget.LockPatternView.Cell;
 
 import java.util.List;
 
 /**
- * Launch this when you want the user to confirm their lock pattern.
+ * Launch this when you want the user to confirm their lock gesture.
  *
- * Sets an activity result of {@link Activity#RESULT_OK} when the user
- * successfully confirmed their pattern.
+ * Sets an activity result of {@link android.app.Activity#RESULT_OK} when the user
+ * successfully confirmed their gesture.
  */
-public class ConfirmLockPattern extends PreferenceActivity {
+public class ConfirmLockGesture extends PreferenceActivity {
 
     /**
-     * Names of {@link CharSequence} fields within the originating {@link Intent}
+     * Names of {@link CharSequence} fields within the originating {@link android.content.Intent}
      * that are used to configure the keyguard confirmation view's labeling.
      * The view will use the system-defined resource strings for any labels that
      * the caller does not supply.
      */
     public static final String PACKAGE = "com.android.settings";
-    public static final String HEADER_TEXT = PACKAGE + ".ConfirmLockPattern.header";
-    public static final String FOOTER_TEXT = PACKAGE + ".ConfirmLockPattern.footer";
-    public static final String HEADER_WRONG_TEXT = PACKAGE + ".ConfirmLockPattern.header_wrong";
-    public static final String FOOTER_WRONG_TEXT = PACKAGE + ".ConfirmLockPattern.footer_wrong";
+    public static final String HEADER_TEXT = PACKAGE + ".ConfirmLockGesture.header";
+    public static final String FOOTER_TEXT = PACKAGE + ".ConfirmLockGesture.footer";
+    public static final String HEADER_WRONG_TEXT = PACKAGE + ".ConfirmLockGesture.header_wrong";
+    public static final String FOOTER_WRONG_TEXT = PACKAGE + ".ConfirmLockGesture.footer_wrong";
 
     private enum Stage {
         NeedToUnlock,
@@ -64,32 +65,32 @@ public class ConfirmLockPattern extends PreferenceActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        CharSequence msg = getText(R.string.lockpassword_confirm_your_pattern_header);
+        CharSequence msg = getText(R.string.lockpassword_confirm_your_gesture_header);
         showBreadCrumbs(msg, msg);
     }
 
     @Override
     public Intent getIntent() {
         Intent modIntent = new Intent(super.getIntent());
-        modIntent.putExtra(EXTRA_SHOW_FRAGMENT, ConfirmLockPatternFragment.class.getName());
+        modIntent.putExtra(EXTRA_SHOW_FRAGMENT, ConfirmLockGestureFragment.class.getName());
         modIntent.putExtra(EXTRA_NO_HEADERS, true);
         return modIntent;
     }
 
     @Override
     protected boolean isValidFragment(String fragmentName) {
-        if (ConfirmLockPatternFragment.class.getName().equals(fragmentName)) return true;
+        if (ConfirmLockGestureFragment.class.getName().equals(fragmentName)) return true;
         return false;
     }
 
-    public static class ConfirmLockPatternFragment extends Fragment {
+    public static class ConfirmLockGestureFragment extends Fragment {
 
-        // how long we wait to clear a wrong pattern
-        private static final int WRONG_PATTERN_CLEAR_TIMEOUT_MS = 2000;
+        // how long we wait to clear a wrong gesture
+        private static final int WRONG_GESTURE_CLEAR_TIMEOUT_MS = 2000;
 
         private static final String KEY_NUM_WRONG_ATTEMPTS = "num_wrong_attempts";
 
-        private LockPatternView mLockPatternView;
+        private LockGestureView mLockGestureView;
         private LockPatternUtils mLockPatternUtils;
         private int mNumWrongConfirmAttempts;
         private CountDownTimer mCountdownTimer;
@@ -104,7 +105,7 @@ public class ConfirmLockPattern extends PreferenceActivity {
         private CharSequence mFooterWrongText;
 
         // required constructor for fragments
-        public ConfirmLockPatternFragment() {
+        public ConfirmLockGestureFragment() {
 
         }
 
@@ -117,16 +118,16 @@ public class ConfirmLockPattern extends PreferenceActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
-            View view = inflater.inflate(R.layout.confirm_lock_pattern, null);
+            View view = inflater.inflate(R.layout.confirm_lock_gesture, null);
             mHeaderTextView = (TextView) view.findViewById(R.id.headerText);
-            mLockPatternView = (LockPatternView) view.findViewById(R.id.lockPattern);
+            mLockGestureView = (LockGestureView) view.findViewById(R.id.lockGesture);
             mFooterTextView = (TextView) view.findViewById(R.id.footerText);
 
             // make it so unhandled touch events within the unlock screen go to the
-            // lock pattern view.
+            // lock gesture view.
             final LinearLayoutWithDefaultTouchRecepient topLayout
                     = (LinearLayoutWithDefaultTouchRecepient) view.findViewById(R.id.topLayout);
-            topLayout.setDefaultTouchRecepient(mLockPatternView);
+            topLayout.setDefaultTouchRecepient(mLockGestureView);
 
             Intent intent = getActivity().getIntent();
             if (intent != null) {
@@ -136,18 +137,16 @@ public class ConfirmLockPattern extends PreferenceActivity {
                 mFooterWrongText = intent.getCharSequenceExtra(FOOTER_WRONG_TEXT);
             }
 
-            mLockPatternView.setTactileFeedbackEnabled(mLockPatternUtils.isTactileFeedbackEnabled());
-            mLockPatternView.setLockPatternSize(mLockPatternUtils.getLockPatternSize());
-            mLockPatternView.setOnPatternListener(mConfirmExistingLockPatternListener);
+            mLockGestureView.setOnGestureListener(mConfirmExistingLockGestureListener);
             updateStage(Stage.NeedToUnlock);
 
             if (savedInstanceState != null) {
                 mNumWrongConfirmAttempts = savedInstanceState.getInt(KEY_NUM_WRONG_ATTEMPTS);
             } else {
-                // on first launch, if no lock pattern is set, then finish with
+                // on first launch, if no lock gesture is set, then finish with
                 // success (don't want user to get stuck confirming something that
                 // doesn't exist).
-                if (!mLockPatternUtils.savedPatternExists()) {
+                if (!mLockPatternUtils.savedGestureExists()) {
                     getActivity().setResult(Activity.RESULT_OK);
                     getActivity().finish();
                 }
@@ -178,7 +177,7 @@ public class ConfirmLockPattern extends PreferenceActivity {
             long deadline = mLockPatternUtils.getLockoutAttemptDeadline();
             if (deadline != 0) {
                 handleAttemptLockout(deadline);
-            } else if (!mLockPatternView.isEnabled()) {
+            } else if (!mLockGestureView.isEnabled()) {
                 // The deadline has passed, but the timer was cancelled...
                 // Need to clean up.
                 mNumWrongConfirmAttempts = 0;
@@ -192,38 +191,38 @@ public class ConfirmLockPattern extends PreferenceActivity {
                     if (mHeaderText != null) {
                         mHeaderTextView.setText(mHeaderText);
                     } else {
-                        mHeaderTextView.setText(R.string.lockpattern_need_to_unlock);
+                        mHeaderTextView.setText(R.string.lockgesture_need_to_unlock);
                     }
                     if (mFooterText != null) {
                         mFooterTextView.setText(mFooterText);
                     } else {
-                        mFooterTextView.setText(R.string.lockpattern_need_to_unlock_footer);
+                        mFooterTextView.setText(R.string.lockgesture_need_to_unlock_footer);
                     }
 
-                    mLockPatternView.setEnabled(true);
-                    mLockPatternView.enableInput();
+                    mLockGestureView.setEnabled(true);
+                    mLockGestureView.enableInput();
                     break;
                 case NeedToUnlockWrong:
                     if (mHeaderWrongText != null) {
                         mHeaderTextView.setText(mHeaderWrongText);
                     } else {
-                        mHeaderTextView.setText(R.string.lockpattern_need_to_unlock_wrong);
+                        mHeaderTextView.setText(R.string.lockgesture_need_to_unlock_wrong);
                     }
                     if (mFooterWrongText != null) {
                         mFooterTextView.setText(mFooterWrongText);
                     } else {
-                        mFooterTextView.setText(R.string.lockpattern_need_to_unlock_wrong_footer);
+                        mFooterTextView.setText(R.string.lockgesture_need_to_unlock_wrong_footer);
                     }
 
-                    mLockPatternView.setDisplayMode(LockPatternView.DisplayMode.Wrong);
-                    mLockPatternView.setEnabled(true);
-                    mLockPatternView.enableInput();
+                    mLockGestureView.setDisplayMode(LockGestureView.DisplayMode.Wrong);
+                    mLockGestureView.setEnabled(true);
+                    mLockGestureView.enableInput();
                     break;
                 case LockedOut:
-                    mLockPatternView.clearPattern();
+                    mLockGestureView.clearGesture();
                     // enabled = false means: disable input, and have the
                     // appearance of being disabled.
-                    mLockPatternView.setEnabled(false); // appearance of being disabled
+                    mLockGestureView.setEnabled(false); // appearance of being disabled
                     break;
             }
 
@@ -232,50 +231,43 @@ public class ConfirmLockPattern extends PreferenceActivity {
             mHeaderTextView.announceForAccessibility(mHeaderTextView.getText());
         }
 
-        private Runnable mClearPatternRunnable = new Runnable() {
+        private Runnable mClearGestureRunnable = new Runnable() {
             public void run() {
-                mLockPatternView.clearPattern();
+                mLockGestureView.clearGesture();
             }
         };
 
-        // clear the wrong pattern unless they have started a new one
+        // clear the wrong gesture unless they have started a new one
         // already
         private void postClearPatternRunnable() {
-            mLockPatternView.removeCallbacks(mClearPatternRunnable);
-            mLockPatternView.postDelayed(mClearPatternRunnable, WRONG_PATTERN_CLEAR_TIMEOUT_MS);
+            mLockGestureView.removeCallbacks(mClearGestureRunnable);
+            mLockGestureView.postDelayed(mClearGestureRunnable, WRONG_GESTURE_CLEAR_TIMEOUT_MS);
         }
 
         /**
-         * The pattern listener that responds according to a user confirming
-         * an existing lock pattern.
+         * The gesture listener that responds according to a user confirming
+         * an existing lock gesture.
          */
-        private LockPatternView.OnPatternListener mConfirmExistingLockPatternListener
-                = new LockPatternView.OnPatternListener()  {
+        private LockGestureView.OnLockGestureListener mConfirmExistingLockGestureListener
+                = new LockGestureView.OnLockGestureListener()  {
 
-            public void onPatternStart() {
-                mLockPatternView.removeCallbacks(mClearPatternRunnable);
+            public void onGestureStart() {
+                mLockGestureView.removeCallbacks(mClearGestureRunnable);
+                mLockGestureView.setDisplayMode(LockGestureView.DisplayMode.Correct);
             }
 
-            public void onPatternCleared() {
-                mLockPatternView.removeCallbacks(mClearPatternRunnable);
+            public void onGestureCleared() {
+                mLockGestureView.removeCallbacks(mClearGestureRunnable);
             }
 
-            public void onPatternCellAdded(List<Cell> pattern) {
-
-            }
-
-            public void onPatternDetected(List<LockPatternView.Cell> pattern) {
-                if (mLockPatternUtils.checkPattern(pattern)) {
+            public void onGestureDetected(Gesture gesture) {
+                if (mLockPatternUtils.checkGesture(gesture)) {
 
                     Intent intent = new Intent();
-                    intent.putExtra(ChooseLockSettingsHelper.EXTRA_KEY_PASSWORD,
-                                    mLockPatternUtils.patternToString(pattern));
-
                     getActivity().setResult(Activity.RESULT_OK, intent);
                     getActivity().finish();
                 } else {
-                    if (pattern.size() >= LockPatternUtils.MIN_PATTERN_REGISTER_FAIL &&
-                            ++mNumWrongConfirmAttempts
+                    if (++mNumWrongConfirmAttempts
                             >= LockPatternUtils.FAILED_ATTEMPTS_BEFORE_TIMEOUT) {
                         long deadline = mLockPatternUtils.setLockoutAttemptDeadline();
                         handleAttemptLockout(deadline);
@@ -297,10 +289,10 @@ public class ConfirmLockPattern extends PreferenceActivity {
 
                 @Override
                 public void onTick(long millisUntilFinished) {
-                    mHeaderTextView.setText(R.string.lockpattern_too_many_failed_confirmation_attempts_header);
+                    mHeaderTextView.setText(R.string.lockgesture_too_many_failed_confirmation_attempts_header);
                     final int secondsCountdown = (int) (millisUntilFinished / 1000);
                     mFooterTextView.setText(getString(
-                            R.string.lockpattern_too_many_failed_confirmation_attempts_footer,
+                            R.string.lockgesture_too_many_failed_confirmation_attempts_footer,
                             secondsCountdown));
                 }
 
