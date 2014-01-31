@@ -24,6 +24,7 @@
     <string name="device_screen_resolution">Rozlišení obrazovky</string>
     <string name="gpu_info">GPU</string>
     <string name="cpu_info">CPU</string>
+    <string name="chipset_info">Čipová sada</string>
     <string name="mem_info">Operační paměť</string>
     <string name="mod_version">Verze AOKP</string>
     <string name="mod_version_default">Neznámá</string>
