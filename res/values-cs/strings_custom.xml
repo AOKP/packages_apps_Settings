@@ -80,4 +80,5 @@
     <string name="device_hostname">Jméno zařízení</string>
     <!-- WiFi forget all networks -->
     <string name="wifi_menu_forget_all">Odstranit všechny sítě</string>
+    <string name="data_usage_lengths_spinner_subtitle">Délka období:</string>
 </resources>

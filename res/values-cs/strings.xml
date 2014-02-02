@@ -1869,7 +1869,7 @@
     <string name="data_usage_auto_sync_off_dialog_title" msgid="9013139130490125793">"Vypnout aut. synchronizaci dat?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="4744145757533455623">"Toto nastavení šetří využití dat a baterii. Nejnovější informace však bude třeba získávat pomocí ruční synchronizace účtu a nebudete také dostávat oznámení o dostupných aktualizacích."</string>
     <string name="data_usage_cycle_editor_title" msgid="1373797281540188533">"Datum obnovení cyklu sledování přenesených dat"</string>
-    <string name="data_usage_cycle_editor_subtitle" msgid="5512903797979928416">"Datum v každém měsíci:"</string>
+    <string name="data_usage_cycle_editor_subtitle" msgid="5512903797979928416">"Datum v každém období:"</string>
     <string name="data_usage_cycle_editor_positive" msgid="8821760330497941117">"Nastavit"</string>
     <string name="data_usage_warning_editor_title" msgid="3704136912240060339">"Nastavit upozornění na využití dat"</string>
     <string name="data_usage_limit_editor_title" msgid="9153595142385030015">"Nastavení limitu datových přenosů"</string>
