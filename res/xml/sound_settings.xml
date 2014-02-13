@@ -26,6 +26,11 @@
             android:persistent="false"
             android:streamType="ring" />
 
+    <PreferenceScreen
+            android:key="live_volume_settings"
+            android:title="@string/live_volume_title"
+            android:fragment="com.android.settings.LiveVolume" />
+
     <Preference
             android:key="musicfx"
             android:title="@string/musicfx_title">
