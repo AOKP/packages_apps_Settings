@@ -1869,7 +1869,7 @@
     <string name="data_usage_auto_sync_off_dialog_title" msgid="9013139130490125793">"要关闭自动同步数据功能吗？"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="4744145757533455623">"这样可以节省数据流量和电池电量，但您需要手动同步每个帐户才能获得最新信息，并且在有更新时不会收到通知。"</string>
     <string name="data_usage_cycle_editor_title" msgid="1373797281540188533">"使用情况周期重置日期"</string>
-    <string name="data_usage_cycle_editor_subtitle" msgid="5512903797979928416">"日期："</string>
+    <string name="data_usage_cycle_editor_subtitle" msgid="5512903797979928416">"周期："</string>
     <string name="data_usage_cycle_editor_positive" msgid="8821760330497941117">"确定"</string>
     <string name="data_usage_warning_editor_title" msgid="3704136912240060339">"设置流量使用量警告"</string>
     <string name="data_usage_limit_editor_title" msgid="9153595142385030015">"设置数据使用限制"</string>

@@ -109,4 +109,7 @@
     <!-- WiFi forget all networks -->
     <string name="wifi_menu_forget_all">所有网络都不记住</string>
 
+    <!-- Subtitle of dialog for editing data usage cycle length.  -->
+    <string name="data_usage_lengths_spinner_subtitle">周期长度：</string>
+
 </resources>
