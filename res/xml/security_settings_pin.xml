@@ -60,6 +60,11 @@
             android:title="@string/owner_info_settings_title"
             android:summary="@string/owner_info_settings_summary"/>
 
+        <PreferenceScreen
+            android:key="blacklist"
+            android:title="@string/blacklist_title"
+            android:fragment="com.android.settings.blacklist.BlacklistSettings" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
