@@ -147,6 +147,9 @@
     <!-- Wi-Fi settings screen, error message when the frequency band could not be set [CHAR LIMIT=50]. -->
     <string name="wifi_setting_countrycode_error">There was a problem setting the region code.</string>
 
+    <!-- Wi-Fi SSID string limits -->
+    <string name="wifi_ssid_input_limit">SSID exceeds maximum length</string>
+
     <!-- Volume steps options -->
     <string name="live_volume_title">Live volume steps</string>
     <string name="volume_steps_60">60</string>
@@ -172,6 +175,5 @@
     <string name="lock_numpad_random_off">Disabled</string>
     <string name="lock_numpad_random_always">Always</string>
     <string name="lock_numpad_random_on_request">On request</string>
-
 
 </resources>
