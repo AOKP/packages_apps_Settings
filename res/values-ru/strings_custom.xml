@@ -53,9 +53,9 @@
   <string name="quiet_hours_summary">Настройка времени, когда устройство должно быть тихим</string>
   <string name="quiet_hours_enabled_title">Разрешить тихий час</string>
   <string name="quiet_hours_start">Начало тихого часа</string>
-  <string name="quiet_hours_start_summary">Принудительное начало тихого часа</string>
+  <string name="quiet_hours_start_summary">Время включения тихого часа</string>
   <string name="quiet_hours_end">Конец тихого часа</string>
-  <string name="quiet_hours_end_summary">Когда заканчивается тихий час</string>
+  <string name="quiet_hours_end_summary">Время окончания тихого часа</string>
   <string name="quiet_hours_notifications_title">Отключить звуки уведомлений</string>
   <string name="quiet_hours_ringer_title">Отключить звонок телефона</string>
   <string name="quiet_hours_still_title">Отключить вибрацию</string>

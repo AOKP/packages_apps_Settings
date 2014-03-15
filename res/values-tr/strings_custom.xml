@@ -33,6 +33,7 @@
   <string name="quick_links_title">Hızlı bağlantılar</string>
   <string name="advanced_settings_title">Aygıt seçenekleri</string>
   <string name="anonymous_statistics_title">AOKP istatistikleri</string>
+  <string name="anonymous_statistics_summary">Anonim istatistiklerin gönderilmesine izin vererek AOKP\'nin daha iyi olmasına yardım edin</string>
   <string name="anonymous_statistics_warning_title">Hakkında</string>
   <string name="enable_reporting_title">Raporlamayı etkinleştir</string>
   <string name="preview_data_title">Veriyi önizle</string>
