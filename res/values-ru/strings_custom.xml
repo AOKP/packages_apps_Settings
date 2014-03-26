@@ -56,10 +56,10 @@
   <string name="quiet_hours_start_summary">Время включения тихого часа</string>
   <string name="quiet_hours_end">Конец тихого часа</string>
   <string name="quiet_hours_end_summary">Время окончания тихого часа</string>
-  <string name="quiet_hours_notifications_title">Отключить звуки уведомлений</string>
-  <string name="quiet_hours_ringer_title">Отключить звонок телефона</string>
-  <string name="quiet_hours_still_title">Отключить вибрацию</string>
-  <string name="quiet_hours_dim_title">Отключить световое оповещение</string>
+  <string name="quiet_hours_notifications_title">Откл звуки уведомлений</string>
+  <string name="quiet_hours_ringer_title">Откл звонок телефона</string>
+  <string name="quiet_hours_still_title">Откл вибрацию</string>
+  <string name="quiet_hours_dim_title">Откл световое оповещение</string>
   <string name="quiet_hours_active_from">Активно с</string>
   <string name="quiet_hours_active_to">по</string>
   <string name="start_time_title">Начало</string>

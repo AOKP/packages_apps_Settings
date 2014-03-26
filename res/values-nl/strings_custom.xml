@@ -18,7 +18,7 @@
  */
 -->
 <resources>
-  <string name="hardware_info">Hardware info</string>
+  <string name="hardware_info">Hardware informatie</string>
   <string name="device_rear_camera">Camera aan achterzijde</string>
   <string name="device_front_camera">Camera aan voorzijde</string>
   <string name="device_screen_resolution">Schermresolutie</string>
@@ -29,10 +29,16 @@
   <string name="mod_version">AOKP versie</string>
   <string name="mod_version_default">Onbekend</string>
   <string name="build_date">Bouwdatum</string>
+  <string name="build_date_default">2012-01-01-0000</string>
+  <string name="quick_links_title">Snelle links</string>
   <string name="advanced_settings_title">Toestel opties</string>
   <string name="anonymous_statistics_title">AOKP statistieken</string>
   <string name="anonymous_statistics_summary">Help AOKP beter te maken door het versturen van anonieme statistieken</string>
   <string name="anonymous_statistics_warning_title">Over</string>
+  <string name="anonymous_statistics_warning">Door akkoord te gaan met AOKP Statistieken staat u toe dat niet-persoonlijke informatie wordt verzonden naar de ontwikkelaars van AOKP om unieke installaties op apparaten bij te houden. De ingediende informatie bevat een uniek indentificatienummer dat uw privacy of persoonlijke informatie niet in het geding brengt. De data wordt een keer per week verzonden, tijdens het opstarten.\n\nOm een voorbeeld van de data die wordt verzonden te zien, tik op Data Voorbeeld Tonen.</string>
+  <string name="enable_reporting_title">Schakel rapporteren in</string>
+  <string name="preview_data_title">Toon voorbeeld van data</string>
+  <string name="preview_data_summary">%s</string>
   <string name="view_stats_title">Statistieken tonen</string>
   <string name="anonymous_learn_more">Meer informatie</string>
   <string name="anonymous_notification_desc">Inschakelen of uitschakelen van AOKP statistieken</string>
@@ -47,11 +53,22 @@
   <string name="quiet_hours_summary">Uren instellen waarin apparaat stil moet zijn</string>
   <string name="quiet_hours_enabled_title">Stille uren inschakelen</string>
   <string name="quiet_hours_start">Begin van rustige uren</string>
+  <string name="quiet_hours_start_summary">Wanneer er moet worden aangevangen met het handhaven van stille uren</string>
   <string name="quiet_hours_end">Einde van stille uren</string>
+  <string name="quiet_hours_end_summary">Wanneer er moet worden gestopt met het handhaven van stille uren</string>
   <string name="quiet_hours_notifications_title">Demp notificatie geluiden</string>
   <string name="quiet_hours_ringer_title">Demp telefoon ringtones</string>
   <string name="quiet_hours_still_title">Trillen uitschakelen</string>
   <string name="quiet_hours_dim_title">Meldingsled uitschakelen</string>
   <string name="quiet_hours_active_from">Actief van</string>
+  <string name="quiet_hours_active_to">om</string>
+  <string name="start_time_title">Starten</string>
+  <string name="end_time_title">Beëindigen</string>
+  <string name="rom_control_title">ROM bediening</string>
   <string name="themes_settings_title">Thema\'s</string>
+  <string name="lockscreen_quick_unlock_control_title">Snelle pin ontgrendelen</string>
+  <string name="lockscreen_quick_unlock_control_summary">Ontgrendel wachtwoord/pin vergrendelscherm zonder indrukken van de enter toets</string>
+  <string name="device_hostname">Apparaat hostnaam</string>
+  <string name="wifi_menu_forget_all">Vergeet alle netwerken</string>
+  <string name="data_usage_lengths_spinner_subtitle">Cyclus lengte:</string>
 </resources>

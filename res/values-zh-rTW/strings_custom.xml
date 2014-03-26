@@ -17,4 +17,18 @@
  * limitations under the License.
  */
 -->
-<resources/>
+<resources>
+  <string name="gpu_info">GPU</string>
+  <string name="cpu_info">CPU</string>
+  <string name="chipset_info">芯片</string>
+  <string name="mem_info">記憶體</string>
+  <string name="mod_version">AOKP版本</string>
+  <string name="mod_version_default">未知</string>
+  <string name="build_date">創建日期</string>
+  <string name="build_date_default">2012-01-01-0000</string>
+  <string name="quick_links_title">快速連結</string>
+  <string name="advanced_settings_title">裝置選項</string>
+  <string name="anonymous_statistics_title">AOKP統計資料</string>
+  <string name="anonymous_statistics_summary">提交匿名資料來協助改善AOKP</string>
+  <string name="anonymous_statistics_warning_title">關於</string>
+</resources>

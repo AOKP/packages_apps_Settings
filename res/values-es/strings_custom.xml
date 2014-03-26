@@ -19,8 +19,8 @@
 -->
 <resources>
   <string name="hardware_info">Información de Hardware</string>
-  <string name="device_rear_camera">Cámara trasera</string>
-  <string name="device_front_camera">Cámara frontal</string>
+  <string name="device_rear_camera">Cámara Trasera</string>
+  <string name="device_front_camera">Cámara Frontal</string>
   <string name="device_screen_resolution">Resolución de pantalla</string>
   <string name="gpu_info">GPU</string>
   <string name="cpu_info">CPU</string>

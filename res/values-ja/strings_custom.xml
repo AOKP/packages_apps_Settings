@@ -17,4 +17,60 @@
  * limitations under the License.
  */
 -->
-<resources/>
+<resources>
+  <string name="hardware_info">ハードウェア情報</string>
+  <string name="device_rear_camera">リアカメラ</string>
+  <string name="device_front_camera">フロントカメラ</string>
+  <string name="device_screen_resolution">画面解像度</string>
+  <string name="gpu_info">GPU</string>
+  <string name="cpu_info">CPU</string>
+  <string name="chipset_info">チップセット</string>
+  <string name="mem_info">メモリー</string>
+  <string name="mod_version">AOKPバージョン</string>
+  <string name="mod_version_default">不明</string>
+  <string name="build_date">ビルド日時</string>
+  <string name="build_date_default">2012-01-01-0000</string>
+  <string name="quick_links_title">クイックリンク</string>
+  <string name="advanced_settings_title">デバイスオプション</string>
+  <string name="anonymous_statistics_title">AOKP利用統計</string>
+  <string name="anonymous_statistics_summary">AOKPをより良くするための匿名利用統計報告をオプトインする</string>
+  <string name="anonymous_statistics_warning_title">利用統計について</string>
+  <string name="anonymous_statistics_warning">匿名利用状況の送信を許諾することによって、AOKPの開発者がデバイス単位のユニークインストール数を追跡することができます。
+         送信される情報にはユニークIDが含まれますが、これはあなたの個人情報、端末のタイプ及びバージョン情報とは結びつきません。
+         データ送信は週に一回端末の起動時に行われます。\n\n送信されるデータの例はプレビューをクリックすることにより確認できます。</string>
+  <string name="enable_reporting_title">リポートを有効にする</string>
+  <string name="preview_data_title">データのプレビュー</string>
+  <string name="preview_data_summary">%s</string>
+  <string name="view_stats_title">統計を表示</string>
+  <string name="anonymous_learn_more">詳細</string>
+  <string name="anonymous_notification_desc">AOKP利用統計を有効/無効にする</string>
+  <string name="preview_id_title">ユニークID</string>
+  <string name="preview_device_title">デバイス</string>
+  <string name="preview_version_title">バージョン</string>
+  <string name="preview_country_title">国</string>
+  <string name="preview_carrier_title"> キャリア</string>
+  <string name="confirm_delete_apn">APNは削除されます。</string>
+  <string name="font_size_sample">サンプル</string>
+  <string name="quiet_hours_title">サイレントタイム</string>
+  <string name="quiet_hours_summary">デバイスをサイレントモードにする時間の設定</string>
+  <string name="quiet_hours_enabled_title">サイレントタイムを有効にする</string>
+  <string name="quiet_hours_start">開始時刻</string>
+  <string name="quiet_hours_start_summary">サイレントタイムを開始する時刻</string>
+  <string name="quiet_hours_end">終了時刻</string>
+  <string name="quiet_hours_end_summary">サイレントタイムを終了する時刻</string>
+  <string name="quiet_hours_notifications_title">通知音をミュート</string>
+  <string name="quiet_hours_ringer_title">着信音をミュート</string>
+  <string name="quiet_hours_still_title">バイブレーションを無効</string>
+  <string name="quiet_hours_dim_title">通知LEDを無効</string>
+  <string name="quiet_hours_active_from">有効時間</string>
+  <string name="quiet_hours_active_to">から</string>
+  <string name="start_time_title">開始</string>
+  <string name="end_time_title">終了</string>
+  <string name="rom_control_title">ROMコントロール</string>
+  <string name="themes_settings_title">テーマ</string>
+  <string name="lockscreen_quick_unlock_control_title">クイックPINロック解除</string>
+  <string name="lockscreen_quick_unlock_control_summary">ENTERボタンを押すことなくパスワード/PINロックを解除する</string>
+  <string name="device_hostname">デバイスホスト名</string>
+  <string name="wifi_menu_forget_all">すべてのネットワークを消去</string>
+  <string name="data_usage_lengths_spinner_subtitle">サイクルの長さ:</string>
+</resources>
