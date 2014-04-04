@@ -68,6 +68,14 @@
                 android:persistent="false"/>
     </PreferenceCategory>
 
+    <ListPreference
+            android:key="volume_key_cursor_control"
+            android:persistent="false"
+            android:dialogTitle="@string/volume_key_cursor_control_title"
+            android:title="@string/volume_key_cursor_control_title"
+            android:entries="@array/volume_key_cursor_control_entries"
+            android:entryValues="@array/volume_key_cursor_control_values" />
+
     <PreferenceCategory android:key="voice_category"
             android:title="@string/voice_category" >
 
