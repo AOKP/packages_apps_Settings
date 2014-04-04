@@ -17,4 +17,43 @@
  * limitations under the License.
  */
 -->
-<resources/>
+<resources>
+  <string name="hardware_info">Maskinvareinformasjon</string>
+  <string name="device_rear_camera">Vanlig kamera</string>
+  <string name="device_front_camera">Frontkamera</string>
+  <string name="device_screen_resolution">Skjermoppløsning</string>
+  <string name="gpu_info">GPU</string>
+  <string name="cpu_info">CPU</string>
+  <string name="chipset_info">Brikkesett</string>
+  <string name="mem_info">Minne</string>
+  <string name="mod_version">AOKP versjon</string>
+  <string name="mod_version_default">Ukjent</string>
+  <string name="build_date">Byggedato</string>
+  <string name="build_date_default">2012-01-01-0000</string>
+  <string name="quick_links_title">Hurtigkoblinger</string>
+  <string name="advanced_settings_title">Enhetsalternativer</string>
+  <string name="anonymous_statistics_title">AOKP statistikk</string>
+  <string name="anonymous_statistics_summary">Hjelp med å gjøre AOKP bedre ved å tillate innsending av anonym statistikk</string>
+  <string name="anonymous_statistics_warning_title">Om</string>
+  <string name="enable_reporting_title">Aktiver rapportering</string>
+  <string name="preview_data_summary">%s</string>
+  <string name="view_stats_title">Vis statistikk</string>
+  <string name="anonymous_learn_more">Les mer</string>
+  <string name="anonymous_notification_desc">Aktiver eller deaktiver AOKP statistikk</string>
+  <string name="preview_id_title">Unik ID</string>
+  <string name="preview_device_title">Enhet</string>
+  <string name="preview_version_title">Versjon</string>
+  <string name="preview_country_title">Land</string>
+  <string name="preview_carrier_title">Operatør</string>
+  <string name="confirm_delete_apn">APN vil bli slettet.</string>
+  <string name="font_size_sample">Eksempel</string>
+  <string name="quiet_hours_still_title">Deaktiver vibrasjoner</string>
+  <string name="quiet_hours_dim_title">Deaktiver varsellampe</string>
+  <string name="quiet_hours_active_from">Aktiv fra</string>
+  <string name="quiet_hours_active_to">til</string>
+  <string name="start_time_title">Start</string>
+  <string name="end_time_title">Avslutt</string>
+  <string name="rom_control_title">ROM innstillinger</string>
+  <string name="themes_settings_title">Temaer</string>
+  <string name="wifi_menu_forget_all">Glem alle nettverk</string>
+</resources>

@@ -28,7 +28,7 @@
   <string name="mem_info">මතකය</string>
   <string name="mod_version">AOKP අනුවාදය</string>
   <string name="mod_version_default">නොදනී</string>
-  <string name="build_date">සෑදු දිනය</string>
+  <string name="build_date">නිමැවූ දිනය</string>
   <string name="build_date_default">2012-01-01-0000</string>
   <string name="quick_links_title">ඉක්මන් සබැඳි</string>
   <string name="advanced_settings_title">උපාංගයේ අභිරුචි</string>
