@@ -71,4 +71,21 @@
   <string name="device_hostname">장치 호스트 이름</string>
   <string name="wifi_menu_forget_all">모든 네트워크 제거</string>
   <string name="data_usage_lengths_spinner_subtitle">주기 기간:</string>
+  <string name="wifi_setting_countrycode_title">와이파이 지역 코드</string>
+  <string name="wifi_setting_countrycode_summary">WiFi에 대한 지역 코드를 지정</string>
+  <string name="wifi_setting_countrycode_error">지역 코드 설정에 문제가 발생 했습니다.</string>
+  <string name="live_volume_title">볼륨세분화</string>
+  <string name="volume_steps_60">60</string>
+  <string name="volume_steps_45">45</string>
+  <string name="volume_steps_30">30</string>
+  <string name="volume_steps_15">15</string>
+  <string name="volume_steps_7">7</string>
+  <string name="volume_steps_5">5</string>
+  <string name="volume_steps_alarm_title">볼륨 단계: 알람</string>
+  <string name="volume_steps_dtmf_title">볼륨 단계: DTMF</string>
+  <string name="volume_steps_music_title">볼륨 단계: 음악</string>
+  <string name="volume_steps_notification_title">볼륨 단계: 알림</string>
+  <string name="volume_steps_ring_title">볼륨 단계: 벨소리</string>
+  <string name="volume_steps_system_title">볼륨 단계: 시스템</string>
+  <string name="volume_steps_voice_call_title">볼륨 단계: 음성 통화</string>
 </resources>

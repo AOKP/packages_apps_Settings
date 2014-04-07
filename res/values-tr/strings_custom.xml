@@ -71,4 +71,21 @@
   <string name="device_hostname">Aygıt ana makine adı</string>
   <string name="wifi_menu_forget_all">Tüm ağları unut</string>
   <string name="data_usage_lengths_spinner_subtitle">Döngü uzunluğu:</string>
+  <string name="wifi_setting_countrycode_title">Wi-Fi bölge kodu</string>
+  <string name="wifi_setting_countrycode_summary">Wi-Fi için bölge kodunu belirtin</string>
+  <string name="wifi_setting_countrycode_error">Bölge kodunu ayarlarken sorun oluştu.</string>
+  <string name="live_volume_title">Canlı ses adımları</string>
+  <string name="volume_steps_60">60</string>
+  <string name="volume_steps_45">45</string>
+  <string name="volume_steps_30">30</string>
+  <string name="volume_steps_15">15</string>
+  <string name="volume_steps_7">7</string>
+  <string name="volume_steps_5">5</string>
+  <string name="volume_steps_alarm_title">Ses adımları: Alarm</string>
+  <string name="volume_steps_dtmf_title">Ses adımları: DTMF</string>
+  <string name="volume_steps_music_title">Ses adımları: Müzik</string>
+  <string name="volume_steps_notification_title">Ses adımları: Bildirim</string>
+  <string name="volume_steps_ring_title">Ses adımları: Zil sesi</string>
+  <string name="volume_steps_system_title">Ses adımları: Sistem</string>
+  <string name="volume_steps_voice_call_title">Ses adımları: Sesli Arama</string>
 </resources>

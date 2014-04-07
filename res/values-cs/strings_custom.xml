@@ -71,4 +71,21 @@
   <string name="device_hostname">Jméno zařízení</string>
   <string name="wifi_menu_forget_all">Odstranit všechny sítě</string>
   <string name="data_usage_lengths_spinner_subtitle">Délka období:</string>
+  <string name="wifi_setting_countrycode_title">Kód regionu Wi-Fi</string>
+  <string name="wifi_setting_countrycode_summary">Nastavit regionální kód pro Wi-Fi</string>
+  <string name="wifi_setting_countrycode_error">Při nastavování kódu regionu došlo k chybě.</string>
+  <string name="live_volume_title">Živé kroky hlasitosti</string>
+  <string name="volume_steps_60">60</string>
+  <string name="volume_steps_45">45</string>
+  <string name="volume_steps_30">30</string>
+  <string name="volume_steps_15">15</string>
+  <string name="volume_steps_7">7</string>
+  <string name="volume_steps_5">5</string>
+  <string name="volume_steps_alarm_title">Počet kroků: Budík</string>
+  <string name="volume_steps_dtmf_title">Počet kroků: DTMF</string>
+  <string name="volume_steps_music_title">Počet kroků: Hudba</string>
+  <string name="volume_steps_notification_title">Počet kroků: Notifikace</string>
+  <string name="volume_steps_ring_title">Počet kroků: Vyzvánění</string>
+  <string name="volume_steps_system_title">Počet kroků: Systém</string>
+  <string name="volume_steps_voice_call_title">Počet kroků: Hlasové hovory</string>
 </resources>

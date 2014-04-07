@@ -71,4 +71,12 @@
   <string name="device_hostname">שם המארח להתקן</string>
   <string name="wifi_menu_forget_all">תשכח כל הרשתות</string>
   <string name="data_usage_lengths_spinner_subtitle">אורך המחזור:</string>
+  <string name="volume_steps_60">60</string>
+  <string name="volume_steps_45">45</string>
+  <string name="volume_steps_30">30</string>
+  <string name="volume_steps_15">15</string>
+  <string name="volume_steps_7">7</string>
+  <string name="volume_steps_5">5</string>
+  <string name="volume_steps_alarm_title">שלבי קול: שעון מעורר</string>
+  <string name="volume_steps_dtmf_title">שלבי קול: DTMF</string>
 </resources>

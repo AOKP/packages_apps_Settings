@@ -71,4 +71,21 @@
   <string name="device_hostname">උපාංගයේ ආගන්තුක නාමය</string>
   <string name="wifi_menu_forget_all">සියලුම ජාල අමතක කරන්න</string>
   <string name="data_usage_lengths_spinner_subtitle">කාල ප්‍රමාණය:</string>
+  <string name="wifi_setting_countrycode_title">Wi-Fi කලාප කේතය</string>
+  <string name="wifi_setting_countrycode_summary">Wi-Fi සඳහා කලාප කේතය සඳහන් කරන්න</string>
+  <string name="wifi_setting_countrycode_error">කලාප කේතය පිහිටුවීමේදී ගැටළුවක් ඇතිවිය.</string>
+  <string name="live_volume_title">සජීවී හඬ පරිමා පියවර</string>
+  <string name="volume_steps_60">60</string>
+  <string name="volume_steps_45">45</string>
+  <string name="volume_steps_30">30</string>
+  <string name="volume_steps_15">15</string>
+  <string name="volume_steps_7">7</string>
+  <string name="volume_steps_5">5</string>
+  <string name="volume_steps_alarm_title">හඬ පරිමා පියවර: ඇඟවීම</string>
+  <string name="volume_steps_dtmf_title">හඬ පරිමා පියවර: DTMF</string>
+  <string name="volume_steps_music_title">හඬ පරිමා පියවර: සංගීත</string>
+  <string name="volume_steps_notification_title">හඬ පරිමා පියවර: දැනුම්දීම්</string>
+  <string name="volume_steps_ring_title">හඬ පරිමා පියවර: නදවනය</string>
+  <string name="volume_steps_system_title">හඬ පරිමා පියවර: පද්ධතිය</string>
+  <string name="volume_steps_voice_call_title">හඬ පරිමා පියවර: හඬ ඇමතුම</string>
 </resources>

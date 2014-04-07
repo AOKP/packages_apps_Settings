@@ -18,7 +18,7 @@
  */
 -->
 <resources>
-  <string name="hardware_info">Informacje o sprzęcie</string>
+  <string name="hardware_info">O sprzęcie</string>
   <string name="device_rear_camera">Tylna kamera</string>
   <string name="device_front_camera">Przednia kamera</string>
   <string name="device_screen_resolution">Rozdzielczość ekranu</string>
@@ -64,11 +64,27 @@
   <string name="quiet_hours_active_to">do</string>
   <string name="start_time_title">Start</string>
   <string name="end_time_title">Koniec</string>
-  <string name="rom_control_title">Kontrola ROMu</string>
+  <string name="rom_control_title">Ustawienia ROMu</string>
   <string name="themes_settings_title">Motywy</string>
   <string name="lockscreen_quick_unlock_control_title">Szybkie odblokowanie PINu</string>
   <string name="lockscreen_quick_unlock_control_summary">Odblokuj ekran blokady z PINem/hasłem bez naciskania przycisku enter</string>
   <string name="device_hostname">Nazwa hosta urządzenia</string>
   <string name="wifi_menu_forget_all">Zapomnij wszystkie sieci</string>
   <string name="data_usage_lengths_spinner_subtitle">Długość cyklu:</string>
+  <string name="wifi_setting_countrycode_title">Kod lokalny Wi-Fi</string>
+  <string name="wifi_setting_countrycode_summary">Określ kod regionu dla Wi-Fi</string>
+  <string name="wifi_setting_countrycode_error">Wystąpił problem podczas ustawiania kodu regionu.</string>
+  <string name="volume_steps_60">60</string>
+  <string name="volume_steps_45">45</string>
+  <string name="volume_steps_30">30</string>
+  <string name="volume_steps_15">15</string>
+  <string name="volume_steps_7">7</string>
+  <string name="volume_steps_5">5</string>
+  <string name="volume_steps_alarm_title">Poziom głośności: Alarm</string>
+  <string name="volume_steps_dtmf_title">Poziom głośności: DTMF</string>
+  <string name="volume_steps_music_title">Poziom głośności: Muzyka</string>
+  <string name="volume_steps_notification_title">Poziom głośności: Powiadomienia</string>
+  <string name="volume_steps_ring_title">Poziom głośności: Dzwonek</string>
+  <string name="volume_steps_system_title">Poziom głośności: System</string>
+  <string name="volume_steps_voice_call_title">Poziom głośności: Rozmowa</string>
 </resources>

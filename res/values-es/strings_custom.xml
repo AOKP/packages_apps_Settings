@@ -72,4 +72,13 @@ La información enviada incluye un identificador único, que no compromete tu pr
   <string name="device_hostname">Nombre del dispositivo</string>
   <string name="wifi_menu_forget_all">Olvidar todas las redes</string>
   <string name="data_usage_lengths_spinner_subtitle">Duración del ciclo:</string>
+  <string name="wifi_setting_countrycode_title">Código de región Wi-Fi</string>
+  <string name="wifi_setting_countrycode_summary">Especifique el código de región para Wi-Fi</string>
+  <string name="wifi_setting_countrycode_error">Hubo un problema al ingresar el código de región.</string>
+  <string name="volume_steps_60">60</string>
+  <string name="volume_steps_45">45</string>
+  <string name="volume_steps_30">30</string>
+  <string name="volume_steps_15">15</string>
+  <string name="volume_steps_7">7</string>
+  <string name="volume_steps_5">5</string>
 </resources>
