@@ -81,6 +81,7 @@ import com.android.settings.inputmethod.KeyboardLayoutPickerFragment;
 import com.android.settings.inputmethod.SpellCheckersSettings;
 import com.android.settings.inputmethod.UserDictionaryList;
 import com.android.settings.location.LocationSettings;
+import com.android.settings.net.MobileDataEnabler;
 import com.android.settings.nfc.AndroidBeam;
 import com.android.settings.nfc.PaymentSettings;
 import com.android.settings.print.PrintJobSettingsFragment;
@@ -555,6 +556,11 @@ public class Settings extends PreferenceActivity
                 if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH)) {
                     target.remove(i);
                 }
+            } else if (id == R.id.mobile_network_settings) {
+                // Remove mobile network settings if the device doesn't have telephony
+                if (Utils.isWifiOnly(this)) {
+                    target.remove(i);
+                }
             } else if (id == R.id.data_usage_settings) {
                 // Remove data usage when kernel module not enabled
                 final INetworkManagementService netManager = INetworkManagementService.Stub
@@ -789,6 +795,7 @@ public class Settings extends PreferenceActivity
 
         private final WifiEnabler mWifiEnabler;
         private final BluetoothEnabler mBluetoothEnabler;
+        private final MobileDataEnabler mMobileDataEnabler;
         private AuthenticatorHelper mAuthHelper;
         private DevicePolicyManager mDevicePolicyManager;
 
@@ -806,7 +813,9 @@ public class Settings extends PreferenceActivity
         static int getHeaderType(Header header) {
             if (header.fragment == null && header.intent == null) {
                 return HEADER_TYPE_CATEGORY;
-            } else if (header.id == R.id.wifi_settings || header.id == R.id.bluetooth_settings) {
+            } else if (header.id == R.id.wifi_settings
+                    || header.id == R.id.bluetooth_settings
+                    || header.id == R.id.mobile_network_settings) {
                 return HEADER_TYPE_SWITCH;
             } else if (header.id == R.id.security_settings) {
                 return HEADER_TYPE_BUTTON;
@@ -852,6 +861,7 @@ public class Settings extends PreferenceActivity
             // Switches inflated from their layouts. Must be done before adapter is set in super
             mWifiEnabler = new WifiEnabler(context, new Switch(context));
             mBluetoothEnabler = new BluetoothEnabler(context, new Switch(context));
+            mMobileDataEnabler = new MobileDataEnabler(context, new Switch(context));
             mDevicePolicyManager = dpm;
         }
 
@@ -921,8 +931,10 @@ public class Settings extends PreferenceActivity
                     // Would need a different treatment if the main menu had more switches
                     if (header.id == R.id.wifi_settings) {
                         mWifiEnabler.setSwitch(holder.switch_);
-                    } else {
+                    } else if (header.id == R.id.bluetooth_settings) {
                         mBluetoothEnabler.setSwitch(holder.switch_);
+                    } else if (header.id == R.id.mobile_network_settings) {
+                        mMobileDataEnabler.setSwitch(holder.switch_);
                     }
                     updateCommonHeaderView(header, holder);
                     break;
@@ -996,11 +1008,13 @@ public class Settings extends PreferenceActivity
         public void resume() {
             mWifiEnabler.resume();
             mBluetoothEnabler.resume();
+            mMobileDataEnabler.resume();
         }
 
         public void pause() {
             mWifiEnabler.pause();
             mBluetoothEnabler.pause();
+            mMobileDataEnabler.pause();
         }
     }
 
