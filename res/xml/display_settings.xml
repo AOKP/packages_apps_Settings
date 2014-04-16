@@ -33,12 +33,6 @@
                 android:summary="@string/auto_brightness_summary"
                 android:persistent="false" />
 
-        <PreferenceScreen
-                android:key="wallpaper"
-                android:title="@string/wallpaper_settings_title"
-                settings:keywords="@string/keywords_display_wallpaper"
-                android:fragment="com.android.settings.WallpaperTypeSettings" />
-
         <ListPreference
                 android:key="screen_timeout"
                 android:title="@string/screen_timeout"
