@@ -66,6 +66,14 @@
   <string name="end_time_title">Конец</string>
   <string name="rom_control_title">ROM control</string>
   <string name="themes_settings_title">Темы</string>
+  <string name="themepacks_settings_title">Наборы тем</string>
+  <string name="styles_settings_title">Стили</string>
+  <string name="icons_settings_title">Значки</string>
+  <string name="fonts_settings_title">Шрифты</string>
+  <string name="wallpaper_settings_title">Обои</string>
+  <string name="lockscreen_wallpaper_settings_title">Обои экрана блокировки</string>
+  <string name="bootanim_settings_title">Анимации загрузки</string>
+  <string name="soundpack_settings_title">Наборы звуков</string>
   <string name="lockscreen_quick_unlock_control_title">Быстрая разблокировка</string>
   <string name="lockscreen_quick_unlock_control_summary">Разблокировка экрана паролем/пин-кодом без нажатия кнопки ввода</string>
   <string name="device_hostname">Хост устройства</string>

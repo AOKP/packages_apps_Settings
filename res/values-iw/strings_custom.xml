@@ -71,6 +71,9 @@
   <string name="device_hostname">שם המארח להתקן</string>
   <string name="wifi_menu_forget_all">תשכח כל הרשתות</string>
   <string name="data_usage_lengths_spinner_subtitle">אורך המחזור:</string>
+  <string name="wifi_setting_countrycode_title">קוד Wi-Fi אזורי</string>
+  <string name="wifi_setting_countrycode_summary">ציין קוד Wi-Fi אזורי</string>
+  <string name="wifi_setting_countrycode_error">אירעה שגיאה בהגדרת הקוד האזורי.</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
   <string name="volume_steps_30">30</string>

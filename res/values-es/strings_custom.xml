@@ -19,8 +19,8 @@
 -->
 <resources>
   <string name="hardware_info">Información de Hardware</string>
-  <string name="device_rear_camera">Cámara Trasera</string>
-  <string name="device_front_camera">Cámara Frontal</string>
+  <string name="device_rear_camera">Cámara trasera</string>
+  <string name="device_front_camera">Cámara frontal</string>
   <string name="device_screen_resolution">Resolución de pantalla</string>
   <string name="gpu_info">GPU</string>
   <string name="cpu_info">CPU</string>
@@ -67,6 +67,14 @@ La información enviada incluye un identificador único, que no compromete tu pr
   <string name="end_time_title">Finalizar</string>
   <string name="rom_control_title">Control del ROM</string>
   <string name="themes_settings_title">Temas</string>
+  <string name="themepacks_settings_title">Paquetes de temas</string>
+  <string name="styles_settings_title">Estilos</string>
+  <string name="icons_settings_title">Iconos</string>
+  <string name="fonts_settings_title">Tipos de letras</string>
+  <string name="wallpaper_settings_title">Fondos de pantalla</string>
+  <string name="lockscreen_wallpaper_settings_title">Fondos de pantalla de bloqueo</string>
+  <string name="bootanim_settings_title">Animaciones de inicio</string>
+  <string name="soundpack_settings_title">Paquetes de sonidos</string>
   <string name="lockscreen_quick_unlock_control_title">Desbloqueo de pin rápido</string>
   <string name="lockscreen_quick_unlock_control_summary">Desbloquear pantalla con contraseña/pin sin presionar el botón enter</string>
   <string name="device_hostname">Nombre del dispositivo</string>
@@ -81,4 +89,11 @@ La información enviada incluye un identificador único, que no compromete tu pr
   <string name="volume_steps_15">15</string>
   <string name="volume_steps_7">7</string>
   <string name="volume_steps_5">5</string>
+  <string name="volume_steps_alarm_title">Niveles de volumen: Alarma</string>
+  <string name="volume_steps_dtmf_title">Ajustes de volumen: DTMF</string>
+  <string name="volume_steps_music_title">Ajustes de volumen: Música</string>
+  <string name="volume_steps_notification_title">Ajustes de volumen: Notificaciones</string>
+  <string name="volume_steps_ring_title">Ajustes de volumen: Tono de llamada</string>
+  <string name="volume_steps_system_title">Ajustes de volumen: Sistema</string>
+  <string name="volume_steps_voice_call_title">Ajustes de volumen: Llamada</string>
 </resources>

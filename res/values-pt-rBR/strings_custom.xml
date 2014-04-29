@@ -68,9 +68,26 @@
   <string name="end_time_title">Fim</string>
   <string name="rom_control_title">Controle da ROM</string>
   <string name="themes_settings_title">Temas</string>
+  <string name="themepacks_settings_title">Pacotes de temas</string>
+  <string name="styles_settings_title">Estilos</string>
+  <string name="icons_settings_title">Ícones</string>
+  <string name="fonts_settings_title">Fontes</string>
+  <string name="wallpaper_settings_title">Papéis de parede</string>
+  <string name="lockscreen_wallpaper_settings_title">Papéis de parede da tela de bloqueio</string>
+  <string name="bootanim_settings_title">Animações de inicialização</string>
+  <string name="soundpack_settings_title">Pacotes de som</string>
   <string name="lockscreen_quick_unlock_control_title">Desbloqueio rápido de PIN</string>
   <string name="lockscreen_quick_unlock_control_summary">Desbloquear tela de bloqueio com senha/PIN sem apertar a tecla Enter</string>
   <string name="device_hostname">Nome do dispositivo</string>
   <string name="wifi_menu_forget_all">Esquecer todas as redes</string>
   <string name="data_usage_lengths_spinner_subtitle">Duração do ciclo:</string>
+  <string name="wifi_setting_countrycode_title">Código de região Wi-Fi</string>
+  <string name="wifi_setting_countrycode_summary">Especifique o código de região para Wi-Fi</string>
+  <string name="wifi_setting_countrycode_error">Houve um problema de configuração do código de região.</string>
+  <string name="volume_steps_60">60</string>
+  <string name="volume_steps_45">45</string>
+  <string name="volume_steps_30">30</string>
+  <string name="volume_steps_15">15</string>
+  <string name="volume_steps_7">7</string>
+  <string name="volume_steps_5">5</string>
 </resources>

@@ -74,10 +74,18 @@
   <string name="wifi_setting_countrycode_title">WLAN-Ländercode</string>
   <string name="wifi_setting_countrycode_summary">WLAN-Ländercode festlegen</string>
   <string name="wifi_setting_countrycode_error">Beim Festlegen des WLAN-Ländercodes ist ein Problem aufgetreten.</string>
+  <string name="live_volume_title">Echtzeit Lautstärkestufen</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
   <string name="volume_steps_30">30</string>
   <string name="volume_steps_15">15</string>
   <string name="volume_steps_7">7</string>
   <string name="volume_steps_5">5</string>
+  <string name="volume_steps_alarm_title">Lautstärkestufen: Wecker</string>
+  <string name="volume_steps_dtmf_title">Lautstärkestufen: DTMF</string>
+  <string name="volume_steps_music_title">Lautstärkestufen: Musik</string>
+  <string name="volume_steps_notification_title">Lautstärkestufen: Benachrichtigungen</string>
+  <string name="volume_steps_ring_title">Lautstärkestufen: Rufton</string>
+  <string name="volume_steps_system_title">Lautstärkestufen: Systemweit</string>
+  <string name="volume_steps_voice_call_title">Lautstärkestufen: Anruf</string>
 </resources>

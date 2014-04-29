@@ -66,6 +66,14 @@
   <string name="end_time_title">අවසානය</string>
   <string name="rom_control_title">රොම් පාලකය</string>
   <string name="themes_settings_title">තේමාවන්</string>
+  <string name="themepacks_settings_title">තේමා ඇසුරුම්</string>
+  <string name="styles_settings_title">විලාස</string>
+  <string name="icons_settings_title">අයිකන</string>
+  <string name="fonts_settings_title">ෆොන්ට</string>
+  <string name="wallpaper_settings_title">බිතුපත්</string>
+  <string name="lockscreen_wallpaper_settings_title">අගුළු තිර බිතුපත්</string>
+  <string name="bootanim_settings_title">ඇරඹුම් සජීවීකරණ</string>
+  <string name="soundpack_settings_title">ශබ්ද ඇසුරුම්</string>
   <string name="lockscreen_quick_unlock_control_title">ඉක්මන් යතුරු අගුළු ඇරීම</string>
   <string name="lockscreen_quick_unlock_control_summary">මුරපද හෝ යතුරු අගුළු තිරය සඳහා ඇතුලත් කිරීමේ බොත්තම ඔබන්නේ නැතුව අගුළු අරින්න</string>
   <string name="device_hostname">උපාංගයේ ආගන්තුක නාමය</string>

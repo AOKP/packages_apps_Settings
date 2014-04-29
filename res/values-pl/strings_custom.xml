@@ -18,7 +18,7 @@
  */
 -->
 <resources>
-  <string name="hardware_info">O sprzęcie</string>
+  <string name="hardware_info">Informacje o sprzęcie</string>
   <string name="device_rear_camera">Tylna kamera</string>
   <string name="device_front_camera">Przednia kamera</string>
   <string name="device_screen_resolution">Rozdzielczość ekranu</string>
@@ -74,6 +74,7 @@
   <string name="wifi_setting_countrycode_title">Kod lokalny Wi-Fi</string>
   <string name="wifi_setting_countrycode_summary">Określ kod regionu dla Wi-Fi</string>
   <string name="wifi_setting_countrycode_error">Wystąpił problem podczas ustawiania kodu regionu.</string>
+  <string name="live_volume_title">Live volume steps</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
   <string name="volume_steps_30">30</string>

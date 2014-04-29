@@ -73,4 +73,13 @@
   <string name="device_hostname">设备名称</string>
   <string name="wifi_menu_forget_all">所有网络都不记住</string>
   <string name="data_usage_lengths_spinner_subtitle">周期长度：</string>
+  <string name="wifi_setting_countrycode_title">Wi-Fi 区域代码</string>
+  <string name="wifi_setting_countrycode_summary">设置 Wi-Fi 区域代码</string>
+  <string name="wifi_setting_countrycode_error">设置区域代码时出现问题。</string>
+  <string name="volume_steps_60">60</string>
+  <string name="volume_steps_45">45</string>
+  <string name="volume_steps_30">30</string>
+  <string name="volume_steps_15">15</string>
+  <string name="volume_steps_7">7</string>
+  <string name="volume_steps_5">5</string>
 </resources>

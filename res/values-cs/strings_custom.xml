@@ -66,6 +66,14 @@
   <string name="end_time_title">Konec</string>
   <string name="rom_control_title">Nastavení ROM</string>
   <string name="themes_settings_title">Témata vzhledu</string>
+  <string name="themepacks_settings_title">Balíčky vzhledu</string>
+  <string name="styles_settings_title">Styly</string>
+  <string name="icons_settings_title">Ikony</string>
+  <string name="fonts_settings_title">Fonty</string>
+  <string name="wallpaper_settings_title">Pozadí</string>
+  <string name="lockscreen_wallpaper_settings_title">Pozadí zamčené obrazovky</string>
+  <string name="bootanim_settings_title">Startovací animace</string>
+  <string name="soundpack_settings_title">Zvukové balíčky</string>
   <string name="lockscreen_quick_unlock_control_title">Rychlé odemčení pomocí PINu</string>
   <string name="lockscreen_quick_unlock_control_summary">Odemknout zamčenou obrazovku pomocí hesla/pinu bez stisku tlačítka enter</string>
   <string name="device_hostname">Jméno zařízení</string>

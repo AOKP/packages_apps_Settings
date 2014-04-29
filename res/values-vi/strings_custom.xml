@@ -17,4 +17,85 @@
  * limitations under the License.
  */
 -->
-<resources/>
+<resources>
+  <string name="hardware_info">Thông tin phần cứng</string>
+  <string name="device_rear_camera">Camera sau</string>
+  <string name="device_front_camera">Camera trước</string>
+  <string name="device_screen_resolution">Độ phân giải</string>
+  <string name="gpu_info">GPU</string>
+  <string name="cpu_info">CPU</string>
+  <string name="chipset_info">Chipset</string>
+  <string name="mem_info">Bộ nhớ</string>
+  <string name="mod_version">Phiên bản AOKP</string>
+  <string name="mod_version_default">Không rõ</string>
+  <string name="build_date">Ngày dựng</string>
+  <string name="build_date_default">2012-01-01-0000</string>
+  <string name="quick_links_title">Liên kết nhanh</string>
+  <string name="advanced_settings_title">Tùy chọn thiết bị</string>
+  <string name="anonymous_statistics_title">Thống kê AOKP</string>
+  <string name="anonymous_statistics_summary">Giúp AOKP tốt hơn bằng cách chọn tham gia báo cáo thống kê ẩn danh</string>
+  <string name="anonymous_statistics_warning_title">Thông tin</string>
+  <string name="anonymous_statistics_warning">Chọn tham gia thống kê AOKP sẽ cho phép gửi dữ liệu không liên quan đến cá nhân đến
+        những nhà phát triển AOKP để theo dõi số lượt cái đặt trên các thiết bị. Thông tin đã gửi sẽ bao gồm một nhận dạng duy nhất,
+        nó sẽ không ảnh hưởng đến sự riêng tư hoặc dữ liệu cá nhân của bạn. Dữ liệu được gửi mỗi tuần một lần, trong lúc khởi động.\n\nĐể xem mẫu dữ liệu được gửi, chạm vào Xem trước dữ liệu.</string>
+  <string name="enable_reporting_title">Cho phép báo cáo</string>
+  <string name="preview_data_title">Xem trước dữ liệu</string>
+  <string name="preview_data_summary">%s</string>
+  <string name="view_stats_title">Xem thống kê</string>
+  <string name="anonymous_learn_more">Tìm hiểu thêm</string>
+  <string name="anonymous_notification_desc">Cho phép hoặc vô hiệu thống kê AOKP</string>
+  <string name="preview_id_title">ID duy nhất</string>
+  <string name="preview_device_title">Thiết bị</string>
+  <string name="preview_version_title">Phiên bản</string>
+  <string name="preview_country_title">Quốc gia</string>
+  <string name="preview_carrier_title">Nhà mạng</string>
+  <string name="confirm_delete_apn">APN sẽ bị xoá.</string>
+  <string name="font_size_sample">Mẫu</string>
+  <string name="quiet_hours_title">Giờ yên tĩnh</string>
+  <string name="quiet_hours_summary">Đặt cấu hình những giờ thiết bị nên yên tĩnh</string>
+  <string name="quiet_hours_enabled_title">Kích hoạt giờ yên tĩnh</string>
+  <string name="quiet_hours_start">Bắt đầu giờ yên tĩnh</string>
+  <string name="quiet_hours_start_summary">Lúc bắt đầu thực thi giờ yên tĩnh</string>
+  <string name="quiet_hours_end">Kết thúc giờ yên tĩnh</string>
+  <string name="quiet_hours_end_summary">Khi ngừng thi hành giờ yên tĩnh</string>
+  <string name="quiet_hours_notifications_title">Tắt âm thông báo</string>
+  <string name="quiet_hours_ringer_title">Tắt nhạc chuông</string>
+  <string name="quiet_hours_still_title">Vô hiệu rung thông báo</string>
+  <string name="quiet_hours_dim_title">Vô hiệu đèn thông báo</string>
+  <string name="quiet_hours_active_from">Hoạt động từ</string>
+  <string name="quiet_hours_active_to">đến</string>
+  <string name="start_time_title">Bắt đầu</string>
+  <string name="end_time_title">Kết thúc</string>
+  <string name="rom_control_title">Kiểm soát ROM</string>
+  <string name="themes_settings_title">Chủ đề</string>
+  <string name="themepacks_settings_title">Gói chủ đề</string>
+  <string name="styles_settings_title">Phong cách</string>
+  <string name="icons_settings_title">Biểu tượng</string>
+  <string name="fonts_settings_title">Phông chữ</string>
+  <string name="wallpaper_settings_title">Hình nền</string>
+  <string name="lockscreen_wallpaper_settings_title">Hình nền màn hình khoá</string>
+  <string name="bootanim_settings_title">Ảnh khởi động</string>
+  <string name="soundpack_settings_title">Gói âm thanh</string>
+  <string name="lockscreen_quick_unlock_control_title">Mở pin nhanh</string>
+  <string name="lockscreen_quick_unlock_control_summary">Mở màn hình khoá mật khẩu/pin mà không cần chọn nút Nhập</string>
+  <string name="device_hostname">Tên máy chủ thiết bị</string>
+  <string name="wifi_menu_forget_all">Quên tất cả các mạng</string>
+  <string name="data_usage_lengths_spinner_subtitle">Độ dài chu kỳ:</string>
+  <string name="wifi_setting_countrycode_title">Mã khu vực Wi-Fi</string>
+  <string name="wifi_setting_countrycode_summary">Chỉ định mã vùng cho Wi-Fi</string>
+  <string name="wifi_setting_countrycode_error">Đã có vấn đề thiết lập mã vùng.</string>
+  <string name="live_volume_title">Điều chỉnh âm lượng trực tiếp</string>
+  <string name="volume_steps_60">60</string>
+  <string name="volume_steps_45">45</string>
+  <string name="volume_steps_30">30</string>
+  <string name="volume_steps_15">15</string>
+  <string name="volume_steps_7">7</string>
+  <string name="volume_steps_5">5</string>
+  <string name="volume_steps_alarm_title">Điều chỉnh âm lượng: Báo thức</string>
+  <string name="volume_steps_dtmf_title">Điều chỉnh âm lượng: DTMF</string>
+  <string name="volume_steps_music_title">Điều chỉnh âm lượng: Nhạc</string>
+  <string name="volume_steps_notification_title">Điều chỉnh âm lượng: Thông báo</string>
+  <string name="volume_steps_ring_title">Điều chỉnh âm lượng: Nhạc chuông</string>
+  <string name="volume_steps_system_title">Điều chỉnh âm lượng: Hệ thống</string>
+  <string name="volume_steps_voice_call_title">Điều chỉnh âm lượng: Gọi thoại</string>
+</resources>

@@ -17,4 +17,6 @@
  * limitations under the License.
  */
 -->
-<resources/>
+<resources>
+  <string name="preview_country_title">البلد</string>
+</resources>
