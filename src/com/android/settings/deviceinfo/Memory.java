@@ -342,8 +342,8 @@ public class Memory extends SettingsPreferenceFragment
 
         switch (id) {
             case DLG_CONFIRM_UNMOUNT:
-                int titleResId = R.string.dlg_confirm_unmount_title;
-                int messageResId = R.string.dlg_confirm_unmount_text;
+                int titleResId = R.string.dlg_confirm_sdcard_unmount_title;
+                int messageResId = R.string.dlg_confirm_sdcard_unmount_text;
 
                 // set the strings based on volume
                 if (MediaFormat.isUsbStorage(mStorageVolume, getActivity())) {
@@ -367,7 +367,7 @@ public class Memory extends SettingsPreferenceFragment
                         .create();
 
             case DLG_ERROR_UNMOUNT:
-                int errMessageResId = R.string.dlg_error_unmount_text;
+                int errMessageResId = R.string.dlg_error_sdcard_unmount_text;
 
                 // set the strings based on volume
                 if (MediaFormat.isUsbStorage(mStorageVolume, getActivity())) {
@@ -398,7 +398,8 @@ public class Memory extends SettingsPreferenceFragment
                         Toast.LENGTH_SHORT).show();
             }
         } else {
-            Toast.makeText(getActivity(), R.string.unmount_inform_text, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), R.string.sdcard_unmount_inform_text,
+                    Toast.LENGTH_SHORT).show();
         }
 
         IMountService mountService = getMountService();
