@@ -66,6 +66,14 @@
   <string name="end_time_title">Ende</string>
   <string name="rom_control_title">ROM Steuerung</string>
   <string name="themes_settings_title">Designs</string>
+  <string name="themepacks_settings_title">Theme Pakete</string>
+  <string name="styles_settings_title">Styles</string>
+  <string name="icons_settings_title">Icons</string>
+  <string name="fonts_settings_title">Schriftarten</string>
+  <string name="wallpaper_settings_title">Hintergründe</string>
+  <string name="lockscreen_wallpaper_settings_title">Sperrbildschirm-Hintergründe</string>
+  <string name="bootanim_settings_title">Boot-Animationen</string>
+  <string name="soundpack_settings_title">Soundpakete</string>
   <string name="lockscreen_quick_unlock_control_title">Quick pin unlock</string>
   <string name="lockscreen_quick_unlock_control_summary">Entsperren mit Passwort/PIN ohne Eingabetaste</string>
   <string name="device_hostname">Hostname des Geräts</string>

@@ -83,6 +83,7 @@ La información enviada incluye un identificador único, que no compromete tu pr
   <string name="wifi_setting_countrycode_title">Código de región Wi-Fi</string>
   <string name="wifi_setting_countrycode_summary">Especifique el código de región para Wi-Fi</string>
   <string name="wifi_setting_countrycode_error">Hubo un problema al ingresar el código de región.</string>
+  <string name="live_volume_title">Niveles de audio</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
   <string name="volume_steps_30">30</string>

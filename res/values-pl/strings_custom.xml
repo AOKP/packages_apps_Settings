@@ -66,6 +66,14 @@
   <string name="end_time_title">Koniec</string>
   <string name="rom_control_title">Ustawienia ROMu</string>
   <string name="themes_settings_title">Motywy</string>
+  <string name="themepacks_settings_title">Motywy</string>
+  <string name="styles_settings_title">Style</string>
+  <string name="icons_settings_title">Ikony</string>
+  <string name="fonts_settings_title">Czcionki</string>
+  <string name="wallpaper_settings_title">Tapety</string>
+  <string name="lockscreen_wallpaper_settings_title">Tapety ekranu blokady</string>
+  <string name="bootanim_settings_title">Bootanimacje</string>
+  <string name="soundpack_settings_title">Paczki dźwięków</string>
   <string name="lockscreen_quick_unlock_control_title">Szybkie odblokowanie PINu</string>
   <string name="lockscreen_quick_unlock_control_summary">Odblokuj ekran blokady z PINem/hasłem bez naciskania przycisku enter</string>
   <string name="device_hostname">Nazwa hosta urządzenia</string>

@@ -19,7 +19,7 @@
 -->
 <resources>
   <string name="hardware_info">Information matériel</string>
-  <string name="device_rear_camera">Appareil photo</string>
+  <string name="device_rear_camera">Caméra arrière</string>
   <string name="device_front_camera">Caméra avant</string>
   <string name="device_screen_resolution">Résolution d\'écran</string>
   <string name="gpu_info">Caractéristiques Processeur graphique</string>
@@ -66,6 +66,14 @@
   <string name="end_time_title">Fin</string>
   <string name="rom_control_title">Règlages de la rom</string>
   <string name="themes_settings_title">Thèmes</string>
+  <string name="themepacks_settings_title">Packs de thème</string>
+  <string name="styles_settings_title">Styles</string>
+  <string name="icons_settings_title">Icônes</string>
+  <string name="fonts_settings_title">Polices</string>
+  <string name="wallpaper_settings_title">Fonds d\'écran</string>
+  <string name="lockscreen_wallpaper_settings_title">Fonds de l\'écran de verrouillage</string>
+  <string name="bootanim_settings_title">Animations de démarrage</string>
+  <string name="soundpack_settings_title">Packs de sons</string>
   <string name="lockscreen_quick_unlock_control_title">PIN de déverrouillage rapide</string>
   <string name="lockscreen_quick_unlock_control_summary">Déverrouillez votre mot de passe/pin écran de verrouillage sans appuyer sur le bouton entrer</string>
   <string name="device_hostname">Nom d\'hôte de l\'appareil</string>
@@ -74,18 +82,18 @@
   <string name="wifi_setting_countrycode_title">Code de région Wi-Fi</string>
   <string name="wifi_setting_countrycode_summary">Indiquer le code région pour le Wi-Fi</string>
   <string name="wifi_setting_countrycode_error">Il y a eu un problème de réglage du code de région.</string>
-  <string name="live_volume_title">réglages de volume direct</string>
+  <string name="live_volume_title">Réglages du nombre de niveaux de volume</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
   <string name="volume_steps_30">30</string>
   <string name="volume_steps_15">15</string>
   <string name="volume_steps_7">7</string>
   <string name="volume_steps_5">5</string>
-  <string name="volume_steps_alarm_title">Mesures de volume : alarme</string>
-  <string name="volume_steps_dtmf_title">Mesures de volume : DTMF</string>
-  <string name="volume_steps_music_title">Mesures de volume : musique</string>
-  <string name="volume_steps_notification_title">Mesures de volume : Notification</string>
-  <string name="volume_steps_ring_title">Mesures de volume : Ringer</string>
-  <string name="volume_steps_system_title">Mesures de volume : système</string>
-  <string name="volume_steps_voice_call_title">Mesures de volume : appel vocal</string>
+  <string name="volume_steps_alarm_title">Nombre de niveaux du volume : Alarme</string>
+  <string name="volume_steps_dtmf_title">Nombre de niveaux du volume : Tonalité du clavier téléphonique</string>
+  <string name="volume_steps_music_title">Nombre de niveaux du volume : Musique</string>
+  <string name="volume_steps_notification_title">Nombre de niveaux du volume : Notification</string>
+  <string name="volume_steps_ring_title">Nombre de niveaux du volume : Sonnerie</string>
+  <string name="volume_steps_system_title">Nombre de niveaux du volume : Système</string>
+  <string name="volume_steps_voice_call_title">Nombre de niveaux du volume : Appel Vocal</string>
 </resources>
