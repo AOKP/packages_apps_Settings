@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="hardware_info">ハードウェア情報</string>
   <string name="device_rear_camera">リアカメラ</string>
   <string name="device_front_camera">フロントカメラ</string>
@@ -81,6 +81,18 @@
   <string name="device_hostname">デバイスホスト名</string>
   <string name="wifi_menu_forget_all">すべてのネットワークを消去</string>
   <string name="data_usage_lengths_spinner_subtitle">サイクルの長さ:</string>
+  <string name="checkbox_increasing_ring">有効</string>
+  <string name="increasing_ring_title">ステップトーン</string>
+  <string name="increasing_ring_min_volume_title">着信開始時の音量</string>
+  <string name="increasing_ring_volume_notice">注意:\n開始時の音量が着信音量よりも大きく設定されている場合は、着信音は通常の着信音量で再生されます</string>
+  <string name="increasing_ring_interval_title">音量の増加間隔</string>
+  <string name="increasing_ring_interval_eachring">鳴動ごと</string>
+  <string name="increasing_ring_interval_half_second">0.5 秒</string>
+  <string name="increasing_ring_interval_1second">1 秒</string>
+  <string name="increasing_ring_interval_2seconds">2 秒</string>
+  <string name="increasing_ring_interval_3seconds">3 秒</string>
+  <string name="increasing_ring_interval_5seconds">5 秒</string>
+  <string name="increasing_ring_interval_10seconds">10 秒</string>
   <string name="wifi_setting_countrycode_title">Wi-Fiリージョンコード</string>
   <string name="wifi_setting_countrycode_summary">Wi-Fiの地域コードを指定する</string>
   <string name="wifi_setting_countrycode_error">地域コードの設定に問題があります</string>
@@ -98,4 +110,5 @@
   <string name="volume_steps_ring_title">音量レベル: 着信音</string>
   <string name="volume_steps_system_title">音量レベル: システム音</string>
   <string name="volume_steps_voice_call_title">音量レベル: ボイスコール</string>
+  <string name="bluetooth_accept_all_files">すべてのファイルタイプを受け入れる</string>
 </resources>

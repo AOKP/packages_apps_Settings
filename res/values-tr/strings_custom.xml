@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="hardware_info">Donanım bilgisi</string>
   <string name="device_rear_camera">Arka kamera</string>
   <string name="device_front_camera">Ön yüz kamerası</string>
@@ -96,4 +96,5 @@
   <string name="volume_steps_ring_title">Ses adımları: Zil sesi</string>
   <string name="volume_steps_system_title">Ses adımları: Sistem</string>
   <string name="volume_steps_voice_call_title">Ses adımları: Sesli Arama</string>
+  <string name="bluetooth_accept_all_files">Bütün dosya türlerini kabul et</string>
 </resources>

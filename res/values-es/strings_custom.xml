@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="hardware_info">Información de Hardware</string>
   <string name="device_rear_camera">Cámara trasera</string>
   <string name="device_front_camera">Cámara frontal</string>

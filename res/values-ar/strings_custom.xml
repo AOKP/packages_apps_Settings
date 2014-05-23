@@ -17,6 +17,60 @@
  * limitations under the License.
  */
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="hardware_info">معلومات المواصفات الداخلية</string>
+  <string name="device_rear_camera">كاميرا خلفية</string>
+  <string name="device_front_camera">الجبهة تركيز الكاميرا</string>
+  <string name="device_screen_resolution">دقة الشاشة</string>
+  <string name="gpu_info">الجرافيكس</string>
+  <string name="cpu_info">وحدة المعالجة المركزية</string>
+  <string name="chipset_info">شرائح</string>
+  <string name="mem_info">ذاكرة</string>
+  <string name="mod_version">إصدار AOKP</string>
+  <string name="mod_version_default">غير معروف</string>
+  <string name="build_date">تاريخ الإصدار</string>
+  <string name="build_date_default">2012-01-01-0000</string>
+  <string name="quick_links_title">روابط سريعة</string>
+  <string name="advanced_settings_title">خيارات الجهاز</string>
+  <string name="anonymous_statistics_title">إحصائيات AOKP</string>
+  <string name="anonymous_statistics_summary">المساعدة في جعل AKOP أفضل بإختيار الإبلاغ عن إحصائيات مجهولة المصدر</string>
+  <string name="anonymous_statistics_warning_title">حول</string>
+  <string name="enable_reporting_title">تمكين إعدادت التقارير</string>
+  <string name="preview_data_title">معاينة البيانات</string>
+  <string name="preview_data_summary">%s</string>
+  <string name="view_stats_title">عرض الإحصائيات</string>
+  <string name="anonymous_learn_more">لمعرفة المزيد</string>
+  <string name="anonymous_notification_desc">تمكين أو تعطيل إحصاءات AKOP</string>
+  <string name="preview_id_title">Unique ID</string>
+  <string name="preview_device_title">الجهاز</string>
+  <string name="preview_version_title">الإصدار</string>
   <string name="preview_country_title">البلد</string>
+  <string name="preview_carrier_title">الناقل</string>
+  <string name="confirm_delete_apn">سيتم حذف APN.</string>
+  <string name="font_size_sample">عينة</string>
+  <string name="quiet_hours_title">ساعات هادئة</string>
+  <string name="quiet_hours_summary">تكوين ساعات الجهاز يجب أن تكون هادئة</string>
+  <string name="quiet_hours_enabled_title">تمكين ساعات هادئة</string>
+  <string name="quiet_hours_start">بدء ساعات هادئة</string>
+  <string name="quiet_hours_start_summary">متى  يبدء فرض ساعات هادئة</string>
+  <string name="quiet_hours_end">نهاية ساعات هادئة</string>
+  <string name="quiet_hours_end_summary">متى  يبدء فرض ساعات هادئة</string>
+  <string name="quiet_hours_notifications_title">كتم أصوات الإشعار</string>
+  <string name="quiet_hours_ringer_title">كتم صوت نغمات الهاتف</string>
+  <string name="quiet_hours_still_title">تعطيل الاهتزازات</string>
+  <string name="quiet_hours_dim_title">تعطيل ضوء الإعلام</string>
+  <string name="quiet_hours_active_from">نشط من</string>
+  <string name="quiet_hours_active_to">إلى</string>
+  <string name="start_time_title">بدء</string>
+  <string name="end_time_title">الانتهاء</string>
+  <string name="rom_control_title">التحكم في الروم</string>
+  <string name="themes_settings_title">الثيمات</string>
+  <string name="themepacks_settings_title">حزم المواضيع</string>
+  <string name="styles_settings_title">أنماط</string>
+  <string name="icons_settings_title">أيقونات</string>
+  <string name="fonts_settings_title">الخطوط</string>
+  <string name="wallpaper_settings_title">خلفيات</string>
+  <string name="lockscreen_wallpaper_settings_title">خلفيات قفل الشاشة</string>
+  <string name="bootanim_settings_title">الرسوم المتحركة في التشغيل</string>
+  <string name="soundpack_settings_title">حزم الصوت</string>
 </resources>

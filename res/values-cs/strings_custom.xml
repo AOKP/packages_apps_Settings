@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="hardware_info">Informace o hardwaru</string>
   <string name="device_rear_camera">Zadní kamera</string>
   <string name="device_front_camera">Přední kamera</string>
@@ -79,6 +79,18 @@
   <string name="device_hostname">Jméno zařízení</string>
   <string name="wifi_menu_forget_all">Odstranit všechny sítě</string>
   <string name="data_usage_lengths_spinner_subtitle">Délka období:</string>
+  <string name="checkbox_increasing_ring">Zapnout</string>
+  <string name="increasing_ring_title">Vzrůstající vyzvánění</string>
+  <string name="increasing_ring_min_volume_title">Počáteční hlasitost vyzvánění</string>
+  <string name="increasing_ring_volume_notice">Upozornění:\nPokud je počáteční hlasitost nastavena na vyšší hodnotu než hlasitost normální, bude při vyzvánění použita normální (nevzrůstající) hlasitost.</string>
+  <string name="increasing_ring_interval_title">Interval zesilování</string>
+  <string name="increasing_ring_interval_eachring">Při každém opakování melodie</string>
+  <string name="increasing_ring_interval_half_second">0,5 sekundy</string>
+  <string name="increasing_ring_interval_1second">1 sekunda</string>
+  <string name="increasing_ring_interval_2seconds">2 sekundy</string>
+  <string name="increasing_ring_interval_3seconds">3 sekundy</string>
+  <string name="increasing_ring_interval_5seconds">5 sekund</string>
+  <string name="increasing_ring_interval_10seconds">10 sekund</string>
   <string name="wifi_setting_countrycode_title">Kód regionu Wi-Fi</string>
   <string name="wifi_setting_countrycode_summary">Nastavit regionální kód pro Wi-Fi</string>
   <string name="wifi_setting_countrycode_error">Při nastavování kódu regionu došlo k chybě.</string>
@@ -96,19 +108,5 @@
   <string name="volume_steps_ring_title">Počet kroků: Vyzvánění</string>
   <string name="volume_steps_system_title">Počet kroků: Systém</string>
   <string name="volume_steps_voice_call_title">Počet kroků: Hlasové hovory</string>
-  <string name="increasing_ring_title">Vzrůstající vyzvánění</string>
-  <string name="checkbox_increasing_ring">Zapnout</string>
-  <string name="increasing_ring_min_volume_title">Počáteční hlasitost vyzvánění</string>
-  <string name="increasing_ring_volume_notice">Upozornění:\nPokud je počáteční hlasitost
-        nastavena na vyšší hodnotu než hlasitost normální, bude při vyzvýnění použita normální
-        (nevzrůstající) hlasitost.
-  </string>
-  <string name="increasing_ring_interval_title">Interval zesilování</string>
-  <string name="increasing_ring_interval_eachring">Při každém opakování melodie</string>
-  <string name="increasing_ring_interval_half_second">0,5 sekundy</string>
-  <string name="increasing_ring_interval_1second">1 sekunda</string>
-  <string name="increasing_ring_interval_2seconds">2 sekundy</string>
-  <string name="increasing_ring_interval_3seconds">3 sekundy</string>
-  <string name="increasing_ring_interval_5seconds">5 sekund</string>
-  <string name="increasing_ring_interval_10seconds">10 sekund</string>
+  <string name="bluetooth_accept_all_files">Přijmout všechny typy souborů</string>
 </resources>

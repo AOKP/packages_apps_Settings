@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="hardware_info">Thông tin phần cứng</string>
   <string name="device_rear_camera">Camera sau</string>
   <string name="device_front_camera">Camera trước</string>
@@ -81,6 +81,19 @@
   <string name="device_hostname">Tên máy chủ thiết bị</string>
   <string name="wifi_menu_forget_all">Quên tất cả các mạng</string>
   <string name="data_usage_lengths_spinner_subtitle">Độ dài chu kỳ:</string>
+  <string name="checkbox_increasing_ring">Bật</string>
+  <string name="increasing_ring_title">Âm lượng chuông tăng dần</string>
+  <string name="increasing_ring_min_volume_title">Âm lượng chuông lúc bắt đầu</string>
+  <string name="increasing_ring_volume_notice">Chú ý:\nNếu âm lượng bắt đầu được đặt cao hơn âm lượng chuông thì nhạc chuông sẽ được phát bằng âm lượng chuông.
+    </string>
+  <string name="increasing_ring_interval_title">Thời gian tăng</string>
+  <string name="increasing_ring_interval_eachring">Mỗi khi đổ chuông</string>
+  <string name="increasing_ring_interval_half_second">0,5 giây</string>
+  <string name="increasing_ring_interval_1second">1 giây</string>
+  <string name="increasing_ring_interval_2seconds">2 giây</string>
+  <string name="increasing_ring_interval_3seconds">3 giây</string>
+  <string name="increasing_ring_interval_5seconds">5 giây</string>
+  <string name="increasing_ring_interval_10seconds">10 giây</string>
   <string name="wifi_setting_countrycode_title">Mã khu vực Wi-Fi</string>
   <string name="wifi_setting_countrycode_summary">Chỉ định mã vùng cho Wi-Fi</string>
   <string name="wifi_setting_countrycode_error">Đã có vấn đề thiết lập mã vùng.</string>
@@ -98,4 +111,5 @@
   <string name="volume_steps_ring_title">Điều chỉnh âm lượng: Nhạc chuông</string>
   <string name="volume_steps_system_title">Điều chỉnh âm lượng: Hệ thống</string>
   <string name="volume_steps_voice_call_title">Điều chỉnh âm lượng: Gọi thoại</string>
+  <string name="bluetooth_accept_all_files">Chấp nhận tất cả các loại tập tin</string>
 </resources>

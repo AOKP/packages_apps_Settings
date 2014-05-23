@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="hardware_info">硬體資訊</string>
   <string name="device_rear_camera">後置相機</string>
   <string name="device_front_camera">前置相機</string>
@@ -35,7 +35,7 @@
   <string name="anonymous_statistics_title">AOKP 統計資料</string>
   <string name="anonymous_statistics_summary">透過發送匿名統計報告來協助改善 AOKP</string>
   <string name="anonymous_statistics_warning_title">關於</string>
-  <string name="anonymous_statistics_warning">加入 AOKP 統計將允許非個人資料被提交到 AOKP 的開發人員，以追蹤每個裝置上的獨特安裝。提交的資訊包含一個唯一識別碼，此識別碼並不會泄露您的隱私或個人資料。該資料在每次啟動時被提交。\n\n輕按預覽資料以預覽被提交資料的例子。</string>
+  <string name="anonymous_statistics_warning">開啟 AOKP  統計將允許非個人數據被提交到 AOKP 的開發者以便記錄各種設備上的獨特安裝。提交的信息包含一個獨特的標識符，而不會涉及您的私隱與個人數據。該數據將在每次啟動時被提交。 \n\n如您想看一個作為被提交數據的實例，請輕按預覽數據。</string>
   <string name="enable_reporting_title">啟用報告</string>
   <string name="preview_data_title">預覽資料</string>
   <string name="preview_data_summary">%s</string>
@@ -79,6 +79,18 @@
   <string name="device_hostname">裝置主機名稱</string>
   <string name="wifi_menu_forget_all">忘記所有網路</string>
   <string name="data_usage_lengths_spinner_subtitle">週期長度：</string>
+  <string name="checkbox_increasing_ring">啟用</string>
+  <string name="increasing_ring_title">漸強鈴聲</string>
+  <string name="increasing_ring_min_volume_title">鈴聲起初音量</string>
+  <string name="increasing_ring_volume_notice">注意：\n若初始音量大於系統鈴聲音量，鈴聲將使用系統鈴聲音量播放。</string>
+  <string name="increasing_ring_interval_title">增強間隔</string>
+  <string name="increasing_ring_interval_eachring">每次鈴響</string>
+  <string name="increasing_ring_interval_half_second">0.5 秒</string>
+  <string name="increasing_ring_interval_1second">1 秒</string>
+  <string name="increasing_ring_interval_2seconds">2 秒</string>
+  <string name="increasing_ring_interval_3seconds">3 秒</string>
+  <string name="increasing_ring_interval_5seconds">5 秒</string>
+  <string name="increasing_ring_interval_10seconds">10 秒</string>
   <string name="wifi_setting_countrycode_title">Wi-Fi 區碼</string>
   <string name="wifi_setting_countrycode_summary">指定 Wi-Fi 使用的區碼</string>
   <string name="wifi_setting_countrycode_error">設定區碼時遇到了問題。</string>
@@ -96,4 +108,5 @@
   <string name="volume_steps_ring_title">音量措施：鈴聲</string>
   <string name="volume_steps_system_title">音量措施：系統</string>
   <string name="volume_steps_voice_call_title">音量措施：語音電話</string>
+  <string name="bluetooth_accept_all_files">接受所有檔案類型</string>
 </resources>

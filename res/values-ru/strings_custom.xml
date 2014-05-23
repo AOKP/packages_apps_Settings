@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="hardware_info">Оборудование</string>
   <string name="device_rear_camera">Задняя камера</string>
   <string name="device_front_camera">Передняя камера</string>
@@ -79,6 +79,20 @@
   <string name="device_hostname">Хост устройства</string>
   <string name="wifi_menu_forget_all">Забыть все сети</string>
   <string name="data_usage_lengths_spinner_subtitle">Длина цикла:</string>
+  <string name="checkbox_increasing_ring">Включить</string>
+  <string name="increasing_ring_title">Возрастающий звонок</string>
+  <string name="increasing_ring_min_volume_title">Начальная громкость</string>
+  <string name="increasing_ring_volume_notice">Примечание:\nЕсли начальная громкость выше 
+установленной громкости звонка, звонок будет воспроизведён на громкости, установленной в системе.
+    </string>
+  <string name="increasing_ring_interval_title">Интервал возрастания</string>
+  <string name="increasing_ring_interval_eachring">С каждым звонком</string>
+  <string name="increasing_ring_interval_half_second">0,5 с</string>
+  <string name="increasing_ring_interval_1second">1 с</string>
+  <string name="increasing_ring_interval_2seconds">2 с</string>
+  <string name="increasing_ring_interval_3seconds">3 с</string>
+  <string name="increasing_ring_interval_5seconds">5 с</string>
+  <string name="increasing_ring_interval_10seconds">10 с</string>
   <string name="wifi_setting_countrycode_title">Код региона Wi-Fi</string>
   <string name="wifi_setting_countrycode_summary">Указать код региона Wi-Fi</string>
   <string name="wifi_setting_countrycode_error">При настройке кода региона возникла проблема.</string>
@@ -96,4 +110,5 @@
   <string name="volume_steps_ring_title">Уровни: звонок</string>
   <string name="volume_steps_system_title">Уровни: система</string>
   <string name="volume_steps_voice_call_title">Уровни: голосовой вызов</string>
+  <string name="bluetooth_accept_all_files">Принимать все типы файлов</string>
 </resources>

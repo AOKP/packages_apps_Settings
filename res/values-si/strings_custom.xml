@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="hardware_info">දෘඩාංග තොරතුරු</string>
   <string name="device_rear_camera">පසුපස කැමරාව</string>
   <string name="device_front_camera">ඉදිරිපස කැමරාව</string>
@@ -31,7 +31,7 @@
   <string name="build_date">නිමැවූ දිනය</string>
   <string name="build_date_default">2012-01-01-0000</string>
   <string name="quick_links_title">ඉක්මන් සබැඳි</string>
-  <string name="advanced_settings_title">උපාංගයේ අභිරුචි</string>
+  <string name="advanced_settings_title">උපාංගයේ විකල්ප</string>
   <string name="anonymous_statistics_title">AOKP සංඛ්‍යායනය</string>
   <string name="anonymous_statistics_summary">අනුදැනුමෙන් තොර සංඛ්‍යායන වාර්තා බල ගන්වා AOKP වැඩිදියුණු කිරීමට සහාය වන්න</string>
   <string name="anonymous_statistics_warning_title">පිලිබඳ</string>
@@ -79,6 +79,19 @@
   <string name="device_hostname">උපාංගයේ ආගන්තුක නාමය</string>
   <string name="wifi_menu_forget_all">සියලුම ජාල අමතක කරන්න</string>
   <string name="data_usage_lengths_spinner_subtitle">කාල ප්‍රමාණය:</string>
+  <string name="checkbox_increasing_ring">සබලයි</string>
+  <string name="increasing_ring_title">ක්‍රමයෙන් වැඩි වන රින්ග්ටෝනය</string>
+  <string name="increasing_ring_min_volume_title">නාදවීම අරඹන ශබ්ද ප්‍රමාණය</string>
+  <string name="increasing_ring_volume_notice">දැන්වීමයි:\nනදවනයේ ශබ්ද ප්‍රමාණයට වඩා වැඩිවන ලෙස ඇරඹුම් ශබ්ද ප්‍රමාණය සකසා ඇතිවිට, නදවනයේ ශබ්ද ප්‍රමාණය භාවිතයෙන් රින්ග්ටෝනය ධාවනය වනුඇත.
+    </string>
+  <string name="increasing_ring_interval_title">වැඩිවීමේ විරාමය</string>
+  <string name="increasing_ring_interval_eachring">එක් එක් නාදවීමකදී</string>
+  <string name="increasing_ring_interval_half_second">තත්පර 0.5</string>
+  <string name="increasing_ring_interval_1second">තත්පර 1</string>
+  <string name="increasing_ring_interval_2seconds">තත්පර 2</string>
+  <string name="increasing_ring_interval_3seconds">තත්පර 3</string>
+  <string name="increasing_ring_interval_5seconds">තත්පර 5</string>
+  <string name="increasing_ring_interval_10seconds">තත්පර 10</string>
   <string name="wifi_setting_countrycode_title">Wi-Fi කලාප කේතය</string>
   <string name="wifi_setting_countrycode_summary">Wi-Fi සඳහා කලාප කේතය සඳහන් කරන්න</string>
   <string name="wifi_setting_countrycode_error">කලාප කේතය පිහිටුවීමේදී ගැටළුවක් ඇතිවිය.</string>
@@ -96,4 +109,5 @@
   <string name="volume_steps_ring_title">හඬ පරිමා පියවර: නදවනය</string>
   <string name="volume_steps_system_title">හඬ පරිමා පියවර: පද්ධතිය</string>
   <string name="volume_steps_voice_call_title">හඬ පරිමා පියවර: හඬ ඇමතුම</string>
+  <string name="bluetooth_accept_all_files">සියලුම ගොනු වර්ග පිළිගන්න</string>
 </resources>

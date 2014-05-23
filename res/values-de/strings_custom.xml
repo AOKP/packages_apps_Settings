@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="hardware_info">Hardware-Informationen</string>
   <string name="device_rear_camera">Kamera hinten</string>
   <string name="device_front_camera">Kamera vorne</string>
@@ -79,6 +79,19 @@
   <string name="device_hostname">Hostname des Geräts</string>
   <string name="wifi_menu_forget_all">Alle bekannten Netze löschen</string>
   <string name="data_usage_lengths_spinner_subtitle">Dauer des Abrechnungszyklus:</string>
+  <string name="checkbox_increasing_ring">Aktivieren</string>
+  <string name="increasing_ring_title">Ansteigende Klingeltonlautstärke</string>
+  <string name="increasing_ring_min_volume_title">Klingelton Startlautstärke</string>
+  <string name="increasing_ring_volume_notice">Hinweis:\nDa die Startlautstärke höher als die Klingeltonlautstärke ist, wird die Klingeltonlautstärke benutzt.
+    </string>
+  <string name="increasing_ring_interval_title">Intervall erhöhen</string>
+  <string name="increasing_ring_interval_eachring">Bei jedem Klingeln</string>
+  <string name="increasing_ring_interval_half_second">0,5 Sekunden</string>
+  <string name="increasing_ring_interval_1second">1 Sekunde</string>
+  <string name="increasing_ring_interval_2seconds">2 Sekunden</string>
+  <string name="increasing_ring_interval_3seconds">3 Sekunden</string>
+  <string name="increasing_ring_interval_5seconds">5 Sekunden</string>
+  <string name="increasing_ring_interval_10seconds">10 Sekunden</string>
   <string name="wifi_setting_countrycode_title">WLAN-Ländercode</string>
   <string name="wifi_setting_countrycode_summary">WLAN-Ländercode festlegen</string>
   <string name="wifi_setting_countrycode_error">Beim Festlegen des WLAN-Ländercodes ist ein Problem aufgetreten.</string>
@@ -96,4 +109,5 @@
   <string name="volume_steps_ring_title">Lautstärkestufen: Rufton</string>
   <string name="volume_steps_system_title">Lautstärkestufen: Systemweit</string>
   <string name="volume_steps_voice_call_title">Lautstärkestufen: Anruf</string>
+  <string name="bluetooth_accept_all_files">Alle Dateiformate akzeptieren</string>
 </resources>

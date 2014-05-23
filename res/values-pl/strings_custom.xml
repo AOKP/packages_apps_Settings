@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="hardware_info">Informacje o sprzęcie</string>
   <string name="device_rear_camera">Tylna kamera</string>
   <string name="device_front_camera">Przednia kamera</string>
@@ -64,7 +64,7 @@
   <string name="quiet_hours_active_to">do</string>
   <string name="start_time_title">Start</string>
   <string name="end_time_title">Koniec</string>
-  <string name="rom_control_title">Ustawienia ROMu</string>
+  <string name="rom_control_title">Ustawienia AOKP</string>
   <string name="themes_settings_title">Motywy</string>
   <string name="themepacks_settings_title">Motywy</string>
   <string name="styles_settings_title">Style</string>
@@ -79,6 +79,19 @@
   <string name="device_hostname">Nazwa hosta urządzenia</string>
   <string name="wifi_menu_forget_all">Zapomnij wszystkie sieci</string>
   <string name="data_usage_lengths_spinner_subtitle">Długość cyklu:</string>
+  <string name="checkbox_increasing_ring">Aktywuj</string>
+  <string name="increasing_ring_title">Narastający dźwięk dzwonka</string>
+  <string name="increasing_ring_min_volume_title">Początkowa głośność dzwonka</string>
+  <string name="increasing_ring_volume_notice">Uwaga:\nJeżeli początkowa głośność jest wyższa niż standardowa głośność dzwonka, używana będzie ta ostatnia.
+    </string>
+  <string name="increasing_ring_interval_title">Interwał narastania</string>
+  <string name="increasing_ring_interval_eachring">Z każdym dzwonkiem</string>
+  <string name="increasing_ring_interval_half_second">0,5 sekundy</string>
+  <string name="increasing_ring_interval_1second">1 sekunda</string>
+  <string name="increasing_ring_interval_2seconds">2 sekundy</string>
+  <string name="increasing_ring_interval_3seconds">3 sekundy</string>
+  <string name="increasing_ring_interval_5seconds">5 sekund</string>
+  <string name="increasing_ring_interval_10seconds">10 sekund</string>
   <string name="wifi_setting_countrycode_title">Kod lokalny Wi-Fi</string>
   <string name="wifi_setting_countrycode_summary">Określ kod regionu dla Wi-Fi</string>
   <string name="wifi_setting_countrycode_error">Wystąpił problem podczas ustawiania kodu regionu.</string>
@@ -96,4 +109,5 @@
   <string name="volume_steps_ring_title">Poziom głośności: Dzwonek</string>
   <string name="volume_steps_system_title">Poziom głośności: System</string>
   <string name="volume_steps_voice_call_title">Poziom głośności: Rozmowa</string>
+  <string name="bluetooth_accept_all_files">Akceptuj wszystkie typy plików</string>
 </resources>

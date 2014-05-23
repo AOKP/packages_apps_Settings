@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="hardware_info">硬件信息</string>
   <string name="device_rear_camera">后置摄像头</string>
   <string name="device_front_camera">前置摄像头</string>
@@ -68,18 +68,47 @@
   <string name="end_time_title">停止</string>
   <string name="rom_control_title">ROM 控制</string>
   <string name="themes_settings_title">主题</string>
+  <string name="themepacks_settings_title">主题包</string>
+  <string name="styles_settings_title">风格</string>
+  <string name="icons_settings_title">图标</string>
+  <string name="fonts_settings_title">字体</string>
+  <string name="wallpaper_settings_title">壁纸</string>
+  <string name="lockscreen_wallpaper_settings_title">锁屏壁纸</string>
+  <string name="bootanim_settings_title">开机动画</string>
+  <string name="soundpack_settings_title">音效包</string>
   <string name="lockscreen_quick_unlock_control_title">快速PIN解锁</string>
   <string name="lockscreen_quick_unlock_control_summary">密码/PIN解锁不需要点击回车按钮</string>
   <string name="device_hostname">设备名称</string>
   <string name="wifi_menu_forget_all">所有网络都不记住</string>
   <string name="data_usage_lengths_spinner_subtitle">周期长度：</string>
+  <string name="checkbox_increasing_ring">启用</string>
+  <string name="increasing_ring_title">渐强铃声</string>
+  <string name="increasing_ring_min_volume_title">铃声起始音量</string>
+  <string name="increasing_ring_volume_notice">注意：\n如起始音量大于系统铃声音量，将会使用系统铃声音量。</string>
+  <string name="increasing_ring_interval_title">渐强间隔</string>
+  <string name="increasing_ring_interval_eachring">每次响铃</string>
+  <string name="increasing_ring_interval_half_second">0.5 秒</string>
+  <string name="increasing_ring_interval_1second">1 秒</string>
+  <string name="increasing_ring_interval_2seconds">2 秒</string>
+  <string name="increasing_ring_interval_3seconds">3 秒</string>
+  <string name="increasing_ring_interval_5seconds">5 秒</string>
+  <string name="increasing_ring_interval_10seconds">10 秒</string>
   <string name="wifi_setting_countrycode_title">Wi-Fi 区域代码</string>
   <string name="wifi_setting_countrycode_summary">设置 Wi-Fi 区域代码</string>
   <string name="wifi_setting_countrycode_error">设置区域代码时出现问题。</string>
+  <string name="live_volume_title">情景模式</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
   <string name="volume_steps_30">30</string>
   <string name="volume_steps_15">15</string>
   <string name="volume_steps_7">7</string>
   <string name="volume_steps_5">5</string>
+  <string name="volume_steps_alarm_title">音量模式：警告</string>
+  <string name="volume_steps_dtmf_title">音量模式：双音多频</string>
+  <string name="volume_steps_music_title">音量模式：音乐</string>
+  <string name="volume_steps_notification_title">音量模式：通知</string>
+  <string name="volume_steps_ring_title">音量模式：铃声</string>
+  <string name="volume_steps_system_title">音量模式：系统</string>
+  <string name="volume_steps_voice_call_title">音量模式：语音电话</string>
+  <string name="bluetooth_accept_all_files">接受所有文件类型</string>
 </resources>

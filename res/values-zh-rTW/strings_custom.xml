@@ -17,7 +17,11 @@
  * limitations under the License.
  */
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="hardware_info">硬體資訊</string>
+  <string name="device_rear_camera">後方相機</string>
+  <string name="device_front_camera">前置相機</string>
+  <string name="device_screen_resolution">螢幕解析度</string>
   <string name="gpu_info">GPU</string>
   <string name="cpu_info">CPU</string>
   <string name="chipset_info">芯片</string>
@@ -31,4 +35,50 @@
   <string name="anonymous_statistics_title">AOKP統計資料</string>
   <string name="anonymous_statistics_summary">提交匿名資料來協助改善AOKP</string>
   <string name="anonymous_statistics_warning_title">關於</string>
+  <string name="anonymous_statistics_warning">加入 AOKP 統計將允許非個人資料被提交到 CyanogenMod 的開發者，以追蹤每個裝置上的獨特安裝。提交的資訊包含一個唯一識別碼，此識別碼並不會泄露您的隱私或個人資料。該資料在每次開機時被提交。\n\n輕按預覽資料以預覽被提交資料的例子。</string>
+  <string name="enable_reporting_title">啟用報告</string>
+  <string name="preview_data_title">預覽資料</string>
+  <string name="preview_data_summary">%s</string>
+  <string name="view_stats_title">檢視統計</string>
+  <string name="anonymous_learn_more">了解更多</string>
+  <string name="anonymous_notification_desc">啟用或關閉 AOKP 統計</string>
+  <string name="preview_id_title">唯一 ID</string>
+  <string name="preview_device_title">裝置</string>
+  <string name="preview_version_title">版本</string>
+  <string name="preview_country_title">國家</string>
+  <string name="preview_carrier_title">電信業者</string>
+  <string name="confirm_delete_apn">APN 將被刪除。</string>
+  <string name="font_size_sample">範例</string>
+  <string name="quiet_hours_title">靜音時段</string>
+  <string name="quiet_hours_summary">設定裝置應該安靜的時段</string>
+  <string name="quiet_hours_enabled_title">啟用靜音時段</string>
+  <string name="quiet_hours_start">靜音時段開始時間</string>
+  <string name="quiet_hours_start_summary">何時強制啟動靜音時段</string>
+  <string name="quiet_hours_end">靜音時段結束時間</string>
+  <string name="quiet_hours_end_summary">何時強制關閉靜音時段</string>
+  <string name="quiet_hours_notifications_title">將通知靜音</string>
+  <string name="quiet_hours_ringer_title">將鈴聲靜音</string>
+  <string name="quiet_hours_still_title">停用震動</string>
+  <string name="quiet_hours_dim_title">停用通知指示燈</string>
+  <string name="quiet_hours_active_from">啟用從</string>
+  <string name="quiet_hours_active_to">到</string>
+  <string name="start_time_title">開始</string>
+  <string name="end_time_title">結束</string>
+  <string name="rom_control_title">ROM 控制</string>
+  <string name="themes_settings_title">佈景主題</string>
+  <string name="themepacks_settings_title">主題包</string>
+  <string name="styles_settings_title">樣式 </string>
+  <string name="icons_settings_title">圖示</string>
+  <string name="fonts_settings_title">字型</string>
+  <string name="wallpaper_settings_title">桌布</string>
+  <string name="lockscreen_wallpaper_settings_title">鎖定畫面桌布</string>
+  <string name="bootanim_settings_title">開機動畫</string>
+  <string name="soundpack_settings_title">音效包</string>
+  <string name="lockscreen_quick_unlock_control_title">快速 pin 解鎖</string>
+  <string name="lockscreen_quick_unlock_control_summary">解鎖密碼和 pin 鎖定介面不需要按輸入</string>
+  <string name="device_hostname">裝置主機名稱</string>
+  <string name="wifi_menu_forget_all">遺忘所有的網路</string>
+  <string name="data_usage_lengths_spinner_subtitle">週期長度：</string>
+  <string name="wifi_setting_countrycode_title">Wi-Fi 區碼</string>
+  <string name="wifi_setting_countrycode_summary">指定 Wi-Fi 使用的區碼</string>
 </resources>

@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="hardware_info">Information matériel</string>
   <string name="device_rear_camera">Caméra arrière</string>
   <string name="device_front_camera">Caméra avant</string>
@@ -79,6 +79,19 @@
   <string name="device_hostname">Nom d\'hôte de l\'appareil</string>
   <string name="wifi_menu_forget_all">Oubliez tous les réseaux</string>
   <string name="data_usage_lengths_spinner_subtitle">Durée du cycle :</string>
+  <string name="checkbox_increasing_ring">Activer</string>
+  <string name="increasing_ring_title">Sonnerie progressive</string>
+  <string name="increasing_ring_min_volume_title">Volume de départ de la sonnerie</string>
+  <string name="increasing_ring_volume_notice">Remarque :\nLe volume de départ étant supérieur au volume de la sonnerie, ce dernier sera utilisé à la place.
+    </string>
+  <string name="increasing_ring_interval_title">Intervalle de progression</string>
+  <string name="increasing_ring_interval_eachring">À chaque sonnerie</string>
+  <string name="increasing_ring_interval_half_second">0,5 secondes</string>
+  <string name="increasing_ring_interval_1second">1 seconde</string>
+  <string name="increasing_ring_interval_2seconds">2 secondes</string>
+  <string name="increasing_ring_interval_3seconds">3 secondes</string>
+  <string name="increasing_ring_interval_5seconds">5 secondes</string>
+  <string name="increasing_ring_interval_10seconds">10 secondes</string>
   <string name="wifi_setting_countrycode_title">Code de région Wi-Fi</string>
   <string name="wifi_setting_countrycode_summary">Indiquer le code région pour le Wi-Fi</string>
   <string name="wifi_setting_countrycode_error">Il y a eu un problème de réglage du code de région.</string>
@@ -96,4 +109,5 @@
   <string name="volume_steps_ring_title">Nombre de niveaux du volume : Sonnerie</string>
   <string name="volume_steps_system_title">Nombre de niveaux du volume : Système</string>
   <string name="volume_steps_voice_call_title">Nombre de niveaux du volume : Appel Vocal</string>
+  <string name="bluetooth_accept_all_files">Accepter tous les types de fichiers</string>
 </resources>
