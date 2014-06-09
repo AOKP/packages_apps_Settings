@@ -79,9 +79,23 @@
   <string name="device_hostname">Aygıt ana makine adı</string>
   <string name="wifi_menu_forget_all">Tüm ağları unut</string>
   <string name="data_usage_lengths_spinner_subtitle">Döngü uzunluğu:</string>
+  <string name="checkbox_increasing_ring">Etkin</string>
+  <string name="increasing_ring_title">Artan zil sesi</string>
+  <string name="increasing_ring_min_volume_title">Çalma başlangıç ses seviyesi</string>
+  <string name="increasing_ring_volume_notice">Not:\nBaşlangıç ses düzeyi normal zil sesi düzeyinden yüksek olduğunda zil sesi normal zil sesi düzeyinde çalar.</string>
+  <string name="increasing_ring_interval_title">Arttırma aralığı</string>
+  <string name="increasing_ring_interval_eachring">Her çalışta</string>
+  <string name="increasing_ring_interval_half_second">0.5 saniye</string>
+  <string name="increasing_ring_interval_1second">1 saniye</string>
+  <string name="increasing_ring_interval_2seconds">2 saniye</string>
+  <string name="increasing_ring_interval_3seconds">3 saniye</string>
+  <string name="increasing_ring_interval_5seconds">5 saniye</string>
+  <string name="increasing_ring_interval_10seconds">10 saniye</string>
   <string name="wifi_setting_countrycode_title">Wi-Fi bölge kodu</string>
   <string name="wifi_setting_countrycode_summary">Wi-Fi için bölge kodunu belirtin</string>
   <string name="wifi_setting_countrycode_error">Bölge kodunu ayarlarken sorun oluştu.</string>
+  <string name="wifi_ssid_input_limit">SSID en fazla uzunluğu aşıyor</string>
+  <string name="p2p_device_name_input_limit">P2P adı en fazla uzunluğu aşıyor</string>
   <string name="live_volume_title">Canlı ses adımları</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
@@ -97,4 +111,9 @@
   <string name="volume_steps_system_title">Ses adımları: Sistem</string>
   <string name="volume_steps_voice_call_title">Ses adımları: Sesli Arama</string>
   <string name="bluetooth_accept_all_files">Bütün dosya türlerini kabul et</string>
+  <string name="lock_numpad_random_title">PIN\'in tuş takımı düzenini değiştir</string>
+  <string name="lock_numpad_random_dialog_title">PIN tuş takımı rastgele düzeni</string>
+  <string name="lock_numpad_random_off">Devre dışı</string>
+  <string name="lock_numpad_random_always">Her zaman</string>
+  <string name="lock_numpad_random_on_request">İstek üzerine</string>
 </resources>

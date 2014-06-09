@@ -96,6 +96,8 @@
   <string name="wifi_setting_countrycode_title">Код региона Wi-Fi</string>
   <string name="wifi_setting_countrycode_summary">Указать код региона Wi-Fi</string>
   <string name="wifi_setting_countrycode_error">При настройке кода региона возникла проблема.</string>
+  <string name="wifi_ssid_input_limit">SSID превышает макс. длину</string>
+  <string name="p2p_device_name_input_limit">Имя P2P превышает макс. длину</string>
   <string name="live_volume_title">Пошаговые уровни громкости</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
@@ -111,4 +113,9 @@
   <string name="volume_steps_system_title">Уровни: система</string>
   <string name="volume_steps_voice_call_title">Уровни: голосовой вызов</string>
   <string name="bluetooth_accept_all_files">Принимать все типы файлов</string>
+  <string name="lock_numpad_random_title">Изменить порядок цифр на экране ввода PIN</string>
+  <string name="lock_numpad_random_dialog_title">PIN в случайном порядке</string>
+  <string name="lock_numpad_random_off">Отключен</string>
+  <string name="lock_numpad_random_always">Всегда</string>
+  <string name="lock_numpad_random_on_request">По запросу</string>
 </resources>

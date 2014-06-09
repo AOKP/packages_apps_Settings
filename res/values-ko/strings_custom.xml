@@ -94,6 +94,8 @@
   <string name="wifi_setting_countrycode_title">와이파이 지역 코드</string>
   <string name="wifi_setting_countrycode_summary">WiFi에 대한 지역 코드를 지정</string>
   <string name="wifi_setting_countrycode_error">지역 코드 설정에 문제가 발생 했습니다.</string>
+  <string name="wifi_ssid_input_limit">SSID는 최대 길이를 초과</string>
+  <string name="p2p_device_name_input_limit">P2P 이름 최대 길이를 초과</string>
   <string name="live_volume_title">볼륨세분화</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
@@ -109,4 +111,9 @@
   <string name="volume_steps_system_title">볼륨 단계: 시스템</string>
   <string name="volume_steps_voice_call_title">볼륨 단계: 음성 통화</string>
   <string name="bluetooth_accept_all_files">모든 파일 형식을 수락합니다</string>
+  <string name="lock_numpad_random_title">PIN 패드 번호의 순서 변경</string>
+  <string name="lock_numpad_random_dialog_title">PIN 패드 임의의 순서로</string>
+  <string name="lock_numpad_random_off">사용 중지됨</string>
+  <string name="lock_numpad_random_always">항상</string>
+  <string name="lock_numpad_random_on_request">요청시</string>
 </resources>

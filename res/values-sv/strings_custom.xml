@@ -79,9 +79,24 @@
   <string name="device_hostname">Enhetens värdnamn</string>
   <string name="wifi_menu_forget_all">Glöm alla nätverk</string>
   <string name="data_usage_lengths_spinner_subtitle">Cykel längd:</string>
+  <string name="checkbox_increasing_ring">Aktivera</string>
+  <string name="increasing_ring_title">Ökande ringsignal</string>
+  <string name="increasing_ring_min_volume_title">Startvolym för ringsignal</string>
+  <string name="increasing_ring_volume_notice">Notis:\nEftersom startvolymen är ställd högre än ringsignalens volym kommer ringsignalen att spelas med ringsignalens volym.
+    </string>
+  <string name="increasing_ring_interval_title">Öka intervallet</string>
+  <string name="increasing_ring_interval_eachring">Vid varje ringning</string>
+  <string name="increasing_ring_interval_half_second">0,5 sekunder</string>
+  <string name="increasing_ring_interval_1second">1 sekund</string>
+  <string name="increasing_ring_interval_2seconds">2 sekunder</string>
+  <string name="increasing_ring_interval_3seconds">3 sekunder</string>
+  <string name="increasing_ring_interval_5seconds">5 sekunder</string>
+  <string name="increasing_ring_interval_10seconds">10 sekunder</string>
   <string name="wifi_setting_countrycode_title">Wi-Fi regionkod</string>
   <string name="wifi_setting_countrycode_summary">Ange Regionskoden för Wi-Fi</string>
   <string name="wifi_setting_countrycode_error">Det fanns ett inställnings problem i regionkoden.</string>
+  <string name="wifi_ssid_input_limit">SSiD överskrider maximal längd</string>
+  <string name="p2p_device_name_input_limit">P2P namnet är för långt</string>
   <string name="live_volume_title">Levande volym steg</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
@@ -96,4 +111,10 @@
   <string name="volume_steps_ring_title">Volym steg: Ringer</string>
   <string name="volume_steps_system_title">Volym steg: System</string>
   <string name="volume_steps_voice_call_title">Volym steg: Röstsamtal</string>
+  <string name="bluetooth_accept_all_files">Acceptera alla filtyper</string>
+  <string name="lock_numpad_random_title">Ändra ordning på PIN pad nummer</string>
+  <string name="lock_numpad_random_dialog_title">PIN pad slumpmässig ordning</string>
+  <string name="lock_numpad_random_off">Inaktiverad</string>
+  <string name="lock_numpad_random_always">Alltid</string>
+  <string name="lock_numpad_random_on_request">På begäran</string>
 </resources>

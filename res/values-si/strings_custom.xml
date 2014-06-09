@@ -75,7 +75,7 @@
   <string name="bootanim_settings_title">ඇරඹුම් සජීවීකරණ</string>
   <string name="soundpack_settings_title">ශබ්ද ඇසුරුම්</string>
   <string name="lockscreen_quick_unlock_control_title">ඉක්මන් යතුරු අගුළු ඇරීම</string>
-  <string name="lockscreen_quick_unlock_control_summary">මුරපද හෝ යතුරු අගුළු තිරය සඳහා ඇතුලත් කිරීමේ බොත්තම ඔබන්නේ නැතුව අගුළු අරින්න</string>
+  <string name="lockscreen_quick_unlock_control_summary">මුරපද හෝ PIN අගුළු තිරය සඳහා ඇතුලත් කිරීමේ බොත්තම ඔබන්නේ නැතුව අගුළු අරින්න</string>
   <string name="device_hostname">උපාංගයේ ආගන්තුක නාමය</string>
   <string name="wifi_menu_forget_all">සියලුම ජාල අමතක කරන්න</string>
   <string name="data_usage_lengths_spinner_subtitle">කාල ප්‍රමාණය:</string>
@@ -95,6 +95,8 @@
   <string name="wifi_setting_countrycode_title">Wi-Fi කලාප කේතය</string>
   <string name="wifi_setting_countrycode_summary">Wi-Fi සඳහා කලාප කේතය සඳහන් කරන්න</string>
   <string name="wifi_setting_countrycode_error">කලාප කේතය පිහිටුවීමේදී ගැටළුවක් ඇතිවිය.</string>
+  <string name="wifi_ssid_input_limit">SSID උපරිම දිග ඉක්මවා ඇත</string>
+  <string name="p2p_device_name_input_limit">P2P නම උපරිම දිග ඉක්මවා ඇත</string>
   <string name="live_volume_title">සජීවී හඬ පරිමා පියවර</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
@@ -110,4 +112,9 @@
   <string name="volume_steps_system_title">හඬ පරිමා පියවර: පද්ධතිය</string>
   <string name="volume_steps_voice_call_title">හඬ පරිමා පියවර: හඬ ඇමතුම</string>
   <string name="bluetooth_accept_all_files">සියලුම ගොනු වර්ග පිළිගන්න</string>
+  <string name="lock_numpad_random_title">PIN පෑඩයේ අංක අනුක්‍රමය වෙනස්කරන්න</string>
+  <string name="lock_numpad_random_dialog_title">PIN පෑඩයේ අහඹු අනුක්‍රමය</string>
+  <string name="lock_numpad_random_off">අක්‍රීයයි</string>
+  <string name="lock_numpad_random_always">සැමවිටම</string>
+  <string name="lock_numpad_random_on_request">ඉල්ලීමකදී</string>
 </resources>

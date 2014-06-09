@@ -95,6 +95,8 @@
   <string name="wifi_setting_countrycode_title">Codice regione Wi-Fi</string>
   <string name="wifi_setting_countrycode_summary">Specifica il codice regione Wi-Fi</string>
   <string name="wifi_setting_countrycode_error">C\'è stato un problema nell\'impostazione del codice regione.</string>
+  <string name="wifi_ssid_input_limit">L\'SSID supera la lunghezza massima consentita</string>
+  <string name="p2p_device_name_input_limit">Il nome del P2P supera la lunghezza massima consentita</string>
   <string name="live_volume_title">Regola livelli volume</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
@@ -110,4 +112,9 @@
   <string name="volume_steps_system_title">Livelli volume: Sistema</string>
   <string name="volume_steps_voice_call_title">Livelli volume: Chiamata</string>
   <string name="bluetooth_accept_all_files">Accetta tutti i tipi di file</string>
+  <string name="lock_numpad_random_title">Cambia l\'ordine del tastierino numerico del PIN</string>
+  <string name="lock_numpad_random_dialog_title">ordine casuale del tastierino numerico del PIN</string>
+  <string name="lock_numpad_random_off">Disabilitato</string>
+  <string name="lock_numpad_random_always">Sempre</string>
+  <string name="lock_numpad_random_on_request">Su richiesta</string>
 </resources>

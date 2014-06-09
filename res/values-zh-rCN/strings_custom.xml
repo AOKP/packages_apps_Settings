@@ -96,6 +96,8 @@
   <string name="wifi_setting_countrycode_title">Wi-Fi 区域代码</string>
   <string name="wifi_setting_countrycode_summary">设置 Wi-Fi 区域代码</string>
   <string name="wifi_setting_countrycode_error">设置区域代码时出现问题。</string>
+  <string name="wifi_ssid_input_limit">SSID 超过长度上限</string>
+  <string name="p2p_device_name_input_limit">P2P 名称超过长度上限</string>
   <string name="live_volume_title">情景模式</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
@@ -111,4 +113,9 @@
   <string name="volume_steps_system_title">音量模式：系统</string>
   <string name="volume_steps_voice_call_title">音量模式：语音电话</string>
   <string name="bluetooth_accept_all_files">接受所有文件类型</string>
+  <string name="lock_numpad_random_title">更改 PIN 键盘数字的顺序</string>
+  <string name="lock_numpad_random_dialog_title">PIN键盘数字顺序随机</string>
+  <string name="lock_numpad_random_off">禁用</string>
+  <string name="lock_numpad_random_always">总是</string>
+  <string name="lock_numpad_random_on_request">在请求时</string>
 </resources>

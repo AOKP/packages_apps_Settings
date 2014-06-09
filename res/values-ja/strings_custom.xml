@@ -96,6 +96,8 @@
   <string name="wifi_setting_countrycode_title">Wi-Fiリージョンコード</string>
   <string name="wifi_setting_countrycode_summary">Wi-Fiの地域コードを指定する</string>
   <string name="wifi_setting_countrycode_error">地域コードの設定に問題があります</string>
+  <string name="wifi_ssid_input_limit">SSIDが長過ぎます</string>
+  <string name="p2p_device_name_input_limit">P2P名が長過ぎます</string>
   <string name="live_volume_title">有効な音量レベル</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
@@ -111,4 +113,9 @@
   <string name="volume_steps_system_title">音量レベル: システム音</string>
   <string name="volume_steps_voice_call_title">音量レベル: ボイスコール</string>
   <string name="bluetooth_accept_all_files">すべてのファイルタイプを受け入れる</string>
+  <string name="lock_numpad_random_title">PINパッドの数字の並びを変更</string>
+  <string name="lock_numpad_random_dialog_title">ランダムPINパッド</string>
+  <string name="lock_numpad_random_off">無効</string>
+  <string name="lock_numpad_random_always">常時</string>
+  <string name="lock_numpad_random_on_request">リクエストに応じて</string>
 </resources>

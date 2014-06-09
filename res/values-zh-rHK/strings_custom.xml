@@ -94,6 +94,8 @@
   <string name="wifi_setting_countrycode_title">Wi-Fi 區碼</string>
   <string name="wifi_setting_countrycode_summary">指定 Wi-Fi 使用的區碼</string>
   <string name="wifi_setting_countrycode_error">設定區碼時遇到了問題。</string>
+  <string name="wifi_ssid_input_limit">SSID 超過長度上限</string>
+  <string name="p2p_device_name_input_limit">P2P 名稱超過長度上限</string>
   <string name="live_volume_title">現場音量步驟</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
@@ -109,4 +111,7 @@
   <string name="volume_steps_system_title">音量措施：系統</string>
   <string name="volume_steps_voice_call_title">音量措施：語音電話</string>
   <string name="bluetooth_accept_all_files">接受所有檔案類型</string>
+  <string name="lock_numpad_random_title">變更 PIN 小鍵盤數位順序</string>
+  <string name="lock_numpad_random_off">已停用</string>
+  <string name="lock_numpad_random_always">一律採用</string>
 </resources>

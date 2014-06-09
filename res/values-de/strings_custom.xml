@@ -95,6 +95,8 @@
   <string name="wifi_setting_countrycode_title">WLAN-Ländercode</string>
   <string name="wifi_setting_countrycode_summary">WLAN-Ländercode festlegen</string>
   <string name="wifi_setting_countrycode_error">Beim Festlegen des WLAN-Ländercodes ist ein Problem aufgetreten.</string>
+  <string name="wifi_ssid_input_limit">SSID ist zu Lang</string>
+  <string name="p2p_device_name_input_limit">P2P Name ist zu Lang</string>
   <string name="live_volume_title">Echtzeit Lautstärkestufen</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
@@ -110,4 +112,9 @@
   <string name="volume_steps_system_title">Lautstärkestufen: Systemweit</string>
   <string name="volume_steps_voice_call_title">Lautstärkestufen: Anruf</string>
   <string name="bluetooth_accept_all_files">Alle Dateiformate akzeptieren</string>
+  <string name="lock_numpad_random_title">Ändere die Reihenfolge der PIN nummern</string>
+  <string name="lock_numpad_random_dialog_title">Zuffälige PIN Reihenfolge</string>
+  <string name="lock_numpad_random_off">Deaktiviert</string>
+  <string name="lock_numpad_random_always">Immer</string>
+  <string name="lock_numpad_random_on_request">Auf Anfrage</string>
 </resources>

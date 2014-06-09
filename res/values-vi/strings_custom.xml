@@ -97,6 +97,8 @@
   <string name="wifi_setting_countrycode_title">Mã khu vực Wi-Fi</string>
   <string name="wifi_setting_countrycode_summary">Chỉ định mã vùng cho Wi-Fi</string>
   <string name="wifi_setting_countrycode_error">Đã có vấn đề thiết lập mã vùng.</string>
+  <string name="wifi_ssid_input_limit">SSID vượt quá độ dài tối đa</string>
+  <string name="p2p_device_name_input_limit">Tên P2P vượt quá độ dài tối đa</string>
   <string name="live_volume_title">Điều chỉnh âm lượng trực tiếp</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
@@ -112,4 +114,9 @@
   <string name="volume_steps_system_title">Điều chỉnh âm lượng: Hệ thống</string>
   <string name="volume_steps_voice_call_title">Điều chỉnh âm lượng: Gọi thoại</string>
   <string name="bluetooth_accept_all_files">Chấp nhận tất cả các loại tập tin</string>
+  <string name="lock_numpad_random_title">Đổi thứ tự số PIN</string>
+  <string name="lock_numpad_random_dialog_title">Thứ tự PIN ngẫu nhiên</string>
+  <string name="lock_numpad_random_off">Đã vô hiệu</string>
+  <string name="lock_numpad_random_always">Luôn luôn</string>
+  <string name="lock_numpad_random_on_request">Theo yêu cầu</string>
 </resources>

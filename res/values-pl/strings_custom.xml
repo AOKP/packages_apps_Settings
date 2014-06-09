@@ -95,6 +95,8 @@
   <string name="wifi_setting_countrycode_title">Kod lokalny Wi-Fi</string>
   <string name="wifi_setting_countrycode_summary">Określ kod regionu dla Wi-Fi</string>
   <string name="wifi_setting_countrycode_error">Wystąpił problem podczas ustawiania kodu regionu.</string>
+  <string name="wifi_ssid_input_limit">SSID przekracza maksymalną długość</string>
+  <string name="p2p_device_name_input_limit">Nazwa P2P przekracza maksymalną długość</string>
   <string name="live_volume_title">Live volume steps</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
@@ -110,4 +112,9 @@
   <string name="volume_steps_system_title">Poziom głośności: System</string>
   <string name="volume_steps_voice_call_title">Poziom głośności: Rozmowa</string>
   <string name="bluetooth_accept_all_files">Akceptuj wszystkie typy plików</string>
+  <string name="lock_numpad_random_title">Zmień kolejność cyfr w oknie wpisywania numeru PIN</string>
+  <string name="lock_numpad_random_dialog_title">Losowa kolejność cyfr w oknie wpisywania PIN</string>
+  <string name="lock_numpad_random_off">Wyłączone</string>
+  <string name="lock_numpad_random_always">Zawsze</string>
+  <string name="lock_numpad_random_on_request">Na życzenie</string>
 </resources>

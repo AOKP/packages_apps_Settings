@@ -80,9 +80,25 @@ La información enviada incluye un identificador único, que no compromete tu pr
   <string name="device_hostname">Nombre del dispositivo</string>
   <string name="wifi_menu_forget_all">Olvidar todas las redes</string>
   <string name="data_usage_lengths_spinner_subtitle">Duración del ciclo:</string>
+  <string name="checkbox_increasing_ring">Activado</string>
+  <string name="increasing_ring_title">Tono de llamada ascendente</string>
+  <string name="increasing_ring_min_volume_title">Volumen inicial del timbre</string>
+  <string name="increasing_ring_volume_notice">Noticia:\nSi el volumen inicial se establece más alto 
+         que el volumen de llamada, prevalecerá el volumen de llamada.
+    </string>
+  <string name="increasing_ring_interval_title">Aumentar intervalo</string>
+  <string name="increasing_ring_interval_eachring">En cada tono</string>
+  <string name="increasing_ring_interval_half_second">0.5 segundos</string>
+  <string name="increasing_ring_interval_1second">1 segundo</string>
+  <string name="increasing_ring_interval_2seconds">2 segundos</string>
+  <string name="increasing_ring_interval_3seconds">3 segundos</string>
+  <string name="increasing_ring_interval_5seconds">5 segundos</string>
+  <string name="increasing_ring_interval_10seconds">10 segundos</string>
   <string name="wifi_setting_countrycode_title">Código de región Wi-Fi</string>
   <string name="wifi_setting_countrycode_summary">Especifique el código de región para Wi-Fi</string>
   <string name="wifi_setting_countrycode_error">Hubo un problema al ingresar el código de región.</string>
+  <string name="wifi_ssid_input_limit">SSID excede la longitud máxima</string>
+  <string name="p2p_device_name_input_limit">El nombre del P2P excede la longitud máxima</string>
   <string name="live_volume_title">Niveles de audio</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
@@ -97,4 +113,10 @@ La información enviada incluye un identificador único, que no compromete tu pr
   <string name="volume_steps_ring_title">Ajustes de volumen: Tono de llamada</string>
   <string name="volume_steps_system_title">Ajustes de volumen: Sistema</string>
   <string name="volume_steps_voice_call_title">Ajustes de volumen: Llamada</string>
+  <string name="bluetooth_accept_all_files">Aceptar todos los tipos de archivo</string>
+  <string name="lock_numpad_random_title">Cambiar el orden de los números en el pad del PIN</string>
+  <string name="lock_numpad_random_dialog_title">Orden aleatorio del pad del PIN</string>
+  <string name="lock_numpad_random_off">Deshabilitado</string>
+  <string name="lock_numpad_random_always">Siempre</string>
+  <string name="lock_numpad_random_on_request">Por petición</string>
 </resources>

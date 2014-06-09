@@ -94,6 +94,8 @@
   <string name="wifi_setting_countrycode_title">Kód regionu Wi-Fi</string>
   <string name="wifi_setting_countrycode_summary">Nastavit regionální kód pro Wi-Fi</string>
   <string name="wifi_setting_countrycode_error">Při nastavování kódu regionu došlo k chybě.</string>
+  <string name="wifi_ssid_input_limit">SSID dosáhlo maximální délky</string>
+  <string name="p2p_device_name_input_limit">Jméno P2P dosáhlo maximální délky</string>
   <string name="live_volume_title">Živé kroky hlasitosti</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
@@ -109,4 +111,9 @@
   <string name="volume_steps_system_title">Počet kroků: Systém</string>
   <string name="volume_steps_voice_call_title">Počet kroků: Hlasové hovory</string>
   <string name="bluetooth_accept_all_files">Přijmout všechny typy souborů</string>
+  <string name="lock_numpad_random_title">Změnit pořadí tlačítek s čísly pro PIN</string>
+  <string name="lock_numpad_random_dialog_title">Náhodné uspořádání tlačítek pro PIN</string>
+  <string name="lock_numpad_random_off">Vypnuto</string>
+  <string name="lock_numpad_random_always">Vždy</string>
+  <string name="lock_numpad_random_on_request">Při požadavku</string>
 </resources>

@@ -17,4 +17,18 @@
  * limitations under the License.
  */
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"/>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="device_rear_camera">Camera din spate</string>
+  <string name="device_front_camera">Camera din față</string>
+  <string name="cpu_info">CPU</string>
+  <string name="mod_version_default">Necunoscut(ă)</string>
+  <string name="build_date">Dată compilare</string>
+  <string name="build_date_default">2012-01-01-0000</string>
+  <string name="quick_links_title">Legături rapide</string>
+  <string name="advanced_settings_title">Opțiuni dispozitiv</string>
+  <string name="anonymous_statistics_title">Statistici AOKP</string>
+  <string name="preview_data_title">Previzualizare date</string>
+  <string name="view_stats_title">Vezi statistici</string>
+  <string name="anonymous_learn_more">Aflați mai multe</string>
+  <string name="preview_id_title">ID unic</string>
+</resources>
