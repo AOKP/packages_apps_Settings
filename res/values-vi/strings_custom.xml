@@ -79,6 +79,10 @@
   <string name="lockscreen_quick_unlock_control_title">Mở pin nhanh</string>
   <string name="lockscreen_quick_unlock_control_summary">Mở màn hình khoá mật khẩu/pin mà không cần chọn nút Nhập</string>
   <string name="device_hostname">Tên máy chủ thiết bị</string>
+  <string name="nfc_polling_mode_title">Chế độ kiểm tra NFC</string>
+  <string name="nfc_polling_mode_screen_off">Tắt màn hình</string>
+  <string name="nfc_polling_mode_screen_locked">Bật màn hình, bị khoá</string>
+  <string name="nfc_polling_mode_screen_unlocked">Bật màn hình, được mở khoá (mặc định)</string>
   <string name="wifi_menu_forget_all">Quên tất cả các mạng</string>
   <string name="data_usage_lengths_spinner_subtitle">Độ dài chu kỳ:</string>
   <string name="checkbox_increasing_ring">Bật</string>
@@ -119,4 +123,6 @@
   <string name="lock_numpad_random_off">Đã vô hiệu</string>
   <string name="lock_numpad_random_always">Luôn luôn</string>
   <string name="lock_numpad_random_on_request">Theo yêu cầu</string>
+  <string name="disable_fullscreen_keyboard_title">Vô hiệu bàn phím toàn màn hình</string>
+  <string name="disable_fullscreen_keyboard_summary">Bàn phím nằm ngang sẽ không chiếm toàn màn hình</string>
 </resources>

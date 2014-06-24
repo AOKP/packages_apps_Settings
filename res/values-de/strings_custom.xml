@@ -77,6 +77,9 @@
   <string name="lockscreen_quick_unlock_control_title">Quick pin unlock</string>
   <string name="lockscreen_quick_unlock_control_summary">Entsperren mit Passwort/PIN ohne Eingabetaste</string>
   <string name="device_hostname">Hostname des Geräts</string>
+  <string name="nfc_polling_mode_screen_off">Bildschirm aus</string>
+  <string name="nfc_polling_mode_screen_locked">Bildschirm an, gesperrt</string>
+  <string name="nfc_polling_mode_screen_unlocked">Bildschirm an, entsperrt (Standard)</string>
   <string name="wifi_menu_forget_all">Alle bekannten Netze löschen</string>
   <string name="data_usage_lengths_spinner_subtitle">Dauer des Abrechnungszyklus:</string>
   <string name="checkbox_increasing_ring">Aktivieren</string>

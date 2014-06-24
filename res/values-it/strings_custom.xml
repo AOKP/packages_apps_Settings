@@ -77,6 +77,10 @@
   <string name="lockscreen_quick_unlock_control_title">PIN di sblocco</string>
   <string name="lockscreen_quick_unlock_control_summary">Sblocca la lockscreen con password/pin senza premere il pulsante INVIO</string>
   <string name="device_hostname">Hostname dispositivo</string>
+  <string name="nfc_polling_mode_title">Modalità polling NFC</string>
+  <string name="nfc_polling_mode_screen_off">Schermo spento</string>
+  <string name="nfc_polling_mode_screen_locked">Schermo acceso, bloccato</string>
+  <string name="nfc_polling_mode_screen_unlocked">Schermo acceso, sbloccato (predefinito)</string>
   <string name="wifi_menu_forget_all">Dimentica tutte le reti</string>
   <string name="data_usage_lengths_spinner_subtitle">Durata del ciclo:</string>
   <string name="checkbox_increasing_ring">Attiva</string>
@@ -117,4 +121,6 @@
   <string name="lock_numpad_random_off">Disabilitato</string>
   <string name="lock_numpad_random_always">Sempre</string>
   <string name="lock_numpad_random_on_request">Su richiesta</string>
+  <string name="disable_fullscreen_keyboard_title">Disabilita tastiera a schermo intero</string>
+  <string name="disable_fullscreen_keyboard_summary">La tastiera in orizzontale non occuperà mai tutto lo schermo</string>
 </resources>

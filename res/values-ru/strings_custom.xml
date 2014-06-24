@@ -77,6 +77,10 @@
   <string name="lockscreen_quick_unlock_control_title">Быстрая разблокировка</string>
   <string name="lockscreen_quick_unlock_control_summary">Разблокировка экрана паролем/пин-кодом без нажатия кнопки ввода</string>
   <string name="device_hostname">Хост устройства</string>
+  <string name="nfc_polling_mode_title">Режим NFC</string>
+  <string name="nfc_polling_mode_screen_off">Экран выкл</string>
+  <string name="nfc_polling_mode_screen_locked">Экран вкл, заблокирован</string>
+  <string name="nfc_polling_mode_screen_unlocked">Экран вкл, разблокирован (по умолчанию)</string>
   <string name="wifi_menu_forget_all">Забыть все сети</string>
   <string name="data_usage_lengths_spinner_subtitle">Длина цикла:</string>
   <string name="checkbox_increasing_ring">Включить</string>
@@ -118,4 +122,6 @@
   <string name="lock_numpad_random_off">Отключен</string>
   <string name="lock_numpad_random_always">Всегда</string>
   <string name="lock_numpad_random_on_request">По запросу</string>
+  <string name="disable_fullscreen_keyboard_title">Откл полноэкранную клавиатуру</string>
+  <string name="disable_fullscreen_keyboard_summary">В ландшафтном режиме клавиатура не будет разворачиваться на полный экран</string>
 </resources>

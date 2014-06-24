@@ -79,6 +79,10 @@
   <string name="lockscreen_quick_unlock_control_title">クイックPINロック解除</string>
   <string name="lockscreen_quick_unlock_control_summary">ENTERボタンを押すことなくパスワード/PINロックを解除する</string>
   <string name="device_hostname">デバイスホスト名</string>
+  <string name="nfc_polling_mode_title">NFCポーリングモード</string>
+  <string name="nfc_polling_mode_screen_off">画面オフ</string>
+  <string name="nfc_polling_mode_screen_locked">画面オン/ロック中</string>
+  <string name="nfc_polling_mode_screen_unlocked">画面オン/ロック解除 (デフォルト)</string>
   <string name="wifi_menu_forget_all">すべてのネットワークを消去</string>
   <string name="data_usage_lengths_spinner_subtitle">サイクルの長さ:</string>
   <string name="checkbox_increasing_ring">有効</string>
@@ -118,4 +122,6 @@
   <string name="lock_numpad_random_off">無効</string>
   <string name="lock_numpad_random_always">常時</string>
   <string name="lock_numpad_random_on_request">リクエストに応じて</string>
+  <string name="disable_fullscreen_keyboard_title">フルスクリーンキーボードを無効</string>
+  <string name="disable_fullscreen_keyboard_summary">横向画面時にキーボードが画面全体を占有しないようにする</string>
 </resources>

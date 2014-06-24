@@ -120,4 +120,6 @@
   <string name="lock_numpad_random_off">Vypnuto</string>
   <string name="lock_numpad_random_always">Vždy</string>
   <string name="lock_numpad_random_on_request">Při požadavku</string>
+  <string name="disable_fullscreen_keyboard_title">Vypnout klávesnici na celou obrazovku</string>
+  <string name="disable_fullscreen_keyboard_summary">Klávesnice v režimu na šířku nikdy nevyplní celou obrazovku</string>
 </resources>

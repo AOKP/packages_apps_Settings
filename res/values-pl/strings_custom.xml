@@ -77,6 +77,10 @@
   <string name="lockscreen_quick_unlock_control_title">Szybkie odblokowanie PINu</string>
   <string name="lockscreen_quick_unlock_control_summary">Odblokuj ekran blokady z PINem/hasłem bez naciskania przycisku enter</string>
   <string name="device_hostname">Nazwa hosta urządzenia</string>
+  <string name="nfc_polling_mode_title">Tryb sondowania NFC</string>
+  <string name="nfc_polling_mode_screen_off">Wyłączony ekran</string>
+  <string name="nfc_polling_mode_screen_locked">Włączony ekran, zablokowany</string>
+  <string name="nfc_polling_mode_screen_unlocked">Włączony ekran, odblokowany (domyślnie)</string>
   <string name="wifi_menu_forget_all">Zapomnij wszystkie sieci</string>
   <string name="data_usage_lengths_spinner_subtitle">Długość cyklu:</string>
   <string name="checkbox_increasing_ring">Aktywuj</string>
@@ -117,4 +121,6 @@
   <string name="lock_numpad_random_off">Wyłączone</string>
   <string name="lock_numpad_random_always">Zawsze</string>
   <string name="lock_numpad_random_on_request">Na życzenie</string>
+  <string name="disable_fullscreen_keyboard_title">Wyłącz pełnoekranową klawiaturę</string>
+  <string name="disable_fullscreen_keyboard_summary">Klawiatura w pozycji poziomej nigdy nie zajmie całego ekranu</string>
 </resources>

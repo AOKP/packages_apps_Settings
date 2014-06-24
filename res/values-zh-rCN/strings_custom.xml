@@ -79,6 +79,10 @@
   <string name="lockscreen_quick_unlock_control_title">快速PIN解锁</string>
   <string name="lockscreen_quick_unlock_control_summary">密码/PIN解锁不需要点击回车按钮</string>
   <string name="device_hostname">设备名称</string>
+  <string name="nfc_polling_mode_title">NFC 侦测模式</string>
+  <string name="nfc_polling_mode_screen_off">屏幕关闭</string>
+  <string name="nfc_polling_mode_screen_locked">屏幕开启，锁屏</string>
+  <string name="nfc_polling_mode_screen_unlocked">屏幕开启，解锁 (默认)</string>
   <string name="wifi_menu_forget_all">所有网络都不记住</string>
   <string name="data_usage_lengths_spinner_subtitle">周期长度：</string>
   <string name="checkbox_increasing_ring">启用</string>
@@ -118,4 +122,6 @@
   <string name="lock_numpad_random_off">禁用</string>
   <string name="lock_numpad_random_always">总是</string>
   <string name="lock_numpad_random_on_request">在请求时</string>
+  <string name="disable_fullscreen_keyboard_title">禁用全屏键盘</string>
+  <string name="disable_fullscreen_keyboard_summary">横屏时键盘将不会占据整个屏幕</string>
 </resources>

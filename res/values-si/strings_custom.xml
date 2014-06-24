@@ -77,6 +77,10 @@
   <string name="lockscreen_quick_unlock_control_title">ඉක්මන් යතුරු අගුළු ඇරීම</string>
   <string name="lockscreen_quick_unlock_control_summary">මුරපද හෝ PIN අගුළු තිරය සඳහා ඇතුලත් කිරීමේ බොත්තම ඔබන්නේ නැතුව අගුළු අරින්න</string>
   <string name="device_hostname">උපාංගයේ ආගන්තුක නාමය</string>
+  <string name="nfc_polling_mode_title">NFC පරාගන ප්‍රකාරය</string>
+  <string name="nfc_polling_mode_screen_off">තිරය අක්‍රීයයි</string>
+  <string name="nfc_polling_mode_screen_locked">තිරය සක්‍රීයයි, අගුළු ලූ</string>
+  <string name="nfc_polling_mode_screen_unlocked">තිරය සක්‍රීයයි, අගුළු ඇරූ (පෙරනිමි)</string>
   <string name="wifi_menu_forget_all">සියලුම ජාල අමතක කරන්න</string>
   <string name="data_usage_lengths_spinner_subtitle">කාල ප්‍රමාණය:</string>
   <string name="checkbox_increasing_ring">සබලයි</string>
@@ -117,4 +121,6 @@
   <string name="lock_numpad_random_off">අක්‍රීයයි</string>
   <string name="lock_numpad_random_always">සැමවිටම</string>
   <string name="lock_numpad_random_on_request">ඉල්ලීමකදී</string>
+  <string name="disable_fullscreen_keyboard_title">පුන් තිර යතුරු පුවරුව අබල කරන්න</string>
+  <string name="disable_fullscreen_keyboard_summary">තිරස් යතුරු පුවරුව කිසි විටෙකත් මුළු තිරයම නොගනී</string>
 </resources>

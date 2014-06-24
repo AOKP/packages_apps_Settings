@@ -77,6 +77,10 @@
   <string name="lockscreen_quick_unlock_control_title">빠른 PIN 잠금 해제</string>
   <string name="lockscreen_quick_unlock_control_summary">Enter 버튼을 누르지 않고 비밀번호/PIN 잠금 해제</string>
   <string name="device_hostname">장치 호스트 이름</string>
+  <string name="nfc_polling_mode_title">NFC 폴링 모드</string>
+  <string name="nfc_polling_mode_screen_off">화면 끄기</string>
+  <string name="nfc_polling_mode_screen_locked">스크린온, 잠금</string>
+  <string name="nfc_polling_mode_screen_unlocked">스크린 온 ,잠금해제(기본값)</string>
   <string name="wifi_menu_forget_all">모든 네트워크 제거</string>
   <string name="data_usage_lengths_spinner_subtitle">주기 기간:</string>
   <string name="checkbox_increasing_ring">활성화</string>
@@ -116,4 +120,6 @@
   <string name="lock_numpad_random_off">사용 중지됨</string>
   <string name="lock_numpad_random_always">항상</string>
   <string name="lock_numpad_random_on_request">요청시</string>
+  <string name="disable_fullscreen_keyboard_title">전체 화면 키보드를 사용하지 않도록 설정</string>
+  <string name="disable_fullscreen_keyboard_summary">가로 키보드는 전체 화면을 차지하지 않습니다</string>
 </resources>

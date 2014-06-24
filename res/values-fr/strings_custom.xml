@@ -77,6 +77,9 @@
   <string name="lockscreen_quick_unlock_control_title">PIN de déverrouillage rapide</string>
   <string name="lockscreen_quick_unlock_control_summary">Déverrouillez votre mot de passe/pin écran de verrouillage sans appuyer sur le bouton entrer</string>
   <string name="device_hostname">Nom d\'hôte de l\'appareil</string>
+  <string name="nfc_polling_mode_screen_off">Écran éteint</string>
+  <string name="nfc_polling_mode_screen_locked">Écran allumé, verrouillé</string>
+  <string name="nfc_polling_mode_screen_unlocked">Écran allumé, déverrouillé (défaut)</string>
   <string name="wifi_menu_forget_all">Oubliez tous les réseaux</string>
   <string name="data_usage_lengths_spinner_subtitle">Durée du cycle :</string>
   <string name="checkbox_increasing_ring">Activer</string>
@@ -95,6 +98,8 @@
   <string name="wifi_setting_countrycode_title">Code de région Wi-Fi</string>
   <string name="wifi_setting_countrycode_summary">Indiquer le code région pour le Wi-Fi</string>
   <string name="wifi_setting_countrycode_error">Il y a eu un problème de réglage du code de région.</string>
+  <string name="wifi_ssid_input_limit">Le SSID dépasse la longueur maximale</string>
+  <string name="p2p_device_name_input_limit">Le nom P2P dépasse la longueur maximale</string>
   <string name="live_volume_title">Réglages direct du volume</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
@@ -115,4 +120,6 @@
   <string name="lock_numpad_random_off">Désactivé</string>
   <string name="lock_numpad_random_always">Toujours</string>
   <string name="lock_numpad_random_on_request">Sur demande</string>
+  <string name="disable_fullscreen_keyboard_title">Désactiver le clavier en plein écran</string>
+  <string name="disable_fullscreen_keyboard_summary">Le clavier en mode paysage ne prendra jamais la totalité de l\'écran</string>
 </resources>

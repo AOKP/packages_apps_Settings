@@ -78,6 +78,9 @@ La información enviada incluye un identificador único, que no compromete tu pr
   <string name="lockscreen_quick_unlock_control_title">Desbloqueo de pin rápido</string>
   <string name="lockscreen_quick_unlock_control_summary">Desbloquear pantalla con contraseña/pin sin presionar el botón enter</string>
   <string name="device_hostname">Nombre del dispositivo</string>
+  <string name="nfc_polling_mode_screen_off">Pantalla desactivada</string>
+  <string name="nfc_polling_mode_screen_locked">Pantalla desactivada, bloqueado</string>
+  <string name="nfc_polling_mode_screen_unlocked">Pantalla desactivada, desbloqueada (por defecto)</string>
   <string name="wifi_menu_forget_all">Olvidar todas las redes</string>
   <string name="data_usage_lengths_spinner_subtitle">Duración del ciclo:</string>
   <string name="checkbox_increasing_ring">Activado</string>

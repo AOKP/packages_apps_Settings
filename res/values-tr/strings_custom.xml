@@ -77,6 +77,10 @@
   <string name="lockscreen_quick_unlock_control_title">Hızlı PIN kilidi</string>
   <string name="lockscreen_quick_unlock_control_summary">Kilit ekranında Şifre ve PIN için enter tuşuna basmadan kilidi açar</string>
   <string name="device_hostname">Aygıt ana makine adı</string>
+  <string name="nfc_polling_mode_title">NFC sorgulama modu</string>
+  <string name="nfc_polling_mode_screen_off">Ekran kapalı</string>
+  <string name="nfc_polling_mode_screen_locked">Ekran açık, kilitli</string>
+  <string name="nfc_polling_mode_screen_unlocked">Ekran açık, kilitli değil (varsayılan)</string>
   <string name="wifi_menu_forget_all">Tüm ağları unut</string>
   <string name="data_usage_lengths_spinner_subtitle">Döngü uzunluğu:</string>
   <string name="checkbox_increasing_ring">Etkin</string>
@@ -116,4 +120,6 @@
   <string name="lock_numpad_random_off">Devre dışı</string>
   <string name="lock_numpad_random_always">Her zaman</string>
   <string name="lock_numpad_random_on_request">İstek üzerine</string>
+  <string name="disable_fullscreen_keyboard_title">Tam ekran klavyeyi kapat</string>
+  <string name="disable_fullscreen_keyboard_summary">Yatay klavye asla tüm ekranı kaplamayacak</string>
 </resources>
