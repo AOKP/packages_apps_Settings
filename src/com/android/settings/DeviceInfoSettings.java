@@ -185,8 +185,9 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
             mHits[mHits.length-1] = SystemClock.uptimeMillis();
             if (mHits[0] >= (SystemClock.uptimeMillis()-500)) {
                 Intent intent = new Intent(Intent.ACTION_MAIN);
+                intent.putExtra("is_aokp", true);
                 intent.setClassName("android",
-                        com.android.internal.app.AOKPLogoActivity.class.getName());
+                        com.android.internal.app.PlatLogoActivity.class.getName());
                 try {
                     startActivity(intent);
                 } catch (Exception e) {
