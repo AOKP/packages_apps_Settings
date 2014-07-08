@@ -122,6 +122,6 @@
   <string name="lock_numpad_random_off">Отключен</string>
   <string name="lock_numpad_random_always">Всегда</string>
   <string name="lock_numpad_random_on_request">По запросу</string>
-  <string name="disable_fullscreen_keyboard_title">Откл полноэкранную клавиатуру</string>
+  <string name="disable_fullscreen_keyboard_title">Откл полноэкр. клавиатуру</string>
   <string name="disable_fullscreen_keyboard_summary">В ландшафтном режиме клавиатура не будет разворачиваться на полный экран</string>
 </resources>

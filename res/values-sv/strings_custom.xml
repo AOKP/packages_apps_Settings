@@ -77,6 +77,10 @@
   <string name="lockscreen_quick_unlock_control_title">Snabbupplåsning</string>
   <string name="lockscreen_quick_unlock_control_summary">Lås upp automatiskt när det korrekta PIN/lösenordet blivit inmatat</string>
   <string name="device_hostname">Enhetens värdnamn</string>
+  <string name="nfc_polling_mode_title">NFC polling-läge</string>
+  <string name="nfc_polling_mode_screen_off">Skärm av</string>
+  <string name="nfc_polling_mode_screen_locked">Skärmen på, låst</string>
+  <string name="nfc_polling_mode_screen_unlocked">Skärmen på, olåst (standard)</string>
   <string name="wifi_menu_forget_all">Glöm alla nätverk</string>
   <string name="data_usage_lengths_spinner_subtitle">Cykel längd:</string>
   <string name="checkbox_increasing_ring">Aktivera</string>
@@ -117,4 +121,6 @@
   <string name="lock_numpad_random_off">Inaktiverad</string>
   <string name="lock_numpad_random_always">Alltid</string>
   <string name="lock_numpad_random_on_request">På begäran</string>
+  <string name="disable_fullscreen_keyboard_title">Inaktivera helskärms tangentbord</string>
+  <string name="disable_fullscreen_keyboard_summary">Landskap klaviatur kommer aldrig tar upp hela skärmen</string>
 </resources>

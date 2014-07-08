@@ -62,7 +62,7 @@ La información enviada incluye un identificador único, que no compromete tu pr
   <string name="quiet_hours_still_title">Deshabilitar vibraciones</string>
   <string name="quiet_hours_dim_title">Deshabilitar la luz de notificación</string>
   <string name="quiet_hours_active_from">Activo a partir de</string>
-  <string name="quiet_hours_active_to">para</string>
+  <string name="quiet_hours_active_to">hasta</string>
   <string name="start_time_title">Iniciar</string>
   <string name="end_time_title">Finalizar</string>
   <string name="rom_control_title">Control del ROM</string>
@@ -70,7 +70,7 @@ La información enviada incluye un identificador único, que no compromete tu pr
   <string name="themepacks_settings_title">Paquetes de temas</string>
   <string name="styles_settings_title">Estilos</string>
   <string name="icons_settings_title">Iconos</string>
-  <string name="fonts_settings_title">Tipos de letras</string>
+  <string name="fonts_settings_title">Fuentes</string>
   <string name="wallpaper_settings_title">Fondos de pantalla</string>
   <string name="lockscreen_wallpaper_settings_title">Fondos de pantalla de bloqueo</string>
   <string name="bootanim_settings_title">Animaciones de inicio</string>
@@ -78,6 +78,7 @@ La información enviada incluye un identificador único, que no compromete tu pr
   <string name="lockscreen_quick_unlock_control_title">Desbloqueo de pin rápido</string>
   <string name="lockscreen_quick_unlock_control_summary">Desbloquear pantalla con contraseña/pin sin presionar el botón enter</string>
   <string name="device_hostname">Nombre del dispositivo</string>
+  <string name="nfc_polling_mode_title">Modo de sondeo NFC</string>
   <string name="nfc_polling_mode_screen_off">Pantalla desactivada</string>
   <string name="nfc_polling_mode_screen_locked">Pantalla desactivada, bloqueado</string>
   <string name="nfc_polling_mode_screen_unlocked">Pantalla desactivada, desbloqueada (por defecto)</string>
@@ -122,4 +123,6 @@ La información enviada incluye un identificador único, que no compromete tu pr
   <string name="lock_numpad_random_off">Deshabilitado</string>
   <string name="lock_numpad_random_always">Siempre</string>
   <string name="lock_numpad_random_on_request">Por petición</string>
+  <string name="disable_fullscreen_keyboard_title">Desactivar teclado a pantalla completa</string>
+  <string name="disable_fullscreen_keyboard_summary">El teclado apaisado nunca ocupará la pantalla completa</string>
 </resources>
