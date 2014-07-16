@@ -124,4 +124,31 @@
   <string name="lock_numpad_random_on_request">リクエストに応じて</string>
   <string name="disable_fullscreen_keyboard_title">フルスクリーンキーボードを無効</string>
   <string name="disable_fullscreen_keyboard_summary">横向画面時にキーボードが画面全体を占有しないようにする</string>
+  <string name="blacklist_title">ブラックリスト</string>
+  <string name="blacklist_edit_dialog_title">ブラックリストのエントリーを編集</string>
+  <string name="blacklist_prefs">設定</string>
+  <string name="blacklist_button_delete">削除</string>
+  <string name="blacklist_empty_text">ブラックリストに番号がありません\n追加(+)ボタンをタップしてエントリーを追加してください</string>
+  <string name="blacklist_disabled_empty_text">特定の番号からの着信やメッセージをブラックリストに追加するにはブラックリストを有効にしてください</string>
+  <string name="blacklist_summary_disabled">無効</string>
+  <string name="blacklist_summary">ブラックリストに登録されている電話番号からの着信とメッセージをブロックする</string>
+  <string name="blacklist_notify">通知を表示</string>
+  <string name="blacklist_private_numbers_title">非通知番号</string>
+  <string name="blacklist_private_numbers_summary_disabled">非通知番号からの着信はブロックしない</string>
+  <string name="blacklist_private_numbers_summary">非通知番号からの%sをブロック</string>
+  <string name="blacklist_unknown_numbers_title">未登録番号</string>
+  <string name="blacklist_unknown_numbers_summary_disabled">連絡先に登録されていない番号からの着信やメッセージをブロックしない</string>
+  <string name="blacklist_unknown_numbers_summary">連絡先に登録されていない番号からの%sをブロックする</string>
+  <string name="blacklist_summary_type_calls_only">着信</string>
+  <string name="blacklist_summary_type_messages_only">メッセージ</string>
+  <string name="blacklist_summary_type_calls_and_messages">着信とメッセージ</string>
+  <string name="blacklist_regex_title">ワイルドカードを使用</string>
+  <string name="blacklist_regex_summary">「.」をワイルドカードとして使用し、「*」を繰り返しとして使用する
+例えば「123.*」なら123から始まる番号をブロックし、｢.*123.*｣なら123を含む番号をブロックする</string>
+  <string name="blacklist_policy_block_calls">着信をブロックする</string>
+  <string name="blacklist_policy_block_messages">メッセージをブロックする</string>
+  <string name="add_blacklist_number">番号を追加</string>
+  <string name="remove_blacklist_number_title">番号を削除</string>
+  <string name="remove_blacklist_entry">このブラックリストのエントリーを削除しますか？</string>
+  <string name="select_contact">連絡先を選択</string>
 </resources>

@@ -125,4 +125,30 @@
   <string name="lock_numpad_random_on_request">Theo yêu cầu</string>
   <string name="disable_fullscreen_keyboard_title">Vô hiệu bàn phím toàn màn hình</string>
   <string name="disable_fullscreen_keyboard_summary">Bàn phím nằm ngang sẽ không chiếm toàn màn hình</string>
+  <string name="blacklist_title">Danh sách đen</string>
+  <string name="blacklist_edit_dialog_title">Chỉnh sửa mục danh sách đen</string>
+  <string name="blacklist_prefs">Thiết lập</string>
+  <string name="blacklist_button_delete">Xoá</string>
+  <string name="blacklist_empty_text">Bạn chưa có bất kỳ số danh sách đen nào. Thêm mục mới bằng cách chạm vào nút Thêm (+).</string>
+  <string name="blacklist_disabled_empty_text">Để đưa các cuộc gọi và/hoặc tin nhắn từ một số số điện thoại vào danh sách đen, hãy kích hoạt danh sách đen.</string>
+  <string name="blacklist_summary_disabled">Đã vô hiệu</string>
+  <string name="blacklist_summary">Các cuộc gọi và tin nhắn đến từ số điện thoại trong danh sách đen sẽ bị chặn</string>
+  <string name="blacklist_notify">Hiện thông báo</string>
+  <string name="blacklist_private_numbers_title">Số riêng</string>
+  <string name="blacklist_private_numbers_summary_disabled">Không chặn cuộc gọi từ số điện thoại riêng</string>
+  <string name="blacklist_private_numbers_summary">Chặn <xliff:g id="type">%s</xliff:g> đến từ số riêng</string>
+  <string name="blacklist_unknown_numbers_title">Số chưa rõ</string>
+  <string name="blacklist_unknown_numbers_summary_disabled">Không chặn cuộc gọi hoặc tin nhắn từ các số không có trong danh sách liên lạc</string>
+  <string name="blacklist_unknown_numbers_summary">Chặn <xliff:g id="type">%s</xliff:g> đến từ các số không có trong danh sách liên lạc</string>
+  <string name="blacklist_summary_type_calls_only">cuộc gọi</string>
+  <string name="blacklist_summary_type_messages_only">tin nhắn</string>
+  <string name="blacklist_summary_type_calls_and_messages">cuộc gọi và tin nhắn</string>
+  <string name="blacklist_regex_title">Sử dụng ký tự đại diện</string>
+  <string name="blacklist_regex_summary">Sử dụng. như ký tự đại diện và * cho sự lặp lại. Ví dụ: 123.* chặn các số bắt đầu với 123 và. * 123.* chặn các số có chứa 123</string>
+  <string name="blacklist_policy_block_calls">Chặn cuộc gọi đến</string>
+  <string name="blacklist_policy_block_messages">Chặn tin nhắn đến</string>
+  <string name="add_blacklist_number">Thêm số</string>
+  <string name="remove_blacklist_number_title">Xoá số</string>
+  <string name="remove_blacklist_entry">Bạn muốn xoá mục danh sách đen này?</string>
+  <string name="select_contact">Chọn liên hệ</string>
 </resources>

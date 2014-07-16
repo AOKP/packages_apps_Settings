@@ -123,4 +123,30 @@
   <string name="lock_numpad_random_on_request">ඉල්ලීමකදී</string>
   <string name="disable_fullscreen_keyboard_title">පුන් තිර යතුරු පුවරුව අබල කරන්න</string>
   <string name="disable_fullscreen_keyboard_summary">තිරස් යතුරු පුවරුව කිසි විටෙකත් මුළු තිරයම නොගනී</string>
+  <string name="blacklist_title">අපලේඛණය</string>
+  <string name="blacklist_edit_dialog_title">අපලේඛණ පිවිසුම සකසන්න</string>
+  <string name="blacklist_prefs">සැකසීම්</string>
+  <string name="blacklist_button_delete">මකන්න</string>
+  <string name="blacklist_empty_text">ඔබ සතුව අපලේඛනගත අංක කිසිවක් නැත. එක් කරන්න (+) බොත්තම ස්පර්ශකර පිවිසුමක් එක් කරන්න.</string>
+  <string name="blacklist_disabled_empty_text">නියමිත අංක සඳහා ඇමතුම් සහ/හෝ පනිවිඩ අපලේඛණය කිරීමට, අපලේඛණය සක්‍රීය කරන්න.</string>
+  <string name="blacklist_summary_disabled">අක්‍රීයයි</string>
+  <string name="blacklist_summary">අපලේඛණයේ ඇති දුරකථන අංක මගින් පැමිණෙන ඇමතුම් සහ පනිවිඩ අවහිර කෙරේ</string>
+  <string name="blacklist_notify">දැනුම්දීම් පෙන්වන්න</string>
+  <string name="blacklist_private_numbers_title">පුද්ගලික අංක</string>
+  <string name="blacklist_private_numbers_summary_disabled">පුද්ගලික අංක සඳහා ඇමතුම් අවහිර නොකරන්න</string>
+  <string name="blacklist_private_numbers_summary">පුද්ගලික අංක වෙතින් පැමිණෙන <xliff:g id="type">%s</xliff:g> අවහිර කරන්න</string>
+  <string name="blacklist_unknown_numbers_title">නාඳුනන අංක</string>
+  <string name="blacklist_unknown_numbers_summary_disabled">සම්බන්ධතා ලයිස්තුවේ අඩංගු නොවන අංක සඳහා ඇමතුම් හෝ පණිවිඩ අවහිර නොකරන්න</string>
+  <string name="blacklist_unknown_numbers_summary">සම්බන්ධතා ලයිස්තුවේ නොමැති අංක වෙතින් පැමිණෙන <xliff:g id="type">%s</xliff:g> අවහිර කරන්න</string>
+  <string name="blacklist_summary_type_calls_only">ඇමතුම්</string>
+  <string name="blacklist_summary_type_messages_only">පණිවිඩ</string>
+  <string name="blacklist_summary_type_calls_and_messages">ඇමතුම් සහ පනිවිඩ</string>
+  <string name="blacklist_regex_title">ආදේශක භාවිතාකරන්න</string>
+  <string name="blacklist_regex_summary">ආදේශකයක් ලෙස . සහ ප්‍රාසය සඳහා * භාවිතාකරන්න. උදා. 123.* 123 න් ඇරඹෙන අංක අවහිර කරන අතර .*123.* 123 ඇතුළත් වෙන අංක අවහිර කරයි</string>
+  <string name="blacklist_policy_block_calls">පැමිණෙන ඇමතුම් අවහිර කරන්න</string>
+  <string name="blacklist_policy_block_messages">පැමිණෙන පණිවිඩ අවහිර කරන්න</string>
+  <string name="add_blacklist_number">අංකයක් එක් කරන්න</string>
+  <string name="remove_blacklist_number_title">අංකයක් ඉවත්කරන්න</string>
+  <string name="remove_blacklist_entry">ඔබට මෙම අපලේඛණ සටහන ඉවත්කිරීමට අවශ්‍යද?</string>
+  <string name="select_contact">සම්බන්ධතාවක් තෝරන්න</string>
 </resources>

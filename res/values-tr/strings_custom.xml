@@ -122,4 +122,30 @@
   <string name="lock_numpad_random_on_request">İstek üzerine</string>
   <string name="disable_fullscreen_keyboard_title">Tam ekran klavyeyi kapat</string>
   <string name="disable_fullscreen_keyboard_summary">Yatay klavye asla tüm ekranı kaplamayacak</string>
+  <string name="blacklist_title">Kara liste</string>
+  <string name="blacklist_edit_dialog_title">Kara listeyi düzenle</string>
+  <string name="blacklist_prefs">Ayarlar</string>
+  <string name="blacklist_button_delete">Sil</string>
+  <string name="blacklist_empty_text">Henüz bir numarayı kara listeye eklemediniz. Yeni bir giriş eklemek için Ekle (+) butonuna dokunun.</string>
+  <string name="blacklist_disabled_empty_text">Belirli numaralardan gelen aramaları ve/veya mesajları engellemek için kara listeyi etkinleştirin.</string>
+  <string name="blacklist_summary_disabled">Devre dışı</string>
+  <string name="blacklist_summary">Kara listedeki telefon numaralarından gelen aramalar ve mesajlar engellenecek</string>
+  <string name="blacklist_notify">Bildirim göster</string>
+  <string name="blacklist_private_numbers_title">Özel numaralar</string>
+  <string name="blacklist_private_numbers_summary_disabled">Özel numaralaradan gelen çağrıları engelleme</string>
+  <string name="blacklist_private_numbers_summary">Özel numaralardan gelen <xliff:g id="type">%s</xliff:g> engelle</string>
+  <string name="blacklist_unknown_numbers_title">Bilinmeyen numaralar</string>
+  <string name="blacklist_unknown_numbers_summary_disabled">Kişi listesinde olmayan numaralardan gelen aramaları veya mesajları engelleme</string>
+  <string name="blacklist_unknown_numbers_summary">Kişi listesinde olmayan numalardan gelen <xliff:g id="type">%s</xliff:g> engelle</string>
+  <string name="blacklist_summary_type_calls_only">aramaları</string>
+  <string name="blacklist_summary_type_messages_only">mesajları</string>
+  <string name="blacklist_summary_type_calls_and_messages">aramaları ve mesajları</string>
+  <string name="blacklist_regex_title">Joker karakter kullan</string>
+  <string name="blacklist_regex_summary">Herhangi bir karakter için . ve tekrarlama için * kullanın. Örneğin 123.* 123 ile başlayan tüm numaraları engellerken .*123.* 123 içeren tüm numaraları engeller</string>
+  <string name="blacklist_policy_block_calls">Gelen aramaları engelle</string>
+  <string name="blacklist_policy_block_messages">Gelen mesajları engelle</string>
+  <string name="add_blacklist_number">Numara ekle</string>
+  <string name="remove_blacklist_number_title">Numarayı kaldır</string>
+  <string name="remove_blacklist_entry">Bu kara listeyi kaldırmak istiyor musunuz?</string>
+  <string name="select_contact">Kişi seç</string>
 </resources>

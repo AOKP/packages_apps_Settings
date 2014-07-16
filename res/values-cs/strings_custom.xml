@@ -122,30 +122,4 @@
   <string name="lock_numpad_random_on_request">Při požadavku</string>
   <string name="disable_fullscreen_keyboard_title">Vypnout klávesnici na celou obrazovku</string>
   <string name="disable_fullscreen_keyboard_summary">Klávesnice v režimu na šířku nikdy nevyplní celou obrazovku</string>
-  <string name="blacklist_title">Černá listina</string>
-  <string name="blacklist_edit_dialog_title">Změnit položku černé listiny</string>
-  <string name="blacklist_prefs">Nastavení</string>
-  <string name="blacklist_button_delete">Smazat</string>
-  <string name="blacklist_empty_text">V seznamu černé listiny není žádné číslo. Položku je možné přidat pomocí tlačítka Přidat číslo (+).</string>
-  <string name="blacklist_disabled_empty_text">Pro zakázání komunikace z čísel na černé listině je potřeba černou listinu povolit.</string>
-  <string name="blacklist_summary_disabled">Zakázána</string>
-  <string name="blacklist_summary">Příchozí volání a zprávy z čísel na černé listině budou blokovány</string>
-  <string name="blacklist_notify">Zobrazit upozornění</string>
-  <string name="blacklist_private_numbers_title">Skrytá čísla</string>
-  <string name="blacklist_private_numbers_summary_disabled">Neblokovat volání ze skrytých čísel</string>
-  <string name="blacklist_private_numbers_summary">Blokovat příchozí <xliff:g id="type">%s</xliff:g> ze skrytých čísel</string>
-  <string name="blacklist_unknown_numbers_title">Neznámá čísla</string>
-  <string name="blacklist_unknown_numbers_summary_disabled">Neblokovat volání nebo zprávy z čísel, které nejsou v seznamu kontaktů</string>
-  <string name="blacklist_unknown_numbers_summary">Blokovat příchozí <xliff:g id="type">%s</xliff:g> z čísla, které není v seznamu kontaktů</string>
-  <string name="blacklist_summary_type_calls_only">volání</string>
-  <string name="blacklist_summary_type_messages_only">zprávy</string>
-  <string name="blacklist_summary_type_calls_and_messages">volání i zprávy</string>
-  <string name="blacklist_regex_title">Použít zástupné znaky</string>
-  <string name="blacklist_regex_summary">Použít znak . jako zástupný a znak * pro opakování. Např. 123.* blokuje všechna čísla začínající sekvencí 123 a .*123.* blokuje všechna čísla, obsahující sekvenci 123</string>
-  <string name="blacklist_policy_block_calls">Blokovat příchozí hovory</string>
-  <string name="blacklist_policy_block_messages">Blokovat příchozí zprávy</string>
-  <string name="add_blacklist_number">Přidat číslo</string>
-  <string name="remove_blacklist_number_title">Odstranit číslo</string>
-  <string name="remove_blacklist_entry">Opravdu odstranit toto číslo z černé listiny?</string>
-  <string name="select_contact">Zvolit kontakt</string>
 </resources>

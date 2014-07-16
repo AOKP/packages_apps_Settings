@@ -123,4 +123,30 @@
   <string name="lock_numpad_random_on_request">Na życzenie</string>
   <string name="disable_fullscreen_keyboard_title">Wyłącz pełnoekranową klawiaturę</string>
   <string name="disable_fullscreen_keyboard_summary">Klawiatura w pozycji poziomej nigdy nie zajmie całego ekranu</string>
+  <string name="blacklist_title">Czarna lista</string>
+  <string name="blacklist_edit_dialog_title">Edytuj wpis czarnej listy</string>
+  <string name="blacklist_prefs">Ustawienia</string>
+  <string name="blacklist_button_delete">Usuń</string>
+  <string name="blacklist_empty_text">Nie masz żadnych numerów na czarnej liście. Dodaj wpis naciskając (+).</string>
+  <string name="blacklist_disabled_empty_text">Aby dodać numery do czarnej listy połączeń i/lub wiadomości, włącz czarną listę.</string>
+  <string name="blacklist_summary_disabled">Wyłączono</string>
+  <string name="blacklist_summary">Połączenia przychodzące i wiadomości z numerów na czarnej liście będą blokowane</string>
+  <string name="blacklist_notify">Pokaż powiadomienia</string>
+  <string name="blacklist_private_numbers_title">Numery prywatne</string>
+  <string name="blacklist_private_numbers_summary_disabled">Nie blokuj połączeń od numerów prywatnych</string>
+  <string name="blacklist_private_numbers_summary">Blokuj przychodzące <xliff:g id="type">%s</xliff:g> z numerów prywatnych</string>
+  <string name="blacklist_unknown_numbers_title">Nieznane numery</string>
+  <string name="blacklist_unknown_numbers_summary_disabled">Nie blokuj połączeń lub wiadomości z numerów które nie są na liście kontaktów</string>
+  <string name="blacklist_unknown_numbers_summary">Blokuj przychodzące <xliff:g id="type">%s</xliff:g> z numerów które nie są na liście kontaktów</string>
+  <string name="blacklist_summary_type_calls_only">połączenia</string>
+  <string name="blacklist_summary_type_messages_only">wiadomości</string>
+  <string name="blacklist_summary_type_calls_and_messages">połączenia i wiadomości</string>
+  <string name="blacklist_regex_title">Użyj symboli wieloznacznych</string>
+  <string name="blacklist_regex_summary">Użyj . i * jako zamiennika dowolnego ciągu powtórzeń. Np. 123.* blokuje numery zaczynające się od 123, a .*123.* blokuje numery zawierające 123</string>
+  <string name="blacklist_policy_block_calls">Blokuj połączenia przychodzące</string>
+  <string name="blacklist_policy_block_messages">Blokuj przychodzące wiadomości</string>
+  <string name="add_blacklist_number">Dodaj numer</string>
+  <string name="remove_blacklist_number_title">Usuń numer</string>
+  <string name="remove_blacklist_entry">Czy chcesz usunąć numer z czarnej listy?</string>
+  <string name="select_contact">Wybierz kontakt</string>
 </resources>
