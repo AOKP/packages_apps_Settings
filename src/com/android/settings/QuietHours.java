@@ -98,6 +98,14 @@ public class QuietHours extends SettingsPreferenceFragment implements
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        if (mQuietHoursTimeRange != null) {
+            mQuietHoursTimeRange.updatePreferenceViews();
+        }
+    }
+
+    @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         ContentResolver resolver = getActivity().getApplicationContext().getContentResolver();
 
