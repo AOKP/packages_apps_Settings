@@ -62,6 +62,7 @@
   <string name="quiet_hours_dim_title">Vypnout notifikační LEDku</string>
   <string name="quiet_hours_active_from">Aktivní od</string>
   <string name="quiet_hours_active_to">do</string>
+  <string name="quiet_hours_system_title">Vypnout systémové zvuky</string>
   <string name="start_time_title">Začátek</string>
   <string name="end_time_title">Konec</string>
   <string name="rom_control_title">Nastavení ROM</string>
