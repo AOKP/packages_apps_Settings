@@ -117,6 +117,47 @@
   <string name="volume_steps_ring_title">Уровни: звонок</string>
   <string name="volume_steps_system_title">Уровни: система</string>
   <string name="volume_steps_voice_call_title">Уровни: голосовой вызов</string>
+  <string name="ok">OK</string>
+  <string name="auto_brightness_setup_title">Автоматическая яркость</string>
+  <string name="auto_brightness_adjustment_title">Регулировка яркости</string>
+  <string name="auto_brightness_twilight_adjustment">Подстраивать под восход и заход</string>
+  <string name="light_sensor_current_value">Текущее значение датчика света: <xliff:g id="light_level">%d</xliff:g> лк</string>
+  <string name="auto_brightness_dialog_title">Уровни автояркости</string>
+  <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g> лк</string>
+  <string name="auto_brightness_last_level_format"><xliff:g id="level">%1$d</xliff:g> -\n\u221e лк</string>
+  <string name="auto_brightness_adjust_button">Регулировка</string>
+  <string name="auto_brightness_close_button">Закрыть</string>
+  <string name="auto_brightness_reset_button">Сброс</string>
+  <string name="auto_brightness_split_dialog_title">Разделить уровень яркости</string>
+  <string name="auto_brightness_level_dialog_title">Установка уровня света</string>
+  <string name="auto_brightness_lux">Освещённость (лк)</string>
+  <string name="auto_brightness_backlight">Яркость экрана (%)</string>
+  <string name="auto_brightness_reset_dialog_title">Сбросить уровни?</string>
+  <string name="auto_brightness_reset_confirmation">Все уровни яркости будут сброшены к значениям по умолчанию.</string>
+  <string name="auto_brightness_split_lux_format">Разделить позицию (между <xliff:g id="min">%1$d</xliff:g> and <xliff:g id="max">%2$d</xliff:g> лк)</string>
+  <string name="auto_brightness_level_options">Опции уровня света</string>
+  <string name="auto_brightness_menu_edit">Изменить</string>
+  <string name="auto_brightness_menu_split">Разделить</string>
+  <string name="auto_brightness_menu_remove">Удалить</string>
+  <string name="auto_brightness_preview">Предпросмотр</string>
+  <string name="auto_brightness_preview_dialog_title">Предпросмотр кривой яркости</string>
+  <string name="auto_brightness_help_dialog_title">Помощь</string>
+  <string name="auto_brightness_help_text"><b>Как расчитывается яркость?</b>
+\n\n
+Кривая яркости рассчитывается путём выполнения <i>кубической сплайн-интерполяции</i> на заданное число <i>контрольных точек</i>. Это не тот метод расчёта, когда яркость экрана остаётся постоянной для определённого диапазона освещённости. В данном случае, небольшое изменение освещения не вызывает резкого скачка яркости экрана, однако, точный расчёт последствия изменения контрольных точек может вызвать трудности.\n
+Для этого предусмотрена возможность предпросмотра вычисленной кривой. Обратите внимание, что она отображается на <i>логарифмической</i> шкале, что позволяет показать все контрольные точки по отдельности. При использовании линейной шкалы нельзя выделить потенциально более важные точки в нижнем диапазоне освещения.
+\n\n
+<b>Как изменить кривую яркости?</b>
+\n\n
+Каждая строка списка соответствует одной <i>контрольной точке</i> кривой яркости. Чтобы изменить уровень яркости для этой точки, используйте ползунок, имеющийся на каждой строке. Яркость экрана будет изменяться в соответствии с позицией ползунка, предоставляя возможность предпросмотра уровня света.\n
+Дополнительные настройки доступны по длительному нажатию на строку списка. Выбрав \'Изменить\', вы можете изменить уровень освещённости, а также вручную ввести желаемое значение яркости экрана. Пункт \'Разделить\' делит одну строку на два значения для вставки дополнительных контрольных точек. Пункт \'Удалить\' удаляет выбранную строку.
+    </string>
+  <string name="auto_brightness_sensitivity_title">Чувствительность</string>
+  <string name="auto_brightness_sensitivity_verylow">Очень низкая</string>
+  <string name="auto_brightness_sensitivity_low">Низкая</string>
+  <string name="auto_brightness_sensitivity_medium">Средняя</string>
+  <string name="auto_brightness_sensitivity_high">Высокая</string>
+  <string name="auto_brightness_sensitivity_veryhigh">Очень высокая</string>
   <string name="bluetooth_accept_all_files">Принимать все типы файлов</string>
   <string name="lock_numpad_random_title">Изменить порядок цифр на экране ввода PIN</string>
   <string name="lock_numpad_random_dialog_title">PIN в случайном порядке</string>
@@ -185,4 +226,8 @@
   <string name="lock_pattern_size_4">4x4</string>
   <string name="lock_pattern_size_5">5x5</string>
   <string name="lock_pattern_size_6">6x6</string>
+  <string name="link_volume_ringtones">Связать громкость звонка и уведомлений</string>
+  <string name="link_volume_mutes">Беззвучный режим влияет на уведомления</string>
+  <string name="volume_keys_control_ring_stream">Клавиши громкости регулируют уровень звонка</string>
+  <string name="volume_ring_only_description">Мелодия звонка</string>
 </resources>

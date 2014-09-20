@@ -64,6 +64,7 @@
   <string name="quiet_hours_dim_title">Vô hiệu đèn thông báo</string>
   <string name="quiet_hours_active_from">Hoạt động từ</string>
   <string name="quiet_hours_active_to">đến</string>
+  <string name="quiet_hours_system_title">Vô hiệu âm thanh hệ thống</string>
   <string name="start_time_title">Bắt đầu</string>
   <string name="end_time_title">Kết thúc</string>
   <string name="rom_control_title">Kiểm soát ROM</string>
@@ -117,6 +118,37 @@
   <string name="volume_steps_ring_title">Điều chỉnh âm lượng: Nhạc chuông</string>
   <string name="volume_steps_system_title">Điều chỉnh âm lượng: Hệ thống</string>
   <string name="volume_steps_voice_call_title">Điều chỉnh âm lượng: Gọi thoại</string>
+  <string name="ok">OK</string>
+  <string name="auto_brightness_setup_title">Độ sáng tự động</string>
+  <string name="auto_brightness_adjustment_title">Điều chỉnh độ sáng</string>
+  <string name="auto_brightness_twilight_adjustment">Điều chỉnh theo bình minh và hoàng hôn</string>
+  <string name="light_sensor_current_value">Giá trị cảm biến ánh sáng hiện tại: <xliff:g id="light_level">%d </xliff:g> lux</string>
+  <string name="auto_brightness_dialog_title">Mức sáng tự động</string>
+  <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g> lux</string>
+  <string name="auto_brightness_last_level_format"><xliff:g id="level">%1$d</xliff:g> -\n\u221e lux</string>
+  <string name="auto_brightness_adjust_button">Điều chỉnh</string>
+  <string name="auto_brightness_close_button">Đóng</string>
+  <string name="auto_brightness_reset_button">Đặt lại</string>
+  <string name="auto_brightness_split_dialog_title">Chia mức sáng</string>
+  <string name="auto_brightness_level_dialog_title">Thiết lập mức độ ánh sáng</string>
+  <string name="auto_brightness_lux">Độ sáng môi trường (lux)</string>
+  <string name="auto_brightness_backlight">Độ sáng màn hình (%)</string>
+  <string name="auto_brightness_reset_dialog_title">Thiết lập lại mức độ?</string>
+  <string name="auto_brightness_reset_confirmation">Tất cả các cấp độ sáng sẽ được đặt lại về cài đặt mặc định.</string>
+  <string name="auto_brightness_split_lux_format">Chia vị trí (giữa <xliff:g id="min">%1$d</xliff:g> và <xliff:g id="max">%2$d</xliff:g> lux)</string>
+  <string name="auto_brightness_level_options">Tùy chọn mức độ ánh sáng</string>
+  <string name="auto_brightness_menu_edit">Chỉnh sửa</string>
+  <string name="auto_brightness_menu_split">Chia</string>
+  <string name="auto_brightness_menu_remove">Xoá</string>
+  <string name="auto_brightness_preview">Xem trước</string>
+  <string name="auto_brightness_preview_dialog_title">Xem trước độ sáng</string>
+  <string name="auto_brightness_help_dialog_title">Trợ giúp</string>
+  <string name="auto_brightness_sensitivity_title">Độ nhạy điều chỉnh</string>
+  <string name="auto_brightness_sensitivity_verylow">Rất thấp</string>
+  <string name="auto_brightness_sensitivity_low">Thấp</string>
+  <string name="auto_brightness_sensitivity_medium">Trung bình</string>
+  <string name="auto_brightness_sensitivity_high">Cao</string>
+  <string name="auto_brightness_sensitivity_veryhigh">Rất cao</string>
   <string name="bluetooth_accept_all_files">Chấp nhận tất cả các loại tập tin</string>
   <string name="lock_numpad_random_title">Đổi thứ tự số PIN</string>
   <string name="lock_numpad_random_dialog_title">Thứ tự PIN ngẫu nhiên</string>
@@ -185,4 +217,8 @@
   <string name="lock_pattern_size_4">4x4</string>
   <string name="lock_pattern_size_5">5x5</string>
   <string name="lock_pattern_size_6">6x6</string>
+  <string name="link_volume_ringtones">Liên kết âm lượng nhạc chuông &amp; thông báo</string>
+  <string name="link_volume_mutes">Chế độ im lặng ảnh hưởng đến thông báo</string>
+  <string name="volume_keys_control_ring_stream">Phím âm lượng điều khiển âm lượng chuông</string>
+  <string name="volume_ring_only_description">Nhạc chuông</string>
 </resources>

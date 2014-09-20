@@ -115,6 +115,41 @@
   <string name="volume_steps_ring_title">Ses adımları: Zil sesi</string>
   <string name="volume_steps_system_title">Ses adımları: Sistem</string>
   <string name="volume_steps_voice_call_title">Ses adımları: Sesli Arama</string>
+  <string name="ok">Tamam</string>
+  <string name="auto_brightness_setup_title">Otomatik parlaklık</string>
+  <string name="auto_brightness_adjustment_title">Parlaklık ayarı</string>
+  <string name="auto_brightness_twilight_adjustment">Gündoğumu ve günbatımına ayarla</string>
+  <string name="light_sensor_current_value">Şu anki ışık sensörü değeri: <xliff:g id="light_level">%d</xliff:g> lux</string>
+  <string name="auto_brightness_dialog_title">Otomatik parlaklık düzeyleri</string>
+  <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g> lux</string>
+  <string name="auto_brightness_last_level_format"><xliff:g id="level"> %1$d </xliff:g>-\n\u221e lux</string>
+  <string name="auto_brightness_adjust_button">Ayarla</string>
+  <string name="auto_brightness_close_button">Kapat</string>
+  <string name="auto_brightness_reset_button">Sıfırla</string>
+  <string name="auto_brightness_split_dialog_title">Parlaklık seviyesini böl</string>
+  <string name="auto_brightness_level_dialog_title">Işık düzeyi ayarı</string>
+  <string name="auto_brightness_lux">Ortam parlaklığı (lux)</string>
+  <string name="auto_brightness_backlight">Ekran parlaklığı (%)</string>
+  <string name="auto_brightness_reset_dialog_title">Düzeyleri sıfırla?</string>
+  <string name="auto_brightness_reset_confirmation">Tüm parlaklık düzeyleri varsayılana dönecek.</string>
+  <string name="auto_brightness_split_lux_format">Konumu böl (<xliff:g id="min">%1$d</xliff:g> ve <xliff:g id="max">%2$d</xliff:g> lux arasında)</string>
+  <string name="auto_brightness_level_options">Işık düzeyi ayarları</string>
+  <string name="auto_brightness_menu_edit">Düzenle</string>
+  <string name="auto_brightness_menu_split">Böl</string>
+  <string name="auto_brightness_menu_remove">Kaldır</string>
+  <string name="auto_brightness_preview">Önizleme</string>
+  <string name="auto_brightness_preview_dialog_title">Parlaklık eğrisi önizleme</string>
+  <string name="auto_brightness_help_dialog_title">Yardım</string>
+  <string name="auto_brightness_help_text"><b>Parlaklık nasıl hesaplanıyor?</b>
+\n\n
+Parlaklık eğrisi <i>kübik spline interpolasyon</i> adı verilen bir yönetemin\nverilen <i>kontrol noktaları</i> üzerinde uygulanmasıyla bulunuyor. Bu \'bucket-type\' denilen ve\nufak değişikliklerde ekran parlaklığının sabit kaldığı bir hesaplama değildir. Bu şekilde,\nçevrenizdeki parlaklıktaki ufak değişiklikler ekran parlaklığında büyük atlamalara sebep olmaz;\nbuna rağmen kontrol noktalarını değiştirmelerin yol açağı tam sonuçları belirlemek biraz zor olabilir.\n\nBuna çözüm getirmek için, hesaplanan eğri önizlemesi incelenebilir. Lütfen unutmayın ki,\nönizleme eğriyi <i>logaritmik</i> ölçekte gösterir, bu yüzden her bir kontrol noktası tam olarak görüntülenemeyebilir.\nLinear ölçek kullanılırken, düşük çevre aydınlığındaki daha önemli kontrol noktalarını ayırt etmek mümkün olmayacaktır.\n\n\n\n<b>Parlaklık eğrisi nasıl düzenlenir?</b>\n\n\n\nParlaklık listesindeki her bir satır parlaklık eğrisinde bir <i>kontrol noktasına</i> denk gelir.\nNoktanın parlaklığını ayarlamak için her satırdaki kaydırma çubuğunu kullanabilirsiniz.\nEkran parlaklığı kaydırıcıyı kaydırırken önizleme olsun diye değişecektir.\n\nEk özelliklere bir satıra uzun basarak erişilebilir. \'Düzenle\' tuşuyla hem kontrol noktasının parlaklığını\nayarlayabilir hem de istediğiniz parlaklığı elle girebilirsiniz. \'Böl\'ü seçmek bir saturu daha fazla kontrol noktası\noluşturmak için ikiye böler. \'Sil\' satırı siler.\n.
+    </string>
+  <string name="auto_brightness_sensitivity_title">Ayarlama hassasiyeti</string>
+  <string name="auto_brightness_sensitivity_verylow">Çok düşük</string>
+  <string name="auto_brightness_sensitivity_low">Düşük</string>
+  <string name="auto_brightness_sensitivity_medium">Orta</string>
+  <string name="auto_brightness_sensitivity_high">Yüksek</string>
+  <string name="auto_brightness_sensitivity_veryhigh">Çok yüksek</string>
   <string name="bluetooth_accept_all_files">Bütün dosya türlerini kabul et</string>
   <string name="lock_numpad_random_title">PIN\'in tuş takımı düzenini değiştir</string>
   <string name="lock_numpad_random_dialog_title">PIN tuş takımı rastgele düzeni</string>
@@ -183,4 +218,8 @@
   <string name="lock_pattern_size_4">4x4</string>
   <string name="lock_pattern_size_5">5x5</string>
   <string name="lock_pattern_size_6">6x6</string>
+  <string name="link_volume_ringtones">Zil sesi &amp; bildirim ses düzeyini bağla</string>
+  <string name="link_volume_mutes">Sessiz mod bildirimleri etkiler</string>
+  <string name="volume_keys_control_ring_stream">Ses tuşları zil sesi düzeyini kontrol eder</string>
+  <string name="volume_ring_only_description">Zil sesi</string>
 </resources>

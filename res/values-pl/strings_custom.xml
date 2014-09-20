@@ -116,6 +116,50 @@
   <string name="volume_steps_ring_title">Poziom głośności: Dzwonek</string>
   <string name="volume_steps_system_title">Poziom głośności: System</string>
   <string name="volume_steps_voice_call_title">Poziom głośności: Rozmowa</string>
+  <string name="ok">OK</string>
+  <string name="auto_brightness_setup_title">Automatyczna jasność</string>
+  <string name="auto_brightness_adjustment_title">Regulacja jasności</string>
+  <string name="auto_brightness_twilight_adjustment">Dopasuj do wschodu i zachodu słońca</string>
+  <string name="light_sensor_current_value">Obecna wartość czujnika światła: <xliff:g id="light_level">%d</xliff:g> lux</string>
+  <string name="auto_brightness_dialog_title">Automatyczny poziom jasności</string>
+  <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g> lux</string>
+  <string name="auto_brightness_last_level_format"><xliff:g id="level">%1$d</xliff:g>-\n\u221e lux</string>
+  <string name="auto_brightness_adjust_button">Dostosuj</string>
+  <string name="auto_brightness_close_button">Zamknij</string>
+  <string name="auto_brightness_reset_button">Reset</string>
+  <string name="auto_brightness_split_dialog_title">Dzielenie poziomów jasności</string>
+  <string name="auto_brightness_level_dialog_title">Dostosowywanie poziomu oświetlenia</string>
+  <string name="auto_brightness_lux">Jasność otoczenia (lux)</string>
+  <string name="auto_brightness_backlight">Jasność ekranu (%)</string>
+  <string name="auto_brightness_reset_dialog_title">Przywrócić domyślne poziomy?</string>
+  <string name="auto_brightness_reset_confirmation">Wszystkie poziomy jasności zostaną przywrócone do wartości domyślnych.</string>
+  <string name="auto_brightness_split_lux_format">Podziel pozycję (pomiędzy <xliff:g id="min">%1$d</xliff:g> i <xliff:g id="max">%2$d</xliff:g> lux)</string>
+  <string name="auto_brightness_level_options">Opcje poziomu światła</string>
+  <string name="auto_brightness_menu_edit">Edytuj</string>
+  <string name="auto_brightness_menu_split">Podziel</string>
+  <string name="auto_brightness_menu_remove">Usuń</string>
+  <string name="auto_brightness_preview">Podgląd</string>
+  <string name="auto_brightness_preview_dialog_title">Podgląd wykresu jasności</string>
+  <string name="auto_brightness_help_dialog_title">Pomoc</string>
+  <string name="auto_brightness_help_text"><b>Jak obliczana jest jasność?</b>
+\n\n
+Wykres jasności jest obliczany poprzez wykonanie <i>interpolacji sześciennej krzywej składanej</i>
+na określonej liczbie <i>punktów kontrolnych</i>. Nie jest to typ obliczenia gdzie
+jasność ekranu będzie utrzymywała się na stałym poziomie dla pewnego zakresu jasności otoczenia. W ten sposób
+małe zmiany jasności otoczenia nie skutkują dużą zmianą podświetlenia ekranu. Niemniej
+trudno przewidzieć dokładne konsekwencje wynikające ze zmiany punktów kontrolnych.\n
+Pomocne w tym celu może być skorzystanie z podglądu wykresu jasności. Warto przy tym zauważyć,
+że podgląd pokazuje krzywą w skali <i>logarytmicznej</i>, aby wszystkie punkty kontrolne mogły być wyświetlane
+czytelnie. Użycie skali liniowej, mogłoby utrudnić odczytanie
+ważnych punktów kontrolnych w dolnych zakresach jasności otoczenia.
+\n\n.
+    </string>
+  <string name="auto_brightness_sensitivity_title">Regulacja czułości</string>
+  <string name="auto_brightness_sensitivity_verylow">Bardzo niska</string>
+  <string name="auto_brightness_sensitivity_low">Niska</string>
+  <string name="auto_brightness_sensitivity_medium">Średnia</string>
+  <string name="auto_brightness_sensitivity_high">Wysoka</string>
+  <string name="auto_brightness_sensitivity_veryhigh">Bardzo wysoka</string>
   <string name="bluetooth_accept_all_files">Akceptuj wszystkie typy plików</string>
   <string name="lock_numpad_random_title">Zmień kolejność cyfr w oknie wpisywania numeru PIN</string>
   <string name="lock_numpad_random_dialog_title">Losowa kolejność cyfr w oknie wpisywania PIN</string>
@@ -184,4 +228,8 @@
   <string name="lock_pattern_size_4">4x4</string>
   <string name="lock_pattern_size_5">5x5</string>
   <string name="lock_pattern_size_6">6x6</string>
+  <string name="link_volume_ringtones">Połącz głośność dzwonka &amp; powiadomień</string>
+  <string name="link_volume_mutes">Tryb cichy wpływa na powiadomienia</string>
+  <string name="volume_keys_control_ring_stream">Przyciski głośności regulują głośność dzwonka</string>
+  <string name="volume_ring_only_description">Dzwonek</string>
 </resources>

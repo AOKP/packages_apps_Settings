@@ -64,6 +64,7 @@
   <string name="quiet_hours_dim_title">关闭通知灯</string>
   <string name="quiet_hours_active_from">静音时间从</string>
   <string name="quiet_hours_active_to">到</string>
+  <string name="quiet_hours_system_title">禁用系统音效</string>
   <string name="start_time_title">开始</string>
   <string name="end_time_title">停止</string>
   <string name="rom_control_title">ROM 控制</string>
@@ -116,6 +117,56 @@
   <string name="volume_steps_ring_title">音量模式：铃声</string>
   <string name="volume_steps_system_title">音量模式：系统</string>
   <string name="volume_steps_voice_call_title">音量模式：语音电话</string>
+  <string name="ok">确定</string>
+  <string name="auto_brightness_setup_title">自动亮度</string>
+  <string name="auto_brightness_adjustment_title">亮度调节</string>
+  <string name="auto_brightness_twilight_adjustment">根据日光或灯光调节亮度</string>
+  <string name="light_sensor_current_value">当前感光器值：<xliff:g id="light_level">%d</xliff:g> lux</string>
+  <string name="auto_brightness_dialog_title">自动亮度等级</string>
+  <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g> lux</string>
+  <string name="auto_brightness_last_level_format"><xliff:g id="level">%1$d</xliff:g> -\n\u221e lux</string>
+  <string name="auto_brightness_adjust_button">调节</string>
+  <string name="auto_brightness_close_button">关闭</string>
+  <string name="auto_brightness_reset_button">重置</string>
+  <string name="auto_brightness_split_dialog_title">拆分亮度范围</string>
+  <string name="auto_brightness_level_dialog_title">亮度等级设置</string>
+  <string name="auto_brightness_lux">环境亮度（lux）</string>
+  <string name="auto_brightness_backlight">屏幕亮度（%）</string>
+  <string name="auto_brightness_reset_dialog_title">重置等级？</string>
+  <string name="auto_brightness_reset_confirmation">全部亮度等级将重置为默认。</string>
+  <string name="auto_brightness_split_lux_format">拆分位置 (在 <xliff:g id="min">%1$d</xliff:g> 至 <xliff:g id="max">%2$d</xliff:g> lux 之间)</string>
+  <string name="auto_brightness_level_options">亮度等级选项</string>
+  <string name="auto_brightness_menu_edit">修改</string>
+  <string name="auto_brightness_menu_split">拆分</string>
+  <string name="auto_brightness_menu_remove">删除</string>
+  <string name="auto_brightness_preview">预览</string>
+  <string name="auto_brightness_preview_dialog_title">亮度曲线预览</string>
+  <string name="auto_brightness_help_dialog_title">帮助</string>
+  <string name="auto_brightness_help_text"><b>如何计算亮度？</b>
+\n\n
+亮度曲线计算方法是在指定数量的<i>控制点</i>执行<i>三次样条插值</i>。
+这不是一个“桶型”计算，屏幕亮度将在特定的环境亮度范围内保持不变；
+这样当环境亮度发生细微的变化时不会导致屏幕亮度发生大的改变，但是它可能难以准确预测改变中的控制点的结果。\n
+为了方便，预览计算曲线可以帮助检查。
+请注意，预览的曲线显示在<i>对数</i>标尺，这样所有的控制点可以表示的更明确。
+如果使用线性标尺，它无法区分在环境亮度较低范围内的重要的控制点。
+\n\n
+<b>如何编辑亮度曲线？</b>
+\n\n
+亮度列表中每一行对应一个<i>控制点</i>的亮度曲线。
+编辑亮度等级的点，您可以使用每一行的滑块。
+触摸滑块时给出亮度水平的预览，屏幕亮度会做出相应的改变。\n
+长按一行可使用更多选项。
+选择“调整”，可以同时编辑环境亮度级别的控制点以及手动输入所需的屏幕亮度。
+选择“拆分”，将当前行重复为两个实现插入新的控制点。
+选择“移除”，删除选定的行。
+    </string>
+  <string name="auto_brightness_sensitivity_title">调节敏感度</string>
+  <string name="auto_brightness_sensitivity_verylow">极低</string>
+  <string name="auto_brightness_sensitivity_low">低</string>
+  <string name="auto_brightness_sensitivity_medium">中</string>
+  <string name="auto_brightness_sensitivity_high">高</string>
+  <string name="auto_brightness_sensitivity_veryhigh">极高</string>
   <string name="bluetooth_accept_all_files">接受所有文件类型</string>
   <string name="lock_numpad_random_title">更改 PIN 键盘数字的顺序</string>
   <string name="lock_numpad_random_dialog_title">PIN键盘数字顺序随机</string>
@@ -184,4 +235,8 @@
   <string name="lock_pattern_size_4">4x4</string>
   <string name="lock_pattern_size_5">5x5</string>
   <string name="lock_pattern_size_6">6x6</string>
+  <string name="link_volume_ringtones">关联铃声与通知的音量</string>
+  <string name="link_volume_mutes">静音模式影响通知</string>
+  <string name="volume_keys_control_ring_stream">音量键控制铃声音量</string>
+  <string name="volume_ring_only_description">铃声</string>
 </resources>

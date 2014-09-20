@@ -62,6 +62,7 @@
   <string name="quiet_hours_dim_title">Értesítési fény tiltása</string>
   <string name="quiet_hours_active_from">Aktív</string>
   <string name="quiet_hours_active_to">-ig</string>
+  <string name="quiet_hours_system_title">Rendszerhangok letiltása</string>
   <string name="start_time_title">Kezdet</string>
   <string name="end_time_title">Vége</string>
   <string name="rom_control_title">ROM Vezérlés</string>
@@ -115,6 +116,61 @@
   <string name="volume_steps_ring_title">Hangerő lépésköz: Csengőhang</string>
   <string name="volume_steps_system_title">Hangerő lépésköz: Rendszer</string>
   <string name="volume_steps_voice_call_title">Hangerő lépésköz: Hanghívás</string>
+  <string name="ok">Ok</string>
+  <string name="auto_brightness_setup_title">Automatikus fényerő</string>
+  <string name="auto_brightness_adjustment_title">Fényerő beállítások</string>
+  <string name="auto_brightness_twilight_adjustment">Napkelte és napnyugta használata</string>
+  <string name="light_sensor_current_value">Fényérzékelő jelenlegi értéke: <xliff:g id="light_level">%d</xliff:g> lux</string>
+  <string name="auto_brightness_dialog_title">Automatikus fényerő szintek</string>
+  <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g> lux</string>
+  <string name="auto_brightness_last_level_format"><xliff:g id="level">%1$d</xliff:g> -\n\u221e lux</string>
+  <string name="auto_brightness_adjust_button">Beállítás</string>
+  <string name="auto_brightness_close_button">Bezárás</string>
+  <string name="auto_brightness_reset_button">Alaphelyzet</string>
+  <string name="auto_brightness_split_dialog_title">Köztes értékek megadása</string>
+  <string name="auto_brightness_level_dialog_title">Fényerőszint beállítása</string>
+  <string name="auto_brightness_lux">Környezeti fényerő (lux)</string>
+  <string name="auto_brightness_backlight">Képernyő fényereje (%)</string>
+  <string name="auto_brightness_reset_dialog_title">Szintek visszaállítása?</string>
+  <string name="auto_brightness_reset_confirmation">Az összes fényerőszintet alaphelyzetbe állítja.</string>
+  <string name="auto_brightness_split_lux_format">Állítsa be az értéket (<xliff:g id="min">%1$d</xliff:g> - <xliff:g id="max">%2$d</xliff:g> lux között)</string>
+  <string name="auto_brightness_level_options">Fényerőszint beállításai</string>
+  <string name="auto_brightness_menu_edit">Szerkesztés</string>
+  <string name="auto_brightness_menu_split">Felosztás</string>
+  <string name="auto_brightness_menu_remove">Eltávolítás</string>
+  <string name="auto_brightness_preview">Előnézet</string>
+  <string name="auto_brightness_preview_dialog_title">Fényerő görbe megtekintése</string>
+  <string name="auto_brightness_help_dialog_title">Segítség</string>
+  <string name="auto_brightness_help_text"><b>Hogyan számolódik a fényerő?</b>
+\n\n
+A fényerő-görbe egy úgynevezett <i>köbös interpolációval</i> számítódik, ahol adott
+néhány <i>vezérlőpont</i>. Ez egy olyan számítás, ahol a képernyő fényereje állandó
+marad a környezeti fényerősség egy-egy tartományában. Ezáltal a környezeti fény kis
+változása nem okoz nagy fényerőugrásokat a kijelzőn,; cserébe kicsit nehezebb
+megjósolni, hogy mit okoz egy vezérlőpont megváltoztatása.\n
+Hogy ezt segítsük, lehetővé tettük a számított görbe megtekintését. A görbe
+<i>logaritmikus</i> skálán ábrázolódik, hogy minden pontot meg lehessen különböztetni.
+Lineáris skálát alkalmazva előfordulhatna, hogy a kisebb környezeti fényerőkhöz
+tartozó pontokat nem lehetne megkülönböztetni.
+\n\n
+<b>Hogyan szerkesztheti a fényerő-görbét?</b>
+\n\n
+Minden sor a fényerőlistán megfelel a görbe egy <i>vezérlőpontjának</i>. A pont
+fényerejének szerkesztéséhez használja a sorokban található csúszkákat. A csúszkák
+állításakor a kijelző fényereje a beállított értéknek megfelelően fog változni,
+hogy látni lehessen a beállítás hatását.\n
+Egy sor hosszan tartó megérintésével további beállítások válnak elérhetővé.
+A \"Szerkesztés\" lehetőséget választva módosíthatja a vezérlőponthoz tartozó környezeti
+fényerőt, illetve kézzel beírhatja a kívánt kijelző-fényerőt. A \"Felosztás\" lehetővé
+teszi egy sor kettéválasztását új vezérlőpont beszúrásához. Az \"Eltávolítás\" törli a
+kiválasztott sort.
+    </string>
+  <string name="auto_brightness_sensitivity_title">Érzékenység beállítása</string>
+  <string name="auto_brightness_sensitivity_verylow">Nagyon alacsony</string>
+  <string name="auto_brightness_sensitivity_low">Alacsony</string>
+  <string name="auto_brightness_sensitivity_medium">Közepes</string>
+  <string name="auto_brightness_sensitivity_high">Magas</string>
+  <string name="auto_brightness_sensitivity_veryhigh">Nagyon magas</string>
   <string name="bluetooth_accept_all_files">Minden fájltípus elfogadása</string>
   <string name="lock_numpad_random_title">PIN pad számok sorrendjének módosítása</string>
   <string name="lock_numpad_random_dialog_title">PIN pad véletlen sorrend</string>
@@ -183,4 +239,8 @@
   <string name="lock_pattern_size_4">4x4</string>
   <string name="lock_pattern_size_5">5x5</string>
   <string name="lock_pattern_size_6">6x6</string>
+  <string name="link_volume_ringtones">Csengőhang &amp; értesítési hangerő összekapcsolása</string>
+  <string name="link_volume_mutes">Néma mód értesítésekre is érvényes</string>
+  <string name="volume_keys_control_ring_stream">Csengőhang vezérlése hangerőgombokkal</string>
+  <string name="volume_ring_only_description">Csengőhang</string>
 </resources>

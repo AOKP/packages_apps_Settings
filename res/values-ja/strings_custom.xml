@@ -64,6 +64,7 @@
   <string name="quiet_hours_dim_title">通知LEDを無効</string>
   <string name="quiet_hours_active_from">有効時間</string>
   <string name="quiet_hours_active_to">から</string>
+  <string name="quiet_hours_system_title">システムの音を無効にする</string>
   <string name="start_time_title">開始</string>
   <string name="end_time_title">終了</string>
   <string name="rom_control_title">ROMコントロール</string>
@@ -116,6 +117,10 @@
   <string name="volume_steps_ring_title">音量レベル: 着信音</string>
   <string name="volume_steps_system_title">音量レベル: システム音</string>
   <string name="volume_steps_voice_call_title">音量レベル: ボイスコール</string>
+  <string name="ok">OK</string>
+  <string name="auto_brightness_setup_title">明るさの自動調整</string>
+  <string name="auto_brightness_adjustment_title">明るさの調整</string>
+  <string name="auto_brightness_twilight_adjustment">日の出と日没に合わせて調整</string>
   <string name="bluetooth_accept_all_files">すべてのファイルタイプを受け入れる</string>
   <string name="lock_numpad_random_title">PINパッドの数字の並びを変更</string>
   <string name="lock_numpad_random_dialog_title">ランダムPINパッド</string>

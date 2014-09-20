@@ -115,6 +115,7 @@
   <string name="volume_steps_ring_title">Počet kroků: Vyzvánění</string>
   <string name="volume_steps_system_title">Počet kroků: Systém</string>
   <string name="volume_steps_voice_call_title">Počet kroků: Hlasové hovory</string>
+  <string name="ok">Ok</string>
   <string name="auto_brightness_setup_title">Automatický jas</string>
   <string name="auto_brightness_adjustment_title">Úprava jasu</string>
   <string name="auto_brightness_twilight_adjustment">Upravit pro východ a západ slunce</string>
@@ -122,7 +123,6 @@
   <string name="auto_brightness_dialog_title">Úrovně automatického podsvícení</string>
   <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g> lux</string>
   <string name="auto_brightness_last_level_format"><xliff:g id="level">%1$d</xliff:g> -\n\u221e lux</string>
-  <string name="auto_brightness_brightness_format"><xliff:g id="percent">%s</xliff:g>%%</string>
   <string name="auto_brightness_adjust_button">Upravit</string>
   <string name="auto_brightness_close_button">Zavřít</string>
   <string name="auto_brightness_reset_button">Obnovit</string>
@@ -134,7 +134,7 @@
   <string name="auto_brightness_reset_confirmation">Všechny úrovně jasu budou obnoveny na výchozí hodnoty.</string>
   <string name="auto_brightness_split_lux_format">Rozdělit pozici (mezi <xliff:g id="min">%1$d</xliff:g> a <xliff:g id="max">%2$d</xliff:g> lux)</string>
   <string name="auto_brightness_level_options">Možnosti úrovní podsvícení</string>
-  <string name="auto_brightness_menu_edit_lux">Okolní rozsah jasu</string>
+  <string name="auto_brightness_menu_edit">Upravit</string>
   <string name="auto_brightness_menu_split">Rozdělit</string>
   <string name="auto_brightness_menu_remove">Odstranit</string>
   <string name="auto_brightness_preview">Náhled</string>
@@ -157,8 +157,7 @@
       náhledu úrovně jasu.\n
       Další nastavení je přístupné po dlouhém stisku řádku. Stisknutím \'Upravit\' je možné editovat jak úrovně okolního
       jasu pro kontrolní body, tak ručně vložit požadovaný jas obrazovky. Stisknutím \'Rozdělit\' je možné duplikovat
-      jeden řádek do dvou pro vložení dalších kontrolních bodů. \'Ostranit\' vymaže vybraný řádek.
-  </string>
+      jeden řádek do dvou pro vložení dalších kontrolních bodů. \'Ostranit\' vymaže vybraný řádek.</string>
   <string name="auto_brightness_sensitivity_title">Přizpůsobit citlivost</string>
   <string name="auto_brightness_sensitivity_verylow">Velmi nízká</string>
   <string name="auto_brightness_sensitivity_low">Nízká</string>
@@ -218,17 +217,17 @@
   <string name="lockgesture_settings_enable_summary">Pro odemknutí obrazovky je nutné nakreslit gesto</string>
   <string name="lockgesture_settings_enable_visible_pattern_title">Zviditelnit gesto</string>
   <string name="lockgesture_settings_enable_power_button_instantly_locks">Zapínací tlačítko okamžitě zamyká</string>
-  <string name="lockgesture_settings_choose_lock_pattern">Nastavit gesto pro odemknutí</string>
-  <string name="lockgesture_settings_change_lock_pattern">Změnit gesto pro odemknutí</string>
+  <string name="lockgesture_settings_choose_lock_pattern">Nastavit složité gesto pro odemknutí</string>
+  <string name="lockgesture_settings_change_lock_pattern">Změnit složité gesto pro odemknutí</string>
   <string name="lockgesture_settings_help_how_to_record">Jak nakreslit gesto pro odemknutí</string>
   <string name="lockgesture_too_many_failed_confirmation_attempts_header">Příliš mnoho neplatných pokusů!</string>
   <string name="lockgesture_too_many_failed_confirmation_attempts_footer">Sekundy zbývající do dalšího pokusu: <xliff:g id="number">%d</xliff:g>.</string>
   <string name="lockpassword_gesture_set_toast">Gesto bylo nastaveno</string>
   <string name="lockpassword_confirm_your_gesture_header">Potvrdit gesto</string>
   <string name="lockpassword_choose_your_gesture_header">Nakreslit gesto</string>
-  <string name="unlock_set_unlock_gesture_title">Gesto</string>
+  <string name="unlock_set_unlock_gesture_title">Složité gesto</string>
   <string name="unlock_set_unlock_gesture_summary">Nízké zabezpečení, experimentální</string>
-  <string name="unlock_set_unlock_mode_gesture">Gesto</string>
+  <string name="unlock_set_unlock_mode_gesture">Složité gesto</string>
   <string name="lock_pattern_size_3">3x3</string>
   <string name="lock_pattern_size_4">4x4</string>
   <string name="lock_pattern_size_5">5x5</string>

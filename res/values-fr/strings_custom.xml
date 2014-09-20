@@ -43,7 +43,7 @@
   <string name="anonymous_learn_more">En savoir plus</string>
   <string name="anonymous_notification_desc">Activer ou désactiver les infos sur l\'utilisation d\'AOKP</string>
   <string name="preview_id_title">Identifiant unique</string>
-  <string name="preview_device_title">Numero du modèle</string>
+  <string name="preview_device_title">Appareil</string>
   <string name="preview_version_title">Version</string>
   <string name="preview_country_title">Pays</string>
   <string name="preview_carrier_title">Opérateur</string>
@@ -60,11 +60,12 @@
   <string name="quiet_hours_ringer_title">Couper sonneries du téléphone</string>
   <string name="quiet_hours_still_title">Désactiver les vibrations</string>
   <string name="quiet_hours_dim_title">Désactiver le voyant de notification</string>
-  <string name="quiet_hours_active_from">Actif à partir de</string>
-  <string name="quiet_hours_active_to">À</string>
-  <string name="start_time_title">Démarrer</string>
+  <string name="quiet_hours_active_from">Actif de</string>
+  <string name="quiet_hours_active_to">à</string>
+  <string name="quiet_hours_system_title">Désactiver les sons système</string>
+  <string name="start_time_title">Début</string>
   <string name="end_time_title">Fin</string>
-  <string name="rom_control_title">Règlages de la rom</string>
+  <string name="rom_control_title">ROM contrôle</string>
   <string name="themes_settings_title">Thèmes</string>
   <string name="themepacks_settings_title">Packs de thème</string>
   <string name="styles_settings_title">Styles</string>
@@ -77,6 +78,7 @@
   <string name="lockscreen_quick_unlock_control_title">PIN de déverrouillage rapide</string>
   <string name="lockscreen_quick_unlock_control_summary">Déverrouillez votre mot de passe/pin écran de verrouillage sans appuyer sur le bouton entrer</string>
   <string name="device_hostname">Nom d\'hôte de l\'appareil</string>
+  <string name="nfc_polling_mode_title">Mode de sondage NFC</string>
   <string name="nfc_polling_mode_screen_off">Écran éteint</string>
   <string name="nfc_polling_mode_screen_locked">Écran allumé, verrouillé</string>
   <string name="nfc_polling_mode_screen_unlocked">Écran allumé, déverrouillé (défaut)</string>
@@ -114,6 +116,47 @@
   <string name="volume_steps_ring_title">Niveaux du volume : Sonnerie</string>
   <string name="volume_steps_system_title">Niveaux du volume : Système</string>
   <string name="volume_steps_voice_call_title">Niveaux du volume : Appel Vocal</string>
+  <string name="ok">OK</string>
+  <string name="auto_brightness_setup_title">Luminosité automatique</string>
+  <string name="auto_brightness_adjustment_title">Réglage de la luminosité</string>
+  <string name="auto_brightness_twilight_adjustment">S\'adapter au lever et au coucher du soleil</string>
+  <string name="light_sensor_current_value">Valeur actuelle du capteur de lumière\u00A0: <xliff:g id="light_level">%d</xliff:g> lux</string>
+  <string name="auto_brightness_dialog_title">Niveaux de luminosité automatique</string>
+  <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g> lux</string>
+  <string name="auto_brightness_last_level_format"><xliff:g id="level">%1$d</xliff:g> -\n\u221e lux</string>
+  <string name="auto_brightness_adjust_button">Ajuster</string>
+  <string name="auto_brightness_close_button">Fermer</string>
+  <string name="auto_brightness_reset_button">Réinitialiser </string>
+  <string name="auto_brightness_split_dialog_title">Diviser le niveau de luminosité</string>
+  <string name="auto_brightness_level_dialog_title">Définir le niveau de lumière</string>
+  <string name="auto_brightness_lux">Luminosité ambiante (lux)</string>
+  <string name="auto_brightness_backlight">Luminosité de l\'écran (%)</string>
+  <string name="auto_brightness_reset_dialog_title">Réinitialiser les niveaux\u00A0?</string>
+  <string name="auto_brightness_reset_confirmation">Tous les niveaux de luminosité seront réinitialisés à leurs paramètres par défaut.</string>
+  <string name="auto_brightness_split_lux_format">Valeur moyenne (entre <xliff:g id="min">%1$d</xliff:g> et <xliff:g id="max">%2$d</xliff:g> lux)</string>
+  <string name="auto_brightness_level_options">Options de niveau de lumière</string>
+  <string name="auto_brightness_menu_edit">Éditer</string>
+  <string name="auto_brightness_menu_split">Diviser</string>
+  <string name="auto_brightness_menu_remove">Supprimer</string>
+  <string name="auto_brightness_preview">Aperçu</string>
+  <string name="auto_brightness_preview_dialog_title">Aperçu de la courbe de luminosité</string>
+  <string name="auto_brightness_help_dialog_title">Aide</string>
+  <string name="auto_brightness_help_text"><b>Comment est calculée la luminosité\u00A0?</b>
+\n\n
+La courbe de luminosité est calculée en effectuant l\'<i>interpolation d\'une courbe cubique</i> sur un certain nombre de <i>points de contrôle</i>. C\'est un calcul précis dans lequel la luminosité de l\'écran ne reste pas constante pour une plage déterminée de luminosité ambiante. De cette manière, les légers changements de luminosité ambiante ne provoquent pas de grands sauts de luminosité de l\'écran, néanmoins il est plus difficile de prédire les conséquences exactes de l\'évolution des points de contrôle.\n
+Pour vous aider, un aperçu de la courbe calculée peut être examiné. Noter que l\'aperçu montre une courbe avec une échelle <i>logarithmique</i>, de sorte que tous les points de contrôle peuvent être affichés distinctement. Lorsque vous utilisez une échelle linéaire, il n\'est pas possible de distinguer la tendance des points de contrôle les plus importants dans la fourchette basse de luminosité ambiante.
+\n\n
+<b>Comment éditer la courbe de luminosité\u00A0?</b>
+\n\n
+Chaque ligne de la liste correspond à un <i>point de contrôle</i> de la courbe de luminosité. Pour modifier le niveau de luminosité d\'un point, vous pouvez utiliser le curseur présent sur chaque ligne. Lorsque vous toucherez le curseur, la luminosité de l\'écran sera modifiée en conséquence pour prévisualiser le niveau de lumière.\n
+Des options supplémentaires sont disponibles en appuyant longtemps sur une ligne. En sélectionnant \'Modifier\', vous pouvez modifier le niveau du point de contrôle de luminosité ambiante ou saisir manuellement la luminosité de l\'écran désirée. En sélectionnant \'Diviser\' vous pouvez séparer une ligne en deux afin d\'insérer des points de contrôle supplémentaires. Enfin, \'Supprimer\' efface la ligne sélectionnée.
+    </string>
+  <string name="auto_brightness_sensitivity_title">Réglage de la sensibilité</string>
+  <string name="auto_brightness_sensitivity_verylow">Très faible</string>
+  <string name="auto_brightness_sensitivity_low">Faible</string>
+  <string name="auto_brightness_sensitivity_medium">Moyen</string>
+  <string name="auto_brightness_sensitivity_high">Élevé</string>
+  <string name="auto_brightness_sensitivity_veryhigh">Très élevé</string>
   <string name="bluetooth_accept_all_files">Accepter tous les types de fichiers</string>
   <string name="lock_numpad_random_title">Changer l\'ordre des numéros du pavé numérique</string>
   <string name="lock_numpad_random_dialog_title">Clavier PIN aléatoire</string>
@@ -122,4 +165,68 @@
   <string name="lock_numpad_random_on_request">Sur demande</string>
   <string name="disable_fullscreen_keyboard_title">Désactiver le clavier en plein écran</string>
   <string name="disable_fullscreen_keyboard_summary">Le clavier en mode paysage ne prendra jamais la totalité de l\'écran</string>
+  <string name="blacklist_title">Liste noire</string>
+  <string name="blacklist_edit_dialog_title">Éditer la liste noire</string>
+  <string name="blacklist_prefs">Paramètres</string>
+  <string name="blacklist_button_delete">Supprimer</string>
+  <string name="blacklist_empty_text">Vous n\'avez aucun numéro dans votre liste noire. Ajouter une entrée en appuyant sur le bouton Ajouter (+).</string>
+  <string name="blacklist_disabled_empty_text">Pour bloquer les appels et/ou messages de certains numéros, activez la liste noire.</string>
+  <string name="blacklist_summary_disabled">Désactivé</string>
+  <string name="blacklist_summary">Les appels entrants et les messages provenant des numéros de la liste noire seront bloqués</string>
+  <string name="blacklist_notify">Afficher une notification</string>
+  <string name="blacklist_private_numbers_title">Numéros privés</string>
+  <string name="blacklist_private_numbers_summary_disabled">Ne pas bloquer les appels provenant de numéros privés</string>
+  <string name="blacklist_private_numbers_summary">Bloquer les <xliff:g id="type">%s</xliff:g> des numéros privés</string>
+  <string name="blacklist_unknown_numbers_title">Numéros inconnus</string>
+  <string name="blacklist_unknown_numbers_summary_disabled">Ne pas bloquer les appels et les messages des numéros n\'étant pas dans la liste de contacts</string>
+  <string name="blacklist_unknown_numbers_summary">Bloquer les <xliff:g id="type">%s</xliff:g> des numéros non répertoriés dans la liste des contacts</string>
+  <string name="blacklist_summary_type_calls_only">appels</string>
+  <string name="blacklist_summary_type_messages_only">messages</string>
+  <string name="blacklist_summary_type_calls_and_messages">appels et messages</string>
+  <string name="blacklist_regex_title">Utiliser des caractères spéciaux</string>
+  <string name="blacklist_regex_summary">Utiliser un caractère spécial et * pour la répétition. Par exemple 123.* bloque les numéros commençant par 123 et .* 123.* bloque les numéros contenant 123</string>
+  <string name="blacklist_policy_block_calls">Bloquer les appels entrants</string>
+  <string name="blacklist_policy_block_messages">Bloquer les messages reçus</string>
+  <string name="add_blacklist_number">Ajouter un numéro</string>
+  <string name="remove_blacklist_number_title">Supprimer un numéro</string>
+  <string name="remove_blacklist_entry">Voulez-vous supprimer ce numéro de la liste noire\u00A0?</string>
+  <string name="select_contact">Choisir un contact</string>
+  <string name="lockgesture_change_lock_pattern_label">Changer le geste de déverrouillage</string>
+  <string name="lockgesture_change_lock_pin_label">Changer le code PIN de déverrouillage</string>
+  <string name="lockgesture_need_to_unlock">Confirmer le geste enregistré</string>
+  <string name="lockgesture_need_to_unlock_wrong">Réessayez :</string>
+  <string name="lockgesture_recording_intro_header">Dessiner un geste de déverrouillage :</string>
+  <string name="lockgesture_recording_intro_footer">Appuyez sur Menu pour obtenir de l\'aide.</string>
+  <string name="lockgesture_recording_inprogress">Ôter le doigt quand vous avez terminé.</string>
+  <string name="lockgesture_pattern_entered_header">Geste enregistré.</string>
+  <string name="lockgesture_need_to_confirm">Redessinez le geste pour confirmer :</string>
+  <string name="lockgesture_pattern_confirmed_header">Votre nouveau geste de déverrouillage :</string>
+  <string name="lockgesture_confirm_button_text">Confirmer</string>
+  <string name="lockgesture_restart_button_text">Redessiner</string>
+  <string name="lockgesture_retry_button_text">Réessayer</string>
+  <string name="lockgesture_continue_button_text">Continuer</string>
+  <string name="lockgesture_settings_title">Geste de déverrouillage</string>
+  <string name="lockgesture_settings_enable_title">Geste requis</string>
+  <string name="lockgesture_settings_enable_summary">Obligation de dessiner geste pour déverrouiller</string>
+  <string name="lockgesture_settings_enable_visible_pattern_title">Geste visible</string>
+  <string name="lockgesture_settings_enable_power_button_instantly_locks">Bouton Marche/Arrêt verrouille instantanément</string>
+  <string name="lockgesture_settings_choose_lock_pattern">Définir un geste de déverrouillage</string>
+  <string name="lockgesture_settings_change_lock_pattern">Changer le geste de déverrouillage</string>
+  <string name="lockgesture_settings_help_how_to_record">Comment dessiner un geste de déverrouillage</string>
+  <string name="lockgesture_too_many_failed_confirmation_attempts_header">Trop de tentatives incorrectes !</string>
+  <string name="lockgesture_too_many_failed_confirmation_attempts_footer">Réessayer dans <xliff:g id="number">%d</xliff:g> secondes.</string>
+  <string name="lockpassword_gesture_set_toast">Le geste a été défini</string>
+  <string name="lockpassword_confirm_your_gesture_header">Confirmer votre geste</string>
+  <string name="lockpassword_choose_your_gesture_header">Dessiner votre geste</string>
+  <string name="unlock_set_unlock_gesture_title">Geste</string>
+  <string name="unlock_set_unlock_gesture_summary">Sécurité faible, expérimental</string>
+  <string name="unlock_set_unlock_mode_gesture">Geste</string>
+  <string name="lock_pattern_size_3">3x3</string>
+  <string name="lock_pattern_size_4">4x4</string>
+  <string name="lock_pattern_size_5">5x5</string>
+  <string name="lock_pattern_size_6">6x6</string>
+  <string name="link_volume_ringtones">Lier le volume de la sonnerie et des notifications</string>
+  <string name="link_volume_mutes">Le mode silencieux affecte les notifications</string>
+  <string name="volume_keys_control_ring_stream">Les boutons de volume contrôlent le volume de la sonnerie</string>
+  <string name="volume_ring_only_description">Sonnerie</string>
 </resources>

@@ -116,6 +116,47 @@
   <string name="volume_steps_ring_title">Livelli volume: Suoneria</string>
   <string name="volume_steps_system_title">Livelli volume: Sistema</string>
   <string name="volume_steps_voice_call_title">Livelli volume: Chiamata</string>
+  <string name="ok">OK</string>
+  <string name="auto_brightness_setup_title">Luminosità automatica</string>
+  <string name="auto_brightness_adjustment_title">Regolazione luminosità</string>
+  <string name="auto_brightness_twilight_adjustment">Regolazione per alba e tramonto</string>
+  <string name="light_sensor_current_value">Valore corrente del sensore di luminosità: <xliff:g id="light_level">%d</xliff:g> lux</string>
+  <string name="auto_brightness_dialog_title">Livelli automatici luminosità</string>
+  <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g> lux</string>
+  <string name="auto_brightness_last_level_format"><xliff:g id="level">%1$d</xliff:g> -\n\u221e lux</string>
+  <string name="auto_brightness_adjust_button">Regola</string>
+  <string name="auto_brightness_close_button">Chiudi</string>
+  <string name="auto_brightness_reset_button">Ripristina</string>
+  <string name="auto_brightness_split_dialog_title">Dividi livelli luminosità</string>
+  <string name="auto_brightness_level_dialog_title">Impostazioni livelli di luminosità</string>
+  <string name="auto_brightness_lux">Luminosità ambientale (lux)</string>
+  <string name="auto_brightness_backlight">Luminosità schermo (%)</string>
+  <string name="auto_brightness_reset_dialog_title">Ripristinare i livelli?</string>
+  <string name="auto_brightness_reset_confirmation">Tutti i livelli di luminosità saranno riportati ai rispettivi valori predefiniti.</string>
+  <string name="auto_brightness_split_lux_format">Dividi posizione (tra <xliff:g id="min">%1$d</xliff:g> e <xliff:g id="max">%2$d</xliff:g> lux)</string>
+  <string name="auto_brightness_level_options">Opzioni livello luce</string>
+  <string name="auto_brightness_menu_edit">Modifica</string>
+  <string name="auto_brightness_menu_split">Separa</string>
+  <string name="auto_brightness_menu_remove">Rimuovi</string>
+  <string name="auto_brightness_preview">Anteprima</string>
+  <string name="auto_brightness_preview_dialog_title">Anteprima curva luminosità</string>
+  <string name="auto_brightness_help_dialog_title">Guida</string>
+  <string name="auto_brightness_help_text"><b>Come è calcolata la luminosità?</b>
+\n\n
+La curva di luminosità viene calcolata eseguendo una <i>interpolazione cubica</i> su un dato numero di <i>punti di controllo</i>. Non è un calcolo di quelli in cui la luminosità dello schermo rimane costante per una specifica varietà di luminosità ambientali. In questo modo, piccoli cambiamenti nella luminosità ambientale non causano un grosso sbalzo di luminosità dello schermo; tuttavia, può essere un po\' difficile predire le esatte conseguenze del cambiamento dei punti di controllo.\n
+Per aiutare con ciò, può essere esaminata un\'anteprima della curva calcolata. Si noti per favore che l\'anteprima mostra la curva in una scala <i>logaritmica</i>, quindi tutti i punti di controllo possono essere cambiati distintamente. Quando si usa una scala lineare, non sarebbe possibile distinguere i punti di controllo tendenzialmente più importanti nelle situazioni di bassa luminosità ambientale.
+\n\n
+<b>Come cambiare la curva di luminosità?</b>
+\n\n
+Ogni linea nella lista di luminosità corrisponde a un <i>punto di controllo</i> della curva di luminosità. Per modificare il livello di luminosità del punto, puoi usare lo slider presente in ogni linea. La luminosità dello schermo sarà cambiata mentre si usa lo slider per dare un\'anteprima del livello di luminosità.\n
+Ulteriori opzioni sono disponibili tenendo premuta a lungo una linea. Selezionando \"modifica\", puoi cambiare sia il livello della luminosità ambientale del punto di controllo sia inserire manualmente il livello di luminosità dello schermo desiderato. Selezionando \"Dividi\" duplicherai una linea permettendoti di inserire punti di controllo addizionali. \"Rimuovi\" cancella la linea selezionata.
+    </string>
+  <string name="auto_brightness_sensitivity_title">Sensibilità di regolazione</string>
+  <string name="auto_brightness_sensitivity_verylow">Molto bassa</string>
+  <string name="auto_brightness_sensitivity_low">Bassa</string>
+  <string name="auto_brightness_sensitivity_medium">Media</string>
+  <string name="auto_brightness_sensitivity_high">Alta</string>
+  <string name="auto_brightness_sensitivity_veryhigh">Molto alta</string>
   <string name="bluetooth_accept_all_files">Accetta tutti i tipi di file</string>
   <string name="lock_numpad_random_title">Cambia l\'ordine del tastierino numerico del PIN</string>
   <string name="lock_numpad_random_dialog_title">ordine casuale del tastierino numerico del PIN</string>
@@ -184,4 +225,8 @@
   <string name="lock_pattern_size_4">4x4</string>
   <string name="lock_pattern_size_5">5x5</string>
   <string name="lock_pattern_size_6">6 x 6</string>
+  <string name="link_volume_ringtones">Collega volume suoneria &amp; e notifiche</string>
+  <string name="link_volume_mutes">Collega silenziamento suoneria e notifiche</string>
+  <string name="volume_keys_control_ring_stream">I tasti volume regolano la suoneria</string>
+  <string name="volume_ring_only_description">Suoneria</string>
 </resources>
