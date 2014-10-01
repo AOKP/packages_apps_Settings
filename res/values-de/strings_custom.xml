@@ -62,6 +62,7 @@
   <string name="quiet_hours_dim_title">Deaktivieren des Benachrichtigungslichts</string>
   <string name="quiet_hours_active_from">Aktiv von</string>
   <string name="quiet_hours_active_to">bis</string>
+  <string name="quiet_hours_system_title">Systemtöne deaktivieren</string>
   <string name="start_time_title">Start</string>
   <string name="end_time_title">Ende</string>
   <string name="rom_control_title">ROM Steuerung</string>
@@ -115,6 +116,46 @@
   <string name="volume_steps_ring_title">Lautstärkestufen: Rufton</string>
   <string name="volume_steps_system_title">Lautstärkestufen: Systemweit</string>
   <string name="volume_steps_voice_call_title">Lautstärkestufen: Anruf</string>
+  <string name="ok">OK</string>
+  <string name="auto_brightness_setup_title">Automatische Helligkeitsregelung</string>
+  <string name="auto_brightness_adjustment_title">Helligkeitsregelung</string>
+  <string name="auto_brightness_twilight_adjustment">Anpassung an Sonnenaufgang und Sonnenuntergang</string>
+  <string name="light_sensor_current_value">Derzeitiger Wert des Lichtsensors: <xliff:g id="light_level">%d</xliff:g> Lux</string>
+  <string name="auto_brightness_dialog_title">Automatische Helligkeitsstufen</string>
+  <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g> Lux</string>
+  <string name="auto_brightness_last_level_format"><xliff:g id="level">%1$d</xliff:g> -\n\u221e Lux</string>
+  <string name="auto_brightness_adjust_button">Einstellen</string>
+  <string name="auto_brightness_close_button">Schließen</string>
+  <string name="auto_brightness_reset_button">Zurücksetzen</string>
+  <string name="auto_brightness_split_dialog_title">Helligkeits-Niveau teilen</string>
+  <string name="auto_brightness_level_dialog_title">Setup für Helligkeits-Niveau</string>
+  <string name="auto_brightness_lux">Umgebungshelligkeit (lux)</string>
+  <string name="auto_brightness_backlight">Bildschirmhelligkeit (%)</string>
+  <string name="auto_brightness_reset_dialog_title">Anpassungen zurücksetzen?</string>
+  <string name="auto_brightness_reset_confirmation">Alle Helligkeitsstufen werden auf ihre Standardwerte zurückgesetzt.</string>
+  <string name="auto_brightness_split_lux_format">Position teilen (zwischen <xliff:g id="min">%1$d</xliff:g> und <xliff:g id="max">%2$d</xliff:g> Lux)</string>
+  <string name="auto_brightness_level_options">Automatische Helligkeitsoptionen</string>
+  <string name="auto_brightness_menu_edit">Bearbeiten</string>
+  <string name="auto_brightness_menu_split">Teilen</string>
+  <string name="auto_brightness_menu_remove">Entfernen</string>
+  <string name="auto_brightness_preview">Vorschau</string>
+  <string name="auto_brightness_preview_dialog_title">Vorschau Helligkeitskurve</string>
+  <string name="auto_brightness_help_dialog_title">Hilfe</string>
+  <string name="auto_brightness_help_text"><b>Wie wird die Helligkeit berechnet?</b>
+\n\n
+Die Helligkeitskurve wird durch den <i>kubisch hermetischen Spline</i> bei einer bestimmten Anzahl <i>Kontrollpunkte</i> berechnet. Es handelt sich hier nicht um eine einfache Fasspumpen-Berechnung, bei der die Helligkeit eines Bildschirms konstant innerhalb eines bestimmten Bereichs der Umgebungshelligkeit bleibt. Dadurch werden Sprünge in der Helligkeitsanpassung vermieden, die durch das Umgebungslicht verursacht werden. Jedoch kann es schwer werden die Konsequenzen wechselnder Kontrollpunkte vorherzusagen.\n Um hier Abhilfe zu schaffen kann eine Vorschau der aktuellen Kurve genauer untersucht werden. Bitte beachten: Die Vorschau zeigt die Kurve auf einer <i>logarhytmischen</i> Skala, damit alle Kontrollpunkte untersucht werden können. Bei einer linearen Skalierung sind zu viele Kontrollpunkte in den unteren Bereichen des Umgebungslichts.
+\n\n
+<b>Wie stellt man die Kurve für die Helligkeit ein?</b>
+\n\n
+Jede Zeile der Liste entspricht einem <i>Kontrollpunkt</i> der Helligkeitskurve. Sie können hier den Slider nutzen, den Sie in jeder Zeile sehen. Die Helligkeit ändert sich mit der Berührung dieses Sliders, um Ihnen eine Vorschau zeigen zu können.\n
+Zusätzliche Optionen werden durch Gedrückthalten der Zeile angezeigt. Mit \"Bearbeiten\" können Sie die Helligkeit für die Umgebung des Kontrollpunktes ändern, sowie manuell die gewünschte Helligkeit zum Dimmen eingeben. \"Teilen\" verdoppelt eine Zeile, um zusätzliche Kontrollpunkte einzufügen. \"Löschen\" löscht die gewählte Zeile.
+    </string>
+  <string name="auto_brightness_sensitivity_title">Empfindlichkeit regeln</string>
+  <string name="auto_brightness_sensitivity_verylow">Sehr niedrig</string>
+  <string name="auto_brightness_sensitivity_low">Niedrig</string>
+  <string name="auto_brightness_sensitivity_medium">Mittel</string>
+  <string name="auto_brightness_sensitivity_high">Hoch</string>
+  <string name="auto_brightness_sensitivity_veryhigh">Sehr hoch</string>
   <string name="bluetooth_accept_all_files">Alle Dateiformate akzeptieren</string>
   <string name="lock_numpad_random_title">Ändere die Reihenfolge der PIN nummern</string>
   <string name="lock_numpad_random_dialog_title">Zuffälige PIN Reihenfolge</string>
@@ -183,4 +224,8 @@
   <string name="lock_pattern_size_4">4x4</string>
   <string name="lock_pattern_size_5">5x5</string>
   <string name="lock_pattern_size_6">6x6</string>
+  <string name="link_volume_ringtones">Verknüpfe Klingelton- &amp; Benachrichtigungslautstärke</string>
+  <string name="link_volume_mutes">Klingelton und Benachrichtigungen gemeinsam stummschalten</string>
+  <string name="volume_keys_control_ring_stream">Lautstärketasten steuern Klingeltonlautstärke</string>
+  <string name="volume_ring_only_description">Klingelton</string>
 </resources>

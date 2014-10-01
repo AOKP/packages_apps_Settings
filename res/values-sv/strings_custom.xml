@@ -62,6 +62,7 @@
   <string name="quiet_hours_dim_title">Avaktivera aviseringsljus</string>
   <string name="quiet_hours_active_from">Aktiv från</string>
   <string name="quiet_hours_active_to">till</string>
+  <string name="quiet_hours_system_title">Inaktivera systemljud</string>
   <string name="start_time_title">Start</string>
   <string name="end_time_title">Slut</string>
   <string name="rom_control_title">ROM Kontroll</string>
@@ -115,6 +116,37 @@
   <string name="volume_steps_ring_title">Volym steg: Ringer</string>
   <string name="volume_steps_system_title">Volym steg: System</string>
   <string name="volume_steps_voice_call_title">Volym steg: Röstsamtal</string>
+  <string name="ok">OK</string>
+  <string name="auto_brightness_setup_title">Automatisk ljusstyrka</string>
+  <string name="auto_brightness_adjustment_title">Justering av ljusstyrka</string>
+  <string name="auto_brightness_twilight_adjustment">Justera till soluppgång och solnedgång</string>
+  <string name="light_sensor_current_value">Aktuellt ljussensorvärde: <xliff:g id="light_level">%d</xliff:g> lux</string>
+  <string name="auto_brightness_dialog_title">Automatiska ljusstyrkenivåer</string>
+  <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g> lux</string>
+  <string name="auto_brightness_last_level_format"><xliff:g id="level">%1$d</xliff:g> -\n\u221e lux</string>
+  <string name="auto_brightness_adjust_button">Justera</string>
+  <string name="auto_brightness_close_button">Stäng</string>
+  <string name="auto_brightness_reset_button">Återställ</string>
+  <string name="auto_brightness_split_dialog_title">Dela ljusstyrkenivå</string>
+  <string name="auto_brightness_level_dialog_title">Inställning av ljusnivå</string>
+  <string name="auto_brightness_lux">Omgivande ljusstyrka (lux)</string>
+  <string name="auto_brightness_backlight">Skärmljusstyrka (%)</string>
+  <string name="auto_brightness_reset_dialog_title">Återställa nivåer?</string>
+  <string name="auto_brightness_reset_confirmation">Alla ljusstyrkenivåer kommer att återställas till sina standardinställningar.</string>
+  <string name="auto_brightness_split_lux_format">Dela position (mellan <xliff:g id="min">%1$d</xliff:g> och <xliff:g id="max">%2$d</xliff:g> lux)</string>
+  <string name="auto_brightness_level_options">Ljusnivåalternativ</string>
+  <string name="auto_brightness_menu_edit">Redigera</string>
+  <string name="auto_brightness_menu_split">Dela</string>
+  <string name="auto_brightness_menu_remove">Ta bort</string>
+  <string name="auto_brightness_preview">Förhandsgranskning</string>
+  <string name="auto_brightness_preview_dialog_title">Förhandsgranska ljuskurva</string>
+  <string name="auto_brightness_help_dialog_title">Hjälp</string>
+  <string name="auto_brightness_sensitivity_title">Justera känslighet</string>
+  <string name="auto_brightness_sensitivity_verylow">Mycket låg</string>
+  <string name="auto_brightness_sensitivity_low">Låg</string>
+  <string name="auto_brightness_sensitivity_medium">Mellan</string>
+  <string name="auto_brightness_sensitivity_high">Hög</string>
+  <string name="auto_brightness_sensitivity_veryhigh">Mycket hög</string>
   <string name="bluetooth_accept_all_files">Acceptera alla filtyper</string>
   <string name="lock_numpad_random_title">Ändra ordning på PIN pad nummer</string>
   <string name="lock_numpad_random_dialog_title">PIN pad slumpmässig ordning</string>
@@ -123,4 +155,68 @@
   <string name="lock_numpad_random_on_request">På begäran</string>
   <string name="disable_fullscreen_keyboard_title">Inaktivera helskärms tangentbord</string>
   <string name="disable_fullscreen_keyboard_summary">Landskap klaviatur kommer aldrig tar upp hela skärmen</string>
+  <string name="blacklist_title">Svartlista</string>
+  <string name="blacklist_edit_dialog_title">Ändra post i svartlistan</string>
+  <string name="blacklist_prefs">Inställningar</string>
+  <string name="blacklist_button_delete">Ta bort</string>
+  <string name="blacklist_empty_text">Du har inga svartlistade nummer. Lägg till en post genom att trycka på Lägg till-knappen (+).</string>
+  <string name="blacklist_disabled_empty_text">För att svartlista samtal och/eller meddelanden från vissa nummer, aktivera svartlistan.</string>
+  <string name="blacklist_summary_disabled">Inaktiverad(e)</string>
+  <string name="blacklist_summary">Inkommande samtal och meddelanden från telefonnummer i svartlistan kommer blockeras</string>
+  <string name="blacklist_notify">Visa avisering</string>
+  <string name="blacklist_private_numbers_title">Privata nummer</string>
+  <string name="blacklist_private_numbers_summary_disabled">Blockera inte samtal från privata nummer</string>
+  <string name="blacklist_private_numbers_summary">Blockera inkommande <xliff:g id="type">%s</xliff:g> från privata nummer</string>
+  <string name="blacklist_unknown_numbers_title">Okänt nummer</string>
+  <string name="blacklist_unknown_numbers_summary_disabled">Blockera inte samtal eller meddelanden från nummer som inte finns i kontaktlistan</string>
+  <string name="blacklist_unknown_numbers_summary">Blockera inkommande <xliff:g id="type">%s</xliff:g> från nummer som inte finns i kontaktlistan</string>
+  <string name="blacklist_summary_type_calls_only">samtal</string>
+  <string name="blacklist_summary_type_messages_only">meddelanden</string>
+  <string name="blacklist_summary_type_calls_and_messages">samtal och meddelanden</string>
+  <string name="blacklist_regex_title">Använd jokrar</string>
+  <string name="blacklist_regex_summary">Använd . som en joker och * för upprepning. E.g. 123.* blockerar nummer som börjar med 123 och .*123.* blockerar nummer som innehåller 123</string>
+  <string name="blacklist_policy_block_calls">Blockera inkommande samtal</string>
+  <string name="blacklist_policy_block_messages">Blockera inkommande meddelanden</string>
+  <string name="add_blacklist_number">Lägg till nummer</string>
+  <string name="remove_blacklist_number_title">Ta bort nummer</string>
+  <string name="remove_blacklist_entry">Vill du ta bort denna post från svartlistan?</string>
+  <string name="select_contact">Välj kontakt</string>
+  <string name="lockgesture_change_lock_pattern_label">Ändra upplåsnings gest</string>
+  <string name="lockgesture_change_lock_pin_label">Ändra PIN-kod</string>
+  <string name="lockgesture_need_to_unlock">Bekräfta sparad gest</string>
+  <string name="lockgesture_need_to_unlock_wrong">Försök igen:</string>
+  <string name="lockgesture_recording_intro_header">Rita en upplåsnings-gest:</string>
+  <string name="lockgesture_recording_intro_footer">Tryck på Menu om du vill ha hjälp.</string>
+  <string name="lockgesture_recording_inprogress">Släpp fingret när du är klar.</string>
+  <string name="lockgesture_pattern_entered_header">Gest inspelad.</string>
+  <string name="lockgesture_need_to_confirm">Rita gest igen för att bekräfta:</string>
+  <string name="lockgesture_pattern_confirmed_header">Din nya upplåsnings-gest:</string>
+  <string name="lockgesture_confirm_button_text">Bekräfta</string>
+  <string name="lockgesture_restart_button_text">Rita om</string>
+  <string name="lockgesture_retry_button_text">Försök igen</string>
+  <string name="lockgesture_continue_button_text">Fortsätt</string>
+  <string name="lockgesture_settings_title">Upplåsnings-gest</string>
+  <string name="lockgesture_settings_enable_title">Kräver gest</string>
+  <string name="lockgesture_settings_enable_summary">Måste dra gest för att låsa upp skärmen</string>
+  <string name="lockgesture_settings_enable_visible_pattern_title">Gör gest synlig</string>
+  <string name="lockgesture_settings_enable_power_button_instantly_locks">Power-knappen låser omedelbart</string>
+  <string name="lockgesture_settings_choose_lock_pattern">Ställ in upplåsnings-gest</string>
+  <string name="lockgesture_settings_change_lock_pattern">Ändra upplåsnings-gest</string>
+  <string name="lockgesture_settings_help_how_to_record">Hur man drar en upplåsnings-gest</string>
+  <string name="lockgesture_too_many_failed_confirmation_attempts_header">För många felaktiga försök!</string>
+  <string name="lockgesture_too_many_failed_confirmation_attempts_footer">Försök igen om <xliff:g id="number">%d</xliff:g> sekunder.</string>
+  <string name="lockpassword_gesture_set_toast">Gest har ställts in</string>
+  <string name="lockpassword_confirm_your_gesture_header">Bekräfta din gest</string>
+  <string name="lockpassword_choose_your_gesture_header">Rita din gest</string>
+  <string name="unlock_set_unlock_gesture_title">Gest</string>
+  <string name="unlock_set_unlock_gesture_summary">Låg säkerhet, experimentell</string>
+  <string name="unlock_set_unlock_mode_gesture">Gest</string>
+  <string name="lock_pattern_size_3">3x3</string>
+  <string name="lock_pattern_size_4">4x4</string>
+  <string name="lock_pattern_size_5">5x5</string>
+  <string name="lock_pattern_size_6">6x6</string>
+  <string name="link_volume_ringtones">Länka ringsignal &amp; aviseringsljud</string>
+  <string name="link_volume_mutes">Tyst läge påverkar aviseringar</string>
+  <string name="volume_keys_control_ring_stream">Volymknapparna kontrollerar volymen för ringsignalen</string>
+  <string name="volume_ring_only_description">Ringsignal</string>
 </resources>

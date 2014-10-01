@@ -18,7 +18,7 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="hardware_info">硬體資訊</string>
+  <string name="hardware_info">硬件資訊</string>
   <string name="device_rear_camera">後置相機</string>
   <string name="device_front_camera">前置相機</string>
   <string name="device_screen_resolution">螢幕解像度</string>
@@ -62,6 +62,7 @@
   <string name="quiet_hours_dim_title">停用指示燈</string>
   <string name="quiet_hours_active_from">有效從</string>
   <string name="quiet_hours_active_to">到</string>
+  <string name="quiet_hours_system_title">停用系統音效</string>
   <string name="start_time_title">開始</string>
   <string name="end_time_title">結束</string>
   <string name="rom_control_title">ROM 控制</string>
@@ -71,12 +72,16 @@
   <string name="icons_settings_title">圖示</string>
   <string name="fonts_settings_title">字體</string>
   <string name="wallpaper_settings_title">牆紙</string>
-  <string name="lockscreen_wallpaper_settings_title">鎖定螢幕牆紙</string>
+  <string name="lockscreen_wallpaper_settings_title">鎖定畫面牆紙</string>
   <string name="bootanim_settings_title">開機動畫</string>
   <string name="soundpack_settings_title">音效包</string>
   <string name="lockscreen_quick_unlock_control_title">快速 pin 解鎖</string>
   <string name="lockscreen_quick_unlock_control_summary">解鎖密碼/pin 鎖屏不用按 enter 按鈕</string>
   <string name="device_hostname">裝置主機名稱</string>
+  <string name="nfc_polling_mode_title">NFC 輪詢模式</string>
+  <string name="nfc_polling_mode_screen_off">畫面關閉</string>
+  <string name="nfc_polling_mode_screen_locked">畫面開啟，鎖定</string>
+  <string name="nfc_polling_mode_screen_unlocked">畫面開啟，解鎖（預設）</string>
   <string name="wifi_menu_forget_all">忘記所有網路</string>
   <string name="data_usage_lengths_spinner_subtitle">週期長度：</string>
   <string name="checkbox_increasing_ring">啟用</string>
@@ -110,8 +115,58 @@
   <string name="volume_steps_ring_title">音量措施：鈴聲</string>
   <string name="volume_steps_system_title">音量措施：系統</string>
   <string name="volume_steps_voice_call_title">音量措施：語音電話</string>
+  <string name="ok">確定</string>
+  <string name="auto_brightness_setup_title">自動調整亮度</string>
+  <string name="auto_brightness_adjustment_title">亮度調整</string>
+  <string name="auto_brightness_twilight_adjustment">調整到日出和日落</string>
+  <string name="light_sensor_current_value">目前光線感應器測得值：<xliff:g id="light_level">%d</xliff:g> lux</string>
+  <string name="auto_brightness_dialog_title">自動亮度級別</string>
+  <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g> lux</string>
+  <string name="auto_brightness_last_level_format"><xliff:g id="level">%1$d</xliff:g> -\n\u221e lux</string>
+  <string name="auto_brightness_adjust_button">調整</string>
+  <string name="auto_brightness_close_button">關閉​​​</string>
+  <string name="auto_brightness_reset_button">重設</string>
+  <string name="auto_brightness_split_dialog_title">分割亮度級別</string>
+  <string name="auto_brightness_level_dialog_title">亮度級別設定</string>
+  <string name="auto_brightness_lux">環境亮度 (lux)</string>
+  <string name="auto_brightness_backlight">畫面亮度 (%)</string>
+  <string name="auto_brightness_reset_dialog_title">重設級別？</string>
+  <string name="auto_brightness_reset_confirmation">所有亮度級別都將被重設為預設值。</string>
+  <string name="auto_brightness_split_lux_format">分割位置（在 <xliff:g id="min">%1$d</xliff:g> 到 <xliff:g id="max">%2$d</xliff:g> lux 之間選擇）</string>
+  <string name="auto_brightness_level_options">亮度級別選項</string>
+  <string name="auto_brightness_menu_edit">編輯</string>
+  <string name="auto_brightness_menu_split">分割</string>
+  <string name="auto_brightness_menu_remove">移除</string>
+  <string name="auto_brightness_preview">預覽</string>
+  <string name="auto_brightness_preview_dialog_title">亮度曲線預覽</string>
+  <string name="auto_brightness_help_dialog_title">說明</string>
+  <string name="auto_brightness_sensitivity_title">調整靈敏度</string>
+  <string name="auto_brightness_sensitivity_verylow">非常低</string>
+  <string name="auto_brightness_sensitivity_low">低</string>
+  <string name="auto_brightness_sensitivity_medium">中</string>
+  <string name="auto_brightness_sensitivity_high">高</string>
+  <string name="auto_brightness_sensitivity_veryhigh">非常高</string>
   <string name="bluetooth_accept_all_files">接受所有檔案類型</string>
   <string name="lock_numpad_random_title">變更 PIN 小鍵盤數位順序</string>
+  <string name="lock_numpad_random_dialog_title">PIN 鍵盤亂序</string>
   <string name="lock_numpad_random_off">已停用</string>
   <string name="lock_numpad_random_always">一律採用</string>
+  <string name="blacklist_title">黑名單</string>
+  <string name="blacklist_edit_dialog_title">編輯黑名單條目</string>
+  <string name="blacklist_prefs">設定</string>
+  <string name="blacklist_button_delete">刪除</string>
+  <string name="blacklist_empty_text">您沒有任何列入黑名單的號碼。輕觸「新增 (+) 」按鈕來新增。</string>
+  <string name="blacklist_disabled_empty_text">要阻止來自某些號碼的來電或訊息，請啟用黑名單。</string>
+  <string name="blacklist_summary_disabled">已停用</string>
+  <string name="blacklist_summary">黑名單內電話號碼的來電與訊息將會被封鎖。</string>
+  <string name="blacklist_notify">顯示通知</string>
+  <string name="unlock_set_unlock_mode_gesture">手勢</string>
+  <string name="lock_pattern_size_3">3x3</string>
+  <string name="lock_pattern_size_4">4x4</string>
+  <string name="lock_pattern_size_5">5x5</string>
+  <string name="lock_pattern_size_6">6x6</string>
+  <string name="link_volume_ringtones">連結鈴聲與通知音量</string>
+  <string name="link_volume_mutes">靜音模式會影響通知</string>
+  <string name="volume_keys_control_ring_stream">音量按鈕可控制鈴聲音量</string>
+  <string name="volume_ring_only_description">鈴聲</string>
 </resources>

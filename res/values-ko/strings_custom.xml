@@ -62,6 +62,7 @@
   <string name="quiet_hours_dim_title">알림 LED 비활성화</string>
   <string name="quiet_hours_active_from">활성화 시간:</string>
   <string name="quiet_hours_active_to">~</string>
+  <string name="quiet_hours_system_title">시스템 소리 사용 안 함</string>
   <string name="start_time_title">시작</string>
   <string name="end_time_title">종료</string>
   <string name="rom_control_title">ROM 컨트롤</string>
@@ -114,6 +115,60 @@
   <string name="volume_steps_ring_title">볼륨 단계: 벨소리</string>
   <string name="volume_steps_system_title">볼륨 단계: 시스템</string>
   <string name="volume_steps_voice_call_title">볼륨 단계: 음성 통화</string>
+  <string name="ok">확인</string>
+  <string name="auto_brightness_setup_title">자동 밝기</string>
+  <string name="auto_brightness_adjustment_title">밝기 조정</string>
+  <string name="auto_brightness_twilight_adjustment">일출과 일몰에 맞춰 조정</string>
+  <string name="light_sensor_current_value">현재 광 센서 값: <xliff:g id="light_level">%d</xliff:g> lux</string>
+  <string name="auto_brightness_dialog_title">자동 밝기 수준</string>
+  <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g> lux</string>
+  <string name="auto_brightness_last_level_format"><xliff:g id="level">%1$d</xliff:g> -\n\u221e lux</string>
+  <string name="auto_brightness_adjust_button">조정</string>
+  <string name="auto_brightness_close_button">닫기</string>
+  <string name="auto_brightness_reset_button">초기화</string>
+  <string name="auto_brightness_split_dialog_title">분할 밝기 수준</string>
+  <string name="auto_brightness_level_dialog_title">밝기 수준 설정</string>
+  <string name="auto_brightness_lux">주위 밝기 (lux)</string>
+  <string name="auto_brightness_backlight">화면 밝기 (%)</string>
+  <string name="auto_brightness_reset_dialog_title">밝기 수준을 초기화할까요?</string>
+  <string name="auto_brightness_reset_confirmation">모든 밝기 레벨은 기본 설정으로 재설정됩니다.</string>
+  <string name="auto_brightness_split_lux_format">Split position (between <xliff:g id="min">%1$d</xliff:g> and <xliff:g id="max">%2$d</xliff:g> lux)</string>
+  <string name="auto_brightness_level_options">밝기 수준 옵션</string>
+  <string name="auto_brightness_menu_edit">수정</string>
+  <string name="auto_brightness_menu_split">분할</string>
+  <string name="auto_brightness_menu_remove">삭제</string>
+  <string name="auto_brightness_preview">미리보기</string>
+  <string name="auto_brightness_preview_dialog_title">밝기 커브 미리 보기</string>
+  <string name="auto_brightness_help_dialog_title">도움말</string>
+  <string name="auto_brightness_help_text"><b>How is brightness calculated?</b>
+\n\n
+The brightness curve is calculated by performing a <i>cubic spline interpolation</i>
+on a given number of <i>control points</i>. It\'s not a \'bucket-type\' calculation where
+screen brightness will stay constant for a specific range of ambient brightness. That way,
+small changes in ambient brightness do not cause a large jump in screen brightness; however,
+it can be a little hard to predict the exact consequences of changing control points.\n
+To help with that, a preview of the calculated curve can be examined. Please note that the
+preview shows the curve in <i>logarithmic</i> scale, so that all control points can be shown
+distinctively. When using a linear scale, it wouldn\'t be possible to distinguish the tendentially
+more important control points in the lower range of ambient brightness.
+\n\n
+<b>How to edit the brightness curve?</b>
+\n\n
+Each line in the brightness list corresponds to one <i>control point</i> of the
+brightness curve. To edit the brightness level of the point, you can use the slider
+present in each line. The screen brightness will be changed accordingly while touching
+the slider to give a preview of the light level.\n
+Additional options are available by long-pressing a line. By selecting \'Edit\', you can
+both edit the ambient brightness level of the control point as well as manually input the
+desired screen brightness. Selecting \'Split\' allows you to to duplicate one line into
+two in order to insert additional control points. \'Remove\' deletes the selected line.
+    </string>
+  <string name="auto_brightness_sensitivity_title">감도 조정</string>
+  <string name="auto_brightness_sensitivity_verylow">매우 낮게</string>
+  <string name="auto_brightness_sensitivity_low">낮게</string>
+  <string name="auto_brightness_sensitivity_medium">중간</string>
+  <string name="auto_brightness_sensitivity_high">높은</string>
+  <string name="auto_brightness_sensitivity_veryhigh">매우 높은</string>
   <string name="bluetooth_accept_all_files">모든 파일 형식을 수락합니다</string>
   <string name="lock_numpad_random_title">PIN 패드 번호의 순서 변경</string>
   <string name="lock_numpad_random_dialog_title">PIN 패드 임의의 순서로</string>
@@ -182,4 +237,8 @@
   <string name="lock_pattern_size_4">4x4</string>
   <string name="lock_pattern_size_5">5x5</string>
   <string name="lock_pattern_size_6">6x6</string>
+  <string name="link_volume_ringtones">벨소리 &amp; 알림 볼륨 같이조정하기</string>
+  <string name="link_volume_mutes">Silent mode affects notifications</string>
+  <string name="volume_keys_control_ring_stream">볼륨키로 벨소리 볼륨을 제어</string>
+  <string name="volume_ring_only_description">벨소리</string>
 </resources>
