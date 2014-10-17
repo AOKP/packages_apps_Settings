@@ -17,6 +17,8 @@
 package com.android.settings.slim;
 
 import android.content.ContentResolver;
+import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.database.ContentObserver;
 import android.os.Bundle;
 import android.os.Handler;
@@ -41,9 +43,11 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
 
     private static final String STATUS_BAR_BRIGHTNESS_CONTROL = "status_bar_brightness_control";
     private static final String KEY_STATUS_BAR_CLOCK = "clock_style_pref";
+    private static final String KEY_STATUS_BAR_TICKER = "status_bar_ticker_enabled";
 
     private SwitchPreference mStatusBarBrightnessControl;
     private PreferenceScreen mClockStyle;
+    private SwitchPreference mTicker;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -53,10 +57,27 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
 
         PreferenceScreen prefSet = getPreferenceScreen();
 
+        PackageManager pm = getPackageManager();
+        Resources systemUiResources;
+        try {
+            systemUiResources = pm.getResourcesForApplication("com.android.systemui");
+        } catch (Exception e) {
+            Log.e(TAG, "can't access systemui resources",e);
+            return;
+        }
+
         // Start observing for changes on auto brightness
         StatusBarBrightnessChangedObserver statusBarBrightnessChangedObserver =
                 new StatusBarBrightnessChangedObserver(new Handler());
         statusBarBrightnessChangedObserver.startObserving();
+
+        mTicker = (SwitchPreference) prefSet.findPreference(KEY_STATUS_BAR_TICKER);
+        final boolean tickerEnabled = systemUiResources.getBoolean(systemUiResources.getIdentifier(
+                    "com.android.systemui:bool/enable_ticker", null, null));
+        mTicker.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.STATUS_BAR_TICKER_ENABLED, tickerEnabled ? 1 : 0) == 1);
+        mTicker.setOnPreferenceChangeListener(this);
+
 
         mStatusBarBrightnessControl =
             (SwitchPreference) prefSet.findPreference(STATUS_BAR_BRIGHTNESS_CONTROL);
@@ -73,6 +94,11 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         if (preference == mStatusBarBrightnessControl) {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.STATUS_BAR_BRIGHTNESS_CONTROL,
+                    (Boolean) newValue ? 1 : 0);
+            return true;
+        } else if (preference == mTicker) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.STATUS_BAR_TICKER_ENABLED,
                     (Boolean) newValue ? 1 : 0);
             return true;
         }
