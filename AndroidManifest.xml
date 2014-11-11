@@ -1988,6 +1988,21 @@
                 android:resource="@id/sim_settings" />
         </activity>
 
+        <!-- Aicp Extras -->
+        <activity android:name="Settings$AicpSettingsActivity"
+            android:label="@string/aicp_settings_title"
+            android:taskAffinity="">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.aicp.AicpSettings" />
+        </activity>
+
+        <activity
+             android:name=".aicp.AicpSettings" />
+
         <provider
             android:name=".search.SettingsSearchIndexablesProvider"
             android:authorities="com.android.settings"

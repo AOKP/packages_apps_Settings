@@ -147,6 +147,14 @@
             <intent android:action="com.android.settings.MANUFACTURER_APPLICATION_SETTING" />
         </dashboard-tile>
 
+        <!-- AICP Settings -->
+        <dashboard-tile
+                android:id="@+id/aicp_settings"
+                android:title="@string/aicp_settings_title"
+                android:fragment="com.android.settings.aicp.AicpSettings"
+                android:icon="@drawable/ic_settings_aicp"
+                />
+
     </dashboard-category>
 
     <!-- PERSONAL -->
