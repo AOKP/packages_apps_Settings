@@ -52,6 +52,12 @@
                 android:persistent="false"
                 android:fragment="com.android.settings.DeviceAdminSettings"/>
 
+        <Preference android:key="app_ops_summary"
+                android:title="@string/app_ops_settings"
+                android:summary="@string/app_ops_settings_summary"
+                android:persistent="false"
+                android:fragment="com.android.settings.applications.AppOpsSummary"/>
+
         <SwitchPreference android:key="toggle_install_applications"
                 android:title="@string/install_applications"
                 android:summaryOff="@string/install_unknown_applications"

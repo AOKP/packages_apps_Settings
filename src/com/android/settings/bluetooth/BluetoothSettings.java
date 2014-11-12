@@ -36,6 +36,8 @@ import android.preference.PreferenceCategory;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
+import android.text.TextWatcher;
+import android.text.Editable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -47,7 +49,7 @@ import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
-
+import android.widget.Button;
 import com.android.settings.R;
 import com.android.settings.SettingsActivity;
 import com.android.settings.search.BaseSearchIndexProvider;
@@ -348,6 +350,10 @@ public final class BluetoothSettings extends DeviceListPreferenceFragment implem
                 break;
 
             case BluetoothAdapter.STATE_OFF:
+                /* reset the progress icon only when available device category present */
+                if(mAvailableDevicesCategoryIsPresent) {
+                    ((BluetoothProgressCategory)mAvailableDevicesCategory).setProgress(false);
+                }
                 messageId = R.string.bluetooth_empty_list_bluetooth_off;
                 if (isUiRestricted()) {
                     messageId = R.string.bluetooth_empty_list_user_restricted;
@@ -462,10 +468,29 @@ public final class BluetoothSettings extends DeviceListPreferenceFragment implem
                 }
             });
 
-            AlertDialog dialog = settingsDialog.create();
+            final AlertDialog dialog = settingsDialog.create();
             dialog.create();
             dialog.show();
+            deviceName.addTextChangedListener (new TextWatcher() {
 
+               @Override
+               public void afterTextChanged(Editable s) {
+                      Button mOkButton = dialog.getButton(DialogInterface.BUTTON_POSITIVE);
+                      if(mOkButton != null)
+                         mOkButton.setEnabled(s.length() != 0 && !(s.toString().trim().isEmpty()));
+               }
+               @Override
+               public void onTextChanged(CharSequence s, int start, int before, int count) {
+                      /* Not Used */
+               }
+               @Override
+               public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                      Button mOkButton = dialog.getButton(DialogInterface.BUTTON_POSITIVE);
+                      if(mOkButton != null)
+                          mOkButton.setEnabled(false);
+               }
+
+            });
             // We must ensure that clicking on the EditText will bring up the keyboard.
             dialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
                     | WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);

@@ -120,29 +120,31 @@ public class AppOpsState {
                     AppOpsManager.OP_WRITE_CALL_LOG,
                     AppOpsManager.OP_READ_CALENDAR,
                     AppOpsManager.OP_WRITE_CALENDAR,
-                    AppOpsManager.OP_READ_CLIPBOARD,
-                    AppOpsManager.OP_WRITE_CLIPBOARD },
+                    AppOpsManager.OP_DELETE_CONTACTS,
+                    AppOpsManager.OP_DELETE_CALL_LOG },
             new boolean[] { true,
                     true,
                     true,
                     true,
                     true,
                     true,
-                    false,
-                    false }
+                    true,
+                    true }
             );
 
     public static final OpsTemplate MESSAGING_TEMPLATE = new OpsTemplate(
             new int[] { AppOpsManager.OP_READ_SMS,
-                    AppOpsManager.OP_RECEIVE_SMS,
-                    AppOpsManager.OP_RECEIVE_EMERGECY_SMS,
-                    AppOpsManager.OP_RECEIVE_MMS,
-                    AppOpsManager.OP_RECEIVE_WAP_PUSH,
+                    AppOpsManager.OP_READ_MMS,
                     AppOpsManager.OP_WRITE_SMS,
+                    AppOpsManager.OP_WRITE_MMS,
                     AppOpsManager.OP_SEND_SMS,
+                    AppOpsManager.OP_SEND_MMS,
                     AppOpsManager.OP_READ_ICC_SMS,
-                    AppOpsManager.OP_WRITE_ICC_SMS },
+                    AppOpsManager.OP_WRITE_ICC_SMS,
+                    AppOpsManager.OP_DELETE_SMS,
+                    AppOpsManager.OP_DELETE_MMS },
             new boolean[] { true,
+                    true,
                     true,
                     true,
                     true,
@@ -154,57 +156,33 @@ public class AppOpsState {
             );
 
     public static final OpsTemplate MEDIA_TEMPLATE = new OpsTemplate(
-            new int[] { AppOpsManager.OP_VIBRATE,
-                    AppOpsManager.OP_CAMERA,
-                    AppOpsManager.OP_RECORD_AUDIO,
-                    AppOpsManager.OP_PLAY_AUDIO,
-                    AppOpsManager.OP_TAKE_MEDIA_BUTTONS,
-                    AppOpsManager.OP_TAKE_AUDIO_FOCUS,
-                    AppOpsManager.OP_AUDIO_MASTER_VOLUME,
-                    AppOpsManager.OP_AUDIO_VOICE_VOLUME,
-                    AppOpsManager.OP_AUDIO_RING_VOLUME,
-                    AppOpsManager.OP_AUDIO_MEDIA_VOLUME,
-                    AppOpsManager.OP_AUDIO_ALARM_VOLUME,
-                    AppOpsManager.OP_AUDIO_NOTIFICATION_VOLUME,
-                    AppOpsManager.OP_AUDIO_BLUETOOTH_VOLUME,
-                    AppOpsManager.OP_MUTE_MICROPHONE},
-            new boolean[] { false,
-                    true,
-                    true,
-                    false,
-                    false,
-                    false,
-                    false,
-                    false,
-                    false,
-                    false,
-                    false,
-                    false,
-                    false }
+            new int[] { AppOpsManager.OP_CAMERA,
+                    AppOpsManager.OP_RECORD_AUDIO },
+            new boolean[] { true,
+                    true }
             );
 
     public static final OpsTemplate DEVICE_TEMPLATE = new OpsTemplate(
-            new int[] { AppOpsManager.OP_POST_NOTIFICATION,
-                    AppOpsManager.OP_ACCESS_NOTIFICATIONS,
-                    AppOpsManager.OP_CALL_PHONE,
-                    AppOpsManager.OP_WRITE_SETTINGS,
-                    AppOpsManager.OP_SYSTEM_ALERT_WINDOW,
-                    AppOpsManager.OP_WAKE_LOCK,
-                    AppOpsManager.OP_PROJECT_MEDIA,
-                    AppOpsManager.OP_ACTIVATE_VPN, },
-            new boolean[] { false,
+            new int[] { AppOpsManager.OP_CALL_PHONE,
+                    AppOpsManager.OP_WIFI_CHANGE,
+                    AppOpsManager.OP_BLUETOOTH_CHANGE,
+                    AppOpsManager.OP_NFC_CHANGE,
+                    AppOpsManager.OP_DATA_CONNECT_CHANGE },
+            new boolean[] { true,
                     true,
                     true,
                     true,
-                    true,
-                    true,
-                    false,
-                    false, }
+                    true }
+            );
+
+    public static final OpsTemplate BOOTUP_TEMPLATE = new OpsTemplate(
+            new int[] { AppOpsManager.OP_BOOT_COMPLETED },
+            new boolean[] { true, }
             );
 
     public static final OpsTemplate[] ALL_TEMPLATES = new OpsTemplate[] {
             LOCATION_TEMPLATE, PERSONAL_TEMPLATE, MESSAGING_TEMPLATE,
-            MEDIA_TEMPLATE, DEVICE_TEMPLATE
+            MEDIA_TEMPLATE, DEVICE_TEMPLATE, BOOTUP_TEMPLATE
     };
 
     /**
@@ -523,8 +501,12 @@ public class AppOpsState {
                 }
                 for (int j=0; j<pkgOps.getOps().size(); j++) {
                     AppOpsManager.OpEntry opEntry = pkgOps.getOps().get(j);
-                    addOp(entries, pkgOps, appEntry, opEntry, packageName == null,
-                            packageName == null ? 0 : opToOrder[opEntry.getOp()]);
+                    if (mAppOps.isControlAllowed(opEntry.getOp(),
+                            pkgOps.getPackageName())) {
+                        addOp(entries, pkgOps, appEntry, opEntry,
+                                packageName == null, packageName == null ? 0
+                                        : opToOrder[opEntry.getOp()]);
+                    }
                 }
             }
         }
@@ -544,6 +526,14 @@ public class AppOpsState {
         }
         for (int i=0; i<apps.size(); i++) {
             PackageInfo appInfo = apps.get(i);
+            if (packageName == null && appInfo.packageName != null) {
+                try {
+                    appInfo = mPm.getPackageInfo(appInfo.packageName, PackageManager.GET_PERMISSIONS);
+                } catch (NameNotFoundException e) {
+                    if (DEBUG) Log.w(TAG, "Exception: " + e.toString());
+                    appInfo = apps.get(i);
+                }
+            }
             AppEntry appEntry = getAppEntry(context, appEntries, appInfo.packageName,
                     appInfo.applicationInfo);
             if (appEntry == null) {
@@ -580,9 +570,18 @@ public class AppOpsState {
                         }
                         AppOpsManager.OpEntry opEntry = new AppOpsManager.OpEntry(
                                 permOps.get(k), AppOpsManager.MODE_ALLOWED, 0, 0, 0);
-                        dummyOps.add(opEntry);
-                        addOp(entries, pkgOps, appEntry, opEntry, packageName == null,
-                                packageName == null ? 0 : opToOrder[opEntry.getOp()]);
+
+                        if (mAppOps.isControlAllowed(opEntry.getOp(),
+                                pkgOps.getPackageName())) {
+                            dummyOps.add(opEntry);
+                            addOp(entries,
+                                    pkgOps,
+                                    appEntry,
+                                    opEntry,
+                                    packageName == null,
+                                    packageName == null ? 0 : opToOrder[opEntry
+                                            .getOp()]);
+                        }
                     }
                 }
             }

@@ -41,6 +41,7 @@ import android.security.Credentials;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
+import android.app.Dialog;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -58,6 +59,7 @@ public class AdvancedWifiSettings extends SettingsPreferenceFragment
     private static final String KEY_NOTIFY_OPEN_NETWORKS = "notify_open_networks";
     private static final String KEY_SLEEP_POLICY = "sleep_policy";
     private static final String KEY_SCAN_ALWAYS_AVAILABLE = "wifi_scan_always_available";
+    private static final String KEY_WIFI_RSSI_THRESHOLD_CHECK = "wifi_rssi_threshold_check";
     private static final String KEY_INSTALL_CREDENTIALS = "install_credentials";
     private static final String KEY_WIFI_ASSISTANT = "wifi_assistant";
     private static final String KEY_WIFI_DIRECT = "wifi_direct";
@@ -66,6 +68,8 @@ public class AdvancedWifiSettings extends SettingsPreferenceFragment
 
     private WifiManager mWifiManager;
     private NetworkScoreManager mNetworkScoreManager;
+    private static final int WPS_PBC_DIALOG_ID = 1;
+    private static final int WPS_PIN_DIALOG_ID = 2;
 
     private IntentFilter mFilter;
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
@@ -110,6 +114,17 @@ public class AdvancedWifiSettings extends SettingsPreferenceFragment
         getActivity().unregisterReceiver(mReceiver);
     }
 
+    @Override
+    public Dialog onCreateDialog(int dialogId) {
+        switch (dialogId) {
+            case WPS_PBC_DIALOG_ID:
+                 return new WpsDialog(getActivity(), WpsInfo.PBC);
+            case WPS_PIN_DIALOG_ID:
+                 return new WpsDialog(getActivity(), WpsInfo.DISPLAY);
+        }
+        return super.onCreateDialog(dialogId);
+    }
+
     private void initPreferences() {
         SwitchPreference notifyOpenNetworks =
             (SwitchPreference) findPreference(KEY_NOTIFY_OPEN_NETWORKS);
@@ -121,6 +136,11 @@ public class AdvancedWifiSettings extends SettingsPreferenceFragment
             (SwitchPreference) findPreference(KEY_SCAN_ALWAYS_AVAILABLE);
         scanAlwaysAvailable.setChecked(Global.getInt(getContentResolver(),
                     Global.WIFI_SCAN_ALWAYS_AVAILABLE, 0) == 1);
+
+        CheckBoxPreference wifiRssiThresholdCheck =
+            (CheckBoxPreference) findPreference(KEY_WIFI_RSSI_THRESHOLD_CHECK);
+        wifiRssiThresholdCheck.setChecked(Global.getInt(getContentResolver(),
+                    Global.WIFI_RSSI_THRESHOLD, 0) == 1);
 
         Intent intent = new Intent(Credentials.INSTALL_AS_USER_ACTION);
         intent.setClassName("com.android.certinstaller",
@@ -153,8 +173,7 @@ public class AdvancedWifiSettings extends SettingsPreferenceFragment
         Preference wpsPushPref = findPreference(KEY_WPS_PUSH);
         wpsPushPref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
                 public boolean onPreferenceClick(Preference arg0) {
-                    WpsFragment wpsFragment = new WpsFragment(WpsInfo.PBC);
-                    wpsFragment.show(getFragmentManager(), KEY_WPS_PUSH);
+                    showDialog(WPS_PBC_DIALOG_ID);
                     return true;
                 }
         });
@@ -163,8 +182,7 @@ public class AdvancedWifiSettings extends SettingsPreferenceFragment
         Preference wpsPinPref = findPreference(KEY_WPS_PIN);
         wpsPinPref.setOnPreferenceClickListener(new OnPreferenceClickListener(){
                 public boolean onPreferenceClick(Preference arg0) {
-                    WpsFragment wpsFragment = new WpsFragment(WpsInfo.DISPLAY);
-                    wpsFragment.show(getFragmentManager(), KEY_WPS_PIN);
+                    showDialog(WPS_PIN_DIALOG_ID);
                     return true;
                 }
         });
@@ -239,6 +257,11 @@ public class AdvancedWifiSettings extends SettingsPreferenceFragment
             Global.putInt(getContentResolver(),
                     Global.WIFI_SCAN_ALWAYS_AVAILABLE,
                     ((SwitchPreference) preference).isChecked() ? 1 : 0);
+        } else if (KEY_WIFI_RSSI_THRESHOLD_CHECK.equals(key)) {
+            Global.putInt(getContentResolver(),
+                    Global.WIFI_RSSI_THRESHOLD,
+                    ((CheckBoxPreference) preference).isChecked() ? 1 : 0);
+            mWifiManager.enableRssiThreshold(((CheckBoxPreference) preference).isChecked() ? 1 : 0);
         } else {
             return super.onPreferenceTreeClick(screen, preference);
         }

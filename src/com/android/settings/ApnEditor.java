@@ -33,6 +33,7 @@ import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.provider.Telephony;
+import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -88,6 +89,7 @@ public class ApnEditor extends PreferenceActivity
 
     private String mCurMnc;
     private String mCurMcc;
+    private long mSubId;
 
     private Uri mUri;
     private Cursor mCursor;
@@ -190,7 +192,10 @@ public class ApnEditor extends PreferenceActivity
 
         final Intent intent = getIntent();
         final String action = intent.getAction();
-
+        // Read the subscription received from Phone settings.
+        mSubId = intent.getLongExtra(SelectSubscription.SUBSCRIPTION_KEY,
+                SubscriptionManager.getDefaultSubId());
+        Log.d(TAG,"ApnEditor onCreate received sub: " + mSubId);
         mFirstTime = icicle == null;
 
         if (action.equals(Intent.ACTION_EDIT)) {
@@ -227,7 +232,7 @@ public class ApnEditor extends PreferenceActivity
 
         mTelephonyManager = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
 
-        fillUi();
+        fillUi(intent.getStringExtra(ApnSettings.OPERATOR_NUMERIC_EXTRA));
     }
 
     @Override
@@ -244,7 +249,7 @@ public class ApnEditor extends PreferenceActivity
         super.onPause();
     }
 
-    private void fillUi() {
+    private void fillUi(String defaultOperatorNumeric) {
         if (mFirstTime) {
             mFirstTime = false;
             // Fill in all the values from the db in both text editor and summary
@@ -262,14 +267,12 @@ public class ApnEditor extends PreferenceActivity
             mMnc.setText(mCursor.getString(MNC_INDEX));
             mApnType.setText(mCursor.getString(TYPE_INDEX));
             if (mNewApn) {
-                String numeric =
-                    SystemProperties.get(TelephonyProperties.PROPERTY_ICC_OPERATOR_NUMERIC);
                 // MCC is first 3 chars and then in 2 - 3 chars of MNC
-                if (numeric != null && numeric.length() > 4) {
+                if (defaultOperatorNumeric != null && defaultOperatorNumeric.length() > 4) {
                     // Country code
-                    String mcc = numeric.substring(0, 3);
+                    String mcc = defaultOperatorNumeric.substring(0, 3);
                     // Network code
-                    String mnc = numeric.substring(3);
+                    String mnc = defaultOperatorNumeric.substring(3);
                     // Auto populate MNC and MCC for new entries, based on what SIM reports
                     mMcc.setText(mcc);
                     mMnc.setText(mnc);
@@ -384,13 +387,12 @@ public class ApnEditor extends PreferenceActivity
             }
             if (newValue != null && newValue.equals(oldValue) == false) {
                 if (values[mvnoIndex].equals("SPN")) {
-                    mMvnoMatchData.setText(mTelephonyManager.getSimOperatorName());
+                    mMvnoMatchData.setText(mTelephonyManager.getSimOperatorName(mSubId));
                 } else if (values[mvnoIndex].equals("IMSI")) {
-                    String numeric =
-                            SystemProperties.get(TelephonyProperties.PROPERTY_ICC_OPERATOR_NUMERIC);
+                    String numeric = mTelephonyManager.getSimOperator(mSubId);
                     mMvnoMatchData.setText(numeric + "x");
                 } else if (values[mvnoIndex].equals("GID")) {
-                    mMvnoMatchData.setText(mTelephonyManager.getGroupIdLevel1());
+                    mMvnoMatchData.setText(mTelephonyManager.getGroupIdLevel1(mSubId));
                 }
             }
 
@@ -565,7 +567,8 @@ public class ApnEditor extends PreferenceActivity
         values.put(Telephony.Carriers.NUMERIC, mcc + mnc);
 
         if (mCurMnc != null && mCurMcc != null) {
-            if (mCurMnc.equals(mnc) && mCurMcc.equals(mcc)) {
+            if (mCurMnc.equals(mnc) && mCurMcc.equals(mcc) &&
+                    mSubId == SubscriptionManager.getDefaultDataSubId()) {
                 values.put(Telephony.Carriers.CURRENT, 1);
             }
         }

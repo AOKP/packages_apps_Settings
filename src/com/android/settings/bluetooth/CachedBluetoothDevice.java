@@ -16,6 +16,7 @@
 
 package com.android.settings.bluetooth;
 
+import android.bluetooth.BluetoothUuid;
 import android.bluetooth.BluetoothClass;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothProfile;
@@ -64,6 +65,8 @@ final class CachedBluetoothDevice implements Comparable<CachedBluetoothDevice> {
 
     private boolean mVisible;
 
+    private boolean mDeviceRemove;
+
     private int mPhonebookPermissionChoice;
 
     private int mMessagePermissionChoice;
@@ -101,6 +104,8 @@ final class CachedBluetoothDevice implements Comparable<CachedBluetoothDevice> {
 
     // See mConnectAttempted
     private static final long MAX_UUID_DELAY_FOR_AUTO_CONNECT = 5000;
+
+    private static final long MAX_HOGP_DELAY_FOR_AUTO_CONNECT = 30000;
 
     /** Auto-connect after pairing only if locally initiated. */
     private boolean mConnectAfterPairing;
@@ -325,8 +330,10 @@ final class CachedBluetoothDevice implements Comparable<CachedBluetoothDevice> {
                 final boolean successful = dev.removeBond();
                 if (successful) {
                     if (Utils.D) {
+                        mDevice.setAlias(null);
                         Log.d(TAG, "Command sent successfully:REMOVE_BOND " + describe(null));
                     }
+                    setRemovable(true);
                 } else if (Utils.V) {
                     Log.v(TAG, "Framework rejected command immediately:REMOVE_BOND " +
                             describe(null));
@@ -384,6 +391,17 @@ final class CachedBluetoothDevice implements Comparable<CachedBluetoothDevice> {
             mName = name;
             if (mName == null || TextUtils.isEmpty(mName)) {
                 mName = mDevice.getAddress();
+            } else {
+                mName = name;
+            }
+            dispatchAttributesChanged();
+        }
+    }
+    void setAliasName(String name) {
+        if (!mName.equals(name)) {
+            if (!TextUtils.isEmpty(name)) {
+                mName = name;
+                mDevice.setAlias(name);
             }
             dispatchAttributesChanged();
         }
@@ -422,12 +440,22 @@ final class CachedBluetoothDevice implements Comparable<CachedBluetoothDevice> {
         return mVisible;
     }
 
+    boolean isRemovable () {
+        return mDeviceRemove;
+   }
+
+
     void setVisible(boolean visible) {
         if (mVisible != visible) {
             mVisible = visible;
             dispatchAttributesChanged();
         }
     }
+
+    void setRemovable(boolean removable) {
+        mDeviceRemove = removable;
+    }
+
 
     int getBondState() {
         return mDevice.getBondState();
@@ -517,9 +545,10 @@ final class CachedBluetoothDevice implements Comparable<CachedBluetoothDevice> {
      */
     void onUuidChanged() {
         updateProfiles();
-
-        if (DEBUG) {
-            Log.e(TAG, "onUuidChanged: Time since last connect"
+        ParcelUuid[] uuids = mDevice.getUuids();
+        long timeout = MAX_UUID_DELAY_FOR_AUTO_CONNECT;
+        if (DEBUG){
+            Log.d(TAG, "onUuidChanged: Time since last connect"
                     + (SystemClock.elapsedRealtime() - mConnectAttempted));
         }
 
@@ -527,9 +556,14 @@ final class CachedBluetoothDevice implements Comparable<CachedBluetoothDevice> {
          * If a connect was attempted earlier without any UUID, we will do the
          * connect now.
          */
+        if(BluetoothUuid.isUuidPresent(uuids, BluetoothUuid.Hogp)){
+            timeout = MAX_HOGP_DELAY_FOR_AUTO_CONNECT;
+        }
+        if (DEBUG){
+            Log.d(TAG, "onUuidChanged timeout value="+timeout);
+        }
         if (!mProfiles.isEmpty()
-                && (mConnectAttempted + MAX_UUID_DELAY_FOR_AUTO_CONNECT) > SystemClock
-                        .elapsedRealtime()) {
+                && (mConnectAttempted + timeout) > SystemClock.elapsedRealtime()) {
             connectWithoutResettingTimer(false);
         }
         dispatchAttributesChanged();

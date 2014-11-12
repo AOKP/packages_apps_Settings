@@ -62,6 +62,8 @@ public final class DeviceProfilesSettings extends SettingsPreferenceFragment
     private LocalBluetoothManager mManager;
     private LocalBluetoothProfileManager mProfileManager;
 
+    private static final int OK_BUTTON = -1;
+
     private PreferenceGroup mProfileContainer;
     private EditTextPreference mDeviceNamePref;
 
@@ -204,7 +206,7 @@ public final class DeviceProfilesSettings extends SettingsPreferenceFragment
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mDeviceNamePref) {
-            mCachedDevice.setName((String) newValue);
+            mCachedDevice.setAliasName((String) newValue);
         } else if (preference instanceof CheckBoxPreference) {
             LocalBluetoothProfile prof = getProfileOf(preference);
             onProfileClicked(prof, (CheckBoxPreference) preference);
@@ -241,8 +243,12 @@ public final class DeviceProfilesSettings extends SettingsPreferenceFragment
             }
             if (profile.isPreferred(device)) {
                 // profile is preferred but not connected: disable auto-connect
-                profile.setPreferred(device, false);
-                refreshProfilePreference(profilePref, profile);
+                if (profile instanceof PanProfile) {
+                    mCachedDevice.connectProfile(profile);
+                } else {
+                    profile.setPreferred(device, false);
+                    refreshProfilePreference(profilePref, profile);
+                }
             } else {
                 profile.setPreferred(device, true);
                 mCachedDevice.connectProfile(profile);
@@ -268,12 +274,15 @@ public final class DeviceProfilesSettings extends SettingsPreferenceFragment
         DialogInterface.OnClickListener disconnectListener =
                 new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
-                device.disconnect(profile);
-                profile.setPreferred(device.getDevice(), false);
-                if (profile instanceof MapProfile) {
-                    device.setMessagePermissionChoice(BluetoothDevice.ACCESS_REJECTED);
-                    refreshProfilePreference(
+                // Disconnect only when user has selected OK
+                if (which == OK_BUTTON) {
+                    device.disconnect(profile);
+                    profile.setPreferred(device.getDevice(), false);
+                    if (profile instanceof MapProfile) {
+                        device.setMessagePermissionChoice(BluetoothDevice.ACCESS_REJECTED);
+                        refreshProfilePreference(
                             (CheckBoxPreference)findPreference(profile.toString()), profile);
+                    }
                 }
             }
         };
@@ -331,9 +340,15 @@ public final class DeviceProfilesSettings extends SettingsPreferenceFragment
             // Handle PBAP specially.
             profilePref.setChecked(mCachedDevice.getPhonebookPermissionChoice()
                     == CachedBluetoothDevice.ACCESS_ALLOWED);
-        } else {
+        }
+        if (profile instanceof PanProfile) {
+            profilePref.setChecked(profile.getConnectionStatus(device) ==
+                    BluetoothProfile.STATE_CONNECTED);
+        }
+        else {
             profilePref.setChecked(profile.isPreferred(device));
         }
+        profilePref.setSummary(profile.getSummaryResourceForDevice(device));
     }
 
     private LocalBluetoothProfile getProfileOf(Preference pref) {

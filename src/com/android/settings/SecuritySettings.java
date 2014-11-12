@@ -1,4 +1,6 @@
 /*
+ * Copyright (c) 2012-2014 The Linux Foundation. All rights reserved.
+ * Not a Contribution.
  * Copyright (C) 2007 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,6 +21,7 @@ package com.android.settings;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.AppOpsManager;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
@@ -89,10 +92,12 @@ public class SecuritySettings extends SettingsPreferenceFragment
 
     // Misc Settings
     private static final String KEY_SIM_LOCK = "sim_lock";
+    private static final String KEY_SIM_LOCK_SETTINGS = "sim_lock_settings";
     private static final String KEY_SHOW_PASSWORD = "show_password";
     private static final String KEY_CREDENTIAL_STORAGE_TYPE = "credential_storage_type";
     private static final String KEY_RESET_CREDENTIALS = "credentials_reset";
     private static final String KEY_CREDENTIALS_INSTALL = "credentials_install";
+    private static final String KEY_APP_OPS_SUMMARY = "app_ops_summary";
     private static final String KEY_TOGGLE_INSTALL_APPLICATIONS = "toggle_install_applications";
     private static final String KEY_POWER_INSTANTLY_LOCKS = "power_button_instantly_locks";
     private static final String KEY_CREDENTIALS_MANAGER = "credentials_management";
@@ -291,16 +296,26 @@ public class SecuritySettings extends SettingsPreferenceFragment
         // Append the rest of the settings
         addPreferencesFromResource(R.xml.security_settings_misc);
 
-        // Do not display SIM lock for devices without an Icc card
         TelephonyManager tm = TelephonyManager.getDefault();
-        if (!mIsPrimary || !tm.hasIccCard()) {
+        int numPhones = tm.getPhoneCount();
+        boolean disableLock = true;
+        boolean removeLock = true;
+        for (int i = 0; i < numPhones; i++) {
+            // Do not display SIM lock for devices without an Icc card
+            if (tm.hasIccCard(i)) {
+                // Disable SIM lock if sim card is missing or unknown
+                removeLock = false;
+                if (!((tm.getSimState(i) == TelephonyManager.SIM_STATE_ABSENT)
+                        || (tm.getSimState(i) == TelephonyManager.SIM_STATE_UNKNOWN)
+                        || (tm.getSimState(i) == TelephonyManager.SIM_STATE_CARD_IO_ERROR))) {
+                    disableLock = false;
+                }
+            }
+        }
+        if (!mIsPrimary || removeLock) {
             root.removePreference(root.findPreference(KEY_SIM_LOCK));
         } else {
-            // Disable SIM lock if sim card is missing or unknown
-            if ((TelephonyManager.getDefault().getSimState() ==
-                                 TelephonyManager.SIM_STATE_ABSENT) ||
-                (TelephonyManager.getDefault().getSimState() ==
-                                 TelephonyManager.SIM_STATE_UNKNOWN)) {
+            if (disableLock) {
                 root.findPreference(KEY_SIM_LOCK).setEnabled(false);
             }
         }
@@ -313,6 +328,23 @@ public class SecuritySettings extends SettingsPreferenceFragment
         // Show password
         mShowPassword = (SwitchPreference) root.findPreference(KEY_SHOW_PASSWORD);
         mResetCredentials = root.findPreference(KEY_RESET_CREDENTIALS);
+
+        if (root.findPreference(KEY_SIM_LOCK) != null) {
+            // SIM/RUIM lock
+            Preference iccLock = (Preference) root.findPreference(KEY_SIM_LOCK_SETTINGS);
+
+            Intent intent = new Intent();
+            if (TelephonyManager.getDefault().getPhoneCount() > 1) {
+                intent.setClassName("com.android.settings",
+                        "com.android.settings.SelectSubscription");
+                intent.putExtra(SelectSubscription.PACKAGE, "com.android.settings");
+                intent.putExtra(SelectSubscription.TARGET_CLASS,
+                        "com.android.settings.IccLockSettings");
+            } else {
+                intent.setClassName("com.android.settings", "com.android.settings.IccLockSettings");
+            }
+            iccLock.setIntent(intent);
+        }
 
         // Credential storage
         final UserManager um = (UserManager) getActivity().getSystemService(Context.USER_SERVICE);
@@ -343,6 +375,14 @@ public class SecuritySettings extends SettingsPreferenceFragment
         if (um.hasUserRestriction(UserManager.DISALLOW_INSTALL_UNKNOWN_SOURCES)
                 || um.hasUserRestriction(UserManager.DISALLOW_INSTALL_APPS)) {
             mToggleAppInstallation.setEnabled(false);
+        }
+
+        // AppOps summary, only visible when strict mode is enabled.
+        if (!AppOpsManager.isStrictEnable()) {
+            Preference appOpsSummary = findPreference(KEY_APP_OPS_SUMMARY);
+            if (deviceAdminCategory != null) {
+                deviceAdminCategory.removePreference(appOpsSummary);
+            }
         }
 
         // Advanced Security features
