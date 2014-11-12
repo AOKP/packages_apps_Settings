@@ -29,6 +29,7 @@ import com.android.settings.SecuritySettings;
 import com.android.settings.WallpaperTypeSettings;
 import com.android.settings.WirelessSettings;
 import com.android.settings.accessibility.AccessibilitySettings;
+import com.android.settings.aicp.AicpSettings;
 import com.android.settings.bluetooth.BluetoothSettings;
 import com.android.settings.deviceinfo.Memory;
 import com.android.settings.fuelgauge.BatterySaverSettings;
@@ -59,6 +60,7 @@ public final class Ranking {
     public static final int RANK_SIM = 3;
     public static final int RANK_DATA_USAGE = 4;
     public static final int RANK_WIRELESS = 5;
+    public static final int RANK_AICP = 6;
     public static final int RANK_HOME = 6;
     public static final int RANK_DISPLAY = 7;
     public static final int RANK_WALLPAPER = 8;
@@ -103,6 +105,9 @@ public final class Ranking {
 
         // Other wireless settinfs
         sRankMap.put(WirelessSettings.class.getName(), RANK_WIRELESS);
+
+        // AICP Extras
+        sRankMap.put(AicpSettings.class.getName(), RANK_AICP);
 
         // Home
         sRankMap.put(HomeSettings.class.getName(), RANK_HOME);

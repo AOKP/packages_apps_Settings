@@ -31,6 +31,7 @@ import com.android.settings.SecuritySettings;
 import com.android.settings.WallpaperTypeSettings;
 import com.android.settings.WirelessSettings;
 import com.android.settings.accessibility.AccessibilitySettings;
+import com.android.settings.aicp.AicpSettings;
 import com.android.settings.bluetooth.BluetoothSettings;
 import com.android.settings.deviceinfo.Memory;
 import com.android.settings.fuelgauge.BatterySaverSettings;
@@ -115,6 +116,14 @@ public final class SearchIndexableResources {
                         NO_DATA_RES_ID,
                         WirelessSettings.class.getName(),
                         R.drawable.ic_settings_more));
+
+        sResMap.put(AicpSettings.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(AicpSettings.class.getName()),
+                        NO_DATA_RES_ID,
+                        AicpSettings.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
 
         sResMap.put(HomeSettings.class.getName(),
                 new SearchIndexableResource(
