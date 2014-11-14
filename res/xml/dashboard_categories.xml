@@ -233,6 +233,14 @@
                 android:icon="@drawable/ic_settings_development"
                 />
 
+        <!-- Superuser -->
+        <dashboard-tile
+                android:id="@+id/superuser"
+                android:fragment="com.koushikdutta.superuser.PolicyNativeFragment"
+                android:icon="@drawable/ic_action_permission"
+                android:title="@string/superuser"
+                />
+
         <!-- About Device -->
         <dashboard-tile
                 android:id="@+id/about_settings"
