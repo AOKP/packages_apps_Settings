@@ -41,6 +41,7 @@ import android.os.INetworkManagementService;
 import android.os.Message;
 import android.os.RemoteException;
 import android.os.ServiceManager;
+import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.preference.Preference;
@@ -1198,6 +1199,13 @@ public class SettingsActivity extends Activity
                     }
                 } else if (id == R.id.development_settings) {
                     if (!showDev || um.hasUserRestriction(
+                            UserManager.DISALLOW_DEBUGGING_FEATURES)) {
+                        removeTile = true;
+                    }
+                } else if (id == R.id.superuser) {
+                    String value = SystemProperties.get(
+                            DevelopmentSettings.ROOT_ACCESS_PROPERTY, "0");
+                    if (Integer.valueOf(value) == 0 || um.hasUserRestriction(
                             UserManager.DISALLOW_DEBUGGING_FEATURES)) {
                         removeTile = true;
                     }
