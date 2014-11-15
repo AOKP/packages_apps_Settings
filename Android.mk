@@ -30,6 +30,8 @@ LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res $(LOCAL_PATH)/../../../external/koush/Wi
 
 include frameworks/opt/setupwizard/navigationbar/common.mk
 
+LOCAL_JAVA_LIBRARIES += org.cyanogenmod.hardware
+
 include $(BUILD_PACKAGE)
 
 # Use the following include to make our test apk.
