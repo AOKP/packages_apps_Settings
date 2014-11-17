@@ -387,8 +387,8 @@
             android:summary="@string/show_all_anrs_summary"/>
 
         <Preference
-                android:key="inactive_apps"
-                android:title="@string/inactive_apps_title" />
+            android:key="inactive_apps"
+            android:title="@string/inactive_apps_title" />
 
         <SwitchPreference
             android:key="force_allow_on_external"
@@ -399,6 +399,18 @@
             android:key="force_resizable_activities"
             android:title="@string/force_resizable_activities"
             android:summary="@string/force_resizable_activities_summary"/>
+
+       <SwitchPreference
+            android:key="kill_app_longpress_back"
+            android:title="@string/kill_app_longpress_back"
+            android:summary="@string/kill_app_longpress_back_summary"/>
+
+        <ListPreference
+            android:key="kill_app_longpress_timeout"
+            android:title="@string/kill_app_longpress_timeout_title"
+            android:entries="@array/kill_app_longpress_timeout_entries"
+            android:entryValues="@array/kill_app_longpress_timeout_values"
+            android:dependency="kill_app_longpress_back" />
      </PreferenceCategory>
 
 </PreferenceScreen>
