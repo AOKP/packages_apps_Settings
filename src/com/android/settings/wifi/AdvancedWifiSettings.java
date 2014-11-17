@@ -60,7 +60,6 @@ public class AdvancedWifiSettings extends SettingsPreferenceFragment
     private static final String KEY_NOTIFY_CHANGED_NETWORKS = "notify_changed_networks";
     private static final String KEY_SLEEP_POLICY = "sleep_policy";
     private static final String KEY_SCAN_ALWAYS_AVAILABLE = "wifi_scan_always_available";
-    private static final String KEY_WIFI_RSSI_THRESHOLD_CHECK = "wifi_rssi_threshold_check";
     private static final String KEY_INSTALL_CREDENTIALS = "install_credentials";
     private static final String KEY_WIFI_ASSISTANT = "wifi_assistant";
     private static final String KEY_WIFI_DIRECT = "wifi_direct";
@@ -149,11 +148,6 @@ public class AdvancedWifiSettings extends SettingsPreferenceFragment
 
         scanAlwaysAvailable.setChecked(Global.getInt(getContentResolver(),
                     Global.WIFI_SCAN_ALWAYS_AVAILABLE, 0) == 1);
-
-        CheckBoxPreference wifiRssiThresholdCheck =
-            (CheckBoxPreference) findPreference(KEY_WIFI_RSSI_THRESHOLD_CHECK);
-        wifiRssiThresholdCheck.setChecked(Global.getInt(getContentResolver(),
-                    Global.WIFI_RSSI_THRESHOLD, 0) == 1);
 
         Intent intent = new Intent(Credentials.INSTALL_AS_USER_ACTION);
         intent.setClassName("com.android.certinstaller",
@@ -270,11 +264,6 @@ public class AdvancedWifiSettings extends SettingsPreferenceFragment
             Global.putInt(getContentResolver(),
                     Global.WIFI_SCAN_ALWAYS_AVAILABLE,
                     ((SwitchPreference) preference).isChecked() ? 1 : 0);
-        } else if (KEY_WIFI_RSSI_THRESHOLD_CHECK.equals(key)) {
-            Global.putInt(getContentResolver(),
-                    Global.WIFI_RSSI_THRESHOLD,
-                    ((CheckBoxPreference) preference).isChecked() ? 1 : 0);
-            mWifiManager.enableRssiThreshold(((CheckBoxPreference) preference).isChecked() ? 1 : 0);
         } else {
             return super.onPreferenceTreeClick(screen, preference);
         }
