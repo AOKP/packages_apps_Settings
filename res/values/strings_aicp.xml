@@ -335,4 +335,9 @@
     <string name="ime_switcher_notify">Selector notification</string>
     <string name="ime_switcher_notify_summary">Display input method selector notification</string>
 
+    <!-- Various shit -->
+    <string name="various_shit_title">Various shit</string>
+    <string name="battery_percentage_title">Battery percentage</string>
+    <string name="battery_percentage_summary">Show percentage in battery icon.</string>
+
 </resources>

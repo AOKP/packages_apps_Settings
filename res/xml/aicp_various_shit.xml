@@ -15,12 +15,12 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-        android:title="@string/aicp_settings_title">
+        android:title="@string/various_shit_title">
 
-    <!-- Various shit -->
-    <PreferenceScreen
-            android:key="various_shit"
-            android:title="@string/various_shit_title"
-            android:fragment="com.android.settings.aicp.VariousShit" />
+    <!-- Battery percentage -->
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="status_bar_show_battery_percent"
+            android:title="@string/battery_percentage_title"
+            android:summary="@string/battery_percentage_summary" />
 
 </PreferenceScreen>
