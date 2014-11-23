@@ -20,9 +20,11 @@ package com.android.settings.aicp;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
+import android.preference.SwitchPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
 
@@ -37,6 +39,9 @@ public class VariousShit extends SettingsPreferenceFragment
 
     private static final String TAG = "VariousShit";
 
+    private SwitchPreference mProximityWake;
+    private PreferenceScreen mVariousShitScreen;
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
@@ -45,6 +50,17 @@ public class VariousShit extends SettingsPreferenceFragment
 
         PreferenceScreen prefSet = getPreferenceScreen();
         PackageManager pm = getPackageManager();
+        Resources res = getResources();
+
+        mVariousShitScreen = (PreferenceScreen) findPreference("various_shit_screen");
+
+        // Proximity wake up
+        mProximityWake = (SwitchPreference) findPreference("proximity_on_wake");
+        boolean proximityCheckOnWait = res.getBoolean(
+                com.android.internal.R.bool.config_proximityCheckOnWake);
+        if (!proximityCheckOnWait) {
+            mVariousShitScreen.removePreference(mProximityWake);
+        }
 
     }
 

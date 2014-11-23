@@ -15,7 +15,8 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-        android:title="@string/various_shit_title">
+        android:title="@string/various_shit_title"
+        android:key="various_shit_screen">
 
     <!-- Battery percentage -->
     <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
