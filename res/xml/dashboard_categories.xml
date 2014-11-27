@@ -68,6 +68,20 @@
                 android:fragment="com.android.settings.WirelessSettings"
                 android:icon="@drawable/ic_settings_more"
                 />
+    </dashboard-category>
+
+    <!-- PERSONALIZATION -->
+    <dashboard-category
+            android:id="@+id/personalization_section"
+            android:title="@string/header_category_personalization" >
+
+        <!-- Interface -->
+        <dashboard-tile
+                android:id="@+id/interface_settings"
+                android:icon="@drawable/ic_settings_interface"
+                android:fragment="com.android.settings.slim.InterfaceSettings"
+                android:title="@string/interface_settings_title"
+                />
 
     </dashboard-category>
 
