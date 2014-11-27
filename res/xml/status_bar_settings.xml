@@ -15,19 +15,28 @@
 -->
 
 <PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/status_bar_title">
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+        android:title="@string/status_bar_title">
 
     <!-- Status bar tweaks -->
     <PreferenceCategory
-        android:title="@string/status_bar_style_title">
+            android:title="@string/status_bar_style_title">
 
         <PreferenceScreen
-            android:fragment="com.android.settings.slim.StatusBarClockStyle"
-            android:key="clock_style_pref"
-            android:title="@string/status_bar_clock" />
+                android:fragment="com.android.settings.slim.StatusBarClockStyle"
+                android:key="clock_style_pref"
+                android:title="@string/status_bar_clock" />
 
     </PreferenceCategory>
+
+    <PreferenceCategory
+            android:title="@string/status_bar_options_title" />
+
+    <com.android.settings.slim.SystemSettingSwitchPreference
+            android:key="double_tap_sleep_gesture"
+            android:title="@string/double_tap_to_sleep_title"
+            android:summary="@string/double_tap_to_sleep_summary"
+            android:defaultValue="true" />
 
 </PreferenceScreen>
