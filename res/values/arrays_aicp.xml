@@ -157,21 +157,6 @@ limitations under the License.
              <item>200</item>
          </string-array>
 
-    <!-- Arrays for root access capability -->
-    <string-array name="root_access_entries">
-        <item>@string/root_access_none</item>
-        <item>@string/root_access_apps</item>
-        <item>@string/root_access_adb</item>
-        <item>@string/root_access_all</item>
-    </string-array>
-
-    <string-array name="root_access_values" translatable="false">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-    </string-array>
-
     <string-array name="less_notification_sounds_entries">
         <item>@string/less_notification_sounds_default</item>
         <item>@string/less_notification_sounds_3s</item>
