@@ -75,6 +75,14 @@
             android:id="@+id/personalization_section"
             android:title="@string/header_category_personalization" >
 
+        <!-- AICP Settings -->
+        <dashboard-tile
+                android:id="@+id/aicp_settings"
+                android:title="@string/aicp_settings_title"
+                android:fragment="com.android.settings.aicp.AicpSettings"
+                android:icon="@drawable/ic_settings_aicp"
+                />
+
         <!-- Interface -->
         <dashboard-tile
                 android:id="@+id/interface_settings"
@@ -167,14 +175,6 @@
                 android:fragment="com.android.settings.WirelessSettings">
             <intent android:action="com.android.settings.MANUFACTURER_APPLICATION_SETTING" />
         </dashboard-tile>
-
-        <!-- AICP Settings -->
-        <dashboard-tile
-                android:id="@+id/aicp_settings"
-                android:title="@string/aicp_settings_title"
-                android:fragment="com.android.settings.aicp.AicpSettings"
-                android:icon="@drawable/ic_settings_aicp"
-                />
 
     </dashboard-category>
 
