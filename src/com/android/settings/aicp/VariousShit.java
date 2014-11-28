@@ -46,11 +46,13 @@ public class VariousShit extends SettingsPreferenceFragment
 
     private static final String KEY_LOCKCLOCK = "lock_clock";
     private static final String KEY_NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
+    private static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
 
     // Package name of the cLock app
     public static final String LOCKCLOCK_PACKAGE_NAME = "com.cyanogenmod.lockclock";
 
     private ListPreference mNavigationBarHeight;
+    private ListPreference mStatusBarBattery;
     private SwitchPreference mProximityWake;
     private PreferenceScreen mVariousShitScreen;
 
@@ -91,6 +93,14 @@ public class VariousShit extends SettingsPreferenceFragment
         mNavigationBarHeight.setValue(String.valueOf(statusNavigationBarHeight));
         mNavigationBarHeight.setSummary(mNavigationBarHeight.getEntry());
 
+        // Status bar battery
+        mStatusBarBattery = (ListPreference) findPreference(STATUS_BAR_SHOW_BATTERY_PERCENT);
+        int batteryStyle = Settings.System.getInt(
+                resolver, Settings.System.STATUS_BAR_SHOW_BATTERY_PERCENT, 0);
+        mStatusBarBattery.setValue(String.valueOf(batteryStyle));
+        mStatusBarBattery.setSummary(mStatusBarBattery.getEntry());
+        mStatusBarBattery.setOnPreferenceChangeListener(this);
+
     }
 
     @Override
@@ -122,6 +132,13 @@ public class VariousShit extends SettingsPreferenceFragment
             Settings.System.putInt(resolver, Settings.System.NAVIGATION_BAR_HEIGHT,
                     statusNavigationBarHeight);
             mNavigationBarHeight.setSummary(mNavigationBarHeight.getEntries()[index]);
+        } else if (preference == mStatusBarBattery) {
+            int batteryStyle = Integer.valueOf((String) objValue);
+            int index = mStatusBarBattery.findIndexOfValue((String) objValue);
+            Settings.System.putInt(
+                    resolver, Settings.System.STATUS_BAR_SHOW_BATTERY_PERCENT, batteryStyle);
+            mStatusBarBattery.setSummary(mStatusBarBattery.getEntries()[index]);
+            return true;
         }
 
         return true;
