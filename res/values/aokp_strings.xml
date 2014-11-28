@@ -20,4 +20,7 @@
     <string name="aokp_version_title">AOKP Version</string>
     <string name="aokp_version_default">Unknown</string>
 
+    <!-- SuperSU header name - the app hides itself from launcher based on this resource name being present in com.android.settings -->
+    <string name="supersu_title">SuperSU</string>
+
 </resources>
