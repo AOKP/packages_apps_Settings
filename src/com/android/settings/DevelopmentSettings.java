@@ -1682,6 +1682,9 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
                 mDialogClicked = true;
                 Settings.Global.putInt(getActivity().getContentResolver(),
                         Settings.Global.ADB_ENABLED, 1);
+                Settings.Secure.putInt(getActivity().getContentResolver(),
+                        Settings.Secure.ADB_NOTIFY, 1);
+                mAdbNotify.setChecked(true);
                 mVerifyAppsOverUsb.setEnabled(true);
                 updateVerifyAppsOverUsbOptions();
                 updateBugreportOptions();
