@@ -461,4 +461,8 @@
     <string name="hfm_dialog_conn_error">Error: No network connectivity</string>
     <string name="hfm_dialog_title">Hosts update progress</string>
 
+    <!-- Volume rocker music seek options -->
+    <string name="volbtn_music_controls_title">Volume rocker music controls</string>
+    <string name="volbtn_music_controls_summary">When screen off, long-pressing the volume rockers will seek music tracks</string>
+
 </resources>
