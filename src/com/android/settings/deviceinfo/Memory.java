@@ -40,8 +40,11 @@ import android.os.storage.StorageEventListener;
 import android.os.storage.StorageManager;
 import android.os.storage.StorageVolume;
 import android.os.SystemProperties;
+import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
+import android.preference.Preference.OnPreferenceChangeListener;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -65,10 +68,13 @@ import java.util.List;
  * Panel showing storage usage on disk for known {@link StorageVolume} returned
  * by {@link StorageManager}. Calculates and displays usage of data types.
  */
-public class Memory extends SettingsPreferenceFragment implements Indexable {
+public class Memory extends SettingsPreferenceFragment
+        implements Indexable, OnPreferenceChangeListener {
+
     private static final String TAG = "MemorySettings";
 
     private static final String TAG_CONFIRM_CLEAR_CACHE = "confirmClearCache";
+    private static final String PREF_MEDIA_SCANNER_ON_BOOT = "media_scanner_on_boot";
 
     private static final int DLG_CONFIRM_UNMOUNT = 1;
     private static final int DLG_ERROR_UNMOUNT = 2;
@@ -79,6 +85,8 @@ public class Memory extends SettingsPreferenceFragment implements Indexable {
     private static Preference sLastClickedMountToggle;
     private static String sClickedMountPoint;
     private StorageVolume mStorageVolume;
+
+    private ListPreference mMsob;
 
     // Access using getMountService()
     private IMountService mMountService;
@@ -130,6 +138,12 @@ public class Memory extends SettingsPreferenceFragment implements Indexable {
                 addCategory(StorageVolumePreferenceCategory.buildForPhysical(context, volume));
             }
         }
+
+        mMsob = (ListPreference) findPreference(PREF_MEDIA_SCANNER_ON_BOOT);
+        mMsob.setValue(String.valueOf(Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.MEDIA_SCANNER_ON_BOOT, 0)));
+        mMsob.setSummary(mMsob.getEntry());
+        mMsob.setOnPreferenceChangeListener(this);
 
         setHasOptionsMenu(true);
     }
@@ -277,6 +291,21 @@ public class Memory extends SettingsPreferenceFragment implements Indexable {
             }
         }
 
+        return false;
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        String value = (String) newValue;
+        if (preference == mMsob) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.MEDIA_SCANNER_ON_BOOT,
+                    Integer.valueOf(value));
+
+            mMsob.setValue(String.valueOf(value));
+            mMsob.setSummary(mMsob.getEntry());
+            return true;
+        }
         return false;
     }
 

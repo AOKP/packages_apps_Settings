@@ -21,4 +21,15 @@
 
 <!-- Preference categories are dynamically created based on the list of available storage volumes -->
 
+    <PreferenceCategory
+            android:key="settings_options_prefs"
+            android:title="@string/options_settings_title">
+        <ListPreference
+                android:key="media_scanner_on_boot"
+                android:title="@string/media_scanner_on_boot_title"
+                android:persistent="false"
+                android:entries="@array/media_scanner_on_boot_entries"
+                android:entryValues="@array/media_scanner_on_boot_values" />
+    </PreferenceCategory>
+
 </PreferenceScreen>
