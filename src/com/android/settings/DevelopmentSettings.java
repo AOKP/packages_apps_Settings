@@ -95,7 +95,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
      */
     public static final String PREF_SHOW = "show";
 
-    private static final String MEDIA_SCANNER_ON_BOOT = "media_scanner_on_boot";
     private static final String ENABLE_ADB = "enable_adb";
     private static final String ADB_NOTIFY = "adb_notify";
     private static final String ADB_TCPIP = "adb_over_network";
@@ -191,7 +190,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private boolean mHaveDebugSettings;
     private boolean mDontPokeProperties;
 
-    private ListPreference mMSOB;
     private CheckBoxPreference mEnableAdb;
     private CheckBoxPreference mAdbNotify;
     private CheckBoxPreference mAdbOverNetwork;
@@ -404,10 +402,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             mAllPrefs.add(mRootAccess);
         }
 
-        mMSOB = (ListPreference) findPreference(MEDIA_SCANNER_ON_BOOT);
-        mAllPrefs.add(mMSOB);
-        mMSOB.setOnPreferenceChangeListener(this);
-
         mDevelopmentTools = (PreferenceScreen) findPreference(DEVELOPMENT_TOOLS);
         mAllPrefs.add(mDevelopmentTools);
     }
@@ -611,27 +605,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         updateUseNuplayerOptions();
         updateUSBAudioOptions();
         updateRootAccessOptions();
-        updateMSOBOptions();
-    }
-
-
-    private void resetMSOBOptions() {
-        Settings.System.putInt(getActivity().getContentResolver(),
-                Settings.System.MEDIA_SCANNER_ON_BOOT, 0);
-    }
-
-    private void writeMSOBOptions(Object newValue) {
-        Settings.System.putInt(getActivity().getContentResolver(),
-                Settings.System.MEDIA_SCANNER_ON_BOOT,
-                Integer.valueOf((String) newValue));
-        updateMSOBOptions();
-    }
-
-    private void updateMSOBOptions() {
-        int value = Settings.System.getInt(getActivity().getContentResolver(),
-                Settings.System.MEDIA_SCANNER_ON_BOOT, 0);
-        mMSOB.setValue(String.valueOf(value));
-        mMSOB.setSummary(mMSOB.getEntry());
     }
 
     private void updateAdbOverNetwork() {
@@ -676,7 +649,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         resetRootAccessOptions();
         resetAdbNotifyOptions();
         resetVerifyAppsOverUsbOptions();
-        resetMSOBOptions();
         writeAnimationScaleOption(0, mWindowAnimationScale, null);
         writeAnimationScaleOption(1, mTransitionAnimationScale, null);
         writeAnimationScaleOption(2, mAnimatorDurationScale, null);
@@ -1676,9 +1648,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             } else {
                 writeRootAccessOptions(newValue);
             }
-            return true;
-        } else if (preference == mMSOB) {
-            writeMSOBOptions(newValue);
             return true;
         }
         return false;

@@ -43,13 +43,6 @@
                 android:targetClass="com.android.settings.SetFullBackupPassword" />
     </PreferenceScreen>
 
-    <ListPreference
-        android:key="media_scanner_on_boot"
-        android:title="@string/media_scanner_on_boot_title"
-        android:persistent="false"
-        android:entries="@array/media_scanner_on_boot_entries"
-        android:entryValues="@array/media_scanner_on_boot_values" />
-
     <CheckBoxPreference
         android:key="keep_screen_on"
         android:title="@string/keep_screen_on"
