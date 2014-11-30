@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2014 Slimroms
+<!-- Copyright (C) 2012-2014 SlimRoms Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,20 +13,20 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-<PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/interface_settings_title"
-    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <!-- Quick pulldown -->
+    <string-array name="quick_pulldown_entries" translatable="false">
+        <item>@string/quick_pulldown_off</item>
+        <item>@string/quick_pulldown_left</item>
+        <item>@string/quick_pulldown_right</item>
+    </string-array>
 
-    <PreferenceScreen
-        android:key="quick_settings"
-        android:fragment="com.android.settings.slim.QsSettings"
-        android:title="@string/qs_title" />
+    <string-array name="quick_pulldown_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
 
-    <PreferenceScreen
-        android:key="status_bar"
-        android:fragment="com.android.settings.slim.StatusBar"
-        android:title="@string/status_bar_title" />
+</resources>
 
-</PreferenceScreen>
