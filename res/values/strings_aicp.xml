@@ -335,8 +335,6 @@
     <string name="various_shit_title">Various shit</string>
     <string name="battery_percentage_title">Battery percentage</string>
     <string name="battery_percentage_summary">Show percentage in battery icon.</string>
-    <string name="status_bar_brightness_control_title">Status bar brightness</string>
-    <string name="status_bar_brightness_control_summary">Enable to control brightness while\nsliding over status bar.</string>
     <string name="proximity_on_wake_title">Proximity on wake</string>
     <string name="proximity_on_wake_summary">Check the proximity sensor during wakeup.</string>
 
