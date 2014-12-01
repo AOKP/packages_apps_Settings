@@ -103,12 +103,12 @@
 
          </PreferenceCategory>
 
-        <PreferenceScreen
+        <PreferenceCategory
                 android:key="advanced_display_prefs"
                 android:title="@string/advanced_settings">
                 <SwitchPreference
                     android:key="double_tap_wake_gesture"
                     android:title="@string/double_tap_to_wake_title" />
-        </PreferenceScreen>
+        </PreferenceCategory>
 
 </PreferenceScreen>
