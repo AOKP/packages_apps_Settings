@@ -40,8 +40,10 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private static final String TAG = "StatusBarSettings";
 
     private static final String STATUS_BAR_BRIGHTNESS_CONTROL = "status_bar_brightness_control";
+    private static final String KEY_STATUS_BAR_CLOCK = "clock_style_pref";
 
     private SwitchPreference mStatusBarBrightnessControl;
+    private PreferenceScreen mClockStyle;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -62,6 +64,9 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
                             Settings.System.STATUS_BAR_BRIGHTNESS_CONTROL, 0) == 1));
         mStatusBarBrightnessControl.setOnPreferenceChangeListener(this);
 
+        mClockStyle = (PreferenceScreen) prefSet.findPreference(KEY_STATUS_BAR_CLOCK);
+        updateClockStyleDescription();
+
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -77,6 +82,7 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     @Override
     public void onResume() {
         super.onResume();
+        updateClockStyleDescription();
         updateStatusBarBrightnessControl();
     }
 
@@ -98,6 +104,18 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             }
         } catch (SettingNotFoundException e) {
         }
+    }
+
+    private void updateClockStyleDescription() {
+        if (mClockStyle == null) {
+            return;
+        }
+        if (Settings.System.getInt(getContentResolver(),
+               Settings.System.STATUS_BAR_CLOCK, 1) == 1) {
+            mClockStyle.setSummary(getString(R.string.enabled));
+        } else {
+            mClockStyle.setSummary(getString(R.string.disabled));
+         }
     }
 
     private class StatusBarBrightnessChangedObserver extends ContentObserver {
