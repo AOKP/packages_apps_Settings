@@ -262,7 +262,7 @@
 
     <!-- Development shortcut -->
     <string name="development_shortcut_title">Development shortcut</string>
-    <string name="development_shortcut_summary">Enable application management shortcuts in notification area and recent apps list</string>
+    <string name="development_shortcut_summary">Enable application management shortcuts in recent apps list</string>
 
     <!-- Buttons - Enable navbar -->
     <string name="disable_navkeys_title">Enable on-screen nav bar</string>
