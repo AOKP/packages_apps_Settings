@@ -430,4 +430,7 @@
     <string name="double_tap_to_sleep_title">Double-tap to sleep</string>
     <string name="double_tap_to_sleep_summary">Double tap status bar to put the device to sleep</string>
 
+    <string name="block_on_secure_keyguard_title">Disable on lockscreen</string>
+    <string name="block_on_secure_keyguard_summary">Disable quick settings on secure lockscreen.</string>
+
 </resources>

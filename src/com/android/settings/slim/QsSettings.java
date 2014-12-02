@@ -26,11 +26,13 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceScreen;
+import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.view.View;
 
 import com.android.internal.util.slim.DeviceUtils;
+import com.android.internal.widget.LockPatternUtils;
 
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
@@ -42,9 +44,11 @@ public class QsSettings extends SettingsPreferenceFragment
 
     public static final String TAG = "QsSettings";
 
-    private static final String PRE_QUICK_PULLDOWN = "quick_pulldown";
+    private static final String PREF_QUICK_PULLDOWN = "quick_pulldown";
+    private static final String PREF_BLOCK_ON_SECURE_KEYGUARD = "block_on_secure_keyguard";
 
     ListPreference mQuickPulldown;
+    SwitchPreference mBlockOnSecureKeyguard;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -54,7 +58,7 @@ public class QsSettings extends SettingsPreferenceFragment
 
         PreferenceScreen prefs = getPreferenceScreen();
 
-        mQuickPulldown = (ListPreference) findPreference(PRE_QUICK_PULLDOWN);
+        mQuickPulldown = (ListPreference) findPreference(PREF_QUICK_PULLDOWN);
         if (!DeviceUtils.isPhone(getActivity())) {
             prefs.removePreference(mQuickPulldown);
         } else {
@@ -65,6 +69,17 @@ public class QsSettings extends SettingsPreferenceFragment
             mQuickPulldown.setValue(String.valueOf(statusQuickPulldown));
             updateQuickPulldownSummary(statusQuickPulldown);
         }
+
+        final LockPatternUtils lockPatternUtils = new LockPatternUtils(getActivity());
+        mBlockOnSecureKeyguard = (SwitchPreference) findPreference(PREF_BLOCK_ON_SECURE_KEYGUARD);
+        if (lockPatternUtils.isSecure()) {
+            mBlockOnSecureKeyguard.setChecked(Settings.Secure.getInt(getContentResolver(),
+                    Settings.Secure.STATUS_BAR_LOCKED_ON_SECURE_KEYGUARD, 1) == 1);
+            mBlockOnSecureKeyguard.setOnPreferenceChangeListener(this);
+        } else {
+            prefs.removePreference(mBlockOnSecureKeyguard);
+        }
+
     }
 
     @Override
@@ -80,6 +95,11 @@ public class QsSettings extends SettingsPreferenceFragment
                     Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
                     statusQuickPulldown);
             updateQuickPulldownSummary(statusQuickPulldown);
+            return true;
+        } else if (preference == mBlockOnSecureKeyguard) {
+            Settings.Secure.putInt(getContentResolver(),
+                    Settings.Secure.STATUS_BAR_LOCKED_ON_SECURE_KEYGUARD,
+                    (Boolean) newValue ? 1 : 0);
             return true;
         }
         return false;
