@@ -311,7 +311,7 @@
     <string name="notification_light_voicemail_title">Voicemail</string>
 
     <!-- Sound & notification > Sound section: Title for the option defining the default notification ringtone. [CHAR LIMIT=30] -->
-    <string name="notification_ringtone_title_cm">Notification ringtone</string>
+    <string name="notification_ringtone_title_cm">Notification tone</string>
 
     <!-- Setting checkbox title for root access -->
     <string name="root_access">Root access</string>
