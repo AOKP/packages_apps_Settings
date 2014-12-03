@@ -34,6 +34,7 @@ import android.os.Environment;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.os.ServiceManager;
+import android.os.UserHandle;
 import android.os.UserManager;
 import android.os.storage.IMountService;
 import android.os.storage.StorageEventListener;
@@ -42,6 +43,7 @@ import android.os.storage.StorageVolume;
 import android.os.SystemProperties;
 import android.preference.ListPreference;
 import android.preference.Preference;
+import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
@@ -75,6 +77,7 @@ public class Memory extends SettingsPreferenceFragment
 
     private static final String TAG_CONFIRM_CLEAR_CACHE = "confirmClearCache";
     private static final String PREF_MEDIA_SCANNER_ON_BOOT = "media_scanner_on_boot";
+    private static final String PREF_OPTIONS_CATEGORY = "settings_options_prefs";
 
     private static final int DLG_CONFIRM_UNMOUNT = 1;
     private static final int DLG_ERROR_UNMOUNT = 2;
@@ -140,10 +143,17 @@ public class Memory extends SettingsPreferenceFragment
         }
 
         mMsob = (ListPreference) findPreference(PREF_MEDIA_SCANNER_ON_BOOT);
-        mMsob.setValue(String.valueOf(Settings.System.getInt(getActivity().getContentResolver(),
-                Settings.System.MEDIA_SCANNER_ON_BOOT, 0)));
-        mMsob.setSummary(mMsob.getEntry());
-        mMsob.setOnPreferenceChangeListener(this);
+        if (UserHandle.myUserId() != UserHandle.USER_OWNER) {
+            PreferenceCategory options =
+                    (PreferenceCategory) findPreference(PREF_OPTIONS_CATEGORY);
+            getPreferenceScreen().removePreference(options);
+        } else {
+            mMsob.setValue(String.valueOf(
+                    Settings.System.getInt(getActivity().getContentResolver(),
+                    Settings.System.MEDIA_SCANNER_ON_BOOT, 0)));
+            mMsob.setSummary(mMsob.getEntry());
+            mMsob.setOnPreferenceChangeListener(this);
+        }
 
         setHasOptionsMenu(true);
     }
