@@ -20,14 +20,23 @@
 
     <!-- Battery percentage -->
     <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-            android:key="status_bar_show_battery_percent"
-            android:title="@string/battery_percentage_title"
-            android:summary="@string/battery_percentage_summary" />
+        android:key="status_bar_show_battery_percent"
+        android:title="@string/battery_percentage_title"
+        android:summary="@string/battery_percentage_summary" />
 
     <!-- Proximity on wake -->
     <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-            android:key="proximity_on_wake"
-            android:title="@string/proximity_on_wake_title"
-            android:summary="@string/proximity_on_wake_summary" />
+        android:key="proximity_on_wake"
+        android:title="@string/proximity_on_wake_title"
+        android:summary="@string/proximity_on_wake_summary" />
+
+    <PreferenceScreen
+        android:key="lock_clock"
+        android:title="@string/lock_clock_title"
+        android:summary="@string/lock_clock_summary">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.cyanogenmod.lockclock"
+            android:targetClass="com.cyanogenmod.lockclock.preference.Preferences" />
+        </PreferenceScreen> 
 
 </PreferenceScreen>
