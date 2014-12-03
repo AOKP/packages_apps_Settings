@@ -30,6 +30,7 @@ import android.preference.PreferenceScreen;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.util.Helpers;
 
 /**
  * LAB files borrowed from excellent ChameleonOS for AICP
@@ -39,8 +40,15 @@ public class VariousShit extends SettingsPreferenceFragment
 
     private static final String TAG = "VariousShit";
 
+    private static final String KEY_LOCKCLOCK = "lock_clock";
+
+    // Package name of the cLock app
+    public static final String LOCKCLOCK_PACKAGE_NAME = "com.cyanogenmod.lockclock";
+
     private SwitchPreference mProximityWake;
     private PreferenceScreen mVariousShitScreen;
+
+    private Preference mLockClock;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -60,6 +68,13 @@ public class VariousShit extends SettingsPreferenceFragment
                 com.android.internal.R.bool.config_proximityCheckOnWake);
         if (!proximityCheckOnWait) {
             mVariousShitScreen.removePreference(mProximityWake);
+        }
+
+        // cLock app check
+        mLockClock = (Preference)
+                prefSet.findPreference(KEY_LOCKCLOCK);
+        if (!Helpers.isPackageInstalled(LOCKCLOCK_PACKAGE_NAME, pm)) {
+            prefSet.removePreference(mLockClock);
         }
 
     }
