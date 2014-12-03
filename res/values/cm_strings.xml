@@ -568,10 +568,6 @@
     <!-- Settings main menu entry -->
     <string name="gesture_settings_title">Gestures</string>
 
-    <!-- Buttons - Enable navbar -->
-    <string name="disable_navkeys_title">Enable on-screen nav bar</string>
-    <string name="disable_navkeys_summary">Enable on-screen navigation bar and disable hardware buttons</string>
-
     <!-- Advanced Settings -->
     <string name="advanced_settings">Advanced settings</string>
     <string name="advanced_settings_summary">Enable more settings options</string>
