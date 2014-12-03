@@ -39,8 +39,11 @@
     <!-- Carrier_enabled editable -->
     <bool name="config_allow_edit_carrier_enabled" translatable="false">false</bool>
 
-   <!-- Volume Rocker Wake Support. Some devices do not support (PMU) this.
+    <!-- Volume Rocker Wake Support. Some devices do not support (PMU) this.
         Setting to false will disable Volume Rocker Wake support -->
     <bool name="config_show_volumeRockerWake">true</bool>
+
+    <!-- Volume rocker support. Some devices do not have a volume rocker. -->
+    <bool name="has_volume_rocker">true</bool>
 
 </resources>
