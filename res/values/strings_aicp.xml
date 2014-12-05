@@ -457,5 +457,6 @@
     <string name="hfm_dialog_failed">Updating hosts file failed. Please try again.</string>
     <string name="hfm_dialog_success">/4 hosts sources successfully applied!</string>
     <string name="hfm_dialog_conn_error">Error: No network connectivity</string>
+    <string name="hfm_dialog_title">Hosts update progress</string>
 
 </resources>
