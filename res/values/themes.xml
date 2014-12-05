@@ -189,7 +189,9 @@
     <style name="Theme.SubSettings" parent="Theme.Settings">
         <!-- Redefine the ActionBar style for contentInsetStart -->
         <item name="android:actionBarStyle">@style/Theme.ActionBar.SubSettings</item>
-
+        <item name="android:actionBarStyle">@style/Theme.ActionBar.SubSettings</item>
+        <item name="*android:actionBarSize">@dimen/actionbar_size</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_back_arrow</item>
         <item name="switchBarTheme">@style/ThemeOverlay.SwitchBar.SubSettings</item>
     </style>
 
