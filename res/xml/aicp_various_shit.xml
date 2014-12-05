@@ -39,4 +39,10 @@
             android:targetClass="com.cyanogenmod.lockclock.preference.Preferences" />
         </PreferenceScreen> 
 
+    <!-- Network traffic indicator -->
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="network_traffic_state"
+            android:title="@string/network_traffic_indicator_title"
+            android:summary="@string/network_traffic_indicator_summary" />
+
 </PreferenceScreen>
