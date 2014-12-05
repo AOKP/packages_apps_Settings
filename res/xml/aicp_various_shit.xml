@@ -45,4 +45,10 @@
             android:title="@string/network_traffic_indicator_title"
             android:summary="@string/network_traffic_indicator_summary" />
 
+    <!-- Ad blocker -->
+    <PreferenceScreen
+        android:key="hfm_settings"
+        android:title="@string/hfm_pref_screen_title"
+        android:fragment="com.android.settings.aicp.hfm.HfmSettings" />
+
 </PreferenceScreen>
