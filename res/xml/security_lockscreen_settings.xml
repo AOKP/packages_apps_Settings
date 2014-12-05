@@ -32,7 +32,19 @@
     <com.android.settingslib.RestrictedPreference
         android:key="owner_info_settings"
         android:title="@string/owner_info_settings_title"
-        android:summary="@string/owner_info_settings_summary" />
+        android:summary="@string/owner_info_settings_summary" />  
+
+    <PreferenceScreen
+             android:key="lockscreen_shortcuts"
+             android:fragment="com.android.settings.slim.dslv.ActionListViewSettings"
+             android:summary="@string/lockscreen_shortcuts_summary"
+             android:title="@string/lockscreen_shortcuts_title">
+        <extra android:name="actionMode" android:value="4" />
+        <extra android:name="maxAllowedActions" android:value="8" />
+        <extra android:name="disableLongpress" android:value="true" />
+        <extra android:name="useAppPickerOnly" android:value="true" />
+        <extra android:name="fragment" android:value="com.android.settings.slim.fragments.LockscreenShortcutFragment" />
+    </PreferenceScreen>
 
     <SwitchPreference
         android:key="security_setting_lockdown_enabled"
