@@ -148,12 +148,14 @@ public final class HfmHelpers {
 
     public static void showDialog(String message, Context c) {
         AlertDialog dialog = new AlertDialog.Builder(c)
-        .setMessage(message)
-        .setNeutralButton("OK", new DialogInterface.OnClickListener() {
+            .setTitle(R.string.hfm_dialog_title)
+            .setMessage(message)
+            .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) { 
                 //Nothing here
             }
-        }).show();
+        })
+        .show();
         TextView tv = (TextView) dialog.findViewById(android.R.id.message);
         tv.setTextSize(14);
     }
