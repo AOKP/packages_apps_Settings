@@ -66,11 +66,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             return;
         }
 
-        // Start observing for changes on auto brightness
-        StatusBarBrightnessChangedObserver statusBarBrightnessChangedObserver =
-                new StatusBarBrightnessChangedObserver(new Handler());
-        statusBarBrightnessChangedObserver.startObserving();
-
         mTicker = (SwitchPreference) prefSet.findPreference(KEY_STATUS_BAR_TICKER);
         final boolean tickerEnabled = systemUiResources.getBoolean(systemUiResources.getIdentifier(
                     "com.android.systemui:bool/enable_ticker", null, null));
@@ -109,27 +104,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     public void onResume() {
         super.onResume();
         updateClockStyleDescription();
-        updateStatusBarBrightnessControl();
-    }
-
-    private void updateStatusBarBrightnessControl() {
-        try {
-            if (mStatusBarBrightnessControl != null) {
-                int mode = Settings.System.getIntForUser(getContentResolver(),
-                    Settings.System.SCREEN_BRIGHTNESS_MODE,
-                    Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
-
-                if (mode == Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC) {
-                    mStatusBarBrightnessControl.setEnabled(false);
-                    mStatusBarBrightnessControl.setSummary(R.string.status_bar_toggle_info);
-                } else {
-                    mStatusBarBrightnessControl.setEnabled(true);
-                    mStatusBarBrightnessControl.setSummary(
-                        R.string.status_bar_toggle_brightness_summary);
-                }
-            }
-        } catch (SettingNotFoundException e) {
-        }
     }
 
     private void updateClockStyleDescription() {
@@ -143,22 +117,4 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             mClockStyle.setSummary(getString(R.string.disabled));
          }
     }
-
-    private class StatusBarBrightnessChangedObserver extends ContentObserver {
-        public StatusBarBrightnessChangedObserver(Handler handler) {
-            super(handler);
-        }
-
-        @Override
-        public void onChange(boolean selfChange) {
-            updateStatusBarBrightnessControl();
-        }
-
-        public void startObserving() {
-            getContentResolver().registerContentObserver(
-                    Settings.System.getUriFor(Settings.System.SCREEN_BRIGHTNESS_MODE),
-                    false, this);
-        }
-    }
-
 }
