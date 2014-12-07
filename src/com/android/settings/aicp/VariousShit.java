@@ -25,8 +25,11 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
 import android.preference.SwitchPreference;
+import android.preference.ListPreference;
 import android.preference.Preference;
+import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceScreen;
+import android.provider.Settings;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -36,15 +39,18 @@ import com.android.settings.util.Helpers;
  * LAB files borrowed from excellent ChameleonOS for AICP
  */
 public class VariousShit extends SettingsPreferenceFragment
-        implements OnSharedPreferenceChangeListener {
+        implements OnSharedPreferenceChangeListener,
+        Preference.OnPreferenceChangeListener {
 
     private static final String TAG = "VariousShit";
 
     private static final String KEY_LOCKCLOCK = "lock_clock";
+    private static final String KEY_NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
 
     // Package name of the cLock app
     public static final String LOCKCLOCK_PACKAGE_NAME = "com.cyanogenmod.lockclock";
 
+    private ListPreference mNavigationBarHeight;
     private SwitchPreference mProximityWake;
     private PreferenceScreen mVariousShitScreen;
 
@@ -56,6 +62,7 @@ public class VariousShit extends SettingsPreferenceFragment
 
         addPreferencesFromResource(R.xml.aicp_various_shit);
 
+        ContentResolver resolver = getActivity().getContentResolver();
         PreferenceScreen prefSet = getPreferenceScreen();
         PackageManager pm = getPackageManager();
         Resources res = getResources();
@@ -71,11 +78,18 @@ public class VariousShit extends SettingsPreferenceFragment
         }
 
         // cLock app check
-        mLockClock = (Preference)
-                prefSet.findPreference(KEY_LOCKCLOCK);
+        mLockClock = (Preference) findPreference(KEY_LOCKCLOCK);
         if (!Helpers.isPackageInstalled(LOCKCLOCK_PACKAGE_NAME, pm)) {
             prefSet.removePreference(mLockClock);
         }
+
+        // Navbar height
+        mNavigationBarHeight = (ListPreference) findPreference(KEY_NAVIGATION_BAR_HEIGHT);
+        mNavigationBarHeight.setOnPreferenceChangeListener(this);
+        int statusNavigationBarHeight = Settings.System.getInt(resolver,
+                Settings.System.NAVIGATION_BAR_HEIGHT, 48);
+        mNavigationBarHeight.setValue(String.valueOf(statusNavigationBarHeight));
+        mNavigationBarHeight.setSummary(mNavigationBarHeight.getEntry());
 
     }
 
@@ -96,6 +110,21 @@ public class VariousShit extends SettingsPreferenceFragment
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         return super.onPreferenceTreeClick(preferenceScreen, preference);
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
+        final String key = preference.getKey();
+        if (preference == mNavigationBarHeight) {
+            int statusNavigationBarHeight = Integer.valueOf((String) objValue);
+            int index = mNavigationBarHeight.findIndexOfValue((String) objValue);
+            Settings.System.putInt(resolver, Settings.System.NAVIGATION_BAR_HEIGHT,
+                    statusNavigationBarHeight);
+            mNavigationBarHeight.setSummary(mNavigationBarHeight.getEntries()[index]);
+        }
+
+        return true;
     }
 }
 

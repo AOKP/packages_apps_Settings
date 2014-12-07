@@ -37,6 +37,17 @@
         android:summary="@string/status_bar_show_weather_summary"
         android:defaultValue="true" />
 
+    <!-- Navbar height -->
+    <ListPreference
+        android:key="navigation_bar_height"
+        android:dialogTitle="@string/navigation_bar_height"
+        android:title="@string/navigation_bar_height"
+        android:entries="@array/navigation_bar_height_entries"
+        android:entryValues="@array/navigation_bar_height_values"
+        android:defaultValue="48"
+        android:persistent="false" />
+
+    <!-- LockClock settings -->
     <PreferenceScreen
         android:key="lock_clock"
         android:title="@string/lock_clock_title"
@@ -44,7 +55,7 @@
         <intent android:action="android.intent.action.MAIN"
             android:targetPackage="com.cyanogenmod.lockclock"
             android:targetClass="com.cyanogenmod.lockclock.preference.Preferences" />
-        </PreferenceScreen> 
+        </PreferenceScreen>
 
     <!-- Network traffic indicator -->
     <PreferenceScreen
