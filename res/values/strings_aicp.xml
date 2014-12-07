@@ -502,4 +502,29 @@
     <string name="lock_numpad_random_always">Always</string>
     <string name="lock_numpad_random_on_request">On request</string>
 
+    <!-- Density changer -->
+    <string name="dpi">DPI</string>
+    <string name="su_dialog_error_title">Warning</string>
+    <string name="su_dialog_error_message">An error occurred.\n\nPlease check for root access. To activate go into superuser settings and enable root access.</string>
+    <string name="lcd_density_title">LCD Density</string>
+    <string name="lcd_density_category">Options</string>
+    <string name="follow_through_title">Be advised: Tap to download</string>
+    <string name="follow_through_summary">Changing your default LCD density can sometimes cause certain apps to not function properly and/or the playstore to show apps being incompatible with your device</string>
+    <string name="stock_density_title">Change to stock values</string>
+    <string name="stock_density_summary">Tablets generally use 160 dpi while high end devices use 320 or 480 dpi. Older devices use 240 dpi</string>
+    <string name="stock_density_changed_summary">"Density set to: "</string>
+    <string name="reboot_title">Reboot your device</string>
+    <string name="reboot_summary">You need to reboot your device for your change to take effect</string>
+    <string name="custom_density_title">Change to whatever you like</string>
+    <string name="custom_density_summary">If you ever have compatibility issues with the Play Store, be sure to doublecheck if a Multi-DPI Play Store is installed.</string>
+    <string name="custom_density_summary_invalid">"INVALID DENSITY!"</string>
+    <string name="custom_density">custom</string>
+    <string name="set_custom_density_title">Set custom density</string>
+    <string name="set_custom_density_set">Set</string>
+    <string name="custom_density_dialog_title">WARNING!</string>
+    <string name="custom_density_dialog_summary">Changing your default LCD density can sometimes cause certain apps to not function properly and/or the playstore to show apps being incompatible with your device"</string>
+    <string name="custom_density_dialog_button_got">Got it!</string>
+    <string name="custom_density_dialog_button_reboot">Reboot now</string>
+
+
 </resources>

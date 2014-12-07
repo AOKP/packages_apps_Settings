@@ -23,4 +23,10 @@
             android:title="@string/various_shit_title"
             android:fragment="com.android.settings.aicp.VariousShit" />
 
+    <!-- Density changer -->
+    <PreferenceScreen
+        android:id="@+id/density_changer"
+        android:title="@string/lcd_density_title"
+        android:fragment="com.android.settings.aicp.DensityChanger" />
+
 </PreferenceScreen>
