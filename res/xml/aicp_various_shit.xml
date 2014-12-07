@@ -54,6 +54,13 @@
         android:summary="@string/recents_show_searchbar_summary"
         android:defaultValue="false" />
 
+    <!-- Screenshot tone -->
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+        android:key="screenshot_sound"
+        android:title="@string/screenshot_sound_title"
+        android:summary="@string/screenshot_sound_summary"
+        android:defaultValue="true" />
+
     <!-- LockClock settings -->
     <PreferenceScreen
         android:key="lock_clock"
