@@ -312,6 +312,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
         if (mQuickUnlockScreen != null) {
             mQuickUnlockScreen.setChecked(Settings.Secure.getInt(getContentResolver(),
                     Settings.Secure.LOCKSCREEN_QUICK_UNLOCK_CONTROL, 1) == 1);
+            mQuickUnlockScreen.setOnPreferenceChangeListener(this);
         }
 
         // Lock Numpad Random
