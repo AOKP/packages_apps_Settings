@@ -137,6 +137,7 @@ import com.android.settings.wifi.WifiSettings;
 import com.android.settings.wifi.p2p.WifiP2pSettings;
 
 import com.android.settings.slim.dslv.*;
+import com.android.settings.slim.fragments.*;
 import com.android.settings.slim.util.*;
 
 import org.xmlpull.v1.XmlPullParser;
@@ -304,6 +305,7 @@ public class SettingsActivity extends Activity
             DragSortController.class.getName(),
             DragSortItemView.class.getName(),
             DragSortListView.class.getName(),
+            LockscreenShortcutFragment.class.getName(),
             ShortcutPickerHelper.class.getName(),
             SimpleFloatViewManager.class.getName(),
             WirelessSettings.class.getName(),
