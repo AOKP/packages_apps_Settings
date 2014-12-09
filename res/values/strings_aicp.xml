@@ -55,6 +55,8 @@
     <!-- General strings -->
     <string name="ok">OK</string>
     <string name="reset">Reset</string>
+    <string name="add">Add</string>
+    <string name="help">Help</string>
     <string name="attention">Attention</string>
     <string name="enabled">Enabled</string>
     <string name="default_string">Default</string>
