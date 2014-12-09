@@ -630,4 +630,7 @@
     <string name="shortcuts_icon_picker_twitter">Twitter</string>
     <string name="shortcuts_icon_picker_unlock">Unlock</string>
 
+    <!-- Device specific settings -->
+    <string name="screen_off_gesture_settings_title">Screen off gestures</string>
+
 </resources>

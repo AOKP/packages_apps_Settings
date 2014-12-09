@@ -94,6 +94,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_WAKEUP_WHEN_PLUGGED_UNPLUGGED = "wakeup_when_plugged_unplugged";
     private static final String KEY_WAKEUP_CATEGORY = "category_wakeup_options";
     private static final String KEY_TAP_TO_WAKE = "double_tap_wake_gesture";
+    private static final String KEY_SCREEN_OFF_GESTURE_SETTINGS = "screen_off_gesture_settings";
 
     private static final String CATEGORY_ADVANCED = "advanced_display_prefs";
     private static final String KEY_DISPLAY_COLOR = "color_calibration";
@@ -237,6 +238,10 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             advancedPrefs.removePreference(mTapToWake);
             mTapToWake = null;
         }
+
+        Utils.updatePreferenceToSpecificActivityFromMetaDataOrRemove(getActivity(),
+                getPreferenceScreen(), KEY_SCREEN_OFF_GESTURE_SETTINGS);
+
     }
 
     private static boolean allowAllRotations(Context context) {
