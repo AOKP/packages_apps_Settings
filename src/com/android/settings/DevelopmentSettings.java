@@ -440,6 +440,16 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         }
     }
 
+    private SwitchPreference findAndInitSwitchPref(String key) {
+        SwitchPreference pref = (SwitchPreference) findPreference(key);
+        if (pref == null) {
+            throw new IllegalArgumentException("Cannot find preference with key = " + key);
+        }
+        mAllPrefs.add(pref);
+        mResetSpPrefs.add(pref);
+        return pref;
+    }
+
     private CheckBoxPreference findAndInitCheckboxPref(String key) {
         CheckBoxPreference pref = (CheckBoxPreference) findPreference(key);
         if (pref == null) {
