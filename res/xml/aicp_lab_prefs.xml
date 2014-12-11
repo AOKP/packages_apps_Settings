@@ -29,4 +29,10 @@
         android:title="@string/lcd_density_title"
         android:fragment="com.android.settings.aicp.DensityChanger" />
 
+    <!-- AICP OTA -->
+    <PreferenceScreen
+        android:id="@+id/aicp_ota"
+        android:key="aicp_ota_start"
+        android:title="@string/aicp_ota_settings_title" />
+
 </PreferenceScreen>

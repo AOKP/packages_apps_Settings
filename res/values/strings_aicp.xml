@@ -51,6 +51,7 @@
 
     <!-- Aicp Settings -->
     <string name="aicp_settings_title">AICP Extras</string>
+    <string name="aicp_ota_settings_title">Aicp OTA</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>

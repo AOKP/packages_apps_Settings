@@ -28,6 +28,7 @@ import android.preference.PreferenceScreen;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.util.Helpers;
 
 /**
  * LAB files borrowed from excellent ChameleonOS for AICP
@@ -37,7 +38,7 @@ public class AicpSettings extends SettingsPreferenceFragment
 
     private static final String TAG = "AicpLabs";
 
-/*    private static final String KEY_AICPOTA_START = "aicp_ota_start";
+    private static final String KEY_AICPOTA_START = "aicp_ota_start";
 
     // Package name of the AICP OTA app
     public static final String AICPOTA_PACKAGE_NAME = "com.paranoid.paranoidota";
@@ -45,7 +46,7 @@ public class AicpSettings extends SettingsPreferenceFragment
     public static Intent INTENT_AICPOTA = new Intent(Intent.ACTION_MAIN)
             .setClassName(AICPOTA_PACKAGE_NAME, AICPOTA_PACKAGE_NAME + ".MainActivity");
 
-    private Preference mAicpOta; */
+    private Preference mAicpOta;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -56,11 +57,11 @@ public class AicpSettings extends SettingsPreferenceFragment
         PreferenceScreen prefSet = getPreferenceScreen();
         PackageManager pm = getPackageManager();
 
-/*        mAicpOta = (Preference)
+        mAicpOta = (Preference)
                 prefSet.findPreference(KEY_AICPOTA_START);
         if (!Helpers.isPackageInstalled(AICPOTA_PACKAGE_NAME, pm)) {
             prefSet.removePreference(mAicpOta);
-        } */
+        }
     }
 
     @Override
@@ -79,10 +80,10 @@ public class AicpSettings extends SettingsPreferenceFragment
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        /*if (preference == mAicpOta) {
+        if (preference == mAicpOta) {
             startActivity(INTENT_AICPOTA);
             return true;
-        }*/
+        }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 }
