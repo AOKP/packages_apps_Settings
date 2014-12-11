@@ -18,9 +18,9 @@ package com.android.settings.fuelgauge;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.os.BatteryStats;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -28,6 +28,7 @@ import android.os.Process;
 import android.os.UserHandle;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceGroup;
+import android.support.v7.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.util.SparseArray;
 import android.util.TypedValue;
@@ -38,6 +39,7 @@ import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.internal.os.BatterySipper;
 import com.android.internal.os.BatterySipper.DrainType;
 import com.android.internal.os.PowerProfile;
+import com.android.settings.DevelopmentSettings;
 import com.android.settings.R;
 import com.android.settings.Settings.HighPowerApplicationsActivity;
 import com.android.settings.SettingsActivity;
@@ -284,6 +286,10 @@ public class PowerUsageSummary extends PowerUsageBase {
         mAppListGroup.setOrderingAsAdded(false);
         boolean addedSome = false;
 
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        final boolean showUnacAndOvercounted = sp.getBoolean(
+                DevelopmentSettings.SHOW_UNAC_AND_OVERCOUNTED_STATS, false);
+
         final PowerProfile powerProfile = mStatsHelper.getPowerProfile();
         final BatteryStats stats = mStatsHelper.getStats();
         final double averagePower = powerProfile.getAveragePower(PowerProfile.POWER_SCREEN_FULL);
@@ -319,12 +325,12 @@ public class PowerUsageSummary extends PowerUsageBase {
                     if (percentOfTotal < 10) {
                         continue;
                     }
-                    if ("user".equals(Build.TYPE) || "userdebug".equals(Build.TYPE) || "eng".equals(Build.TYPE)) {
+                    if (!showUnacAndOvercounted) {
                         continue;
                     }
                 }
                 if (sipper.drainType == BatterySipper.DrainType.UNACCOUNTED) {
-                    // Don't show over-counted unless it is at least 1/2 the size of
+                    // Don't show unacccounted unless it is at least 1/2 the size of
                     // the largest real entry, and its percent of total is more significant
                     if (sipper.totalPowerMah < (mStatsHelper.getMaxRealPower()/2)) {
                         continue;
@@ -332,7 +338,7 @@ public class PowerUsageSummary extends PowerUsageBase {
                     if (percentOfTotal < 5) {
                         continue;
                     }
-                    if ("user".equals(Build.TYPE) || "userdebug".equals(Build.TYPE) || "eng".equals(Build.TYPE)) {
+                    if (!showUnacAndOvercounted) {
                         continue;
                     }
                 }
