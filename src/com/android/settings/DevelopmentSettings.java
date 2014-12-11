@@ -199,7 +199,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private boolean mHaveDebugSettings;
     private boolean mDontPokeProperties;
 
-    private SwitchPreference mShowUnacAndOvercounted;
+    private CheckBoxPreference mShowUnacAndOvercounted;
     private CheckBoxPreference mEnableAdb;
     private CheckBoxPreference mAdbNotify;
     private CheckBoxPreference mAdbOverNetwork;
@@ -303,7 +303,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
         addPreferencesFromResource(R.xml.development_prefs);
 
-        mShowUnacAndOvercounted = findAndInitSwitchPref(SHOW_UNAC_AND_OVERCOUNTED_STATS);
+        mShowUnacAndOvercounted = findAndInitCheckboxPref(SHOW_UNAC_AND_OVERCOUNTED_STATS);
 
         final PreferenceGroup debugDebuggingCategory = (PreferenceGroup)
                 findPreference(DEBUG_DEBUGGING_CATEGORY_KEY);
@@ -438,16 +438,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             pref.setEnabled(false);
             mDisabledPrefs.add(pref);
         }
-    }
-
-    private SwitchPreference findAndInitSwitchPref(String key) {
-        SwitchPreference pref = (SwitchPreference) findPreference(key);
-        if (pref == null) {
-            throw new IllegalArgumentException("Cannot find preference with key = " + key);
-        }
-        mAllPrefs.add(pref);
-        mResetSpPrefs.add(pref);
-        return pref;
     }
 
     private CheckBoxPreference findAndInitCheckboxPref(String key) {
