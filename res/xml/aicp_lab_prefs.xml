@@ -23,6 +23,12 @@
             android:title="@string/various_shit_title"
             android:fragment="com.android.settings.aicp.VariousShit" />
 
+    <!-- Gesture anywhere -->
+    <PreferenceScreen
+        android:key="gesture_anywhere"
+        android:fragment="com.android.settings.aicp.gestureanywhere.GestureAnywhereSettings"
+        android:title="@string/gesture_anywhere_title" />
+
     <!-- Density changer -->
     <PreferenceScreen
         android:id="@+id/density_changer"

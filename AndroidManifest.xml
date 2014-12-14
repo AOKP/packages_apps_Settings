@@ -2134,6 +2134,9 @@
 
         <activity android:name=".aicp.DensityChanger" />
 
+        <activity android:name=".aicp.gestureanywhere.GestureAnywhereBuilderActivity" />
+        <activity android:name=".aicp.gestureanywhere.GestureAnywhereCreateGestureActivity" />
+
         <provider
             android:name=".search.SettingsSearchIndexablesProvider"
             android:authorities="com.android.settings"
