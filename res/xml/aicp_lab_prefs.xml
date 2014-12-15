@@ -19,9 +19,15 @@
 
     <!-- Various shit -->
     <PreferenceScreen
-            android:key="various_shit"
-            android:title="@string/various_shit_title"
-            android:fragment="com.android.settings.aicp.VariousShit" />
+        android:key="various_shit"
+        android:title="@string/various_shit_title"
+        android:fragment="com.android.settings.aicp.VariousShit" />
+
+    <!-- Display and Animations -->
+    <PreferenceScreen
+        android:id="@+id/disp_anim_settings"
+        android:title="@string/disp_anim_settings_title"
+        android:fragment="com.android.settings.aicp.DisplayAnimationsSettings" />
 
     <!-- Gesture anywhere -->
     <PreferenceScreen
