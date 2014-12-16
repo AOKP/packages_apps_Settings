@@ -66,6 +66,14 @@
             android:dialogTitle="@string/vibrator_intensity_title"
             android:persistent="false" />
 
+    <!-- Volume adjust sound -->
+    <SwitchPreference
+            android:key="volume_adjust_sound"
+            android:title="@string/volume_adjust_sound_title"
+            android:switchTextOff=""
+            android:switchTextOn=""
+            android:persistent="false" />
+
     <!-- Dock speaker plays -->
     <com.android.settings.notification.DropDownPreference
             android:key="dock_audio_media"

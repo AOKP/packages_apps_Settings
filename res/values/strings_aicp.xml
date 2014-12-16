@@ -354,6 +354,9 @@
     <string name="screenshot_sound_title">Screenshot sound</string>
     <string name="screenshot_sound_summary">Plays sound effect when screenshot is taken</string>
 
+    <!-- Volume adjust sound -->
+    <string name="volume_adjust_sound_title">Volume adjust sound</string>
+
     <string name="shortcut_action_none">None</string>
     <string name="shortcut_action_app">Custom app</string>
     <string name="shortcut_action_home">Home</string>
