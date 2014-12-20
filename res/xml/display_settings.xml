@@ -87,19 +87,6 @@
                 android:title="@string/lift_to_wake_title" />
 
         <SwitchPreference
-                android:key="doze"
-                android:title="@string/doze_title"
-                android:summary="@string/doze_summary" />
-
-        <cyanogenmod.preference.RemotePreference
-                android:key="doze_device_settings"
-                android:title="@string/doze_title"
-                android:summary="@string/doze_summary"
-                cm:replacesKey="doze">
-            <intent android:action="org.cyanogenmod.settings.device.DOZE_SETTINGS" />
-        </cyanogenmod.preference.RemotePreference>
-
-        <SwitchPreference
                 android:key="tap_to_wake"
                 android:title="@string/tap_to_wake"
                 android:summary="@string/tap_to_wake_summary" />
@@ -166,6 +153,25 @@
         <org.cyanogenmod.internal.cmparts.CMPartsPreference
                 android:key="notification_lights"
                 cm:requiresConfig="@*android:bool/config_intrusiveNotificationLed" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            android:key="category_doze_options"
+            android:title="@string/display_category_doze_options_title" >
+
+        <!-- Doze // Ambient display -->
+        <SwitchPreference
+                android:key="doze"
+                android:title="@string/doze_title"
+                android:summary="@string/doze_summary"
+                android:persistent="false" />
+
+            <PreferenceScreen
+                android:fragment="com.android.settings.slim.fragments.DozeSettingsFragment"
+                android:key="advanced_doze_options"
+                android:title="@string/doze_settings_title"
+                android:dependency="doze" />
 
     </PreferenceCategory>
 
