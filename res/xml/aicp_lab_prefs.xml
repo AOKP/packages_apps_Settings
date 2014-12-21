@@ -35,6 +35,12 @@
         android:fragment="com.android.settings.aicp.gestureanywhere.GestureAnywhereSettings"
         android:title="@string/gesture_anywhere_title" />
 
+    <!-- Circle app bar -->
+    <PreferenceScreen
+        android:key="app_circle_bar"
+        android:fragment="com.android.settings.aicp.AppCircleBar"
+        android:title="@string/app_circle_bar_title"/>
+
     <!-- Density changer -->
     <PreferenceScreen
         android:id="@+id/density_changer"
