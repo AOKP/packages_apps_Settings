@@ -31,7 +31,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.os.UserHandle;
-import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
@@ -45,7 +44,6 @@ import android.provider.Settings.SettingNotFoundException;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.WindowManagerGlobal;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -55,6 +53,7 @@ import com.android.settings.Utils;
 import com.android.settings.util.CMDProcessor;
 import com.android.settings.util.Helpers;
 import com.android.settings.util.AppMultiSelectListPreference;
+import com.android.settings.widget.SeekBarPreferenceCham;
 
 import java.io.File;
 import java.lang.Thread;
@@ -69,8 +68,16 @@ public class AppCircleBar extends SettingsPreferenceFragment implements
     private static final String TAG = "AppCircleSidebar";
 
     private static final String PREF_INCLUDE_APP_CIRCLE_BAR_KEY = "app_circle_bar_included_apps";
-  
+    private static final String KEY_TRIGGER_WIDTH = "trigger_width";
+    private static final String KEY_TRIGGER_TOP = "trigger_top";
+    private static final String KEY_TRIGGER_BOTTOM = "trigger_bottom";
+
     private AppMultiSelectListPreference mIncludedAppCircleBar;
+
+    private SeekBarPreferenceCham mTriggerWidthPref;
+    private SeekBarPreferenceCham mTriggerTopPref;
+    private SeekBarPreferenceCham mTriggerBottomPref;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -87,13 +94,26 @@ public class AppCircleBar extends SettingsPreferenceFragment implements
         if (includedApps != null) mIncludedAppCircleBar.setValues(includedApps);
         mIncludedAppCircleBar.setOnPreferenceChangeListener(this);
 
+        mTriggerWidthPref = (SeekBarPreferenceCham) findPreference(KEY_TRIGGER_WIDTH);
+        mTriggerWidthPref.setValue(Settings.System.getInt(getContentResolver(),
+                Settings.System.APP_CIRCLE_BAR_TRIGGER_WIDTH, 10));
+        mTriggerWidthPref.setOnPreferenceChangeListener(this);
+
+        mTriggerTopPref = (SeekBarPreferenceCham) findPreference(KEY_TRIGGER_TOP);
+        mTriggerTopPref.setValue(Settings.System.getInt(getContentResolver(),
+                Settings.System.APP_CIRCLE_BAR_TRIGGER_TOP, 0));
+        mTriggerTopPref.setOnPreferenceChangeListener(this);
+
+        mTriggerBottomPref = (SeekBarPreferenceCham) findPreference(KEY_TRIGGER_BOTTOM);
+        mTriggerBottomPref.setValue(Settings.System.getInt(getContentResolver(),
+                Settings.System.APP_CIRCLE_BAR_TRIGGER_HEIGHT, 100));
+        mTriggerBottomPref.setOnPreferenceChangeListener(this);
+
     }
 
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        ContentResolver resolver = getActivity().getContentResolver();
-        boolean value;
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
@@ -103,6 +123,21 @@ public class AppCircleBar extends SettingsPreferenceFragment implements
         final String key = preference.getKey();
         if (preference == mIncludedAppCircleBar) {
             storeIncludedApps((Set<String>) objValue);
+        } else if (preference == mTriggerWidthPref) {
+            int width = ((Integer)objValue).intValue();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.APP_CIRCLE_BAR_TRIGGER_WIDTH, width);
+            return true;
+        } else if (preference == mTriggerTopPref) {
+            int top = ((Integer)objValue).intValue();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.APP_CIRCLE_BAR_TRIGGER_TOP, top);
+            return true;
+        } else if (preference == mTriggerBottomPref) {
+            int bottom = ((Integer)objValue).intValue();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.APP_CIRCLE_BAR_TRIGGER_HEIGHT, bottom);
+            return true;
         }
 
         return true;
@@ -134,4 +169,17 @@ public class AppCircleBar extends SettingsPreferenceFragment implements
                 Settings.System.WHITELIST_APP_CIRCLE_BAR, builder.toString());
     }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+        Settings.System.putInt(getContentResolver(),
+                Settings.System.APP_CIRCLE_BAR_SHOW_TRIGGER, 0);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Settings.System.putInt(getContentResolver(),
+                Settings.System.APP_CIRCLE_BAR_SHOW_TRIGGER, 1);
+    }
 }

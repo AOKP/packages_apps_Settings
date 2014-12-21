@@ -31,4 +31,37 @@
         android:summary="@string/app_circle_bar_included_apps_summary"
         android:dependency="enable_app_circle_bar" />
 
+    <com.android.settings.widget.SeekBarPreferenceCham
+        android:key="trigger_width"
+        android:title="@string/trigger_width_title"
+        android:summary="@string/trigger_width_summary"
+        android:defaultValue="4"
+        android:max="64"
+        settings:min="4"
+        settings:unitsLeft=""
+        settings:unitsRight="px"
+        android:dependency="enable_app_circle_bar" />
+
+    <com.android.settings.widget.SeekBarPreferenceCham
+        android:key="trigger_top"
+        android:title="@string/trigger_top_title"
+        android:summary="@string/trigger_top_summary"
+        android:defaultValue="0"
+        android:max="99"
+        settings:min="0"
+        settings:unitsLeft=""
+        settings:unitsRight="%"
+        android:dependency="enable_app_circle_bar" />
+
+    <com.android.settings.widget.SeekBarPreferenceCham
+        android:key="trigger_bottom"
+        android:title="@string/trigger_bottom_title"
+        android:summary="@string/trigger_bottom_summary"
+        android:defaultValue="100"
+        android:max="100"
+        settings:min="1"
+        settings:unitsLeft=""
+        settings:unitsRight="%"
+        android:dependency="enable_app_circle_bar" />
+
 </PreferenceScreen>
