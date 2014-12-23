@@ -347,6 +347,17 @@
                 android:targetClass="eu.chainfire.supersu.MainActivity" />
         </dashboard-tile>
 
+        <!-- Viper4Android -->
+        <dashboard-tile
+            android:id="@+id/viper_settings"
+            android:icon="@drawable/ic_settings_nfc_payment_am_alpha"
+            android:title="@string/viper_title">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.vipercn.viper4android_v2"
+                android:targetClass="com.vipercn.viper4android_v2.activity.ViPER4Android" />
+        </dashboard-tile>
+
         <!-- About Device -->
         <dashboard-tile
                 android:id="@+id/about_settings"
