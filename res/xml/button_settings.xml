@@ -137,6 +137,11 @@
             android:title="@string/button_wake_title"
             android:defaultValue="true" />
 
+        <SwitchPreference
+            android:key="swap_volume_buttons"
+            android:title="@string/swap_volume_buttons_title"
+            android:summary="@string/swap_volume_buttons_summary" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
