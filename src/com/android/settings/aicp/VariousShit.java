@@ -23,6 +23,7 @@ import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.preference.CheckBoxPreference;
@@ -59,6 +60,7 @@ public class VariousShit extends SettingsPreferenceFragment
 
     private static final String KEY_HIDDEN_SHIT = "hidden_shit";
     private static final String KEY_HIDDEN_SHIT_UNLOCKED = "hidden_shit_unlocked";
+    private static final String KEY_HIDDEN_IMG = "hidden_img";
 
     // Package name of the cLock app
     public static final String LOCKCLOCK_PACKAGE_NAME = "com.cyanogenmod.lockclock";
@@ -72,6 +74,7 @@ public class VariousShit extends SettingsPreferenceFragment
     private Preference mLockClock;
 
     private Preference mHiddenShit;
+    private PreferenceScreen mHiddenImg;
     private CheckBoxPreference mHiddenShitUnlocked;
     long[] mHits = new long[3];
 
@@ -133,6 +136,7 @@ public class VariousShit extends SettingsPreferenceFragment
 
         // Hidden shit
         mHiddenShit = (Preference) findPreference(KEY_HIDDEN_SHIT);
+        mHiddenImg = (PreferenceScreen) findPreference(KEY_HIDDEN_IMG);
         mAllPrefs.add(mHiddenShit);
         mHiddenShitUnlocked =
                 findAndInitCheckboxPref(KEY_HIDDEN_SHIT_UNLOCKED);
@@ -147,6 +151,7 @@ public class VariousShit extends SettingsPreferenceFragment
             mVariousShitScreen.removePreference(mHiddenShit);
         } else {
             mVariousShitScreen.removePreference(mHiddenShitUnlocked);
+            mVariousShitScreen.removePreference(mHiddenImg);
         }
     }
 
@@ -180,6 +185,15 @@ public class VariousShit extends SettingsPreferenceFragment
                 getPreferenceScreen().removePreference(mHiddenShit);
                 addPreference(mHiddenShitUnlocked);
                 mHiddenShitUnlocked.setChecked(true);
+                addPreference(mHiddenImg);
+            }
+        } else if (preference == mHiddenImg) {
+            System.arraycopy(mHits, 1, mHits, 0, mHits.length-1);
+            mHits[mHits.length-1] = SystemClock.uptimeMillis();
+            if  (mHits[0] >= (SystemClock.uptimeMillis()-500)) {
+                Uri uri = Uri.parse("http://gerrit.aicp-rom.com");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
             }
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);

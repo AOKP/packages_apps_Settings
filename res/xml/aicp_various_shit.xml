@@ -103,4 +103,8 @@
         android:title="@string/hidden_shit_title"
         android:summary="@string/hidden_shit_summary" />
 
+    <PreferenceScreen android:key="hidden_img"
+        android:enabled="true"
+        android:layout="@layout/aicp_hidden_img" />
+
 </PreferenceScreen>
