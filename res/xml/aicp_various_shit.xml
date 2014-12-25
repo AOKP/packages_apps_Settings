@@ -93,11 +93,22 @@
         android:title="@string/hfm_pref_screen_title"
         android:fragment="com.android.settings.aicp.hfm.HfmSettings" />
 
+    <!-- Toast animation -->
     <ListPreference
         android:key="toast_animation"
         android:title="@string/toast_animation_title"
         android:entries="@array/toast_animation_entries"
         android:entryValues="@array/toast_animation_values"
         android:persistent="false" />
+
+    <!-- Joke -->
+    <Preference
+        android:key="hidden_shit"
+        android:title="\n \n" />
+
+    <CheckBoxPreference
+        android:key="hidden_shit_unlocked"
+        android:title="@string/hidden_shit_title"
+        android:summary="@string/hidden_shit_summary" />
 
 </PreferenceScreen>

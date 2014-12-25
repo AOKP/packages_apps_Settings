@@ -53,6 +53,11 @@
     <string name="aicp_settings_title">AICP Extras</string>
     <string name="aicp_ota_settings_title">Aicp OTA</string>
 
+    <!-- Joke -->
+    <string name="hidden_shit_toast">Hidden shit UNLEASHED!!!</string>
+    <string name="hidden_shit_title">Hidden shit</string>
+    <string name="hidden_shit_summary">You are now in unleashed mode!</string>
+
     <!-- General strings -->
     <string name="ok">OK</string>
     <string name="reset">Reset</string>
@@ -680,4 +685,5 @@
     <string name="toast_Translucent_animation">Translucent</string>
     <string name="toast_SlideLeftRight_animation">Slide left to right</string>
     <string name="toast_SlideRightLeft_animation">Slide right to left</string>
+
 </resources>
