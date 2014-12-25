@@ -22,6 +22,7 @@
         android:key="category_display_animations_options"
         android:title="@string/disp_anim_settings_title" >
 
+        <!-- List View animations -->
         <ListPreference
             android:key="listview_animation"
             android:dialogTitle="@string/listview_animation_title"
@@ -37,6 +38,14 @@
             android:entries="@array/listview_interpolator_entries"
             android:entryValues="@array/listview_interpolator_values"
             android:defaultValue="0" />
+
+        <!-- Toast animation -->
+        <ListPreference
+            android:key="toast_animation"
+            android:title="@string/toast_animation_title"
+            android:entries="@array/toast_animation_entries"
+            android:entryValues="@array/toast_animation_values"
+            android:persistent="false" />
 
     </PreferenceCategory>
 

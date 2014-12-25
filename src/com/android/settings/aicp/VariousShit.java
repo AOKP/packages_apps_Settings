@@ -18,7 +18,6 @@
 package com.android.settings.aicp;
 
 import android.content.ContentResolver;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
@@ -35,11 +34,11 @@ import android.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.util.Helpers;
-
-import java.util.ArrayList;
 
 /**
  * LAB files borrowed from excellent ChameleonOS for AICP
@@ -57,14 +56,9 @@ public class VariousShit extends SettingsPreferenceFragment
     private static final String KEY_NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
     private static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
     private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
-    private static final String KEY_TOAST_ANIMATION = "toast_animation";
 
     private static final String KEY_HIDDEN_SHIT = "hidden_shit";
     private static final String KEY_HIDDEN_SHIT_UNLOCKED = "hidden_shit_unlocked";
-
-    private ListPreference mToastAnimation;
-
-    private Context mContext;
 
     // Package name of the cLock app
     public static final String LOCKCLOCK_PACKAGE_NAME = "com.cyanogenmod.lockclock";
@@ -95,16 +89,6 @@ public class VariousShit extends SettingsPreferenceFragment
         PreferenceScreen prefSet = getPreferenceScreen();
         PackageManager pm = getPackageManager();
         Resources res = getResources();
-
-        mContext = getActivity().getApplicationContext();
-
-        // Toast Animations
-        mToastAnimation = (ListPreference) findPreference(KEY_TOAST_ANIMATION);
-        mToastAnimation.setSummary(mToastAnimation.getEntry());
-        int CurrentToastAnimation = Settings.System.getInt(getContentResolver(), Settings.System.TOAST_ANIMATION, 1);
-        mToastAnimation.setValueIndex(CurrentToastAnimation); //set to index of default value
-        mToastAnimation.setSummary(mToastAnimation.getEntries()[CurrentToastAnimation]);
-        mToastAnimation.setOnPreferenceChangeListener(this);
 
         mVariousShitScreen = (PreferenceScreen) findPreference("various_shit_screen");
 
@@ -230,12 +214,6 @@ public class VariousShit extends SettingsPreferenceFragment
                     resolver, Settings.System.STATUS_BAR_SHOW_BATTERY_PERCENT, batteryShowPercent);
             mStatusBarBatteryShowPercent.setSummary(
                     mStatusBarBatteryShowPercent.getEntries()[index]);
-            return true;
-        } else if (preference == mToastAnimation) {
-            int index = mToastAnimation.findIndexOfValue((String) objValue);
-            Settings.System.putString(getContentResolver(), Settings.System.TOAST_ANIMATION, (String) objValue);
-            mToastAnimation.setSummary(mToastAnimation.getEntries()[index]);
-            Toast.makeText(mContext, "Toast Test", Toast.LENGTH_SHORT).show();
             return true;
         } else if (preference == mHiddenShitUnlocked) {
             Settings.System.putInt(getActivity().getContentResolver(),
