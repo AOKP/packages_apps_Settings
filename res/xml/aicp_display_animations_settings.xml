@@ -22,6 +22,12 @@
         android:key="category_display_animations_options"
         android:title="@string/disp_anim_settings_title" >
 
+        <PreferenceScreen
+            android:key="aokp_animation"
+            android:title="@string/aokp_animation_title"
+            android:summary="@string/aokp_animation_summary"
+            android:fragment="com.android.settings.aicp.AnimationControls" />
+
         <!-- List View animations -->
         <ListPreference
             android:key="listview_animation"
