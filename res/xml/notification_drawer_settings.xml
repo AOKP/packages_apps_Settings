@@ -30,6 +30,12 @@
             android:title="@string/qs_four_columns_title"
             android:defaultValue="false" />
 
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="quick_settings_collapse_panel"
+            android:title="@string/quick_settings_collapse_title"
+            android:summary="@string/quick_settings_collapse_summary"
+            android:defaultValue="false"/>
+
         <com.android.settings.cyanogenmod.SecureSettingSwitchPreference
             android:key="sysui_qs_main_tiles"
             android:title="@string/qs_main_tiles_title"
