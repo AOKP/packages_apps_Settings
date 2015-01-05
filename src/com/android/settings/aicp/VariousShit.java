@@ -50,13 +50,8 @@ public class VariousShit extends SettingsPreferenceFragment
 
     private static final String TAG = "VariousShit";
 
-    private static final int STATUS_BAR_BATTERY_STYLE_HIDDEN = 4;
-    private static final int STATUS_BAR_BATTERY_STYLE_TEXT = 6;
-
     private static final String KEY_LOCKCLOCK = "lock_clock";
     private static final String KEY_NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
-    private static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
-    private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
 
     private static final String KEY_HIDDEN_SHIT = "hidden_shit";
     private static final String KEY_HIDDEN_SHIT_UNLOCKED = "hidden_shit_unlocked";
@@ -66,8 +61,6 @@ public class VariousShit extends SettingsPreferenceFragment
     public static final String LOCKCLOCK_PACKAGE_NAME = "com.cyanogenmod.lockclock";
 
     private ListPreference mNavigationBarHeight;
-    private ListPreference mStatusBarBattery;
-    private ListPreference mStatusBarBatteryShowPercent;
     private SwitchPreference mProximityWake;
     private PreferenceScreen mVariousShitScreen;
 
@@ -116,24 +109,6 @@ public class VariousShit extends SettingsPreferenceFragment
                 Settings.System.NAVIGATION_BAR_HEIGHT, 48);
         mNavigationBarHeight.setValue(String.valueOf(statusNavigationBarHeight));
         mNavigationBarHeight.setSummary(mNavigationBarHeight.getEntry());
-
-        // Status bar battery
-        mStatusBarBattery = (ListPreference) findPreference(STATUS_BAR_BATTERY_STYLE);
-        mStatusBarBatteryShowPercent =
-                (ListPreference) findPreference(STATUS_BAR_SHOW_BATTERY_PERCENT);
-
-        int batteryStyle = Settings.System.getInt(resolver,
-                Settings.System.STATUS_BAR_BATTERY_STYLE, 0);
-        mStatusBarBattery.setValue(String.valueOf(batteryStyle));
-        mStatusBarBattery.setSummary(mStatusBarBattery.getEntry());
-        mStatusBarBattery.setOnPreferenceChangeListener(this);
-
-        int batteryShowPercent = Settings.System.getInt(resolver,
-                Settings.System.STATUS_BAR_SHOW_BATTERY_PERCENT, 0);
-        mStatusBarBatteryShowPercent.setValue(String.valueOf(batteryShowPercent));
-        mStatusBarBatteryShowPercent.setSummary(mStatusBarBatteryShowPercent.getEntry());
-        enableStatusBarBatteryDependents(batteryStyle);
-        mStatusBarBatteryShowPercent.setOnPreferenceChangeListener(this);
 
         // Hidden shit
         mHiddenShit = (Preference) findPreference(KEY_HIDDEN_SHIT);
@@ -213,22 +188,6 @@ public class VariousShit extends SettingsPreferenceFragment
             Settings.System.putInt(resolver, Settings.System.NAVIGATION_BAR_HEIGHT,
                     statusNavigationBarHeight);
             mNavigationBarHeight.setSummary(mNavigationBarHeight.getEntries()[index]);
-        } else if (preference == mStatusBarBattery) {
-            int batteryStyle = Integer.valueOf((String) objValue);
-            int index = mStatusBarBattery.findIndexOfValue((String) objValue);
-            Settings.System.putInt(
-                    resolver, Settings.System.STATUS_BAR_BATTERY_STYLE, batteryStyle);
-            mStatusBarBattery.setSummary(mStatusBarBattery.getEntries()[index]);
-            enableStatusBarBatteryDependents(batteryStyle);
-            return true;
-        } else if (preference == mStatusBarBatteryShowPercent) {
-            int batteryShowPercent = Integer.valueOf((String) objValue);
-            int index = mStatusBarBatteryShowPercent.findIndexOfValue((String) objValue);
-            Settings.System.putInt(
-                    resolver, Settings.System.STATUS_BAR_SHOW_BATTERY_PERCENT, batteryShowPercent);
-            mStatusBarBatteryShowPercent.setSummary(
-                    mStatusBarBatteryShowPercent.getEntries()[index]);
-            return true;
         } else if (preference == mHiddenShitUnlocked) {
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.HIDDEN_SHIT,
@@ -236,15 +195,6 @@ public class VariousShit extends SettingsPreferenceFragment
             return true;
         }
         return false;
-    }
-
-    private void enableStatusBarBatteryDependents(int batteryIconStyle) {
-        if (batteryIconStyle == STATUS_BAR_BATTERY_STYLE_HIDDEN ||
-                batteryIconStyle == STATUS_BAR_BATTERY_STYLE_TEXT) {
-            mStatusBarBatteryShowPercent.setEnabled(false);
-        } else {
-            mStatusBarBatteryShowPercent.setEnabled(true);
-        }
     }
 
     private void addPreference(Preference preference) {

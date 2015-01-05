@@ -53,6 +53,8 @@
     <!-- Aicp Settings -->
     <string name="aicp_settings_title">AICP Extras</string>
     <string name="aicp_ota_settings_title">Aicp OTA</string>
+    <string name="battery_settings_title">Battery settings</string>
+    <string name="status_bar_battery_title">Battery icon</string>
 
     <!-- Joke -->
     <string name="hidden_shit_toast">Hidden shit UNLEASHED!!!</string>
@@ -704,7 +706,6 @@
     <string name="volume_steps_5">5</string>
 
     <!-- Battery Bar -->
-    <string name="status_bar_battery_cat_title">Battery</string>
     <string name="battery_bar_title">Battery Bar</string>
     <string name="battery_bar">Battery bar location</string>
     <string name="battery_bar_color">Battery bar color</string>
