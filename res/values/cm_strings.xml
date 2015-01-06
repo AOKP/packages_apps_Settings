@@ -1226,4 +1226,5 @@
     <string name="lto_download_data_wifi_only_on">Over any networks</string>
     <string name="lto_download_data_wifi_only_off">Only over Wi\u2011Fi networks</string>
 
+    <string name="sim_ringtone_title">SIM %d ringtone</string>
 </resources>
