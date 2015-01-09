@@ -29,6 +29,12 @@
         android:title="@string/disp_anim_settings_title"
         android:fragment="com.android.settings.aicp.DisplayAnimationsSettings" />
 
+    <!-- Recents panel settings -->
+    <PreferenceScreen
+        android:id="@+id/recents_panel_settings"
+        android:title="@string/recents_panel_settings"
+        android:fragment="com.android.settings.aicp.RecentsPanelSettings" />
+
     <!-- Gesture anywhere -->
     <PreferenceScreen
         android:key="gesture_anywhere"
