@@ -41,13 +41,6 @@
         android:defaultValue="48"
         android:persistent="false" />
 
-    <!-- Searchbar -->
-    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-        android:key="recents_show_hide_search_bar"
-        android:title="@string/recents_show_searchbar"
-        android:summary="@string/recents_show_searchbar_summary"
-        android:defaultValue="false" />
-
     <!-- Screenshot tone -->
     <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
         android:key="screenshot_sound"

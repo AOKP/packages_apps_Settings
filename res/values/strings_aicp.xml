@@ -735,5 +735,6 @@
     <string name="recents_clear_all_location_bottom_right">Bottom right</string>
     <string name="recents_clear_all_location_bottom_left">Bottom left</string>
     <string name="recents_clear_all_location_bottom_center">Bottom center</string>
+    <string name="omniswitch_settings_title">OmniSwitch</string>
 
 </resources>
