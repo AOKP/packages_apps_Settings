@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2011 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:title="@string/security_settings_title">
+
+         <ListPreference
+            android:key="advanced_reboot"
+            android:title="@string/advanced_reboot_title"
+            android:dialogTitle="@string/advanced_reboot_dialog_title"
+            android:entries="@array/advanced_reboot_entries"
+            android:entryValues="@array/advanced_reboot_values"
+            android:summary="@string/advanced_reboot_summary"
+            android:persistent="false" />
+
+         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="powermenu_power"
+            android:title="@string/powermenu_power"
+            android:defaultValue="true" />
+
+         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="powermenu_reboot"
+            android:title="@string/powermenu_reboot"
+            android:defaultValue="true" />
+
+         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="powermenu_screenshot"
+            android:title="@string/powermenu_screenshot"
+            android:defaultValue="true" />
+
+         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="powermenu_screenrecord"
+            android:title="@string/powermenu_screenrecord"
+            android:defaultValue="false" />
+
+         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="powermenu_airplane"
+            android:title="@string/powermenu_airplane"
+            android:defaultValue="true" />
+
+         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="powermenu_settings"
+            android:title="@string/powermenu_settings"
+            android:defaultValue="false" />
+
+         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="powermenu_soundpanel"
+            android:title="@string/powermenu_soundpanel"
+            android:defaultValue="true" />
+
+</PreferenceScreen>
