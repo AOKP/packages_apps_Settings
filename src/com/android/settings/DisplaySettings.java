@@ -56,6 +56,7 @@ import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
+import android.preference.SlimSeekBarPreference;
 import android.preference.SwitchPreference;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
@@ -105,6 +106,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
 
     private static final int DLG_GLOBAL_CHANGE_WARNING = 1;
 
+    private static final String KEY_DOZE_TIMEOUT = "doze_timeout";
+
     private static final String ROTATION_ANGLE_0 = "0";
     private static final String ROTATION_ANGLE_90 = "90";
     private static final String ROTATION_ANGLE_180 = "180";
@@ -126,6 +129,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private SwitchPreference mDozePreference;
     private SwitchPreference mAutoBrightnessPreference;
     private SwitchPreference mTapToWake;
+
+    private SlimSeekBarPreference mDozeTimeout;
 
     private ContentObserver mAccelerometerRotationObserver =
             new ContentObserver(new Handler()) {
@@ -212,8 +217,19 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         if (isDozeAvailable(activity)) {
             mDozePreference = (SwitchPreference) findPreference(KEY_DOZE);
             mDozePreference.setOnPreferenceChangeListener(this);
+	    // Doze timeout
+            mDozeTimeout = (SlimSeekBarPreference) findPreference(KEY_DOZE_TIMEOUT);
+            if (mDozeTimeout != null) {
+                mDozeTimeout.setDefault(3000);
+                mDozeTimeout.isMilliseconds(true);
+                mDozeTimeout.setInterval(1);
+                mDozeTimeout.minimumValue(100);
+                mDozeTimeout.multiplyValue(100);
+                mDozeTimeout.setOnPreferenceChangeListener(this);
+            }
         } else {
             removePreference(KEY_DOZE);
+            removePreference(KEY_DOZE_TIMEOUT);
         }
 
         if (RotationPolicy.isRotationSupported(activity)) {
@@ -389,6 +405,14 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     public void onResume() {
         super.onResume();
 
+        // Doze timeout 
+        if (mDozeTimeout != null) {
+            final int statusDozeTimeout = Settings.System.getInt(getContentResolver(),
+                    Settings.System.DOZE_TIMEOUT, 3000);
+            // minimum 100 is 1 interval of the 100 multiplier
+            mDozeTimeout.setInitValue((statusDozeTimeout / 100) - 1);
+        }
+
         if (mAdaptiveBacklight != null) {
             mAdaptiveBacklight.setChecked(AdaptiveBacklight.isEnabled());
         }
@@ -556,7 +580,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     Settings.System.WAKEUP_WHEN_PLUGGED_UNPLUGGED,
                     (Boolean) objValue ? 1 : 0);
         }
-
+        if (preference == mDozeTimeout) {
+            int dozeTimeout = Integer.valueOf((String) objValue);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.DOZE_TIMEOUT, dozeTimeout);
+        }
         return true;
     }
 
