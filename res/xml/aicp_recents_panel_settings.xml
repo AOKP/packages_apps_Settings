@@ -46,13 +46,10 @@
 
     </PreferenceCategory>
 
-         <PreferenceScreen
+        <!-- OmniSwitch -->
+        <PreferenceScreen
             android:id="@+id/omniswitch"
-            android:title="@string/omniswitch_settings_title" >
-            <intent
-                android:action="android.intent.action.MAIN"
-                android:targetPackage="org.omnirom.omniswitch"
-                android:targetClass="org.omnirom.omniswitch.SettingsActivity" />
-         </PreferenceScreen>
+            android:title="@string/omniswitch_settings_title"
+            android:fragment="com.android.settings.aicp.OmniSwitch" />
 
 </PreferenceScreen>
