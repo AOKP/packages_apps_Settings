@@ -756,4 +756,6 @@
     <string name="omniswitch_first_time_title">Information</string>
     <string name="omniswitch_first_time_message">Make sure you have enabled OmniSwitch. You can do this by using \"Settings\" below</string>
 
+    <string name="alarm_ringtone_title">Default alarm ringtone</string>
+
 </resources>
