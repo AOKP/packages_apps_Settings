@@ -18,12 +18,15 @@ package com.android.settings.aicp;
 
 import android.app.ActivityManagerNative;
 import android.app.Dialog;
+import android.app.IActivityManager;
 import android.app.admin.DevicePolicyManager;
 import android.content.ContentResolver;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.RemoteException;
+import android.os.ServiceManager;
+import android.os.SystemProperties;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -31,6 +34,7 @@ import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -46,10 +50,12 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private static final String KEY_LISTVIEW_ANIMATION = "listview_animation";
     private static final String KEY_LISTVIEW_INTERPOLATOR = "listview_interpolator";
     private static final String KEY_TOAST_ANIMATION = "toast_animation";
+    private static final String KEY_LCD_DENSITY = "lcd_density";
 
     private ListPreference mListViewAnimation;
     private ListPreference mListViewInterpolator;
     private ListPreference mToastAnimation;
+    private ListPreference mLcdDensityPreference;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -83,6 +89,21 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         mToastAnimation.setValueIndex(CurrentToastAnimation); //set to index of default value
         mToastAnimation.setSummary(mToastAnimation.getEntries()[CurrentToastAnimation]);
         mToastAnimation.setOnPreferenceChangeListener(this);
+
+        // LCD density
+        mLcdDensityPreference = (ListPreference) prefSet.findPreference(KEY_LCD_DENSITY);
+        int defaultDensity = DisplayMetrics.DENSITY_DEVICE;
+        String[] densityEntries = new String[8];
+        for (int idx = 0; idx < 8; ++idx) {
+            int pct = (75 + idx*5);
+            densityEntries[idx] = Integer.toString(defaultDensity * pct / 100);
+        }
+        int currentDensity = DisplayMetrics.DENSITY_CURRENT;
+        mLcdDensityPreference.setEntries(densityEntries);
+        mLcdDensityPreference.setEntryValues(densityEntries);
+        mLcdDensityPreference.setValue(String.valueOf(currentDensity));
+        mLcdDensityPreference.setOnPreferenceChangeListener(this);
+        updateLcdDensityPreferenceDescription(currentDensity);
     }
 
     @Override
@@ -117,6 +138,11 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
             mToastAnimation.setSummary(mToastAnimation.getEntries()[index]);
             Toast.makeText(getActivity(), "Toast test!!!", Toast.LENGTH_SHORT).show();
         }
+        if (KEY_LCD_DENSITY.equals(key)) {
+            int value = Integer.parseInt((String) objValue);
+            writeLcdDensityPreference(value);
+            updateLcdDensityPreferenceDescription(value);
+        }
         return true;
     }
 
@@ -124,4 +150,36 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     public boolean onPreferenceClick(Preference preference) {
         return false;
     }
+
+    private void updateLcdDensityPreferenceDescription(int currentDensity) {
+        ListPreference preference = mLcdDensityPreference;
+        String summary;
+        if (currentDensity < 10 || currentDensity >= 1000) {
+            // Unsupported value
+            summary = "";
+        }
+        else {
+            summary = Integer.toString(currentDensity) + " DPI";
+        }
+        preference.setSummary(summary);
+    }
+
+    public void writeLcdDensityPreference(int value) {
+        try {
+            SystemProperties.set("persist.sys.lcd_density", Integer.toString(value));
+        }
+        catch (Exception e) {
+            Log.w(TAG, "Unable to save LCD density");
+        }
+        try {
+            final IActivityManager am = ActivityManagerNative.asInterface(ServiceManager.checkService("activity"));
+            if (am != null) {
+                am.restart();
+            }
+        }
+        catch (RemoteException e) {
+            Log.e(TAG, "Failed to restart");
+        }
+    }
+
 }

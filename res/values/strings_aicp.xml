@@ -71,6 +71,7 @@
     <string name="enabled">Enabled</string>
     <string name="default_string">Default</string>
     <string name="reset_message">Reset all entries to default?</string>
+    <string name="misc_category">Miscellaneous</string>
 
      <!-- Advanced, Device specific (DeviceParts) settings  -->
     <string name="device_settings_title">Device</string>
@@ -733,5 +734,10 @@
     <string name="omniswitch_first_time_message">Make sure you have enabled OmniSwitch. You can do this by using \"Settings\" below</string>
 
     <string name="alarm_ringtone_title">Default alarm ringtone</string>
+
+    <!-- Setting option name to change LCD density -->
+    <string name="lcd_density">LCD density</string>
+    <string name="dialog_title_lcd_density">LCD density</string>
+    <string name="lcd_density_summary">xxx DPI</string>
 
 </resources>

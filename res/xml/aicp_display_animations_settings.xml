@@ -49,5 +49,17 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="category_display_animations_misc"
+        android:title="@string/misc_category" >
+
+        <ListPreference
+                android:key="lcd_density"
+                android:title="@string/lcd_density"
+                android:summary="@string/lcd_density_summary"
+                android:persistent="false" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
 
