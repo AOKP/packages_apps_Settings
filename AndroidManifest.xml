@@ -2168,9 +2168,8 @@
                 android:value="com.android.settings.aicp.AicpSettings" />
         </activity>
 
-        <activity android:name=".aicp.AicpSettings" />
-
-        <activity android:name=".aicp.DensityChanger" />
+        <activity
+             android:name=".aicp.AicpSettings" />
 
         <activity android:name=".aicp.gestureanywhere.GestureAnywhereBuilderActivity" />
         <activity android:name=".aicp.gestureanywhere.GestureAnywhereCreateGestureActivity" />
