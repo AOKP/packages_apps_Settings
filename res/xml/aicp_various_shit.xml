@@ -24,6 +24,12 @@
         android:title="@string/camera_widget_hide"
         android:summary="@string/camera_widget_hide_summary" />
 
+    <!-- Disable dialer swipe -->
+    <SwitchPreference
+        android:key="dialer_widget_hide"
+        android:title="@string/dialer_widget_hide"
+        android:summary="@string/dialer_widget_hide_summary" />
+
     <!-- Proximity on wake -->
     <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
         android:key="proximity_on_wake"

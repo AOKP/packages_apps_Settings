@@ -28,6 +28,7 @@ import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.os.UserHandle;
 import android.preference.CheckBoxPreference;
 import android.preference.SwitchPreference;
 import android.preference.ListPreference;
@@ -42,6 +43,7 @@ import java.util.ArrayList;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.util.Helpers;
+import com.android.settings.Utils;
 
 /**
  * LAB files borrowed from excellent ChameleonOS for AICP
@@ -56,6 +58,7 @@ public class VariousShit extends SettingsPreferenceFragment
     private static final String KEY_NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
 
     private static final String KEY_LOCKSCREEN_CAMERA_WIDGET_HIDE = "camera_widget_hide";
+    private static final String KEY_LOCKSCREEN_DIALER_WIDGET_HIDE = "dialer_widget_hide";
 
     private static final String KEY_HIDDEN_SHIT = "hidden_shit";
     private static final String KEY_HIDDEN_SHIT_UNLOCKED = "hidden_shit_unlocked";
@@ -66,6 +69,7 @@ public class VariousShit extends SettingsPreferenceFragment
 
     private ListPreference mNavigationBarHeight;
     private SwitchPreference mCameraWidgetHide;
+    private SwitchPreference mDialerWidgetHide;
     private SwitchPreference mProximityWake;
     private PreferenceScreen mVariousShitScreen;
 
@@ -146,6 +150,15 @@ public class VariousShit extends SettingsPreferenceFragment
         if (mCameraDisabled){
             mVariousShitScreen.removePreference(mCameraWidgetHide);
         }
+
+        // Dialer widget hide
+        mDialerWidgetHide = (SwitchPreference) prefSet.findPreference(KEY_LOCKSCREEN_DIALER_WIDGET_HIDE);
+        mDialerWidgetHide.setChecked(Settings.System.getIntForUser(resolver,
+            Settings.System.DIALER_WIDGET_HIDE, 0, UserHandle.USER_CURRENT) == 1);
+        mDialerWidgetHide.setOnPreferenceChangeListener(this);
+        if (!Utils.isVoiceCapable(getActivity())){
+            mVariousShitScreen.removePreference(mDialerWidgetHide);
+        }
     }
 
     @Override
@@ -210,6 +223,11 @@ public class VariousShit extends SettingsPreferenceFragment
                     Settings.System.HIDDEN_SHIT,
                     (Boolean) objValue ? 1 : 0);
             return true;
+        } else if (preference == mDialerWidgetHide) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putIntForUser(getActivity().getContentResolver(),
+                    Settings.System.DIALER_WIDGET_HIDE, value ? 1 : 0, UserHandle.USER_CURRENT);
+            Helpers.restartSystem();
         }
         return false;
     }
@@ -230,4 +248,3 @@ public class VariousShit extends SettingsPreferenceFragment
         return pref;
     }
 }
-
