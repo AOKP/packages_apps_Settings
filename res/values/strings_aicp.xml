@@ -72,6 +72,7 @@
     <string name="default_string">Default</string>
     <string name="reset_message">Reset all entries to default?</string>
     <string name="misc_category">Miscellaneous</string>
+    <string name="lockscreen_category">Lockscreen</string>
 
      <!-- Advanced, Device specific (DeviceParts) settings  -->
     <string name="device_settings_title">Device</string>
