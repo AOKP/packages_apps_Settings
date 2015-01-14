@@ -42,6 +42,7 @@ import java.util.ArrayList;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.util.Helpers;
+import com.android.settings.Utils;
 
 /**
  * LAB files borrowed from excellent ChameleonOS for AICP
@@ -56,6 +57,7 @@ public class VariousShit extends SettingsPreferenceFragment
     private static final String KEY_NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
 
     private static final String KEY_LOCKSCREEN_CAMERA_WIDGET_HIDE = "camera_widget_hide";
+    private static final String KEY_LOCKSCREEN_DIALER_WIDGET_HIDE = "dialer_widget_hide";
 
     private static final String KEY_HIDDEN_SHIT = "hidden_shit";
     private static final String KEY_HIDDEN_SHIT_UNLOCKED = "hidden_shit_unlocked";
@@ -66,6 +68,7 @@ public class VariousShit extends SettingsPreferenceFragment
 
     private ListPreference mNavigationBarHeight;
     private SwitchPreference mCameraWidgetHide;
+    private SwitchPreference mDialerWidgetHide;
     private SwitchPreference mProximityWake;
     private PreferenceScreen mVariousShitScreen;
 
@@ -145,6 +148,12 @@ public class VariousShit extends SettingsPreferenceFragment
         }
         if (mCameraDisabled){
             mVariousShitScreen.removePreference(mCameraWidgetHide);
+        }
+
+        // Dialer widget hide
+        mDialerWidgetHide = (SwitchPreference) findPreference("dialer_widget_hide");
+        if (!Utils.isVoiceCapable(getActivity())){
+            mVariousShitScreen.removePreference(mDialerWidgetHide);
         }
     }
 
@@ -229,5 +238,5 @@ public class VariousShit extends SettingsPreferenceFragment
         mResetCbPrefs.add(pref);
         return pref;
     }
-}
 
+}
