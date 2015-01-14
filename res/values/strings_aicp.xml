@@ -688,7 +688,7 @@
 
     <!-- Dialer lockscreen swipe -->
     <string name="dialer_widget_hide">Disable lockscreen dialer</string>
-    <string name="dialer_widget_hide_summary">Allows you to disable swipe to open dialer in lockscreen.\nSystemUI will restart.</string>
+    <string name="dialer_widget_hide_summary">Allows you to disable swipe to open dialer in lockscreen.\n<b>SystemUI will restart.</b></string>
 
     <!-- Battery Bar -->
     <string name="battery_bar_title">Battery Bar</string>
