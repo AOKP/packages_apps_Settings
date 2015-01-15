@@ -85,6 +85,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private static final String KEY_OWNER_INFO_SETTINGS = "owner_info_settings";
     private static final String KEY_ADVANCED_SECURITY = "advanced_security";
     private static final String KEY_MANAGE_TRUST_AGENTS = "manage_trust_agents";
+    private static final String KEY_ADVANCED_REBOOT = "advanced_reboot";
     private static final String LOCKSCREEN_QUICK_UNLOCK_CONTROL = "quick_unlock_control";
     private static final String LOCK_NUMPAD_RANDOM = "lock_numpad_random";
 
@@ -136,6 +137,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private SwitchPreference mToggleAppInstallation;
     private DialogInterface mWarnInstallApps;
     private SwitchPreference mPowerButtonInstantlyLocks;
+    private ListPreference mAdvancedReboot;
     private SwitchPreference mQuickUnlockScreen;
     private ListPreference mLockNumpadRandom;
 
@@ -433,6 +435,17 @@ public class SecuritySettings extends SettingsPreferenceFragment
             if (deviceAdminCategory != null) {
                 deviceAdminCategory.removePreference(appOpsSummary);
             }
+        }
+
+        // Advanced reboot
+        mAdvancedReboot = (ListPreference) root.findPreference(KEY_ADVANCED_REBOOT);
+        if (mIsPrimary) {
+            mAdvancedReboot.setValue(String.valueOf(Settings.Secure.getInt(
+                    getContentResolver(), Settings.Secure.ADVANCED_REBOOT, 0)));
+            mAdvancedReboot.setSummary(mAdvancedReboot.getEntry());
+            mAdvancedReboot.setOnPreferenceChangeListener(this);
+        } else {
+            deviceAdminCategory.removePreference(mAdvancedReboot);
         }
 
         // Advanced Security features
@@ -763,6 +776,11 @@ public class SecuritySettings extends SettingsPreferenceFragment
             Settings.Secure.putInt(getContentResolver(), Settings.Global.SMS_OUTGOING_CHECK_MAX_COUNT,
                     smsSecurityCheck);
             updateSmsSecuritySummary(smsSecurityCheck);
+        } else if (preference == mAdvancedReboot) {
+            Settings.Secure.putInt(getContentResolver(), Settings.Secure.ADVANCED_REBOOT,
+                    Integer.valueOf((String) value));
+            mAdvancedReboot.setValue(String.valueOf(value));
+            mAdvancedReboot.setSummary(mAdvancedReboot.getEntry());
         } else if (preference == mQuickUnlockScreen) {
             Settings.Secure.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.Secure.LOCKSCREEN_QUICK_UNLOCK_CONTROL,
