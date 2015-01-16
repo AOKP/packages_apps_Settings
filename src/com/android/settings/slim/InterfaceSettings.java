@@ -37,7 +37,7 @@ public class InterfaceSettings extends SettingsPreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.slim_interface_settings);
+        addPreferencesFromResource(R.xml.interface_settings);
 
     }
 
