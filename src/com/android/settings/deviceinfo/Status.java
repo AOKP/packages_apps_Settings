@@ -434,4 +434,20 @@ public class Status extends InstrumentedPreferenceActivity {
     private static void goUpToTopLevelSetting(Activity activity) {
         activity.finish();
     }
+
+    public static String getSarValues(Resources res) {
+        String headLevel = String.format(res.getString(R.string.maximum_head_level,
+                res.getString(R.string.sar_head_level)));
+        String bodyLevel = String.format(res.getString(R.string.maximum_body_level,
+                res.getString(R.string.sar_body_level)));
+        return headLevel + "\n" + bodyLevel;
+    }
+
+    public static String getIcCodes(Resources resources) {
+        String model = String.format(resources.getString(R.string.ic_code_model,
+                Build.MODEL));
+        String icCode = String.format(resources.getString(R.string.ic_code_full,
+                resources.getString(R.string.ic_code)));
+        return model + "\n" + icCode;
+    }
 }
