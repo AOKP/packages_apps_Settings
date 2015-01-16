@@ -47,7 +47,7 @@
         android:persistent="false" />
 
     <PreferenceCategory
-        android:title="@string/qs_category_title">
+        android:title="@string/qs_pulldown_title">
 
         <ListPreference
             android:key="quick_pulldown"
