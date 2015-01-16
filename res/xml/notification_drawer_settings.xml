@@ -65,4 +65,9 @@
 
     </PreferenceCategory>
 
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+        android:key="qs_show_brightness_slider"
+        android:title="@string/qs_brightness_slider_title"
+        android:defaultValue="true" />
+
 </PreferenceScreen>
