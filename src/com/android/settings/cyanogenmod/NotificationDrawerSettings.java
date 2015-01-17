@@ -17,6 +17,7 @@ package com.android.settings.cyanogenmod;
 
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
@@ -41,11 +42,13 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment
     private static final String PREF_QUICK_PULLDOWN = "quick_pulldown";
     private static final String PREF_SMART_PULLDOWN = "smart_pulldown";
     private static final String PREF_BLOCK_ON_SECURE_KEYGUARD = "block_on_secure_keyguard";
+    private static final String PREF_QS_SHOW_BRIGHTNESS_SLIDER = "qs_show_brightness_slider";
 
     private Preference mQSTiles;
-    private     ListPreference mQuickPulldown;
-    private     ListPreference mSmartPulldown;
-    private     SwitchPreference mBlockOnSecureKeyguard;
+    private ListPreference mQuickPulldown;
+    private ListPreference mSmartPulldown;
+    private SwitchPreference mBlockOnSecureKeyguard;
+    private SwitchPreference mBrightnessSlider;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -83,6 +86,15 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment
             prefs.removePreference(mBlockOnSecureKeyguard);
         }
 
+        // Brightness slider
+        mBrightnessSlider = (SwitchPreference) prefs.findPreference(PREF_QS_SHOW_BRIGHTNESS_SLIDER);
+        mBrightnessSlider.setChecked(Settings.System.getIntForUser(getActivity().getContentResolver(),
+            Settings.System.QS_SHOW_BRIGHTNESS_SLIDER, 1, UserHandle.USER_CURRENT) == 1);
+        mBrightnessSlider.setOnPreferenceChangeListener(this);
+        int brightnessSlider = Settings.System.getIntForUser(getContentResolver(),
+                Settings.System.QS_SHOW_BRIGHTNESS_SLIDER, 1, UserHandle.USER_CURRENT);
+        updateBrightnessSliderSummary(brightnessSlider);
+
     }
 
     @Override
@@ -104,6 +116,15 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment
             Settings.Secure.putInt(getContentResolver(),
                     Settings.Secure.STATUS_BAR_LOCKED_ON_SECURE_KEYGUARD,
                     (Boolean) newValue ? 1 : 0);
+            return true;
+        } else if (preference == mBrightnessSlider) {
+            Settings.System.putIntForUser(getContentResolver(),
+                    Settings.System.QS_SHOW_BRIGHTNESS_SLIDER,
+                    (Boolean) newValue ? 1 : 0, UserHandle.USER_CURRENT);
+            int brightnessSlider = Settings.System.getIntForUser(getContentResolver(),
+                    Settings.System.QS_SHOW_BRIGHTNESS_SLIDER, 1,
+                    UserHandle.USER_CURRENT);
+            updateBrightnessSliderSummary(brightnessSlider);
             return true;
         }
         return false;
@@ -148,5 +169,12 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment
                     : (isRtl ? R.string.quick_pulldown_left : R.string.quick_pulldown_right));
             mQuickPulldown.setSummary(res.getString(R.string.summary_quick_pulldown, direction));
         }
+    }
+
+    private void updateBrightnessSliderSummary(int value) {
+        String summary = value != 0
+                ? getResources().getString(R.string.qs_brightness_slider_enabled)
+                : getResources().getString(R.string.qs_brightness_slider_disabled);
+        mBrightnessSlider.setSummary(summary);
     }
 }

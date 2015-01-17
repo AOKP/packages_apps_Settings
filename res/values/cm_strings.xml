@@ -902,7 +902,9 @@
     <string name="qs_advanced_location_title">Advanced location quick settings</string>
     <string name="qs_advanced_location_summary">Enable advanced settings for location in quick settings</string>
     <string name="qs_pulldown_title">QS pull down</string>
-    <string name="qs_brightness_slider_title">Enable brightness slider</string>
+    <string name="qs_brightness_slider_title">Brightness slider</string>
+    <string name="qs_brightness_slider_enabled">Enabled</string>
+    <string name="qs_brightness_slider_disabled">Disabled</string>
 
     <!-- Themes Settings -->
     <!-- Settings main menu entry -->
