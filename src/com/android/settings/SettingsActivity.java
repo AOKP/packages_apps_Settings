@@ -77,6 +77,8 @@ import com.android.settings.applications.ManageApplications;
 import com.android.settings.applications.ProcessStatsUi;
 import com.android.settings.blacklist.BlacklistSettings;
 import com.android.settings.bluetooth.BluetoothSettings;
+import com.android.settings.slim.DisplayRotation;
+import com.android.settings.cyanogenmod.qs.QSTiles;
 import com.android.settings.dashboard.DashboardCategory;
 import com.android.settings.dashboard.DashboardSummary;
 import com.android.settings.dashboard.DashboardTile;
@@ -315,7 +317,9 @@ public class SettingsActivity extends Activity
             ApnSettings.class.getName(),
             AicpSettings.class.getName(),
             BlacklistSettings.class.getName(),
-            com.android.settings.cyanogenmod.PrivacySettings.class.getName()
+            com.android.settings.cyanogenmod.PrivacySettings.class.getName(),
+            QSTiles.class.getName(),
+            DisplayRotation.class.getName()
     };
 
 
