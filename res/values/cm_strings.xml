@@ -571,7 +571,7 @@
     <string name="profile_setup_actions_title_config">Reconfigure actions</string>
 
     <string name="no_bluetooth_triggers">No Bluetooth devices paired.\nTap to pair Bluetooth device before configuring triggers.</string>
-    <string name="no_wifi_triggers">No Wi-Fi access points configured.\nTap to connect Wi-Fi before configuring triggers.</string>
+    <string name="no_wifi_triggers">No Wi\u2011Fi access points configured.\nTap to connect Wi\u2011Fi before configuring triggers.</string>
     <string name="no_triggers_configured">No triggers configured. Tap to add more.</string>
     <string name="no_triggers_configured_nfc">Tap to setup a new NFC trigger.</string>
 
