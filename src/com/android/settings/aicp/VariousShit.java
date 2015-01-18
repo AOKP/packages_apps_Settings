@@ -84,6 +84,8 @@ public class VariousShit extends SettingsPreferenceFragment
     private final ArrayList<CheckBoxPreference> mResetCbPrefs
             = new ArrayList<CheckBoxPreference>();
 
+    private Context mContext;
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
@@ -94,6 +96,7 @@ public class VariousShit extends SettingsPreferenceFragment
         PreferenceScreen prefSet = getPreferenceScreen();
         PackageManager pm = getPackageManager();
         Resources res = getResources();
+        mContext = getActivity();
 
         mVariousShitScreen = (PreferenceScreen) findPreference("various_shit_screen");
 
@@ -156,7 +159,7 @@ public class VariousShit extends SettingsPreferenceFragment
         mDialerWidgetHide.setChecked(Settings.System.getIntForUser(resolver,
             Settings.System.DIALER_WIDGET_HIDE, 0, UserHandle.USER_CURRENT) == 1);
         mDialerWidgetHide.setOnPreferenceChangeListener(this);
-        if (!Utils.isVoiceCapable(getActivity())){
+        if ((!Utils.isVoiceCapable(mContext) || Utils.isWifiOnly(mContext))) {
             mVariousShitScreen.removePreference(mDialerWidgetHide);
         }
     }
