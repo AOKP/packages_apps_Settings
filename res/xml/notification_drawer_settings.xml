@@ -32,13 +32,18 @@
             android:summaryOff="@string/qs_main_tiles_summary_off"
             android:defaultValue="true" />
 
-    </PreferenceCategory>
+        <com.android.settings.cyanogenmod.SecureSettingSwitchPreference
+            android:key="qs_show_brightness_slider"
+            android:title="@string/qs_brightness_slider_title"
+            android:defaultValue="true"/>
 
-    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-        android:key="qs_location_advanced"
-        android:title="@string/qs_advanced_location_title"
-        android:summary="@string/qs_advanced_location_summary"
-        android:defaultValue="false" />
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="qs_location_advanced"
+            android:title="@string/qs_advanced_location_title"
+            android:summary="@string/qs_advanced_location_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
 
     <SwitchPreference
         android:key="block_on_secure_keyguard"
@@ -64,11 +69,5 @@
             android:persistent="false" />
 
     </PreferenceCategory>
-
-    <com.android.settings.cyanogenmod.SecureSettingSwitchPreference
-        android:key="qs_show_brightness_slider"
-        android:title="@string/qs_brightness_slider_title"
-        android:persistent="false"
-        android:defaultValue="true" />
 
 </PreferenceScreen>
