@@ -747,4 +747,8 @@
     <string name="custom_density_dialog_summary">Changing your default LCD density can sometimes cause certain apps to not function properly and/or the playstore to show apps being incompatible with your device"</string>
     <string name="dpi">DPI</string>
 
+    <!-- Privacy guard notification -->
+    <string name="privacy_guard_notification_title">Notification</string>
+    <string name="privacy_guard_notifiation_summary">Show a notification if privacy guard is active</string>
+
 </resources>
