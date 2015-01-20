@@ -153,6 +153,9 @@
     <string name="battery_percentage_summary">Show percentage in battery icon.</string>
     <string name="proximity_on_wake_title">Proximity on wake</string>
     <string name="proximity_on_wake_summary">Check the proximity sensor during wakeup.</string>
+    <string name="status_bar_show_weather_category">Weather</string>
+    <string name="navigation_bar_category">Navigation Bar</string>
+    <string name="aicp_apps_category">AICP Apps</string>
 
     <!-- Per app controls for LP keyguard notifications -->
     <string name="app_notification_show_on_keyguard_title">Show on lockscreen</string>
@@ -273,7 +276,7 @@
 
     <!-- Weather switch -->
     <string name="status_bar_show_weather_title">Show weather</string>
-    <string name="status_bar_show_weather_summary">Show the weather in the status bar header</string>
+    <string name="status_bar_show_weather_summary">Show weather in the status bar header</string>
 
     <!-- Notification counter -->
     <string name="status_bar_notif_count_title">Show notification count</string>
@@ -313,7 +316,7 @@
     <string name="lock_numpad_random_on_request">On request</string>
 
     <!-- Navigation Bar Height -->
-    <string name="navigation_bar_height">Navigation bar height</string>
+    <string name="navigation_bar_height">NavBar Height</string>
     <string name="navigation_bar_height_48">48dp (default)</string>
     <string name="navigation_bar_height_44">44dp</string>
     <string name="navigation_bar_height_40">40dp</string>
@@ -325,8 +328,8 @@
     <string name="navigation_bar_height_0">0dp (hide)</string>
 
     <!-- Search Bar Switcher -->
-    <string name="recents_show_searchbar">Show Search Bar in Recents</string>
-    <string name="recents_show_searchbar_summary">Enable or disable the Google search bar in the recents menu</string>
+    <string name="recents_show_searchbar">Search Bar in Recents</string>
+    <string name="recents_show_searchbar_summary">Show or hide Google search bar in recents menu</string>
 
     <!-- Screenshot sound -->
     <string name="screenshot_sound_title">Screenshot sound</string>
@@ -676,11 +679,11 @@
     <string name="volume_steps_5">5</string>
 
     <!-- Camera lockscreen swipe -->
-    <string name="camera_widget_hide">Disable lockscreen camera</string>
+    <string name="camera_widget_hide">Disable camera shortcut</string>
     <string name="camera_widget_hide_summary">Allows you to disable swipe to open camera in lockscreen.</string>
 
     <!-- Dialer lockscreen swipe -->
-    <string name="dialer_widget_hide">Disable lockscreen dialer</string>
+    <string name="dialer_widget_hide">Disable dialer shortcut</string>
     <string name="dialer_widget_hide_summary">Allows you to disable swipe to open dialer in lockscreen.\n<b>SystemUI will restart.</b></string>
 
     <!-- Battery Bar -->

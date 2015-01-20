@@ -143,7 +143,7 @@ public class VariousShit extends SettingsPreferenceFragment
         }
 
         // Camera widget hide
-        mCameraWidgetHide = (SwitchPreference) findPreference("camera_widget_hide");
+        mCameraWidgetHide = (SwitchPreference) findPreference(KEY_LOCKSCREEN_CAMERA_WIDGET_HIDE);
         boolean mCameraDisabled = false;
         DevicePolicyManager dpm =
             (DevicePolicyManager) getActivity().getSystemService(Context.DEVICE_POLICY_SERVICE);
@@ -155,12 +155,15 @@ public class VariousShit extends SettingsPreferenceFragment
         }
 
         // Dialer widget hide
-        mDialerWidgetHide = (SwitchPreference) prefSet.findPreference(KEY_LOCKSCREEN_DIALER_WIDGET_HIDE);
-        mDialerWidgetHide.setChecked(Settings.System.getIntForUser(resolver,
-            Settings.System.DIALER_WIDGET_HIDE, 0, UserHandle.USER_CURRENT) == 1);
-        mDialerWidgetHide.setOnPreferenceChangeListener(this);
-        if ((!Utils.isVoiceCapable(mContext) || Utils.isWifiOnly(mContext))) {
+        mDialerWidgetHide = (SwitchPreference) findPreference(KEY_LOCKSCREEN_DIALER_WIDGET_HIDE);
+        boolean IsVoiceCapable = res.getBoolean(
+                com.android.internal.R.bool.config_voice_capable);
+        if (!IsVoiceCapable) {
             mVariousShitScreen.removePreference(mDialerWidgetHide);
+        } else {
+            mDialerWidgetHide.setChecked(Settings.System.getIntForUser(resolver,
+                Settings.System.DIALER_WIDGET_HIDE, 0, UserHandle.USER_CURRENT) == 1);
+            mDialerWidgetHide.setOnPreferenceChangeListener(this);
         }
     }
 

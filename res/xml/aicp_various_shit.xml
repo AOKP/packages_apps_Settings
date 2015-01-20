@@ -21,20 +21,19 @@
     <PreferenceCategory
         android:key="lockscreen_category"
         android:title="@string/lockscreen_category" >
+    </PreferenceCategory>
 
-        <!-- Disable camera swipe -->
-        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-            android:key="camera_widget_hide"
-            android:title="@string/camera_widget_hide"
-            android:summary="@string/camera_widget_hide_summary" />
+    <!-- Disable camera swipe -->
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+        android:key="camera_widget_hide"
+        android:title="@string/camera_widget_hide"
+        android:summary="@string/camera_widget_hide_summary" />
 
-        <!-- Disable dialer swipe -->
-        <SwitchPreference
-            android:key="dialer_widget_hide"
-            android:title="@string/dialer_widget_hide"
-            android:summary="@string/dialer_widget_hide_summary" />
-
-   </PreferenceCategory>
+    <!-- Disable dialer swipe -->
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+        android:key="dialer_widget_hide"
+        android:title="@string/dialer_widget_hide"
+        android:summary="@string/dialer_widget_hide_summary" />
 
     <!-- Proximity on wake -->
     <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
@@ -43,21 +42,36 @@
         android:summary="@string/proximity_on_wake_summary" />
 
     <!-- Weather -->
-    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-        android:key="status_bar_show_weather"
-        android:title="@string/status_bar_show_weather_title"
-        android:summary="@string/status_bar_show_weather_summary"
-        android:defaultValue="true" />
+    <PreferenceCategory
+        android:key="status_bar_show_weather_category"
+        android:title="@string/status_bar_show_weather_category" >
+
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="status_bar_show_weather"
+            android:title="@string/status_bar_show_weather_title"
+            android:summary="@string/status_bar_show_weather_summary"
+            android:defaultValue="true" />
+    </PreferenceCategory>
 
     <!-- Navbar height -->
-    <ListPreference
-        android:key="navigation_bar_height"
-        android:dialogTitle="@string/navigation_bar_height"
-        android:title="@string/navigation_bar_height"
-        android:entries="@array/navigation_bar_height_entries"
-        android:entryValues="@array/navigation_bar_height_values"
-        android:defaultValue="48"
-        android:persistent="false" />
+    <PreferenceCategory
+        android:key="navigation_bar_category"
+        android:title="@string/navigation_bar_category" >
+
+        <ListPreference
+            android:key="navigation_bar_height"
+            android:dialogTitle="@string/navigation_bar_height"
+            android:title="@string/navigation_bar_height"
+            android:entries="@array/navigation_bar_height_entries"
+            android:entryValues="@array/navigation_bar_height_values"
+            android:defaultValue="48"
+            android:persistent="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="aicp_apps_category"
+        android:title="@string/aicp_apps_category" >
+    </PreferenceCategory>
 
     <!-- LockClock settings -->
     <PreferenceScreen
