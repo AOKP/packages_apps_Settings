@@ -51,6 +51,13 @@
             android:title="@string/status_bar_show_weather_title"
             android:summary="@string/status_bar_show_weather_summary"
             android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="lockscreen_weather"
+            android:title="@string/lockscreen_weather_title"
+            android:summary="@string/lockscreen_weather_summary"
+            android:defaultValue="true" />
+
     </PreferenceCategory>
 
     <!-- Navbar height -->
