@@ -15,9 +15,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- About phone screen, AICP version name-->
-  <string name="mod_version">AICP version</string>
+  <string name="mod_version">Версия AICP</string>
   <!-- About phone screen, AICP unknown name-->
-  <string name="mod_version_default">Unknown</string>
+  <string name="mod_version_default">Неизвестно</string>
   <string name="model_name">Модель</string>
   <!-- About phone screen, build date of ROM -->
   <string name="build_date">Дата сборки</string>
@@ -35,7 +35,7 @@
   <!-- About device screen, Cpu info. -->
   <string name="cpu_info">CPU</string>
   <!-- About device screen, Chipset info -->
-  <string name="chipset_info">Chipset</string>
+  <string name="chipset_info">Чипсет</string>
   <!-- About phone screen, Free memory info -->
   <string name="mem_info">Память</string>
   
@@ -50,8 +50,8 @@
   <string name="show_dev_already_aicp">Не надо, опции уже активированы.</string>
   
   <!-- Aicp Settings -->
-  <string name="aicp_settings_title">AICP Extras</string>
-  <string name="aicp_ota_settings_title">Aicp OTA</string>
+  <string name="aicp_settings_title">Дополнения AICP</string>
+  <string name="aicp_ota_settings_title">Обновление Aicp</string>
   <string name="battery_settings_title">Настройки энергопотребления</string>
   <string name="status_bar_battery_title">Иконка батареи</string>
   
@@ -78,7 +78,7 @@
   <string name="display_rotation_title">Автоповорот</string>
   <string name="display_rotation_disabled">Выключен</string>
   <string name="display_rotation_unit">углы поворота</string>
-  <string name="display_rotation_category_title">Rotation modes</string>
+  <string name="display_rotation_category_title">Разрешенные повоторы</string>
   <string name="display_rotation_0_title">0 градусов</string>
   <string name="display_rotation_90_title">90 градусов</string>
   <string name="display_rotation_180_title">180 градусов</string>
@@ -321,7 +321,7 @@
   <string name="dpi">DPI</string>
   <string name="su_dialog_error_title">Осторожно!</string>
   <string name="su_dialog_error_message">Обнаружена ошибка.\n\nПроверьте доступ к правам рут. Для активации зайдите в настройки суперпользователя и активируйте рут.</string>
-  <string name="lcd_density_title">LCD Density</string>
+  <string name="lcd_density_title">Плотность экрана</string>
   <string name="lcd_density_category">Опции</string>
   <string name="follow_through_title">Будьте внимательны: нажмите для загрузки</string>
   <string name="follow_through_summary">Изменение плотности экрана может привести к тому, что приложения не будут работать должным образом, и в маркете пропадут несовместимые приложения.</string>
@@ -343,7 +343,7 @@
   
   <!-- Navigation Bar Height -->
   <string name="navigation_bar_height">Высота навигационной панели</string>
-  <string name="navigation_bar_height_48">48dp (default)</string>
+  <string name="navigation_bar_height_48">48dp (по умолчанию)</string>
   <string name="navigation_bar_height_44">44dp</string>
   <string name="navigation_bar_height_40">40dp</string>
   <string name="navigation_bar_height_36">36dp</string>
@@ -481,94 +481,94 @@
   <string name="heads_up_snooze_title">Snooze timer</string>
   <string name="heads_up_snooze_summary">If snooze button is pressed, disable heads up for <xliff:g id="number">%d</xliff:g> minutes</string>
   <string name="heads_up_snooze_disabled_summary">Snooze timer is disabled</string>
-  <string name="heads_up_snooze_3min">3 minutes</string>
-  <string name="heads_up_snooze_5min">5 minutes</string>
-  <string name="heads_up_snooze_10min">10 minutes</string>
-  <string name="heads_up_snooze_15min">15 minutes</string>
-  <string name="heads_up_snooze_20min">20 minutes</string>
+  <string name="heads_up_snooze_3min">3 минуты</string>
+  <string name="heads_up_snooze_5min">5 минут</string>
+  <string name="heads_up_snooze_10min">10 минут</string>
+  <string name="heads_up_snooze_15min">15 минут</string>
+  <string name="heads_up_snooze_20min">20 минут</string>
   <string name="heads_up_time_out_title">Time out</string>
   <string name="heads_up_time_out_summary">Heads up notification will show up for <xliff:g id="number">%d</xliff:g> seconds</string>
   <string name="heads_up_time_out_never_summary">Heads up notification will show until it is dismissed</string>
-  <string name="heads_up_time_out_4sec">4 seconds</string>
-  <string name="heads_up_time_out_6sec">6 seconds</string>
-  <string name="heads_up_time_out_8sec">8 seconds</string>
-  <string name="heads_up_time_out_10sec">10 seconds</string>
-  <string name="heads_up_time_out_never">Never</string>
+  <string name="heads_up_time_out_4sec">4 секунды</string>
+  <string name="heads_up_time_out_6sec">6 секунд</string>
+  <string name="heads_up_time_out_8sec">8 секунд</string>
+  <string name="heads_up_time_out_10sec">10 секунд</string>
+  <string name="heads_up_time_out_never">Никогда</string>
   
   <!-- Gesture Anywhere -->
-  <string name="gesture_anywhere_title">Gesture Anywhere</string>
-  <string name="gesture_anywhere_enabled_title">Gesture Anywhere</string>
-  <string name="gesture_anywhere_enabled_summary">Enable the Gesture Anywhere feature</string>
-  <string name="gesture_anywhere_position_title">Loction</string>
-  <string name="gesture_anywhere_position_left">Left edge</string>
-  <string name="gesture_anywhere_position_right">Right edge</string>
-  <string name="gesture_anywhere_gestures_title">Gestures</string>
-  <string name="gesture_anywhere_gestures_summary">Add, remove, and edit gestures</string>
+  <string name="gesture_anywhere_title">Gesture AnyWhere</string>
+  <string name="gesture_anywhere_enabled_title">Gesture AnyWhere</string>
+  <string name="gesture_anywhere_enabled_summary">Включить жесты</string>
+  <string name="gesture_anywhere_position_title">Расположение</string>
+  <string name="gesture_anywhere_position_left">Левый край</string>
+  <string name="gesture_anywhere_position_right">Правый край</string>
+  <string name="gesture_anywhere_gestures_title">Жесты</string>
+  <string name="gesture_anywhere_gestures_summary">Добавить, удалить, и редактировать жесты</string>
   <!-- Label, button used to add a gesture -->
-  <string name="ga_button_add">Add gesture</string>
+  <string name="ga_button_add">Добавить жест</string>
   <!-- Label, button used to reload all gestures -->
-  <string name="ga_button_reload">Reload</string>
+  <string name="ga_button_reload">Обновить</string>
   <!-- Label, button used to cancel the operation of adding a gesture -->
-  <string name="ga_button_discard">Discard</string>
+  <string name="ga_button_discard">Отмена</string>
   <!-- Label, button used to save a gesture newly created -->
-  <string name="ga_button_done">Done</string>
+  <string name="ga_button_done">Готово</string>
   <!-- Label, prompt asking the user to enter the name of the gesture -->
-  <string name="ga_prompt_gesture_name">Name</string>
+  <string name="ga_prompt_gesture_name">Название</string>
   <!-- Error message, informs the user he needs to enter a name before saving a gesture -->
-  <string name="ga_error_missing_name">You must enter a name</string>
+  <string name="ga_error_missing_name">Вы должны ввести название</string>
   <!-- success message, tells the user where the gesture was saved -->
-  <string name="ga_save_success">Gesture saved in %s</string>
+  <string name="ga_save_success">Жест сохранен в %s</string>
   <!-- Buttons in Rename gesture dialog box -->
   <string name="ga_rename_action">OK</string>
   <!-- Buttons in Rename gesture dialog box -->
-  <string name="ga_cancel_action">Cancel</string>
+  <string name="ga_cancel_action">Отмена</string>
   <!-- Message displayed when the user opens the gestures settings screen -->
-  <string name="ga_gestures_loading">Loading gestures...</string>
+  <string name="ga_gestures_loading">Загрузка жестаs...</string>
   <!-- Message displayed when the user has no gestures -->
-  <string name="ga_gestures_empty">No gestures</string>
+  <string name="ga_gestures_empty">Нет жестов</string>
   <!-- Title of the screen used to view/manage gestures -->
-  <string name="ga_gestures_activity">Gestures</string>
+  <string name="ga_gestures_activity">Жесты</string>
   <!-- Noun, menu item used to edit a gesture -->
-  <string name="ga_gestures_edit">Edit</string>
+  <string name="ga_gestures_edit">Редактировать</string>
   <!-- Noun, menu item used to remove a gesture -->
-  <string name="ga_gestures_delete">Delete</string>
+  <string name="ga_gestures_delete">Удалить</string>
   <!-- Message displayed when a gesture is successfully deleted -->
-  <string name="ga_gestures_delete_success">Gesture deleted</string>
+  <string name="ga_gestures_delete_success">Жест удален</string>
   <!-- Title of dialog box -->
-  <string name="ga_gestures_rename_title">Rename gesture</string>
+  <string name="ga_gestures_rename_title">Переименование жеста</string>
   <!-- Label of gesture name field in Rename gesture dialog box -->
-  <string name="ga_gestures_rename_label">Gesture name</string>
+  <string name="ga_gestures_rename_label">Имя жеста</string>
   <!-- Message, displayed when the sdcard cannot be found, 1st parameter is the name of the file that stores the gestures.  CHAR LIMIT=80 -->
   <string name="ga_gestures_error_loading">Could not load %s. Make sure you have storage available.</string>
-  <string name="trigger_category">Trigger region</string>
-  <string name="trigger_width_title">Trigger width</string>
-  <string name="trigger_width_summary">Adjust the width of the trigger area</string>
-  <string name="trigger_top_title">Trigger position</string>
-  <string name="trigger_top_summary">Adjust the vertical postion of the trigger area</string>
-  <string name="trigger_bottom_title">Trigger height</string>
-  <string name="trigger_bottom_summary">Adjust the height of the trigger area</string>
+  <string name="trigger_category">Область триггера</string>
+  <string name="trigger_width_title">Ширина триггера</string>
+  <string name="trigger_width_summary">Отрегулируйте ширину области триггера</string>
+  <string name="trigger_top_title">Позиция триггера</string>
+  <string name="trigger_top_summary">Отрегулируйте вертикальное положение области триггера</string>
+  <string name="trigger_bottom_title">Высота триггера</string>
+  <string name="trigger_bottom_summary">Отрегулируйте высоту области триггера</string>
   <string name="picker_activities">Activities</string>
   <string name="select_custom_app_title">Select custom app</string>
   <string name="select_custom_activity_title">Select custom activity</string>
-  <string name="profile_applist_title">Applications</string>
+  <string name="profile_applist_title">Приложения</string>
   
   <!-- Display and Animations -->
-  <string name="disp_anim_settings_title">Display and animations</string>
+  <string name="disp_anim_settings_title">Дисплей и анимация</string>
   
   <!-- ListView animation -->
-  <string name="interface_settings_animation_title">Animation options</string>
-  <string name="listview_animation_title">ListView animation</string>
-  <string name="listview_off">Default</string>
-  <string name="listview_wave_left">Wave (left)</string>
-  <string name="listview_wave_right">Wave (right)</string>
-  <string name="listview_alpha">Alpha</string>
-  <string name="listview_scale">Scale</string>
-  <string name="listview_stack_top">Stack (top)</string>
-  <string name="listview_stack_bottom">Stack (bottom)</string>
-  <string name="listview_unfold">Unfold</string>
-  <string name="listview_fold">Fold</string>
-  <string name="listview_translate_left">Translate (left)</string>
-  <string name="listview_translate_right">Translate (right)</string>
+  <string name="interface_settings_animation_title">Настройки анимации</string>
+  <string name="listview_animation_title">Анимация ListView</string>
+  <string name="listview_off">По умолчанию</string>
+  <string name="listview_wave_left">Волна (слева)</string>
+  <string name="listview_wave_right">Волна (справа)</string>
+  <string name="listview_alpha">Альфа</string>
+  <string name="listview_scale">Шкала</string>
+  <string name="listview_stack_top">Стек (сверху)</string>
+  <string name="listview_stack_bottom">Стек (снизу)</string>
+  <string name="listview_unfold">Раскрывающийся</string>
+  <string name="listview_fold">Слаживающийся</string>
+  <string name="listview_translate_left">Перенос (слева)</string>
+  <string name="listview_translate_right">Перенос (справа)</string>
   
   <!-- ListView interpolator -->
   <string name="listview_interpolator_title">ListView interpolator</string>
@@ -581,8 +581,8 @@
   <string name="listview_bounce_interpolator">Bounce</string>
   
   <!-- Battery saver -->
-  <string name="battery_saver_title">Warning color</string>
-  <string name="battery_saver_style_reset_message">Reset battery saver warning color?</string>
+  <string name="battery_saver_title">Цвет предупреждения</string>
+  <string name="battery_saver_style_reset_message">Сбросить цвет предупреждения режима энергосбережения?</string>
   
   <!-- Lock Gesture settings -->
   <!-- Security & location settings screen, setting option name -->
@@ -682,14 +682,14 @@
   <string name="toast_SlideRightLeft_animation">Slide right to left</string>
   
   <!-- Volume Steps -->
-  <string name="volume_steps_title">Volume steps</string>
-  <string name="volume_steps_alarm_title">Volume steps: Alarm</string>
-  <string name="volume_steps_dtmf_title">Volume steps: DTMF</string>
-  <string name="volume_steps_music_title">Volume steps: Music</string>
-  <string name="volume_steps_notification_title">Volume steps: Notification</string>
-  <string name="volume_steps_ring_title">Volume steps: Ringer</string>
-  <string name="volume_steps_system_title">Volume steps: System</string>
-  <string name="volume_steps_voice_call_title">Volume steps: Voice Call</string>
+  <string name="volume_steps_title">Шаги уровня громкости</string>
+  <string name="volume_steps_alarm_title">Будильник</string>
+  <string name="volume_steps_dtmf_title">DTMF</string>
+  <string name="volume_steps_music_title">Музыка</string>
+  <string name="volume_steps_notification_title">Уведомления</string>
+  <string name="volume_steps_ring_title">Звонок</string>
+  <string name="volume_steps_system_title">Система</string>
+  <string name="volume_steps_voice_call_title">Голосовой звонок</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
   <string name="volume_steps_30">30</string>
@@ -699,43 +699,43 @@
   
   <!-- Battery Bar -->
   <string name="battery_bar_title">Battery Bar</string>
-  <string name="battery_bar">Battery bar location</string>
-  <string name="battery_bar_color">Battery bar color</string>
-  <string name="battery_bar_cat">Battery bar style</string>
-  <string name="battery_bar_style_title">Battery bar alignment</string>
-  <string name="battery_bar_thickness_title">Battery bar thickness</string>
-  <string name="battery_bar_animate_title">Charging animation</string>
-  <string name="battery_bar_animate_summary">The charging animation may result in a poor user experience. Enable at your own discretion.</string>
+  <string name="battery_bar">Местоположение Battery bar</string>
+  <string name="battery_bar_color">Цвет Battery bar</string>
+  <string name="battery_bar_cat">Стиль Battery bar</string>
+  <string name="battery_bar_style_title">Выравнивание Battery bar</string>
+  <string name="battery_bar_thickness_title">Толщина Battery bar</string>
+  <string name="battery_bar_animate_title">Анимация зарядки</string>
+  <string name="battery_bar_animate_summary">Анимация зарядки может привести к плохому пользовательскому опыту использования. Включайте на свое усмотрение.</string>
   
   <!-- StatusBar Clock style -->
-  <string name="clock_font_style_title">Clock font style</string>
-  <string name="clock_font_bold">Bold</string>
-  <string name="clock_font_condensed">Condensed</string>
-  <string name="clock_font_light">Light</string>
-  <string name="clock_font_light_italic">Light italic</string>
-  <string name="clock_font_normal">Normal</string>
+  <string name="clock_font_style_title">Стиль шрифта часов</string>
+  <string name="clock_font_bold">Жирный</string>
+  <string name="clock_font_condensed">Сплюснутый</string>
+  <string name="clock_font_light">Светлый</string>
+  <string name="clock_font_light_italic">Светлый курсивный</string>
+  <string name="clock_font_normal">Стандартный</string>
   
   <!-- Recents panel settings -->
-  <string name="recents_panel_settings">Recents Panel Settings</string>
-  <string name="recents_panel_title">Recents Panel</string>
-  <string name="show_clear_all_recents_button_title">Clear All Recents Button</string>
-  <string name="show_clear_all_recents_button_summary">Show clear all button on recents panel</string>
-  <string name="recents_clear_all_location_title">Clear all recents location</string>
-  <string name="recents_clear_all_location_top_right">Top right</string>
-  <string name="recents_clear_all_location_top_left">Top left</string>
-  <string name="recents_clear_all_location_top_center">Top center</string>
-  <string name="recents_clear_all_location_bottom_right">Bottom right</string>
-  <string name="recents_clear_all_location_bottom_left">Bottom left</string>
-  <string name="recents_clear_all_location_bottom_center">Bottom center</string>
+  <string name="recents_panel_settings">Настройки панели недавние</string>
+  <string name="recents_panel_title">Панель недавние</string>
+  <string name="show_clear_all_recents_button_title">"Очистить все" в панели недавние</string>
+  <string name="show_clear_all_recents_button_summary">Показывать кнопку "Очистить все" в панели недавние</string>
+  <string name="recents_clear_all_location_title">Расположение "Очистить все"</string>
+  <string name="recents_clear_all_location_top_right">Сверху справа</string>
+  <string name="recents_clear_all_location_top_left">Сверху слева</string>
+  <string name="recents_clear_all_location_top_center">Сверху по центру</string>
+  <string name="recents_clear_all_location_bottom_right">Снизу справа</string>
+  <string name="recents_clear_all_location_bottom_left">Снизу слева</string>
+  <string name="recents_clear_all_location_bottom_center">Снизу по центру</string>
   <string name="omniswitch_settings_title">OmniSwitch</string>
   
   <!-- Power menu  -->
-  <string name="power_menu_settings">Power menu</string>
-  <string name="powermenu_screenshot">Screenshot</string>
-  <string name="powermenu_power">Power</string>
-  <string name="powermenu_reboot">Reboot</string>
-  <string name="powermenu_airplane">Airplane</string>
-  <string name="powermenu_settings">Settings</string>
-  <string name="powermenu_soundpanel">Sound Panel</string>
-  <string name="powermenu_screenrecord">Screen Record</string>
+  <string name="power_menu_settings">Меню выключения</string>
+  <string name="powermenu_screenshot">Скриншот</string>
+  <string name="powermenu_power">Выключение</string>
+  <string name="powermenu_reboot">Перезагрузка</string>
+  <string name="powermenu_airplane">Режим полета</string>
+  <string name="powermenu_settings">Настройки</string>
+  <string name="powermenu_soundpanel">Звуковая панель</string>
+  <string name="powermenu_screenrecord">Запись экрана</string>
 </resources>
