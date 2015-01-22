@@ -98,6 +98,7 @@ import com.android.settings.notification.NotificationManagerSettings;
 import com.android.settings.notification.OtherSoundSettings;
 import com.android.settings.notification.SoundSettings;
 import com.android.settings.profiles.NFCProfileTagCallback;
+import com.android.settings.profiles.ProfilesSettings;
 import com.android.settings.search.DynamicIndexableContentMonitor;
 import com.android.settings.search.Index;
 import com.android.settings.inputmethod.InputMethodAndLanguageSettings;
@@ -372,6 +373,7 @@ public class SettingsActivity extends Activity
             com.android.settings.cyanogenmod.DisplayRotation.class.getName(),
             com.android.settings.cyanogenmod.PrivacySettings.class.getName(),
             BlacklistSettings.class.getName(),
+            ProfilesSettings.class.getName(),
             NotificationManagerSettings.class.getName()
     };
 
