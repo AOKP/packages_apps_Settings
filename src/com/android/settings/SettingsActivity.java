@@ -72,6 +72,7 @@ import com.android.settings.accessibility.CaptionPropertiesFragment;
 import com.android.settings.accounts.AccountSettings;
 import com.android.settings.accounts.AccountSyncSettings;
 import com.android.settings.aicp.AicpSettings;
+import com.android.settings.applications.ExpandedDesktopPreferenceFragment;
 import com.android.settings.applications.InstalledAppDetails;
 import com.android.settings.applications.ManageApplications;
 import com.android.settings.applications.ProcessStatsUi;
@@ -321,7 +322,8 @@ public class SettingsActivity extends Activity
             ProfilesSettings.class.getName(),
             com.android.settings.cyanogenmod.PrivacySettings.class.getName(),
             QSTiles.class.getName(),
-            DisplayRotation.class.getName()
+            DisplayRotation.class.getName(),
+            ExpandedDesktopPreferenceFragment.class.getName()
     };
 
 
