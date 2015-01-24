@@ -55,7 +55,6 @@ public class VariousShit extends SettingsPreferenceFragment
     private static final String TAG = "VariousShit";
 
     private static final String KEY_LOCKCLOCK = "lock_clock";
-    private static final String KEY_NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
 
     private static final String KEY_LOCKSCREEN_CAMERA_WIDGET_HIDE = "camera_widget_hide";
     private static final String KEY_LOCKSCREEN_DIALER_WIDGET_HIDE = "dialer_widget_hide";
@@ -68,7 +67,6 @@ public class VariousShit extends SettingsPreferenceFragment
     // Package name of the cLock app
     public static final String LOCKCLOCK_PACKAGE_NAME = "com.cyanogenmod.lockclock";
 
-    private ListPreference mNavigationBarHeight;
     private SwitchPreference mCameraWidgetHide;
     private SwitchPreference mDialerWidgetHide;
     private SwitchPreference mLockscreenWeather;
@@ -115,14 +113,6 @@ public class VariousShit extends SettingsPreferenceFragment
         if (!Helpers.isPackageInstalled(LOCKCLOCK_PACKAGE_NAME, pm)) {
             prefSet.removePreference(mLockClock);
         }
-
-        // Navbar height
-        mNavigationBarHeight = (ListPreference) findPreference(KEY_NAVIGATION_BAR_HEIGHT);
-        mNavigationBarHeight.setOnPreferenceChangeListener(this);
-        int statusNavigationBarHeight = Settings.System.getInt(resolver,
-                Settings.System.NAVIGATION_BAR_HEIGHT, 48);
-        mNavigationBarHeight.setValue(String.valueOf(statusNavigationBarHeight));
-        mNavigationBarHeight.setSummary(mNavigationBarHeight.getEntry());
 
         // Hidden shit
         mHiddenShit = (Preference) findPreference(KEY_HIDDEN_SHIT);
@@ -227,13 +217,7 @@ public class VariousShit extends SettingsPreferenceFragment
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         ContentResolver resolver = getActivity().getContentResolver();
         final String key = preference.getKey();
-        if (preference == mNavigationBarHeight) {
-            int statusNavigationBarHeight = Integer.valueOf((String) objValue);
-            int index = mNavigationBarHeight.findIndexOfValue((String) objValue);
-            Settings.System.putInt(resolver, Settings.System.NAVIGATION_BAR_HEIGHT,
-                    statusNavigationBarHeight);
-            mNavigationBarHeight.setSummary(mNavigationBarHeight.getEntries()[index]);
-        } else if (preference == mHiddenShitUnlocked) {
+        if (preference == mHiddenShitUnlocked) {
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.HIDDEN_SHIT,
                     (Boolean) objValue ? 1 : 0);
