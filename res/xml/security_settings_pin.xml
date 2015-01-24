@@ -68,6 +68,11 @@
         </PreferenceScreen>
 
         <PreferenceScreen
+            android:key="lockscreen_shortcuts_settings"
+            android:fragment="com.android.settings.cyanogenmod.LockscreenShortcuts"
+            android:title="@string/lockscreen_targets_message" />
+
+        <PreferenceScreen
             android:key="owner_info_settings"
             android:fragment="com.android.settings.OwnerInfoSettings"
             android:title="@string/owner_info_settings_title"
