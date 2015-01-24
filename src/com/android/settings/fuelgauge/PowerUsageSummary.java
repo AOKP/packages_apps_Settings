@@ -298,7 +298,7 @@ public class PowerUsageSummary extends PreferenceFragment {
                     if (!showUnacAndOvercounted) {
                         continue;
                     }
-                    if ("user".equals(Build.TYPE)) {
+                    if ("user".equals(Build.TYPE) || "userdebug".equals(Build.TYPE)) {
                         continue;
                     }
                 }
@@ -314,7 +314,7 @@ public class PowerUsageSummary extends PreferenceFragment {
                     if (!showUnacAndOvercounted) {
                         continue;
                     }
-                    if ("user".equals(Build.TYPE)) {
+                    if ("user".equals(Build.TYPE) || "userdebug".equals(Build.TYPE)) {
                         continue;
                     }
                 }
