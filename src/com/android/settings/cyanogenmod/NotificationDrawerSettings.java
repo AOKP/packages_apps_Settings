@@ -43,12 +43,14 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment
     private static final String PREF_SMART_PULLDOWN = "smart_pulldown";
     private static final String PREF_BLOCK_ON_SECURE_KEYGUARD = "block_on_secure_keyguard";
     private static final String PREF_QS_SHOW_BRIGHTNESS_SLIDER = "qs_show_brightness_slider";
+    private static final String PREF_QS_SCREENTIMEOUT_MODE = "qs_expanded_screentimeout_mode";
 
     private Preference mQSTiles;
     private ListPreference mQuickPulldown;
     private ListPreference mSmartPulldown;
     private SwitchPreference mBlockOnSecureKeyguard;
     private SwitchPreference mBrightnessSlider;
+    private ListPreference mScreenTimeoutMode;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -95,6 +97,10 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment
                 Settings.Secure.QS_SHOW_BRIGHTNESS_SLIDER, 1);
         updateBrightnessSliderSummary(brightnessSlider);
 
+	// Screen timeout mode
+        mScreenTimeoutMode = (ListPreference) prefs.findPreference(PREF_QS_SCREENTIMEOUT_MODE);
+        mScreenTimeoutMode.setSummary(mScreenTimeoutMode.getEntry());
+        mScreenTimeoutMode.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -124,6 +130,13 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment
             int brightnessSlider = Settings.Secure.getInt(getContentResolver(),
                     Settings.Secure.QS_SHOW_BRIGHTNESS_SLIDER, 1);
             updateBrightnessSliderSummary(brightnessSlider);
+            return true;
+        } else if (preference == mScreenTimeoutMode) {
+            int value = Integer.valueOf((String) newValue);
+            int index = mScreenTimeoutMode.findIndexOfValue((String) newValue);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.QS_EXPANDED_SCREENTIMEOUT_MODE, value);
+            mScreenTimeoutMode.setSummary(mScreenTimeoutMode.getEntries()[index]);
             return true;
         }
         return false;

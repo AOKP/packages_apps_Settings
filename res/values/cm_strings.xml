@@ -859,6 +859,8 @@
     <string name="qs_tile_lockscreen">Lockscreen</string>
     <string name="qs_tile_lte">LTE</string>
     <string name="qs_tile_visualizer">AudioFX</string>
+    <string name="qs_screentimeout_tile">Screen timeout</string>
+    <string name="qs_screentimeout_mode_title">Screen timeout modes</string>
 
     <string name="qs_main_tiles_title">Enlarge first row</string>
     <string name="qs_main_tiles_summary_on">Two main tiles on the first row</string>

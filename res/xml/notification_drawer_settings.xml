@@ -37,6 +37,13 @@
             android:title="@string/qs_brightness_slider_title"
             android:defaultValue="true"/>
 
+	<ListPreference
+            android:key="qs_expanded_screentimeout_mode"
+            android:dialogTitle="@string/qs_screentimeout_mode_title"
+            android:title="@string/qs_screentimeout_mode_title"
+            android:entries="@array/entries_screentimeout_widget"
+            android:entryValues="@array/values_screentimeout_widget" />
+
         <com.android.settings.cyanogenmod.SecureSettingSwitchPreference
             android:key="qs_wifi_detail"
             android:title="@string/qs_wifi_detail_title"
