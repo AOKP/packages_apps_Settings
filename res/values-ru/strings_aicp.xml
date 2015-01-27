@@ -31,9 +31,9 @@
   <!--  About device Screen, hardware info, screen res -->
   <string name="device_screen_resolution">Разрешение экрана</string>
   <!--  About device Screen, hardware info, GPU info -->
-  <string name="gpu_info">GPU</string>
+  <string name="gpu_info">Видеоускоритель</string>
   <!-- About device screen, Cpu info. -->
-  <string name="cpu_info">CPU</string>
+  <string name="cpu_info">Процессор</string>
   <!-- About device screen, Chipset info -->
   <string name="chipset_info">Чипсет</string>
   <!-- About phone screen, Free memory info -->
@@ -102,7 +102,7 @@
   <string name="notifications_category_title">Уведомления</string>
   <string name="less_notification_sounds_title">Уменьшение частоты уведомлений</string>
   <string name="less_notification_sounds_summary">Лимит звуковых уведомлений, для каждого приложения, проигрываемый за отрезок времени</string>
-  <string name="less_notification_sounds_default">Default Behaviour</string>
+  <string name="less_notification_sounds_default">По умолчанию</string>
   <string name="less_notification_sounds_3s">3 секунды</string>
   <string name="less_notification_sounds_5s">5 секунд</string>
   <string name="less_notification_sounds_10s">10 секунд</string>
@@ -121,7 +121,7 @@
   <string name="debug_LAN_category">Настойки LAN</string>
   
   <!-- Hostname setting -->
-  <string name="device_hostname">Device hostname</string>
+  <string name="device_hostname">Хост название устройства</string>
   
   <!-- Wakeup options -->
   <string name="display_category_wakeup_options_title">Настройки пробуждения</string>
@@ -146,7 +146,7 @@
   <string name="ime_switcher_notify_summary">Показывать способ ввода в панели уведомлений</string>
   
   <!-- Various shit -->
-  <string name="various_shit_title">Разное</string>
+  <string name="various_shit_title">Основный настройки</string>
   <string name="battery_percentage_title">Батарея в процентах</string>
   <string name="battery_percentage_summary">Показать проценты на иконке</string>
   <string name="proximity_on_wake_title">Датчик приближения</string>
@@ -475,9 +475,9 @@
   <string name="show_unac_and_overcounted_stats_summary">Показывать в статистике батареи неучетнный и переучтенный расход</string>
   
   <!-- Heads up -->
-  <string name="heads_up_title">Уведомления "поверх"</string>
-  <string name="app_notification_enable_heads_up_title">Показывать уведомления поверх</string>
-  <string name="app_notification_enable_heads_up_summary">ПОказывать уведомления от этого приложения поверх</string>
+  <string name="heads_up_title">Уведомления HeadsUp</string>
+  <string name="app_notification_enable_heads_up_title">Показывать уведомления HeadsUp</string>
+  <string name="app_notification_enable_heads_up_summary">Показывать уведомления HeadsUp этого приложения</string>
   <string name="heads_up_snooze_title">Время отключения</string>
   <string name="heads_up_snooze_summary">Если нажата кнопка отключения, не показывать уведомления <xliff:g id="number">%d</xliff:g> минут</string>
   <string name="heads_up_snooze_disabled_summary">Таймер отключения вылючен</string>
@@ -487,8 +487,8 @@
   <string name="heads_up_snooze_15min">15 минут</string>
   <string name="heads_up_snooze_20min">20 минут</string>
   <string name="heads_up_time_out_title">Тайм аут</string>
-  <string name="heads_up_time_out_summary">Уведомление поверх будет показываться <xliff:g id="number">%d</xliff:g> секунд</string>
-  <string name="heads_up_time_out_never_summary">Уведомление поверх будет показано пока не удалите</string>
+  <string name="heads_up_time_out_summary">Уведомление HeadsUp будет показываться <xliff:g id="number">%d</xliff:g> секунд</string>
+  <string name="heads_up_time_out_never_summary">Уведомление HeadsUp будет показано пока не удалите</string>
   <string name="heads_up_time_out_4sec">4 секунды</string>
   <string name="heads_up_time_out_6sec">6 секунд</string>
   <string name="heads_up_time_out_8sec">8 секунд</string>
@@ -496,10 +496,10 @@
   <string name="heads_up_time_out_never">Никогда</string>
   
   <!-- Gesture Anywhere -->
-  <string name="gesture_anywhere_title">Жесты везде</string>
-  <string name="gesture_anywhere_enabled_title">Жесты везде</string>
+  <string name="gesture_anywhere_title">Жесты AnyWhere</string>
+  <string name="gesture_anywhere_enabled_title">Жесты AnyWhere</string>
   <string name="gesture_anywhere_enabled_summary">Включить поддержку управления жестами</string>
-  <string name="gesture_anywhere_position_title">Нахождение</string>
+  <string name="gesture_anywhere_position_title">Расположение</string>
   <string name="gesture_anywhere_position_left">Левый край</string>
   <string name="gesture_anywhere_position_right">Правый край</string>
   <string name="gesture_anywhere_gestures_title">Жесты</string>
@@ -558,17 +558,17 @@
   <!-- ListView animation -->
   <string name="interface_settings_animation_title">Настройки анимации</string>
   <string name="listview_animation_title">Анимация списка</string>
-  <string name="listview_off">Default</string>
-  <string name="listview_wave_left">Wave (left)</string>
-  <string name="listview_wave_right">Wave (right)</string>
-  <string name="listview_alpha">Alpha</string>
-  <string name="listview_scale">Scale</string>
-  <string name="listview_stack_top">Stack (top)</string>
-  <string name="listview_stack_bottom">Stack (bottom)</string>
-  <string name="listview_unfold">Unfold</string>
-  <string name="listview_fold">Fold</string>
-  <string name="listview_translate_left">Translate (left)</string>
-  <string name="listview_translate_right">Translate (right)</string>
+  <string name="listview_off">По умолчанию</string>
+  <string name="listview_wave_left">Волна (слева)</string>
+  <string name="listview_wave_right">Волна (справа)</string>
+  <string name="listview_alpha">Альфа</string>
+  <string name="listview_scale">Маштаб</string>
+  <string name="listview_stack_top">Стэк (сверху)</string>
+  <string name="listview_stack_bottom">Стэк (снизу)</string>
+  <string name="listview_unfold">Раскрывающийся</string>
+  <string name="listview_fold">Слаживающийся</string>
+  <string name="listview_translate_left">Перемещающийся (слева)</string>
+  <string name="listview_translate_right">Перемещающийся (справаан)</string>
   
   <!-- ListView interpolator -->
   <string name="listview_interpolator_title">Эффекты списка</string>
@@ -651,10 +651,10 @@
   
   <!-- Circle app bar -->
   <string name="category_app_circle_bar_title">App launcher</string>
-  <string name="app_circle_bar_title">App circle bar</string>
-  <string name="app_circle_bar_summary">Показывать circle app launcher при касании правой стороны экрана</string>
+  <string name="app_circle_bar_title">Круговая панель приложений</string>
+  <string name="app_circle_bar_summary">Показывать круговую панель приложений при касании правой стороны экрана</string>
   <string name="app_circle_bar_included_apps_title">Приложения</string>
-  <string name="app_circle_bar_included_apps_summary">Приложения будут показаны в app circle bar</string>
+  <string name="app_circle_bar_included_apps_summary">Приложения будут показаны в круговой панели приложений</string>
   <string name="trigger_width_title">Ширина области срабатывания</string>
   <string name="trigger_width_summary">Указать ширину области срабатывания</string>
   <string name="trigger_top_title">Положение области</string>
@@ -663,9 +663,9 @@
   <string name="trigger_bottom_summary">Указать высоту области срабатываня</string>
   
   <!-- Toast Animation -->
-  <string name="toast_animation_title">Анимация</string>
-  <string name="toast_none_animation">None</string>
-  <string name="toast_default_animation">Default</string>
+  <string name="toast_animation_title">Анимация подсказок</string>
+  <string name="toast_none_animation">Отсутствует</string>
+  <string name="toast_default_animation">По умолчанию</string>
   <string name="toast_fade_animation">Fade</string>
   <string name="toast_SlideRight_animation">Slide right</string>
   <string name="toast_SlideLeft_animation">Slide left</string>
@@ -698,29 +698,29 @@
   <string name="volume_steps_5">5</string>
   
   <!-- Battery Bar -->
-  <string name="battery_bar_title">Значок батареи</string>
-  <string name="battery_bar">Положение значка</string>
-  <string name="battery_bar_color">Цвет значка</string>
-  <string name="battery_bar_cat">Стиль значка</string>
-  <string name="battery_bar_style_title">Высота значка</string>
-  <string name="battery_bar_thickness_title">Толщина значка</string>
+  <string name="battery_bar_title">Строка состояния батареи</string>
+  <string name="battery_bar">Расположение строки</string>
+  <string name="battery_bar_color">Цвет строки</string>
+  <string name="battery_bar_cat">Стиль строки</string>
+  <string name="battery_bar_style_title">Вид строки</string>
+  <string name="battery_bar_thickness_title">Толщина строки</string>
   <string name="battery_bar_animate_title">Анимация зарядки</string>
-  <string name="battery_bar_animate_summary">Последствия изменения анимации пока еще не до конца изучены нашими учеными.</string>
+  <string name="battery_bar_animate_summary">Последствия изменения анимации пока еще не до конца изучены нашими разработчиками.</string>
   
   <!-- StatusBar Clock style -->
   <string name="clock_font_style_title">Стиль шрифта часов</string>
-  <string name="clock_font_bold">Bold</string>
-  <string name="clock_font_condensed">Condensed</string>
-  <string name="clock_font_light">Light</string>
-  <string name="clock_font_light_italic">Light italic</string>
-  <string name="clock_font_normal">Normal</string>
+  <string name="clock_font_bold">Жирный</string>
+  <string name="clock_font_condensed">Конденсированный</string>
+  <string name="clock_font_light">Тонкий</string>
+  <string name="clock_font_light_italic">Тонкий курсив</string>
+  <string name="clock_font_normal">Нормальный</string>
   
   <!-- Recents panel settings -->
   <string name="recents_panel_settings">Настройки панели недавних приложений</string>
   <string name="recents_panel_title">Панель недавних</string>
   <string name="show_clear_all_recents_button_title">Кнопка очистки</string>
   <string name="show_clear_all_recents_button_summary">Показывать кнопку очистки в панели</string>
-  <string name="recents_clear_all_location_title">Положение кнопки</string>
+  <string name="recents_clear_all_location_title">Расположение кнопки</string>
   <string name="recents_clear_all_location_top_right">Верхний правый угол</string>
   <string name="recents_clear_all_location_top_left">Верхний левый угол</string>
   <string name="recents_clear_all_location_top_center">Сверху по центру</string>
