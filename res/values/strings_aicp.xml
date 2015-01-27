@@ -154,6 +154,7 @@
     <string name="proximity_on_wake_title">Proximity on wake</string>
     <string name="proximity_on_wake_summary">Check the proximity sensor during wakeup.</string>
     <string name="status_bar_show_weather_category">Weather</string>
+    <string name="aicp_notifications_category">Notifications</string>
     <string name="navigation_bar_category">Navigation Bar</string>
     <string name="aicp_apps_category">AICP Apps</string>
 
@@ -752,6 +753,6 @@
     <string name="privacy_guard_notifiation_summary">Show a notification if privacy guard is active</string>
 
     <!-- Text for forcing expanded notifications -->
-    <string name="disable_fc_notifications_title">Diable FC Notifications</string>
-    <string name="disable_fc_notifications_summary">This will hide all force close notificaitons</string>
+    <string name="disable_fc_notifications_title">Disable FC Notifications</string>
+    <string name="disable_fc_notifications_summary">This will hide all force close notifications</string>
 </resources>
