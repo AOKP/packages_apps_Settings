@@ -277,7 +277,7 @@
 
     <!-- Weather switch -->
     <string name="status_bar_show_weather_title">Show weather</string>
-    <string name="status_bar_show_weather_summary">Show weather in the status bar header</string>
+    <string name="status_bar_show_weather_summary">Show the weather above the Quick Settings panel</string>
 
     <!-- Notification counter -->
     <string name="status_bar_notif_count_title">Show notification count</string>
