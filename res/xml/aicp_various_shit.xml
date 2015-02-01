@@ -69,8 +69,8 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="aicp_apps_category"
-        android:title="@string/aicp_apps_category" >
+        android:key="aicp_extras_category"
+        android:title="@string/aicp_extras_category" >
     </PreferenceCategory>
 
     <!-- Custom bootanim -->
