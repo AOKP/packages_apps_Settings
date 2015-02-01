@@ -26,6 +26,11 @@
             android:fragment="com.android.settings.cyanogenmod.qs.QSTiles" />
 
         <com.android.settings.cyanogenmod.SecureSettingSwitchPreference
+            android:key="qs_use_four_columns"
+            android:title="@string/qs_four_columns_title"
+            android:defaultValue="false" />
+
+        <com.android.settings.cyanogenmod.SecureSettingSwitchPreference
             android:key="sysui_qs_main_tiles"
             android:title="@string/qs_main_tiles_title"
             android:summaryOn="@string/qs_main_tiles_summary_on"

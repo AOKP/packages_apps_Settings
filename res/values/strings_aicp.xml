@@ -787,6 +787,9 @@
     <string name="qs_notifications_tile">Notifications</string>
     <string name="qs_screen_off_tile">Screen off</string>
 
+    <!-- QuickSettings 4 columns -->
+    <string name="qs_four_columns_title">Show four tiles per row</string>
+
     <!-- Navigation bar button color -->
     <string name="navbar_button_tint_title">Navigation button tint</string>
 
