@@ -2207,6 +2207,13 @@
         <activity android:name=".aicp.gestureanywhere.GestureAnywhereBuilderActivity" />
         <activity android:name=".aicp.gestureanywhere.GestureAnywhereCreateGestureActivity" />
 
+        <activity android:name=".aicp.HiddenAnimActivity">
+            <intent-filter>
+                <action android:name=".aicp.HiddenAnimActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <provider
             android:name=".search.SettingsSearchIndexablesProvider"
             android:authorities="com.android.settings"

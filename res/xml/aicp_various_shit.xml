@@ -101,6 +101,12 @@
         android:title="@string/hfm_pref_screen_title"
         android:fragment="com.android.settings.aicp.hfm.HfmSettings" />
 
+    <Preference
+        android:key="hidden_anim"
+        android:title="@string/hidden_anim_title" >
+        <intent android:action=".aicp.HiddenAnimActivity" />
+    </Preference>
+
     <!-- Joke -->
     <Preference
         android:key="hidden_shit"
