@@ -781,4 +781,8 @@
     <string name="doze_trigger_motion_summary_on">Doze pulse will be triggered by pick up gesture/significant motion sensor and notifications</string>
     <string name="doze_trigger_motion_summary_off">Doze pulse will only be triggered by notifications</string>
 
+    <!-- QuickSettings tiles -->
+    <string name="qs_screenshot_tile">Screenshot</string>
+    <string name="qs_sync_tile">Sync</string>
+
 </resources>
