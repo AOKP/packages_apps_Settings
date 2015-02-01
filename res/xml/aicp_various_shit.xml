@@ -18,11 +18,6 @@
         android:title="@string/various_shit_title"
         android:key="various_shit_screen">
 
-    <PreferenceCategory
-        android:key="lockscreen_category"
-        android:title="@string/lockscreen_category" >
-    </PreferenceCategory>
-
     <!-- Disable camera swipe -->
     <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
         android:key="camera_widget_hide"
@@ -77,6 +72,12 @@
         android:key="aicp_apps_category"
         android:title="@string/aicp_apps_category" >
     </PreferenceCategory>
+
+    <!-- Custom bootanim -->
+    <Preference
+        android:key="custom_bootanimation"
+        android:title="@string/custom_bootanimation_title"
+        android:summary="@string/custom_bootanimation_summary" />
 
     <!-- LockClock settings -->
     <PreferenceScreen
