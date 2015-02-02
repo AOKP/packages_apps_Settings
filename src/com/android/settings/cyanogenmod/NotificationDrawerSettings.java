@@ -15,6 +15,7 @@
  */
 package com.android.settings.cyanogenmod;
 
+import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.UserHandle;
@@ -27,15 +28,22 @@ import android.provider.Settings;
 import android.text.TextUtils;
 import android.view.View;
 
+import android.provider.SearchIndexableResource;
+
 import com.android.internal.widget.LockPatternUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.cyanogenmod.qs.QSTiles;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.search.Indexable;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import java.util.Locale;
 
-public class NotificationDrawerSettings extends SettingsPreferenceFragment
-            implements OnPreferenceChangeListener {
+public class NotificationDrawerSettings extends SettingsPreferenceFragment implements Indexable,
+            OnPreferenceChangeListener {
 
     public static final String TAG = "QsSettings";
 
@@ -176,4 +184,25 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment
                 : getResources().getString(R.string.qs_brightness_slider_disabled);
         mBrightnessSlider.setSummary(summary);
     }
+
+    public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider() {
+                @Override
+                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
+                                                                            boolean enabled) {
+                    ArrayList<SearchIndexableResource> result =
+                            new ArrayList<SearchIndexableResource>();
+
+                    SearchIndexableResource sir = new SearchIndexableResource(context);
+                    sir.xmlResId = R.xml.notification_drawer_settings;
+                    result.add(sir);
+
+                    return result;
+                }
+
+                @Override
+                public List<String> getNonIndexableKeys(Context context) {
+                    return new ArrayList<String>();
+                }
+            };
 }
