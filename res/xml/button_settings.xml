@@ -40,6 +40,12 @@
             android:title="@string/navbar_style_dimen_title"
             android:dependency="enable_nav_bar" />
 
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="navigation_bar_tint"
+            android:title="@string/navbar_button_tint_title"
+            android:defaultValue="#ffffff"
+            android:dependency="enable_nav_bar" />
+
         <PreferenceScreen
             android:key="navigation_bar"
             android:fragment="com.android.settings.cyanogenmod.NavBar"
