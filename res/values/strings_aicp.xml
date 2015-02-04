@@ -674,7 +674,7 @@
 
     <!-- Dialer lockscreen swipe -->
     <string name="dialer_widget_hide">Disable dialer shortcut</string>
-    <string name="dialer_widget_hide_summary">Allows you to disable swipe to open dialer in lock screen.\nSystemUI will restart.</string>
+    <string name="dialer_widget_hide_summary">Allows you to disable swipe to open dialer in lock screen.</string>
 
     <!-- Lockscreen weather -->
     <string name="lockscreen_weather_title">Lock screen weather</string>

@@ -206,10 +206,6 @@ public class VariousShit extends SettingsPreferenceFragment
                 com.android.internal.R.bool.config_voice_capable);
         if (!IsVoiceCapable) {
             mVariousShitScreen.removePreference(mDialerWidgetHide);
-        } else {
-            mDialerWidgetHide.setChecked(Settings.System.getIntForUser(resolver,
-                    Settings.System.DIALER_WIDGET_HIDE, 0, UserHandle.USER_CURRENT) == 1);
-            mDialerWidgetHide.setOnPreferenceChangeListener(this);
         }
 
         // Lockscreen weather
@@ -285,11 +281,6 @@ public class VariousShit extends SettingsPreferenceFragment
                     Settings.System.HIDDEN_SHIT,
                     (Boolean) objValue ? 1 : 0);
             return true;
-        } else if (preference == mDialerWidgetHide) {
-            boolean value = (Boolean) objValue;
-            Settings.System.putIntForUser(getActivity().getContentResolver(),
-                    Settings.System.DIALER_WIDGET_HIDE, value ? 1 : 0, UserHandle.USER_CURRENT);
-            Helpers.restartSystem();
         } else if (preference == mLockscreenWeather) {
             boolean value = (Boolean) objValue;
             Settings.System.putIntForUser(getActivity().getContentResolver(),
