@@ -64,6 +64,11 @@
             android:fragment="com.android.settings.aicp.NavBarDimensions"
             android:title="@string/navbar_style_dimen_title" />
 
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="navigation_bar_tint"
+            android:title="@string/navbar_button_tint_title"
+            android:defaultValue="#ffffff" />
+
         <com.android.settings.cyanogenmod.SecureSettingSwitchPreference
             android:key="search_panel_enabled"
             android:title="@string/navigation_ring_enable_title"

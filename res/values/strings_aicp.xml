@@ -780,4 +780,7 @@
     <string name="qs_sync_tile">Sync</string>
     <string name="qs_tile_powermenu">Power Menu</string>
 
+    <!-- Navigation bar button color -->
+    <string name="navbar_button_tint_title">Navigation button tint</string>
+
 </resources>
