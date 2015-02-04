@@ -17,10 +17,9 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <SwitchPreference
-        android:key="heads_up_swipe_action"
-        android:title="@string/heads_up_swipe_title"
-        android:summary="@string/heads_up_swipe_summary"
-        android:defaultValue="true" />
+        android:key="heads_up_dismiss_on_remove"
+        android:title="@string/heads_up_dismiss_on_remove_title"
+        android:defaultValue="false" />
 
     <ListPreference
         android:key="heads_up_time_out"

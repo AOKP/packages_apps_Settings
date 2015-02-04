@@ -33,6 +33,7 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceGroup;
+import android.preference.SwitchPreference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
 import android.text.TextUtils;
@@ -66,8 +67,10 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
     private static final int DIALOG_BLACKLIST_APPS = 1;
 
     private static final String PREF_HEADS_UP_TIME_OUT = "heads_up_time_out";
+    private static final String PREF_HEADS_UP_DISMISS_ON_REMOVE = "heads_up_dismiss_on_remove";
 
     private ListPreference mHeadsUpTimeOut;
+    private SwitchPreference mHeadsUpDismissOnRemove;
 
     private PackageListAdapter mPackageAdapter;
     private PackageManager mPackageManager;
@@ -83,6 +86,8 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
 
     private BaseSystemSettingSwitchBar mEnabledSwitch;
     private boolean mLastEnabledState;
+
+    private boolean mHeadsUpDismiss;
 
     private ViewGroup mPrefsContainer;
     private View mDisabledText;
@@ -101,6 +106,12 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
         } catch (Exception e) {
             return;
         }
+
+        mHeadsUpDismissOnRemove = (SwitchPreference) findPreference(PREF_HEADS_UP_DISMISS_ON_REMOVE);
+        mHeadsUpDismissOnRemove.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.HEADS_UP_DISMISS_ON_REMOVE, mHeadsUpDismiss ? 1 : 0) == 1);
+        mHeadsUpDismissOnRemove.setOnPreferenceChangeListener(this);
+        updateHeadsUpDismissOnRemoveSummary(mHeadsUpDismiss);
 
         int defaultTimeOut = systemUiResources.getInteger(systemUiResources.getIdentifier(
                     "com.android.systemui:integer/heads_up_notification_decay", null, null));
@@ -306,7 +317,13 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mHeadsUpTimeOut) {
+        if (preference == mHeadsUpDismissOnRemove) {
+            boolean checked = (Boolean) newValue;
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.HEADS_UP_DISMISS_ON_REMOVE, checked ? 1 : 0);
+            updateHeadsUpDismissOnRemoveSummary(checked);
+            return true;
+        } else if (preference == mHeadsUpTimeOut) {
             int headsUpTimeOut = Integer.valueOf((String) newValue);
             Settings.System.putInt(getContentResolver(),
                     Settings.System.HEADS_UP_NOTIFCATION_DECAY,
@@ -466,6 +483,16 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
 
         builder.show();
         return true;
+    }
+
+    private void updateHeadsUpDismissOnRemoveSummary(boolean checked) {
+        if (checked) {
+            mHeadsUpDismissOnRemove.setSummary(
+                    getResources().getString(R.string.heads_up_dismiss_on_remove_summary_enabled));
+        } else {
+            mHeadsUpDismissOnRemove.setSummary(
+                    getResources().getString(R.string.heads_up_dismiss_on_remove_summary_disabled));
+        }
     }
 
     private void updateHeadsUpTimeOutSummary(int value) {
