@@ -898,7 +898,6 @@
 
     <string name="lockscreen_settings_title">Lock screen</string>
     <string name="lockscreen_targets_message">Lock screen targets</string>
-    <string name="lockscreen_targets_message">Lock screen shortcuts</string>
     <string name="lockscreen_default_target">Default</string>
     <string name="lockscreen_none_target">None</string>
     <string name="lockscreen_message">Tap an icon on the left or right to reassign a lock screen shortcut.</string>

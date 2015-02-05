@@ -18,18 +18,6 @@
         android:title="@string/various_shit_title"
         android:key="various_shit_screen">
 
-    <!-- Disable camera swipe -->
-    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-        android:key="camera_widget_hide"
-        android:title="@string/camera_widget_hide"
-        android:summary="@string/camera_widget_hide_summary" />
-
-    <!-- Disable dialer swipe -->
-    <com.android.settings.cyanogenmod.SecureSettingSwitchPreference
-        android:key="dialer_widget_hide"
-        android:title="@string/dialer_widget_hide"
-        android:summary="@string/dialer_widget_hide_summary" />
-
     <!-- Proximity on wake -->
     <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
         android:key="proximity_on_wake"
