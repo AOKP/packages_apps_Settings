@@ -65,7 +65,7 @@ public class ButtonBacklightBrightness extends DialogPreference implements
 
         if (isKeyboardSupported(context)) {
             mKeyboardBrightness = new BrightnessControl(
-                    Settings.System.KEYBOARD_BRIGHTNESS, false);
+                    Settings.Secure.KEYBOARD_BRIGHTNESS, false);
             mActiveControl = mKeyboardBrightness;
         }
         if (isButtonSupported(context)) {
@@ -76,7 +76,7 @@ public class ButtonBacklightBrightness extends DialogPreference implements
                     com.android.internal.R.integer.config_buttonBrightnessSettingDefault);
 
             mButtonBrightness = new BrightnessControl(
-                    Settings.System.BUTTON_BRIGHTNESS, isSingleValue, defaultBrightness);
+                    Settings.Secure.BUTTON_BRIGHTNESS, isSingleValue, defaultBrightness);
             mActiveControl = mButtonBrightness;
         }
 
