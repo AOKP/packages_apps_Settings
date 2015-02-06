@@ -775,5 +775,17 @@
     <string name="install_file_manager_error">Nincs alkalmazás amivel megtalálod a zip fájlt. Telepíts egy fájlkezelőt.</string>
     <string name="apply">Alkalmaz</string>
 
+    <!-- Doze options -->
+    <string name="display_category_doze_options_title">Környezeti kijelző (szendergés) opciók</string>
+    <string name="doze_timeout_title">Szendergés impulzus késleltetése</string>
+    <string name="doze_timeout_summary">Idő ameddig a képernyőn marad az értesítési impulzus</string>
+    <string name="doze_trigger_motion_title">Szendergés KapcsolóÉrzékelő</string>
+    <string name="doze_trigger_motion_summary_on">Szendergés impulzusát kiváltja felvételi gesztus/jelentős mozgás érzékelés és értesítések</string>
+    <string name="doze_trigger_motion_summary_off">Szendergés impulzusát csak értesítés váltja ki</string>
+
+    <!-- QuickSettings tiles -->
+    <string name="qs_screenshot_tile">Képernyőkép</string>
+    <string name="qs_sync_tile">Szinkronizálás</string>
+
 
 </resources>
