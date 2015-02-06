@@ -16,9 +16,18 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <SwitchPreference
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
         android:key="heads_up_dismiss_on_remove"
         android:title="@string/heads_up_dismiss_on_remove_title"
+        android:summaryOn="@string/heads_up_dismiss_on_remove_summary_enabled"
+        android:summaryOff="@string/heads_up_dismiss_on_remove_summary_disabled"
+        android:defaultValue="false" />
+
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+        android:key="heads_up_touch_outside"
+        android:title="@string/heads_up_touch_outside_title"
+        android:summaryOn="@string/heads_up_touch_outside_summary_enabled"
+        android:summaryOff="@string/heads_up_touch_outside_summary_disabled"
         android:defaultValue="false" />
 
     <ListPreference
