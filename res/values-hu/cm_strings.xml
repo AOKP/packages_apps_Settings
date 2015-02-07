@@ -702,15 +702,15 @@
     <string name="location_category_enhanced_location">Enhanced location (IZat)</string>
 
     <!-- [CHAR LIMIT=NONE] App ops settings summary, on main settings screen. If clicked, the user is taken to a settings screen for app operations -->
-    <string name="app_ops_settings_summary">View or change app permissions</string>
+    <string name="app_ops_settings_summary">Nézd vagy szerkesztd az alkalmazás engedélyeket</string>
 
     <!-- Setting checkbox summary when device is in Charging mode -->
-    <string name="enable_adb_summary_charging">Device is in Charging mode, USB debugging is disabled</string>
+    <string name="enable_adb_summary_charging">Készülék Töltési módban, USB hibakeresés tiltva</string>
 
     <!-- Title of checkbox setting that enable quickboot. [CHAR LIMIT=32] -->
-    <string name="enable_quickboot_title">Enable QuickBoot mode</string>
+    <string name="enable_quickboot_title">Engedélyezi a GyorsBoot opciót</string>
     <!-- Summary of checkbox setting that enable quickboot. [CHAR LIMIT=64] -->
-    <string name="enable_quickboot_summary">Put device into QuickBoot mode instead of normal power off</string>
+    <string name="enable_quickboot_summary">Tedd az eszközt GyorsBoot módba a normál kikapcsolás helyett</string>
 
     <string name="data_usage_tab_slot">SIM <xliff:g id="sub">%d</xliff:g></string>
 
@@ -738,8 +738,8 @@
     <string name="usb_sdcard_title">Háttértár (UMS)</string>
     <string name="usb_sdcard_summary">Lehetővé teszi, hogy úgy mozgasson fájlokat a számítógép és az SD kártya között, mint egy flash eszköz</string>
 
-    <string name="external_storage_turn_on">External storage has been turned on</string>
-    <string name="external_storage_turn_off">External storage has been turned off</string>
+    <string name="external_storage_turn_on">Külső tároló be van kapcsolva</string>
+    <string name="external_storage_turn_off">Külső tároló ki van kapcsolva</string>
 
     <!-- Protected Apps -->
     <string name="menu_hidden_apps_delete">Alaphelyzet</string>
@@ -766,7 +766,7 @@
 
     <!-- Voice Wakeup -->
     <string name="voice_wakeup_settings_title">Hang felélesztés</string>
-    <string name="voice_wakeup_retrain_title">Átképzi a hamgod</string>
+    <string name="voice_wakeup_retrain_title">Átképzi a hangod</string>
     <string name="voice_wakeup_activity_title">Tevékenység elindítására</string>
     <string name="voice_wakeup_default_activity">Google Now</string>
 
@@ -836,7 +836,7 @@
 
     <!-- Advanced reboot options -->
     <string name="advanced_reboot_title">Haladó újarindítás</string>
-    <string name="advanced_reboot_summary">When unlocked, include options in the power menu for rebooting into recovery, bootloader or performing a soft reboot</string>
+    <string name="advanced_reboot_summary">Feloldva lehetőség nyílik a kikapcsoló menüben az újraindítás recovery-ben, bootloader-ben vagy lágy újraindításban.</string>
 
     <!-- Notification drawer -->
     <string name="notification_drawer_title">Értesítési fiók</string>
@@ -914,13 +914,14 @@
     <string name="lockscreen_settings_title">Zárképernyő</string>
     <string name="lockscreen_targets_message">Zárképernyő elemek</string>
     <string name="lockscreen_default_target">Alapértelmezett</string>
+    <string name="lockscreen_none_target">Nincs</string>
     <string name="lockscreen_message">Érínts meg egy ikont a jobb vagy bal oldalon, hogy átrendezd a zárképernyő parancsikont.</string>
     <string name="lockscreen_choose_action_title">Művelet választás</string>
     <!-- WhisperPush -->
     <string name="whisperpush_title">Titkosított üzenet</string>
     <string name="whisperpush_summary">Kezelje a titkosított SMS beállításokat</string>
-    <string name="whisperpush_registration_title">Regisztrálás</string>
-    <string name="whisperpush_registration_summary">Regisztrálj WhisperPush-ra engedélyezve a titkosított SMS-t.</string>
-    <string name="whisperpush_identitykey_title">Felülvizsgálja az azonosító kulcsokat</string>
+    
+    <string name="navigation_ring_title">Navigációs gyűrű elemek</string>
+    <string name="navigation_ring_message">Nyomj a szerkesztés ikonra, szerkeszteni a navigációs gyűrűt.\n\nVálassz egy elemet konfigurálni a viselkedését.\n\nÉrintsd meg a jelölő ikont a módosítások mentéséhez, vagy állítsd vissza alaphelyzetbe a beállításokat.</string>
 
 </resources>
