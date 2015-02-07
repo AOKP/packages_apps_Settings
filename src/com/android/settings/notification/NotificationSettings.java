@@ -38,6 +38,7 @@ import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceCategory;
 import android.preference.SeekBarVolumizer;
+import android.preference.SwitchPreference;
 import android.preference.TwoStatePreference;
 import android.provider.MediaStore;
 import android.provider.OpenableColumns;
@@ -79,6 +80,7 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
     private static final String KEY_BATTERY_LIGHT = "battery_light";
     private static final String PREF_HEADS_UP_SNOOZE_TIME = "heads_up_snooze_time";
     private static final String PREF_HEADS_UP_TIME_OUT = "heads_up_time_out";
+    private static final String PREF_HEADS_UP_SWITCH = "heads_up_switch";
 
     private static final int SAMPLE_CUTOFF = 2000;  // manually cap sample playback at 2 seconds
 
@@ -115,6 +117,7 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
 
     private ListPreference mHeadsUpSnoozeTime;
     private ListPreference mHeadsUpTimeOut;
+    private SwitchPreference mHeadsUpSwitch;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -199,6 +202,25 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
         mHeadsUpTimeOut.setValue(String.valueOf(headsUpTimeOut));
         updateHeadsUpTimeOutSummary(headsUpTimeOut);
 
+        mHeadsUpSwitch = (SwitchPreference) findPreference(PREF_HEADS_UP_SWITCH);
+        mHeadsUpSwitch.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+            @Override
+            public boolean onPreferenceChange(Preference preference, Object newValue) {
+                Settings.System.putInt(getContentResolver(),
+                    Settings.System.HEADS_UP_SWITCH,
+                    (Boolean) newValue ? 1 : 0);
+                int headsUpSwitch = Settings.System.getInt(getContentResolver(),
+                        Settings.System.HEADS_UP_SWITCH, 1);
+                updateHeadsUpSwitchSummary(headsUpSwitch);
+                return Settings.System.putInt(getContentResolver(),
+                        Settings.System.HEADS_UP_SWITCH,
+                        headsUpSwitch);
+            }
+        });
+        final int headsUpSwitch= Settings.System.getInt(getContentResolver(),
+                Settings.System.HEADS_UP_SWITCH, 1);
+        updateHeadsUpSwitchSummary(headsUpSwitch);
+
     }
 
     @Override
@@ -215,6 +237,13 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
         super.onPause();
         mVolumeCallback.stopSample();
         mSettingsObserver.register(false);
+    }
+
+    private void updateHeadsUpSwitchSummary(int value) {
+        String summary = value != 0
+                ? getResources().getString(R.string.heads_up_switch_enabled)
+                : getResources().getString(R.string.heads_up_switch_disabled);
+        mHeadsUpSwitch.setSummary(summary);
     }
 
     private void updateHeadsUpSnoozeTimeSummary(int value) {
