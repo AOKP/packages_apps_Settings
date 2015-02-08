@@ -909,6 +909,7 @@
     <string name="whisperpush_title">WhisperPush</string>
     <string name="whisperpush_summary">Manage secure SMS settings</string>
 
+    <string name="navigation_ring_enable_title">Enable navigation rings</string>
     <string name="navigation_ring_title">Navigation ring targets</string>
     <string name="navigation_ring_message">Tap the edit icon to open the navigation ring for editing.\n\nSelect a target to configure its behavior.\n\nTap the \'\u2713\' icon to save your changes, or \'Restore defaults\' to reset the settings to defaults.</string>
 
