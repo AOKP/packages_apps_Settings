@@ -167,7 +167,8 @@
         <SwitchPreference
                 android:key="heads_up_switch"
                 android:title="@string/heads_up_switch"
-                android:defaultValue="true" />
+                android:defaultValue="true"
+                android:disableDependentsState="false" />
 
         <!-- Heads Up Snooze-->
         <ListPreference
