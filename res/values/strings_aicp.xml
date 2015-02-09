@@ -462,8 +462,8 @@
     <string name="heads_up_time_out_8sec">8 seconds</string>
     <string name="heads_up_time_out_10sec">10 seconds</string>
     <string name="heads_up_switch">Heads up</string>
-    <string name="heads_up_switch_enabled">Heads up enabled</string>
-    <string name="heads_up_switch_disabled">Heads up disabled</string>
+    <string name="heads_up_switch_enabled">Enabled</string>
+    <string name="heads_up_switch_disabled">Disabled</string>
 
     <!-- Gesture Anywhere -->
     <string name="gesture_anywhere_title">Gesture Anywhere</string>
