@@ -104,6 +104,14 @@ public class VariousShit extends SettingsPreferenceFragment
     private static final String KEY_HIDDEN_SHIT = "hidden_shit";
     private static final String KEY_HIDDEN_SHIT_UNLOCKED = "hidden_shit_unlocked";
     private static final String KEY_HIDDEN_IMG = "hidden_img";
+    private static final String KEY_HIDDEN_YOGA = "hidden_anim";
+
+    // Package name of the yoga
+    public static final String YOGA_PACKAGE_NAME = "com.android.settings";
+    // Intent for launching the yoga actvity
+    public static Intent INTENT_YOGA = new Intent(Intent.ACTION_MAIN)
+            .setClassName(YOGA_PACKAGE_NAME, YOGA_PACKAGE_NAME + ".aicp.HiddenAnimActivity");
+
     private static final String BACKUP_PATH = new File(Environment
             .getExternalStorageDirectory(), "/AICP_ota").getAbsolutePath();
 
@@ -233,9 +241,7 @@ public class VariousShit extends SettingsPreferenceFragment
             System.arraycopy(mHits, 1, mHits, 0, mHits.length-1);
             mHits[mHits.length-1] = SystemClock.uptimeMillis();
             if  (mHits[0] >= (SystemClock.uptimeMillis()-500)) {
-                Uri uri = Uri.parse("http://gerrit.aicp-rom.com");
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(intent);
+                startActivity(INTENT_YOGA);
             }
         } else if (preference == mCustomBootAnimation) {
             openBootAnimationDialog();
