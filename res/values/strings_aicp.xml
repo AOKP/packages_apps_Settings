@@ -800,4 +800,8 @@
     <string name="animation_duration_title">Animation duration</string>
     <string name="animation_duration_default">Default</string>
 
+    <!-- The volume key answer -->
+    <string name="volume_answer_call_title">Volume key Answer</string>
+    <string name="volume_answer_call_summary">Volume up key Answer</string>
+
 </resources>
