@@ -924,4 +924,9 @@
     <string name="navigation_ring_title">Navigációs gyűrű elemek</string>
     <string name="navigation_ring_message">Nyomj a szerkesztés ikonra, szerkeszteni a navigációs gyűrűt.\n\nVálassz egy elemet konfigurálni a viselkedését.\n\nÉrintsd meg a jelölő ikont a módosítások mentéséhez, vagy állítsd vissza alaphelyzetbe a beállításokat.</string>
 
+  <plurals name="show_dev_countdown_cm">
+    <item quantity="one">Ön <xliff:g id="step_count">%1$d</xliff:g> lépésre van attól, hogy engedélyezze a fejlesztői beállításokat.</item>
+    <item quantity="other">Ön <xliff:g id="step_count">%1$d</xliff:g> lépésre van attól, hogy engedélyezze a fejlesztői beállításokat.</item>
+  </plurals>
+
 </resources>

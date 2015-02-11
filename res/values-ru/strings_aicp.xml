@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2007 The Android Open Source Project
+
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
+	 
           http://www.apache.org/licenses/LICENSE-2.0
+		  
      Unless required by applicable law or agreed to in writing, software
      distributed under the License is distributed on an "AS IS" BASIS,
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -150,19 +153,11 @@
   <string name="battery_percentage_title">Батарея в процентах</string>
   <string name="battery_percentage_summary">Показать проценты на иконке</string>
   <string name="proximity_on_wake_title">Датчик приближения</string>
-  <string name="proximity_on_wake_summary">проверять датчик приближения при пробуждении.</string>
+  <string name="proximity_on_wake_summary">Проверять датчик приближения при пробуждении.</string>
   <string name="status_bar_show_weather_category">Погода</string>
   <string name="aicp_notifications_category">Уведомления</string>
   <string name="navigation_bar_category">Навигационный бар</string>
   <string name="aicp_extras_category">Расширенные настройки</string>
-  
-  <!-- Advanced reboot options -->
-  <string name="advanced_reboot_title">Расширенная перезагрузка</string>
-  <string name="advanced_reboot_summary">Добавить опции перезагрузки в рекавери и бутлоадер</string>
-  <string name="advanced_reboot_dialog_title">Расширенное меню перезагрузки</string>
-  <string name="advanced_reboot_disabled">Отключено</string>
-  <string name="advanced_reboot_hide_on_keyguard">Не показывать на заблокированном экране</string>
-  <string name="advanced_reboot_show_always">Всегда показывать</string>
   
   <!-- Per app controls for LP keyguard notifications -->
   <string name="app_notification_show_on_keyguard_title">Показывать на экране блокировки</string>
@@ -177,8 +172,6 @@
   <!-- Color Picker -->
   <string name="dialog_color_picker">Выбор цвета</string>
   <string name="press_color_to_apply">Нажмите на цвет, чтобы применить</string>
-  <string name="arrow_right" translatable="false">→</string>
-  <string name="arrow_down" translatable="false">↓</string>
   <string name="hex">Hex:</string>
   <string name="hex_hint">#ff000000</string>
   <string name="set">Установить</string>
@@ -223,7 +216,7 @@
   <string name="clock_date_format_custom">Свой формат даты</string>
   <string name="status_bar_clock_style_reset_message">Восстановить цвет часов?</string>
   <string name="status_bar_ticker_title">Счетчик уведомлений</string>
-  <string name="status_bar_ticker_summary">Цвет уведомлений в строке состояния</string>
+  <string name="status_bar_ticker_summary">Текстовая анимация уведомлений в строке состояния</string>
   <string name="status_bar_toggle_brightness">Управление яркостью</string>
   <string name="status_bar_toggle_brightness_summary">Менять яркость свайпом по строке состояния</string>
   <string name="status_bar_toggle_info">Автоматическое регулирование подсветки включено</string>
@@ -249,6 +242,7 @@
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">Двойное нажатие для сна</string>
   <string name="double_tap_to_sleep_summary">Двойное нажатие по статусной строке отправляет устройство в сон</string>
+  
   <string name="block_on_secure_keyguard_title">Отключить на экране блокировки</string>
   <string name="block_on_secure_keyguard_summary">Отлючить быстрые настройки на экране блокировки</string>
   
@@ -349,6 +343,7 @@
   <string name="shortcut_action_media_play_pause">Музыка-воспр./пауза</string>
   <string name="shortcut_action_media_previous">Музыка-предыдущий трек</string>
   <string name="shortcut_action_wake_device">Будить устройство</string>
+  
   <string name="shortcut_action_longpress">Длинное нажатие:</string>
   <string name="shortcut_action_select_action_longpress">Выберите действие для долгого нажатия</string>
   <string name="shortcut_action_select_action">Выберите действие:</string>
@@ -369,6 +364,8 @@
   <string name="shortcut_action_help_main">To add a %1$s, select the Add icon. Once a %1$s is added, selecting the row will change the target%2$s\n\nTo remove a %1$s, swipe the row horizontally left or right. Re-order a %1$s in the list by vertically dragging the anchor on the left.\n\nTo clear or reset to defaults, select the reset option.</string>
   <string name="shortcut_action_help_delete_last_entry">Removing every %1$s in the list will disable the feature entirely.</string>
   <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Removing every %1$s in the list will disable the second pie layer entirely.</string>
+  
+  
   <string name="shortcuts_applications">Приложения</string>
   <string name="shortcuts_select_custom_app_title">Выберите свое приложение</string>
   <string name="shortcuts_icon_picker_type">Выберите тип иконки:</string>
@@ -376,6 +373,7 @@
   <string name="shortcuts_icon_presets">Системные иконки</string>
   <string name="shortcuts_icon_custom">Галерея</string>
   <string name="shortcuts_icon_picker_choose_icon_title">Выберите иконку</string>
+  
   <string name="shortcuts_icon_picker_alarm">Сигнал</string>
   <string name="shortcuts_icon_picker_andy">Andy</string>
   <string name="shortcuts_icon_picker_battery">Батарея</string>
@@ -456,12 +454,13 @@
   <string name="heads_up_snooze_20min">20 минут</string>
   <string name="heads_up_time_out_title">Тайм аут</string>
   <string name="heads_up_time_out_summary">Уведомление HeadsUp будет показываться <xliff:g id="number">%d</xliff:g> секунд</string>
-  <string name="heads_up_time_out_never_summary">Уведомление HeadsUp будет показано пока не удалите</string>
   <string name="heads_up_time_out_4sec">4 секунды</string>
   <string name="heads_up_time_out_6sec">6 секунд</string>
   <string name="heads_up_time_out_8sec">8 секунд</string>
   <string name="heads_up_time_out_10sec">10 секунд</string>
-  <string name="heads_up_time_out_never">Никогда</string>
+  <string name="heads_up_switch">Heads up</string>
+  <string name="heads_up_switch_enabled">Включить</string>
+  <string name="heads_up_switch_disabled">Выключить</string>
   
   <!-- Gesture Anywhere -->
   <string name="gesture_anywhere_title">Жесты AnyWhere</string>
@@ -610,10 +609,12 @@
   <string name="lockpassword_confirm_your_gesture_header">Подтвердите жест</string>
   <!-- Header on first screen of choose gesture flow [CHAR LIMIT=30] -->
   <string name="lockpassword_choose_your_gesture_header">Нарисуйте жест</string>
+  
   <!-- Title for preference that guides the user through creating an unlock gesture [CHAR LIMIT=22] -->
   <string name="unlock_set_unlock_gesture_title">Жесты</string>
   <!-- Title for preference that guides the user through creating an unlock gesture [CHAR LIMIT=45] -->
   <string name="unlock_set_unlock_gesture_summary">Низкая безопасность, экпериментально</string>
+  
   <!-- Summary for "Configure lockscreen" when security gesture is enabled [CHAR LIMIT=45] -->
   <string name="unlock_set_unlock_mode_gesture">Жесты</string>
   
@@ -665,14 +666,6 @@
   <string name="volume_steps_7">7</string>
   <string name="volume_steps_5">5</string>
   
-  <!-- Camera lockscreen swipe -->
-  <string name="camera_widget_hide">Отключить ярлык камеры</string>
-  <string name="camera_widget_hide_summary">Позволяет, Вам отключить swype открытия камеры на экране блокировки.</string>
-
-  <!-- Dialer lockscreen swipe -->
-  <string name="dialer_widget_hide">Отключить ярлык телефона</string>
-  <string name="dialer_widget_hide_summary">Позволяет, Вам отключить swype открытия телефона на экране блокировки.</string>
-
   <!-- Lockscreen weather -->
   <string name="lockscreen_weather_title">Погода на экране блокировки</string>
   <string name="lockscreen_weather_summary">SystemUI будет перезапущен!</string>
@@ -717,6 +710,7 @@
   <string name="omniswitch_start_settings_summary">Открыть настройки OmniSwitch</string>
   <string name="omniswitch_first_time_title">Информация</string>
   <string name="omniswitch_first_time_message">Убедитесь, что у вас активирован OmniSwitch. Вы можете это сделать в \"Настройках\"</string>
+  
   <string name="alarm_ringtone_title">Рингтон тревоги по умолчанию</string>
   
   <!-- Setting option name to change LCD density -->
@@ -726,7 +720,7 @@
   <string name="custom_density_title">Измнените все как, Вам нравится</string>
   <string name="custom_density_summary">Если, Вы столкнетесь с проблемами совместимости ПО в Play Store, в таком случае перепроверьте стоит ли у вас, модифицированный Play Store.</string>
   <string name="custom_density_summary_invalid">"INVALID DENSITY!"</string>
-  <string name="custom_density">не стандартное</string>
+  <string name="custom_density">Не стандартное</string>
   <string name="set_custom_density_title">Установить не стандартную плотность экрана</string>
   <string name="set_custom_density_set">Установить</string>
   <string name="custom_density_dialog_title">ОСТОРОЖНО!</string>
@@ -736,6 +730,7 @@
   <!-- Privacy guard notification -->
   <string name="privacy_guard_notification_title">Уведомления</string>
   <string name="privacy_guard_notifiation_summary">Показывать уведомление если режим безопасности активирован</string>
+  
   <!-- Text for forcing expanded notifications -->
   <string name="disable_fc_notifications_title">Отключить уведомления FC</string>
   <string name="disable_fc_notifications_summary">Это спрячет все уведомления связанные с FC(force close)</string>
@@ -778,15 +773,8 @@
 
   <!-- QuickSettings tiles -->
   <string name="qs_screenshot_tile">Скриншот</string>
+  <string name="qs_screenrecord_tile">Запись с экрана</string>
   <string name="qs_sync_tile">Синхронизация</string>
+  <string name="qs_tile_powermenu">Меню питания</string>
   
-  <!-- Power menu  -->
-  <string name="power_menu_settings">Меню выключения</string>
-  <string name="powermenu_screenshot">Скриншот</string>
-  <string name="powermenu_power">Выключение</string>
-  <string name="powermenu_reboot">Перезагрузка</string>
-  <string name="powermenu_airplane">В самолете</string>
-  <string name="powermenu_settings">Настройки</string>
-  <string name="powermenu_soundpanel">Звуковая панель</string>
-  <string name="powermenu_screenrecord">Запись с экрана</string>
 </resources>
