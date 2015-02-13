@@ -457,13 +457,15 @@
     <string name="heads_up_snooze_20min">20 minutes</string>
     <string name="heads_up_time_out_title">Time out</string>
     <string name="heads_up_time_out_summary">Heads up notification will show up for <xliff:g id="number">%d</xliff:g> seconds</string>
+    <string name="heads_up_time_out_zero">Now disable heads up.</string>
+    <string name="heads_up_time_out_0sec">0 sec. Use when heads up is disabled</string>
     <string name="heads_up_time_out_4sec">4 seconds</string>
     <string name="heads_up_time_out_6sec">6 seconds</string>
     <string name="heads_up_time_out_8sec">8 seconds</string>
     <string name="heads_up_time_out_10sec">10 seconds</string>
     <string name="heads_up_switch">Heads up</string>
     <string name="heads_up_switch_enabled">Enabled</string>
-    <string name="heads_up_switch_disabled">Disabled</string>
+    <string name="heads_up_switch_disabled">Disabled. Set timeout first to 0s.</string>
 
     <!-- Gesture Anywhere -->
     <string name="gesture_anywhere_title">Gesture Anywhere</string>
