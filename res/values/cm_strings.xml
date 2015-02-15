@@ -246,6 +246,12 @@
     <!--- Tap To Wake -->
     <string name="double_tap_to_wake_title">Double-tap to wake</string>
 
+    <!--- Sweep To Wake -->
+    <string name="sweep_to_wake_title">Sweep to wake</string>
+
+    <!--- Sweep To Sleep -->
+    <string name="sweep_to_sleep_title">Sweep to sleep</string>
+
     <!-- Privacy Settings Header item -->
     <string name="privacy_settings_cyanogenmod_title">Privacy</string>
 

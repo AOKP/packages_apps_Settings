@@ -126,6 +126,14 @@
                     android:title="@string/double_tap_to_wake_title" />
 
                 <SwitchPreference
+                    android:key="sweep_wake_gesture"
+                    android:title="@string/sweep_to_wake_title" />
+
+                <SwitchPreference
+                    android:key="sweep_sleep_gesture"
+                    android:title="@string/sweep_to_sleep_title" />
+
+                <SwitchPreference
                     android:key="adaptive_backlight"
                     android:title="@string/adaptive_backlight_title"
                     android:summary="@string/adaptive_backlight_summary"
