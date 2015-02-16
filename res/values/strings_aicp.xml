@@ -770,14 +770,6 @@
     <string name="install_file_manager_error">No application found to pick the zip file. Please install a filemanager.</string>
     <string name="apply">Apply</string>
 
-    <!-- Doze options -->
-    <string name="display_category_doze_options_title">Ambient display (doze) options</string>
-    <string name="doze_timeout_title">Doze pulse timeout</string>
-    <string name="doze_timeout_summary">Time that the screen stays on for notification pulse</string>
-    <string name="doze_trigger_motion_title">Doze TriggerSensors</string>
-    <string name="doze_trigger_motion_summary_on">Doze pulse will be triggered by pick up gesture/significant motion sensor and notifications</string>
-    <string name="doze_trigger_motion_summary_off">Doze pulse will only be triggered by notifications</string>
-
     <!-- QuickSettings tiles -->
     <string name="qs_screenshot_tile">Screenshot</string>
     <string name="qs_screenrecord_tile">Screenrecord</string>
