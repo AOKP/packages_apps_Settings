@@ -51,6 +51,12 @@
                 android:title="@string/lift_to_wake_title"
                 android:persistent="false" />
 
+        <SwitchPreference
+                android:key="doze"
+                android:title="@string/doze_title"
+                android:summary="@string/doze_summary"
+                android:persistent="false" />
+
         <com.android.settings.FontDialogPreference
                 android:key="font_size"
                 android:title="@string/title_font_size"
@@ -73,25 +79,6 @@
                 android:key="expanded_desktop"
                 android:title="@string/power_menu_expanded_desktop"
                 android:fragment="com.android.settings.applications.ExpandedDesktopPreferenceFragment" />
-
-        <PreferenceCategory
-            android:key="category_doze_options"
-            android:title="@string/display_category_doze_options_title" >
-
-            <SwitchPreference
-                    android:key="doze"
-                    android:title="@string/doze_title"
-                    android:summary="@string/doze_summary"
-                    android:persistent="false" />
-
-            <!-- Ambient display timeout -->
-            <SlimSeekBarPreference
-                    android:key="doze_timeout"
-                    android:title="@string/doze_timeout_title"
-                    android:summary="@string/doze_timeout_summary"
-                    android:dependency="doze" />
-
-         </PreferenceCategory>
 
         <!-- DeviceHandler device specific screen off gesture settings -->
         <Preference
