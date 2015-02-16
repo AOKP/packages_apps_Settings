@@ -297,6 +297,13 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         if (!isPostProcessingSupported()) {
             getPreferenceScreen().removePreference(mScreenColorSettings);
         }
+
+        if (!isAdaptiveBacklightSupported() && !isSunlightEnhancementSupported() &&
+                !isColorEnhancementSupported() && !DisplayColor.isSupported() &&
+                !DisplayGamma.isSupported() && !isTapToWakeSupported() &&
+                !isSweepToWakeSupported() && !isSweepToSleepSupported()) {
+            prefSet.removePreference(advancedPrefs);
+        }
     }
 
     private static boolean allowAllRotations(Context context) {

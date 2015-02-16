@@ -69,6 +69,11 @@
                 settings:keywords="@string/keywords_display_cast_screen"
                 android:fragment="com.android.settings.wfd.WifiDisplaySettings" />
 
+        <PreferenceScreen
+                android:key="expanded_desktop"
+                android:title="@string/power_menu_expanded_desktop"
+                android:fragment="com.android.settings.applications.ExpandedDesktopPreferenceFragment" />
+
         <PreferenceCategory
             android:key="category_doze_options"
             android:title="@string/display_category_doze_options_title" >
@@ -177,10 +182,5 @@
                 android:targetPackage="com.android.settings"
                 android:targetClass="com.android.settings.ScreenColorSettings" />
          </PreferenceScreen>
-
-        <PreferenceScreen
-                android:key="expanded_desktop"
-                android:title="@string/power_menu_expanded_desktop"
-                android:fragment="com.android.settings.applications.ExpandedDesktopPreferenceFragment" />
 
 </PreferenceScreen>
