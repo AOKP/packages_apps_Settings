@@ -104,7 +104,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_SCREEN_OFF_GESTURE_SETTINGS = "screen_off_gesture_settings";
 
     private static final String CATEGORY_ADVANCED = "advanced_display_prefs";
-    private static final String CATEGORY_DOZE = "category_doze_options";
     private static final String KEY_DISPLAY_COLOR = "color_calibration";
     private static final String KEY_DISPLAY_GAMMA = "gamma_tuning";
     private static final String KEY_SCREEN_COLOR_SETTINGS = "screencolor_settings";
@@ -235,7 +234,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 mDozeTimeout.setOnPreferenceChangeListener(this);
             }
         } else {
-            removePreference(CATEGORY_DOZE);
+            removePreference(KEY_DOZE);
+            removePreference(KEY_DOZE_TIMEOUT);
         }
 
         if (RotationPolicy.isRotationSupported(activity)) {
