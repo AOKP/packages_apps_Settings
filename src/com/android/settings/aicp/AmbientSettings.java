@@ -356,6 +356,7 @@ public class AmbientSettings extends SettingsPreferenceFragment implements
     @Override
     public void onPause() {
         super.onPause();
+        updateDozeOptions();
     }
 
     private void updateState() {
