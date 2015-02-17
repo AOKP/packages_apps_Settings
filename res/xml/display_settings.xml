@@ -107,7 +107,8 @@
                 android:title="@string/advanced_settings">
                 <SwitchPreference
                     android:key="double_tap_wake_gesture"
-                    android:title="@string/double_tap_to_wake_title" />
+                    android:title="@string/double_tap_to_wake_title"
+                    android:summary="@string/double_tap_to_wake_summary" />
 
                 <SwitchPreference
                     android:key="sweep_wake_gesture"
