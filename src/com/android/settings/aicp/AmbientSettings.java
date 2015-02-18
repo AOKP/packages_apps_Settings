@@ -72,7 +72,7 @@ public class AmbientSettings extends SettingsPreferenceFragment implements
     private ListPreference mDozePulseVisible;
     private ListPreference mDozePulseOut;
     private ListPreference mDozeShakeThreshold;
-    private SystemCheckBoxPreference mDozeTimeMode;
+    private SystemSettingCheckBoxPreference mDozeTimeMode;
     private ShakeSensorManager mShakeSensorManager;
     private AlertDialog mDialog;
     private Button mShakeFoundButton;
@@ -100,7 +100,7 @@ public class AmbientSettings extends SettingsPreferenceFragment implements
             mDozeListMode = (ListPreference) findPreference(KEY_DOZE_LIST_MODE);
             mDozeListMode.setOnPreferenceChangeListener(this);
 
-            mDozeTimeMode = (SystemCheckBoxPreference) findPreference(KEY_DOZE_TIME_MODE);
+            mDozeTimeMode = (SystemSettingCheckBoxPreference) findPreference(KEY_DOZE_TIME_MODE);
 
             mDozeShakeThreshold = (ListPreference) findPreference(KEY_DOZE_SHAKE_THRESHOLD);
             mDozeShakeThreshold.setOnPreferenceChangeListener(this);
