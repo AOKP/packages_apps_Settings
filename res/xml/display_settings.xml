@@ -33,6 +33,13 @@
                 android:summary="@string/auto_brightness_summary"
                 android:persistent="false" />
 
+        <!-- LiveDisplay -->
+        <PreferenceScreen
+                android:key="live_display"
+                android:title="@string/live_display_title"
+                android:summary="@string/live_display_summary"
+                android:fragment="com.android.settings.livedisplay.LiveDisplay" />
+
         <ListPreference
                 android:key="screen_timeout"
                 android:title="@string/screen_timeout"
@@ -89,18 +96,12 @@
                     android:targetClass="com.slim.device.settings.ScreenOffGestureSettings" />
         </Preference>
 
-        <PreferenceCategory
-            android:key="category_wakeup_options"
-            android:title="@string/display_category_wakeup_options_title" >
-
-            <SwitchPreference
-                android:key="wakeup_when_plugged_unplugged"
-                android:title="@string/wakeup_when_plugged_unplugged_title"
-                android:summary="@string/wakeup_when_plugged_unplugged_summary"
-                android:defaultValue="true"
-                android:persistent="false" />
-
-        </PreferenceCategory>
+        <SwitchPreference
+            android:key="wakeup_when_plugged_unplugged"
+            android:title="@string/wakeup_when_plugged_unplugged_title"
+            android:summary="@string/wakeup_when_plugged_unplugged_summary"
+            android:defaultValue="true"
+            android:persistent="false" />
 
         <PreferenceCategory
                 android:key="advanced_display_prefs"
@@ -121,49 +122,6 @@
                     android:title="@string/sweep_to_sleep_title"
                     android:summary="@string/sweep_to_sleep_summary" />
 
-                <SwitchPreference
-                    android:key="adaptive_backlight"
-                    android:title="@string/adaptive_backlight_title"
-                    android:summary="@string/adaptive_backlight_summary"
-                    android:defaultValue="true" />
-
-               <SwitchPreference
-                    android:key="sunlight_enhancement"
-                    android:title="@string/sunlight_enhancement_title"
-                    android:summary="@string/sunlight_enhancement_summary"
-                    android:defaultValue="true" />
-
-               <SwitchPreference
-                    android:key="color_enhancement"
-                    android:title="@string/color_enhancement_title"
-                    android:summary="@string/color_enhancement_summary"
-                    android:defaultValue="true" />
-
-                <com.android.settings.hardware.DisplayColor
-                    android:key="color_calibration"
-                    android:title="@string/color_calibration_title"
-                    android:dialogTitle="@string/color_calibration_title"
-                    android:summary="@string/color_calibration_summary"
-                    android:persistent="false" />
-
-                <com.android.settings.hardware.DisplayGamma
-                    android:key="gamma_tuning"
-                    android:title="@string/gamma_tuning_title_head"
-                    android:dialogTitle="@string/gamma_tuning_title_head"
-                    android:summary="@string/gamma_tuning_summary_head"
-                    android:persistent="false" />
-
         </PreferenceCategory>
-
-        <PreferenceScreen
-                android:persistent="false"
-                android:key="screencolor_settings"
-                android:title="@string/screencolor"
-                android:summary="@string/screencolor_summary">
-            <intent
-                android:action="com.qualcomm.display.PPService"
-                android:targetPackage="com.android.settings"
-                android:targetClass="com.android.settings.ScreenColorSettings" />
-         </PreferenceScreen>
 
 </PreferenceScreen>
