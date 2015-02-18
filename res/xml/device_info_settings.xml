@@ -20,7 +20,7 @@
         <!-- AICP logo -->
         <PreferenceScreen android:key="aicp_logo"
                 android:enabled="false"
-                android:layout="@layout/aicp_rom_logo" />
+                android:layout="@layout/aicp_logo" />
 
         <!-- Device status - launches activity -->
         <PreferenceScreen android:key="status_info"

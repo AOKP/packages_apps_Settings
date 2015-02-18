@@ -101,6 +101,6 @@
 
     <PreferenceScreen android:key="hidden_img"
         android:enabled="true"
-        android:layout="@layout/aicp_hidden_img" />
+        android:layout="@layout/aicp_hidden" />
 
 </PreferenceScreen>
