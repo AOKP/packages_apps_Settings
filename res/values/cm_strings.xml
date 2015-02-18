@@ -257,6 +257,13 @@
     <string name="sweep_to_sleep_title">Sweep to sleep</string>
     <string name="sweep_to_sleep_summary">Swipe rigth to left on the lower part of the screen to turn on the display</string>
 
+    <!--- Wake gestures -->
+    <string name="wake_gestures_title">Wake gestures</string>
+    <string name="sweep_right">Sweep right</string>
+    <string name="sweep_left">Sweep left</string>
+    <string name="sweep_up">Sweep up</string>
+    <string name="sweep_down">Sweep down</string>
+
     <!-- Privacy Settings Header item -->
     <string name="privacy_settings_cyanogenmod_title">Privacy</string>
 

@@ -112,6 +112,11 @@
                     android:title="@string/double_tap_to_wake_title"
                     android:summary="@string/double_tap_to_wake_summary" />
 
+                <PreferenceScreen
+                    android:key="wake_gestures"
+                    android:title="@string/wake_gestures_title"
+                    android:fragment="com.android.settings.WakeGestures" />
+
                 <SwitchPreference
                     android:key="sweep_wake_gesture"
                     android:title="@string/sweep_to_wake_title"
