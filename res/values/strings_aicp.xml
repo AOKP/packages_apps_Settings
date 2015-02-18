@@ -832,14 +832,13 @@
     <string name="doze_pulse_on_notifications_title">Pulse doze</string>
     <string name="doze_pulse_on_notifications_summary">Pulse display on pending notifications</string>
 
+    <string name="doze_shake_title">Shake settings</string>
     <string name="doze_shake_mode_title">Shake mode</string>
     <string name="doze_shake_mode_summary">Use shake sensor value to trigger activation</string>
     <string name="doze_shake_mode_test_summary">Do you want to test shake sensor?</string>
     <string name="doze_shake_mode_test_result">Apply current value?</string>
-    <string name="doze_shake_mode_apply">Apply value success</string>
-    <string name="doze_shake_mode_revert">Using previous value</string>
-    <string name="doze_shake_test">Shake your device now!</string>
-    <string name="doze_shake_it">Shake detected</string>
+    <string name="doze_shake_test">Shake your device now</string>
+    <string name="doze_shake_it">Shake detected!</string>
 
     <string name="doze_shake_acc_threshold_title">Shake threshold</string>
     <string name="doze_shake_acc_threshold_summary">Configure shake strength required to trigger activation</string>
@@ -868,11 +867,11 @@
     <string name="veryhard_shake">Very hard</string>
     <string name="strong_shake">Strong</string>
 
-    <string name="fully_mode">Full mode (pocket,shake,pulse)</string>
-    <string name="pocket_shake_mode">Pocket and shake only</string>
-    <string name="pocket_pulse_mode">Pocket and pulse only</string>
-    <string name="pocket_only_mode">Pocket only</string>
-    <string name="shake_pulse_mode">Shake and pulse only</string>
-    <string name="pulse_only_mode">Pulse only (default)</string>
+    <string name="fully_mode">Full mode</string>
+    <string name="pocket_shake_mode">Pocket and shake</string>
+    <string name="pocket_pulse_mode">Pocket and pulse</string>
+    <string name="pocket_only_mode">Pocket</string>
+    <string name="shake_pulse_mode">Shake and pulse</string>
+    <string name="pulse_only_mode">Pulse (default)</string>
 
 </resources>

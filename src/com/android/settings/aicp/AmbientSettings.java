@@ -38,7 +38,7 @@ import android.preference.SwitchPreference;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.text.TextUtils;
-import android.widget.Toast;
+import android.widget.Button;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -60,24 +60,27 @@ public class AmbientSettings extends SettingsPreferenceFragment implements
     private static final String KEY_DOZE_PULSE_OUT = "doze_pulse_out";
     private static final String KEY_DOZE_LIST_MODE = "doze_list_mode";
     private static final String KEY_DOZE_PULSE_MODE = "doze_pulse_on_notifications";
+    private static final String KEY_DOZE_SHAKE_CATEGORY = "doze_shake_category";
     private static final String KEY_DOZE_SHAKE_THRESHOLD = "doze_shake_threshold";
     private static final String KEY_DOZE_TIME_MODE = "doze_time_mode";
 
-    int mAccValue;
+    private int mAccValue;
+    private int mOldAccValue;
     private SwitchPreference mDozePreference;
     private ListPreference mDozeListMode;
     private ListPreference mDozePulseIn;
     private ListPreference mDozePulseVisible;
     private ListPreference mDozePulseOut;
     private ListPreference mDozeShakeThreshold;
-    private SystemSettingCheckBoxPreference mDozeTimeMode;
+    private SystemCheckBoxPreference mDozeTimeMode;
     private ShakeSensorManager mShakeSensorManager;
+    private AlertDialog mDialog;
+    private Button mShakeFoundButton;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         final Activity activity = getActivity();
-        final ContentResolver resolver = activity.getContentResolver();
 
         addPreferencesFromResource(R.xml.aicp_ambient_settings);
 
@@ -97,7 +100,7 @@ public class AmbientSettings extends SettingsPreferenceFragment implements
             mDozeListMode = (ListPreference) findPreference(KEY_DOZE_LIST_MODE);
             mDozeListMode.setOnPreferenceChangeListener(this);
 
-            mDozeTimeMode = (SystemSettingCheckBoxPreference) findPreference(KEY_DOZE_TIME_MODE);
+            mDozeTimeMode = (SystemCheckBoxPreference) findPreference(KEY_DOZE_TIME_MODE);
 
             mDozeShakeThreshold = (ListPreference) findPreference(KEY_DOZE_SHAKE_THRESHOLD);
             mDozeShakeThreshold.setOnPreferenceChangeListener(this);
@@ -107,6 +110,7 @@ public class AmbientSettings extends SettingsPreferenceFragment implements
             removePreference(KEY_DOZE_LIST_MODE);
             removePreference(KEY_DOZE_TIME_MODE);
             removePreference(KEY_DOZE_SHAKE_THRESHOLD);
+            removePreference(KEY_DOZE_SHAKE_CATEGORY);
         }
         updateDozeListMode();
         updateDozeOptions();
@@ -161,7 +165,7 @@ public class AmbientSettings extends SettingsPreferenceFragment implements
             int index = mDozeListMode.findIndexOfValue(String.valueOf(listMode));
             if (index != -1) {
                 mDozeListMode.setSummary(mDozeListMode.getEntries()[index]);
-            }   
+            }
         }
     }
 
@@ -185,49 +189,60 @@ public class AmbientSettings extends SettingsPreferenceFragment implements
                 stopAcctest();
             }
         });
-        alertDialog.create().show();
+        mDialog = alertDialog.create();
+        mDialog.show();
     }
 
     @Override
     public synchronized void onShake() {
-        Toast.makeText(getActivity(),
-              getActivity().getResources().getString(R.string.doze_shake_it), Toast.LENGTH_SHORT).show();
-        resultAcctest();
+        String msg1 = getResources().getString(R.string.doze_shake_it);
+        String msg2 = getResources().getString(R.string.doze_shake_mode_test_result);
+
+        String msg = msg1 + "\n" + msg2;
+        mDialog.setMessage(msg);
+        Button shakeCancelButton = mDialog.getButton(DialogInterface.BUTTON_NEGATIVE);
+        if (shakeCancelButton != null) {
+            shakeCancelButton.setText(R.string.no);
+        }
+        if (mShakeFoundButton != null) {
+            mShakeFoundButton.setEnabled(true);
+        }
         mShakeSensorManager.disable();
     }
 
-    private void resultAcctest() {
+    private void startAcctest() {
+        mShakeSensorManager.enable(mAccValue);
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
         alertDialog.setTitle(R.string.doze_shake_mode_title);
-        alertDialog.setMessage(R.string.doze_shake_mode_test_result);
+        alertDialog.setMessage(R.string.doze_shake_test);
         alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 stopAcctest();
             }
         });
-        alertDialog.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+        alertDialog.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 revertAcctest();
             }
         });
-        alertDialog.create().show();
-    }
+        mDialog = alertDialog.create();
+        mDialog.show();
 
-    private void startAcctest() {
-        Toast.makeText(getActivity(),
-              getActivity().getResources().getString(R.string.doze_shake_test), Toast.LENGTH_SHORT).show();
-        mShakeSensorManager.enable(mAccValue);
+        mShakeFoundButton = mDialog.getButton(DialogInterface.BUTTON_POSITIVE);
+        if (mShakeFoundButton != null) {
+            mShakeFoundButton.setEnabled(false);
+        }
     }
 
     private void revertAcctest() {
-        Toast.makeText(getActivity(),
-              getActivity().getResources().getString(R.string.doze_shake_mode_revert), Toast.LENGTH_SHORT).show();
+        mAccValue = mOldAccValue;
+        mDozeShakeThreshold.setValue(String.valueOf(mOldAccValue));
+        mShakeSensorManager.disable();
     }
 
     private void stopAcctest() {
-        Toast.makeText(getActivity(),
-              getActivity().getResources().getString(R.string.doze_shake_mode_apply), Toast.LENGTH_SHORT).show();
         appliedAccTest();
+        mShakeSensorManager.disable();
     }
 
     private void appliedAccTest() {
@@ -314,7 +329,7 @@ public class AmbientSettings extends SettingsPreferenceFragment implements
             int index = mDozePulseIn.findIndexOfValue(String.valueOf(statusDozePulseIn));
             if (index != -1) {
                 mDozePulseIn.setSummary(mDozePulseIn.getEntries()[index]);
-            }   
+            }
         }
         if (mDozePulseVisible != null) {
             final int statusDozePulseVisible = Settings.System.getInt(getContentResolver(),
@@ -356,7 +371,10 @@ public class AmbientSettings extends SettingsPreferenceFragment implements
     @Override
     public void onPause() {
         super.onPause();
-        updateDozeOptions();
+        mShakeSensorManager.disable();
+        if (mDialog != null) {
+            mDialog.dismiss();
+        }
     }
 
     private void updateState() {
@@ -406,6 +424,7 @@ public class AmbientSettings extends SettingsPreferenceFragment implements
         if (preference == mDozeShakeThreshold) {
             int accValue = Integer.parseInt((String)objValue);
             if (accValue != mAccValue) {
+                mOldAccValue = mAccValue;
                 mAccValue = accValue;
                 showAccDialog();
             }
