@@ -35,4 +35,7 @@
 
     <!-- Whether to show a preference item for mobile plan -->
     <bool name="config_show_mobile_plan">true</bool>
+
+    <!-- Wake gestures -->
+    <bool name="config_wake_gestures_available">false</bool>
 </resources>
