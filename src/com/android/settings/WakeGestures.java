@@ -40,6 +40,7 @@ public class WakeGestures extends SettingsPreferenceFragment implements
 
     private static final String TAG = "WakeGestures";
 
+    private static String WAKE_GESTURES_PATH = "/sys/android_touch/wake_gestures";
     private static String SWEEP2WAKE_PATH = "/sys/android_touch/sweep2wake";
     private static String SWEEP2SLEEP_PATH = "/sys/android_touch/sweep2sleep";
 
@@ -160,7 +161,9 @@ public class WakeGestures extends SettingsPreferenceFragment implements
 
     private void writeToWakeFile() {
         FileUtils.writeLine(SWEEP2WAKE_PATH, "0");
+        FileUtils.writeLine(WAKE_GESTURES_PATH, "0");
         if (mSweepToWakeSwitch.isChecked()) {
+            FileUtils.writeLine(WAKE_GESTURES_PATH, "1");
             if (mSweepToWakeRight.isChecked() && !mSweepToWakeLeft.isChecked() &&
                     !mSweepToWakeUp.isChecked() && !mSweepToWakeDown.isChecked()) {
                 FileUtils.writeLine(SWEEP2WAKE_PATH, "1");
@@ -209,12 +212,14 @@ public class WakeGestures extends SettingsPreferenceFragment implements
             }
         } else if (!mSweepToWakeSwitch.isChecked()) {
             FileUtils.writeLine(SWEEP2WAKE_PATH, "0");
+            FileUtils.writeLine(WAKE_GESTURES_PATH, "0");
         }
     }
 
     private void writeToSleepFile() {
         FileUtils.writeLine(SWEEP2SLEEP_PATH, "0");
         if (mSweepToSleepSwitch.isChecked()) {
+            FileUtils.writeLine(WAKE_GESTURES_PATH, "1");
             if (mSweepToSleepRight.isChecked() && !mSweepToSleepLeft.isChecked()) {
                 FileUtils.writeLine(SWEEP2SLEEP_PATH, "1");
             } else if (!mSweepToSleepRight.isChecked() && mSweepToSleepLeft.isChecked()) {
@@ -224,6 +229,7 @@ public class WakeGestures extends SettingsPreferenceFragment implements
             }
         } else if (!mSweepToSleepSwitch.isChecked()) {
             FileUtils.writeLine(SWEEP2SLEEP_PATH, "0");
+            FileUtils.writeLine(WAKE_GESTURES_PATH, "0");
         }
     }
 
