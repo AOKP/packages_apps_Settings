@@ -36,7 +36,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.util.FileUtils;
 
 public class WakeGestures extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener, OnPreferenceClickListener {
+        Preference.OnPreferenceChangeListener {
 
     private static final String TAG = "WakeGestures";
 
@@ -62,8 +62,6 @@ public class WakeGestures extends SettingsPreferenceFragment implements
     private static CheckBoxPreference mSweepToSleepLeft;
     private static SwitchPreference mSweepToWakeSwitch;
     private static SwitchPreference mSweepToSleepSwitch;
-
-    protected Context mContext;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -127,41 +125,29 @@ public class WakeGestures extends SettingsPreferenceFragment implements
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         final String key = preference.getKey();
         if (preference == mSweepToWakeRight) {
-            boolean value = (Boolean) newValue;
             writeToWakeFile();
         } else if (preference == mSweepToWakeLeft) {
-            boolean value = (Boolean) newValue;
             writeToWakeFile();
         } else if (preference == mSweepToWakeUp) {
-            boolean value = (Boolean) newValue;
             writeToWakeFile();
         } else if (preference == mSweepToWakeDown) {
-            boolean value = (Boolean) newValue;
             writeToWakeFile();
         } else if (preference == mSweepToSleepRight) {
-            boolean value = (Boolean) newValue;
             writeToSleepFile();
         } else if (preference == mSweepToSleepLeft) {
-            boolean value = (Boolean) newValue;
             writeToSleepFile();
         } else if (preference == mSweepToWakeSwitch) {
-            boolean value = (Boolean) newValue;
             writeToWakeFile();
         } else if (preference == mSweepToSleepSwitch) {
-            boolean value = (Boolean) newValue;
             writeToSleepFile();
         }
         return true;
     }
 
-    @Override
-    public boolean onPreferenceClick(Preference preference) {
-        return false;
-    }
-
     private void writeToWakeFile() {
         FileUtils.writeLine(SWEEP2WAKE_PATH, "0");
         FileUtils.writeLine(WAKE_GESTURES_PATH, "0");
+
         if (mSweepToWakeSwitch.isChecked()) {
             FileUtils.writeLine(WAKE_GESTURES_PATH, "1");
             if (mSweepToWakeRight.isChecked() && !mSweepToWakeLeft.isChecked() &&
@@ -218,6 +204,8 @@ public class WakeGestures extends SettingsPreferenceFragment implements
 
     private void writeToSleepFile() {
         FileUtils.writeLine(SWEEP2SLEEP_PATH, "0");
+        FileUtils.writeLine(WAKE_GESTURES_PATH, "0");
+
         if (mSweepToSleepSwitch.isChecked()) {
             FileUtils.writeLine(WAKE_GESTURES_PATH, "1");
             if (mSweepToSleepRight.isChecked() && !mSweepToSleepLeft.isChecked()) {
