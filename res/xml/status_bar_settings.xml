@@ -28,6 +28,11 @@
                 android:key="clock_style_pref"
                 android:title="@string/status_bar_clock" />
 
+        <PreferenceScreen
+                android:fragment="com.android.settings.aicp.BatterySettings"
+                android:key="battery_settings"
+                android:title="@string/battery_settings_title" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -57,10 +62,5 @@
         android:title="@string/status_bar_notif_count_title"
         android:summary="@string/status_bar_notif_count_summary"
         android:defaultValue="false" />
-
-    <PreferenceScreen
-        android:fragment="com.android.settings.aicp.BatterySettings"
-        android:key="battery_settings"
-        android:title="@string/battery_settings_title" />
 
 </PreferenceScreen>
