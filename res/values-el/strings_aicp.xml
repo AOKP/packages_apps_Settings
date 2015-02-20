@@ -42,8 +42,7 @@
     <item quantity="one">Απομένει <xliff:g id="step_count">%1$d</xliff:g> βήμα για να γίνετε προγραμματιστής.</item>
     <item quantity="other">Απομένουν <xliff:g id="step_count">%1$d</xliff:g> βήματα για να γίνετε προγραμματιστής.</item>
     </plurals>
-    <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settingscp">
-    <item quantity="one">Απομένει <xliff:g id="step_count">%1$d</xliff:g> step away from enabling are enabled -->
+    <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
     <string name="show_dev_on_aicp">Είστε πλέον προγραμματιστής!</string>
     <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
     <string name="show_dev_already_aicp">Δεν χρειάζεται, είστε ήδη προγραμματιστής.</string>
