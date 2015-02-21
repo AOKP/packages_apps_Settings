@@ -177,24 +177,18 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         mFontSizePref.setOnPreferenceChangeListener(this);
         mFontSizePref.setOnPreferenceClickListener(this);
 
-        mAutoBrightnessPreference = (SwitchPreference) findPreference(KEY_AUTO_BRIGHTNESS);
-        if (mAutoBrightnessPreference != null && isAutomaticBrightnessAvailable(getResources())) {
+        if (isAutomaticBrightnessAvailable(getResources())) {
+            mAutoBrightnessPreference = (SwitchPreference) findPreference(KEY_AUTO_BRIGHTNESS);
             mAutoBrightnessPreference.setOnPreferenceChangeListener(this);
         } else {
-            if (displayPrefs != null && mAutoBrightnessPreference != null) {
-                displayPrefs.removePreference(mAutoBrightnessPreference);
-                mAutoBrightnessPreference = null;
-            }
+            removePreference(KEY_AUTO_BRIGHTNESS);
         }
 
-        mLiftToWakePreference = (SwitchPreference) findPreference(KEY_LIFT_TO_WAKE);
-        if (mLiftToWakePreference != null && isLiftToWakeAvailable(activity)) {
+        if (isLiftToWakeAvailable(activity)) {
+            mLiftToWakePreference = (SwitchPreference) findPreference(KEY_LIFT_TO_WAKE);
             mLiftToWakePreference.setOnPreferenceChangeListener(this);
         } else {
-            if (displayPrefs != null && mLiftToWakePreference != null) {
-                displayPrefs.removePreference(mLiftToWakePreference);
-                mLiftToWakePreference = null;
-            }
+            removePreference(KEY_LIFT_TO_WAKE);
         }
 
         PreferenceCategory advancedPrefs = (PreferenceCategory) findPreference(CATEGORY_ADVANCED);
