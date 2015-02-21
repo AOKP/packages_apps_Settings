@@ -196,6 +196,7 @@
     <string name="enable_clock_weekday_summary">Σύντομη ημέρα εβδομάδας πριν από ημερομηνία</string>
     <string name="right_clock">Ρολόι δεξιά</string>
     <string name="center_clock">Ρολόι κέντρο</string>
+    <string name="left_clock">Ρολόι αριστερά</string>
     <string name="dont_show">Απόκρυψε</string>
     <string name="clock_date_display">Ημερ/νία</string>
     <string name="clock_date_display_summary">Εμφάνιση προσαρμοσμένης ημερ/νίας πριν το ρολόι</string>
