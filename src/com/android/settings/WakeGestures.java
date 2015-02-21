@@ -27,13 +27,17 @@ import android.os.RemoteException;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
+import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.hardware.VibratorGestures;
 import com.android.settings.util.FileUtils;
+
+import java.io.File;
 
 public class WakeGestures extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, OnPreferenceClickListener {
@@ -42,6 +46,10 @@ public class WakeGestures extends SettingsPreferenceFragment implements
 
     private static String SWEEP2WAKE_PATH = "/sys/android_touch/sweep2wake";
     private static String SWEEP2SLEEP_PATH = "/sys/android_touch/sweep2sleep";
+    private static String VIB_PATH = "/sys/android_touch/vib_strength";
+
+    private static final String KEY_SWEEP_TO_WAKE_CATEGORY = "sweep_to_wake_category";
+    private static final String KEY_SWEEP_TO_SLEEP_CATEGORY = "sweep_to_sleep_category";
 
     private static final String KEY_SWEEP_TO_WAKE_SWITCH = "sweep_to_wake_switch";
     private static final String KEY_SWEEP_TO_SLEEP_SWITCH = "sweep_to_sleep_switch";
@@ -53,6 +61,8 @@ public class WakeGestures extends SettingsPreferenceFragment implements
     private static final String KEY_SWEEP_TO_SLEEP_RIGHT = "sweep_to_sleep_right";
     private static final String KEY_SWEEP_TO_SLEEP_LEFT = "sweep_to_sleep_left";
 
+    private static final String KEY_VIBRATION_GESTURES = "vibration_gestures";
+
     private static CheckBoxPreference mSweepToWakeRight;
     private static CheckBoxPreference mSweepToWakeLeft;
     private static CheckBoxPreference mSweepToWakeUp;
@@ -61,6 +71,8 @@ public class WakeGestures extends SettingsPreferenceFragment implements
     private static CheckBoxPreference mSweepToSleepLeft;
     private static SwitchPreference mSweepToWakeSwitch;
     private static SwitchPreference mSweepToSleepSwitch;
+    private static PreferenceCategory mSweepToWakeCategory;
+    private static PreferenceCategory mSweepToSleepCategory;
 
     protected Context mContext;
 
@@ -105,6 +117,20 @@ public class WakeGestures extends SettingsPreferenceFragment implements
             (CheckBoxPreference) prefSet.findPreference(KEY_SWEEP_TO_SLEEP_LEFT);
         mSweepToSleepLeft.setOnPreferenceChangeListener(this);
 
+        mSweepToWakeCategory =
+            (PreferenceCategory) prefSet.findPreference(KEY_SWEEP_TO_WAKE_CATEGORY);
+        mSweepToSleepCategory =
+            (PreferenceCategory) prefSet.findPreference(KEY_SWEEP_TO_SLEEP_CATEGORY);
+        if (!isWakeSupported()) {
+            prefSet.removePreference(mSweepToWakeCategory);
+        }
+        if (!isSleepSupported()) {
+            prefSet.removePreference(mSweepToSleepCategory);
+        }
+        if (!isVibGesturesSupported()) {
+            removePreference(KEY_VIBRATION_GESTURES);
+        }
+
         writeToWakeFile();
         writeToSleepFile();
 
@@ -146,9 +172,15 @@ public class WakeGestures extends SettingsPreferenceFragment implements
         } else if (preference == mSweepToWakeSwitch) {
             boolean value = (Boolean) newValue;
             writeToWakeFile();
+            if (!mSweepToSleepSwitch.isChecked()) {
+                FileUtils.writeLine(SWEEP2WAKE_PATH, "0");
+            }
         } else if (preference == mSweepToSleepSwitch) {
             boolean value = (Boolean) newValue;
             writeToSleepFile();
+            if (!mSweepToSleepSwitch.isChecked()) {
+                FileUtils.writeLine(SWEEP2SLEEP_PATH, "0");
+            }
         }
         return true;
     }
@@ -225,6 +257,18 @@ public class WakeGestures extends SettingsPreferenceFragment implements
         } else if (!mSweepToSleepSwitch.isChecked()) {
             FileUtils.writeLine(SWEEP2SLEEP_PATH, "0");
         }
+    }
+
+    public static boolean isVibGesturesSupported() {
+        return new File(VIB_PATH).exists();
+    }
+
+    public static boolean isWakeSupported() {
+        return new File(SWEEP2WAKE_PATH).exists();
+    }
+
+    public static boolean isSleepSupported() {
+        return new File(SWEEP2SLEEP_PATH).exists();
     }
 
 }
