@@ -46,11 +46,6 @@
                 android:title="@string/screensaver_settings_title"
                 android:fragment="com.android.settings.DreamSettings" />
 
-        <SwitchPreference
-                android:key="lift_to_wake"
-                android:title="@string/lift_to_wake_title"
-                android:persistent="false" />
-
         <PreferenceScreen
                 android:key="doze_fragment"
                 android:title="@string/doze_title"
