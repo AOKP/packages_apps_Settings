@@ -74,8 +74,6 @@ import org.cyanogenmod.hardware.AdaptiveBacklight;
 import org.cyanogenmod.hardware.ColorEnhancement;
 import org.cyanogenmod.hardware.SunlightEnhancement;
 import org.cyanogenmod.hardware.TapToWake;
-import org.cyanogenmod.hardware.SweepToWake;
-import org.cyanogenmod.hardware.SweepToSleep;
 
 public class DisplaySettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, OnPreferenceClickListener, Indexable {
@@ -97,9 +95,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_WAKEUP_WHEN_PLUGGED_UNPLUGGED = "wakeup_when_plugged_unplugged";
     private static final String KEY_WAKEUP_CATEGORY = "category_wakeup_options";
     private static final String KEY_TAP_TO_WAKE = "double_tap_wake_gesture";
-    private static final String KEY_SWEEP_TO_WAKE = "sweep_wake_gesture";
-    private static final String KEY_SWEEP_TO_SLEEP = "sweep_sleep_gesture";
-    private static final String KEY_WAKE_GESTURES = "wake_gestures";
     private static final String KEY_SCREEN_OFF_GESTURE_SETTINGS = "screen_off_gesture_settings";
 
     private static final String CATEGORY_ADVANCED = "advanced_display_prefs";
@@ -131,9 +126,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private SwitchPreference mLiftToWakePreference;
     private SwitchPreference mAutoBrightnessPreference;
     private SwitchPreference mTapToWake;
-    private SwitchPreference mSweepToWake;
-    private SwitchPreference mSweepToSleep;
-    private PreferenceScreen mWakeGestures;
     private PreferenceScreen mDozeFragement;
 
     private ContentObserver mAccelerometerRotationObserver =
@@ -249,32 +241,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             mTapToWake = null;
         }
 
-        mWakeGestures = (PreferenceScreen) findPreference(KEY_WAKE_GESTURES);
-
-        mSweepToWake = (SwitchPreference) findPreference(KEY_SWEEP_TO_WAKE);
-        if (!isSweepToWakeSupported()) {
-            advancedPrefs.removePreference(mSweepToWake);
-            advancedPrefs.removePreference(mWakeGestures);
-            mSweepToWake = null;
-        } else if (isSweepToWakeSupported() && !areWakeGesturesAvailable(getResources())) {
-            advancedPrefs.removePreference(mWakeGestures);
-        } else if (isSweepToWakeSupported() && areWakeGesturesAvailable(getResources())) {
-            advancedPrefs.removePreference(mSweepToWake);
-            mSweepToWake = null;
-        }
-
-        mSweepToSleep = (SwitchPreference) findPreference(KEY_SWEEP_TO_SLEEP);
-        if (!isSweepToSleepSupported()) {
-            advancedPrefs.removePreference(mSweepToSleep);
-            advancedPrefs.removePreference(mWakeGestures);
-            mSweepToSleep = null;
-        } else if (isSweepToSleepSupported() && !areWakeGesturesAvailable(getResources())) {
-            advancedPrefs.removePreference(mWakeGestures);
-        } else if (isSweepToSleepSupported() && areWakeGesturesAvailable(getResources())) {
-            advancedPrefs.removePreference(mSweepToSleep);
-            mSweepToSleep = null;
-        }
-
         Utils.updatePreferenceToSpecificActivityFromMetaDataOrRemove(getActivity(),
                 getPreferenceScreen(), KEY_SCREEN_OFF_GESTURE_SETTINGS);
 
@@ -285,8 +251,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
 
         if (!isAdaptiveBacklightSupported() && !isSunlightEnhancementSupported() &&
                 !isColorEnhancementSupported() && !DisplayColor.isSupported() &&
-                !DisplayGamma.isSupported() && !isTapToWakeSupported() &&
-                !isSweepToWakeSupported() && !isSweepToSleepSupported()) {
+                !DisplayGamma.isSupported() && !isTapToWakeSupported())  {
             prefSet.removePreference(advancedPrefs);
         }
     }
@@ -449,15 +414,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             mTapToWake.setChecked(TapToWake.isEnabled());
         }
 
-        if (mSweepToWake != null) {
-            mSweepToWake.setChecked(SweepToWake.isEnabled());
-        }
-
-        if (mSweepToSleep != null) {
-            mSweepToSleep.setChecked(SweepToSleep.isEnabled());
-        }
-
-
         updateState();
         getContentResolver().registerContentObserver(
                 Settings.System.getUriFor(Settings.System.ACCELEROMETER_ROTATION), true,
@@ -519,28 +475,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         }
     }
 
-    private static boolean isSweepToWakeSupported() {
-        try {
-            return SweepToWake.isSupported();
-        } catch (NoClassDefFoundError e) {
-            // Hardware abstraction framework not installed
-            return false;
-        }
-    }
-
-    private static boolean isSweepToSleepSupported() {
-        try {
-            return SweepToSleep.isSupported();
-        } catch (NoClassDefFoundError e) {
-            // Hardware abstraction framework not installed
-            return false;
-        }
-    }
-
-    private static boolean areWakeGesturesAvailable(Resources res) {
-        return res.getBoolean(R.bool.config_wake_gestures_available);
-    }
-
     /**
      * Reads the current font size and sets the value in the summary text
      */
@@ -570,10 +504,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         if (preference == mTapToWake) {
             return TapToWake.setEnabled(mTapToWake.isChecked());
-        } else if (preference == mSweepToWake) {
-            return SweepToWake.setEnabled(mSweepToWake.isChecked());
-        } else if (preference == mSweepToSleep) {
-            return SweepToSleep.setEnabled(mSweepToSleep.isChecked());
         } else if (preference == mAdaptiveBacklight) {
             if (mSunlightEnhancement != null &&
                     SunlightEnhancement.isAdaptiveBacklightRequired()) {
@@ -650,28 +580,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 Log.e(TAG, "Failed to restore tap-to-wake settings.");
             } else {
                 Log.d(TAG, "Tap-to-wake settings restored.");
-            }
-        }
-
-        if (isSweepToWakeSupported()) {
-            final boolean enabled = prefs.getBoolean(KEY_SWEEP_TO_WAKE,
-                SweepToWake.isEnabled());
-
-            if (!SweepToWake.setEnabled(enabled)) {
-                Log.e(TAG, "Failed to restore sweep-to-wake settings.");
-            } else {
-                Log.d(TAG, "Sweep-to-wake settings restored.");
-            }
-        }
-
-        if (isSweepToSleepSupported()) {
-            final boolean enabled = prefs.getBoolean(KEY_SWEEP_TO_SLEEP,
-                SweepToSleep.isEnabled());
-
-            if (!SweepToSleep.setEnabled(enabled)) {
-                Log.e(TAG, "Failed to restore sweep-to-sleep settings.");
-            } else {
-                Log.d(TAG, "Sweep-to-sleep settings restored.");
             }
         }
 
