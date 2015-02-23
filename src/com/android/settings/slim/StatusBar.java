@@ -34,6 +34,7 @@ import android.util.Log;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.Utils;
 
 import com.android.internal.util.slim.DeviceUtils;
 
@@ -44,8 +45,10 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private static final String STATUS_BAR_BRIGHTNESS_CONTROL = "status_bar_brightness_control";
     private static final String KEY_STATUS_BAR_CLOCK = "clock_style_pref";
     private static final String KEY_STATUS_BAR_TICKER = "status_bar_ticker_enabled";
+    private static final String KEY_CARRIERLABEL_PREFERENCE = "carrier_options";
 
     private SwitchPreference mStatusBarBrightnessControl;
+    private PreferenceScreen mCarrierLabel;
     private PreferenceScreen mClockStyle;
     private SwitchPreference mTicker;
 
@@ -80,6 +83,11 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         mStatusBarBrightnessControl.setOnPreferenceChangeListener(this);
 
         mClockStyle = (PreferenceScreen) prefSet.findPreference(KEY_STATUS_BAR_CLOCK);
+
+        mCarrierLabel = (PreferenceScreen) prefSet.findPreference(KEY_CARRIERLABEL_PREFERENCE);
+        if (Utils.isWifiOnly(getActivity())) {
+            prefSet.removePreference(mCarrierLabel);
+        }
 
         updateClockStyleDescription();
 
