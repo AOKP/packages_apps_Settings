@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2007 The Android Open Source Project
+
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
+
           http://www.apache.org/licenses/LICENSE-2.0
+
      Unless required by applicable law or agreed to in writing, software
      distributed under the License is distributed on an "AS IS" BASIS,
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -72,7 +75,7 @@
     <string name="misc_category">Διάφορα</string>
     <string name="lockscreen_category">Κλείδωμα οθόνης</string>
 
-     <!-- Advanced, Device specific (DeviceParts) settings  -->
+    <!-- Advanced, Device specific (DeviceParts) settings  -->
     <string name="device_settings_title">Συσκευή</string>
 
     <!-- Display : Rotation -->
@@ -119,7 +122,7 @@
     <string name="volume_keys_control_media_stream_summary">Πλήκτρα ελέγχου έντασης πολυμέσων</string>
 
     <!-- Preference category for LAN development settings. [CHAR LIMIT=25] -->
-    <string name="debug_LAN_category">Ρυθμίσεις LAN</string>
+    <string name="debug_LAN_category">Ρυθμίσεις Δικτύου</string>
     <!-- Hostname setting -->
     <string name="device_hostname">Όνομα συσκευής</string>
 
@@ -149,8 +152,8 @@
     <string name="various_shit_title">Διάφορα άχρηστα</string>
     <string name="battery_percentage_title">Ποσοστό μπαταρίας</string>
     <string name="battery_percentage_summary">Δείξε ποσοστό μέσα στο εικονίδιο.</string>
-    <string name="proximity_on_wake_title">Αισθητήρας απόστασης</string>
-    <string name="proximity_on_wake_summary">Έλεγχος αισθητήρα απόστασης.</string>
+    <string name="proximity_on_wake_title">Αισθητήρας προσέγγισης</string>
+    <string name="proximity_on_wake_summary">Έλεγχος αισθητήρα προσέγγισης.</string>
     <string name="status_bar_show_weather_category">Καιρός</string>
     <string name="aicp_notifications_category">Γνωστοποιήσεις</string>
     <string name="navigation_bar_category">Μπάρα πλοήγησης</string>
@@ -164,7 +167,7 @@
 
     <!-- Slim settings screens -->
     <string name="header_category_personalization">Εξατομίκευση</string>
-    <string name="interface_settings_title">Διεπαφής</string>
+    <string name="interface_settings_title">Διεπαφή</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Συλλογή χρωμάτων</string>
@@ -247,7 +250,7 @@
     <string name="block_on_secure_keyguard_summary">Απενεργοποίηση γρήγορων ρυθμίσεων στην ασφαλή οθόνη κλειδώματος.</string>
 
     <!-- LockClocK -->
-    <string name="lock_clock_title">cLock ρυθμίσεις</string>
+    <string name="lock_clock_title">Ρυθμίσεις cLock</string>
     <string name="lock_clock_summary">Προβάλετε ή αλλάξτε τον τρόπο που το \'cLock\' θα εμφανιστεί στην επιφάνεια.</string>
 
     <!-- QuickSettings: Smart Pulldown -->
@@ -317,7 +320,7 @@
 
     <!-- Search Bar Switcher -->
     <string name="recents_show_searchbar">Μπάρα αναζήτησης</string>
-    <string name="recents_show_searchbar_summary">Εμφάνιση ή απόκρυψη μπάρας αναζήτησης Google</string>
+    <string name="recents_show_searchbar_summary">Εμφάνιση ή απόκρυψη μπάρας Google</string>
 
     <!-- Screenshot sound -->
     <string name="screenshot_sound_title">Ήχος στιγμιότυπου οθόνης</string>
@@ -444,10 +447,10 @@
     <!-- Heads up -->
     <string name="heads_up_title">Κοινοποίηση επικεφαλίδων</string>
     <string name="app_notification_enable_heads_up_title">Εμφάνιση επικεφαλίδων</string>
-    <string name="app_notification_enable_heads_up_summary">Εμφάνιση ειδοποιήσεων εφαρμογών και επικεφαλίδων</string>
+    <string name="app_notification_enable_heads_up_summary">Εμφάνιση ειδοποιήσεων εφαρμογών κ΄ επικεφαλίδων</string>
     <string name="heads_up_snooze_title">Αναβολή χρονοδιακόπτη</string>
-    <string name="heads_up_snooze_summary">Εάν το κουμπί αναβολής πατηθεί, απενεργοποιεί επικεφαλίδες για <xliff:g id="number">%d</xliff:g> λεπτά</string>
-    <string name="heads_up_snooze_disabled_summary">Αναβολή χρονοδιακόπτη απενεργοποιημένο</string>
+    <string name="heads_up_snooze_summary">Εάν το κουμπί αναβολής πατηθεί, απενεργοποιείτε για <xliff:g id="number">%d</xliff:g> λεπτά</string>
+    <string name="heads_up_snooze_disabled_summary">Αναβολή χρονοδιακόπτη ανενεργό</string>
     <string name="heads_up_snooze_3min">3 Λεπτά</string>
     <string name="heads_up_snooze_5min">5 Λεπτά</string>
     <string name="heads_up_snooze_10min">10 Λεπτά</string>
@@ -455,8 +458,8 @@
     <string name="heads_up_snooze_20min">20 Λεπτά</string>
     <string name="heads_up_time_out_title">Χρονικό όριο</string>
     <string name="heads_up_time_out_summary">Ειδοποίηση θα εμφανιστεί για <xliff:g id="number">%d</xliff:g> δευτερόλεπτα</string>
-    <string name="heads_up_time_out_zero">Τώρα απενεργοποίησε επικεφαλίδες.</string>
-    <string name="heads_up_time_out_0sec">0 δευτερόλεπτα. Χρησιμοποιείται όταν επικεφαλίδες είναι απενεργοποιημένες</string>
+    <string name="heads_up_time_out_zero">Απενεργοποίησε επικεφαλίδες.</string>
+    <string name="heads_up_time_out_0sec">0 δευτερόλεπτα. Χρησιμοποιείται όταν επικεφαλίδες είναι απενεργές</string>
     <string name="heads_up_time_out_4sec">4 δευτερόλεπτα</string>
     <string name="heads_up_time_out_6sec">6 δευτερόλεπτα</string>
     <string name="heads_up_time_out_8sec">8 δευτερόλεπτα</string>
@@ -693,27 +696,29 @@
     <string name="clock_font_normal">Κανονική</string>
 
     <!-- Recents panel settings -->
-    <string name="recents_panel_settings">Πρόσφατες Ρυθμίσεις πίνακα</string>
-    <string name="recents_panel_title">Πρόσφατος Πίνακας</string>
-    <string name="show_clear_all_recents_button_title">Εκκαθάριση πρόσφατων πινάκων</string>
-    <string name="show_clear_all_recents_button_summary">Εμφάνιση καθαρισμού πρόσφατων πινάκων</string>
-    <string name="recents_clear_all_location_title">Εκκαθάριση πρόσφατης τοποθεσίας</string>
+    <string name="recents_panel_settings">Πρόσφατες ρυθμίσεις εφαρμογών</string>
+    <string name="recents_panel_title">Πρόσφατες εφαρμογές</string>
+    <string name="show_clear_all_recents_button_title">Εκκαθ. πρόσφατων εφαρμογών</string>
+    <string name="show_clear_all_recents_button_summary">Εμφάνιση καθαρισμού πρόσφατων εφαρμογών</string>
+    <string name="recents_clear_all_location_title">Κουμπί εκκαθάρισης εφαρμογών</string>
     <string name="recents_clear_all_location_top_right">Πάνω δεξιά</string>
     <string name="recents_clear_all_location_top_left">Πάνω αριστερά</string>
     <string name="recents_clear_all_location_top_center">Πάνω κέντρο</string>
     <string name="recents_clear_all_location_bottom_right">Κάτω δεξιά</string>
     <string name="recents_clear_all_location_bottom_left">Κάτω αριστερά</string>
     <string name="recents_clear_all_location_bottom_center">Κάτω κέντρο</string>
-    <string name="omniswitch_settings_title">OmniΔιακόπτης</string>
+    <string name="recents_clear_all_dismiss_all_title">Εκκαθάριση εργασίων</string>
+    <string name="recents_clear_all_dismiss_all_summary">Επιλέξτε να απορρίψει τις εργασίες ή να αγνοήσει εργασίες στο προσκήνιο </string>
+    <string name="omniswitch_settings_title">Διακόπτης Omni</string>
 
     <!-- OmniSwitch -->
-    <string name="omniswitch_category">OmniΔιακόπτης</string>
-    <string name="recents_use_omniswitch_title">Χρησιμοποιήστε για τα πρόσφατα</string>
-    <string name="recents_use_omniswitch_summary">Χρησιμοποιήστε OmniSwitch αντί των προεπιλεγμένης πρόσφατης προβολής</string>
+    <string name="omniswitch_category">Διακόπτης Omni</string>
+    <string name="recents_use_omniswitch_title">Εκκαθάριση εργασίων</string>
+    <string name="recents_use_omniswitch_summary">Χρησιμοποιήστε διακόπτη Omni αντί Εκκαθάριση εργασίων</string>
     <string name="omniswitch_start_settings_title">Ρυθμίσεις</string>
-    <string name="omniswitch_start_settings_summary">Άνοιξε ρυθμίσεις OmniSwitch</string>
+    <string name="omniswitch_start_settings_summary">Ρυθμίσεις διακόπτη Omni</string>
     <string name="omniswitch_first_time_title">Πληροφορίες</string>
-    <string name="omniswitch_first_time_message">Βεβαιωθείτε ότι έχετε ενεργοποιήσει OmniSwitch. Μπορείτε να το κάνετε, χρησιμοποιώντας \"Ρυθμίσεις\" παρακάτω</string>
+    <string name="omniswitch_first_time_message">Βεβαιωθείτε ότι ενεργοποιήσατε διακόπτη Omni. Μπορείτε να το κάνετε, χρησιμοποιώντας \"Ρυθμίσεις\" παρακάτω</string>
 
     <string name="alarm_ringtone_title">Προεπιλογή ήχου αφύπνισης</string>
 
@@ -870,5 +875,21 @@
     <string name="pocket_only_mode">Τσέπη</string>
     <string name="shake_pulse_mode">Ανακίνηση και παλμός</string>
     <string name="pulse_only_mode">Παλμός (προεπιλογή)</string>
+
+    <!-- Show carrier label and custom -->
+    <string name="carrier_options">Εμφάνιση φορέα κινητής.</string>
+    <string name="show_status_bar_carrier_title">Κατάσταση φορέα στην μπάρα</string>
+    <string name="show_status_bar_carrier_summary">Εμφάνισε φορέα στην μπάρα</string>
+    <string name="custom_carrier_label_title">Προσαρμοσμένη εμφάνιση φορέα</string>
+    <string name="custom_carrier_label_explain">Παρακαλώ εισάγετε νέα εμφαν. φορέα. Αφήστε το κενό για προεπιλογή φορέα.</string>
+    <string name="custom_carrier_label_notset">Δεν έχει οριστεί προσαρμ. εμφάνιση φορέα</string>
+    <string name="status_bar_carrier_color">Χρώμα εμφάνισης Φορέα</string>
+
+    <!-- Statusbar AICP logo -->
+    <string name="status_bar_aicp_logo_title">AICP λογότυπο</string>
+    <string name="status_bar_aicp_logo_summary">Ενεργοποιήστε για εμφαν. AICP λογότυπο στην αριστερή πλευρά της γραμμής κατάστασης</string>
+
+    <!-- Data activity icons -->
+    <string name="status_bar_show_network_activity_title">Βέλη δραστηριότητας δικτύου</string>
 
 </resources>
