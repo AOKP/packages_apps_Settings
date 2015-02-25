@@ -46,11 +46,13 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private static final String KEY_STATUS_BAR_CLOCK = "clock_style_pref";
     private static final String KEY_STATUS_BAR_TICKER = "status_bar_ticker_enabled";
     private static final String KEY_CARRIERLABEL_PREFERENCE = "carrier_options";
+    private static final String KEY_STATUS_BAR_NETWORK_ARROWS= "status_bar_show_network_activity";
 
     private SwitchPreference mStatusBarBrightnessControl;
     private PreferenceScreen mCarrierLabel;
     private PreferenceScreen mClockStyle;
     private SwitchPreference mTicker;
+    private SwitchPreference mNetworkArrows;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -89,6 +91,15 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             prefSet.removePreference(mCarrierLabel);
         }
 
+        // Network arrows
+        mNetworkArrows = (SwitchPreference) prefSet.findPreference(KEY_STATUS_BAR_NETWORK_ARROWS);
+        mNetworkArrows.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
+            Settings.System.STATUS_BAR_SHOW_NETWORK_ACTIVITY, 1) == 1);
+        mNetworkArrows.setOnPreferenceChangeListener(this);
+        int networkArrows = Settings.System.getInt(getContentResolver(),
+                Settings.System.STATUS_BAR_SHOW_NETWORK_ACTIVITY, 1);
+        updateNetworkArrowsSummary(networkArrows);
+
         updateClockStyleDescription();
 
     }
@@ -103,6 +114,14 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             Settings.System.putInt(getContentResolver(),
                     Settings.System.STATUS_BAR_TICKER_ENABLED,
                     (Boolean) newValue ? 1 : 0);
+            return true;
+        } else if (preference == mNetworkArrows) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.STATUS_BAR_SHOW_NETWORK_ACTIVITY,
+                    (Boolean) newValue ? 1 : 0);
+            int networkArrows = Settings.System.getInt(getContentResolver(),
+                    Settings.System.STATUS_BAR_SHOW_NETWORK_ACTIVITY, 1);
+            updateNetworkArrowsSummary(networkArrows);
             return true;
         }
         return false;
@@ -124,5 +143,12 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         } else {
             mClockStyle.setSummary(getString(R.string.disabled));
          }
+    }
+
+    private void updateNetworkArrowsSummary(int value) {
+        String summary = value != 0
+                ? getResources().getString(R.string.enabled)
+                : getResources().getString(R.string.disabled);
+        mNetworkArrows.setSummary(summary);
     }
 }
