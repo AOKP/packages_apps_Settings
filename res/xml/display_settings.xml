@@ -46,6 +46,11 @@
                 android:title="@string/screensaver_settings_title"
                 android:fragment="com.android.settings.DreamSettings" />
 
+        <SwitchPreference
+                android:key="lift_to_wake"
+                android:title="@string/lift_to_wake_title"
+                android:persistent="false" />
+
         <PreferenceScreen
                 android:key="doze_fragment"
                 android:title="@string/doze_title"
@@ -100,12 +105,6 @@
         <PreferenceCategory
                 android:key="advanced_display_prefs"
                 android:title="@string/advanced_settings">
-
-                <!-- Lift to wake -->
-                <SwitchPreference
-                    android:key="lift_to_wake"
-                    android:title="@string/lift_to_wake_title"
-                    android:persistent="false" />
 
                 <SwitchPreference
                     android:key="double_tap_wake_gesture"
