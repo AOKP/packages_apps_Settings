@@ -81,6 +81,7 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
     private static final String PREF_HEADS_UP_SNOOZE_TIME = "heads_up_snooze_time";
     private static final String PREF_HEADS_UP_TIME_OUT = "heads_up_time_out";
     private static final String PREF_HEADS_UP_SWITCH = "heads_up_switch";
+    private static final String KEY_VOLUME_PANEL_TIMEOUT = "volume_panel_time_out";
 
     private static final int SAMPLE_CUTOFF = 2000;  // manually cap sample playback at 2 seconds
 
@@ -114,6 +115,7 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
     private boolean mSecure;
     private int mLockscreenSelectedValue;
     private Preference mAlarmRingtonePreference;
+    private ListPreference mVolumePanelTimeOut;
 
     private ListPreference mHeadsUpSnoozeTime;
     private ListPreference mHeadsUpTimeOut;
@@ -221,6 +223,22 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
                 Settings.System.HEADS_UP_SWITCH, 1);
         updateHeadsUpSwitchSummary(headsUpSwitch);
 
+        mVolumePanelTimeOut = (ListPreference) findPreference(KEY_VOLUME_PANEL_TIMEOUT);
+        mVolumePanelTimeOut.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+            @Override
+            public boolean onPreferenceChange(Preference preference, Object newValue) {
+                int volumePanelTimeOut = Integer.valueOf((String) newValue);
+                updateVolumePanelTimeOutSummary(volumePanelTimeOut);
+                return Settings.System.putInt(getContentResolver(),
+                        Settings.System.VOLUME_PANEL_TIMEOUT,
+                        volumePanelTimeOut);
+            }
+        });
+        final int volumePanelTimeOut = Settings.System.getInt(getContentResolver(),
+                Settings.System.VOLUME_PANEL_TIMEOUT, 3000);
+        mVolumePanelTimeOut.setValue(String.valueOf(volumePanelTimeOut));
+        updateVolumePanelTimeOutSummary(volumePanelTimeOut);
+
     }
 
     @Override
@@ -265,6 +283,12 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
         } else {
             mHeadsUpTimeOut.setSummary(summary);
         }
+    }
+
+    private void updateVolumePanelTimeOutSummary(int value) {
+        String summary = getResources().getString(R.string.volume_panel_time_out_summary,
+                value / 1000);
+        mVolumePanelTimeOut.setSummary(summary);
     }
 
     // === Volumes ===
