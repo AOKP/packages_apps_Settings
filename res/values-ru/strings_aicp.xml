@@ -161,7 +161,7 @@
   
   <!-- Per app controls for LP keyguard notifications -->
   <string name="app_notification_show_on_keyguard_title">Показывать на экране блокировки</string>
-  <string name="app_notification_show_on_keyguard_summary">Показывать уведомления от этого приложения на экоане блокировки</string>
+  <string name="app_notification_show_on_keyguard_summary">Показывать уведомления от этого приложения на экране блокировки</string>
   <string name="app_notification_no_ongoing_on_keyguard_title">Отключить уведомления на экране блокировки</string>
   <string name="app_notification_no_ongoing_on_keyguard_summary">Никогда не показывать уведомления от этого приложения на экране блокировки</string>
   
@@ -203,7 +203,7 @@
   <string name="clock_date_style">Стиль даты</string>
   <string name="clock_date_format">Формат даты</string>
   <string name="clock_date_string_edittext_title">Должен быть формат даты MM/dd/yy</string>
-  <string name="clock_date_string_edittext_summary">Ведите значение</string>
+  <string name="clock_date_string_edittext_summary">Введите значение</string>
   <string name="am_pm_clock_normal">Обычный шрифт</string>
   <string name="am_pm_clock_small">Маленький шрифт</string>
   <string name="am_pm_clock_none">Не показывать</string>
@@ -222,7 +222,7 @@
   <string name="status_bar_toggle_info">Автоматическое регулирование подсветки включено</string>
   
   <!-- SuperSU header name - the app hides itself from launcher based on this resource name being present in com.android.settings -->
-  <string name="supersu_title">SuperSU</string>
+  <string name="supersu_title">Суперпользователь</string>
   
   <!-- MediaScanner behavior on boot -->
   <string name="options_settings_title">Опции</string>
@@ -272,11 +272,11 @@
   
   <!-- Volume rocker music seek options -->
   <string name="volbtn_music_controls_title">Управление клавишами громкости</string>
-  <string name="volbtn_music_controls_summary">На заблокированном экране долгое нажатие громкости прокручивает треки</string>
+  <string name="volbtn_music_controls_summary">На заблокированном экране долгое нажатие громкости переключает треки</string>
   
   <!-- Weather switch -->
   <string name="status_bar_show_weather_title">Показывать погоду</string>
-  <string name="status_bar_show_weather_summary">Показывать погоду в верху статусной строки</string>
+  <string name="status_bar_show_weather_summary">Показывать погоду вверху статусной строки</string>
   
   <!-- Notification counter -->
   <string name="status_bar_notif_count_title">Показывать счетчик уведомлений</string>
@@ -291,18 +291,18 @@
   <string name="show_network_traffic_up">Отправлено</string>
   <string name="show_network_traffic_down">Получено</string>
   <string name="show_network_traffic_all">Отправлено и получено</string>
-  <string name="show_network_traffic_bit">bit/sec</string>
-  <string name="show_network_traffic_byte">Byte/sec</string>
-  <string name="show_network_traffic_500">500 ms</string>
-  <string name="show_network_traffic_1000">1000 ms</string>
-  <string name="show_network_traffic_1500">1500 ms</string>
-  <string name="show_network_traffic_2000">2000 ms</string>
+  <string name="show_network_traffic_bit">бит/сек</string>
+  <string name="show_network_traffic_byte">байт/сек</string>
+  <string name="show_network_traffic_500">500 мс</string>
+  <string name="show_network_traffic_1000">1000 мс</string>
+  <string name="show_network_traffic_1500">1500 мс</string>
+  <string name="show_network_traffic_2000">2000 мс</string>
   <string name="network_traffic_autohide">Скрывать автоматически</string>
   <string name="network_traffic_autohide_summary">Скрывать монитор когда траффик не активен</string>
   <string name="network_traffic_autohide_threshold">Длительность активности</string>
   <string name="network_traffic_color_style">Стиль цвета</string>
   <string name="network_traffic_color_reset">Сбросить цвет</string>
-  <string name="network_traffic_color_reset_message">Сбросить цвет монитора на умолчание?</string>
+  <string name="network_traffic_color_reset_message">Сбросить цвет по умолчанию?</string>
   
   <!--Quick unlock -->
   <string name="unlock_quick_unlock_control_title">Быстрая разблокировка</string>
@@ -327,7 +327,7 @@
   <string name="volume_adjust_sound_title">Звук регулировки громкости</string>
   <string name="shortcut_action_none">Нет</string>
   <string name="shortcut_action_app">Свое приложение</string>
-  <string name="shortcut_action_home">Домик</string>
+  <string name="shortcut_action_home">Домой</string>
   <string name="shortcut_action_back">Назад</string>
   <string name="shortcut_action_menu">Меню</string>
   <string name="shortcut_action_ime">Открыть переключение методов ввода</string>
@@ -355,7 +355,7 @@
   <string name="shortcut_action_warning">Внимание</string>
   <string name="shortcut_action_warning_message">Невозможно удалить последнюю запись</string>
   <string name="shortcut_action_disable_message">Выключите/добавьте значение для активации этой функции</string>
-  <string name="shortcut_image_not_valid">Выбранное прмложение не восстановило подходящую иконку, или не аоддерживает обрезание картинок. Используйте другое приложение.</string>
+  <string name="shortcut_image_not_valid">Выбранное приложение не восстановило подходящую иконку, или не поддерживает обрезание картинок. Используйте другое приложение.</string>
   <string name="shortcut_duplicate_entry">Выбранное действие не может быть добавлено дважды.</string>
   <string name="shortcut_action_help_shortcut">ярлык</string>
   <string name="shortcut_action_help_button">кнопка</string>
@@ -463,8 +463,8 @@
   <string name="heads_up_switch_disabled">Выключить</string>
   
   <!-- Gesture Anywhere -->
-  <string name="gesture_anywhere_title">Жесты AnyWhere</string>
-  <string name="gesture_anywhere_enabled_title">Жесты AnyWhere</string>
+  <string name="gesture_anywhere_title">Жесты</string>
+  <string name="gesture_anywhere_enabled_title">Жесты</string>
   <string name="gesture_anywhere_enabled_summary">Включить поддержку управления жестами</string>
   <string name="gesture_anywhere_position_title">Расположение</string>
   <string name="gesture_anywhere_position_left">Левый край</string>
@@ -635,20 +635,20 @@
   <string name="toast_animation_title">Анимация подсказок</string>
   <string name="toast_none_animation">Отсутствует</string>
   <string name="toast_default_animation">По умолчанию</string>
-  <string name="toast_fade_animation">Fade</string>
-  <string name="toast_SlideRight_animation">Slide right</string>
-  <string name="toast_SlideLeft_animation">Slide left</string>
+  <string name="toast_fade_animation">Угасание</string>
+  <string name="toast_SlideRight_animation">Скольжение справа</string>
+  <string name="toast_SlideLeft_animation">Скольжение слева</string>
   <string name="toast_Xylon_animation">Xylon</string>
   <string name="toast_Toko_animation">Toko</string>
   <string name="toast_Tn_animation">Tn</string>
   <string name="toast_Honami_animation">Honami</string>
-  <string name="toast_FastFade_animation">Fast fade</string>
-  <string name="toast_GrowFade_animation">Grow fade</string>
-  <string name="toast_GrowFadeCenter_animation">Grow fade center</string>
-  <string name="toast_GrowFadeBottom_animation">Grow fade bottom</string>
-  <string name="toast_Translucent_animation">Translucent</string>
-  <string name="toast_SlideLeftRight_animation">Slide left to right</string>
-  <string name="toast_SlideRightLeft_animation">Slide right to left</string>
+  <string name="toast_FastFade_animation">Быстрое угасание</string>
+  <string name="toast_GrowFade_animation">Нарастающие угасание</string>
+  <string name="toast_GrowFadeCenter_animation">Угасание от центра</string>
+  <string name="toast_GrowFadeBottom_animation">Угасание снизу</string>
+  <string name="toast_Translucent_animation">Прозрачное</string>
+  <string name="toast_SlideLeftRight_animation">Скольжение слева направо</string>
+  <string name="toast_SlideRightLeft_animation">Скольжение справа налево</string>
   
   <!-- Volume Steps -->
   <string name="volume_steps_title">Уровень громкости</string>
@@ -668,7 +668,7 @@
   
   <!-- Lockscreen weather -->
   <string name="lockscreen_weather_title">Погода на экране блокировки</string>
-  <string name="lockscreen_weather_summary">SystemUI будет перезапущен!</string>
+  <string name="lockscreen_weather_summary">Графический интерфейс будет перезапущен!</string>
   
   <!-- Battery Bar -->
   <string name="battery_bar_title">Строка состояния батареи</string>
@@ -704,8 +704,8 @@
   
   <!-- OmniSwitch -->
   <string name="omniswitch_category">OmniSwitch</string>
-  <string name="recents_use_omniswitch_title">Use for recents</string>
-  <string name="recents_use_omniswitch_summary">Use OmniSwitch instead of default recents view</string>
+  <string name="recents_use_omniswitch_title">Использовать для недавних</string>
+  <string name="recents_use_omniswitch_summary">Использовать OmniSwitch вместо стандарной панели недавно запущенных</string>
   <string name="omniswitch_start_settings_title">Настройки</string>
   <string name="omniswitch_start_settings_summary">Открыть настройки OmniSwitch</string>
   <string name="omniswitch_first_time_title">Информация</string>
@@ -719,21 +719,21 @@
   <string name="lcd_density_summary">xxx DPI</string>
   <string name="custom_density_title">Измнените все как, Вам нравится</string>
   <string name="custom_density_summary">Если, Вы столкнетесь с проблемами совместимости ПО в Play Store, в таком случае перепроверьте стоит ли у вас, модифицированный Play Store.</string>
-  <string name="custom_density_summary_invalid">"INVALID DENSITY!"</string>
+  <string name="custom_density_summary_invalid">"Неверное значение!"</string>
   <string name="custom_density">Не стандартное</string>
   <string name="set_custom_density_title">Установить не стандартную плотность экрана</string>
   <string name="set_custom_density_set">Установить</string>
   <string name="custom_density_dialog_title">ОСТОРОЖНО!</string>
-  <string name="custom_density_dialog_summary">Changing your default LCD density can sometimes cause certain apps to not function properly and/or the playstore to show apps being incompatible with your device"</string>
+  <string name="custom_density_dialog_summary">Изменение плотности экрана может повлиять на работу приложений, магазин приложений может показывать приложения как несовместимые с вашим устройством"</string>
   <string name="dpi">DPI</string>
   
   <!-- Privacy guard notification -->
   <string name="privacy_guard_notification_title">Уведомления</string>
-  <string name="privacy_guard_notifiation_summary">Показывать уведомление если режим безопасности активирован</string>
+  <string name="privacy_guard_notifiation_summary">Показывать уведомление, если режим безопасности активирован</string>
   
   <!-- Text for forcing expanded notifications -->
-  <string name="disable_fc_notifications_title">Отключить уведомления FC</string>
-  <string name="disable_fc_notifications_summary">Это спрячет все уведомления связанные с FC(force close)</string>
+  <string name="disable_fc_notifications_title">Отключить уведомления о принудительном закрытии (FC)</string>
+  <string name="disable_fc_notifications_summary">Это спрячет все уведомления связанные с FC (принудительное закрытие)</string>
   
   <!-- Navigation bar -->
   <string name="navbar_style_dimen_title">Размер навигационной панели</string>
