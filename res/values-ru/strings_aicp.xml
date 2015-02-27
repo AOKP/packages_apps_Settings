@@ -776,5 +776,128 @@
   <string name="qs_screenrecord_tile">Запись с экрана</string>
   <string name="qs_sync_tile">Синхронизация</string>
   <string name="qs_tile_powermenu">Меню питания</string>
+  <string name="qs_battery_saver_tile">Режим энергосбережения</string>
+  <string name="qs_brightness_tile">Яркость</string>
+  <string name="qs_expanded_desktop_tile">Расширенный экран</string>
+  <string name="qs_notifications_tile">Уведомления</string>
+  <string name="qs_screen_off_tile">Выключение экрана</string>
   
+  <!-- QuickSettings collapse panel -->
+  <string name="quick_settings_collapse_title">Auto close panel</string>
+  <string name="quick_settings_collapse_summary">Close the Quick Settings panel upon toggle</string>
+  
+  <!-- QuickSettings 4 columns -->
+  <string name="qs_four_columns_title">Показывать четыре плитки в ряд</string>
+
+  <!-- Navigation bar button color -->
+  <string name="navbar_button_tint_title">Оттенок кнопок навигации</string>
+
+  <!-- AOKP custom system animations -->
+  <string name="aokp_animation_title">Системные анимации</string>
+  <string name="aokp_animation_summary">AOKP анимация</string>
+  <string name="activity_open_title">Анимация открытия активности</string>
+  <string name="activity_close_title">Анимация закрытия активности</string>
+  <string name="task_open_title">Анимация открытия задачи</string>
+  <string name="task_close_title">Анимация закрятия задачи</string>
+  <string name="task_move_to_front_title">Анимация движения вперёд</string>
+  <string name="task_move_to_back_title">Анимация движения назад</string>
+  <string name="wallpaper_open_title">Анимация открытия обоев</string>
+  <string name="wallpaper_close_title">Анимация закрытия обоев</string>
+  <string name="wallpaper_intra_open_title">Wallpaper intra open animation</string>
+  <string name="wallpaper_intra_close_title">Wallpaper intra close animation</string>
+  <string name="task_open_behind_title">Task open behind animation</string>
+  <string name="animation_duration_title">Длительность анимации</string>
+  <string name="animation_duration_default">По умолчанию</string>
+
+  <!-- The volume key answer -->
+  <string name="volume_answer_call_title">Ответ кнопкой громкости</string>
+  <string name="volume_answer_call_summary">Кнопка увеличения громкости поднимает трубку</string>
+
+  <!-- Doze pulse (ambient display) options -->
+  <string name="doze_overwrite_value_title">Overwrite value</string>
+  <string name="doze_overwrite_value_summary">Allow to overwrite default value with user config</string>
+
+  <string name="doze_list_mode_title">Doze mode</string>
+  <string name="doze_list_mode_summary">Option to configure doze mode</string>
+
+  <string name="doze_pulse_title">Time settings</string>
+  <string name="doze_pulse_duration_in_title">Fade in</string>
+  <string name="doze_pulse_duration_in_summary"></string>
+
+  <string name="doze_pulse_duration_visible_title">Visible duration</string>
+  <string name="doze_pulse_duration_visible_summary"></string>
+
+  <string name="doze_pulse_duration_out_title">Fade out</string>
+  <string name="doze_pulse_duration_out_summary"></string>
+
+  <string name="doze_pulse_on_notifications_title">Pulse doze</string>
+  <string name="doze_pulse_on_notifications_summary">Pulse display on pending notifications</string>
+
+  <string name="doze_shake_title">Shake settings</string>
+  <string name="doze_shake_mode_title">Shake mode</string>
+  <string name="doze_shake_mode_summary">Use shake sensor value to trigger activation</string>
+  <string name="doze_shake_mode_test_summary">Do you want to test shake sensor?</string>
+  <string name="doze_shake_mode_test_result">Apply current value?</string>
+  <string name="doze_shake_test">Shake your device now</string>
+  <string name="doze_shake_it">Shake detected!</string>
+
+  <string name="doze_shake_acc_threshold_title">Shake threshold</string>
+  <string name="doze_shake_acc_threshold_summary">Configure shake strength required to trigger activation</string>
+
+  <string name="doze_time_mode_title">Show clock and date</string>
+  <string name="doze_time_mode_summary">Force showing time when there is no notification</string>
+
+  <string name="twohundred_ms">200 мс</string>
+  <string name="fivehundred_ms">500 мс</string>
+  <string name="one_second">1 с</string>
+  <string name="one_second_default">1 с (по умолчанию)</string>
+  <string name="onehalf_second">1.5 с</string>
+  <string name="two_second">2 с</string>
+  <string name="twohalf_second">2.5 с</string>
+  <string name="three_second">3 с</string>
+  <string name="three_second_default">3 с (default)</string>
+  <string name="threehalf_second">3.5 с</string>
+  <string name="four_second">4 с</string>
+  <string name="fourhalf_second">4.5 с</string>
+  <string name="five_second">5 с</string>
+
+  <string name="veryeasy_shake">Очень легко</string>
+  <string name="easy_shake">Легко</string>
+  <string name="medium_shake">По умолчанию</string>
+  <string name="hard_shake">Сильно</string>
+  <string name="veryhard_shake">Очень сильно</string>
+  <string name="strong_shake">Со всей силы</string>
+
+  <string name="fully_mode">Full mode</string>
+  <string name="pocket_shake_mode">Pocket and shake</string>
+  <string name="pocket_pulse_mode">Pocket and pulse</string>
+  <string name="pocket_only_mode">Pocket</string>
+  <string name="shake_pulse_mode">Shake and pulse</string>
+  <string name="pulse_only_mode">Pulse (default)</string>
+
+  <!-- Show carrier label and custom -->
+  <string name="carrier_options">Логотип оператора</string>
+  <string name="show_status_bar_carrier_title">Логотип оператора в строке состояния</string>
+  <string name="show_status_bar_carrier_summary">Показывать логотип в строке состояния</string>
+  <string name="custom_carrier_label_title">Свой логотип</string>
+  <string name="custom_carrier_label_explain">Пожалуйста, введите своё имя оператора. Оставить пустым для отображения по умолчанию.</string>
+  <string name="custom_carrier_label_notset">Пользовательский логотип не установлен</string>
+  <string name="status_bar_carrier_color">Цвет логотипа</string>
+
+  <!-- Statusbar AICP logo -->
+  <string name="status_bar_aicp_logo_title">AICP логотип</string>
+  <string name="status_bar_aicp_logo_summary">Включить отображение AICP логотипа на левой стороне строки состояния</string>
+
+  <!-- Data activity icons -->
+  <string name="status_bar_show_network_activity_title">Индикаторы сетевой активности</string>
+
+  <!-- Volume pane timeout -->
+  <string name="volume_panel_time_out_title">Таймаут панели громкости</string>
+  <string name="volume_panel_time_out_summary">Скрывать до <xliff:g id="number">%d</xliff:g> секунд. Автоматически скрывать по нажатию на экран</string>
+  <string name="volume_panel_time_out_3sec">3 сукунды (default)</string>
+  <string name="volume_panel_time_out_5sec">5 секунд</string>
+  <string name="volume_panel_time_out_8sec">8 секунд</string>
+  <string name="volume_panel_time_out_12sec">12 секунд</string>
+  <string name="volume_panel_time_out_15sec">15 секунд</string>
+
 </resources>
