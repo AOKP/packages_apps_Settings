@@ -898,6 +898,7 @@
     <!-- Volume pane timeout -->
     <string name="volume_panel_time_out_title">Volume panel timeout</string>
     <string name="volume_panel_time_out_summary">Hide before <xliff:g id="number">%d</xliff:g> seconds. Auto hide on touch outside</string>
+    <string name="volume_panel_time_out_1.5sec">1,5 seconds</string>
     <string name="volume_panel_time_out_3sec">3 seconds (default)</string>
     <string name="volume_panel_time_out_5sec">5 seconds</string>
     <string name="volume_panel_time_out_8sec">8 seconds</string>

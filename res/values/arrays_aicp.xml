@@ -878,6 +878,7 @@ limitations under the License.
 
     <!-- Volume panel timeout -->
     <string-array name="volume_panel_time_out_entries">
+        <item>@string/volume_panel_time_out_1.5sec</item>
         <item>@string/volume_panel_time_out_3sec</item>
         <item>@string/volume_panel_time_out_5sec</item>
         <item>@string/volume_panel_time_out_8sec</item>
@@ -886,6 +887,7 @@ limitations under the License.
     </string-array>
 
     <string-array name="volume_panel_time_out_values" translatable="false">
+        <item>1500</item>
         <item>3000</item>
         <item>5000</item>
         <item>8000</item>
