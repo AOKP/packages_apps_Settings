@@ -29,11 +29,11 @@
         android:key="aicp_notifications_category"
         android:title="@string/aicp_notifications_category" >
 
-        <!-- Disable FC Notifications -->
-        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-            android:key="disable_fc_notifications"
-            android:title="@string/disable_fc_notifications_title"
-            android:summary="@string/disable_fc_notifications_summary" />
+    <!-- Disable FC Notifications -->
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+        android:key="disable_fc_notifications"
+        android:title="@string/disable_fc_notifications_title"
+        android:summary="@string/disable_fc_notifications_summary" />
 
     </PreferenceCategory>
 

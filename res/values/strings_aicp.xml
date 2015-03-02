@@ -932,4 +932,8 @@
     <string name="status_bar_greeting_main">Flash ON!!!</string>
     <string name="status_bar_greeting_timeout_title">Greeting timeout</string>
 
+    <!-- Force expand notifications -->
+    <string name="notification_force_expand_title">Force expanded notification</string>
+    <string name="notification_force_expand_summary">Force expanded notifications on all apps that support it</string>
+
 </resources>
