@@ -13,12 +13,14 @@
     <TextView android:id="@android:id/title"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
+            android:paddingLeft="8dp"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView android:id="@android:id/summary"
             android:layout_alignParentLeft="true"
+            android:paddingLeft="8dp"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@android:id/title"

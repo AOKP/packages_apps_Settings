@@ -79,6 +79,12 @@
             android:title="@string/status_bar_show_network_activity_title"
             android:defaultValue="true" />
 
+    <!-- Network traffic indicator -->
+    <PreferenceScreen
+            android:key="traffic"
+            android:fragment="com.android.settings.aicp.Traffic"
+            android:title="@string/network_traffic_title" />
+
     <PreferenceCategory
             android:title="@string/status_bar_greeting_category_title">
 

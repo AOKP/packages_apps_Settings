@@ -83,14 +83,6 @@
                 android:icon="@drawable/ic_settings_aicp"
                 />
 
-        <!-- Interface -->
-        <dashboard-tile
-                android:id="@+id/interface_settings"
-                android:icon="@drawable/ic_settings_interface"
-                android:fragment="com.android.settings.slim.InterfaceSettings"
-                android:title="@string/interface_settings_title"
-                />
-
         <!-- Gestures -->
         <dashboard-tile
             android:id="@+id/device_specific_gesture_settings"

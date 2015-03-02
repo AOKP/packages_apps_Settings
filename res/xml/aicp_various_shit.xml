@@ -77,12 +77,6 @@
             android:targetClass="com.cyanogenmod.lockclock.preference.Preferences" />
         </PreferenceScreen>
 
-    <!-- Network traffic indicator -->
-    <PreferenceScreen
-        android:key="traffic"
-        android:fragment="com.android.settings.aicp.Traffic"
-        android:title="@string/network_traffic_title" />
-
     <!-- Ad blocker -->
     <PreferenceScreen
         android:key="hfm_settings"
