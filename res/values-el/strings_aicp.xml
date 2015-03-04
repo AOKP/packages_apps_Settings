@@ -785,6 +785,7 @@
     <string name="qs_expanded_desktop_tile">Διευρυμένη επιφ. εργασίας</string>
     <string name="qs_notifications_tile">Γνωστοποίησης</string>
     <string name="qs_screen_off_tile">Οθόνη εκτός</string>
+    <string name="qs_ambient_display_tile">Περιβάλλον οθόνης</string>
 
     <!-- QuickSettings collapse panel -->
     <string name="quick_settings_collapse_title">Αυτόματο Κλείσιμο πάνελ</string>
