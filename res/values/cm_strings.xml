@@ -990,6 +990,9 @@
     <!-- Stylus gestures -->
     <string name="stylus_app_not_installed">%s is not installed</string>
 
+    <string name="advanced">Advanced</string>
+    <string name="advanced_mode_title">Advanced mode</string>
+
     <!-- Launch music player when headset is connected -->
     <string name="headset_connect_player_title">Launch music app</string>
     <string name="headset_connect_player_summary">Launch the default music app when headset is connected</string>
