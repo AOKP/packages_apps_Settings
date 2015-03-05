@@ -949,6 +949,20 @@ limitations under the License.
         <!--<item>**theme_switch**</item>-->
         <item>**torch**</item>
         <item>**screenshot**</item>
+    </string-array>
+
+    <string-array name="shortcut_action_tile_entries">
+        <item>@string/shortcut_action_power</item>
+        <item>@string/shortcut_action_power_menu</item>
+        <item>@string/shortcut_action_screenshot</item>
+        <item>@string/shortcut_action_recent</item>
+    </string-array>
+
+    <string-array name="shortcut_action_tile_values" translatable="false">
+        <item>**power**</item>
+        <item>**power_menu**</item>
+        <item>**screenshot**</item>
+        <item>**recents**</item>
     </string-array>		
 
 </resources>
