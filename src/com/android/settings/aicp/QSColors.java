@@ -33,6 +33,7 @@ import android.view.MenuItem;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.cyanogenmod.qs.QSTiles;
+import com.android.settings.util.Helpers;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
@@ -57,8 +58,6 @@ public class QSColors extends SettingsPreferenceFragment implements
     private static final int MENU_RESET = Menu.FIRST;
     private static final int DLG_RESET = 0;
 
-    private boolean mRecreating = false;
-
     private ColorPickerPreference mQSBackgroundColor;
     private ColorPickerPreference mQSIconColor;
     private ColorPickerPreference mQSTextColor;
@@ -67,10 +66,6 @@ public class QSColors extends SettingsPreferenceFragment implements
 
     private ContentResolver mResolver;
 
-    private void recreateStatusBar() {
-        mRecreating = true;
-    }
-    
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
@@ -160,7 +155,6 @@ public class QSColors extends SettingsPreferenceFragment implements
             Settings.System.putInt(mResolver,
                 Settings.System.QS_BACKGROUND_COLOR, intHex);
             preference.setSummary(hex);
-            recreateStatusBar();
             return true;
         } else if (preference == mQSIconColor) {
             hex = ColorPickerPreference.convertToARGB(
@@ -169,7 +163,6 @@ public class QSColors extends SettingsPreferenceFragment implements
             Settings.System.putInt(mResolver,
                 Settings.System.QS_ICON_COLOR, intHex);
             preference.setSummary(hex);
-            recreateStatusBar();
             return true;
         } else if (preference == mQSTextColor) {
             hex = ColorPickerPreference.convertToARGB(
@@ -178,20 +171,17 @@ public class QSColors extends SettingsPreferenceFragment implements
             Settings.System.putInt(mResolver,
                 Settings.System.QS_TEXT_COLOR, intHex);
             preference.setSummary(hex);
-            recreateStatusBar();
             return true;
         } else if (preference == mQSShadeTransparency) {
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.QS_TRANSPARENT_SHADE, value ? 1 : 0);
-            recreateStatusBar();
             return true;
         } else if (preference == mQSSSwitch) {
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.QS_COLOR_SWITCH, value ? 1 : 0);
-            refreshSettings();
-            recreateStatusBar();
+            Helpers.restartSystemUI();
         }
         return false;
     }
