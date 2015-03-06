@@ -144,7 +144,7 @@
   <string name="keyboard_rotation_timeout_summary">Отключить автоповорот после <xliff:g id="rotate_timeout">%1$s</xliff:g> секунд после скрытия клавиатуры            </string>
   <string name="keyboard_rotation_dialog">Эта опция временно включает автоповорот, пока клавиатура на экране. Не имеет эффекта при включенном автоповороте.</string>
   <string name="show_enter_key_title">Увеличение нажатых</string>
-  <string name="show_enter_key_summary">Показывать Enter вместо кнопки смайлов</string>
+  <string name="show_enter_key_summary">Показывать Ввод вместо кнопки смайлов</string>
   <string name="ime_switcher_notify">Панель уведомлений</string>
   <string name="ime_switcher_notify_summary">Показывать способ ввода в панели уведомлений</string>
   
@@ -167,7 +167,6 @@
   
   <!-- Slim settings screens -->
   <string name="header_category_personalization">Персонализация</string>
-  <string name="interface_settings_title">Интерфейс</string>
   
   <!-- Color Picker -->
   <string name="dialog_color_picker">Выбор цвета</string>
@@ -245,10 +244,14 @@
   
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">Двойное нажатие для сна</string>
-  <string name="double_tap_to_sleep_summary">Двойное нажатие по статусной строке выключает экран</string>
+  <string name="double_tap_to_sleep_summary">Двойное нажатие по строке состояния выключает экран</string>
   
-  <string name="block_on_secure_keyguard_title">Отключить на экране блокировки</string>
-  <string name="block_on_secure_keyguard_summary">Отлючить быстрые настройки на экране блокировки</string>
+  <!-- Double Tap Navbar to Sleep -->
+  <string name="double_tap_sleep_nav_bar_title">Двойное нажатие для сна</string>
+  <string name="double_tap_sleep_nav_bar_summary">Двойное нажатие по панели навигации выключает экран</string>
+
+  <string name="block_on_secure_keyguard_title">Отключено на экране блокировки</string>
+  <string name="block_on_secure_keyguard_summary">Отключить доступ к быстрым настройкам на защищённом экране блокировки.</string>
   
   <!-- LockClocK -->
   <string name="lock_clock_title">Настройки cLock</string>
@@ -329,6 +332,7 @@
   
   <!-- Volume adjust sound -->
   <string name="volume_adjust_sound_title">Звук регулировки громкости</string>
+  
   <string name="shortcut_action_none">Нет</string>
   <string name="shortcut_action_app">Свое приложение</string>
   <string name="shortcut_action_home">Домой</string>
@@ -364,8 +368,8 @@
   <string name="shortcut_action_help_shortcut">Ярлык</string>
   <string name="shortcut_action_help_button">Кнопка</string>
   <string name="shortcut_action_help_app">Приложение</string>
-  <string name="shortcut_action_help_icon">, while selecting the icon will bring up customization options</string>
-  <string name="shortcut_action_help_main">To add a %1$s, select the Add icon. Once a %1$s is added, selecting the row will change the target%2$s\n\nTo remove a %1$s, swipe the row horizontally left or right. Re-order a %1$s in the list by vertically dragging the anchor on the left.\n\nTo clear or reset to defaults, select the reset option.</string>
+  <string name="shortcut_action_help_icon">, при выборе иконки будут показываться опции настройки</string>
+  <string name="shortcut_action_help_main">Для добавления %1$s, выбирите добавить иконку. Однажды %1$s добавленная, selecting the row will change the target%2$s\n\nДля удаления %1$s, проведите влево или направо. Re-order a %1$s in the list by vertically dragging the anchor on the left.\n\nДля сброса по умолчанию, выбирите опцию сброса.</string>
   <string name="shortcut_action_help_delete_last_entry">Removing every %1$s in the list will disable the feature entirely.</string>
   <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Removing every %1$s in the list will disable the second pie layer entirely.</string>
   
@@ -442,7 +446,7 @@
   
   <!-- Unaccounted and overcounted battery stats -->
   <string name="show_unac_and_overcounted_stats_title">Показывать неучтенную статистику</string>
-  <string name="show_unac_and_overcounted_stats_summary">Показывать в статистике батареи неучетнный и переучтенный расход</string>
+  <string name="show_unac_and_overcounted_stats_summary">Показывать в статистике батареи неучтенный и переучтенный расход</string>
   
   <!-- Heads up -->
   <string name="heads_up_title">Всплывающие уведомления</string>
@@ -457,12 +461,14 @@
   <string name="heads_up_snooze_15min">15 минут</string>
   <string name="heads_up_snooze_20min">20 минут</string>
   <string name="heads_up_time_out_title">Тайм аут</string>
-  <string name="heads_up_time_out_summary">Всплывающие уведомлени будет показываться <xliff:g id="number">%d</xliff:g> секунд</string>
+  <string name="heads_up_time_out_summary">Всплывающие уведомления будет показываться <xliff:g id="number">%d</xliff:g> секунд</string>
+  <string name="heads_up_time_out_zero">Сейчас всплывающие уведомления выключены.</string>
+  <string name="heads_up_time_out_0sec">0 сек. Используется когда всплывающие уведомления выключены</string>
   <string name="heads_up_time_out_4sec">4 секунды</string>
   <string name="heads_up_time_out_6sec">6 секунд</string>
   <string name="heads_up_time_out_8sec">8 секунд</string>
   <string name="heads_up_time_out_10sec">10 секунд</string>
-  <string name="heads_up_switch">Heads up</string>
+  <string name="heads_up_switch">Всплювающие уведомления</string>
   <string name="heads_up_switch_enabled">Включить</string>
   <string name="heads_up_switch_disabled">Выключить</string>
   
@@ -559,7 +565,7 @@
   <!-- Security & location settings screen, setting option name -->
   <string name="lockgesture_change_lock_pattern_label">Изменить жест разблокировки</string>
   <!-- Security & location settings screen, change unlock gesture screen instruction when the user chooses "Change unlock gesture".  We first ask the user toe nter the current pattern, and this is the message seen -->
-  <string name="lockgesture_change_lock_pin_label">Изменить PIN разблоктровки</string>
+  <string name="lockgesture_change_lock_pin_label">Изменить PIN разблокировки</string>
   <!-- Security & location settings screen, change unlock gesture screen instruction when the user chooses "Change unlock gesture".  We first ask the user toe nter the current pattern, and this is the message seen -->
   <string name="lockgesture_need_to_unlock">Подтвердить сохраненный жест</string>
   <!-- Do not translate. -->
@@ -726,8 +732,8 @@
   <string name="custom_density_title">Измнените все как, Вам нравится</string>
   <string name="custom_density_summary">Если Вы столкнетесь с проблемами совместимости ПО в Play Store, перепроверьте стоит ли у Вас, модифицированный Play Store.</string>
   <string name="custom_density_summary_invalid">"Неверное значение!"</string>
-  <string name="custom_density">Не стандартное</string>
-  <string name="set_custom_density_title">Установить не стандартную плотность экрана</string>
+  <string name="custom_density">Нестандартное</string>
+  <string name="set_custom_density_title">Установить нестандартную плотность экрана</string>
   <string name="set_custom_density_set">Установить</string>
   <string name="custom_density_dialog_title">ОСТОРОЖНО!</string>
   <string name="custom_density_dialog_summary">Изменение плотности экрана может повлиять на работу приложений, магазин приложений может показывать приложения как несовместимые с вашим устройством"</string>
@@ -769,14 +775,6 @@
   <string name="install_file_manager_error">Нет приложения для поиска и выбора zip файла. Пожалуйста установите файловый менеджер.</string>
   <string name="apply">Принять</string>
 
-  <!-- Doze options -->
-  <string name="display_category_doze_options_title">Настройки режима сна</string>
-  <string name="doze_timeout_title">Настройки длительности пульсации</string>
-  <string name="doze_timeout_summary">Время работы экрана при получении уведомления</string>
-  <string name="doze_trigger_motion_title">Настройки сенсора</string>
-  <string name="doze_trigger_motion_summary_on">Doze pulse will be triggered by pick up gesture/significant motion sensor and notifications</string>
-  <string name="doze_trigger_motion_summary_off">Doze pulse will only be triggered by notifications</string>
-
   <!-- QuickSettings tiles -->
   <string name="qs_screenshot_tile">Скриншот</string>
   <string name="qs_screenrecord_tile">Запись с экрана</string>
@@ -805,6 +803,8 @@
   <string name="text_title">Текст</string>
   <string name="qs_transparent_shade_title">Прозрачность</string>
   <string name="qs_transparent_shade_summary">Возможность делать панель прозрачной.</string>
+  <string name="qs_color_switch_title">Переключение пользовательского цвета</string>
+  <string name="qs_color_switch_summary">Системный интерфейс будет презапущен!</string>
 
   <!-- Navigation bar button color -->
   <string name="navbar_button_tint_title">Оттенок кнопок навигации</string>
@@ -872,7 +872,7 @@
   <string name="two_second">2 с</string>
   <string name="twohalf_second">2.5 с</string>
   <string name="three_second">3 с</string>
-  <string name="three_second_default">3 с (default)</string>
+  <string name="three_second_default">3 с (по умолчанию)</string>
   <string name="threehalf_second">3.5 с</string>
   <string name="four_second">4 с</string>
   <string name="fourhalf_second">4.5 с</string>
@@ -887,10 +887,10 @@
 
   <string name="fully_mode">Полный режим</string>
   <string name="pocket_shake_mode">В кармане и потрясти</string>
-  <string name="pocket_pulse_mode">В кармане и пульсировать</string>
+  <string name="pocket_pulse_mode">В кармане и пульсировать экраном</string>
   <string name="pocket_only_mode">В кармане</string>
-  <string name="shake_pulse_mode">Потрясти и пульсировать</string>
-  <string name="pulse_only_mode">Пульсировать (по умолчанию)</string>
+  <string name="shake_pulse_mode">Потрясти и пульсировать экраном</string>
+  <string name="pulse_only_mode">Пульсировать экраном (по умолчанию)</string>
 
   <!-- Show carrier label and custom -->
   <string name="carrier_options">Логотип оператора</string>
@@ -911,18 +911,31 @@
   <!-- Volume pane timeout -->
   <string name="volume_panel_time_out_title">Таймаут панели громкости</string>
   <string name="volume_panel_time_out_summary">Скрывать до <xliff:g id="number">%d</xliff:g> секунд. Автоматически скрывать при нажатии на экран</string>
-  <string name="volume_panel_time_out_3sec">3 сукунды (default)</string>
+  <string name="volume_panel_time_out_1.5sec">1,5 секунды</string>
+  <string name="volume_panel_time_out_3sec">3 сукунды (по умолчанию)</string>
   <string name="volume_panel_time_out_5sec">5 секунд</string>
   <string name="volume_panel_time_out_8sec">8 секунд</string>
   <string name="volume_panel_time_out_12sec">12 секунд</string>
   <string name="volume_panel_time_out_15sec">15 секунд</string>
   
   <!-- long press back to kill configurable timeout -->
-  <string name="kill_app_longpress_timeout_title">Длительность долгого нажатия</string>
+  <string name="kill_app_longpress_timeout_title">Длительность нажатия</string>
   <string name="timeout_2000">2 секунды (по умолчанию)</string>
   <string name="timeout_1500">1,5 секунды</string>
   <string name="timeout_1000">1 секунда</string>
   <string name="timeout_750">0,75 секунды</string>
   <string name="timeout_500">0,5 секунды</string>
+
+   <!-- Status bar greeting -->
+   <string name="status_bar_greeting_category_title">Приветсвие в строке состояния</string>
+   <string name="status_bar_greeting_title">Приветсвие</string>
+   <string name="status_bar_greeting_summary">Показывать пользовательское приветсвие в строке состояния после разблокировки устройства</string>
+   <string name="status_bar_greeting_dialog">Установить своё приветсвие</string>
+   <string name="status_bar_greeting_main">Вспышка!!!</string>
+   <string name="status_bar_greeting_timeout_title">Таймаут приветсвия</string>
+
+   <!-- Force expand notifications -->
+   <string name="notification_force_expand_title">Принудительно развернутое уведомление</string>
+   <string name="notification_force_expand_summary">Принудительное развертывание уведомлений для всех приложений, которые это поддерживают</string>
 
 </resources>
