@@ -59,13 +59,6 @@
             android:switchTextOn=""
             android:persistent="false" />
 
-    <!-- CMHW vibration intensity -->
-    <com.android.settings.hardware.VibratorIntensity
-            android:key="vibration_intensity"
-            android:title="@string/vibrator_intensity_title"
-            android:dialogTitle="@string/vibrator_intensity_title"
-            android:persistent="false" />
-
     <!-- Volume adjust sound -->
     <SwitchPreference
             android:key="volume_adjust_sound"
