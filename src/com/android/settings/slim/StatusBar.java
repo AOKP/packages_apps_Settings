@@ -32,6 +32,7 @@ import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
+import android.telephony.TelephonyManager;
 import android.text.Spannable;
 import android.text.TextUtils;
 import android.util.Log;
@@ -127,6 +128,10 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
                 Settings.System.STATUS_BAR_GREETING_TIMEOUT, 400);
         mStatusBarGreetingTimeout.setValue(statusBarGreetingTimeout / 1);
         mStatusBarGreetingTimeout.setOnPreferenceChangeListener(this);
+
+        if (TelephonyManager.getDefault().getPhoneCount() <= 1) {
+            removePreference(Settings.System.STATUS_BAR_MSIM_SHOW_EMPTY_ICONS);
+        }
 
     }
 
