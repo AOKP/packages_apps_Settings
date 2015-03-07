@@ -208,34 +208,32 @@ public class SetupActionsFragment extends SettingsPreferenceFragment
         mItems.add(new LockModeItem(mProfile));
 
         // app groups
-        if (SettingsActivity.showAdvancedPreferences(getActivity())) {
-            mItems.add(new Header(getString(R.string.profile_app_group_category_title)));
+        mItems.add(new Header(getString(R.string.profile_app_group_category_title)));
 
-            int groupsAdded = 0;
-            ProfileGroup[] profileGroups = mProfile.getProfileGroups();
-            if (profileGroups != null && profileGroups.length > 1) { // it will always have "other"
-                for (ProfileGroup profileGroup : profileGroups) {
-                    // only display profile group if there's a matching notification group
-                    // and don't' show the wildcard group
-                    if (mProfileManager.getNotificationGroup(profileGroup.getUuid()) != null
-                            && !mProfile.getDefaultGroup().getUuid().equals(
-                                profileGroup.getUuid())) {
-                        mItems.add(new AppGroupItem(mProfile, profileGroup));
-                        groupsAdded++;
-                    }
-                }
-                if (groupsAdded > 0) {
-                    // add "Other" at the end
-                    mItems.add(new AppGroupItem(mProfile, mProfile.getDefaultGroup()));
+        int groupsAdded = 0;
+        ProfileGroup[] profileGroups = mProfile.getProfileGroups();
+        if (profileGroups != null && profileGroups.length > 1) { // it will always have "other"
+            for (ProfileGroup profileGroup : profileGroups) {
+                // only display profile group if there's a matching notification group
+                // and don't' show the wildcard group
+                if (mProfileManager.getNotificationGroup(profileGroup.getUuid()) != null
+                        && !mProfile.getDefaultGroup().getUuid().equals(
+                            profileGroup.getUuid())) {
+                    mItems.add(new AppGroupItem(mProfile, profileGroup));
+                    groupsAdded++;
                 }
             }
-            if (mProfileManager.getNotificationGroups().length > 0) {
-                // if there are notification groups available, allow them to be configured
-                mItems.add(new AppGroupItem());
-            } else if (groupsAdded == 0) {
-                // no notification groups available at all, nothing to add/remove
-                mItems.remove(mItems.get(mItems.size() - 1));
+            if (groupsAdded > 0) {
+                // add "Other" at the end
+                mItems.add(new AppGroupItem(mProfile, mProfile.getDefaultGroup()));
             }
+        }
+        if (mProfileManager.getNotificationGroups().length > 0) {
+            // if there are notification groups available, allow them to be configured
+            mItems.add(new AppGroupItem());
+        } else if (groupsAdded == 0) {
+            // no notification groups available at all, nothing to add/remove
+            mItems.remove(mItems.get(mItems.size() - 1));
         }
 
         mAdapter.notifyDataSetChanged();
