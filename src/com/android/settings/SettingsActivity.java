@@ -23,7 +23,6 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -1421,12 +1420,5 @@ public class SettingsActivity extends Activity
         }
         super.onNewIntent(intent);
     }
-
-    public static boolean showAdvancedPreferences(Context context) {
-        return android.provider.Settings.Secure.getInt(
-                context.getContentResolver(),
-                android.provider.Settings.Secure.ADVANCED_MODE, 1) == 1;
-    }
-
 
 }
