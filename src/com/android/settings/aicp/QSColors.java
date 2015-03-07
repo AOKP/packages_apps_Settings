@@ -33,7 +33,6 @@ import android.view.MenuItem;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.cyanogenmod.qs.QSTiles;
-import com.android.settings.util.Helpers;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
@@ -181,7 +180,8 @@ public class QSColors extends SettingsPreferenceFragment implements
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.QS_COLOR_SWITCH, value ? 1 : 0);
-            Helpers.restartSystemUI();
+            refreshSettings();
+            return true;
         }
         return false;
     }
