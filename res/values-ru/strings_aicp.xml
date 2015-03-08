@@ -51,8 +51,8 @@
   <string name="show_dev_already_aicp">Не надо, опции уже активированы.</string>
   
   <!-- Aicp Settings -->
-  <string name="aicp_settings_title">Дополнения AICP</string>
-  <string name="aicp_ota_settings_title">Обновление AICP</string>
+  <string name="aicp_settings_title">Расширенные настройки</string>
+  <string name="aicp_ota_settings_title">Обновление прошивки</string>
   <string name="battery_settings_title">Настройки отображения батареи</string>
   <string name="status_bar_battery_title">Иконка батареи</string>
   
@@ -268,7 +268,7 @@
   <!-- Host File Manager -->
   <string name="hfm_disable_ads_title">Блокировка рекламы</string>
   <string name="hfm_disable_ads_summary">Изменить файл hosts для отключения рекламы</string>
-  <string name="hfm_pref_screen_title">Блокировщик</string>
+  <string name="hfm_pref_screen_title">Блокировка рекламы</string>
   <string name="hfm_update_hosts">Обновить файл hosts</string>
   <string name="hfm_update_hosts_summary">Загрузите и установите свежий hosts</string>
   <string name="hfm_dialog_wait">Работаю, не отвлекай...</string>
@@ -337,17 +337,22 @@
   <string name="shortcut_action_app">Свое приложение</string>
   <string name="shortcut_action_home">Домой</string>
   <string name="shortcut_action_back">Назад</string>
+  <string name="shortcut_action_kill">Закрыть приложение</string>
+  <string name="shortcut_action_lastapp">Последнее приложение</string>
+  <string name="shortcut_action_assist">Поиск</string>
+  <string name="shortcut_action_screenshot">Снимок экрана</string>
+  <string name="shortcut_action_torch">Фонарик</string>
   <string name="shortcut_action_menu">Меню</string>
-  <string name="shortcut_action_ime">Открыть переключение методов ввода</string>
+  <string name="shortcut_action_ime">Открыть способ ввода</string>
   <string name="shortcut_action_power_menu">Меню выключения</string>
-  <string name="shortcut_action_recent">Недавние</string>
-  <string name="shortcut_action_power">Выкл. экран</string>
-  <string name="shortcut_action_search">Поиск по приложениям</string>
-  <string name="shortcut_action_ring_vib">звук/вибро</string>
-  <string name="shortcut_action_ring_silent">звук/без звука</string>
-  <string name="shortcut_action_ring_vib_silent">звук/вибро/без звука</string>
+  <string name="shortcut_action_recent">Недавние приложения</string>
+  <string name="shortcut_action_power">Выключение экрана</string>
+  <string name="shortcut_action_search">Поиск в приложении</string>
+  <string name="shortcut_action_ring_vib">Звонок/Вибрация</string>
+  <string name="shortcut_action_ring_silent">Звонок/Беззвучный</string>
+  <string name="shortcut_action_ring_vib_silent">Звонок/Вибрация//Беззвучный</string>
   <string name="shortcut_action_camera">Камера</string>
-  <string name="shortcut_action_media_next">Музыка-след. трек</string>
+  <string name="shortcut_action_media_next">Музыка - следующий трек</string>
   <string name="shortcut_action_media_play_pause">Музыка-воспр./пауза</string>
   <string name="shortcut_action_media_previous">Музыка-предыдущий трек</string>
   <string name="shortcut_action_wake_device">Будить устройство</string>
@@ -937,5 +942,15 @@
    <!-- Force expand notifications -->
    <string name="notification_force_expand_title">Принудительно развернутое уведомление</string>
    <string name="notification_force_expand_summary">Принудительное развертывание уведомлений для всех приложений, которые это поддерживают</string>
+
+   <!-- Slim Shortcuts -->
+    <string name="slim_shortcut_picker">Действия</string>
+    <string name="qs_tile_slimaction">Действие</string>
+    <string name="qs_slim_action_summary">Добавить и установить порядок действий</string>
+    <string name="qs_slim_action_title">>Действия</string>
+
+    <!-- Long press on lock screen lock icon to sleep -->
+    <string name="longpress_lock_icon_to_sleep_title">Долгое нажатие на иконку блокировки для сна</string>
+    <string name="longpress_lock_icon_to_sleep_summary">эта опция не будет работать, если включен защищенный режим</string>
 
 </resources>
