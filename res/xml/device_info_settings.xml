@@ -132,6 +132,12 @@
                 android:title="@string/firmware_version"
                 android:summary="@string/device_info_default"/>
 
+        <!-- AOKP firmware version -->
+        <Preference android:key="aokp_version"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/aokp_version_title"
+                android:summary="@string/aokp_version_default"/>
+
         <!-- Device FCC equipment id -->
         <Preference android:key="fcc_equipment_id"
                 style="?android:preferenceInformationStyle"
