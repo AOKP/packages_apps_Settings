@@ -75,6 +75,12 @@
             android:title="@string/navbar_button_tint_title"
             android:defaultValue="#ffffff" />
 
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="navigation_ring"
+        android:title="@string/navigation_ring_category" >
+
         <com.android.settings.cyanogenmod.SecureSettingSwitchPreference
             android:key="search_panel_enabled"
             android:title="@string/navigation_ring_enable_title"

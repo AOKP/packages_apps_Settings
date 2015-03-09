@@ -157,6 +157,7 @@
     <string name="status_bar_show_weather_category">Weather</string>
     <string name="aicp_notifications_category">Notifications</string>
     <string name="navigation_bar_category">Navigation Bar</string>
+    <string name="navigation_ring_category">Navigation Ring</string>
     <string name="aicp_extras_category">More Shit</string>
 
     <!-- Per app controls for LP keyguard notifications -->
