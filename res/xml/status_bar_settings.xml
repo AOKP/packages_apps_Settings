@@ -69,12 +69,6 @@
             android:summary="@string/double_tap_to_sleep_summary"
             android:defaultValue="true" />
 
-    <SwitchPreference
-            android:key="status_bar_ticker_enabled"
-            android:title="@string/status_bar_ticker_title"
-            android:summary="@string/status_bar_ticker_summary"
-            android:defaultValue="true" />
-
     <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
             android:key="status_bar_notif_count"
             android:title="@string/status_bar_notif_count_title"
