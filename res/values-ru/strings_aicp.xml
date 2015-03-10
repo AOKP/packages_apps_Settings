@@ -157,6 +157,7 @@
   <string name="status_bar_show_weather_category">Погода</string>
   <string name="aicp_notifications_category">Уведомления</string>
   <string name="navigation_bar_category">Панель навигации</string>
+  <string name="navigation_ring_category">Кольцо панели навигации</string>
   <string name="aicp_extras_category">Расширенные настройки</string>
   
   <!-- Per app controls for LP keyguard notifications -->
@@ -217,8 +218,6 @@
   <string name="clock_date_style_uppercase">Заглавные</string>
   <string name="clock_date_format_custom">Свой формат даты</string>
   <string name="status_bar_clock_style_reset_message">Восстановить цвет часов?</string>
-  <string name="status_bar_ticker_title">Счетчик уведомлений</string>
-  <string name="status_bar_ticker_summary">Текстовая анимация уведомлений в строке состояния</string>
   <string name="status_bar_toggle_brightness">Управление яркостью</string>
   <string name="status_bar_toggle_brightness_summary">Менять яркость свайпом по строке состояния</string>
   <string name="status_bar_toggle_info">Автоматическое регулирование подсветки включено</string>
@@ -790,6 +789,7 @@
   <string name="qs_expanded_desktop_tile">Расширенный экран</string>
   <string name="qs_notifications_tile">Уведомления</string>
   <string name="qs_screen_off_tile">Выключение экрана</string>
+  <string name="qs_ambient_display_tile">Запрет спящего режима</string>
   
   <!-- QuickSettings collapse panel -->
   <string name="quick_settings_collapse_title">Авто закрытие панели</string>
@@ -809,8 +809,7 @@
   <string name="qs_transparent_shade_title">Прозрачность</string>
   <string name="qs_transparent_shade_summary">Возможность делать панель прозрачной.</string>
   <string name="qs_color_switch_title">Переключение пользовательского цвета</string>
-  <string name="qs_color_switch_summary">Системный интерфейс будет презапущен!</string>
-
+ 
   <!-- Navigation bar button color -->
   <string name="navbar_button_tint_title">Оттенок кнопок навигации</string>
 
@@ -917,7 +916,7 @@
   <string name="volume_panel_time_out_title">Таймаут панели громкости</string>
   <string name="volume_panel_time_out_summary">Скрывать до <xliff:g id="number">%d</xliff:g> секунд. Автоматически скрывать при нажатии на экран</string>
   <string name="volume_panel_time_out_1.5sec">1,5 секунды</string>
-  <string name="volume_panel_time_out_3sec">3 сукунды (по умолчанию)</string>
+  <string name="volume_panel_time_out_3sec">3 секунды (по умолчанию)</string>
   <string name="volume_panel_time_out_5sec">5 секунд</string>
   <string name="volume_panel_time_out_8sec">8 секунд</string>
   <string name="volume_panel_time_out_12sec">12 секунд</string>
@@ -931,26 +930,35 @@
   <string name="timeout_750">0,75 секунды</string>
   <string name="timeout_500">0,5 секунды</string>
 
-   <!-- Status bar greeting -->
-   <string name="status_bar_greeting_category_title">Приветсвие в строке состояния</string>
-   <string name="status_bar_greeting_title">Приветсвие</string>
-   <string name="status_bar_greeting_summary">Показывать пользовательское приветсвие в строке состояния после разблокировки устройства</string>
-   <string name="status_bar_greeting_dialog">Установить своё приветсвие</string>
-   <string name="status_bar_greeting_main">Вспышка!!!</string>
-   <string name="status_bar_greeting_timeout_title">Таймаут приветсвия</string>
+  <!-- Status bar greeting -->
+  <string name="status_bar_greeting_category_title">Приветсвие в строке состояния</string>
+  <string name="status_bar_greeting_title">Приветсвие</string>
+  <string name="status_bar_greeting_summary">Показывать пользовательское приветсвие в строке состояния после разблокировки устройства</string>
+  <string name="status_bar_greeting_dialog">Установить своё приветсвие</string>
+  <string name="status_bar_greeting_main">Вспышка!!!</string>
+  <string name="status_bar_greeting_timeout_title">Таймаут приветсвия</string>
 
-   <!-- Force expand notifications -->
-   <string name="notification_force_expand_title">Принудительно развернутое уведомление</string>
-   <string name="notification_force_expand_summary">Принудительное развертывание уведомлений для всех приложений, которые это поддерживают</string>
+  <!-- Force expand notifications -->
+  <string name="notification_force_expand_title">Принудительно развернутое уведомление</string>
+  <string name="notification_force_expand_summary">Принудительное развертывание уведомлений для всех приложений, которые это поддерживают</string>
 
-   <!-- Slim Shortcuts -->
-    <string name="slim_shortcut_picker">Действия</string>
-    <string name="qs_tile_slimaction">Действие</string>
-    <string name="qs_slim_action_summary">Добавить и установить порядок действий</string>
-    <string name="qs_slim_action_title">>Действия</string>
+  <!-- Slim Shortcuts -->
+  <string name="slim_shortcut_picker">Дополнительные действия</string>
+  <string name="qs_tile_slimaction">Действие</string>
+  <string name="qs_slim_action_summary">Добавить и установить порядок действий</string>
+  <string name="qs_slim_action_title">Действия</string>
 
-    <!-- Long press on lock screen lock icon to sleep -->
-    <string name="longpress_lock_icon_to_sleep_title">Долгое нажатие на иконку блокировки для сна</string>
-    <string name="longpress_lock_icon_to_sleep_summary">эта опция не будет работать, если включен защищенный режим</string>
+  <!-- Long press on lock screen lock icon to sleep -->
+  <string name="longpress_lock_icon_to_sleep_title">Долгое нажатие на иконку блокировки для сна</string>
+  <string name="longpress_lock_icon_to_sleep_summary">эта опция не будет работать, если включен защищенный режим</string>
+    
+  <!-- Wakelock blocker -->
+  <string name="wakelock_blocker_title">Блокировка пробуждений</string>
+  <string name="wakelock_blocker_summary">Блокировка пробуждений от системных процессов</string>
+  <string name="wakelock_blocker_save">Сохранить</string>
+  <string name="wakelock_list_header">Обнаруженные пробуждения</string>
+  <string name="wakelock_blocker_reload">Презагрузить</string>
+  <string name="wakelock_blocker_warning_title">Осторожно</string>
+  <string name="wakelock_blocker_warning">блокировка пробуждений может быть причиной нестабильностей, потери данных</string>
 
 </resources>
