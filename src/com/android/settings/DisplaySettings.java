@@ -225,6 +225,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         Utils.updatePreferenceToSpecificActivityFromMetaDataOrRemove(getActivity(),
                 getPreferenceScreen(), KEY_SCREEN_OFF_GESTURE_SETTINGS);
 
+        if (!mCmHardwareManager.isSupported(FEATURE_TAP_TO_WAKE) && !isSweepToWakeSupported()
+                && !isSweepToSleepSupported()) {
+                prefSet.removePreference(advancedPrefs);
+        }
+
     }
 
     private static boolean allowAllRotations(Context context) {
