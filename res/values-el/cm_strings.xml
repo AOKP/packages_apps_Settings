@@ -138,6 +138,7 @@
   <string name="power_menu_title">Μενού πλήκτρου απενεργοποίησης</string>
   <string name="power_menu_reboot_title">Επανεκκίνηση</string>
   <string name="power_menu_screenshot_title">Στιγμιότυπο οθόνης</string>
+  <string name="power_menu_screenrecord_title">Καταγραφή οθόνης/string>
   <string name="power_menu_profiles_title">Προφίλ</string>
   <string name="power_menu_airplane_title">Λειτουργία πτήσης</string>
   <string name="power_menu_users_title">Εναλλαγή χρήστη</string>
