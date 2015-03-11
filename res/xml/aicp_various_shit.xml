@@ -48,17 +48,10 @@
             android:summary="@string/status_bar_show_weather_summary"
             android:defaultValue="true" />
 
-        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-            android:key="lock_screen_show_weather"
-            android:title="@string/lockscreen_weather_title"
-            android:summary="@string/lockscreen_weather_summary"
-            android:defaultValue="true" />
-
-        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-            android:key="lock_screen_show_weather_location"
-            android:title="@string/weather_show_location_title"
-            android:summary="@string/weather_show_location_summary"
-            android:defaultValue="true" />
+        <PreferenceScreen
+            android:key="lockscreen_weather"
+            android:title="@string/lock_screen_weather_settings_title"
+            android:fragment="com.android.settings.aicp.LockScreenWeatherSettings" />
 
     </PreferenceCategory>
 
