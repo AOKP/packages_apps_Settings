@@ -70,8 +70,7 @@
         <com.android.settings.cyanogenmod.SecureSettingSwitchPreference
                 android:key="lockscreen_visualizer"
                 android:title="@string/lockscreen_visualizer_title"
-                android:defaultValue="true"
-                settings:advanced="true"/>
+                android:defaultValue="true" />
 
         <PreferenceScreen
             android:fragment="com.android.settings.OwnerInfoSettings"
