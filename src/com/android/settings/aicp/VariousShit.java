@@ -97,7 +97,6 @@ public class VariousShit extends SettingsPreferenceFragment
 
     private static final int REQUEST_PICK_BOOT_ANIMATION = 201;
 
-    private static final String KEY_LOCKSCREEN_WEATHER = "lockscreen_weather";
     private static final String PREF_CUSTOM_BOOTANIM = "custom_bootanimation";
     private static final String BOOTANIMATION_SYSTEM_PATH = "/system/media/bootanimation.zip";
 
@@ -118,7 +117,6 @@ public class VariousShit extends SettingsPreferenceFragment
     // Package name of the cLock app
     public static final String LOCKCLOCK_PACKAGE_NAME = "com.cyanogenmod.lockclock";
 
-    private SwitchPreference mLockscreenWeather;
     private SwitchPreference mProximityWake;
     private PreferenceScreen mVariousShitScreen;
     private Preference mCustomBootAnimation;
@@ -191,12 +189,6 @@ public class VariousShit extends SettingsPreferenceFragment
             mVariousShitScreen.removePreference(mHiddenImg);
         }
 
-        // Lockscreen weather
-        mLockscreenWeather = (SwitchPreference) findPreference(KEY_LOCKSCREEN_WEATHER);
-        mLockscreenWeather.setChecked(Settings.System.getIntForUser(resolver,
-                Settings.System.LOCKSCREEN_WEATHER, 1, UserHandle.USER_CURRENT) == 1);
-        mLockscreenWeather.setOnPreferenceChangeListener(this);
-
         // Custom bootanimation
         mCustomBootAnimation = findPreference(PREF_CUSTOM_BOOTANIM);
 
@@ -262,11 +254,6 @@ public class VariousShit extends SettingsPreferenceFragment
                     Settings.System.HIDDEN_SHIT,
                     (Boolean) objValue ? 1 : 0);
             return true;
-        } else if (preference == mLockscreenWeather) {
-            boolean value = (Boolean) objValue;
-            Settings.System.putIntForUser(getActivity().getContentResolver(),
-                    Settings.System.LOCKSCREEN_WEATHER, value ? 1 : 0, UserHandle.USER_CURRENT);
-            Helpers.restartSystem();
         }
         return false;
     }

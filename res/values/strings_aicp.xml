@@ -682,7 +682,9 @@
 
     <!-- Lockscreen weather -->
     <string name="lockscreen_weather_title">Lock screen weather</string>
-    <string name="lockscreen_weather_summary">SystemUI will be restarted!</string>
+    <string name="lockscreen_weather_summary">Enable to show the weather on lock screen.</string>
+    <string name="weather_show_location_title">Show location</string>
+    <string name="weather_show_location_summary">Enable to show the location.</string>
 
     <!-- Battery Bar -->
     <string name="battery_bar_title">Battery Bar</string>
