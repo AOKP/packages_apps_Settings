@@ -205,7 +205,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
 
         mTapToWake = (SwitchPreference) findPreference(KEY_TAP_TO_WAKE);
 
-        if (advancedPrefs != null && !mCmHardwareManager.isSupported(FEATURE_TAP_TO_WAKE)) {
+        if (advancedPrefs != null && mTapToWake != null
+                && !mCmHardwareManager.isSupported(FEATURE_TAP_TO_WAKE)) {
             advancedPrefs.removePreference(mTapToWake);
             mTapToWake = null;
         }
