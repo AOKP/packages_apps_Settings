@@ -20,6 +20,7 @@ package com.android.settings;
 
 
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.app.AlertDialog;
 import android.app.AppOpsManager;
 import android.app.admin.DevicePolicyManager;
@@ -108,6 +109,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private static final String KEY_TRUST_AGENT = "trust_agent";
     private static final String KEY_SCREEN_PINNING = "screen_pinning_settings";
     private static final String KEY_SMS_SECURITY_CHECK_PREF = "sms_security_check_limit";
+    private static final String KEY_SHOW_VISUALIZER = "lockscreen_visualizer";
 
     // These switch preferences need special handling since they're not all stored in Settings.
     private static final String SWITCH_PREFERENCE_KEYS[] = { KEY_LOCK_AFTER_TIMEOUT,
@@ -272,6 +274,15 @@ public class SecuritySettings extends SettingsPreferenceFragment
                     trustAgentPreference.setSummary(R.string.disabled_because_no_backup_security);
                 }
             }
+
+        // remove lockscreen visualizer option on low end gfx devices
+        if (!ActivityManager.isHighEndGfx() && securityCategory != null) {
+            SwitchPreference displayVisualizer = (SwitchPreference)
+                    securityCategory.findPreference(KEY_SHOW_VISUALIZER);
+            if (displayVisualizer != null) {
+                securityCategory.removePreference(displayVisualizer);
+            }
+        }
         }
 
         // lock after preference
@@ -929,6 +940,11 @@ public class SecuritySettings extends SettingsPreferenceFragment
             if (!lockPatternUtils.isSecure()) {
                 keys.add(KEY_TRUST_AGENT);
                 keys.add(KEY_MANAGE_TRUST_AGENTS);
+            }
+
+            // hidden on low end gfx devices.
+            if (!ActivityManager.isHighEndGfx()) {
+                keys.add(KEY_SHOW_VISUALIZER);
             }
 
             return keys;
