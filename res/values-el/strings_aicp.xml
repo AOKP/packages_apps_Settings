@@ -682,8 +682,28 @@
     <string name="volume_steps_5">5</string>
 
     <!-- Lockscreen weather -->
-    <string name="lockscreen_weather_title">Καιρός οθόνη κλειδ/τος</string>
-    <string name="lockscreen_weather_summary">Επανεκκίνηση συστήματος!</string>
+    <!-- Lock screen -->
+    <string name="lock_screen_weather_settings_title">Καιρός οθονη κλειδώματος</string>
+    <string name="weather_show_weather_title">Εμφάνισε καιρό</string>
+    <string name="weather_show_weather_summary">Ενεργοποίηση για πληροφ. καιρού</string>
+    <string name="weather_show_location_title">Εμφάνισε τοποθεσία</string>
+    <string name="weather_show_location_summary">Ενεργοποίηση για να δείξει τη θέση</string>
+    <string name="weather_show_timestamp_title">Εμφάνιση χρονικής σήμανσης</string>
+    <string name="weather_show_timestamp_summary">Ενεργοποίηση για να δείξει τη χρονική σήμανση</string>
+    <string name="weather_condition_icon_title">Συνθήκη καιρού (εικονίδιο)</string>
+    <string name="weather_condition_icon_dlg_title">Επιλέξτε εικονίδιο για εμφάνιση καιρικών συνθηκών</string>
+    <string name="weather_condition_icon_monochrome_title">Μονοχρωμά</string>
+    <string name="weather_condition_icon_colored_title">Χρωματιστά</string>
+    <string name="weather_condition_icon_vclouds_title">VClouds</string>
+    <string name="weather_colorize_all_icons_title">Χρωματίστε όλα τα εικονίδια</string>
+    <string name="weather_colorize_all_icons_summary">Ενεργοποιήστε για όλα τα χρωματιστά εικονίδια, απενεργοποιήστε μόνο για τα μονόχρωμα εικονίδια</string>
+    <string name="icons_title">Εικονίδια</string>
+    <string name="position_right_title">Δεξιά</string>
+    <string name="position_centered_title">Κεντρικά</string>
+    <string name="hidden_title">Απόκρυψη</string>
+    <string name="dlg_reset_values_message">Επαναφορά τιμών\nAndroid- η AICP προεπιλογή?</string>
+    <string name="dlg_reset_android">Android</string>
+    <string name="dlg_reset_aicp">AICP</string>
 
     <!-- Battery Bar -->
     <string name="battery_bar_title">Μπάρα Μπαταρίας</string>
