@@ -53,6 +53,12 @@
             android:title="@string/lock_screen_weather_settings_title"
             android:fragment="com.android.settings.aicp.LockScreenWeatherSettings" />
 
+        <PreferenceScreen
+            android:key="lock_screen_color_settings"
+            android:title="@string/lock_screen_colors_title"
+            android:summary="@string/lock_screen_color_settings_summary"
+            android:fragment="com.android.settings.aicp.LockScreenColorSettings" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

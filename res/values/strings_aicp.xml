@@ -681,8 +681,9 @@
     <string name="volume_steps_5">5</string>
 
     <!-- Lockscreen weather -->
-   <!-- Lock screen -->
     <string name="lock_screen_weather_settings_title">Lock screen weather</string>
+    <string name="lock_screen_colors_title">Lock screen colors</string>
+    <string name="lock_screen_color_settings_summary">Customize colors</string>
     <string name="weather_show_weather_title">Show weather</string>
     <string name="weather_show_weather_summary">Enable to show weather informations</string>
     <string name="weather_show_location_title">Show location</string>
