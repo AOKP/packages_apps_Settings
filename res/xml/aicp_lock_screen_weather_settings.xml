@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2014 DarkKat
+<!-- Copyright (C) 2015 DarkKat
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -43,19 +43,4 @@
         android:title="@string/weather_colorize_all_icons_title"
         android:summary="@string/weather_colorize_all_icons_summary" />
 
-    <PreferenceCategory
-        android:key="weather_cat_colors"
-        android:title="@string/colors_title">
-
-         <net.margaritov.preference.colorpicker.ColorPickerPreference
-            android:key="weather_text_color"
-            android:title="@string/text_title"
-            android:defaultValue="0xffffffff" />
-
-         <net.margaritov.preference.colorpicker.ColorPickerPreference
-            android:key="weather_icon_color"
-            android:title="@string/icons_title"
-            android:defaultValue="0xffffffff" />
-
-	</PreferenceCategory>
 </PreferenceScreen>
