@@ -850,6 +850,10 @@
     <string name="task_open_behind_title">Task open behind animation</string>
     <string name="animation_duration_title">Animation duration</string>
     <string name="animation_duration_default">Default</string>
+    <string name="title_animation_no_override">Prevent App Overrides</string>
+    <string name="summary_animation_no_override">Prevent apps from overriding transitions.</string>
+    <string name="animation_exit_only_title">Enter only animation</string>
+    <string name="animation_reverse_exit_title">Reverse exit animation</string>
 
     <!-- The volume key answer -->
     <string name="volume_answer_call_title">Volume key Answer</string>

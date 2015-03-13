@@ -20,12 +20,14 @@
 package com.android.settings.aicp;
 
 import android.app.Activity;
+import android.content.ContentResolver;
 import android.content.Intent;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceScreen;
+import android.preference.SwitchPreference;
 import android.provider.Settings;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.aicp.AnimBarPreference;
@@ -49,6 +51,9 @@ public class AnimationControls extends SettingsPreferenceFragment implements OnP
     private static final String WALLPAPER_INTRA_OPEN = "wallpaper_intra_open";
     private static final String WALLPAPER_INTRA_CLOSE = "wallpaper_intra_close";
     private static final String TASK_OPEN_BEHIND = "task_open_behind";
+    private static final String ANIMATION_CONTROLS_NO_OVERRIDE = "animation_controls_no_override";
+    private static final String ANIMATION_CONTROLS_EXIT_ONLY = "animation_controls_exit_only";
+    private static final String ANIMATION_CONTROLS_REVERSE_EXIT = "animation_controls_reverse_exit";
 
     ListPreference mActivityOpenPref;
     ListPreference mActivityClosePref;
@@ -62,6 +67,9 @@ public class AnimationControls extends SettingsPreferenceFragment implements OnP
     ListPreference mWallpaperIntraClose;
     ListPreference mTaskOpenBehind;
     AnimBarPreference mAnimationDuration;
+    SwitchPreference mAnimNoOverride;
+    SwitchPreference mAnimExitOnly;
+    SwitchPreference mAnimReverseOnly;
 
     private int[] mAnimations;
     private String[] mAnimationsStrings;
@@ -75,6 +83,8 @@ public class AnimationControls extends SettingsPreferenceFragment implements OnP
         addPreferencesFromResource(R.xml.aicp_aokp_animation_controls);
 
         PreferenceScreen prefs = getPreferenceScreen();
+        ContentResolver resolver = getActivity().getContentResolver();
+
         mAnimations = AwesomeAnimationHelper.getAnimationsList();
         int animqty = mAnimations.length;
         mAnimationsStrings = new String[animqty];
@@ -155,6 +165,21 @@ public class AnimationControls extends SettingsPreferenceFragment implements OnP
         mAnimationDuration = (AnimBarPreference) findPreference(ANIMATION_DURATION);
         mAnimationDuration.setInitValue((int) (defaultDuration));
         mAnimationDuration.setOnPreferenceChangeListener(this);
+
+        mAnimNoOverride = (SwitchPreference) prefs.findPreference(ANIMATION_CONTROLS_NO_OVERRIDE);
+        mAnimNoOverride.setChecked((Settings.System.getInt(resolver,
+                Settings.System.ANIMATION_CONTROLS_NO_OVERRIDE, 0) == 1));
+        mAnimNoOverride.setOnPreferenceChangeListener(this);
+
+        mAnimExitOnly = (SwitchPreference) prefs.findPreference(ANIMATION_CONTROLS_EXIT_ONLY);
+        mAnimExitOnly.setChecked((Settings.System.getInt(resolver,
+                Settings.System.ANIMATION_CONTROLS_EXIT_ONLY, 1) == 1));
+        mAnimExitOnly.setOnPreferenceChangeListener(this);
+
+        mAnimReverseOnly = (SwitchPreference) prefs.findPreference(ANIMATION_CONTROLS_REVERSE_EXIT);
+        mAnimReverseOnly.setChecked((Settings.System.getInt(resolver,
+                Settings.System.ANIMATION_CONTROLS_REVERSE_EXIT, 0) == 1));
+        mAnimReverseOnly.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -164,6 +189,7 @@ public class AnimationControls extends SettingsPreferenceFragment implements OnP
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
         boolean result = false;
         if (preference == mActivityOpenPref) {
             int val = Integer.parseInt((String) newValue);
@@ -213,6 +239,21 @@ public class AnimationControls extends SettingsPreferenceFragment implements OnP
             int val = Integer.parseInt((String) newValue);
             Settings.System.putInt(mContentRes,
                     Settings.System.ANIMATION_CONTROLS_DURATION, val);
+        } else if (preference == mAnimNoOverride) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(resolver, Settings.System.ANIMATION_CONTROLS_NO_OVERRIDE,
+                    value ? 1 : 0);
+            return true;
+        } else if (preference == mAnimExitOnly) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(resolver, Settings.System.ANIMATION_CONTROLS_EXIT_ONLY,
+                    value ? 1 : 0);
+            return true;
+        } else if (preference == mAnimReverseOnly) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(resolver, Settings.System.ANIMATION_CONTROLS_REVERSE_EXIT,
+                    value ? 1 : 0);
+            return true;
         }
         preference.setSummary(getProperSummary(preference));
         return result;
