@@ -975,4 +975,15 @@
     <string name="heads_up_swipe_title">Hide notification when swiping away the pop-up window instead of removing it</string>
     <string name="heads_up_swipe_summary">Dismiss on swipe</string>
 
+    <!-- Heads up timeout -->
+    <string name="heads_up_time_out_title">Time out</string>
+    <string name="heads_up_time_out_summary">Notification will show for <xliff:g id="number">%d</xliff:g> seconds</string>
+    <string name="heads_up_time_out_never_summary">Notification will show until it is dismissed</string>
+    <string name="heads_up_time_out_2sec">2 seconds</string>
+    <string name="heads_up_time_out_4sec">4 seconds</string>
+    <string name="heads_up_time_out_6sec">6 seconds</string>
+    <string name="heads_up_time_out_8sec">8 seconds</string>
+    <string name="heads_up_time_out_10sec">10 seconds</string>
+    <string name="heads_up_time_out_never">Never</string>
+
 </resources>
