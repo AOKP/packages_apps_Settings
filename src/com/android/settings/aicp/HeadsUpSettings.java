@@ -44,9 +44,9 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Switch;
 
+import com.android.internal.util.cm.ScreenType;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.Utils;
 import com.android.settings.cyanogenmod.PackageListAdapter;
 import com.android.settings.cyanogenmod.PackageListAdapter.PackageItem;
 import com.android.settings.SettingsActivity;
@@ -170,7 +170,7 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
 
         // If running on a phone, remove padding around container
         // and the preference listview
-        if (!Utils.isTablet(getActivity())) {
+        if (!ScreenType.isTablet(getActivity())) {
             mPrefsContainer.setPadding(0, 0, 0, 0);
             getListView().setPadding(0, 0, 0, 0);
         }
