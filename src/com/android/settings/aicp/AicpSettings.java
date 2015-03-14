@@ -25,6 +25,7 @@ import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
+import android.provider.Settings;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -47,6 +48,7 @@ public class AicpSettings extends SettingsPreferenceFragment
             .setClassName(AICPOTA_PACKAGE_NAME, AICPOTA_PACKAGE_NAME + ".MainActivity");
 
     private Preference mAicpOta;
+    private Preference mHeadsUp;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -62,11 +64,17 @@ public class AicpSettings extends SettingsPreferenceFragment
         if (!Helpers.isPackageInstalled(AICPOTA_PACKAGE_NAME, pm)) {
             prefSet.removePreference(mAicpOta);
         }
+
+        mHeadsUp = findPreference(Settings.System.HEADS_UP_NOTIFICATION);
     }
 
     @Override
     public void onResume() {
         super.onResume();
+        boolean headsUpEnabled = Settings.System.getInt(
+                getContentResolver(), Settings.System.HEADS_UP_NOTIFICATION, 1) != 0;
+        mHeadsUp.setSummary(headsUpEnabled
+                ? R.string.summary_heads_up_enabled : R.string.summary_heads_up_disabled);
     }
 
     @Override

@@ -35,6 +35,12 @@
         android:fragment="com.android.settings.slim.StatusBar"
         android:title="@string/status_bar_title" />
 
+    <!-- Heads up notifications -->
+    <Preference
+         android:key="heads_up_enabled"
+         android:fragment="com.android.settings.aicp.HeadsUpSettings"
+         android:title="@string/category_heads_up" />
+
     <!-- Display and Animations -->
     <PreferenceScreen
         android:id="@+id/disp_anim_settings"
