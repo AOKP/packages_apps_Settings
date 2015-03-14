@@ -174,35 +174,4 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:key="heads_up_notification"
-        android:title="@string/heads_up_title" >
-
-        <!-- Heads Up Switch-->
-        <SwitchPreference
-                android:key="heads_up_switch"
-                android:title="@string/heads_up_switch"
-                android:defaultValue="true"
-                android:disableDependentsState="false" />
-
-        <!-- Heads Up Snooze-->
-        <ListPreference
-                android:key="heads_up_snooze_time"
-                android:title="@string/heads_up_snooze_title"
-                android:entries="@array/heads_up_snooze_entries"
-                android:entryValues="@array/heads_up_snooze_values"
-                android:persistent="false"
-                android:dependency="heads_up_switch" />
-
-        <!-- Heads Up TimeOut-->
-        <ListPreference
-                android:key="heads_up_time_out"
-                android:title="@string/heads_up_time_out_title"
-                android:entries="@array/heads_up_time_out_entries"
-                android:entryValues="@array/heads_up_time_out_values"
-                android:persistent="false"
-                android:dependency="heads_up_switch" />
-
-    </PreferenceCategory>
-
 </PreferenceScreen>
