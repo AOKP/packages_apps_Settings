@@ -744,6 +744,7 @@ limitations under the License.
 
     <string-array name="navigation_bar_height_entries" translatable="false">
         <item>@string/navigation_bar_size_48_dp_default</item>
+        <item>@string/navigation_bar_size_46_dp</item>
         <item>@string/navigation_bar_size_44_dp</item>
         <item>@string/navigation_bar_size_42_dp</item>
         <item>@string/navigation_bar_size_40_dp</item>
@@ -755,6 +756,7 @@ limitations under the License.
 
     <string-array name="navigation_bar_height" translatable="false">
         <item>48</item>
+        <item>46</item>
         <item>44</item>
         <item>42</item>
         <item>40</item>
@@ -953,7 +955,9 @@ limitations under the License.
     <string-array name="heads_up_time_out_entries">
         <item>@string/heads_up_time_out_never</item>
         <item>@string/heads_up_time_out_2sec</item>
+        <item>@string/heads_up_time_out_3sec</item>
         <item>@string/heads_up_time_out_4sec</item>
+        <item>@string/heads_up_time_out_5sec</item>
         <item>@string/heads_up_time_out_6sec</item>
         <item>@string/heads_up_time_out_8sec</item>
         <item>@string/heads_up_time_out_10sec</item>
@@ -962,7 +966,9 @@ limitations under the License.
     <string-array name="heads_up_time_out_values" translatable="false">
         <item>0</item>
         <item>2000</item>
+        <item>3000</item>
         <item>4000</item>
+        <item>5000</item>
         <item>6000</item>
         <item>8000</item>
         <item>10000</item>
