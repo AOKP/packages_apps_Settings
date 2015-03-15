@@ -643,7 +643,7 @@
   <string name="trigger_top_title">Положение области</string>
   <string name="trigger_top_summary">Укажите вертикальную позицию области срабатывания</string>
   <string name="trigger_bottom_title">Высота области срабатывания</string>
-  <string name="trigger_bottom_summary">Указать высоту области срабатываня</string>
+  <string name="trigger_bottom_summary">Указать высоту области срабатывания</string>
   
   <!-- Toast Animation -->
   <string name="toast_animation_title">Анимация подсказок</string>
@@ -681,8 +681,28 @@
   <string name="volume_steps_5">5</string>
   
   <!-- Lockscreen weather -->
-  <string name="lockscreen_weather_title">Погода на экране блокировки</string>
-  <string name="lockscreen_weather_summary">Графический интерфейс будет перезапущен!</string>
+  <!-- Lock screen -->
+  <string name="lock_screen_weather_settings_title">Погода на экране блокировки</string>
+  <string name="weather_show_weather_title">Показывать погоду</string>
+  <string name="weather_show_weather_summary">Включить отображение информации о погоде</string>
+  <string name="weather_show_location_title">Показывать местоположение</string>
+  <string name="weather_show_location_summary">Включить отображение местоположения</string>
+  <string name="weather_show_timestamp_title">Показывать время обновления</string>
+  <string name="weather_show_timestamp_summary">Включить отображение времени обновления погоды</string>
+  <string name="weather_condition_icon_title">Иконка погодных условий</string>
+  <string name="weather_condition_icon_dlg_title">Выбрать иконку отображения погодных условий</string>
+  <string name="weather_condition_icon_monochrome_title">Монохромные</string>
+  <string name="weather_condition_icon_colored_title">Цветные</string>
+  <string name="weather_condition_icon_vclouds_title">Реалистичные</string>
+  <string name="weather_colorize_all_icons_title">Раскрасить все иконки</string>
+  <string name="weather_colorize_all_icons_summary">Включить раскрашивание всех иконок, за исключением монохромных</string>
+  <string name="icons_title">Иконки</string>
+  <string name="position_right_title">Справа</string>
+  <string name="position_centered_title">По центру</string>
+  <string name="hidden_title">Скрыть</string>
+  <string name="dlg_reset_values_message">Сбросить на\nAndroid- или на AICP по умолчанию?</string>
+  <string name="dlg_reset_android">Android</string>
+  <string name="dlg_reset_aicp">AICP</string>
   
   <!-- Battery Bar -->
   <string name="battery_bar_title">Строка состояния батареи</string>
@@ -931,12 +951,12 @@
   <string name="timeout_500">0,5 секунды</string>
 
   <!-- Status bar greeting -->
-  <string name="status_bar_greeting_category_title">Приветсвие в строке состояния</string>
-  <string name="status_bar_greeting_title">Приветсвие</string>
-  <string name="status_bar_greeting_summary">Показывать пользовательское приветсвие в строке состояния после разблокировки устройства</string>
-  <string name="status_bar_greeting_dialog">Установить своё приветсвие</string>
-  <string name="status_bar_greeting_main">Вспышка!!!</string>
-  <string name="status_bar_greeting_timeout_title">Таймаут приветсвия</string>
+  <string name="status_bar_greeting_category_title">Приветствие в строке состояния</string>
+  <string name="status_bar_greeting_title">Приветствие</string>
+  <string name="status_bar_greeting_summary">Показывать пользовательское приветствие в строке состояния после разблокировки устройства</string>
+  <string name="status_bar_greeting_dialog">Установить своё приветствие</string>
+  <string name="status_bar_greeting_main">Привет!</string>
+  <string name="status_bar_greeting_timeout_title">Таймаут приветствия</string>
 
   <!-- Force expand notifications -->
   <string name="notification_force_expand_title">Принудительно развернутое уведомление</string>
