@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
+<!-- 
 /*
 **
 ** Copyright 2007 The Android Open Source Project
@@ -32,7 +32,6 @@
   <string-array name="screen_timeout_entries">
     <item msgid="3342301044271143016">"១៥ វិនាទី"</item>
     <item msgid="8881760709354815449">"៣០ វិនាទី"</item>
-    <item msgid="45SecondsScreenXXXX">"៣០ វិនាទី"</item>
     <item msgid="7589406073232279088">"១ នាទី"</item>
     <item msgid="7001195990902244174">"២ នាទី"</item>
     <item msgid="7489864775127957179">"៥ នាទី"</item>
@@ -43,7 +42,6 @@
     <item msgid="3149294732238283185">"កុំ"</item>
     <item msgid="2194151041885903260">"១៥ វិនាទី"</item>
     <item msgid="5892295237131074341">"៣០ វិនាទី"</item>
-    <item msgid="45SecondsDreamXXXXX">"៣០ វិនាទី"</item>
     <item msgid="3538441365970038213">"១ នាទី"</item>
     <item msgid="412343871668955639">"២ នាទី"</item>
     <item msgid="5076853889688991690">"៥ នាទី"</item>
@@ -55,7 +53,6 @@
     <item msgid="6736512735606834431">"៥ វិនាទី"</item>
     <item msgid="8044619388267891375">"១៥ វិនាទី"</item>
     <item msgid="1822002388249545488">"៣០ វិនាទី"</item>
-    <item msgid="45SecondsLockXXXXXX">"៣០ វិនាទី"</item>
     <item msgid="8538071621211916519">"១ នាទី"</item>
     <item msgid="5663439580228932882">"២ នាទី"</item>
     <item msgid="49888496216106852">"៥ នាទី"</item>
@@ -166,10 +163,6 @@
   <string-array name="data_usage_data_range">
     <item msgid="5013973108901348144">"30 ថ្ងៃ​មុន"</item>
     <item msgid="6600989128423965319">"កំណត់រង្វង់ប្រើប្រាស់..."</item>
-  </string-array>
-  <string-array name="sim_card_data_range">
-    <item msgid="676666889014650266">"លេខ ៤​ខ្ទង់​ចុងក្រោយ"</item>
-    <item msgid="7841762954785375718">"លេខ​​ ៤​ខ្ទង់​ដំបូង"</item>
   </string-array>
   <string-array name="wifi_frequency_band_entries">
     <item msgid="1013988753804838790">"ស្វ័យប្រវត្តិ"</item>
@@ -533,5 +526,13 @@
     <item msgid="8610560843693675830">"ទុក​ក្នុង​ឃ្លាំង​សម្ងាត់ (សកម្មភាព​)"</item>
     <item msgid="4338089220026248848">"ទុក​ក្នុង​ឃ្លាំង​សម្ងាត់ (ម៉ាស៊ីន​​កូន​សកម្មភាព​)"</item>
     <item msgid="6652164677254579050">"ទុក​ក្នុង​ឃ្លាំង​សម្ងាត់ (ទទេ​)"</item>
+  </string-array>
+  <string-array name="color_picker">
+    <item msgid="7631642672260600032">"បៃតង​​ចាស់"</item>
+    <item msgid="8332294763632946560">"ពណ៌ខៀវ"</item>
+    <item msgid="2023216417616991392">"ពណ៌​ឆ្លុះ"</item>
+    <item msgid="3170497246594232819">"ស្វាយ"</item>
+    <item msgid="4608643045752965568">"ផ្កាឈូក"</item>
+    <item msgid="6131821495505931173">"ពណ៌ក្រហម"</item>
   </string-array>
 </resources>

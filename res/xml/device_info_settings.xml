@@ -62,6 +62,13 @@
                 <intent android:action="android.settings.TERMS" />
             </PreferenceScreen>
 
+            <!-- System WebView License information -->
+            <PreferenceScreen
+                    android:key="webview_license"
+                    android:title="@string/webview_license_title">
+                <intent android:action="android.settings.WEBVIEW_LICENSE" />
+            </PreferenceScreen>
+
         </PreferenceScreen>
 
         <PreferenceScreen
@@ -105,12 +112,6 @@
             <Preference android:key="device_screen_resolution"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/device_screen_resolution"/>
-        </PreferenceScreen>
-
-        <PreferenceScreen
-                android:key="safetylegal"
-                android:title="@string/settings_safetylegal_title">
-            <intent android:action="android.settings.SAFETY" />
         </PreferenceScreen>
 
         <PreferenceScreen

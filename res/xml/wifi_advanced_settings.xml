@@ -4,9 +4,9 @@
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
-
+  
           http://www.apache.org/licenses/LICENSE-2.0
-
+  
      Unless required by applicable law or agreed to in writing, software
      distributed under the License is distributed on an "AS IS" BASIS,
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -30,24 +30,19 @@
             android:summary="@string/wifi_scan_always_available_summary"
             android:persistent="false" />
 
-    <SwitchPreference
-            android:key="wifi_assistant"
-            android:title="@string/wifi_automatically_manage_title"
-            android:persistent="false" />
-
-    <ListPreference
-            android:key="notify_changed_networks"
-            android:title="@string/wifi_notify_changed_networks"
-            android:dialogTitle="@string/wifi_notify_changed_networks"
-            android:entries="@array/notify_changed_networks_entries"
-            android:entryValues="@array/notify_changed_networks_values" />
-
     <ListPreference
             android:key="sleep_policy"
             android:title="@string/wifi_setting_sleep_policy_title"
             android:persistent="false"
             android:entries="@array/wifi_sleep_policy_entries"
             android:entryValues="@array/wifi_sleep_policy_values" />
+
+    <com.android.settings.AppListSwitchPreference
+            android:key="wifi_assistant"
+            android:title="@string/wifi_automatically_connect_title"
+            android:summary="@string/wifi_automatically_connect_summary"
+            android:dialogTitle="@string/wifi_select_assistant_dialog_title"
+            android:persistent="false" />
 
     <!-- android:dependency="enable_wifi" -->
     <SwitchPreference
@@ -94,4 +89,4 @@
             android:title="@string/wifi_advanced_ip_address_title"
             android:layout="@layout/wifi_advance_layout" />
 
-</PreferenceScreen>
+</PreferenceScreen>   

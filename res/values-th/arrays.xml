@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
+<!-- 
 /*
 **
 ** Copyright 2007 The Android Open Source Project
@@ -32,7 +32,6 @@
   <string-array name="screen_timeout_entries">
     <item msgid="3342301044271143016">"15 วินาที"</item>
     <item msgid="8881760709354815449">"30 วินาที"</item>
-    <item msgid="45SecondsScreenXXXX">"45 วินาที"</item>
     <item msgid="7589406073232279088">"1 นาที"</item>
     <item msgid="7001195990902244174">"2 นาที"</item>
     <item msgid="7489864775127957179">"5 นาที"</item>
@@ -43,7 +42,6 @@
     <item msgid="3149294732238283185">"ไม่เลย"</item>
     <item msgid="2194151041885903260">"15 วินาที"</item>
     <item msgid="5892295237131074341">"30 วินาที"</item>
-    <item msgid="45SecondsDreamXXXXX">"45 วินาที"</item>
     <item msgid="3538441365970038213">"1 นาที"</item>
     <item msgid="412343871668955639">"2 นาที"</item>
     <item msgid="5076853889688991690">"5 นาที"</item>
@@ -55,7 +53,6 @@
     <item msgid="6736512735606834431">"5 วินาที"</item>
     <item msgid="8044619388267891375">"15 วินาที"</item>
     <item msgid="1822002388249545488">"30 วินาที"</item>
-    <item msgid="45SecondsLockXXXXXX">"45 วินาที"</item>
     <item msgid="8538071621211916519">"1 นาที"</item>
     <item msgid="5663439580228932882">"2 นาที"</item>
     <item msgid="49888496216106852">"5 นาที"</item>
@@ -166,10 +163,6 @@
   <string-array name="data_usage_data_range">
     <item msgid="5013973108901348144">"30 วันที่ผ่านมา"</item>
     <item msgid="6600989128423965319">"ตั้งรอบการใช้..."</item>
-  </string-array>
-  <string-array name="sim_card_data_range">
-    <item msgid="676666889014650266">"หมายเลข 4 หลักสุดท้าย"</item>
-    <item msgid="7841762954785375718">"หมายเลข 4 หลักแรก"</item>
   </string-array>
   <string-array name="wifi_frequency_band_entries">
     <item msgid="1013988753804838790">"อัตโนมัติ"</item>
@@ -416,9 +409,7 @@
   </string-array>
   <string-array name="window_animation_scale_entries">
     <item msgid="8134156599370824081">"ปิดภาพเคลื่อนไหว"</item>
-    <item>"ภาพเคลื่อนไหวขนาด .25 เท่า"</item>
     <item msgid="6624864048416710414">"ภาพเคลื่อนไหวขนาด .5 เท่า"</item>
-    <item>"ภาพเคลื่อนไหวขนาด .75 เท่า"</item>
     <item msgid="2219332261255416635">"ภาพเคลื่อนไหวขนาด 1 เท่า"</item>
     <item msgid="3544428804137048509">"ภาพเคลื่อนไหวขนาด 1.5 เท่า"</item>
     <item msgid="3110710404225974514">"ภาพเคลื่อนไหวขนาด 2 เท่า"</item>
@@ -427,9 +418,7 @@
   </string-array>
   <string-array name="transition_animation_scale_entries">
     <item msgid="8464255836173039442">"ปิดภาพเคลื่อนไหว"</item>
-    <item>"ภาพเคลื่อนไหวขนาด .25 เท่า"</item>
     <item msgid="3375781541913316411">"ภาพเคลื่อนไหวขนาด .5 เท่า"</item>
-    <item>"ภาพเคลื่อนไหวขนาด .75 เท่า"</item>
     <item msgid="1991041427801869945">"ภาพเคลื่อนไหวขนาด 1 เท่า"</item>
     <item msgid="4012689927622382874">"ภาพเคลื่อนไหวขนาด 1.5 เท่า"</item>
     <item msgid="3289156759925947169">"ภาพเคลื่อนไหวขนาด 2 เท่า"</item>
@@ -438,9 +427,7 @@
   </string-array>
   <string-array name="animator_duration_scale_entries">
     <item msgid="6039901060648228241">"ปิดภาพเคลื่อนไหว"</item>
-    <item>"ความเร็วภาพเคลื่อนไหว .25 เท่า"</item>
     <item msgid="1138649021950863198">"ความเร็วภาพเคลื่อนไหว .5 เท่า"</item>
-    <item>"ความเร็วภาพเคลื่อนไหว .75 เท่า"</item>
     <item msgid="4394388961370833040">"ความเร็วภาพเคลื่อนไหว 1 เท่า"</item>
     <item msgid="8125427921655194973">"ความเร็วภาพเคลื่อนไหว 1.5 เท่า"</item>
     <item msgid="3334024790739189573">"ความเร็วภาพเคลื่อนไหว 2 เท่า"</item>
@@ -539,5 +526,13 @@
     <item msgid="8610560843693675830">"แคชไว้ (กิจกรรม)"</item>
     <item msgid="4338089220026248848">"แคชไว้ (ไคลเอ็นต์กิจกรรม)"</item>
     <item msgid="6652164677254579050">"แคชไว้ (ว่างเปล่า)"</item>
+  </string-array>
+  <string-array name="color_picker">
+    <item msgid="7631642672260600032">"น้ำเงินอมเขียว"</item>
+    <item msgid="8332294763632946560">"น้ำเงิน"</item>
+    <item msgid="2023216417616991392">"น้ำเงินอมม่วง"</item>
+    <item msgid="3170497246594232819">"ม่วง"</item>
+    <item msgid="4608643045752965568">"ชมพู"</item>
+    <item msgid="6131821495505931173">"แดง"</item>
   </string-array>
 </resources>
