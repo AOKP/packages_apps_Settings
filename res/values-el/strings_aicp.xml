@@ -993,6 +993,6 @@
     <!-- Heads up touch outside -->
     <string name="heads_up_touch_outside_title">Συμπεριφορά αγγίξτε εξωτερικά</string>
     <string name="heads_up_touch_outside_summary_enabled">Απόκρυψη κοινοποίησης σε επαφή εξωτερικά και πατήστε το κουμπί αρχικής</string>
-    <string name="heads_up_touch_outside_summary_disabled">Μην απορρίψετε κοινοποίηση μετ' αφής, εκτός εάν πατήσετε το κουμπί αρχικής</string>
+    <string name="heads_up_touch_outside_summary_disabled">Μην απορρίψετε κοινοποίηση μετ\' αφής, εκτός εάν πατήσετε το κουμπί αρχικής</string>
 
 </resources>
