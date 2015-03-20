@@ -82,12 +82,6 @@
             android:targetClass="com.cyanogenmod.lockclock.preference.Preferences" />
         </PreferenceScreen>
 
-    <!-- Ad blocker -->
-    <PreferenceScreen
-        android:key="hfm_settings"
-        android:title="@string/hfm_pref_screen_title"
-        android:fragment="com.android.settings.aicp.hfm.HfmSettings" />
-
     <!-- Joke -->
     <Preference
         android:key="hidden_shit"

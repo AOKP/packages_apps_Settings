@@ -2359,6 +2359,10 @@
             </intent-filter>
         </activity>
 
+        <activity android:name="com.android.settings.aicp.hfm.HfmWhitelist"
+            android:label="@string/hfm_whitelist_title"
+            android:taskAffinity="com.android.settings" />
+
         <activity android:name=".sim.SimDialogActivity"
                 android:theme="@android:style/Theme.Material.Light.Dialog.NoActionBar"
                 android:label="@string/sim_settings_title"

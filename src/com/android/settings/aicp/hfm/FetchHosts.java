@@ -34,7 +34,7 @@ public class FetchHosts {
 
     public static void fetch() throws IOException {
 
-        String cmd = "mount -o rw,remount /system && echo \'foo\' > /etc/started.cfg && sed -i -e '$G' /etc/hosts.alt";
+        String cmd = "mount -o rw,remount /system && echo \'foo\' > /etc/started.cfg && sed -i -e '$G' /etc/hosts.alt_orig";
 
         successfulSources = 0;
 
@@ -48,10 +48,12 @@ public class FetchHosts {
             i++;
         }
 
-        cmd = cmd + " && cat /etc/hosts[0-9] /etc/hosts.alt > /etc/hosts.tmp" //Merge old & new hosts
+        cmd = cmd + " && cat /etc/hosts[0-9] /etc/hosts.alt_orig > /etc/hosts.tmp" //Merge old & new hosts
                   + " && sort -u /etc/hosts.tmp -o /etc/hosts.tmp" //Remove duplicate lines
                   + " && sed -i '/^[@#]/ d' /etc/hosts.tmp" //Remove commented lines
                   + " && sed -i '/^$/d' /etc/hosts.tmp" //Remove blank lines
+                  + " && sed -i '1i#AICP\' /etc/hosts.tmp" // Add AICP tag
+                  + " && cp -f /etc/hosts.tmp /etc/hosts.alt_orig"
                   + " && cp -f /etc/hosts.tmp /etc/hosts.alt"
                   + " && rm -f /etc/hosts[0-9] /etc/hosts.tmp /etc/started.cfg" //Clean up
                   + " && mount -o ro,remount /system";

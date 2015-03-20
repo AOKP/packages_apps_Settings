@@ -275,6 +275,12 @@
     <string name="hfm_dialog_success">/4 hosts sources successfully applied!</string>
     <string name="hfm_dialog_conn_error">Error: No network connectivity</string>
     <string name="hfm_dialog_title">Hosts update progress</string>
+    <string name="hfm_whitelist_title">Whitelist</string>
+    <string name="hfm_whitelist_summary">List of strings (part of URL\'s) that should be allowed by the ad blocker</string>
+    <string name="hfm_whitelist_pref_text">Type string to add to whitelist</string>
+    <string name="hfm_whitelist_pref_button_add">Add URL</string>
+    <string name="hfm_whitelist_pref_empty">Whitelist is empty</string>
+    <string name="hfm_whitelist_pref_menu_apply">Apply</string>
 
     <!-- Volume rocker music seek options -->
     <string name="volbtn_music_controls_title">Volume rocker music controls</string>

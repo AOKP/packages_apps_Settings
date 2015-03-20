@@ -16,11 +16,17 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/hfm_disable_ads_title" >
 
-        <CheckBoxPreference
+        <SwitchPreference
             android:key="hfm_disable_ads"
             android:title="@string/hfm_disable_ads_title"
             android:summary="@string/hfm_disable_ads_summary"
             android:persistent="false" />
+
+        <Preference
+            android:key="hfm_whitelist"
+            android:title="@string/hfm_whitelist_title"
+            android:summary="@string/hfm_whitelist_summary"
+            android:dependency="hfm_disable_ads" />
 
         <Preference
             android:key="hfm_update_hosts"
