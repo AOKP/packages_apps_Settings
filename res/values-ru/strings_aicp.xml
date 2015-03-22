@@ -452,31 +452,7 @@
   <string name="show_unac_and_overcounted_stats_title">Показывать неучтенную статистику</string>
   <string name="show_unac_and_overcounted_stats_summary">Показывать в статистике батареи неучтенный и переучтенный расход</string>
   
-  <!-- Heads up -->
-  <string name="heads_up_title">Всплывающие уведомления</string>
-  <string name="app_notification_enable_heads_up_title">Показывать всплывающие уведомления</string>
-  <string name="app_notification_enable_heads_up_summary">Показывать всплывающие уведомления этого приложения</string>
-  <string name="heads_up_snooze_title">Время отключения</string>
-  <string name="heads_up_snooze_summary">Если нажата кнопка отключения, не показывать уведомления <xliff:g id="number">%d</xliff:g> минут</string>
-  <string name="heads_up_snooze_disabled_summary">Таймер отключения вылючен</string>
-  <string name="heads_up_snooze_3min">3 минуты</string>
-  <string name="heads_up_snooze_5min">5 минут</string>
-  <string name="heads_up_snooze_10min">10 минут</string>
-  <string name="heads_up_snooze_15min">15 минут</string>
-  <string name="heads_up_snooze_20min">20 минут</string>
-  <string name="heads_up_time_out_title">Тайм аут</string>
-  <string name="heads_up_time_out_summary">Всплывающие уведомления будет показываться <xliff:g id="number">%d</xliff:g> секунд</string>
-  <string name="heads_up_time_out_zero">Сейчас всплывающие уведомления выключены.</string>
-  <string name="heads_up_time_out_0sec">0 сек. Используется когда всплывающие уведомления выключены</string>
-  <string name="heads_up_time_out_4sec">4 секунды</string>
-  <string name="heads_up_time_out_6sec">6 секунд</string>
-  <string name="heads_up_time_out_8sec">8 секунд</string>
-  <string name="heads_up_time_out_10sec">10 секунд</string>
-  <string name="heads_up_switch">Всплювающие уведомления</string>
-  <string name="heads_up_switch_enabled">Включить</string>
-  <string name="heads_up_switch_disabled">Выключить</string>
-  
-  <!-- Gesture Anywhere -->
+    <!-- Gesture Anywhere -->
   <string name="gesture_anywhere_title">Жесты</string>
   <string name="gesture_anywhere_enabled_title">Жесты</string>
   <string name="gesture_anywhere_enabled_summary">Включить поддержку управления жестами</string>
@@ -681,8 +657,9 @@
   <string name="volume_steps_5">5</string>
   
   <!-- Lockscreen weather -->
-  <!-- Lock screen -->
   <string name="lock_screen_weather_settings_title">Погода на экране блокировки</string>
+  <string name="lock_screen_colors_title">Цвета</string>
+  <string name="lock_screen_color_settings_summary">Настроить цвета</string>
   <string name="weather_show_weather_title">Показывать погоду</string>
   <string name="weather_show_weather_summary">Включить отображение информации о погоде</string>
   <string name="weather_show_location_title">Показывать местоположение</string>
@@ -783,6 +760,7 @@
   <string name="navigation_bar_size_30_dp">30 dp</string>
   <string name="navigation_bar_size_24_dp">24 dp</string>
   <string name="navigation_bar_size_48_dp_default">48 dp (по умолчанию)</string>
+  <string name="navigation_bar_size_46_dp">46 dp</string>
   <string name="navigation_bar_size_44_dp">44 dp</string>
   <string name="navigation_bar_size_40_dp">40 dp</string>
   <string name="navigation_bar_size_42_dp">42 dp</string>
@@ -849,6 +827,10 @@
   <string name="task_open_behind_title">Анимация открытия позади приложения</string>
   <string name="animation_duration_title">Длительность анимации</string>
   <string name="animation_duration_default">По умолчанию</string>
+  <string name="title_animation_no_override">Prevent App Overrides</string>
+  <string name="summary_animation_no_override">Prevent apps from overriding transitions.</string>
+  <string name="animation_exit_only_title">Enter only animation</string>
+  <string name="animation_reverse_exit_title">Reverse exit animation</string>
 
   <!-- The volume key answer -->
   <string name="volume_answer_call_title">Ответ кнопкой громкости</string>
@@ -980,5 +962,37 @@
   <string name="wakelock_blocker_reload">Презагрузить</string>
   <string name="wakelock_blocker_warning_title">Осторожно</string>
   <string name="wakelock_blocker_warning">блокировка пробуждений может быть причиной нестабильностей, потери данных</string>
+  
+  <!-- Heads Up -->
+  <string name="category_heads_up">Всплывающие уведомления</string>
+  <string name="summary_heads_up_enabled">Всплывающие уведомления включены</string>
+  <string name="summary_heads_up_disabled">Всплывающие уведомления выключены</string>
+  <string name="add_heads_up_package">Добавить приложение</string>
+  <string name="add_heads_up_dnd_summary">Не показывать всплывающие уведомления в этих приложениях</string>
+  <string name="add_heads_up_blacklist_summary">Не показывать всплывающие уведомления от этих приложений</string>
+  <string name="heads_up_dnd_title">Не беспокоить</string>
+  <string name="heads_up_blacklist_title">Чёрный список</string>
+  <string name="heads_up_disabled_notice">Чтобы включить интерективные уведомления от приложений, включите всплывающие уведомления</string>
+  <string name="heads_up_dismiss_on_remove_title">Настройка поведения</string>
+  <string name="heads_up_dismiss_on_remove_summary_enabled">Скрывать уведомление вместо удаления</string>
+  <string name="heads_up_dismiss_on_remove_summary_disabled">Скрывать и удалять уведомление</string>
+
+  <!-- Heads up timeout -->
+  <string name="heads_up_time_out_title">Таймаут</string>
+  <string name="heads_up_time_out_summary">Уведомление будет отображаться <xliff:g id="number">%d</xliff:g> секунд</string>
+  <string name="heads_up_time_out_never_summary">Уведомление будет отображаться пока не будет отклонено</string>
+  <string name="heads_up_time_out_2sec">2 секунды</string>
+  <string name="heads_up_time_out_3sec">3 секунды</string>
+  <string name="heads_up_time_out_4sec">4 секунды</string>
+  <string name="heads_up_time_out_5sec">5 секунд</string>
+  <string name="heads_up_time_out_6sec">6 секунд</string>
+  <string name="heads_up_time_out_8sec">8 секунд</string>
+  <string name="heads_up_time_out_10sec">10 секунд</string>
+  <string name="heads_up_time_out_never">Никогда</string>
+
+  <!-- Heads up touch outside -->
+  <string name="heads_up_touch_outside_title">Поведение при нажатии вне области уведомления</string>
+  <string name="heads_up_touch_outside_summary_enabled">Скрывать при нажатии вне уведомления и нажатии кнопки домой</string>
+  <string name="heads_up_touch_outside_summary_disabled">Не скрывать при нажатии вне уведомления и нажатии кнопки домой</string>
 
 </resources>
