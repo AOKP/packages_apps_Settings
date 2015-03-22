@@ -275,7 +275,7 @@
     <string name="hfm_dialog_success">/4 πηγές hosts εφαρμόστηκαν με επιτυχία!</string>
     <string name="hfm_dialog_conn_error">Σφάλμα: Δεν υπάρχει σύνδεση</string>
     <string name="hfm_dialog_title">Αρχεία Hosts πρόοδος αναβάθμισης</string>
-    <string name="hfm_whitelist_title">Λευκή Λίστα<</string>
+    <string name="hfm_whitelist_title">Λευκή Λίστα</string>
     <string name="hfm_whitelist_summary">Κατάλογος γραμμών (μέρος του URL\'s) να επιτρέπεται από τον blocker διαφημίσεων</string>
     <string name="hfm_whitelist_pref_text">Προσθέστε στη λίστα επιτρεπόμενων</string>
     <string name="hfm_whitelist_pref_button_add">Προσθήκη URL</string>
