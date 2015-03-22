@@ -275,6 +275,12 @@
     <string name="hfm_dialog_success">/4 πηγές hosts εφαρμόστηκαν με επιτυχία!</string>
     <string name="hfm_dialog_conn_error">Σφάλμα: Δεν υπάρχει σύνδεση</string>
     <string name="hfm_dialog_title">Αρχεία Hosts πρόοδος αναβάθμισης</string>
+    <string name="hfm_whitelist_title">Λευκή Λίστα<</string>
+    <string name="hfm_whitelist_summary">Κατάλογος γραμμών (μέρος του URL\'s) να επιτρέπεται από τον blocker διαφημίσεων</string>
+    <string name="hfm_whitelist_pref_text">Προσθέστε στη λίστα επιτρεπόμενων</string>
+    <string name="hfm_whitelist_pref_button_add">Προσθήκη URL</string>
+    <string name="hfm_whitelist_pref_empty">Λευκή λίστα κενή</string>
+    <string name="hfm_whitelist_pref_menu_apply">Εφαρμογή</string>
 
     <!-- Volume rocker music seek options -->
     <string name="volbtn_music_controls_title">Έλεγχος έντασης με πλήκτρα μουσικής</string>
@@ -770,7 +776,7 @@
     <string name="custom_bootanimation_title">Κινούμενη εικόνα εκκίνησης</string>
     <string name="custom_bootanimation_summary">Επιλέξτε νέα κινούμενη εικόνα εκκίνησης.\nΣε κάθε αλλαγή, τρέχον κινούμενη εικόνα θα υποστηρίζεται στο φάκελο αποθήκευσης/AICP_ota με τρέχουσα ημερομηνία. Τα παλιά πρέπει να διαγραφούν χειροκίνητα, αν δεν χρειάζονται.</string>
     <string name="bootanimation_preview">Επισκόπηση κινούμενης εικόνας εκκίνησης</string>
-    <string name="set_custom_bootanimation">Ορισμός προσαρμοσμένης...</string>
+    <string name="set_custom_bootanimation">Ορισμός...</string>
     <string name="creating_preview">Δημιουργία προεικόνισης...</string>
     <string name="error_reading_zip_file">Σφάλμα ανάγνωσης αρχείου zip</string>
     <string name="error_creating_preview">Σφάλμα κατά τη δημιουργία προεικόνισης</string>
