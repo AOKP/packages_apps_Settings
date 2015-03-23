@@ -190,10 +190,8 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
         mVolumePanelTimeOut.setValue(String.valueOf(volumePanelTimeOut));
         updateVolumePanelTimeOutSummary(volumePanelTimeOut);
 
-=======
         updateRingerMode();
         updateEffectsSuppressor();
->>>>>>> android-5.1.0_r1
     }
 
     @Override
