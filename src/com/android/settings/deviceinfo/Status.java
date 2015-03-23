@@ -55,6 +55,7 @@ import com.android.internal.telephony.Phone;
 import com.android.internal.telephony.PhoneConstants;
 import com.android.internal.telephony.PhoneFactory;
 import com.android.internal.telephony.PhoneStateIntentReceiver;
+import com.android.internal.telephony.SubscriptionController;
 import com.android.internal.util.ArrayUtils;
 import com.android.settings.R;
 import com.android.settings.SelectSubscription;
@@ -306,7 +307,7 @@ public class Status extends PreferenceActivity {
                 removePreferenceFromScreen(key);
             }
         } else {
-            if (SubscriptionManager.getActiveSubInfoCount() == 0) {
+            if (SubscriptionController.getInstance().getActiveSubInfoCount() == 0) {
                 for (String key : PHONE_RELATED_ENTRIES) {
                     removePreferenceFromScreen(key);
                 }
@@ -681,7 +682,7 @@ public class Status extends PreferenceActivity {
     }
 
     private boolean isMultiSimEnabled() {
-        return (SubscriptionManager.getActiveSubInfoCount() > 1);
+        return (SubscriptionController.getInstance().getActiveSubInfoCount() > 1);
     }
 
     public static String getSarValues(Resources res) {

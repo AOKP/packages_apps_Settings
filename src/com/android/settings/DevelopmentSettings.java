@@ -1583,7 +1583,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     }
 
     private void updateUpdateRecoveryOptions() {
-        updateSwitchPreference(mUpdateRecovery, SystemProperties.getBoolean(UPDATE_RECOVERY_PROPERTY,
+        updateSwitchPreference(mUpdateRecovery,
+                SystemProperties.getBoolean(UPDATE_RECOVERY_PROPERTY,
                 false));
     }
 
