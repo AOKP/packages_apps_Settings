@@ -46,7 +46,6 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:ellipsize="marquee"
                 android:text="@string/wakelock_blocker_title"
-                android:paddingLeft="8dp"
                 android:fadingEdge="horizontal" />
 
             <TextView android:id="@+id/wakelock_blocker_title_summary"
@@ -57,7 +56,6 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="?android:attr/textColorSecondary"
                 android:text="@string/wakelock_blocker_summary"
-                android:paddingLeft="8dp"
                 android:maxLines="4" />
 
         </RelativeLayout>
