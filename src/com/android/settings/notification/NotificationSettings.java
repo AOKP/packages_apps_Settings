@@ -43,6 +43,7 @@ import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceCategory;
 import android.preference.SeekBarVolumizer;
+import android.preference.SwitchPreference;
 import android.preference.TwoStatePreference;
 import android.provider.MediaStore;
 import android.provider.OpenableColumns;
@@ -150,8 +151,8 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
             mVolumeLinkNotificationSwitch = (SwitchPreference)
                     sound.findPreference(KEY_VOLUME_LINK_NOTIFICATION);
         } else {
-            sound.removePreference(volumes.findPreference(KEY_RING_VOLUME));
-            sound.removePreference(volumes.findPreference(KEY_VOLUME_LINK_NOTIFICATION));
+            sound.removePreference(sound.findPreference(KEY_RING_VOLUME));
+            sound.removePreference(sound.findPreference(KEY_VOLUME_LINK_NOTIFICATION));
         }
 
         initRingtones(sound);
@@ -634,11 +635,7 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case UPDATE_PHONE_RINGTONE:
-                    ArrayList<CharSequence> summaries = (ArrayList<CharSequence>) msg.obj;
-                    for (int i = 0; i < summaries.size(); i++) {
-                        Preference preference = mPhoneRingtonePreferences.get(i);
-                        preference.setSummary(summaries.get(i));
-                    }
+                    mPhoneRingtonePreference.setSummary((CharSequence) msg.obj);
                     break;
                 case UPDATE_NOTIFICATION_RINGTONE:
                     mNotificationRingtonePreference.setSummary((CharSequence) msg.obj);
