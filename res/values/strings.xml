@@ -2103,6 +2103,8 @@
     <string name="sim_bad_pin">Incorrect PIN</string>
     <!-- SIM card lock settings screen, SIM PIN dialog message when PINs don't match  [CHAR LIMIT=40] -->
     <string name="sim_pins_dont_match">PINs don\'t match</string>
+    <!-- SIM card lock settings screen, toast after entering Incorrect SIM PIN  [CHAR LIMIT=40] -->
+    <string name="sim_pin_incorrect">Incorrect SIM PIN code.</string>
     <!-- SIM card lock settings screen, toast after not entering correct SIM PIN  [CHAR LIMIT=40] -->
     <string name="sim_change_failed">Can\'t change PIN.\nPossibly incorrect PIN.</string>
     <!-- SIM card lock settings screen, SIM PIN dialog message when the entered PIN is correct [CHAR LIMIT=40] -->

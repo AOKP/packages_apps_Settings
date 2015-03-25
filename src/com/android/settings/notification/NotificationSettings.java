@@ -124,6 +124,7 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
     private ListPreference mVolumePanelTimeOut;
     private ComponentName mSuppressor;
     private int mRingerMode = -1;
+    private SwitchPreference mVolumeLinkNotificationSwitch;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -136,9 +137,7 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
         mAudioManager = (AudioManager) mContext.getSystemService(Context.AUDIO_SERVICE);
         addPreferencesFromResource(R.xml.notification_settings);
 
-        final PreferenceCategory volumes = (PreferenceCategory) findPreference(KEY_VOLUMES);
-        final PreferenceCategory sounds = (PreferenceCategory) findPreference(KEY_SOUND);
-        final PreferenceCategory vibrate = (PreferenceCategory) findPreference(KEY_VIBRATE);
+        final PreferenceCategory sound = (PreferenceCategory) findPreference(KEY_SOUND);
 
         initVolumePreference(KEY_MEDIA_VOLUME, AudioManager.STREAM_MUSIC,
                 com.android.internal.R.drawable.ic_audio_vol_mute);
@@ -625,6 +624,7 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
         private static final int STOP_SAMPLE = 3;
         private static final int UPDATE_EFFECTS_SUPPRESSOR = 4;
         private static final int UPDATE_RINGER_MODE = 5;
+        private static final int UPDATE_ALARM_RINGTONE = 6;
 
         private H() {
             super(Looper.getMainLooper());
@@ -651,6 +651,9 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
                     break;
                 case UPDATE_RINGER_MODE:
                     updateRingerMode();
+                    break;
+                case UPDATE_ALARM_RINGTONE:
+                    mAlarmRingtonePreference.setSummary((CharSequence) msg.obj);
                     break;
             }
         }
