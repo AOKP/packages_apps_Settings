@@ -106,13 +106,6 @@ public class BatterySettings extends SettingsPreferenceFragment
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        boolean value;
-        if (preference == mBatteryBarChargingAnimation) {
-            value = mBatteryBarChargingAnimation.isChecked();
-            Settings.System.putInt(getActivity().getContentResolver(), Settings.System.STATUSBAR_BATTERY_BAR_ANIMATE, value ? 1 : 0);
-        } else {
-            return super.onPreferenceTreeClick(preferenceScreen, preference);
-        }
         return false;
     }
 
