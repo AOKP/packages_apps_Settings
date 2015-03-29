@@ -161,7 +161,7 @@ public class BlacklistSettings extends ListFragment
         super.onStart();
         final SettingsActivity activity = (SettingsActivity) getActivity();
         mEnabledSwitch = new BaseSystemSettingSwitchBar(activity, activity.getSwitchBar(),
-                Settings.System.PHONE_BLACKLIST_ENABLED, true, this);
+                Settings.System.PHONE_BLACKLIST_ENABLED, false, this);
     }
 
     @Override
