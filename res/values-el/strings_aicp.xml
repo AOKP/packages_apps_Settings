@@ -55,6 +55,7 @@
     <string name="aicp_ota_settings_title">Aicp OTA</string>
     <string name="battery_settings_title">Ρυθμίσεις μπαταρίας</string>
     <string name="status_bar_battery_title">Εικονίδιο μπαταρίας</string>
+    <string name="kernel_adiutor_settings_title">Βοηθός πυρήνα</string>
 
     <!-- Joke -->
     <string name="hidden_shit_toast">Κρυφή λειτουργία!!!</string>
@@ -543,77 +544,6 @@
     <string name="listview_anticipate_overshoot_interpolator">Πρόβλεψη κ΄ υπέρβαση</string>
     <string name="listview_bounce_interpolator">Αναπήδηση</string>
 
-    <!-- Battery saver -->
-    <string name="battery_saver_title">Χρώμα προειδοποίησης</string>
-    <string name="battery_saver_style_reset_message">Επαναφορά χρώμ. ειδοποίησης μπαταρίας?</string>
-
-    <!-- Lock Gesture settings -->
-    <!-- Security & location settings screen, setting option name -->
-    <string name="lockgesture_change_lock_pattern_label">Αλλαγή κίνησης ξεκλειδώματος</string>
-    <!-- Security & location settings screen, change unlock gesture screen instruction when the user chooses "Change unlock gesture".  We first ask the user toe nter the current pattern, and this is the message seen -->
-    <string name="lockgesture_change_lock_pin_label">Αλλαγή ξεκλειδώματος PIN</string>
-    <!-- Security & location settings screen, change unlock gesture screen instruction when the user chooses "Change unlock gesture".  We first ask the user toe nter the current pattern, and this is the message seen -->
-    <string name="lockgesture_need_to_unlock">Επιβεβαίωση αποθηκευμένης κίνησης</string>
-    <!-- Do not translate. -->
-    <string name="lockgesture_need_to_unlock_footer" />
-    <!-- Security & location settings screen, change unlock gesture screen instruction if user draws incorrect pattern -->
-    <string name="lockgesture_need_to_unlock_wrong">Δοκιμάστε ξανά:</string>
-    <!-- Do not translate. -->
-    <string name="lockgesture_need_to_unlock_wrong_footer" />
-    <!-- Security & location settings screen, change unlock gesture screen instruction on top of screen.  This si when they are supposed to draw a new unlock pattern (for example, if they are changing their unlock patterns)..-->
-    <string name="lockgesture_recording_intro_header">Σχεδιάστε κίνηση ξεκλειδώματος:</string>
-    <!-- Security & location settings screen, change unlock gesture screen hint on bottom of screen.  We are telling them to press the menu button to see more options or help. -->
-    <string name="lockgesture_recording_intro_footer">Πατήστε Μενού για βοήθεια.</string>
-    <!-- Security & location settings screen, change unlock gesture screen instruction on top of screen while drawing pattern -->
-    <string name="lockgesture_recording_inprogress">Αφήστε το δάχτυλο, όταν ολοκληρωθεί.</string>
-    <!-- Security & location settings screen, change unlock gesture screen message on top of screen after drawing pattern -->
-    <string name="lockgesture_pattern_entered_header">Καταγραφή κινήσεων.</string>
-    <!-- Security & location settings screen, change unlock gesture screen instruction on top of screen to confirm pattern -->
-    <string name="lockgesture_need_to_confirm">Σχεδιάστε κίνηση ξανά, για επιβεβαίωση:</string>
-    <string name="lockgesture_pattern_confirmed_header">Νέα κίνηση ξεκλειδώματος:</string>
-    <!-- Security & location settings screen, change unlock gesture screen button, on bottom of screen.  After they draw a gesture and release their finger, we display the pattern so they remember.  When they are ready to draw it once again to confirm it, they press this button. -->
-    <string name="lockgesture_confirm_button_text">Επιβεβαίωση</string>
-    <!-- Security & location settings screen, change unlock gesture screen button, on bottom of screen.  After they draw a gesture and release their finger, we display the pattern so they remember.  If they are nto satisfied with this pattern, they click this button to redraw the pattern. -->
-    <string name="lockgesture_restart_button_text">Διόρθωση</string>
-    <!-- Security & location settings screen, change unlock gesture screen button, on bottom of screen. If they are supposed to enter their current gesture before being able to draw another one, and they screw up, they hit this button to try again -->
-    <string name="lockgesture_retry_button_text">Επανάληψη</string>
-    <!-- Security & location settings screen, change unlock gesture screen button, on bottom of screen. Once they draw a new gesture and confirm it by drawing it again, they press this button to exit -->
-    <string name="lockgesture_continue_button_text">Συνέχεια</string>
-    <!-- Security & location settings screen, unlock screen activity title -->
-    <string name="lockgesture_settings_title">Κίνηση Ξεκλειδώματος</string>
-    <!-- Security & location settings screen, setting check box title if the unlock pattern MUST be drawn everytime they turn on the screen -->
-    <string name="lockgesture_settings_enable_title">Απαιτείται κίνηση</string>
-    <!-- Security & location settings screen, setting summary for the checkbox "Require pattern" -->
-    <string name="lockgesture_settings_enable_summary">Πρέπει να σχεδιάσετε κίνηση για ξεκλείδωμα οθόνης</string>
-   <!-- Security & location settings screen, setting check box title. This setting controls whether a visible gesture is drawn as the user moves his finger around while drawing the unlock pattern.  If checked, this line is drawn.  If unchecked, there is nothing drawn so the user does not reveal his pattern while he unlocks the phone.-->
-    <string name="lockgesture_settings_enable_visible_pattern_title">Κάνε κίνηση ορατή</string>
-    <!-- Security & location settings screen, setting check box title. This controls whether the device locks immediately when the power button is pressed. [CHAR LIMIT=28]-->
-    <string name="lockgesture_settings_enable_power_button_instantly_locks">Κουμπί λειτουργίας κλειδώνει αμέσως</string>
-    <!-- Security & location settings screen, setting option name when user has never set an unlock gesture -->
-    <string name="lockgesture_settings_choose_lock_pattern">Ορισμός κίνησης ξεκλειδώματος</string>
-    <!-- Security & location settings screen, setting option name when user has previously set an unlock gesture and wants to change to a new pattern -->
-    <string name="lockgesture_settings_change_lock_pattern">Άλλαξε κίνηση ξεκλειδώματος</string>
-    <!-- Security & location settings screen, the help instructions (an animation) caption -->
-    <string name="lockgesture_settings_help_how_to_record">Πώς να σχεδιάσετε κίνηση ξεκλειδώματος</string>
-    <!-- Security & location settings screen, change unlock gesture screen instruction on top of screen after too many incorrect attempts -->
-    <string name="lockgesture_too_many_failed_confirmation_attempts_header">Πολλές αποτυχημένες προσπάθειες!</string>
-    <!-- Security & location settings screen, change unlock gesture screen countdown hint on bottom of screen after too many incorrect attempts -->
-    <string name="lockgesture_too_many_failed_confirmation_attempts_footer">Δοκιμάστε ξανά σε <xliff:g id="number">%d</xliff:g> δευτερόλεπτα.</string>
-    <!-- Toast shown if setting gesture was successful -->
-    <string name="lockpassword_gesture_set_toast">Κίνηση ορίστηκε</string>
-    <!-- Header on gesture confirm screen [CHAR LIMIT=30] -->
-    <string name="lockpassword_confirm_your_gesture_header">Επιβεβαιώστε κίνηση</string>
-    <!-- Header on first screen of choose gesture flow [CHAR LIMIT=30] -->
-    <string name="lockpassword_choose_your_gesture_header">Σχεδιάστε κίνηση</string>
-
-    <!-- Title for preference that guides the user through creating an unlock gesture [CHAR LIMIT=22] -->
-    <string name="unlock_set_unlock_gesture_title">Κίνηση</string>
-    <!-- Title for preference that guides the user through creating an unlock gesture [CHAR LIMIT=45] -->
-    <string name="unlock_set_unlock_gesture_summary">Χαμηλή ασφάλεια, πειραματικά</string>
-
-    <!-- Summary for "Configure lockscreen" when security gesture is enabled [CHAR LIMIT=45] -->
-    <string name="unlock_set_unlock_mode_gesture">Κίνηση</string>
-
     <!-- Circle app bar -->
     <string name="category_app_circle_bar_title">Εκκινητής εφαρμογής</string>
     <string name="app_circle_bar_title">Εφαρμογή κυκλικής μπάρας</string>
@@ -686,16 +616,6 @@
     <string name="dlg_reset_values_message">Επαναφορά τιμών;\nσε Android - η AICP</string>
     <string name="dlg_reset_android">Android</string>
     <string name="dlg_reset_aicp">AICP</string>
-
-    <!-- Battery Bar -->
-    <string name="battery_bar_title">Μπάρα Μπαταρίας</string>
-    <string name="battery_bar">Τοποθεσία μπάρας μπαταρίας</string>
-    <string name="battery_bar_color">Χρώμα μπάρας μπαταρίας</string>
-    <string name="battery_bar_cat">Στυλ μπάρας μπαταρίας</string>
-    <string name="battery_bar_style_title">Ευθυγράμμιση μπάρας μπαταρίας</string>
-    <string name="battery_bar_thickness_title">Πάχος μπάρας μπαταρίας</string>
-    <string name="battery_bar_animate_title">Φόρτιση κινούμενη εικόνα</string>
-    <string name="battery_bar_animate_summary">Η κίνηση φόρτισης μπορεί να οδηγήσει σε κακή εμπειρία χρήστη. Ενεργοποίηση κατά την κρίση σας.</string>
 
     <!-- StatusBar Clock style -->
     <string name="clock_font_style_title">Στυλ γραμμα/ράς ρολογιού</string>
@@ -802,17 +722,17 @@
     <!-- QuickSettings 4 columns -->
     <string name="qs_four_columns_title">Εμφάνισε τέσσερα πλακίδια ανά σειρά</string>
 
-     <!-- QuickSettings colors -->
-     <string name="background_title">Φόντο</string>
-     <string name="icon_title">Εικονίδιο</string>
-     <string name="qs_colors_title">Επιλογή ειδικών χρωμάτων</string>
-     <string name="reset_android">Android</string>
-     <string name="reset_swag">Εμφάνιση</string>
-     <string name="colors_title">Χρώματα</string>
-     <string name="text_title">Κείμενο</string>
-     <string name="qs_transparent_shade_title">Σκιά alpha</string>
-     <string name="qs_transparent_shade_summary">Δυνατότητα να εφαρμόσετε χρώμα alpha και να κάνει την σκιά διαφανή.</string>
-     <string name="qs_color_switch_title">Μετάβαση σε προσαρμοσμένο χρώμα</string>
+    <!-- QuickSettings colors -->
+    <string name="background_title">Φόντο</string>
+    <string name="icon_title">Εικονίδιο</string>
+    <string name="qs_colors_title">Επιλογή ειδικών χρωμάτων</string>
+    <string name="reset_android">Android</string>
+    <string name="reset_swag">Εμφάνιση</string>
+    <string name="colors_title">Χρώματα</string>
+    <string name="text_title">Κείμενο</string>
+    <string name="qs_transparent_shade_title">Σκιά alpha</string>
+    <string name="qs_transparent_shade_summary">Δυνατότητα να εφαρμόσετε χρώμα alpha και να κάνει την σκιά διαφανή.</string>
+    <string name="qs_color_switch_title">Μετάβαση σε προσαρμοσμένο χρώμα</string>
 
     <!-- Navigation bar button color -->
     <string name="navbar_button_tint_title">Απόχρωση πλήκτρου πλοήγησης</string>
@@ -916,6 +836,7 @@
     <!-- Statusbar AICP logo -->
     <string name="status_bar_aicp_logo_title">AICP λογότυπο</string>
     <string name="status_bar_aicp_logo_summary">Ενεργοποιήστε για εμφαν. AICP λογότυπο στην αριστερή πλευρά της γραμμής κατάστασης</string>
+    <string name="status_bar_aicp_logo_color">Χρώμα λογότυπου</string>
 
     <!-- Data activity icons -->
     <string name="status_bar_show_network_activity_title">Βέλη δραστηριότητας δικτύου</string>
@@ -938,36 +859,27 @@
     <string name="timeout_750">0,75 δευτερόλεπτα</string>
     <string name="timeout_500">0,5 δευτερόλεπτα</string>
 
-     <!-- Status bar greeting -->
-     <string name="status_bar_greeting_category_title">Γραμμή κατάστασης χαιρετισμού></string>
-     <string name="status_bar_greeting_title">Xαιρετισμός</string>
-     <string name="status_bar_greeting_summary">Προβολή ενός χαιρετισμού στη γραμμή κατάστασης μετά το ξεκλείδωμα της συσκευής</string>
-     <string name="status_bar_greeting_dialog">Ορίστε χαιρετισμό</string>
-     <string name="status_bar_greeting_main">Flash ΟΝ!!!</string>
-     <string name="status_bar_greeting_timeout_title">Χαιρετισμός χρονικό όριο</string>
+    <!-- Status bar greeting -->
+    <string name="status_bar_greeting_category_title">Γραμμή κατάστασης χαιρετισμού></string>
+    <string name="status_bar_greeting_title">Xαιρετισμός</string>
+    <string name="status_bar_greeting_summary">Προβολή ενός χαιρετισμού στη γραμμή κατάστασης μετά το ξεκλείδωμα της συσκευής</string>
+    <string name="status_bar_greeting_dialog">Ορίστε χαιρετισμό</string>
+    <string name="status_bar_greeting_main">Flash ΟΝ!!!</string>
+    <string name="status_bar_greeting_timeout_title">Χαιρετισμός χρονικό όριο</string>
 
-     <!-- Force expand notifications -->
-     <string name="notification_force_expand_title">Διευρυμένη γνωστοποίηση</string>
-     <string name="notification_force_expand_summary">Διευρυμένη Ειδοποιήση για όσες εφαρμογές την υποστηρίζουν</string>
+    <!-- Force expand notifications -->
+    <string name="notification_force_expand_title">Διευρυμένη γνωστοποίηση</string>
+    <string name="notification_force_expand_summary">Διευρυμένη Ειδοποιήση για όσες εφαρμογές την υποστηρίζουν</string>
 
-     <!-- Slim Shortcuts -->
-     <string name="slim_shortcut_picker">Slim Ενέργειες</string>
-     <string name="qs_tile_slimaction">SlimActions</string>
-     <string name="qs_slim_action_summary">Προσθέστε και ρυθμίστε τη σειρά του SlimActions</string>
-     <string name="qs_slim_action_title">SlimActions</string>
+    <!-- Slim Shortcuts -->
+    <string name="slim_shortcut_picker">Slim Ενέργειες</string>
+    <string name="qs_tile_slimaction">SlimActions</string>
+    <string name="qs_slim_action_summary">Προσθέστε και ρυθμίστε τη σειρά του SlimActions</string>
+    <string name="qs_slim_action_title">SlimActions</string>
 
-     <!-- Long press on lock screen lock icon to sleep -->
-     <string name="longpress_lock_icon_to_sleep_title">Πατήστε παρατεταμένα το εικονίδιο με την κλειδαριά για αναμονή</string>
-     <string name="longpress_lock_icon_to_sleep_summary">Η επιλογή δεν λειτουργεί αν η έξυπνη κλειδαριά και προσβασιμότητα αφής είναι ενεργοποιημένες</string>
-
-     <!-- Wakelock blocker -->
-     <string name="wakelock_blocker_title">Αποκλεισμός Wakelock</string>
-     <string name="wakelock_blocker_summary">Αποκλεισμός συστήματος wakelocks</string>
-     <string name="wakelock_blocker_save">Αποθήκευση</string>
-     <string name="wakelock_list_header">Διαθέσιμα wakelocks</string>
-     <string name="wakelock_blocker_reload">Ανανέωση</string>
-     <string name="wakelock_blocker_warning_title">Προχωρήστε με προσοχή</string>
-     <string name="wakelock_blocker_warning">Αποκλεισμός wakelocks έχουν δυνατότητα να προκαλέσουν αστάθεια, κολλήματα ή απώλεια δεδομένων</string>
+    <!-- Long press on lock screen lock icon to sleep -->
+    <string name="longpress_lock_icon_to_sleep_title">Πατήστε παρατεταμένα το εικονίδιο με την κλειδαριά για αναμονή</string>
+    <string name="longpress_lock_icon_to_sleep_summary">Η επιλογή δεν λειτουργεί αν η έξυπνη κλειδαριά και προσβασιμότητα αφής είναι ενεργοποιημένες</string>
 
     <!-- Heads Up -->
     <string name="category_heads_up">Ειδοποιήσεις επικεφαλίδων</string>
@@ -1000,5 +912,10 @@
     <string name="heads_up_touch_outside_title">Συμπεριφορά αγγίξτε εξωτερικά</string>
     <string name="heads_up_touch_outside_summary_enabled">Απόκρυψη κοινοποίησης σε επαφή εξωτερικά και πατήστε το κουμπί αρχικής</string>
     <string name="heads_up_touch_outside_summary_disabled">Μην απορρίψετε κοινοποίηση μετ\' αφής, εκτός εάν πατήσετε το κουμπί αρχικής</string>
+
+    <!-- UI debug setting: show CPU info? [CHAR LIMIT=25] -->
+    <string name="show_cpu_info">Πληροφορίες CPU</string>
+    <!-- UI debug setting: show cpu usage summary [CHAR LIMIT=50] -->
+    <string name="show_cpu_info_summary">Επικάλυψη οθόνης πληροφορίες CPU</string>
 
 </resources>
