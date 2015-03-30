@@ -44,6 +44,7 @@ import com.android.settings.Utils;
 import com.android.settings.widget.SeekBarPreferenceCham;
 
 import com.android.internal.util.slim.DeviceUtils;
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 public class StatusBar extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
@@ -55,6 +56,7 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private static final String KEY_STATUS_BAR_NETWORK_ARROWS= "status_bar_show_network_activity";
     private static final String KEY_STATUS_BAR_GREETING = "status_bar_greeting";
     private static final String KEY_STATUS_BAR_GREETING_TIMEOUT = "status_bar_greeting_timeout";
+    private static final String KEY_AICP_LOGO_COLOR = "status_bar_aicp_logo_color";
 
     private SwitchPreference mStatusBarBrightnessControl;
     private PreferenceScreen mCarrierLabel;
@@ -62,6 +64,7 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private SwitchPreference mNetworkArrows;
     private SwitchPreference mStatusBarGreeting;
     private SeekBarPreferenceCham mStatusBarGreetingTimeout;
+    private ColorPickerPreference mAicpLogoColor;
 
     private String mCustomGreetingText = "";
 
@@ -123,6 +126,16 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             removePreference(Settings.System.STATUS_BAR_MSIM_SHOW_EMPTY_ICONS);
         }
 
+        // Aicp logo color
+        mAicpLogoColor =
+            (ColorPickerPreference) prefSet.findPreference(KEY_AICP_LOGO_COLOR);
+        mAicpLogoColor.setOnPreferenceChangeListener(this);
+        int intColor = Settings.System.getInt(getContentResolver(),
+                Settings.System.STATUS_BAR_AICP_LOGO_COLOR, 0xffffffff);
+        String hexColor = String.format("#%08x", (0xffffffff & intColor));
+            mAicpLogoColor.setSummary(hexColor);
+            mAicpLogoColor.setNewPreviewColor(intColor);
+
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -144,6 +157,14 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.STATUS_BAR_GREETING_TIMEOUT, timeout * 1);
             return true;
+        } else if (preference == mAicpLogoColor) {
+            String hex = ColorPickerPreference.convertToARGB(
+                    Integer.valueOf(String.valueOf(newValue)));
+            preference.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.STATUS_BAR_AICP_LOGO_COLOR, intHex);
+            return true;  
         }
         return false;
     }

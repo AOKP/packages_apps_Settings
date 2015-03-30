@@ -835,6 +835,7 @@
     <!-- Statusbar AICP logo -->
     <string name="status_bar_aicp_logo_title">AICP logo</string>
     <string name="status_bar_aicp_logo_summary">Enable to show AICP logo on the left side of statusbar</string>
+    <string name="status_bar_aicp_logo_color">AICP logo color</string>
 
     <!-- Data activity icons -->
     <string name="status_bar_show_network_activity_title">Network activity arrows</string>
