@@ -55,6 +55,7 @@
     <string name="aicp_ota_settings_title">Aicp OTA</string>
     <string name="battery_settings_title">Battery settings</string>
     <string name="status_bar_battery_title">Battery icon</string>
+    <string name="kernel_adiutor_settings_title">Kernel Adiutor</string>
 
     <!-- Joke -->
     <string name="hidden_shit_toast">Hidden shit UNLEASHED!!!</string>

@@ -71,6 +71,12 @@
         android:title="@string/hfm_pref_screen_title"
         android:fragment="com.android.settings.aicp.hfm.HfmSettings" />
 
+    <!-- Kernel Adiutor -->
+    <PreferenceScreen
+        android:id="@+id/kernel_adiutor"
+        android:key="kernel_adiutor_start"
+        android:title="@string/kernel_adiutor_settings_title" />
+
     <!-- AICP OTA -->
     <PreferenceScreen
         android:id="@+id/aicp_ota"

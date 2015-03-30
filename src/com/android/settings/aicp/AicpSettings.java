@@ -40,6 +40,7 @@ public class AicpSettings extends SettingsPreferenceFragment
     private static final String TAG = "AicpLabs";
 
     private static final String KEY_AICPOTA_START = "aicp_ota_start";
+    private static final String KEY_KERNEL_AUDIUTOR_START = "kernel_adiutor_start";
 
     // Package name of the AICP OTA app
     public static final String AICPOTA_PACKAGE_NAME = "com.paranoid.paranoidota";
@@ -47,7 +48,14 @@ public class AicpSettings extends SettingsPreferenceFragment
     public static Intent INTENT_AICPOTA = new Intent(Intent.ACTION_MAIN)
             .setClassName(AICPOTA_PACKAGE_NAME, AICPOTA_PACKAGE_NAME + ".MainActivity");
 
+    // Package name of the Kernel Adiutor app
+    public static final String KERNEL_AUDIUTOR_PACKAGE_NAME = "com.grarak.kerneladiutor";
+    // Intent for launching the Kernel Adiutor main actvity
+    public static Intent INTENT_KERNEL_AUDIUTOR = new Intent(Intent.ACTION_MAIN)
+            .setClassName(KERNEL_AUDIUTOR_PACKAGE_NAME, KERNEL_AUDIUTOR_PACKAGE_NAME + ".MainActivity");
+
     private Preference mAicpOta;
+    private Preference mKernelAdiutor;
     private Preference mHeadsUp;
 
     @Override
@@ -63,6 +71,12 @@ public class AicpSettings extends SettingsPreferenceFragment
                 prefSet.findPreference(KEY_AICPOTA_START);
         if (!Helpers.isPackageInstalled(AICPOTA_PACKAGE_NAME, pm)) {
             prefSet.removePreference(mAicpOta);
+        }
+
+        mKernelAdiutor = (Preference)
+                prefSet.findPreference(KEY_KERNEL_AUDIUTOR_START);
+        if (!Helpers.isPackageInstalled(KERNEL_AUDIUTOR_PACKAGE_NAME, pm)) {
+            prefSet.removePreference(mKernelAdiutor);
         }
 
         mHeadsUp = findPreference(Settings.System.HEADS_UP_NOTIFICATION);
@@ -90,6 +104,9 @@ public class AicpSettings extends SettingsPreferenceFragment
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         if (preference == mAicpOta) {
             startActivity(INTENT_AICPOTA);
+            return true;
+        } else if (preference == mKernelAdiutor) {
+            startActivity(INTENT_KERNEL_AUDIUTOR);
             return true;
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
