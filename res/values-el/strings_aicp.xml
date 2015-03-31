@@ -55,7 +55,7 @@
     <string name="aicp_ota_settings_title">Aicp OTA</string>
     <string name="battery_settings_title">Ρυθμίσεις μπαταρίας</string>
     <string name="status_bar_battery_title">Εικονίδιο μπαταρίας</string>
-    <string name="kernel_adiutor_settings_title">Βοηθός πυρήνα</string>
+    <string name="kernel_adiutor_settings_title">Bοηθός πυρήνα</string>
 
     <!-- Joke -->
     <string name="hidden_shit_toast">Κρυφή λειτουργία!!!</string>
@@ -914,8 +914,12 @@
     <string name="heads_up_touch_outside_summary_disabled">Μην απορρίψετε κοινοποίηση μετ\' αφής, εκτός εάν πατήσετε το κουμπί αρχικής</string>
 
     <!-- UI debug setting: show CPU info? [CHAR LIMIT=25] -->
-    <string name="show_cpu_info">Πληροφορίες CPU</string>
+    <string name="show_cpu_info">Εμφάνιση πληρ. CPU</string>
     <!-- UI debug setting: show cpu usage summary [CHAR LIMIT=50] -->
-    <string name="show_cpu_info_summary">Επικάλυψη οθόνης πληροφορίες CPU</string>
+    <string name="show_cpu_info_summary">Επικάλυψη οθόνης εμφανίζει πληρ. CPU</string>
+
+    <!-- QuickSettings haptic feedback -->
+    <string name="quick_settings_vibrate_title">Δόνηση στο άγγιγμα</string>
+    <string name="quick_settings_vibrate_summary">Δόνηση όταν αγγίζετε πλακίδια</string>
 
 </resources>
