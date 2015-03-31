@@ -266,15 +266,21 @@
   
   <!-- Host File Manager -->
   <string name="hfm_disable_ads_title">Блокировка рекламы</string>
-  <string name="hfm_disable_ads_summary">Изменить файл hosts для отключения рекламы</string>
+  <string name="hfm_disable_ads_summary">Изменить файл хост для отключения рекламы</string>
   <string name="hfm_pref_screen_title">Блокировка рекламы</string>
-  <string name="hfm_update_hosts">Обновить файл hosts</string>
-  <string name="hfm_update_hosts_summary">Загрузите и установите свежий hosts</string>
+  <string name="hfm_update_hosts">Обновить файл хост</string>
+  <string name="hfm_update_hosts_summary">Загрузите и установите свежий хост</string>
   <string name="hfm_dialog_wait">Работаю, не отвлекай...</string>
-  <string name="hfm_dialog_failed">Обновление файла hosts провалено. Попробуйте еще раз.</string>
-  <string name="hfm_dialog_success">/4 hosts успешно применён!</string>
+  <string name="hfm_dialog_failed">Обновление файла хост провалено. Попробуйте еще раз.</string>
+  <string name="hfm_dialog_success">успешно применено!</string>
   <string name="hfm_dialog_conn_error">Ошибка: нет сети</string>
   <string name="hfm_dialog_title">прогресс обновления</string>
+  <string name="hfm_whitelist_title">Белый список</string>
+  <string name="hfm_whitelist_summary">Адреса исключения</string>
+  <string name="hfm_whitelist_pref_text">Введите адрес для добавления в белый список</string>
+  <string name="hfm_whitelist_pref_button_add">Добавить URL</string>
+  <string name="hfm_whitelist_pref_empty">Белый список пуст</string>
+  <string name="hfm_whitelist_pref_menu_apply">Добавить</string>
   
   <!-- Volume rocker music seek options -->
   <string name="volbtn_music_controls_title">Управление клавишами громкости</string>
@@ -452,7 +458,7 @@
   <string name="show_unac_and_overcounted_stats_title">Показывать неучтенную статистику</string>
   <string name="show_unac_and_overcounted_stats_summary">Показывать в статистике батареи неучтенный и переучтенный расход</string>
   
-    <!-- Gesture Anywhere -->
+  <!-- Gesture Anywhere -->
   <string name="gesture_anywhere_title">Жесты</string>
   <string name="gesture_anywhere_enabled_title">Жесты</string>
   <string name="gesture_anywhere_enabled_summary">Включить поддержку управления жестами</string>
@@ -827,8 +833,8 @@
   <string name="task_open_behind_title">Анимация открытия позади приложения</string>
   <string name="animation_duration_title">Длительность анимации</string>
   <string name="animation_duration_default">По умолчанию</string>
-  <string name="title_animation_no_override">Prevent App Overrides</string>
-  <string name="summary_animation_no_override">Prevent apps from overriding transitions.</string>
+  <string name="title_animation_no_override">Предотвращение переопределения анимации</string>
+  <string name="summary_animation_no_override">Предотвращать переопределение анимации для приложений.</string>
   <string name="animation_exit_only_title">Enter only animation</string>
   <string name="animation_reverse_exit_title">Reverse exit animation</string>
 
@@ -959,10 +965,10 @@
   <string name="wakelock_blocker_summary">Блокировка пробуждений от системных процессов</string>
   <string name="wakelock_blocker_save">Сохранить</string>
   <string name="wakelock_list_header">Обнаруженные пробуждения</string>
-  <string name="wakelock_blocker_reload">Презагрузить</string>
+  <string name="wakelock_blocker_reload">Перезагрузить</string>
   <string name="wakelock_blocker_warning_title">Осторожно</string>
   <string name="wakelock_blocker_warning">блокировка пробуждений может быть причиной нестабильностей, потери данных</string>
-  
+
   <!-- Heads Up -->
   <string name="category_heads_up">Всплывающие уведомления</string>
   <string name="summary_heads_up_enabled">Всплывающие уведомления включены</string>
@@ -976,7 +982,7 @@
   <string name="heads_up_dismiss_on_remove_title">Настройка поведения</string>
   <string name="heads_up_dismiss_on_remove_summary_enabled">Скрывать уведомление вместо удаления</string>
   <string name="heads_up_dismiss_on_remove_summary_disabled">Скрывать и удалять уведомление</string>
-
+  
   <!-- Heads up timeout -->
   <string name="heads_up_time_out_title">Таймаут</string>
   <string name="heads_up_time_out_summary">Уведомление будет отображаться <xliff:g id="number">%d</xliff:g> секунд</string>
@@ -993,6 +999,11 @@
   <!-- Heads up touch outside -->
   <string name="heads_up_touch_outside_title">Поведение при нажатии вне области уведомления</string>
   <string name="heads_up_touch_outside_summary_enabled">Скрывать при нажатии вне уведомления и нажатии кнопки домой</string>
-  <string name="heads_up_touch_outside_summary_disabled">Не скрывать при нажатии вне уведомления и нажатии кнопки домой</string>
+  <string name="heads_up_touch_outside_summary_disabled">Не скрывать при нажатии вне уведомления и нажатии кнопки домой</string>	
+
+  <!-- UI debug setting: show CPU info? [CHAR LIMIT=25] -->
+  <string name="show_cpu_info">Показывать информацию о процессоре</string>
+  <!-- UI debug setting: show cpu usage summary [CHAR LIMIT=50] -->
+  <string name="show_cpu_info_summary">Информация о процессоре отображается на экране</string>	
 
 </resources>
