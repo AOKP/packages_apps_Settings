@@ -36,6 +36,12 @@
             android:summary="@string/quick_settings_collapse_summary"
             android:defaultValue="false"/>
 
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="quick_settings_vibrate"
+            android:title="@string/quick_settings_vibrate_title"
+            android:summary="@string/quick_settings_vibrate_summary"
+            android:defaultValue="false"/>
+
         <PreferenceScreen
             android:key="qs_colors"
             android:title="@string/qs_colors_title"
