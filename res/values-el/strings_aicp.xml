@@ -922,4 +922,10 @@
     <string name="quick_settings_vibrate_title">Δόνηση στο άγγιγμα</string>
     <string name="quick_settings_vibrate_summary">Δόνηση όταν αγγίζετε πλακίδια</string>
 
+    <!-- Nfc settings -->
+    <string name="nfc_polling_mode_title">Λειτουργία τηλεπαραλαβής NFC</string>
+    <string name="nfc_polling_mode_screen_off">Οθόνη εκτός</string>
+    <string name="nfc_polling_mode_screen_locked">Κλειδωμένη οθόνη</string>
+    <string name="nfc_polling_mode_screen_unlocked">Ξεκλείδωτη οθόνη (προεπιλογή)</string>
+
 </resources>
