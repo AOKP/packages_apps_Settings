@@ -10,6 +10,8 @@
 
 package com.android.settings.aicp;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.ContentResolver;
 import android.content.res.Resources;
 import android.net.TrafficStats;
@@ -20,16 +22,22 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.widget.SeekBarPreferenceCham;
+
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 public class NetworkTrafficFragment extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
     private static final String TAG = "NetworkTrafficVector";
 
     private static final String NETWORK_TRAFFIC_DISPLAY = "network_traffic_display";
+    private static final String NETWORK_TRAFFIC_COLOR = "network_traffic_color";
     private static final String NETWORK_TRAFFIC_MONITOR = "network_traffic_monitor";
     private static final String NETWORK_TRAFFIC_PERIOD = "network_traffic_period";
     private static final String NETWORK_TRAFFIC_UNIT = "network_traffic_unit";
@@ -37,11 +45,15 @@ public class NetworkTrafficFragment extends SettingsPreferenceFragment implement
     private static final String NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD = "network_traffic_autohide_threshold";
 
     private ListPreference mNetTrafficDisplay;
+    private ColorPickerPreference mNetTrafficColor;
     private ListPreference mNetTrafficMonitor;
     private ListPreference mNetTrafficPeriod;
     private ListPreference mNetTrafficUnit;
     private SwitchPreference mNetTrafficAutohide;
     private SeekBarPreferenceCham mNetTrafficAutohideThreshold;
+
+    private static final int MENU_RESET = Menu.FIRST;
+    private static final int DEFAULT_TRAFFIC_COLOR = 0xffffffff;
 
     private int mNetTrafficVal;
     private int MASK_METER;
@@ -72,6 +84,15 @@ public class NetworkTrafficFragment extends SettingsPreferenceFragment implement
         mNetTrafficMonitor = (ListPreference) prefSet.findPreference(NETWORK_TRAFFIC_MONITOR);
         mNetTrafficPeriod = (ListPreference) prefSet.findPreference(NETWORK_TRAFFIC_PERIOD);
         mNetTrafficUnit = (ListPreference) prefSet.findPreference(NETWORK_TRAFFIC_UNIT);
+
+        mNetTrafficColor =
+            (ColorPickerPreference) prefSet.findPreference(NETWORK_TRAFFIC_COLOR);
+        mNetTrafficColor.setOnPreferenceChangeListener(this);
+        int intColor = Settings.System.getInt(getContentResolver(),
+                Settings.System.NETWORK_TRAFFIC_VECTOR_COLOR, 0xffffffff);
+        String hexColor = String.format("#%08x", (0xffffffff & intColor));
+            mNetTrafficColor.setSummary(hexColor);
+            mNetTrafficColor.setNewPreviewColor(intColor);
 
         mNetTrafficAutohide =
                 (SwitchPreference) prefSet.findPreference(NETWORK_TRAFFIC_AUTOHIDE);
@@ -115,6 +136,47 @@ public class NetworkTrafficFragment extends SettingsPreferenceFragment implement
             mNetTrafficUnit.setSummary(mNetTrafficUnit.getEntry());
             mNetTrafficUnit.setOnPreferenceChangeListener(this);
         }
+        setHasOptionsMenu(true);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        menu.add(0, MENU_RESET, 0, R.string.network_traffic_color_reset)
+                .setIcon(R.drawable.ic_settings_reset)
+                .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case MENU_RESET:
+                resetToDefault();
+                return true;
+            default:
+                return super.onContextItemSelected(item);
+        }
+    }
+
+    private void resetToDefault() {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+        alertDialog.setTitle(R.string.network_traffic_color_reset);
+        alertDialog.setMessage(R.string.network_traffic_color_reset_message);
+        alertDialog.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                NetworkTrafficColorReset();
+            }
+        });
+        alertDialog.setNegativeButton(R.string.cancel, null);
+        alertDialog.create().show();
+    }
+
+    private void NetworkTrafficColorReset() {
+        Settings.System.putInt(getContentResolver(),
+                Settings.System.NETWORK_TRAFFIC_VECTOR_COLOR, DEFAULT_TRAFFIC_COLOR);
+
+        mNetTrafficColor.setNewPreviewColor(DEFAULT_TRAFFIC_COLOR);
+        String hexColor = String.format("#%08x", (0xffffffff & DEFAULT_TRAFFIC_COLOR));
+        mNetTrafficColor.setSummary(hexColor);
     }
 
     @Override
@@ -129,6 +191,14 @@ public class NetworkTrafficFragment extends SettingsPreferenceFragment implement
             mNetTrafficDisplay.setSummary(mNetTrafficDisplay.getEntries()[index]);
             updateNetworkTrafficState(index);
             return true;
+        } else if (preference == mNetTrafficColor) {
+            String hex = ColorPickerPreference.convertToARGB(
+                    Integer.valueOf(String.valueOf(newValue)));
+            preference.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.NETWORK_TRAFFIC_VECTOR_COLOR, intHex);
+            return true;  
         } else if (preference == mNetTrafficMonitor) {
             int intState = Integer.valueOf((String)newValue);
             mNetTrafficVal = setBit(mNetTrafficVal, MASK_UP, getBit(intState, MASK_UP));
@@ -182,6 +252,7 @@ public class NetworkTrafficFragment extends SettingsPreferenceFragment implement
         if (mIndex <= 0) {
             // Disable all settings
             mNetTrafficMonitor.setEnabled(false);
+            mNetTrafficColor.setEnabled(false);
             mNetTrafficPeriod.setEnabled(false);
             mNetTrafficUnit.setEnabled(false);
             mNetTrafficAutohide.setEnabled(false);
@@ -191,13 +262,20 @@ public class NetworkTrafficFragment extends SettingsPreferenceFragment implement
             mNetTrafficMonitor.setEnabled(true);
             mNetTrafficPeriod.setEnabled(true);
             // Check meter display
-            if (mIndex==1) {
+            if (mIndex == 1) {
                 // Disable unsupported settings by meters
+                mNetTrafficColor.setEnabled(false);
                 mNetTrafficUnit.setEnabled(false);
                 mNetTrafficAutohide.setEnabled(false);
                 mNetTrafficAutohideThreshold.setEnabled(false);
+            } else if (mIndex == 2) {
+                mNetTrafficColor.setEnabled(true);
+                mNetTrafficUnit.setEnabled(true);
+                mNetTrafficAutohide.setEnabled(true);
+                mNetTrafficAutohideThreshold.setEnabled(true);
             } else {
                 // Enable all other settings
+                mNetTrafficColor.setEnabled(true);
                 mNetTrafficUnit.setEnabled(true);
                 mNetTrafficAutohide.setEnabled(true);
                 mNetTrafficAutohideThreshold.setEnabled(true);
