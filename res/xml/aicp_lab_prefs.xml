@@ -65,6 +65,12 @@
         android:fragment="com.android.settings.aicp.AppCircleBar"
         android:title="@string/app_circle_bar_title"/>
 
+    <!-- Wakelock blocker -->
+    <PreferenceScreen
+        android:key="wakelock_blocker"
+        android:fragment="com.android.settings.aicp.WakeLockBlocker"
+        android:title="@string/wakelock_blocker_title" />
+
     <!-- Ad blocker -->
     <PreferenceScreen
         android:key="hfm_settings"
