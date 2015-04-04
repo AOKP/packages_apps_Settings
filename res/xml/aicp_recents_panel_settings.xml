@@ -44,6 +44,12 @@
             android:defaultValue="true"
             android:dependency="show_clear_all_recents" />
 
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="systemui_recents_mem_display"
+            android:title="@string/recents_show_membar_title"
+            android:summary="@string/recents_show_membar_summary"
+            android:defaultValue="false" />
+
         <!-- Searchbar -->
         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
             android:key="recents_show_hide_search_bar"
