@@ -22,6 +22,6 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/aicp_rom_logo" />
+            android:src="@drawable/aicp_logo_rom" />
 
 </LinearLayout> 
