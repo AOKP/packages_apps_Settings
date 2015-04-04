@@ -160,6 +160,12 @@
     <string name="navigation_bar_category">Μπάρα πλοήγησης</string>
     <string name="aicp_extras_category">Περισσότερα άχρηστα</string>
 
+    <!-- Power menu -->
+    <string name="power_menu_screenrecord_title">Εγγραφή οθόνης</string>
+
+    <!-- Status bar - Battery -->
+    <string name="status_bar_battery_style_dotted_circle">Διακεκομμένος κύκλος</string>
+
     <!-- Per app controls for LP keyguard notifications -->
     <string name="app_notification_show_on_keyguard_title">Εμφάνισε στην οθόνη κλειδώματος</string>
     <string name="app_notification_show_on_keyguard_summary">Εμφάνισε γνωστοποιήσεις από αυτή την εφαρμογή στην οθόνη κλειδώματος</string>
@@ -191,7 +197,7 @@
     <string name="clock_title_enable">Ευθυγράμμιση</string>
     <string name="clock_enabled">Ενεργό</string>
     <string name="clock_disabled">Ανενεργό</string>
-    <string name="clock_color_title">χρωματισμός</string>
+    <string name="clock_color_title">Χρωματισμός</string>
     <string name="status_bar_clock_style_reset">Επαναφορά χρωματισμού</string>
     <string name="status_bar_show_clock_title">Εμφάνισε ρολόι και ημερ/νία</string>
     <string name="status_bar_am_pm_title">ΠΜ/ΜΜ</string>
@@ -850,7 +856,7 @@
     <string name="notification_force_expand_summary">Διευρυμένη Ειδοποιήση για όσες εφαρμογές την υποστηρίζουν</string>
 
     <!-- Slim Shortcuts -->
-    <string name="slim_shortcut_picker">Slim Ενέργειες</string>
+    <string name="slim_shortcut_picker">Ενέργειες Slim</string>
     <string name="qs_tile_slimaction">SlimActions</string>
     <string name="qs_slim_action_summary">Προσθέστε και ρυθμίστε τη σειρά του SlimActions</string>
     <string name="qs_slim_action_title">SlimActions</string>
@@ -858,6 +864,15 @@
     <!-- Long press on lock screen lock icon to sleep -->
     <string name="longpress_lock_icon_to_sleep_title">Πατήστε παρατεταμένα το εικονίδιο με την κλειδαριά για αναμονή</string>
     <string name="longpress_lock_icon_to_sleep_summary">Η επιλογή δεν λειτουργεί αν η έξυπνη κλειδαριά και προσβασιμότητα αφής είναι ενεργοποιημένες</string>
+
+    <!-- Wakelock blocker -->
+    <string name="wakelock_blocker_title">Μπλοκάρισμα Wakelock</string>
+    <string name="wakelock_blocker_summary">Αποκλεισμός wakelocks</string>
+    <string name="wakelock_blocker_save">Αποθήκευση</string>
+    <string name="wakelock_list_header">Διαθέσιμα wakelocks</string>
+    <string name="wakelock_blocker_reload">Επαναφόρτωση</string>
+    <string name="wakelock_blocker_warning_title">Ενεργήστε με προσοχή</string>
+    <string name="wakelock_blocker_warning">Φραγή wakelocks έχουν τη δυνατότητα να προκαλέσουν αστάθεια, κολλήματα ή απώλεια δεδομένων</string>
 
     <!-- Heads Up -->
     <string name="category_heads_up">Ειδοποιήσεις επικεφαλίδων</string>
