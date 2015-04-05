@@ -67,11 +67,11 @@ public class PartitionInfo extends PreferenceActivity {
 
         PreferenceScreen prefSet = getPreferenceScreen();
 
-    	mSystemPartSize        = (Preference) prefSet.findPreference(SYSTEM_PART_SIZE);
-    	mDataPartSize          = (Preference) prefSet.findPreference(DATA_PART_SIZE);
-    	mCachePartSize         = (Preference) prefSet.findPreference(CACHE_PART_SIZE);
-    	mSDCardPartFATSize     = (Preference) prefSet.findPreference(SDCARDFAT_PART_SIZE);
-    	mSDCardPartEXTSize     = (Preference) prefSet.findPreference(SDCARDEXT_PART_SIZE);
+        mSystemPartSize        = (Preference) prefSet.findPreference(SYSTEM_PART_SIZE);
+        mDataPartSize          = (Preference) prefSet.findPreference(DATA_PART_SIZE);
+        mCachePartSize         = (Preference) prefSet.findPreference(CACHE_PART_SIZE);
+        mSDCardPartFATSize     = (Preference) prefSet.findPreference(SDCARDFAT_PART_SIZE);
+        mSDCardPartEXTSize     = (Preference) prefSet.findPreference(SDCARDEXT_PART_SIZE);
 
         if (fileExists("/dev/block/mmcblk0p2") == true) {
 	    Log.i(TAG, "sd: ext partition mounted");
@@ -80,10 +80,10 @@ public class PartitionInfo extends PreferenceActivity {
             Log.i(TAG, "sd: ext partition not mounted");
 	}
     	try {
-    	    mSystemPartSize.setSummary(ObtainFSPartSize    ("/system"));
-    	    mDataPartSize.setSummary(ObtainFSPartSize      ("/data"));
-    	    mCachePartSize.setSummary(ObtainFSPartSize     ("/cache"));
-    	    mSDCardPartFATSize.setSummary(ObtainFSPartSize ("/storage/sdcard0"));
+            mSystemPartSize.setSummary(ObtainFSPartSize    ("/system"));
+            mDataPartSize.setSummary(ObtainFSPartSize      ("/data"));
+            mCachePartSize.setSummary(ObtainFSPartSize     ("/cache"));
+            mSDCardPartFATSize.setSummary(ObtainFSPartSize ("/storage/sdcard0"));
 
     	    if (extfsIsMounted == true) {
                 mSDCardPartEXTSize.setSummary(ObtainFSPartSize ("/sd-ext"));
@@ -91,27 +91,26 @@ public class PartitionInfo extends PreferenceActivity {
                 mSDCardPartEXTSize.setEnabled(false);
             }
 
-    	} catch (IllegalArgumentException e) {
-    	  e.printStackTrace();
-    	}
-
+        } catch (IllegalArgumentException e) {
+          e.printStackTrace();
+        }
     }
 
     private String ObtainFSPartSize(String PartitionPath) {
-    	String retstr;
-    	File extraPath = new File(PartitionPath);
-    	StatFs extraStat = new StatFs(extraPath.getPath());
-    	long eBlockSize = extraStat.getBlockSize();
-    	long eTotalBlocks = extraStat.getBlockCount();
-    	retstr = Formatter.formatFileSize(this, (eTotalBlocks * eBlockSize) - (extraStat.getAvailableBlocks() * eBlockSize));
-    	retstr += "  " + getResources().getString(R.string.partition_info_used_of) + "  ";
-    	retstr += Formatter.formatFileSize(this, eTotalBlocks * eBlockSize);
-    	return retstr;
+        String retstr;
+        File extraPath = new File(PartitionPath);
+        StatFs extraStat = new StatFs(extraPath.getPath());
+        long eBlockSize = extraStat.getBlockSize();
+        long eTotalBlocks = extraStat.getBlockCount();
+        retstr = Formatter.formatFileSize(this, (eTotalBlocks * eBlockSize) - (extraStat.getAvailableBlocks() * eBlockSize));
+        retstr += "  " + getResources().getString(R.string.partition_info_used_of) + "  ";
+        retstr += Formatter.formatFileSize(this, eTotalBlocks * eBlockSize);
+        return retstr;
     }
 
     public boolean fileExists(String filename) {
-    	File f = new File(filename);
-    	return f.exists();
+        File f = new File(filename);
+        return f.exists();
     }
 
 }

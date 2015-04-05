@@ -23,7 +23,6 @@
     <!-- Partition info -->
 
         <Preference
-            android:icon="@drawable/ic_tab_selected_sdcard"
             android:title="@string/partition_info_title">
         <intent
             android:action="com.android.action.MAIN"
