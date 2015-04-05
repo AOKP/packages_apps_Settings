@@ -364,7 +364,7 @@
     <string name="shortcut_action_help_button">κουμπί</string>
     <string name="shortcut_action_help_app">Εφαρ.</string>
     <string name="shortcut_action_help_icon">Επιλέγοντας εικονίδιο θα εμφανιστούν επιλογές εξατομίκευσης</string>
-    <string name="shortcut_action_help_main">Για να προσθέσετε %1$s, επιλέξτε το εικονίδιο προσθήκης. Μόλις %1$s προσθέσατε, επιλέγοντας τη σειρά θα αλλάξει στοίχιση%2$s\n\nΓια να αφαιρέσετε %1$s, σύρετε τη γραμμή οριζοντίως αριστερά ή δεξιά. Αναδιάταξη%1$s λίστας κάθετα σύροντας την αγκίστρωση στα αριστερά.\n\nΓια επαναφορά στις προεπιλεγμένες ρυθμίσεις, επιλέξτε επαναφορά.</string>
+    <string name="shortcut_action_help_main">Για να προσθέσετε %1$s, επιλέξτε το εικονίδιο προσθήκης. Μόλις προσθέσετε %1$s , επιλέγοντας τη σειρά θα αλλάξει στοίχιση %2$s\n\nΓια να αφαιρέσετε %1$s, σύρετε τη γραμμή οριζοντίως αριστερά ή δεξιά. Αναδιάταξη %1$s λίστας κάθετα σύροντας την αγκίστρωση στα αριστερά.\n\nΓια επαναφορά στις προεπιλεγμένες ρυθμίσεις, επιλέξτε επαναφορά.</string>
     <string name="shortcut_action_help_delete_last_entry">Αφαίρεση κάθε %1$s λίστας απενεργοποιήσετε τη δυνατότητα εντελώς.</string>
     <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Αφαίρεση κάθε %1$s λίστας απενεργοποιήσετε το δεύτερο στρώμα εντελώς.</string>
 
@@ -586,7 +586,7 @@
     <string name="weather_show_location_summary">Ενεργοποίηση για να δείξει τοποθεσία</string>
     <string name="weather_show_timestamp_title">Εμφάνιση χρονικής σήμανσης</string>
     <string name="weather_show_timestamp_summary">Ενεργοποίηση για να δείξει χρονική σήμανση</string>
-    <string name="weather_condition_icon_title">Συνθήκες καιρού (εικονίδιο)</string>
+    <string name="weather_condition_icon_title">Συνθήκες καιρού (εικονίδια)</string>
     <string name="weather_condition_icon_dlg_title">Επιλέξτε εικονίδια για εμφάνιση καιρικών συνθηκών</string>
     <string name="weather_condition_icon_monochrome_title">Μονόχρωμα</string>
     <string name="weather_condition_icon_colored_title">Χρωματιστά</string>
@@ -623,9 +623,11 @@
     <string name="recents_clear_all_location_bottom_center">Κάτω κέντρο</string>
     <string name="recents_clear_all_dismiss_all_title">Εκκαθάριση εργασίων</string>
     <string name="recents_clear_all_dismiss_all_summary">Επιλέξτε να απορρίψει τις εργασίες ή να αγνοήσει εργασίες στο προσκήνιο </string>
-    <string name="omniswitch_settings_title">Διακόπτης Omni</string>
+    <string name="recents_show_membar_title">Μπάρα μνήμης</string>
+    <string name="recents_show_membar_summary">Εμφάνιση διαθέσιμης μνήμης στην συσκευή</string>
 
     <!-- OmniSwitch -->
+    <string name="omniswitch_settings_title">Διακόπτης Omni</string>
     <string name="omniswitch_category">Διακόπτης Omni</string>
     <string name="recents_use_omniswitch_title">Εκκαθάριση εργασίων</string>
     <string name="recents_use_omniswitch_summary">Χρησιμοποιήστε διακόπτη Omni αντί Εκκαθάριση εργασίων</string>
@@ -714,9 +716,9 @@
     <string name="reset_swag">Εμφάνιση</string>
     <string name="colors_title">Χρώματα</string>
     <string name="text_title">Κείμενο</string>
-    <string name="qs_transparent_shade_title">Σκιά alpha</string>
-    <string name="qs_transparent_shade_summary">Δυνατότητα να εφαρμόσετε χρώμα alpha και να κάνει την σκιά διαφανή.</string>
-    <string name="qs_color_switch_title">Μετάβαση σε προσαρμοσμένο χρώμα</string>
+    <string name="qs_transparent_shade_title">Διαφάνεια</string>
+    <string name="qs_transparent_shade_summary">Εφαρμόσετε χρώμα διαφάνειας που κάνει την σκιά διαφανή.</string>
+    <string name="qs_color_switch_title">Προσαρμοσμένο χρώμα</string>
 
     <!-- Navigation bar button color -->
     <string name="navbar_button_tint_title">Απόχρωση πλήκτρου πλοήγησης</string>
