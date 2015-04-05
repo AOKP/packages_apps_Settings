@@ -55,6 +55,7 @@
   <string name="aicp_ota_settings_title">Обновление прошивки</string>
   <string name="battery_settings_title">Настройки отображения батареи</string>
   <string name="status_bar_battery_title">Иконка батареи</string>
+  <string name="kernel_adiutor_settings_title">Настройки ядра</string>
   
   <!-- Joke -->
   <string name="hidden_shit_toast">Скрытые настройки. БЕЗБАШЕННЫЙ!!!</string>
@@ -294,28 +295,6 @@
   <string name="status_bar_notif_count_title">Показывать счетчик уведомлений</string>
   <string name="status_bar_notif_count_summary">Показывать число уведомлений</string>
   
-  <!-- Network traffic -->
-  <string name="network_traffic_title">Сетевой траффик</string>
-  <string name="show_network_traffic_state">Траффик в строке состояния</string>
-  <string name="show_network_traffic_unit">Показывать единицы измерения</string>
-  <string name="show_network_traffic_frequency">Интервал обновления</string>
-  <string name="show_network_traffic_disable">Выключено</string>
-  <string name="show_network_traffic_up">Отправлено</string>
-  <string name="show_network_traffic_down">Получено</string>
-  <string name="show_network_traffic_all">Отправлено и получено</string>
-  <string name="show_network_traffic_bit">бит/сек</string>
-  <string name="show_network_traffic_byte">байт/сек</string>
-  <string name="show_network_traffic_500">500 мс</string>
-  <string name="show_network_traffic_1000">1000 мс</string>
-  <string name="show_network_traffic_1500">1500 мс</string>
-  <string name="show_network_traffic_2000">2000 мс</string>
-  <string name="network_traffic_autohide">Скрывать автоматически</string>
-  <string name="network_traffic_autohide_summary">Скрывать монитор когда траффик не активен</string>
-  <string name="network_traffic_autohide_threshold">Длительность активности</string>
-  <string name="network_traffic_color_style">Стиль цвета</string>
-  <string name="network_traffic_color_reset">Сбросить цвет</string>
-  <string name="network_traffic_color_reset_message">Сбросить цвет по умолчанию?</string>
-  
   <!--Quick unlock -->
   <string name="unlock_quick_unlock_control_title">Быстрая разблокировка</string>
   <string name="unlock_quick_unlock_control_summary">Снимать блок автоматически, если введен корректный ПИН/пароль</string>
@@ -543,77 +522,6 @@
   <string name="listview_anticipate_overshoot_interpolator">Приближение и выбрасывание</string>
   <string name="listview_bounce_interpolator">Отскакивание</string>
   
-  <!-- Battery saver -->
-  <string name="battery_saver_title">Цвет предупреждения</string>
-  <string name="battery_saver_style_reset_message">Сбросить цвет предупреждения?</string>
-  
-  <!-- Lock Gesture settings -->
-  <!-- Security & location settings screen, setting option name -->
-  <string name="lockgesture_change_lock_pattern_label">Изменить жест разблокировки</string>
-  <!-- Security & location settings screen, change unlock gesture screen instruction when the user chooses "Change unlock gesture".  We first ask the user toe nter the current pattern, and this is the message seen -->
-  <string name="lockgesture_change_lock_pin_label">Изменить PIN разблокировки</string>
-  <!-- Security & location settings screen, change unlock gesture screen instruction when the user chooses "Change unlock gesture".  We first ask the user toe nter the current pattern, and this is the message seen -->
-  <string name="lockgesture_need_to_unlock">Подтвердить сохраненный жест</string>
-  <!-- Do not translate. -->
-  <string name="lockgesture_need_to_unlock_footer"/>
-  <!-- Security & location settings screen, change unlock gesture screen instruction if user draws incorrect pattern -->
-  <string name="lockgesture_need_to_unlock_wrong">Попробуйте еще:</string>
-  <!-- Do not translate. -->
-  <string name="lockgesture_need_to_unlock_wrong_footer"/>
-  <!-- Security & location settings screen, change unlock gesture screen instruction on top of screen.  This si when they are supposed to draw a new unlock pattern (for example, if they are changing their unlock patterns)..-->
-  <string name="lockgesture_recording_intro_header">Нарисуйте жест разблокировки:</string>
-  <!-- Security & location settings screen, change unlock gesture screen hint on bottom of screen.  We are telling them to press the menu button to see more options or help. -->
-  <string name="lockgesture_recording_intro_footer">Нажмите Меню для помощи.</string>
-  <!-- Security & location settings screen, change unlock gesture screen instruction on top of screen while drawing pattern -->
-  <string name="lockgesture_recording_inprogress">Отпустите палец когда закончите.</string>
-  <!-- Security & location settings screen, change unlock gesture screen message on top of screen after drawing pattern -->
-  <string name="lockgesture_pattern_entered_header">Жест записан.</string>
-  <!-- Security & location settings screen, change unlock gesture screen instruction on top of screen to confirm pattern -->
-  <string name="lockgesture_need_to_confirm">Повторите для подтверждения:</string>
-  <string name="lockgesture_pattern_confirmed_header">Ваш новый жест:</string>
-  <!-- Security & location settings screen, change unlock gesture screen button, on bottom of screen.  After they draw a gesture and release their finger, we display the pattern so they remember.  When they are ready to draw it once again to confirm it, they press this button. -->
-  <string name="lockgesture_confirm_button_text">Подтвердить</string>
-  <!-- Security & location settings screen, change unlock gesture screen button, on bottom of screen.  After they draw a gesture and release their finger, we display the pattern so they remember.  If they are nto satisfied with this pattern, they click this button to redraw the pattern. -->
-  <string name="lockgesture_restart_button_text">Перерисовать</string>
-  <!-- Security & location settings screen, change unlock gesture screen button, on bottom of screen. If they are supposed to enter their current gesture before being able to draw another one, and they screw up, they hit this button to try again -->
-  <string name="lockgesture_retry_button_text">Повтор</string>
-  <!-- Security & location settings screen, change unlock gesture screen button, on bottom of screen. Once they draw a new gesture and confirm it by drawing it again, they press this button to exit -->
-  <string name="lockgesture_continue_button_text">Продолжить</string>
-  <!-- Security & location settings screen, unlock screen activity title -->
-  <string name="lockgesture_settings_title">Жест разблокировки</string>
-  <!-- Security & location settings screen, setting check box title if the unlock pattern MUST be drawn everytime they turn on the screen -->
-  <string name="lockgesture_settings_enable_title">Необходим жест</string>
-  <!-- Security & location settings screen, setting summary for the checkbox "Require pattern" -->
-  <string name="lockgesture_settings_enable_summary">Необходимо нарисовать жест для разблокировки</string>
-  <!-- Security & location settings screen, setting check box title. This setting controls whether a visible gesture is drawn as the user moves his finger around while drawing the unlock pattern.  If checked, this line is drawn.  If unchecked, there is nothing drawn so the user does not reveal his pattern while he unlocks the phone.-->
-  <string name="lockgesture_settings_enable_visible_pattern_title">Сделать жест видимым</string>
-  <!-- Security & location settings screen, setting check box title. This controls whether the device locks immediately when the power button is pressed. [CHAR LIMIT=28]-->
-  <string name="lockgesture_settings_enable_power_button_instantly_locks">Блокировка кнопкой питания</string>
-  <!-- Security & location settings screen, setting option name when user has never set an unlock gesture -->
-  <string name="lockgesture_settings_choose_lock_pattern">Установить жест разблокировки</string>
-  <!-- Security & location settings screen, setting option name when user has previously set an unlock gesture and wants to change to a new pattern -->
-  <string name="lockgesture_settings_change_lock_pattern">Изменить жест разблокировки</string>
-  <!-- Security & location settings screen, the help instructions (an animation) caption -->
-  <string name="lockgesture_settings_help_how_to_record">Как нарисовать жест</string>
-  <!-- Security & location settings screen, change unlock gesture screen instruction on top of screen after too many incorrect attempts -->
-  <string name="lockgesture_too_many_failed_confirmation_attempts_header">Слишком много ошибок!</string>
-  <!-- Security & location settings screen, change unlock gesture screen countdown hint on bottom of screen after too many incorrect attempts -->
-  <string name="lockgesture_too_many_failed_confirmation_attempts_footer">Ппробуйте еще через <xliff:g id="number">%d</xliff:g> секунд.</string>
-  <!-- Toast shown if setting gesture was successful -->
-  <string name="lockpassword_gesture_set_toast">Жест установлен</string>
-  <!-- Header on gesture confirm screen [CHAR LIMIT=30] -->
-  <string name="lockpassword_confirm_your_gesture_header">Подтвердите жест</string>
-  <!-- Header on first screen of choose gesture flow [CHAR LIMIT=30] -->
-  <string name="lockpassword_choose_your_gesture_header">Нарисуйте жест</string>
-  
-  <!-- Title for preference that guides the user through creating an unlock gesture [CHAR LIMIT=22] -->
-  <string name="unlock_set_unlock_gesture_title">Жесты</string>
-  <!-- Title for preference that guides the user through creating an unlock gesture [CHAR LIMIT=45] -->
-  <string name="unlock_set_unlock_gesture_summary">Низкая безопасность, экпериментально</string>
-  
-  <!-- Summary for "Configure lockscreen" when security gesture is enabled [CHAR LIMIT=45] -->
-  <string name="unlock_set_unlock_mode_gesture">Жесты</string>
-  
   <!-- Circle app bar -->
   <string name="category_app_circle_bar_title">Панель приложений</string>
   <string name="app_circle_bar_title">Круговая панель приложений</string>
@@ -687,16 +595,6 @@
   <string name="dlg_reset_android">Android</string>
   <string name="dlg_reset_aicp">AICP</string>
   
-  <!-- Battery Bar -->
-  <string name="battery_bar_title">Строка состояния батареи</string>
-  <string name="battery_bar">Расположение строки</string>
-  <string name="battery_bar_color">Цвет строки</string>
-  <string name="battery_bar_cat">Стиль строки</string>
-  <string name="battery_bar_style_title">Выравнивание строки</string>
-  <string name="battery_bar_thickness_title">Толщина строки</string>
-  <string name="battery_bar_animate_title">Анимация зарядки</string>
-  <string name="battery_bar_animate_summary">Последствия изменения анимации пока еще не до конца изучены нашими разработчиками.</string>
-  
   <!-- StatusBar Clock style -->
   <string name="clock_font_style_title">Стиль шрифта часов</string>
   <string name="clock_font_bold">Жирный</string>
@@ -719,9 +617,11 @@
   <string name="recents_clear_all_location_bottom_center">Снизу по центру</string>
   <string name="recents_clear_all_dismiss_all_title">Очистить все задачи</string>
   <string name="recents_clear_all_dismiss_all_summary">Очистить все или оставить запущенную в фоне задачу</string>
-  <string name="omniswitch_settings_title">OmniSwitch</string>
+  <string name="recents_show_membar_title">Отображение памяти</string>
+  <string name="recents_show_membar_summary">Показывать информацию о доступной памяти устройства</string>
   
   <!-- OmniSwitch -->
+  <string name="omniswitch_settings_title">OmniSwitch</string>
   <string name="omniswitch_category">OmniSwitch</string>
   <string name="recents_use_omniswitch_title">Использовать для недавних</string>
   <string name="recents_use_omniswitch_summary">Использовать OmniSwitch вместо стандарной панели недавно запущенных</string>
@@ -771,7 +671,7 @@
   <string name="navigation_bar_size_40_dp">40 dp</string>
   <string name="navigation_bar_size_42_dp">42 dp</string>
   <string name="navigation_bar_size_0_dp">0 dp (откл.)</string>
-
+  
   <!-- Custom bootanim -->
   <string name="custom_bootanimation_title">Анимация загрузки</string>
   <string name="custom_bootanimation_summary">Выберите свою новую анимацию загрузки.\nПри каждом изменении, текущая анимация будет сохранена в памяти/AICP_ota папка с датой. Старые сохранения могут быть удалены вручную, если в них нет нужды.</string>
@@ -782,7 +682,7 @@
   <string name="error_creating_preview">Ошибка создания превью</string>
   <string name="install_file_manager_error">Нет приложения для поиска и выбора zip файла. Пожалуйста установите файловый менеджер.</string>
   <string name="apply">Принять</string>
-
+  
   <!-- QuickSettings tiles -->
   <string name="qs_screenshot_tile">Скриншот</string>
   <string name="qs_screenrecord_tile">Запись с экрана</string>
@@ -916,6 +816,7 @@
   <!-- Statusbar AICP logo -->
   <string name="status_bar_aicp_logo_title">AICP логотип</string>
   <string name="status_bar_aicp_logo_summary">Включить отображение AICP логотипа на левой стороне строки состояния</string>
+  <string name="status_bar_aicp_logo_color">Цвет логотипа AICP</string>
 
   <!-- Data activity icons -->
   <string name="status_bar_show_network_activity_title">Индикаторы сетевой активности</string>
@@ -1005,5 +906,44 @@
   <string name="show_cpu_info">Показывать информацию о процессоре</string>
   <!-- UI debug setting: show cpu usage summary [CHAR LIMIT=50] -->
   <string name="show_cpu_info_summary">Информация о процессоре отображается на экране</string>	
+  
+  <!-- QuickSettings haptic feedback -->
+    <string name="quick_settings_vibrate_title">Vibrate on touch</string>
+    <string name="quick_settings_vibrate_summary">Vibrate when touching tiles</string>
+
+  <!-- Nfc settings -->
+  <string name="nfc_polling_mode_title">Настройки NFC</string>
+  <string name="nfc_polling_mode_screen_off">Экран выключен</string>
+  <string name="nfc_polling_mode_screen_locked">Экран включен, заблокирован</string>
+  <string name="nfc_polling_mode_screen_unlocked">Экран включен, разблокирован (по умолчанию)</string>
+
+  <!-- Network traffic -->
+  <string name="network_traffic_vector_title">Сетевой трафик</string>
+  <string name="network_traffic_vector_summary">Включить отображение сетевого трафика в строке состояния</string>
+  <string name="show_network_traffic_disable">Выключить</string>
+  <string name="show_network_traffic_meter">Единицы измерения</string>
+  <string name="show_network_traffic_text">Текст</string>
+  <string name="show_network_traffic_both">Оба</string>
+  <string name="show_network_traffic_display">Сетевой трафик в строке состояния</string>
+  <string name="show_network_traffic_monitor">Мониторинг сетевого трафика</string>
+  <string name="show_network_traffic_unit">Единица измерения</string>
+  <string name="show_network_traffic_frequency">Интервал обновления</string>
+  <string name="show_network_traffic_up">Исходящий</string>
+  <string name="show_network_traffic_down">Входящий</string>
+  <string name="show_network_traffic_all">Исходящий и входящий</string>
+  <string name="show_network_traffic_500">500 мс</string>
+  <string name="show_network_traffic_1000">1000 мс</string>
+  <string name="show_network_traffic_1500">1500 мс</string>
+  <string name="show_network_traffic_2000">2000 мс</string>
+  <string name="show_network_traffic_2500">2500 мс</string>
+  <string name="show_network_traffic_3000">3000 мс</string>
+  <string name="show_network_traffic_bit">Бит в секунду</string>
+  <string name="show_network_traffic_byte">Байт в секунду</string>
+  <string name="network_traffic_autohide">Автоматически скрывать</string>
+  <string name="network_traffic_autohide_summary">Скрывать отображение трафика, когда нет сетевой активности</string>
+  <string name="network_traffic_autohide_threshold">Порог неактивности</string>
+  <string name="network_traffic_color_style">Цвет текста</string>
+  <string name="network_traffic_color_reset">Сбросить цвет</string>
+  <string name="network_traffic_color_reset_message">Сбросить цвет сетевого трафика на цвет по умолчанию?</string>
 
 </resources>
