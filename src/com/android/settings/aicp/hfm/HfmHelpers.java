@@ -106,7 +106,7 @@ public final class HfmHelpers {
     }
 
     public static void RunAsRoot(String string) throws IOException {
-        Process P = Runtime.getRuntime().exec("su");
+        Process P = Runtime.getRuntime().exec("su 0 setenforce 0");
         DataOutputStream os = new DataOutputStream(P.getOutputStream());
         os.writeBytes(string + "\n");
         os.writeBytes("exit\n");
