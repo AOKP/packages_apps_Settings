@@ -952,4 +952,25 @@
     <string name="network_traffic_color_reset">Επαναφορά χρώματος</string>
     <string name="network_traffic_color_reset_message">Επαναφορά χρώματος κυκλοφορίας δικτύου στην προεπιλογή;</string>
 
+    <!-- Battery saver -->
+    <string name="battery_saver_title">Χρώμα προειδοποίησης</string>
+    <string name="battery_saver_style_reset_message">Επαναφορά χρώματος;</string>
+
+    <!-- Partition Info -->
+    <string name="partition_info_title">Πληροφ. διαμέρισης</string>
+    <string name="partition_info_system">/system</string>
+    <string name="partition_info_data">/data</string>
+    <string name="partition_info_cache">/cache</string>
+    <string name="partition_info_sdcard">/sdcard (FAT)</string>
+    <string name="partition_info_sdext">/sd-ext (EXT)</string>
+    <string name="partition_info_used_of">/</string>
+
+    <string name="storage_options_category">Ειδοποιήσεις</string>
+    <string name="storage_menu_options">Προηγμένη</string>
+    <string name="storage_title_options">Επιλογές αποθήκευσης</string>
+    <string name="no_media_notification_title">Αφαίρεση ειδοποίησης αποθήκευσης</string>
+    <string name="no_media_notification_summary">Εμφάνιση ειδοποίησης όταν αφαιρείται μέσο αποθήκευσης</string>
+    <string name="mount_notification_title">Ειδοποίηση Mount</string>
+    <string name="mount_notification_summary">Εμφάνιση ειδοποίησης για τοποθέτηση αποθήκευσης</string>
+
 </resources>
