@@ -910,6 +910,7 @@
 
     <string name="link_volume_option_title">Link ringtone &amp; notification volumes</string>
     <string name="notification_volume_option_title">Notification volume</string>
+    <string name="ring_notification_volume_option_tile">Ring and notification volume</string>
 
     <!-- Advanced reboot options -->
     <string name="advanced_reboot_title">Advanced reboot</string>
