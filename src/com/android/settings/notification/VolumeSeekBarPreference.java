@@ -24,6 +24,7 @@ import android.preference.PreferenceManager;
 import android.preference.SeekBarPreference;
 import android.preference.SeekBarVolumizer;
 import android.text.TextUtils;
+import android.provider.Settings;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -131,7 +132,17 @@ public class VolumeSeekBarPreference extends SeekBarPreference
         };
         final Uri sampleUri = mStream == AudioManager.STREAM_MUSIC ? getMediaVolumeUri() : null;
         if (mVolumizer == null) {
-            mVolumizer = new SeekBarVolumizer(getContext(), mStream, sampleUri, sbvc);
+            mVolumizer = new SeekBarVolumizer(getContext(), mStream, sampleUri, sbvc) {
+                @Override
+                public void onStopTrackingTouch(SeekBar seekBar) {
+                    final boolean volumeAdjustSound = Settings.System.getInt(getContext().getContentResolver(),
+                            Settings.System.VOLUME_ADJUST_SOUND, 1) == 1;
+                    // if play adjust sound
+                    if (volumeAdjustSound) {
+                        super.onStopTrackingTouch(seekBar);
+                    }
+                }
+            };
         }
         mVolumizer.start();
         mVolumizer.setSeekBar(mSeekBar);
