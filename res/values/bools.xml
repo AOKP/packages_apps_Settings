@@ -41,4 +41,7 @@
 
     <!-- Wake gestures -->
     <bool name="config_wake_gestures_available">false</bool>
+
+    <!-- Set this true only if the device has touchscreen calibration control. -->
+    <bool name="config_hasCalibrationControl">false</bool>
 </resources>

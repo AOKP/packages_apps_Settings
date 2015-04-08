@@ -68,6 +68,7 @@ import com.android.settings.slim.DisplayRotation;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.cyanogenmod.hardware.CalibrationControl;
 import org.cyanogenmod.hardware.SweepToSleep;
 import org.cyanogenmod.hardware.SweepToWake;
 
@@ -94,6 +95,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_TAP_TO_WAKE = "double_tap_wake_gesture";
     private static final String KEY_WAKE_GESTURES = "wake_gestures";
     private static final String KEY_SCREEN_OFF_GESTURE_SETTINGS = "screen_off_gesture_settings";
+    private static final String KEY_CALIBRATION_CONTROL = "calibration_control";
 
     private static final String KEY_DOZE_FRAGMENT = "doze_fragment";
 
@@ -117,6 +119,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private Preference mScreenSaverPreference;
     private SwitchPreference mLiftToWakePreference;
     private SwitchPreference mAutoBrightnessPreference;
+    private SwitchPreference mCalibrationControl;
     private SwitchPreference mSweepToSleep;
     private SwitchPreference mSweepToWake;
     private SwitchPreference mTapToWake;
@@ -239,11 +242,18 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             mSweepToSleep = null;
         }
 
+        mCalibrationControl = (SwitchPreference) findPreference(KEY_CALIBRATION_CONTROL);
+        if (!isCalibrationControlSupported() || !getResources().getBoolean(
+                R.bool.config_hasCalibrationControl)) {
+            advancedPrefs.removePreference(mCalibrationControl);
+            mCalibrationControl = null;
+        }
+
         Utils.updatePreferenceToSpecificActivityFromMetaDataOrRemove(getActivity(),
                 getPreferenceScreen(), KEY_SCREEN_OFF_GESTURE_SETTINGS);
 
         if (!mCmHardwareManager.isSupported(FEATURE_TAP_TO_WAKE) && !isSweepToWakeSupported()
-                && !isSweepToSleepSupported()) {
+                && !isSweepToSleepSupported() && !isCalibrationControlSupported() ) {
                 prefSet.removePreference(advancedPrefs);
         }
 
@@ -398,6 +408,10 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             mSweepToSleep.setChecked(SweepToSleep.isEnabled());
         }
 
+        if (mCalibrationControl != null) {
+            mCalibrationControl.setChecked(CalibrationControl.isEnabled());
+        }
+
         updateState();
         getContentResolver().registerContentObserver(
                 Settings.System.getUriFor(Settings.System.ACCELEROMETER_ROTATION), true,
@@ -472,6 +486,15 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         return res.getBoolean(R.bool.config_wake_gestures_available);
     }
 
+    private static boolean isCalibrationControlSupported() {
+        try {
+            return CalibrationControl.isSupported();
+        } catch (NoClassDefFoundError e) {
+            // Hardware abstraction framework not installed
+            return false;
+        }
+    }
+
     /**
      * Reads the current font size and sets the value in the summary text
      */
@@ -505,6 +528,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             return SweepToWake.setEnabled(mSweepToWake.isChecked());
         } else if (preference == mSweepToSleep) {
             return SweepToSleep.setEnabled(mSweepToSleep.isChecked());
+        } else if (preference == mCalibrationControl) {
+            return CalibrationControl.setEnabled(mCalibrationControl.isChecked());
         }
 
         return super.onPreferenceTreeClick(preferenceScreen, preference);
@@ -599,6 +624,16 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             }
         }
 
+        if (isCalibrationControlSupported()) {
+            final boolean enabled = prefs.getBoolean(KEY_CALIBRATION_CONTROL,
+                CalibrationControl.isEnabled());
+
+            if (!CalibrationControl.setEnabled(enabled)) {
+                Log.e(TAG, "Failed to restore calibration control settings.");
+            } else {
+                Log.d(TAG, "Calibration control settings restored.");
+            }
+        }
     }
 
 

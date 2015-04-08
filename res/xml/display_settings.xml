@@ -127,6 +127,11 @@
                     android:title="@string/sweep_to_sleep_title"
                     android:summary="@string/sweep_to_sleep_summary" />
 
+                <SwitchPreference
+                    android:key="calibration_control"
+                    android:title="@string/calibration_control_title"
+                    android:summary="@string/calibration_control_summary" />
+
         </PreferenceCategory>
 
 </PreferenceScreen>

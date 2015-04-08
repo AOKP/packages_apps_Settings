@@ -967,4 +967,8 @@
     <string name="mount_notification_title">Mount notification</string>
     <string name="mount_notification_summary">Display ongoing notification for mounted storage</string>
 
+    <!-- Calibration Control under Display-Advanced -->
+    <string name="calibration_control_title">Calibration Control</string>
+    <string name="calibration_control_summary">Turn on touch calibration control</string>
+
 </resources>
