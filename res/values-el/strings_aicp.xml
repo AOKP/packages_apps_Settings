@@ -973,4 +973,8 @@
     <string name="mount_notification_title">Ειδοποίηση Mount</string>
     <string name="mount_notification_summary">Εμφάνιση ειδοποίησης για τοποθέτηση αποθήκευσης</string>
 
+    <!-- Calibration Control under Display-Advanced -->
+    <string name="calibration_control_title">Έλεγχος βαθμονόμησης</string>
+    <string name="calibration_control_summary">Ενεργοποιήστε ελέγχο βαθμονόμησης αφής</string>
+
 </resources>
