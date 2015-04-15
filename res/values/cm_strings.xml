@@ -941,6 +941,7 @@
     <string name="qs_tile_adb_over_network">ADB over network</string>
     <string name="qs_tile_profiles">System profiles</string>
     <string name="qs_tile_performance">Battery mode</string>
+    <string name="qs_music_play_tile">Play</string>
     <string name="qs_tile_nfc">NFC</string>
     <string name="qs_tile_compass">Compass</string>
     <string name="qs_tile_lockscreen">Lock screen</string>
