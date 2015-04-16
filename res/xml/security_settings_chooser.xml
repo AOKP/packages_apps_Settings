@@ -26,6 +26,11 @@
             android:title="@string/unlock_set_unlock_launch_picker_title"
             android:summary="@string/unlock_set_unlock_mode_none"
             android:persistent="false"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="general_category"
+        android:title="@string/title_general">
 
         <ListPreference
             android:key="lock_after_timeout"
@@ -71,7 +76,6 @@
             android:fragment="com.android.settings.OwnerInfoSettings"
             android:title="@string/owner_info_settings_title"
             android:summary="@string/owner_info_settings_summary"/>
-
     </PreferenceCategory>
 
 </PreferenceScreen>

@@ -55,6 +55,17 @@
             android:dialogTitle="@string/lock_numpad_random_dialog_title"
             android:persistent="false"/>
 
+        <Preference android:key="manage_trust_agents"
+                    android:title="@string/manage_trust_agents"
+                    android:summary="@string/manage_trust_agents_summary"
+                    android:persistent="false"
+                    android:fragment="com.android.settings.TrustAgentSettings"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="general_category"
+        android:title="@string/title_general">
+
         <PreferenceScreen
                  android:key="lockscreen_shortcuts"
                  android:fragment="com.android.settings.slim.dslv.ActionListViewSettings"
@@ -87,7 +98,6 @@
             android:fragment="com.android.settings.OwnerInfoSettings"
             android:title="@string/owner_info_settings_title"
             android:summary="@string/owner_info_settings_summary"/>
-
     </PreferenceCategory>
 
 </PreferenceScreen>
