@@ -113,6 +113,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         setStringSummary(KEY_KERNEL_VERSION, getFormattedKernelVersion());
         findPreference(KEY_KERNEL_VERSION).setEnabled(true);
         setValueSummary(KEY_MOD_VERSION, "ro.aicp.version");
+        findPreference(KEY_MOD_VERSION).setEnabled(true);
         setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
 
         addStringPreference(KEY_DEVICE_CHIPSET,
@@ -251,6 +252,19 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
                 mDevHitToast = Toast.makeText(getActivity(), R.string.show_dev_already_aicp,
                         Toast.LENGTH_LONG);
                 mDevHitToast.show();
+            }
+        } else if (prefKey.equals(KEY_MOD_VERSION)) {
+            System.arraycopy(mHits, 1, mHits, 0, mHits.length-1);
+            mHits[mHits.length-1] = SystemClock.uptimeMillis();
+            if (mHits[0] >= (SystemClock.uptimeMillis()-500)) {
+                Intent intent = new Intent(Intent.ACTION_MAIN);
+                intent.setClassName("com.android.settings",
+                        com.android.settings.aicp.PlatLogoActivity.class.getName());
+                try {
+                    startActivity(intent);
+                } catch (Exception e) {
+                    Log.e(LOG_TAG, "Unable to start activity " + intent.toString());
+                }
             }
         } else if (preference.getKey().equals(KEY_DEVICE_FEEDBACK)) {
             sendFeedback();
