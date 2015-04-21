@@ -38,8 +38,7 @@
     <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
         android:key="none_is_silent"
         android:title="@string/none_is_silent_title"
-        android:summary="@string/none_is_silent_summary"
-        settings:advanced="true" />
+        android:summary="@string/none_is_silent_summary" />
 
     <PreferenceCategory
         android:key="important"
