@@ -765,6 +765,10 @@ public class SecuritySettings extends SettingsPreferenceFragment
                 mTrustAgentClickIntent = null;
             }
             return;
+        } else if (requestCode == SET_OR_CHANGE_LOCK_METHOD_REQUEST) {
+            Index.getInstance(
+                    getActivity().getApplicationContext()).updateFromClassNameResource(
+                    SecuritySettings.class.getName(), true, true);
         }
         createPreferenceHierarchy();
     }
