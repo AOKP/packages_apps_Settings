@@ -19,7 +19,6 @@
     <string name="mod_version">AICP version</string>
     <!-- About phone screen, AICP unknown name-->
     <string name="mod_version_default">Unknown</string>
-    <string name="model_name">Model name</string>
     <!-- About phone screen, build date of ROM -->
     <string name="build_date">Build date</string>
     <string name="build_date_default">2012-01-01-0000</string>
