@@ -395,4 +395,7 @@
     <string name="hotstpot_inactivity_timeout_never_summary_text">Portable Wi\u2011Fi hotspot timeout never</string>
     <string name="hotstpot_inactivity_timeout_summary_text">Portable Wi\u2011Fi hotspot timeout after <xliff:g id="timeout">%1$s</xliff:g></string>
 
+    <!-- Heads-up -->
+    <string name="heads_up_notifications_enabled_title">Heads-up</string>
+    <string name="heads_up_notifications_enabled_summary">Display priority notifications in a small floating window</string>
 </resources>
