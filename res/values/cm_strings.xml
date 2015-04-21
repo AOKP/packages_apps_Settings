@@ -44,6 +44,11 @@
     <!-- NFC PreferenceCategory title -->
     <string name="nfc_title_category">NFC</string>
 
+    <!-- About phone screen, Device model -->
+    <string name="device_model">Device model</string>
+    <!-- About phone screen, Device name -->
+    <string name="device_name">Device name</string>
+
     <!-- About phone screen, build date -->
     <string name="build_date">Build date</string>
     <string name="build_date_default" translatable="false">2015-01-01-0000</string>
