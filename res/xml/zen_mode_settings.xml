@@ -99,8 +99,7 @@
             android:key="allow_lights"
             android:title="@string/allow_lights_title"
             android:order="101"
-            android:defaultValue="true"
-            settings:advanced="true" />
+            android:defaultValue="true" />
 
     </PreferenceCategory>
 
