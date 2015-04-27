@@ -95,6 +95,8 @@ public class MultiSimEnablerPreference extends SwitchPreference implements
     private static final int PROGRESS_DLG_TIME_OUT = 30000;
     private static final int MSG_DELAY_TIME = 2000;
 
+    private boolean mExplicitlyDisabled = false;
+
     private SubscriptionManager mSubscriptionManager;
 
     private int[] mTintArr;
@@ -123,6 +125,9 @@ public class MultiSimEnablerPreference extends SwitchPreference implements
 
         boolean isSubValid = isCurrentSubValid();
         setEnabled(isSubValid);
+        if (mSwitch != null) {
+            mSwitch.setEnabled(!mExplicitlyDisabled);
+        }
 
         logd("update() isSubValid "  + isSubValid);
         if (isSubValid) {
@@ -210,6 +215,11 @@ public class MultiSimEnablerPreference extends SwitchPreference implements
         builder.show();
     }
 
+    public void setExplicitlyDisabled(boolean disabled) {
+        super.setEnabled(!disabled);
+        mExplicitlyDisabled = disabled;
+    }
+
     @Override
     protected void onBindView(View view) {
         super.onBindView(view);
@@ -222,7 +232,7 @@ public class MultiSimEnablerPreference extends SwitchPreference implements
 
     @Override
     public boolean onPreferenceChange(Preference pref, Object newValue) {
-        if (mClicking) {
+        if (mClicking || mExplicitlyDisabled) {
             return false;
         }
 
