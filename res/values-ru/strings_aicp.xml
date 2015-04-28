@@ -254,8 +254,8 @@
   <string name="block_on_secure_keyguard_summary">Отключить доступ к быстрым настройкам на защищённом экране блокировки.</string>
   
   <!-- LockClocK -->
-  <string name="lock_clock_title">Настройки cLock</string>
-  <string name="lock_clock_summary">Просмотр и настройка виджета \'cLock\'</string>
+  <string name="lock_clock_title">Настройки виджета часов и погоды</string>
+  <string name="lock_clock_summary">Просмотр и настройка виджета</string>
   
   <!-- QuickSettings: Smart Pulldown -->
   <string name="smart_pulldown_title">Умный доступ</string>
@@ -585,8 +585,8 @@
   <string name="weather_condition_icon_monochrome_title">Монохромные</string>
   <string name="weather_condition_icon_colored_title">Цветные</string>
   <string name="weather_condition_icon_vclouds_title">Реалистичные</string>
-  <string name="weather_colorize_all_icons_title">Раскрасить все иконки</string>
-  <string name="weather_colorize_all_icons_summary">Включить раскрашивание всех иконок, за исключением монохромных</string>
+  <string name="weather_colorize_all_icons_title">Изменить цвет</string>
+  <string name="weather_colorize_all_icons_summary">Включить изменение цвета иконок, за исключением монохромных</string>
   <string name="icons_title">Иконки</string>
   <string name="position_right_title">Справа</string>
   <string name="position_centered_title">По центру</string>
@@ -872,8 +872,6 @@
 
   <!-- Heads Up -->
   <string name="category_heads_up">Всплывающие уведомления</string>
-  <string name="summary_heads_up_enabled">Всплывающие уведомления включены</string>
-  <string name="summary_heads_up_disabled">Всплывающие уведомления выключены</string>
   <string name="add_heads_up_package">Добавить приложение</string>
   <string name="add_heads_up_dnd_summary">Не показывать всплывающие уведомления в этих приложениях</string>
   <string name="add_heads_up_blacklist_summary">Не показывать всплывающие уведомления от этих приложений</string>
@@ -908,8 +906,8 @@
   <string name="show_cpu_info_summary">Информация о процессоре отображается на экране</string>	
   
   <!-- QuickSettings haptic feedback -->
-    <string name="quick_settings_vibrate_title">Vibrate on touch</string>
-    <string name="quick_settings_vibrate_summary">Vibrate when touching tiles</string>
+    <string name="quick_settings_vibrate_title">Вибрировать при нажатии</string>
+    <string name="quick_settings_vibrate_summary">Вибрировать при нажатии на плитку быстрых настроек</string>
 
   <!-- Nfc settings -->
   <string name="nfc_polling_mode_title">Настройки NFC</string>
@@ -945,5 +943,30 @@
   <string name="network_traffic_color_style">Цвет текста</string>
   <string name="network_traffic_color_reset">Сбросить цвет</string>
   <string name="network_traffic_color_reset_message">Сбросить цвет сетевого трафика на цвет по умолчанию?</string>
+  
+  <!-- Battery saver -->
+  <string name="battery_saver_title">Цвет оповещения</string>
+  <string name="battery_saver_style_reset_message">Сбросить цвет оповещения о низном заряде?</string>
+
+  <!-- Partition Info -->
+  <string name="partition_info_title">Информация о разделе</string>
+  <string name="partition_info_system">/система</string>
+  <string name="partition_info_data">/данные</string>
+  <string name="partition_info_cache">/кэш</string>
+  <string name="partition_info_sdcard">/sd-карта (FAT)</string>
+  <string name="partition_info_sdext">/sd-карта (EXT)</string>
+  <string name="partition_info_used_of">/</string>
+
+  <string name="storage_options_category">Уведомления</string>
+  <string name="storage_menu_options">Расширенные</string>
+  <string name="storage_title_options">Настройки хранилища</string>
+  <string name="no_media_notification_title">Уведомление при извлечении</string>
+  <string name="no_media_notification_summary">Показывать уведомление когда хранилище отключено</string>
+  <string name="mount_notification_title">Уведомление подключения</string>
+  <string name="mount_notification_summary">Показывать уведомление, когда хранилище подключено</string>
+
+  <!-- Calibration Control under Display-Advanced -->
+  <string name="calibration_control_title">Калибровка</string>
+  <string name="calibration_control_summary">Нажмите для настройки калибровки</string>
 
 </resources>
