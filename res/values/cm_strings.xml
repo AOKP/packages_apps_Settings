@@ -970,6 +970,7 @@
     <string name="qs_brightness_slider_disabled">Disabled</string>
     <string name="colors_title">Colors</string>
     <string name="category_colors_title">Customize colors</string>
+    <string name="qs_tile_heads_up">Heads up</string>
 
     <!-- Gesture Settings -->
     <!-- Settings main menu entry -->
