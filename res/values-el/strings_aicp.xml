@@ -158,6 +158,7 @@
     <string name="status_bar_show_weather_category">Καιρός</string>
     <string name="aicp_notifications_category">Γνωστοποιήσεις</string>
     <string name="navigation_bar_category">Μπάρα πλοήγησης</string>
+    <string name="navigation_ring_category">Μπάρα δακτυλίδι</string>
     <string name="aicp_extras_category">Περισσότερα άχρηστα</string>
 
     <!-- Power menu -->
@@ -174,7 +175,6 @@
 
     <!-- Slim settings screens -->
     <string name="header_category_personalization">Εξατομίκευση</string>
-    <string name="interface_settings_title">Διεπαφή</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Συλλογή χρωμάτων</string>
@@ -878,8 +878,6 @@
 
     <!-- Heads Up -->
     <string name="category_heads_up">Ειδοποιήσεις επικεφαλίδων</string>
-    <string name="summary_heads_up_enabled">Αναδυόμενες ειδοποιήσεις ενεργές</string>
-    <string name="summary_heads_up_disabled">Αναδυόμενες ειδοποιήσεις ανενεργές</string>
     <string name="add_heads_up_package">Πρόσθεσε εφαρμογές.</string>
     <string name="add_heads_up_dnd_summary">Μην εμφανίζονται στις επικεφαλίδες σε αυτές τις εφαρμογές</string>
     <string name="add_heads_up_blacklist_summary">Μην εμφανίζονται στις επικεφαλίδες από αυτές τις εφαρμογές</string>
