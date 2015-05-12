@@ -170,7 +170,9 @@
     <!-- Lockscreen Shortcuts -->
     <string name="lockscreen_shortcuts_title">Shortcuts</string>
     <string name="lockscreen_shortcuts_summary">View or change custom lock screen shortcuts</string>
-    <string name="lockscreen_shorcuts_longpress_title">Shortcuts longpress</string>
-    <string name="lockscreen_shorcuts_longpress_summary">Open custom lock screen shortcuts on longpress</string>
+    <string name="lockscreen_shorcuts_launch_type_title">Shortcut click type</string>
+    <string name="lockscreen_shortcuts_single_tap">Click</string>
+    <string name="lockscreen_shortcuts_double_tap">Double tap</string>
+    <string name="lockscreen_shortcuts_longpress">Longpress</string>
 
 </resources>
