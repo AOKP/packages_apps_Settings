@@ -136,6 +136,10 @@ import com.android.settingslib.drawer.DashboardCategory;
 import com.android.settingslib.drawer.SettingsDrawerActivity;
 import com.android.settingslib.drawer.Tile;
 
+import com.android.settings.slim.dslv.*;
+import com.android.settings.slim.fragments.*;
+import com.android.settings.slim.util.*;
+
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
@@ -276,6 +280,14 @@ public class SettingsActivity extends SettingsDrawerActivity
     };
 
     private static final String[] ENTRY_FRAGMENTS = {
+            //AOKP
+            ActionListViewSettings.class.getName(),
+            DragSortController.class.getName(),
+            DragSortItemView.class.getName(),
+            DragSortListView.class.getName(),
+            LockscreenShortcutFragment.class.getName(),
+            ShortcutPickerHelper.class.getName(),
+            //CM
             WirelessSettings.class.getName(),
             WifiSettings.class.getName(),
             AdvancedWifiSettings.class.getName(),

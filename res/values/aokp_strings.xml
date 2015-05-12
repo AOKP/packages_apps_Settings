@@ -99,14 +99,14 @@
     <string name="shortcut_action_help_delete_last_entry">Removing every %1$s in the list will disable the feature entirely.</string>
     <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Removing every %1$s in the list will disable the second pie layer entirely.</string>
 
-    <!-- Lockscreen shortcuts -->
-    <string name="lockscreen_shortcuts_title">Upper shortcuts</string>
-    <string name="lockscreen_shortcuts_summary">Change the shortcuts right under the lockscreen clock</string>
+    <!-- Lockscreen Shortcuts -->
+    <string name="lockscreen_shortcuts_title">Shortcuts</string>
+    <string name="lockscreen_shortcuts_summary">View or change custom lock screen shortcuts</string>
     <string name="lockscreen_shorcuts_launch_type_title">Shortcut click type</string>
     <string name="lockscreen_shortcuts_single_tap">Click</string>
     <string name="lockscreen_shortcuts_double_tap">Double tap</string>
-    <string name="lockscreen_shorcuts_longpress_title">Long press</string>
-    <string name="lockscreen_shorcuts_longpress_summary">Long press to open apps from shortcuts</string>
+    <string name="lockscreen_shortcuts_longpress">Longpress</string>
+
     <string name="shortcuts_applications">Applications</string>
     <string name="shortcuts_select_custom_app_title">Select custom application</string>
     <string name="shortcuts_icon_picker_type">Select icon type:</string>
