@@ -961,6 +961,8 @@
     <string name="qs_tile_screen_timeout">Screen timeout</string>
     <string name="qs_tile_usb_tether">USB tethering</string>
     <string name="qs_tile_reboot">Reboot</string>
+    <string name="qs_tile_heads_up">Heads up</string>
+    <string name="qs_tile_ambient_display">Ambient display</string>
 
     <string name="qs_main_tiles_title">Enlarge first row</string>
     <string name="qs_main_tiles_summary_on">Two main tiles on the first row</string>
@@ -975,7 +977,6 @@
     <string name="qs_brightness_slider_disabled">Disabled</string>
     <string name="colors_title">Colors</string>
     <string name="category_colors_title">Customize colors</string>
-    <string name="qs_tile_heads_up">Heads up</string>
 
     <!-- Gesture Settings -->
     <!-- Settings main menu entry -->
