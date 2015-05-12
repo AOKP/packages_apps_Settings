@@ -59,7 +59,7 @@
     <string name="shortcut_action_help_main">To add a %1$s, select the Add icon. Once a %1$s is added, selecting the row will change the target%2$s\n\nTo remove a %1$s, swipe the row horizontally left or right. Re-order a %1$s in the list by vertically dragging the anchor on the left.\n\nTo clear or reset to defaults, select the Reset icon.</string>
     <string name="shortcut_action_help_delete_last_entry">Removing every %1$s in the list will disable the feature entirely.</string>
     <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Removing every %1$s in the list will disable the second pie layer entirely.</string>
-
+    <string name="shortcut_picker_choose_longpress_action">Choose longpress action:</string>
     <string name="shortcut_picker_choose_new_action">Choose new action:</string>
     <string name="shortcut_picker_reassign_action">Reassign action:</string>
     <string name="shortcut_picker_choose_action">Choose action:</string>
@@ -72,10 +72,14 @@
     <string name="shortcut_picker_icon_type_system_title">System icons</string>
     <string name="shortcut_picker_select_system_icon_title">Select system icon:</string>
     <string name="shortcut_picker_icon_type_custom_title">Gallery</string>
+
     <!-- Lockscreen Shortcuts -->
     <string name="lockscreen_shortcuts_title">Shortcuts</string>
     <string name="lockscreen_shortcuts_summary">View or change custom lock screen shortcuts</string>
     <string name="lockscreen_shorcuts_launch_type_title">Shortcut click type</string>
+    <string name="lockscreen_shortcuts_single_tap">Click</string>
+    <string name="lockscreen_shortcuts_double_tap">Double tap</string>
+    <string name="lockscreen_shortcuts_longpress">Longpress</string>
 
     <string name="shortcuts_applications">Applications</string>
     <string name="shortcuts_select_custom_app_title">Select custom application</string>
@@ -155,8 +159,6 @@
     <string name="shortcut_action_media_previous">Music - previous track</string>
     <string name="shortcut_action_wake_device">Wake up device</string>
 
-    <string name="shortcut_action_longpress">Longpress:</string>
-    <string name="shortcut_action_select_action_longpress">Choose longpress action:</string>
     <string name="airplay">Airplay</string>
     <string name="android">Android</string>
     <string name="badoo">Badoo</string>
