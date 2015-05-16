@@ -53,10 +53,12 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
     private static final String PREF_BLOCK_ON_SECURE_KEYGUARD = "block_on_secure_keyguard";
     private static final String PREF_QS_SHOW_BRIGHTNESS_SLIDER = "qs_show_brightness_slider";
     private static final String PREF_ENABLE_TASK_MANAGER = "enable_task_manager";
+    private static final String STATUS_BAR_POWER_MENU = "status_bar_power_menu";
 
     private Preference mQSTiles;
     private ListPreference mQuickPulldown;
     private ListPreference mSmartPulldown;
+    private ListPreference mStatusBarPowerMenu;
     private SwitchPreference mBlockOnSecureKeyguard;
     private SwitchPreference mBrightnessSlider;
     private SwitchPreference mEnableTaskManager;
@@ -111,6 +113,13 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
         mEnableTaskManager.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.ENABLE_TASK_MANAGER, 0) == 1));
 
+        // status bar power menu
+        mStatusBarPowerMenu = (ListPreference) findPreference(STATUS_BAR_POWER_MENU);
+        mStatusBarPowerMenu.setOnPreferenceChangeListener(this);
+        int statusBarPowerMenu = Settings.System.getInt(getContentResolver(),
+                Settings.System.STATUS_BAR_POWER_MENU, 0);
+        mStatusBarPowerMenu.setValue(String.valueOf(statusBarPowerMenu));
+        mStatusBarPowerMenu.setSummary(mStatusBarPowerMenu.getEntry());
     }
 
     @Override
@@ -149,6 +158,16 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
             int brightnessSlider = Settings.Secure.getInt(getContentResolver(),
                     Settings.Secure.QS_SHOW_BRIGHTNESS_SLIDER, 1);
             updateBrightnessSliderSummary(brightnessSlider);
+            return true;
+        } else if (preference == mStatusBarPowerMenu) {
+            String statusBarPowerMenu = (String) newValue;
+            int statusBarPowerMenuValue = Integer.parseInt(statusBarPowerMenu);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUS_BAR_POWER_MENU, statusBarPowerMenuValue);
+            int statusBarPowerMenuIndex = mStatusBarPowerMenu
+                    .findIndexOfValue(statusBarPowerMenu);
+            mStatusBarPowerMenu
+                    .setSummary(mStatusBarPowerMenu.getEntries()[statusBarPowerMenuIndex]);
             return true;
         }
         return false;
