@@ -19,7 +19,6 @@
     <string name="mod_version">AICP έκδοση</string>
     <!-- About phone screen, AICP unknown name-->
     <string name="mod_version_default">Άγνωστη</string>
-    <string name="model_name">Όνομα μοντέλου</string>
     <!-- About phone screen, build date of ROM -->
     <string name="build_date">Ημερ/νία δημιουργίας</string>
     <string name="build_date_default">2012-01-01-0000</string>
@@ -434,10 +433,13 @@
     <string name="screen_off_gesture_settings_title">Χειρονομίες οθόνης εκτός</string>
 
     <!-- Lockscreen Shortcuts -->
-    <string name="lockscreen_shortcuts_title">Συντομεύσεις</string>
-    <string name="lockscreen_shortcuts_summary">Προβολή ή αλλαγή στις ειδικές συντομεύσεις οθόνη κλειδώματος</string>
-    <string name="lockscreen_shorcuts_longpress_title">Συντομεύσεις παρατεταμ. κλειδώματος</string>
+    <string name="lockscreen_shortcuts_title">Συντομεύσεις κλειδ.</string>
+    <string name="lockscreen_shortcuts_summary">Προβολή ή αλλαγή στις ειδικές συντομεύσεις κλειδώματος</string>
+    <string name="lockscreen_shorcuts_launch_type_title">Συντομεύσεις παρατεταμ. κλειδώματος</string>
     <string name="lockscreen_shorcuts_longpress_summary">Ανοίξτε συντομεύσεις παρατεταμένου κλειδώματος</string>
+    <string name="lockscreen_shortcuts_single_tap">Κλίκ</string>
+    <string name="lockscreen_shortcuts_double_tap">Διπλό χτύπημα</string>
+    <string name="lockscreen_shortcuts_longpress">Παρατεταμένο</string>
 
     <!-- Unaccounted and overcounted battery stats -->
     <string name="show_unac_and_overcounted_stats_title">Εμφάνισε στατιστικά που αγνοούνται/υπολογίζονται</string>
@@ -776,7 +778,6 @@
     <string name="qs_expanded_desktop_tile">Διευρυμένη επιφ. εργασίας</string>
     <string name="qs_notifications_tile">Γνωστοποίησης</string>
     <string name="qs_screen_off_tile">Οθόνη εκτός</string>
-    <string name="qs_ambient_display_tile">Περιβάλλον οθόνης</string>
 
     <!-- QuickSettings collapse panel -->
     <string name="quick_settings_collapse_title">Αυτόματο Κλείσιμο πάνελ</string>
