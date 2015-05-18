@@ -92,6 +92,11 @@
             android:summary="@string/notification_force_expand_summary"
             android:defaultValue="false" />
 
+        <PreferenceScreen
+            android:key="clear_all_color"
+            android:fragment="com.android.settings.aicp.ClearAllColor"
+            android:title="@string/clear_all_color_title" />
+
 
     </PreferenceCategory>
 

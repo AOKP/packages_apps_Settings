@@ -1046,4 +1046,8 @@
     <string name="calibration_control_title">Calibration Control</string>
     <string name="calibration_control_summary">Turn on touch calibration control</string>
 
+    <!-- Clear button color -->
+    <string name="clear_all_color_title">Clear all icon color</string>
+    <string name="notification_drawer_clear_all_icon_color_title">Clear all icon</string>
+
 </resources>
