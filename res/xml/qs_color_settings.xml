@@ -22,6 +22,7 @@
         <SwitchPreference
             android:key="qs_color_switch"
             android:title="@string/qs_color_switch_title"
+            android:summary="@string/qs_color_switch_summary"
             android:defaultValue="false" />
 
         <SwitchPreference
@@ -48,6 +49,16 @@
             android:title="@string/text_title"
             android:defaultValue="0xffffffff"
             android:dependency="qs_color_switch" />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="qs_clear_all_color"
+        android:title="@string/clear_all_color_title">
+
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="notification_drawer_clear_all_icon_color"
+            android:title="@string/notification_drawer_clear_all_icon_color_title"
+            android:defaultValue="0xffffffff" />
 
     </PreferenceCategory>
 </PreferenceScreen>

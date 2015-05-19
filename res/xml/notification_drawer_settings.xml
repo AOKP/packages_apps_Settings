@@ -78,11 +78,6 @@
             android:fragment="com.android.settings.aicp.QSColors" />
 
         <PreferenceScreen
-            android:key="clear_all_color"
-            android:fragment="com.android.settings.aicp.ClearAllColor"
-            android:title="@string/clear_all_color_title" />
-
-        <PreferenceScreen
                 android:key="navbar_targets_settings"
                 android:fragment="com.android.settings.slim.dslv.ActionListViewSettings"
                 android:title="@string/qs_slim_action_title"

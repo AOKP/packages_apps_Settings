@@ -782,14 +782,15 @@
     <!-- QuickSettings colors -->
     <string name="background_title">Background</string>
     <string name="icon_title">Icon</string>
-    <string name="qs_colors_title">Custom Color Options</string>
+    <string name="qs_colors_title">Custom color options</string>
     <string name="reset_android">Android</string>
     <string name="reset_swag">Swag</string>
-    <string name="colors_title">Colors</string>
+    <string name="colors_title">QS colors</string>
     <string name="text_title">Text</string>
     <string name="qs_transparent_shade_title">Shade alpha</string>
-    <string name="qs_transparent_shade_summary">Ability to apply color alpha value and make notification shade transparent.</string>
+    <string name="qs_transparent_shade_summary">Ability to apply color alpha value and make notification shade transparent</string>
     <string name="qs_color_switch_title">Custom color switch</string>
+    <string name="qs_color_switch_summary">Toggle to control various custom quicksettings color options below</string>
 
     <!-- Navigation bar button color -->
     <string name="navbar_button_tint_title">Navigation button tint</string>
@@ -1048,6 +1049,6 @@
 
     <!-- Clear button color -->
     <string name="clear_all_color_title">Clear all icon color</string>
-    <string name="notification_drawer_clear_all_icon_color_title">Clear all icon</string>
+    <string name="notification_drawer_clear_all_icon_color_title">Icon</string>
 
 </resources>
