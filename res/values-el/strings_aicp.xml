@@ -792,11 +792,12 @@
     <string name="qs_colors_title">Επιλογή ειδικών χρωμάτων</string>
     <string name="reset_android">Android</string>
     <string name="reset_swag">Εμφάνιση</string>
-    <string name="colors_title">Χρώματα</string>
+    <string name="colors_title">QS χρώματα</string>
     <string name="text_title">Κείμενο</string>
     <string name="qs_transparent_shade_title">Διαφάνεια</string>
     <string name="qs_transparent_shade_summary">Εφαρμόσετε χρώμα διαφάνειας που κάνει την σκιά διαφανή.</string>
     <string name="qs_color_switch_title">Προσαρμοσμένο χρώμα</string>
+    <string name="qs_color_switch_summary">Προσαρμοσμένες επιλογές γρήγορης διαμόρφωσης χρώματος</string>
 
     <!-- Navigation bar button color -->
     <string name="navbar_button_tint_title">Απόχρωση πλήκτρου πλοήγησης</string>
@@ -1052,5 +1053,9 @@
     <!-- Calibration Control under Display-Advanced -->
     <string name="calibration_control_title">Έλεγχος βαθμονόμησης</string>
     <string name="calibration_control_summary">Ενεργοποιήστε ελέγχο βαθμονόμησης αφής</string>
+
+    <!-- Clear button color -->
+    <string name="clear_all_color_title">Διαγραφή χρώματος εικονιδίων</string>
+    <string name="notification_drawer_clear_all_icon_color_title">Εικονίδιο</string>
 
 </resources>
