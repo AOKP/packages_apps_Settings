@@ -1051,4 +1051,8 @@
     <string name="clear_all_color_title">Clear all icon color</string>
     <string name="notification_drawer_clear_all_icon_color_title">Icon</string>
 
+    <!-- 4G LTE switch -->
+    <string name="show_fourg_title">Show 4G instead of LTE</string>
+    <string name="show_fourg_summary">Replaces LTE statusbar indicator with 4G.\nChanging this option will trigger SystemUI restart!</string>
+
 </resources>
