@@ -50,6 +50,7 @@
             android:defaultValue="0xffffffff"
             android:dependency="status_bar_aicp_logo" />
 
+
     <PreferenceScreen
             android:key="carrier_options"
             android:fragment="com.android.settings.aicp.CarrierLabel"
@@ -85,12 +86,6 @@
             android:key="status_bar_show_network_activity"
             android:title="@string/status_bar_show_network_activity_title"
             android:defaultValue="true" />
-
-    <SwitchPreference
-            android:key="show_fourg"
-            android:title="@string/show_fourg_title"
-            android:summary="@string/show_fourg_summary"
-            android:defaultValue="false" />
 
     <!--Vector Network traffic indicator -->
     <PreferenceScreen
