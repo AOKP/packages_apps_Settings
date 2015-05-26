@@ -1058,4 +1058,12 @@
     <string name="clear_all_color_title">Διαγραφή χρώματος εικονιδίων</string>
     <string name="notification_drawer_clear_all_icon_color_title">Εικονίδιο</string>
 
+    <!-- 4G LTE switch -->
+    <string name="show_fourg_title">Εμφάνιση δείκτη 4G αντί για LTE</string>
+    <string name="show_fourg_summary">Αντικατάσταση δείκτη LTE με 4G.\nΗ επιλογή θα προκαλέσει επανεκκίνηση!</string>
+
+    <!-- Task Manager -->
+    <string name="enable_task_manager_title">Διαχείριση εργασιών</string>
+    <string name="enable_task_manager_summary">Ενεργοποίηση/Απενεργοποίηση της διαχείριση εργασιών.\nΗ επιλογή θα προκαλέσει επανεκκίνηση!</string>
+
 </resources>
