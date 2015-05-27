@@ -42,7 +42,7 @@ public class AicpSettings extends SettingsPreferenceFragment
     private static final String KEY_KERNEL_AUDIUTOR_START = "kernel_adiutor_start";
 
     // Package name of the AICP OTA app
-    public static final String AICPOTA_PACKAGE_NAME = "com.paranoid.paranoidota";
+    public static final String AICPOTA_PACKAGE_NAME = "com.aicp.aicpota";
     // Intent for launching the AICP OTA main actvity
     public static Intent INTENT_AICPOTA = new Intent(Intent.ACTION_MAIN)
             .setClassName(AICPOTA_PACKAGE_NAME, AICPOTA_PACKAGE_NAME + ".MainActivity");
