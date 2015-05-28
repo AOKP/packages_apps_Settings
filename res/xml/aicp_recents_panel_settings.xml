@@ -61,6 +61,7 @@
 
         <!-- OmniSwitch -->
         <PreferenceScreen
+            android:key="omniswitch"
             android:id="@+id/omniswitch"
             android:title="@string/omniswitch_settings_title"
             android:fragment="com.android.settings.aicp.OmniSwitch" />
