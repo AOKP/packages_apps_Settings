@@ -99,9 +99,6 @@ limitations under the License.
         <item>5</item>
         <item>10</item>
         <item>30</item>
-        <item>50</item>
-        <item>100</item>
-        <item>200</item>
     </string-array>
 
     <string-array name="sms_security_check_limit_values" translatable="false">
@@ -109,9 +106,6 @@ limitations under the License.
         <item>5</item>
         <item>10</item>
         <item>30</item>
-        <item>50</item>
-        <item>100</item>
-        <item>200</item>
     </string-array>
 
     <string-array name="less_notification_sounds_entries">
