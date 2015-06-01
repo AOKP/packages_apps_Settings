@@ -20,12 +20,14 @@ import android.app.ActivityManagerNative;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.IActivityManager;
+import android.app.ProgressDialog;
 import android.app.admin.DevicePolicyManager;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.os.ServiceManager;
@@ -159,7 +161,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
                 showDialog(DIALOG_DENSITY);
             } else {
                 int value = Integer.parseInt((String) objValue);
-                writeLcdDensityPreference(value);
+                writeLcdDensityPreference(preference.getContext(), value);
                 updateLcdDensityPreferenceDescription(value);
             }
         }
@@ -184,22 +186,43 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         preference.setSummary(summary);
     }
 
-    public void writeLcdDensityPreference(int value) {
+    private void writeLcdDensityPreference(final Context context, int value) {
         try {
             SystemProperties.set("persist.sys.lcd_density", Integer.toString(value));
+        } catch (RuntimeException e) {
+            Log.e(TAG, "Unable to save LCD density");
+            return;
         }
-        catch (Exception e) {
-            Log.w(TAG, "Unable to save LCD density");
-        }
-        try {
-            final IActivityManager am = ActivityManagerNative.asInterface(ServiceManager.checkService("activity"));
-            if (am != null) {
-                am.restart();
+        final IActivityManager am = ActivityManagerNative.asInterface(
+                ServiceManager.checkService("activity"));
+        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected void onPreExecute() {
+                ProgressDialog dialog = new ProgressDialog(context);
+                dialog.setMessage(getResources().getString(R.string.restarting_ui));
+                dialog.setCancelable(false);
+                dialog.setIndeterminate(true);
+                dialog.show();
             }
-        }
-        catch (RemoteException e) {
-            Log.e(TAG, "Failed to restart");
-        }
+            @Override
+            protected Void doInBackground(Void... params) {
+                // Give the user a second to see the dialog
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    // Ignore
+                }
+
+                // Restart the UI
+                try {
+                    am.restart();
+                } catch (RemoteException e) {
+                    Log.e(TAG, "Failed to restart");
+                }
+                return null;
+            }
+        };
+        task.execute();
     }
 
     public Dialog onCreateDialog(int dialogId) {
