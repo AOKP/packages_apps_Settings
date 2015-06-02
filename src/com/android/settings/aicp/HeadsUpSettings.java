@@ -72,8 +72,10 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
     private static final int DIALOG_BLACKLIST_APPS = 1;
 
     private static final String PREF_HEADS_UP_TIME_OUT = "heads_up_time_out";
+    private static final String PREF_HEADS_UP_SNOOZE_TIME = "heads_up_snooze_time";
 
     private ListPreference mHeadsUpTimeOut;
+    private ListPreference mHeadsUpSnoozeTime;
 
     private PackageListAdapter mPackageAdapter;
     private PackageManager mPackageManager;
@@ -116,6 +118,15 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
                 Settings.System.HEADS_UP_NOTIFCATION_DECAY, defaultTimeOut);
         mHeadsUpTimeOut.setValue(String.valueOf(headsUpTimeOut));
         updateHeadsUpTimeOutSummary(headsUpTimeOut);
+
+        int defaultSnooze = systemUiResources.getInteger(systemUiResources.getIdentifier(
+                    "com.android.systemui:integer/heads_up_default_snooze_length_ms", null, null));
+        mHeadsUpSnoozeTime = (ListPreference) findPreference(PREF_HEADS_UP_SNOOZE_TIME);
+        mHeadsUpSnoozeTime.setOnPreferenceChangeListener(this);
+        int headsUpSnooze = Settings.System.getInt(getContentResolver(),
+                Settings.System.HEADS_UP_NOTIFICATION_SNOOZE, defaultSnooze);
+        mHeadsUpSnoozeTime.setValue(String.valueOf(headsUpSnooze));
+        updateHeadsUpSnoozeTimeSummary(headsUpSnooze);
 
         mDndPrefList = (PreferenceGroup) findPreference("dnd_applications_list");
         mDndPrefList.setOrderingAsAdded(false);
@@ -320,6 +331,13 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
                     headsUpTimeOut);
             updateHeadsUpTimeOutSummary(headsUpTimeOut);
             return true;
+        } else if (preference == mHeadsUpSnoozeTime) {
+            int headsUpSnooze = Integer.valueOf((String) newValue);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.HEADS_UP_NOTIFICATION_SNOOZE,
+                    headsUpSnooze);
+            updateHeadsUpSnoozeTimeSummary(headsUpSnooze);
+            return true;
         }
         return false;
     }
@@ -484,5 +502,12 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
         } else {
             mHeadsUpTimeOut.setSummary(summary);
         }
+    }
+
+    private void updateHeadsUpSnoozeTimeSummary(int value) {
+        String summary = value != 0
+                ? getResources().getString(R.string.heads_up_snooze_summary, value / 60 / 1000)
+                : getResources().getString(R.string.heads_up_snooze_disabled_summary);
+        mHeadsUpSnoozeTime.setSummary(summary);
     }
 }
