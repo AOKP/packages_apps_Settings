@@ -1148,4 +1148,7 @@
     <string name="torch_screen_off_five_minutes">5 minutes</string>
     <string name="torch_screen_off_ten_minutes">10 minutes</string>
 
+    <!-- Enable power menu -->
+    <string name="lockscreen_enable_power_menu_title">Power menu in lockscreen</string>
+
 </resources>

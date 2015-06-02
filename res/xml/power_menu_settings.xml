@@ -74,4 +74,9 @@
         android:title="@string/power_menu_sound_title"
         android:defaultValue="true" />
 
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+        android:key="lockscreen_enable_power_menu"
+        android:title="@string/lockscreen_enable_power_menu_title"
+        android:defaultValue="true" />
+
 </PreferenceScreen>
