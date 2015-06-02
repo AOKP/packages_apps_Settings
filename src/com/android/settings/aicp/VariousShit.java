@@ -44,6 +44,7 @@ import android.preference.SwitchPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
+import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.util.Log;
@@ -84,6 +85,8 @@ import java.util.Random;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
+import com.android.internal.util.cm.QSUtils;
+
 /**
  * LAB files borrowed from excellent ChameleonOS for AICP
  */
@@ -104,6 +107,10 @@ public class VariousShit extends SettingsPreferenceFragment
     private static final String KEY_HIDDEN_SHIT_UNLOCKED = "hidden_shit_unlocked";
     private static final String KEY_HIDDEN_IMG = "hidden_img";
     private static final String KEY_HIDDEN_YOGA = "hidden_anim";
+
+    private static final String TORCH_CATEGORY = "torch_category";
+    private static final String DISABLE_TORCH_ON_SCREEN_OFF = "disable_torch_on_screen_off";
+    private static final String DISABLE_TORCH_ON_SCREEN_OFF_DELAY = "disable_torch_on_screen_off_delay";
 
     // Package name of the yoga
     public static final String YOGA_PACKAGE_NAME = "com.android.settings";
@@ -127,7 +134,9 @@ public class VariousShit extends SettingsPreferenceFragment
     private AnimationDrawable mAnimationPart2;
     private String mErrormsg;
     private String mBootAnimationPath;
-
+    private SwitchPreference mTorchOff;
+    private ListPreference mTorchOffDelay;
+    private PreferenceCategory mTorchCategory;
     private Preference mLockClock;
 
     private Preference mHiddenShit;
@@ -152,6 +161,7 @@ public class VariousShit extends SettingsPreferenceFragment
         PackageManager pm = getPackageManager();
         Resources res = getResources();
         mContext = getActivity();
+        Activity activity = getActivity();
 
         mVariousShitScreen = (PreferenceScreen) findPreference("various_shit_screen");
 
@@ -193,6 +203,20 @@ public class VariousShit extends SettingsPreferenceFragment
         mCustomBootAnimation = findPreference(PREF_CUSTOM_BOOTANIM);
 
         resetBootAnimation();
+
+        // Torch crap
+        mTorchCategory = (PreferenceCategory) findPreference(TORCH_CATEGORY);
+        mTorchOff = (SwitchPreference) findPreference(DISABLE_TORCH_ON_SCREEN_OFF);
+        mTorchOffDelay = (ListPreference) findPreference(DISABLE_TORCH_ON_SCREEN_OFF_DELAY);
+        int torchOffDelay = Settings.System.getInt(resolver,
+                Settings.System.DISABLE_TORCH_ON_SCREEN_OFF_DELAY, 10);
+        mTorchOffDelay.setValue(String.valueOf(torchOffDelay));
+        mTorchOffDelay.setSummary(mTorchOffDelay.getEntry());
+        mTorchOffDelay.setOnPreferenceChangeListener(this);
+
+        if (!QSUtils.deviceSupportsFlashLight(activity)) {
+            prefSet.removePreference(mTorchCategory);
+        }
 
     }
 
@@ -253,6 +277,13 @@ public class VariousShit extends SettingsPreferenceFragment
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.HIDDEN_SHIT,
                     (Boolean) objValue ? 1 : 0);
+            return true;
+        } else if (preference == mTorchOffDelay) {
+            int torchOffDelay = Integer.valueOf((String) objValue);
+            int index = mTorchOffDelay.findIndexOfValue((String) objValue);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.DISABLE_TORCH_ON_SCREEN_OFF_DELAY, torchOffDelay);
+            mTorchOffDelay.setSummary(mTorchOffDelay.getEntries()[index]);
             return true;
         }
         return false;
