@@ -411,31 +411,46 @@
     <item msgid="45075631231212732">"항상 HDCP 확인 사용"</item>
   </string-array>
   <string-array name="window_animation_scale_entries">
-    <item msgid="8134156599370824081">"애니메이션 사용 안함"</item>
-    <item msgid="6624864048416710414">"애니메이션 배율 .5x"</item>
-    <item msgid="2219332261255416635">"애니메이션 배율 1x"</item>
-    <item msgid="3544428804137048509">"애니메이션 배율 1.5x"</item>
-    <item msgid="3110710404225974514">"애니메이션 배율 2x"</item>
-    <item msgid="4402738611528318731">"애니메이션 배율 5x"</item>
-    <item msgid="6189539267968330656">"애니메이션 배율 10x"</item>
+    <item>애니메이션 사용 안함</item>
+        <item>애니메이션 배율: .2x</item>
+        <item>애니메이션 배율: .25x</item>
+        <item>애니메이션 배율: .35x</item>
+        <item>애니메이션 배율: .5x</item>
+        <item>애니메이션 배율: .7x</item>
+        <item>애니메이션 배율: .75x</item>
+        <item>애니메이션 배율: 1x</item>
+        <item>애니메이션 배율: 1.5x</item>
+        <item>애니메이션 배율: 2x</item>
+        <item>애니메이션 배율: 5x</item>
+        <item>애니메이션 배율: 10x</item>
   </string-array>
   <string-array name="transition_animation_scale_entries">
-    <item msgid="8464255836173039442">"애니메이션 사용 안함"</item>
-    <item msgid="3375781541913316411">"애니메이션 배율 .5x"</item>
-    <item msgid="1991041427801869945">"애니메이션 배율 1x"</item>
-    <item msgid="4012689927622382874">"애니메이션 배율 1.5x"</item>
-    <item msgid="3289156759925947169">"애니메이션 배율 2x"</item>
-    <item msgid="7705857441213621835">"애니메이션 배율 5x"</item>
-    <item msgid="6660750935954853365">"애니메이션 배율 10x"</item>
-  </string-array>
+        <item>애니메이션 사용 안함</item>
+        <item>애니메이션 배율: .2x</item>
+        <item>애니메이션 배율: .25x</item>
+        <item>애니메이션 배율: .35x</item>
+        <item>애니메이션 배율: .5x</item>
+        <item>애니메이션 배율: .7x</item>
+        <item>애니메이션 배율: .75x</item>
+        <item>애니메이션 배율: 1x</item>
+        <item>애니메이션 배율: 1.5x</item>
+        <item>애니메이션 배율: 2x</item>
+        <item>애니메이션 배율: 5x</item>
+        <item>애니메이션 배율: 10x</item>
+    </string-array>
   <string-array name="animator_duration_scale_entries">
-    <item msgid="6039901060648228241">"애니메이션 사용 안함"</item>
-    <item msgid="1138649021950863198">"애니메이션 배율 .5x"</item>
-    <item msgid="4394388961370833040">"애니메이션 배율 1x"</item>
-    <item msgid="8125427921655194973">"애니메이션 배율 1.5x"</item>
-    <item msgid="3334024790739189573">"애니메이션 배율 2x"</item>
-    <item msgid="3170120558236848008">"애니메이션 배율 5x"</item>
-    <item msgid="1069584980746680398">"애니메이션 배율 10x"</item>
+    <item>애니메이션 사용 안함</item>
+        <item>애니메이션 배율: .2x</item>
+        <item>애니메이션 배율: .25x</item>
+        <item>애니메이션 배율: .35x</item>
+        <item>애니메이션 배율: .5x</item>
+        <item>애니메이션 배율: .7x</item>
+        <item>애니메이션 배율: .75x</item>
+        <item>애니메이션 배율: 1x</item>
+        <item>애니메이션 배율: 1.5x</item>
+        <item>애니메이션 배율: 2x</item>
+        <item>애니메이션 배율: 5x</item>
+        <item>애니메이션 배율: 10x</item>
   </string-array>
   <string-array name="overlay_display_devices_entries">
     <item msgid="1606809880904982133">"없음"</item>

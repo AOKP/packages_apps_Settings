@@ -411,31 +411,46 @@
     <item msgid="45075631231212732">"Usa sempre la verifica HDCP"</item>
   </string-array>
   <string-array name="window_animation_scale_entries">
-    <item msgid="8134156599370824081">"Animazione disattivata"</item>
-    <item msgid="6624864048416710414">"Scala animazione 0,5x"</item>
-    <item msgid="2219332261255416635">"Scala animazione 1x"</item>
-    <item msgid="3544428804137048509">"Scala animazione 1,5x"</item>
-    <item msgid="3110710404225974514">"Scala animazione 2x"</item>
-    <item msgid="4402738611528318731">"Scala animazione 5x"</item>
-    <item msgid="6189539267968330656">"Scala animazione 10x"</item>
+    <item>Animazione disattivata</item>
+        <item>Scala animazione: .2x</item>
+        <item>Scala animazione: .25x</item>
+        <item>Scala animazione: .35x</item>
+        <item>Scala animazione: .5x</item>
+        <item>Scala animazione: .7x</item>
+        <item>Scala animazione: .75x</item>
+        <item>Scala animazione: 1x</item>
+        <item>Scala animazione: 1.5x</item>
+        <item>Scala animazione: 2x</item>
+        <item>Scala animazione: 5x</item>
+        <item>Scala animazione: 10x</item>
   </string-array>
   <string-array name="transition_animation_scale_entries">
-    <item msgid="8464255836173039442">"Animazione disattivata"</item>
-    <item msgid="3375781541913316411">"Scala animazione 0,5x"</item>
-    <item msgid="1991041427801869945">"Scala animazione 1x"</item>
-    <item msgid="4012689927622382874">"Scala animazione 1,5x"</item>
-    <item msgid="3289156759925947169">"Scala animazione 2x"</item>
-    <item msgid="7705857441213621835">"Scala animazione 5x"</item>
-    <item msgid="6660750935954853365">"Scala animazione 10x"</item>
-  </string-array>
+        <item>Animazione disattivata</item>
+        <item>Scala animazione: .2x</item>
+        <item>Scala animazione: .25x</item>
+        <item>Scala animazione: .35x</item>
+        <item>Scala animazione: .5x</item>
+        <item>Scala animazione: .7x</item>
+        <item>Scala animazione: .75x</item>
+        <item>Scala animazione: 1x</item>
+        <item>Scala animazione: 1.5x</item>
+        <item>Scala animazione: 2x</item>
+        <item>Scala animazione: 5x</item>
+        <item>Scala animazione: 10x</item>
+    </string-array>
   <string-array name="animator_duration_scale_entries">
-    <item msgid="6039901060648228241">"Animazione disattivata"</item>
-    <item msgid="1138649021950863198">"Scala animazione 0,5x"</item>
-    <item msgid="4394388961370833040">"Scala animazione 1x"</item>
-    <item msgid="8125427921655194973">"Scala animazione 1,5x"</item>
-    <item msgid="3334024790739189573">"Scala animazione 2x"</item>
-    <item msgid="3170120558236848008">"Scala animazione 5x"</item>
-    <item msgid="1069584980746680398">"Scala animazione 10x"</item>
+    <item>Animazione disattivata</item>
+        <item>Scala animazione: .2x</item>
+        <item>Scala animazione: .25x</item>
+        <item>Scala animazione: .35x</item>
+        <item>Scala animazione: .5x</item>
+        <item>Scala animazione: .7x</item>
+        <item>Scala animazione: .75x</item>
+        <item>Scala animazione: 1x</item>
+        <item>Scala animazione: 1.5x</item>
+        <item>Scala animazione: 2x</item>
+        <item>Scala animazione: 5x</item>
+        <item>Scala animazione: 10x</item>
   </string-array>
   <string-array name="overlay_display_devices_entries">
     <item msgid="1606809880904982133">"Nessuno"</item>

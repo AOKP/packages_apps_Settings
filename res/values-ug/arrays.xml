@@ -397,30 +397,45 @@
   </string-array>
   <string-array name="window_animation_scale_entries">
     <item>جانلاندۇرۇمنى تاقا</item>
-    <item>جانلاندۇرۇم ئۆلچىكى .5x</item>
-    <item>جانلاندۇرۇم ئۆلچىكى 1x</item>
-    <item>جانلاندۇرۇم ئۆلچىكى 1.5x</item>
-    <item>جانلاندۇرۇم ئۆلچىكى 2x</item>
-    <item>جانلاندۇرۇم ئۆلچىكى 5x</item>
-    <item>جانلاندۇرۇم ئۆلچىكى 10x</item>
+        <item>جانلاندۇرۇم ئۆلچىكى : .x2</item>
+        <item>جانلاندۇرۇمنى تاقا: .x25</item>
+        <item>جانلاندۇرۇمنى تاقا: .x35</item>
+        <item>جانلاندۇرۇمنى تاقا: .x5</item>
+        <item>جانلاندۇرۇمنى تاقا: .x7</item>
+        <item>جانلاندۇرۇمنى تاقا: .x75</item>
+        <item>جانلاندۇرۇمنى تاقا: x1</item>
+        <item>جانلاندۇرۇمنى تاقا: x1.5</item>
+        <item>جانلاندۇرۇمنى تاقا: x2</item>
+        <item>جانلاندۇرۇمنى تاقا: x5</item>
+        <item>جانلاندۇرۇمنى تاقا: x10</item>
   </string-array>
   <string-array name="transition_animation_scale_entries">
-    <item>جانلاندۇرۇمنى تاقا</item>
-    <item>جانلاندۇرۇم ئۆلچىكى .5x</item>
-    <item>جانلاندۇرۇم ئۆلچىكى 1x</item>
-    <item>جانلاندۇرۇم ئۆلچىكى 1.5x</item>
-    <item>جانلاندۇرۇم ئۆلچىكى 2x</item>
-    <item>جانلاندۇرۇم ئۆلچىكى 5x</item>
-    <item>جانلاندۇرۇم ئۆلچىكى 10x</item>
-  </string-array>
+        <item>جانلاندۇرۇمنى تاقا</item>
+        <item>جانلاندۇرۇم ئۆلچىكى : .x2</item>
+        <item>جانلاندۇرۇمنى تاقا: .x25</item>
+        <item>جانلاندۇرۇمنى تاقا: .x35</item>
+        <item>جانلاندۇرۇمنى تاقا: .x5</item>
+        <item>جانلاندۇرۇمنى تاقا: .x7</item>
+        <item>جانلاندۇرۇمنى تاقا: .x75</item>
+        <item>جانلاندۇرۇمنى تاقا: x1</item>
+        <item>جانلاندۇرۇمنى تاقا: x1.5</item>
+        <item>جانلاندۇرۇمنى تاقا: x2</item>
+        <item>جانلاندۇرۇمنى تاقا: x5</item>
+        <item>جانلاندۇرۇمنى تاقا: x10</item>
+    </string-array>
   <string-array name="animator_duration_scale_entries">
     <item>جانلاندۇرۇمنى تاقا</item>
-    <item>جانلاندۇرۇم ئۆلچىكى .5x</item>
-    <item>جانلاندۇرۇم ئۆلچىكى 1x</item>
-    <item>جانلاندۇرۇم ئۆلچىكى 1.5x</item>
-    <item>جانلاندۇرۇم ئۆلچىكى 2x</item>
-    <item>جانلاندۇرۇم ئۆلچىكى 5x</item>
-    <item>جانلاندۇرۇم ئۆلچىكى 10x</item>
+        <item>جانلاندۇرۇم ئۆلچىكى : .x2</item>
+        <item>جانلاندۇرۇمنى تاقا: .x25</item>
+        <item>جانلاندۇرۇمنى تاقا: .x35</item>
+        <item>جانلاندۇرۇمنى تاقا: .x5</item>
+        <item>جانلاندۇرۇمنى تاقا: .x7</item>
+        <item>جانلاندۇرۇمنى تاقا: .x75</item>
+        <item>جانلاندۇرۇمنى تاقا: x1</item>
+        <item>جانلاندۇرۇمنى تاقا: x1.5</item>
+        <item>جانلاندۇرۇمنى تاقا: x2</item>
+        <item>جانلاندۇرۇمنى تاقا: x5</item>
+        <item>جانلاندۇرۇمنى تاقا: x10</item>
   </string-array>
   <string-array name="overlay_display_devices_entries">
     <item>يوق</item>

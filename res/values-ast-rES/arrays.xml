@@ -442,30 +442,45 @@
   </string-array>
   <string-array name="window_animation_scale_entries">
     <item>Animación desactivada</item>
-    <item>Escala d\'animación 0,5x</item>
-    <item>Escala d\'animación 1x</item>
-    <item>Escala d\'animación 1,5x</item>
-    <item>Escala d\'animación 2x</item>
-    <item>Escala d\'animación 5x</item>
-    <item>Escala d\'animación 10x</item>
+        <item>Escala d\'animación: .2x</item>
+        <item>Escala d\'animación: .25x</item>
+        <item>Escala d\'animación: .35x</item>
+        <item>Escala d\'animación: .5x</item>
+        <item>Escala d\'animación: .7x</item>
+        <item>Escala d\'animación: .75x</item>
+        <item>Escala d\'animación: 1x</item>
+        <item>Escala d\'animación: 1.5x</item>
+        <item>Escala d\'animación: 2x</item>
+        <item>Escala d\'animación: 5x</item>
+        <item>Escala d\'animación: 10x</item>
   </string-array>
   <string-array name="transition_animation_scale_entries">
-    <item>Animación desactivada</item>
-    <item>Escala d\'animación 0,5x</item>
-    <item>Escala d\'animación 1x</item>
-    <item>Escala d\'animación 1,5x</item>
-    <item>Escala d\'animación 2x</item>
-    <item>Escala d\'animación 5x</item>
-    <item>Escala d\'animación 10x</item>
-  </string-array>
+        <item>Animación desactivada</item>
+        <item>Escala d\'animación: .2x</item>
+        <item>Escala d\'animación: .25x</item>
+        <item>Escala d\'animación: .35x</item>
+        <item>Escala d\'animación: .5x</item>
+        <item>Escala d\'animación: .7x</item>
+        <item>Escala d\'animación: .75x</item>
+        <item>Escala d\'animación: 1x</item>
+        <item>Escala d\'animación: 1.5x</item>
+        <item>Escala d\'animación: 2x</item>
+        <item>Escala d\'animación: 5x</item>
+        <item>Escala d\'animación: 10x</item>
+    </string-array>
   <string-array name="animator_duration_scale_entries">
     <item>Animación desactivada</item>
-    <item>Escala d\'animación 0,5x</item>
-    <item>Escala d\'animación 1x</item>
-    <item>Escala d\'animación 1,5x</item>
-    <item>Escala d\'animación 2x</item>
-    <item>Escala d\'animación 5x</item>
-    <item>Escala d\'animación 10x</item>
+        <item>Escala d\'animación: .2x</item>
+        <item>Escala d\'animación: .25x</item>
+        <item>Escala d\'animación: .35x</item>
+        <item>Escala d\'animación: .5x</item>
+        <item>Escala d\'animación: .7x</item>
+        <item>Escala d\'animación: .75x</item>
+        <item>Escala d\'animación: 1x</item>
+        <item>Escala d\'animación: 1.5x</item>
+        <item>Escala d\'animación: 2x</item>
+        <item>Escala d\'animación: 5x</item>
+        <item>Escala d\'animación: 10x</item>
   </string-array>
   <string-array name="overlay_display_devices_entries">
     <item>Nenguna</item>

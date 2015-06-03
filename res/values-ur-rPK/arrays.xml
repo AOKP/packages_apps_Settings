@@ -411,31 +411,45 @@
     <item msgid="45075631231212732">"‏ہمیشہ HDCP چیکنگ استعمال کریں"</item>
   </string-array>
   <string-array name="window_animation_scale_entries">
-    <item msgid="8134156599370824081">"اینیمیشن آف ہے"</item>
-    <item msgid="6624864048416710414">"‏اینیمیشن اسکیل ‎.5x"</item>
-    <item msgid="2219332261255416635">"‏اینیمیشن اسکیل 1x"</item>
-    <item msgid="3544428804137048509">"‏اینیمیشن اسکیل 1.5x"</item>
-    <item msgid="3110710404225974514">"‏اینیمیشن اسکیل 2x"</item>
-    <item msgid="4402738611528318731">"‏اینیمیشن اسکیل 5x"</item>
-    <item msgid="6189539267968330656">"‏اینیمیشن اسکیل 10x"</item>
+    <item>اینیمیشن آف ہے</item>
+        <item>‏اینیمیشن اسکیل: .x2</item>
+        <item>‏اینیمیشن اسکیل: .x25</item>
+        <item>اینیمیشن اسکیل: .x35</item>
+        <item>اینیمیشن اسکیل: .x5</item>
+        <item>اینیمیشن اسکیل: .x7</item>
+        <item>اینیمیشن اسکیل: .x75</item>
+        <item>اینیمیشن اسکیل: x1</item>
+        <item>اینیمیشن اسکیل: x1.5</item>
+        <item>اینیمیشن اسکیل: x2</item>
+        <item>اینیمیشن اسکیل: x5</item>
+        <item>اینیمیشن اسکیل: x10</item>
   </string-array>
   <string-array name="transition_animation_scale_entries">
-    <item msgid="8464255836173039442">"اینیمیشن آف ہے"</item>
-    <item msgid="3375781541913316411">"‏اینیمیشن اسکیل ‎.5x"</item>
-    <item msgid="1991041427801869945">"‏اینیمیشن اسکیل 1x"</item>
-    <item msgid="4012689927622382874">"‏اینیمیشن اسکیل 1.5x"</item>
-    <item msgid="3289156759925947169">"‏اینیمیشن اسکیل 2x"</item>
-    <item msgid="7705857441213621835">"‏اینیمیشن اسکیل 5x"</item>
-    <item msgid="6660750935954853365">"‏اینیمیشن اسکیل 10x"</item>
-  </string-array>
+        <item>‏اینیمیشن اسکیل: .x2</item>
+        <item>‏اینیمیشن اسکیل: .x25</item>
+        <item>اینیمیشن اسکیل: .x35</item>
+        <item>اینیمیشن اسکیل: .x5</item>
+        <item>اینیمیشن اسکیل: .x7</item>
+        <item>اینیمیشن اسکیل: .x75</item>
+        <item>اینیمیشن اسکیل: x1</item>
+        <item>اینیمیشن اسکیل: x1.5</item>
+        <item>اینیمیشن اسکیل: x2</item>
+        <item>اینیمیشن اسکیل: x5</item>
+        <item>اینیمیشن اسکیل: x10</item>
+    </string-array>
   <string-array name="animator_duration_scale_entries">
-    <item msgid="6039901060648228241">"انیمیشن آف ہے"</item>
-    <item msgid="1138649021950863198">"‏انیمیشن اسکیل 5x."</item>
-    <item msgid="4394388961370833040">"‏انیمیشن اسکیل 1x"</item>
-    <item msgid="8125427921655194973">"‏انیمیشن اسکیل 1.5x"</item>
-    <item msgid="3334024790739189573">"‏انیمیشن اسکیل 2x"</item>
-    <item msgid="3170120558236848008">"‏اینیمیشن اسکیل 5x"</item>
-    <item msgid="1069584980746680398">"‏انیمیشن اسکیل 10x"</item>
+    <item>اینیمیشن آف ہے</item>
+        <item>‏اینیمیشن اسکیل: .x2</item>
+        <item>‏اینیمیشن اسکیل: .x25</item>
+        <item>اینیمیشن اسکیل: .x35</item>
+        <item>اینیمیشن اسکیل: .x5</item>
+        <item>اینیمیشن اسکیل: .x7</item>
+        <item>اینیمیشن اسکیل: .x75</item>
+        <item>اینیمیشن اسکیل: x1</item>
+        <item>اینیمیشن اسکیل: x1.5</item>
+        <item>اینیمیشن اسکیل: x2</item>
+        <item>اینیمیشن اسکیل: x5</item>
+        <item>اینیمیشن اسکیل: x10</item>
   </string-array>
   <string-array name="overlay_display_devices_entries">
     <item msgid="1606809880904982133">"کوئی نہیں"</item>

@@ -411,31 +411,46 @@
     <item msgid="45075631231212732">"എല്ലായ്‌പ്പോഴും HDCP പരിശോധന ഉപയോഗിക്കുക"</item>
   </string-array>
   <string-array name="window_animation_scale_entries">
-    <item msgid="8134156599370824081">"ആനിമേഷൻ ഓഫുചെയ്യുക"</item>
-    <item msgid="6624864048416710414">"ആനിമേഷൻ സ്‌കെയിൽ .5x"</item>
-    <item msgid="2219332261255416635">"ആനിമേഷൻ സ്‌കെയിൽ 1x"</item>
-    <item msgid="3544428804137048509">"ആനിമേഷൻ സ്‌കെയിൽ 1.5x"</item>
-    <item msgid="3110710404225974514">"ആനിമേഷൻ സ്‌കെയിൽ 2x"</item>
-    <item msgid="4402738611528318731">"ആനിമേഷൻ സ്‌കെയിൽ 5x"</item>
-    <item msgid="6189539267968330656">"ആനിമേഷൻ സ്‌കെയിൽ 10x"</item>
+    <item>ആനിമേഷൻ ഓഫുചെയ്യുക</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: .2x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: .25x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: .35x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: .5x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: .7x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: .75x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: 1x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: 1.5x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: 2x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: 5x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: 10x</item>
   </string-array>
   <string-array name="transition_animation_scale_entries">
-    <item msgid="8464255836173039442">"ആനിമേഷൻ ഓഫുചെയ്യുക"</item>
-    <item msgid="3375781541913316411">"ആനിമേഷൻ സ്‌കെയിൽ .5x"</item>
-    <item msgid="1991041427801869945">"ആനിമേഷൻ സ്‌കെയിൽ 1x"</item>
-    <item msgid="4012689927622382874">"ആനിമേഷൻ സ്‌കെയിൽ 1.5x"</item>
-    <item msgid="3289156759925947169">"ആനിമേഷൻ സ്‌കെയിൽ 2x"</item>
-    <item msgid="7705857441213621835">"ആനിമേഷൻ സ്‌കെയിൽ 5x"</item>
-    <item msgid="6660750935954853365">"ആനിമേഷൻ സ്‌കെയിൽ 10x"</item>
-  </string-array>
+        <item>ആനിമേഷൻ ഓഫുചെയ്യുക</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: .2x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: .25x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: .35x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: .5x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: .7x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: .75x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: 1x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: 1.5x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: 2x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: 5x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: 10x</item>
+    </string-array>
   <string-array name="animator_duration_scale_entries">
-    <item msgid="6039901060648228241">"ആനിമേഷൻ രഹിതം"</item>
-    <item msgid="1138649021950863198">"ആനിമേഷൻ സ്‌കെയിൽ .5x"</item>
-    <item msgid="4394388961370833040">"ആനിമേഷൻ സ്‌കെയിൽ 1x"</item>
-    <item msgid="8125427921655194973">"ആനിമേഷൻ സ്‌കെയിൽ 1.5x"</item>
-    <item msgid="3334024790739189573">"ആനിമേഷൻ സ്‌കെയിൽ 2x"</item>
-    <item msgid="3170120558236848008">"ആനിമേഷൻ സ്‌കെയിൽ 5x"</item>
-    <item msgid="1069584980746680398">"ആനിമേഷൻ സ്‌കെയിൽ 10x"</item>
+    <item>ആനിമേഷൻ ഓഫുചെയ്യുക</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: .2x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: .25x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: .35x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: .5x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: .7x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: .75x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: 1x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: 1.5x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: 2x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: 5x</item>
+        <item>ആനിമേഷൻ സ്‌കെയിൽ: 10x</item>
   </string-array>
   <string-array name="overlay_display_devices_entries">
     <item msgid="1606809880904982133">"ഒന്നുമില്ല"</item>
