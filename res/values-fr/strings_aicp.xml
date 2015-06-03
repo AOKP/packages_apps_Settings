@@ -716,6 +716,7 @@
     <string name="custom_density_dialog_title">ATTENTION!</string>
     <string name="custom_density_dialog_summary">Modifier les paramètres de densité de l\'écran peut provoquer le dysfonctionnement de certaines applications, et le Play Store peut afficher les applications comme incompatibles avec votre appareil</string>
     <string name="dpi">DPI</string>
+    <string name="restarting_ui">Redémarrage UI\u2026</string>
 
     <!-- Privacy guard notification -->
     <string name="privacy_guard_notification_title">Notification</string>
@@ -964,6 +965,10 @@
     <string name="heads_up_time_out_8sec">8 secondes</string>
     <string name="heads_up_time_out_10sec">10 secondes</string>
     <string name="heads_up_time_out_never">Jamais</string>
+    <string name="heads_up_bg_color_title">Couleur de fond</string>
+    <string name="heads_up_text_color_title">Couleur du texte</string>
+    <string name="heads_up_colors_title">Couleurs personnalisées</string>
+    <string name="heads_up_colors_summary">Personnaliser la couleur du texte et du fond des notifications flottantes</string>
 
     <!-- Heads up touch outside -->
     <string name="heads_up_touch_outside_title">Touchez le comportement extérieur</string>
@@ -1050,5 +1055,70 @@
     <!-- Task Manager -->
     <string name="enable_task_manager_title">Gestionnaire de tâche</string>
     <string name="enable_task_manager_summary">Activer/Désactiver cette action pour le gestionnaire de tache dans la barre d\'état étendu.\nChanging cette option va redémmarer le SystemUI!</string>
+
+    <!-- Status bar ticker -->
+    <string name="status_bar_ticker_title">Téléscripteur de notification</string>
+    <string name="status_bar_ticker_summary">Texte de la notification dans la barre d\'état .</string>
+
+    <!-- Pie control -->
+    <string name="pie_control_title">SlimPIE</string>
+    <string name="pie_control_summary">Activer le contrôle via le Pie</string>
+    <string name="pie_control_size">Taille du Pie</string>
+    <string name="pie_control_trigger_positions">Options de déclenchement</string>
+    <string name="pie_control_trigger_left">Utiliser le bord gauche de l\'écran</string>
+    <string name="pie_control_trigger_bottom">Utiliser le bord inférieur de l\'écran</string>
+    <string name="pie_control_trigger_right">Utiliser le bord droit de l\'écran</string>
+    <string name="pie_control_trigger_top">Utiliser le bord supérieur de l\'écran</string>
+    <string name="pie_control_trigger_top_summary">Le Pie supérieur n\'affiche pas les informations de statut et d\'horloge</string>
+    <string name="pie_button_style">Style des boutons</string>
+    <string name="pie_button_color_title">Couleur des boutons</string>
+    <string name="pie_button_alpha_title">Transparence des boutons</string>
+    <string name="pie_button_outline_color_title">Couleur du contour des boutons</string>
+    <string name="pie_button_pressed_color_title">Couleur du bouton appuyé</string>
+    <string name="pie_button_long_pressed_color_title">Couleur à l\'appui long</string>
+    <string name="pie_button_pressed_alpha_title">Transparence du bouton appuyé</string>
+    <string name="pie_icon_style">Style des icônes des boutons</string>
+    <string name="pie_icon_color_title">Couleur des icônes</string>
+    <string name="pie_icon_color_mode_title">Type des icônes</string>
+    <string name="pie_icon_color_mode_dialog_title">Colorer</string>
+    <string name="pie_icon_color_mode_summary">Modifier la couleur de l\'icône du bouton</string>
+    <string name="pie_trigger_note_title">Note</string>
+    <string name="pie_trigger_note_summary">Pour éviter les conflits avec la barre d\'état ou la barre de navigation, les déclencheurs sur ces bords sont automatiquement désactivés si l\'un d\'eux, ou les deux sont disponibles</string>
+    <string name="pie_background_color_title">Couleur du fond</string>
+    <string name="pie_snap_color_title">Couleur du point d\'ancrage</string>
+    <string name="pie_text_color_title">Couleur du texte</string>
+    <string name="pie_background_alpha_title">Transparence du fond</string>
+    <string name="pie_mirror_right_title">Inverser le pie sur la droite</string>
+    <string name="pie_mirror_right_summary">Inverser le sens des boutons du pie sur le bord droit de l\'écran</string>
+    <string name="pie_style">Style et dimensions</string>
+    <string name="pie_style_title">Style</string>
+    <string name="pie_dimens_title">Dimension</string>
+    <string name="pie_show_snap_title">Afficher les points d\'ancrage</string>
+    <string name="pie_show_snap_summary">Affiche les points d\'ancrage pour changer le côté de déclenchement de manière dynamique</string>
+    <string name="pie_show_text_title">Afficher l\'état et l\'horloge</string>
+    <string name="pie_show_text_summary">Afficher l\'état de l\'appareil, l\'heure et la date</string>
+    <string name="pie_show_background_title">Afficher le fond</string>
+    <string name="pie_show_background_summary">Affiche la couleur de fond à l\'arrière du Pie</string>
+    <string name="pie_button">Boutons</string>
+    <string name="pie_button_second_layer">Boutons de la deuxième couche</string>
+    <string name="pie_button_second_layer_summary">Permet de changer les boutons de la seconde couche</string>
+    <string name="pie_button_style_summary">Permet de changer le style des boutons du Pie</string>
+    <string name="pie_style_reset_message">Réinitialiser les valeurs de style ?</string>
+    <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Supprimer tous les %1$s de la liste désactivera entièrement la deuxième couche du Pie.</string>
+    <string name="icon_color_mode_all_icons">Toutes les icônes</string>
+    <string name="icon_color_mode_system_icons">Icônes système</string>
+    <string name="icon_color_mode_system_custom_icons">Icônes système et perso</string>
+    <string name="pie_disable_ime_triggers_title">Réduction des déclencheurs sur le clavier</string>
+    <string name="pie_disable_ime_triggers_summary">Réduit la taille des déclencheurs droit et gauche si le clavier est actif</string>
+    <string name="pie_trigger_sensitivity_title">Sensibilité du déclencheur</string>
+    <string name="pie_trigger_sensitivity_summary">Réglez la sensibilité du déclenchement du Pie</string>
+    <string name="additional_options_title">Paramètres supplémentaires</string>
+
+    <!-- Navigation bar visibility -->
+    <string name="navigation_menu_default_jb_behavior">Afficher si besoin (Par défaut)</string>
+    <string name="navigation_menu_never_show">Ne jamais afficher</string>
+    <string name="navigation_menu_always_show">Toujours afficher</string>
+    <string name="title_pref_menu_display">Visibilité du bouton Menu</string>
+    <string name="summary_pref_menu_display">Paramètres d\'affichage du bouton Menu</string>
 
 </resources>
