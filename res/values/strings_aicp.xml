@@ -973,10 +973,6 @@
     <string name="heads_up_time_out_8sec">8 seconds</string>
     <string name="heads_up_time_out_10sec">10 seconds</string>
     <string name="heads_up_time_out_never">Never</string>
-    <string name="heads_up_bg_color_title">Background color</string>
-    <string name="heads_up_text_color_title">Text color</string>
-    <string name="heads_up_colors_title">Custom Colors</string>
-    <string name="heads_up_colors_summary">Customize heads up text and background color</string>
 
     <!-- Heads up touch outside -->
     <string name="heads_up_touch_outside_title">Touch outside behavior</string>
