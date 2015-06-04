@@ -16,13 +16,6 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Heads Up Colors -->
-    <PreferenceScreen
-        android:key="heads_up_colors"
-        android:fragment="com.android.settings.aicp.HeadsUpColors"
-        android:title="@string/heads_up_colors_title"
-        android:summary="@string/heads_up_colors_summary" />
-
     <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
         android:key="heads_up_dismiss_on_remove"
         android:title="@string/heads_up_dismiss_on_remove_title"

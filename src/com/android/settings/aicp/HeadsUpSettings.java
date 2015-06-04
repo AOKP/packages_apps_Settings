@@ -25,9 +25,6 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.database.ContentObserver;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.MenuInflater;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -37,7 +34,6 @@ import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceGroup;
 import android.preference.Preference.OnPreferenceChangeListener;
-import android.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.view.Gravity;
@@ -60,8 +56,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 public class HeadsUpSettings extends SettingsPreferenceFragment
         implements BaseSystemSettingSwitchBar.SwitchBarChangeCallback,
@@ -142,7 +136,6 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
 
         mAddDndPref.setOnPreferenceClickListener(this);
         mAddBlacklistPref.setOnPreferenceClickListener(this);
-
     }
 
     @Override
