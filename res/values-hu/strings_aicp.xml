@@ -168,7 +168,6 @@
 
     <!-- Slim settings screens -->
     <string name="header_category_personalization">Személyre szabás</string>
-    <string name="interface_settings_title">Felület</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Szín választó</string>
@@ -201,6 +200,7 @@
     <string name="enable_clock_weekday_summary">Rövidített nap kijelzés az óra előtt</string>
     <string name="right_clock">Óra jobb oldalt</string>
     <string name="center_clock">Óra középen</string>
+    <string name="left_clock">Óra bal oldalt</string>
     <string name="dont_show">Ne mutassa</string>
     <string name="clock_date_display">Dátum</string>
     <string name="clock_date_display_summary">Egyéni dátum kijelzése az óra előtt</string>
@@ -247,6 +247,11 @@
     <string name="double_tap_sleep_title">Dupla kattintásra alvás</string>
     <string name="double_tap_to_sleep_summary">Nézd vagy változtasd meg a dupla kattintásos alvó opciókat</string>
 
+    <!-- Double Tap Navbar to Sleep -->
+    <string name="double_tap_sleep_nav_bar_title">Dupla érintésre alvás</string>
+    <string name="double_tap_sleep_nav_bar_summary">Duplán érintve a navigációs sávot alvó módba kerül</string>
+
+
     <string name="block_on_secure_keyguard_title">Tiltva a zárképernyőn</string>
     <string name="block_on_secure_keyguard_summary">Tiltja a gyors beállításokat a biztonsági zárképernyőn.</string>
 
@@ -273,6 +278,12 @@
     <string name="hfm_dialog_success">/4 hosts források alkalmazása sikeres!</string>
     <string name="hfm_dialog_conn_error">Hiba: Nincs hálózati kapcsolat</string>
     <string name="hfm_dialog_title">Host-ok frissítése folyik</string>
+    <string name="hfm_whitelist_title">Fehér lista</string>
+    <string name="hfm_whitelist_summary">Szövegek (URL részletek) melyek engedélyezik a hírdetés blokkolót</string>
+    <string name="hfm_whitelist_pref_text">Szöveg hozzáadása a fehér listához</string>
+    <string name="hfm_whitelist_pref_button_add">URL hozzáadása</string>
+    <string name="hfm_whitelist_pref_empty">Fehér lista üres</string>
+    <string name="hfm_whitelist_pref_menu_apply">Alkalmazás</string>
 
     <!-- Volume rocker music seek options -->
     <string name="volbtn_music_controls_title">Hangerő zene vezérlés</string>
@@ -285,29 +296,7 @@
     <!-- Notification counter -->
     <string name="status_bar_notif_count_title">Mutassa az értesítés számlálót</string>
     <string name="status_bar_notif_count_summary">Mutassa a függőben lévő értesítések számát</string>
-
-    <!-- Network traffic -->
-    <string name="network_traffic_title">Hálózati forgalom</string>
-    <string name="show_network_traffic_state">Állapot sáv forgalom figyelő</string>
-    <string name="show_network_traffic_unit">Kijelzési egység</string>
-    <string name="show_network_traffic_frequency">Frissítési időköz</string>
-    <string name="show_network_traffic_disable">Tiltva</string>
-    <string name="show_network_traffic_up">Kimenő</string>
-    <string name="show_network_traffic_down">Bejövő</string>
-    <string name="show_network_traffic_all">Kimenő és bejövő</string>
-    <string name="show_network_traffic_bit">Bits per second</string>
-    <string name="show_network_traffic_byte">Bytes per second</string>
-    <string name="show_network_traffic_500">500 ms</string>
-    <string name="show_network_traffic_1000">1000 ms</string>
-    <string name="show_network_traffic_1500">1500 ms</string>
-    <string name="show_network_traffic_2000">2000 ms</string>
-    <string name="network_traffic_autohide">Auto rejtés</string>
-    <string name="network_traffic_autohide_summary">Rejtse el a hálózati figyelőt, ha nincs forgalom</string>
-    <string name="network_traffic_autohide_threshold">Inaktivitási küszöb</string>
-    <string name="network_traffic_color_style">Szín stílus</string>
-    <string name="network_traffic_color_reset">Szín alaphelyzetbe</string>
-    <string name="network_traffic_color_reset_message">Hálózati forgalom színét alaphelyzetbe állítod?</string>
-
+   
     <!--Quick unlock -->
     <string name="unlock_quick_unlock_control_title">Gyors feloldás</string>
     <string name="unlock_quick_unlock_control_summary">Automatikus felodás, ha helyes a PIN/jelszó </string>
@@ -334,6 +323,11 @@
     <string name="shortcut_action_app">Egyéni alkalmazás</string>
     <string name="shortcut_action_home">Kezdőképernyő</string>
     <string name="shortcut_action_back">Vissza</string>
+    <string name="shortcut_action_kill">Alkalmazás kilövése</string>
+    <string name="shortcut_action_lastapp">Utolsó alkalmazás</string>
+    <string name="shortcut_action_assist">Keresés</string>
+    <string name="shortcut_action_screenshot">Képernyőkép</string>
+    <string name="shortcut_action_torch">Zseblámpa</string>
     <string name="shortcut_action_menu">Menü</string>
     <string name="shortcut_action_ime">Billentyűzetváltó megnyítása</string>
     <string name="shortcut_action_power_menu">Power menü</string>
@@ -445,27 +439,6 @@
     <string name="show_unac_and_overcounted_stats_title">Mutassa a hiányzó/túlszámolt statisztikákat</string>
     <string name="show_unac_and_overcounted_stats_summary">Mutassa az akkumulátor statisztikában a hiányzó túlszámolt használatot.</string>
 
-    <!-- Heads up -->
-    <string name="heads_up_title">Felugró értesítések</string>
-    <string name="app_notification_enable_heads_up_title">Mutassa a felugrókat</string>
-    <string name="app_notification_enable_heads_up_summary">Mutassa az alkalmazás értesítését felugróként</string>
-    <string name="heads_up_snooze_title">Szundi ideje</string>
-    <string name="heads_up_snooze_summary">Szundi gombot megnyomva, tiltja a felugrókat <xliff:g id="number">%d</xliff:g> percig</string>
-    <string name="heads_up_snooze_disabled_summary">Szundi idő tiltva</string>
-    <string name="heads_up_snooze_3min">3 perc</string>
-    <string name="heads_up_snooze_5min">5 perc</string>
-    <string name="heads_up_snooze_10min">10 perc</string>
-    <string name="heads_up_snooze_15min">15 perc</string>
-    <string name="heads_up_snooze_20min">20 perc</string>
-    <string name="heads_up_time_out_title">Időtúllépés</string>
-    <string name="heads_up_time_out_summary">Felugró értesítéseket fogja mutatni <xliff:g id="number">%d</xliff:g> mp-ig</string>
-    <string name="heads_up_time_out_never_summary">Felugró értesítéseket elutasításig fogja mutatni</string>
-    <string name="heads_up_time_out_4sec">4 mp</string>
-    <string name="heads_up_time_out_6sec">6 mp</string>
-    <string name="heads_up_time_out_8sec">8 mp</string>
-    <string name="heads_up_time_out_10sec">10 mp</string>
-    <string name="heads_up_time_out_never">Soha</string>
-
     <!-- Gesture Anywhere -->
     <string name="gesture_anywhere_title">Gesztusok Bárhol</string>
     <string name="gesture_anywhere_enabled_title">Gesztus Bárhol</string>
@@ -550,10 +523,6 @@
     <string name="listview_overshoot_interpolator">Túllövés</string>
     <string name="listview_anticipate_overshoot_interpolator">Előre hoz és túllövés</string>
     <string name="listview_bounce_interpolator">Visszapattanó</string>
-
-    <!-- Battery saver -->
-    <string name="battery_saver_title">Figyelmeztető szín</string>
-    <string name="battery_saver_style_reset_message">Alaphelyzetbe állítod az akksi kimélő figyelmeztető színt?</string>
 
     <!-- Lock Gesture settings -->
     <!-- Security & location settings screen, setting option name -->
@@ -669,19 +638,32 @@
     <string name="volume_steps_15">15</string>
     <string name="volume_steps_7">7</string>
     <string name="volume_steps_5">5</string>
-
-    <!-- Camera lockscreen swipe -->
-    <string name="camera_widget_hide">Zárképernyő kamera tiltása</string>
-    <string name="camera_widget_hide_summary">Lehetővé teszi, hogy tiltsa a zárképernyőn a kamera elhúzását.</string>
-
-    <!-- Dialer lockscreen swipe -->
-    <string name="dialer_widget_hide">Zárképernyő tárcsázó tiltása</string>
-    <string name="dialer_widget_hide_summary">Lehetővé teszi, hogy tiltsa a zárképernyőn a tárcsázó elhúzását.\n<b>RendszerUI újra fog indulni.</b></string>
-
+    
     <!-- Lockscreen weather -->
-    <string name="lockscreen_weather_title">Zárképernyő időjárás</string>
-    <string name="lockscreen_weather_summary">RendszerUI újra indul!</string>
-
+    <string name="lock_screen_weather_settings_title">Zárképernyő időjárás</string>
+    <string name="lock_screen_colors_title">Zárképernyő színek</string>
+    <string name="lock_screen_color_settings_summary">Színek testreszabása</string>
+    <string name="weather_show_weather_title">Időjárás mutatása</string>
+    <string name="weather_show_weather_summary">Engedélyezve mutatja az időjárás információkat</string>
+    <string name="weather_show_location_title">Hely mutatása</string>
+    <string name="weather_show_location_summary">Engedélyezve mutatja a helyet</string>
+    <string name="weather_show_timestamp_title">Időbélyeg mutatása</string>
+    <string name="weather_show_timestamp_summary">Engedélyezve mutatja az időbélyeget</string>
+    <string name="weather_condition_icon_title">Állapot ikon</string>
+    <string name="weather_condition_icon_dlg_title">Válassz ikont az időjárás állapot megjelenítéséhez</string>
+    <string name="weather_condition_icon_monochrome_title">Egyszínű</string>
+    <string name="weather_condition_icon_colored_title">Színezett</string>
+    <string name="weather_condition_icon_vclouds_title">VClouds</string>
+    <string name="weather_colorize_all_icons_title">Összes ikon átszínezése</string>
+    <string name="weather_colorize_all_icons_summary">Engedélyezve átszínezi az összes ikont, tiltva csak egyszínűek az ikonok</string>
+    <string name="icons_title">Ikonok</string>
+    <string name="position_right_title">Jobb</string>
+    <string name="position_centered_title">Középen</string>
+    <string name="hidden_title">Rejtve</string>
+    <string name="dlg_reset_values_message">Visszaállítod az értékeket\nAndroid- vagy AICP alapértelemzésre?</string>
+    <string name="dlg_reset_android">Android</string>
+    <string name="dlg_reset_aicp">AICP</string>
+    
     <!-- Battery Bar -->
     <string name="battery_bar_title">Akkumulátor Sáv</string>
     <string name="battery_bar">Akkumulátor Sáv helye</string>
@@ -712,10 +694,14 @@
     <string name="recents_clear_all_location_bottom_right">Jobb alul</string>
     <string name="recents_clear_all_location_bottom_left">Bal alul</string>
     <string name="recents_clear_all_location_bottom_center">Középen alul</string>
-    <string name="omniswitch_settings_title">OmniSwitch</string>
-
+    <string name="recents_clear_all_dismiss_all_title">Összes feladat törlése</string>
+    <string name="recents_clear_all_dismiss_all_summary">Válaszd ki, hogy elutasítsd vagy figyelmen kivül hagyd a futó feladatokat</string>
+    <string name="recents_show_membar_title">Memória sáv</string>
+    <string name="recents_show_membar_summary">Mutassa az eszköz által elérhető memóriát egy sávon</string>
+   
     <!-- OmniSwitch -->
     <string name="omniswitch_category">OmniSwitch</string>
+    <string name="omniswitch_settings_title">OmniSwitch</string>
     <string name="recents_use_omniswitch_title">Használja legutóbbiként</string>
     <string name="recents_use_omniswitch_summary">Használja az OmniSwitch-et a legutóbbi nézet helyett</string>
     <string name="omniswitch_start_settings_title">Beállítások</string>
@@ -738,6 +724,7 @@
     <string name="custom_density_dialog_title">FIGYELMEZTETÉS!</string>
     <string name="custom_density_dialog_summary">Alapértelmezett felbontás megváltoztatásával bizonyos alkalmazások nem mükődnek megfelelően és/vagy a Play nem kompatibilis eszköznek mutatja"</string>
     <string name="dpi">DPI</string>
+    <string name="restarting_ui">UI újraindítása\u2026</string>
 
     <!-- Privacy guard notification -->
     <string name="privacy_guard_notification_title">Értesítés</string>
@@ -774,18 +761,395 @@
     <string name="error_creating_preview">Hiba az előnézet készítésénél</string>
     <string name="install_file_manager_error">Nincs alkalmazás amivel megtalálod a zip fájlt. Telepíts egy fájlkezelőt.</string>
     <string name="apply">Alkalmaz</string>
-
-    <!-- Doze options -->
-    <string name="display_category_doze_options_title">Környezeti kijelző (szendergés) opciók</string>
-    <string name="doze_timeout_title">Szendergés impulzus késleltetése</string>
-    <string name="doze_timeout_summary">Idő ameddig a képernyőn marad az értesítési impulzus</string>
-    <string name="doze_trigger_motion_title">Szendergés KapcsolóÉrzékelő</string>
-    <string name="doze_trigger_motion_summary_on">Szendergés impulzusát kiváltja felvételi gesztus/jelentős mozgás érzékelés és értesítések</string>
-    <string name="doze_trigger_motion_summary_off">Szendergés impulzusát csak értesítés váltja ki</string>
-
+    
     <!-- QuickSettings tiles -->
     <string name="qs_screenshot_tile">Képernyőkép</string>
+    <string name="qs_screenrecord_tile">Képernyőfelvétel</string>
     <string name="qs_sync_tile">Szinkronizálás</string>
+    <string name="qs_tile_powermenu">Kikapcsolási Menü</string>
+    <string name="qs_battery_saver_tile">Akkumulátor kimélő</string>
+    <string name="qs_brightness_tile">Fényerő</string>
+    <string name="qs_expanded_desktop_tile">Kiterjesztett képernyő</string>
+    <string name="qs_notifications_tile">Értesítések</string>
+    <string name="qs_screen_off_tile">Kéernyő ki</string>
+    <string name="qs_ambient_display_tile">Környezeti kijelző</string>
 
+    <!-- QuickSettings collapse panel -->
+    <string name="quick_settings_collapse_title">Panel auto zárás</string>
+    <string name="quick_settings_collapse_summary">Gyors Beállítás panel bezárása kapcsolóval</string>
+
+    <!-- QuickSettings 4 columns -->
+    <string name="qs_four_columns_title">4 csempe soronként</string>
+
+    <!-- QuickSettings colors -->
+    <string name="background_title">Háttér</string>
+    <string name="icon_title">Ikon</string>
+    <string name="qs_colors_title">Egyéni szín opciók</string>
+    <string name="reset_android">Android</string>
+    <string name="reset_swag">Swag</string>
+    <string name="colors_title">Színek</string>
+    <string name="text_title">Szöveg</string>
+    <string name="qs_transparent_shade_title">Alfa árnyék</string>
+    <string name="qs_transparent_shade_summary">Alkalmazza a szín kezdeti értékét és teszi az értesítéseket áttetszővé.</string>
+    <string name="qs_color_switch_title">Egyéni szín váltás</string>
+    <string name="qs_color_switch_summary">Váltás a különböző egyéni szín beállítások közt a gyorsbeállításoknál</string>
+
+    <!-- Navigation bar button color -->
+    <string name="navbar_button_tint_title">Navigációs gomb árnyalat</string>
+
+    <!-- AOKP custom system animations -->
+    <string name="aokp_animation_title">Rendszer animációk</string>
+    <string name="aokp_animation_summary">AOKP saját animáció</string>
+    <string name="activity_open_title">Művelet nyító animáció</string>
+    <string name="activity_close_title">Művelet záró animáció</string>
+    <string name="task_open_title">Feladat nyító animáció</string>
+    <string name="task_close_title">Feladat záró animáció</string>
+    <string name="task_move_to_front_title">Előtérbe hozó animáció</string>
+    <string name="task_move_to_back_title">Háttérbe tévő animáció</string>
+    <string name="wallpaper_open_title">Háttérkép nyító animáció</string>
+    <string name="wallpaper_close_title">Háttérkép záró animáció</string>
+    <string name="wallpaper_intra_open_title">Háttérképen belüli nyító animáció</string>
+    <string name="wallpaper_intra_close_title">Háttérképen belüli záró animáció</string>
+    <string name="task_open_behind_title">Feladat megnyítás mögötti animáció</string>
+    <string name="animation_duration_title">Animáció időtartama</string>
+    <string name="animation_duration_default">Alapértelmezett</string>
+ <!-- The volume key answer -->
+    <string name="volume_answer_call_title">Hangerő gomb válasz</string>
+    <string name="volume_answer_call_summary">Válasz a hangerő gomb felre</string>
+
+    <!-- Doze pulse (ambient display) options -->
+    <string name="doze_overwrite_value_title">Érték felülírása</string>
+    <string name="doze_overwrite_value_summary">Engedélyezi az alapértelmezett érték felülírását a felhasználó által</string>
+
+    <string name="doze_list_mode_title">Szendergés mód</string>
+    <string name="doze_list_mode_summary">Szendergő mód beállítási opciók</string>
+
+    <string name="doze_pulse_title">Idő beállítások</string>
+    <string name="doze_pulse_duration_in_title">Halványul</string>
+    <string name="doze_pulse_duration_in_summary"></string>
+
+    <string name="doze_pulse_duration_visible_title">Láthatósági időtartam</string>
+    <string name="doze_pulse_duration_visible_summary"></string>
+
+    <string name="doze_pulse_duration_out_title">Átúsztatás</string>
+    <string name="doze_pulse_duration_out_summary"></string>
+
+    <string name="doze_pulse_on_notifications_title">Szendergés impulzusa</string>
+    <string name="doze_pulse_on_notifications_summary">Képernyő lüktet értesítés érkezésekor</string>
+
+    <string name="doze_shake_title">Rázó beállítások</string>
+    <string name="doze_shake_mode_title">Rázó mód</string>
+    <string name="doze_shake_mode_summary">Rázó szenzor értékének használata művelet váltásához</string>
+    <string name="doze_shake_mode_test_summary">Tesztelni akarod rázó szenzort?</string>
+    <string name="doze_shake_mode_test_result">Alkalmazod az értéket?</string>
+    <string name="doze_shake_test">Rázd meg az eszközt</string>
+    <string name="doze_shake_it">Rázás érzékelve!</string>
+
+    <string name="doze_shake_acc_threshold_title">Rázási küszöb</string>
+    <string name="doze_shake_acc_threshold_summary">Konfigurálja a rázás erősségét ami a művelet váltásához szükséges</string>
+
+    <string name="doze_time_mode_title">Óra és dátum mutatása</string>
+    <string name="doze_time_mode_summary">Idő kényszerített mutatása, ha nincs értesítés</string>
+
+    <string name="twohundred_ms">200 ms</string>
+    <string name="fivehundred_ms">500 ms</string>
+    <string name="one_second">1 s</string>
+    <string name="one_second_default">1 s (alapértelmezett)</string>
+    <string name="onehalf_second">1.5 s</string>
+    <string name="two_second">2 s</string>
+    <string name="twohalf_second">2.5 s</string>
+    <string name="three_second">3 s</string>
+    <string name="three_second_default">3 s (alapértelmezett)</string>
+    <string name="threehalf_second">3.5 s</string>
+    <string name="four_second">4 s</string>
+    <string name="fourhalf_second">4.5 s</string>
+    <string name="five_second">5 s</string>
+
+    <string name="veryeasy_shake">Nagyon könnyű</string>
+    <string name="easy_shake">Könnyű</string>
+    <string name="medium_shake">Alapértelmezett</string>
+    <string name="hard_shake">Nehéz</string>
+    <string name="veryhard_shake">Nagyon nehéz</string>
+    <string name="strong_shake">Erős</string>
+
+    <string name="fully_mode">Teljes mód</string>
+    <string name="pocket_shake_mode">Zseb és rázás</string>
+    <string name="pocket_pulse_mode">Zseb és lüktetés</string>
+    <string name="pocket_only_mode">Zseb</string>
+    <string name="shake_pulse_mode">Rázás és lüktetés</string>
+    <string name="pulse_only_mode">Lüktetés (alapértelmezett)</string>
+
+    <!-- Show carrier label and custom -->
+    <string name="carrier_options">Szolgáltatói felírat</string>
+    <string name="show_status_bar_carrier_title">Állapot sáv szolgáltató</string>
+    <string name="show_status_bar_carrier_summary">Mutassa a szolgáltatót az állapot sávon</string>
+    <string name="custom_carrier_label_title">Egyéni szolgálatói felírat</string>
+    <string name="custom_carrier_label_explain">Add meg az új felíratot. Üresen hagyva visszaáll a gyári felíratra.</string>
+    <string name="custom_carrier_label_notset">Egyéni felírat jelenleg nincs beállítva</string>
+    <string name="status_bar_carrier_color">Szolgáltatói felírat színe</string>
+
+    <!-- Statusbar AICP logo -->
+    <string name="status_bar_aicp_logo_title">AICP logo</string>
+    <string name="status_bar_aicp_logo_summary">Engedélyezi az AICP logót az állapot sáv baloldalán</string>
+    <string name="status_bar_aicp_logo_color">AICP logo színe</string>
+    
+    <!-- Data activity icons -->
+    <string name="status_bar_show_network_activity_title">Hálóztai aktívitási nyílak</string>
+
+    <!-- Volume pane timeout -->
+    <string name="volume_panel_time_out_title">Hangerő panel késleltetése</string>
+    <string name="volume_panel_time_out_summary">Eltünteti <xliff:g id="number">%d</xliff:g> másodperc alatt. Automatikusan eltünteti, ha rajta kivül érinti meg</string>
+    <string name="volume_panel_time_out_1.5sec">1 és fél mp</string>
+    <string name="volume_panel_time_out_3sec">3 mp (alapértelmezett)</string>
+    <string name="volume_panel_time_out_5sec">5 mp</string>
+    <string name="volume_panel_time_out_8sec">8 mp</string>
+    <string name="volume_panel_time_out_12sec">12 mp</string>
+    <string name="volume_panel_time_out_15sec">15 mp</string>
+
+    <!-- long press back to kill configurable timeout -->
+    <string name="kill_app_longpress_timeout_title">Hosszannyomás késleltetése</string>
+    <string name="timeout_2000">2 mp (alapértelmezett)</string>
+    <string name="timeout_1500">1 és fél mp</string>
+    <string name="timeout_1000">1 mp</string>
+    <string name="timeout_750">0.75 mp</string>
+    <string name="timeout_500">0.5 mp</string>
+
+    <!-- Status bar greeting -->
+    <string name="status_bar_greeting_category_title">Állapot sáv üdvözlet</string>
+    <string name="status_bar_greeting_title">Üdvözlet</string>
+    <string name="status_bar_greeting_summary">Egyéni üdvözlet megjelenítése a készülék feloldása után</string>
+    <string name="status_bar_greeting_dialog">Üdvözlet beállítása</string>
+    <string name="status_bar_greeting_main">Felvillan!!!</string>
+    <string name="status_bar_greeting_timeout_title">Üdvözlés késleltetése</string>
+
+    <!-- Force expand notifications -->
+    <string name="notification_force_expand_title">Kényszerített kiterjesztett értesítések</string>
+    <string name="notification_force_expand_summary">Kényszerített kiterjesztett értesítések azoknál az alkalmazásoknál amelyek támogatják</string>
+
+    <!-- Slim Shortcuts -->
+    <string name="slim_shortcut_picker">Slim Műveletek</string>
+    <string name="qs_tile_slimaction">SlimMűvelet</string>
+    <string name="qs_slim_action_summary">Add meg és állítsd be a SlimMűvelet sorrendjét a SlimMűveletek csempén</string>
+    <string name="qs_slim_action_title">SlimMűveletek</string>
+
+    <!-- Long press on lock screen lock icon to sleep -->
+    <string name="longpress_lock_icon_to_sleep_title">Alszik hosszan nyomva a zár ikonra</string>
+    <string name="longpress_lock_icon_to_sleep_summary">Ez a funkció nem működik együtt a smart lock és a közelítő érintés felderítéssel</string>
+
+    <!-- Wakelock blocker -->
+    <string name="wakelock_blocker_title">Ébrentartás blokkoló</string>
+    <string name="wakelock_blocker_summary">Blokkolja a rendszer ébrentartását</string>
+    <string name="wakelock_blocker_save">Mentés</string>
+    <string name="wakelock_list_header">Elérhető ébrentartások</string>
+    <string name="wakelock_blocker_reload">Újratöltés</string>
+    <string name="wakelock_blocker_warning_title">Óvatosan alkalmazd</string>
+    <string name="wakelock_blocker_warning">Ébrentartások blokkolása instabilitással, összeomlással és adatvesztéssel járhat</string>
+
+
+
+    <!-- Heads up -->
+    <string name="category_heads_up">Felugró értesítések</string>
+    <string name="summary_heads_up_enabled">Felugró értesítések engedélyezve</string>
+    <string name="summary_heads_up_disabled">Felugró értesítések tiltve</string>
+    <string name="add_heads_up_package">Alkalmazás hozzáadás</string>
+    <string name="add_heads_up_dnd_summary">Ne mutasson felugró értesítéseket ezekben az alkalmazásokban</string>
+    <string name="add_heads_up_blacklist_summary">Ne mutasson felugró értesítéseket ezektől az alkalmazásoktól</string>
+    <string name="heads_up_dnd_title">Ne zavarjanak</string>
+    <string name="heads_up_blacklist_title">Feketelista</string>
+    <string name="heads_up_disabled_notice">Engedélyezi alkalmazásoknak, hogy interaktiv értesítéseket jelenítsenek meg felugró ablakban, engedélyezi a Felugró értesítéseket</string>
+    <string name="heads_up_dismiss_on_remove_title">Söprési viselkedés</string>
+    <string name="heads_up_dismiss_on_remove_summary_enabled">Értesítés elrejtése elutasítás helyett</string>
+    <string name="heads_up_dismiss_on_remove_summary_disabled">Rejti és elutasítja az értesítést</string>
+
+    <!-- Heads up timeout -->
+    <string name="heads_up_time_out_title">Időtúllépés</string>
+    <string name="heads_up_time_out_summary">Felugró értesítéseket fogja mutatni <xliff:g id="number">%d</xliff:g> mp-ig</string>
+    <string name="heads_up_time_out_never_summary">Értesítés mutatása elutasításig</string>
+    <string name="heads_up_time_out_2sec">2 mp</string>
+    <string name="heads_up_time_out_3sec">3 mp</string>
+    <string name="heads_up_time_out_5sec">5 mp</string>
+    <string name="heads_up_time_out_4sec">4 mp</string>
+    <string name="heads_up_time_out_6sec">6 mp</string>
+    <string name="heads_up_time_out_8sec">8 mp</string>
+    <string name="heads_up_time_out_10sec">10 mp</string>
+    <string name="heads_up_time_out_never">Soha</string>
+    <string name="heads_up_bg_color_title">Háttér színe</string>
+    <string name="heads_up_text_color_title">Szöveg szín</string>
+    <string name="heads_up_colors_title">Egyéni színek</string>
+    <string name="heads_up_colors_summary">Felugró üzenetek szöveg és háttér színének testreszabása</string>
+
+
+    <!-- Heads up touch outside -->
+    <string name="heads_up_touch_outside_title">Külső érintés viselkedése</string>
+    <string name="heads_up_touch_outside_summary_enabled">Értesítés rejtése, ha azon kivül érinted meg vagy nyommod a kezdőlap gombot</string>
+    <string name="heads_up_touch_outside_summary_disabled">Ne rejtse el az értesítést, ha azon kivül érinted meg vagy nyomod meg a kezdőlap gombot</string>
+
+    <!-- Heads up snooze -->
+    <string name="heads_up_snooze_title">Szundi ideje</string>
+    <string name="heads_up_snooze_summary">Söprés felfelé a felugró értesítésen szundi <xliff:g id="number">%d</xliff:g> percig</string>
+    <string name="heads_up_snooze_disabled_summary">Szundi idő tiltva</string>
+    <string name="heads_up_snooze_1min">1 perc</string>
+    <string name="heads_up_snooze_3min">3 perc</string>
+    <string name="heads_up_snooze_5min">5 perc</string>
+    <string name="heads_up_snooze_10min">10 perc</string>
+    <string name="heads_up_snooze_15min">15 perc</string>
+    <string name="heads_up_snooze_20min">20 perc</string>
+
+    <!-- UI debug setting: show CPU info? [CHAR LIMIT=25] -->
+    <string name="show_cpu_info">CPU info mutatása</string>
+    <!-- UI debug setting: show cpu usage summary [CHAR LIMIT=50] -->
+    <string name="show_cpu_info_summary">Képernyőn mutatja az aktuális CPU infókat</string>
+
+    <!-- QuickSettings haptic feedback -->
+    <string name="quick_settings_vibrate_title">Érintésre rezeg</string>
+    <string name="quick_settings_vibrate_summary">Rezeg a csempék érintésekor</string>
+
+    <!-- Nfc settings -->
+    <string name="nfc_polling_mode_title">NFC lekérdezési mód</string>
+    <string name="nfc_polling_mode_screen_off">Képernyő ki</string>
+    <string name="nfc_polling_mode_screen_locked">Képernyő be, zárolva</string>
+    <string name="nfc_polling_mode_screen_unlocked">Képernyő be, nyitva (alapértelmezett)</string>
+
+    <!-- Network traffic -->
+    <string name="network_traffic_vector_title">Hálózati forgalom</string>
+    <string name="network_traffic_vector_summary">Engedélyezi a különféle hálózati forgalom beállításokat az állapotsávon</string>
+    <string name="show_network_traffic_disable">Tiltva</string>
+    <string name="show_network_traffic_meter">Méter</string>
+    <string name="show_network_traffic_text">Szöveg</string>
+    <string name="show_network_traffic_both">Együtt</string>
+    <string name="show_network_traffic_display">Állapotsáv forgalom kijelzés</string>
+    <string name="show_network_traffic_monitor">Állapotsáv forgalom felügyelet</string>
+    <string name="show_network_traffic_unit">Kijelzési egység</string>
+    <string name="show_network_traffic_frequency">Frissítési időköz</string>
+    <string name="show_network_traffic_up">Kimenő</string>
+    <string name="show_network_traffic_down">Bejövő</string>
+    <string name="show_network_traffic_all">Kimenő és Bejövő</string>
+    <string name="show_network_traffic_500">500 ms</string>
+    <string name="show_network_traffic_1000">1000 ms</string>
+    <string name="show_network_traffic_1500">1500 ms</string>
+    <string name="show_network_traffic_2000">2000 ms</string>
+    <string name="show_network_traffic_2500">2500 ms</string>
+    <string name="show_network_traffic_3000">3000 ms</string>
+    <string name="show_network_traffic_bit">Bits per second</string>
+    <string name="show_network_traffic_byte">Bytes per second</string>
+    <string name="network_traffic_autohide">Auto rejtés</string>
+    <string name="network_traffic_autohide_summary">Rejti a hálózati forgalom felügyeletet, ha nincs aktivítás</string>
+    <string name="network_traffic_autohide_threshold">Inaktivítási időköz</string>
+    <string name="network_traffic_color_style">Szöveg szín stílus</string>
+    <string name="network_traffic_color_reset">Szín alaphelyzetbe</string>
+    <string name="network_traffic_color_reset_message">Hálózati forgalom színeit alaphelyzetbe állítod?</string>
+
+    <!-- Battery saver -->
+    <string name="battery_saver_title">Figyelmeztető szín</string>
+    <string name="battery_saver_style_reset_message">Alaphelyzetbe az akkumulátor kimélő színeit?</string>
+
+    <!-- Partition Info -->
+    <string name="partition_info_title">Partíció info</string>
+    <string name="partition_info_system">/system</string>
+    <string name="partition_info_data">/data</string>
+    <string name="partition_info_cache">/cache</string>
+    <string name="partition_info_sdcard">/sdcard (FAT)</string>
+    <string name="partition_info_sdext">/sd-ext (EXT)</string>
+    <string name="partition_info_used_of">/</string>
+
+    <string name="storage_options_category">Figyelmeztetések</string>
+    <string name="storage_menu_options">Haladó</string>
+    <string name="storage_title_options">Tárolási lehetőségek</string>
+    <string name="no_media_notification_title">Tároló eltávolítás figyelmeztetés</string>
+    <string name="no_media_notification_summary">Értesítés mutatása, ha a tároló média eltávolítva</string>
+    <string name="mount_notification_title">Csatolási értesítés</string>
+    <string name="mount_notification_summary">Értesítés kijelzése tároló csatolásánál</string>
+
+    <!-- Calibration Control under Display-Advanced -->
+    <string name="calibration_control_title">Kalibrálás vezérlés</string>
+    <string name="calibration_control_summary">Érintő képernyő kalibrálásának bekapcsolása</string>
+
+    <!-- Clear button color -->
+    <string name="clear_all_color_title">Összes ikon szín törlése</string>
+    <string name="notification_drawer_clear_all_icon_color_title">Ikon</string>
+
+    <!-- Task Manager -->
+    <string name="enable_task_manager_title">Feladat kezelő</string>
+    <string name="enable_task_manager_summary">Engedélyezi/Tiltja a feladat kezelő gombot a kiterjesztett állapotsáv területen.\nVáltoztatása a RendszerUI újraindításával jár!</string>
+
+    <!-- Status bar ticker -->
+    <string name="status_bar_ticker_title">Értesítési címke</string>
+    <string name="status_bar_ticker_summary">Értesítési szöveg görgetése az állapot sávon.</string>
+
+    <!-- Pie control -->
+    <string name="pie_control_title">SlimPIE</string>
+    <string name="pie_control_summary">PIE engedélyezése a képernyőn</string>
+    <string name="pie_control_size">Navigációs méret</string>
+    <string name="pie_control_trigger_positions">Indítóopciók</string>
+    <string name="pie_control_trigger_left">Indító a bal oldalon</string>
+    <string name="pie_control_trigger_bottom">Indító a képernyő alján</string>
+    <string name="pie_control_trigger_right">Indító a jobb oladalon</string>
+    <string name="pie_control_trigger_top">Indító a képernyő tetején</string>
+    <string name="pie_control_trigger_top_summary">PIE tetején nem mutatja az állapot és óra információkat</string>
+    <string name="pie_button_style">Gomb stílus</string>
+    <string name="pie_button_color_title">Gomb szín</string>
+    <string name="pie_button_alpha_title">Gombn áttetszőssége</string>
+    <string name="pie_button_outline_color_title">Gomb külső színe</string>
+    <string name="pie_button_pressed_color_title">Gomb nyomva szín</string>
+    <string name="pie_button_long_pressed_color_title">Gomb hosszan nyomva szín</string>
+    <string name="pie_button_pressed_alpha_title">Gomb nyomva áttetszőssége</string>
+    <string name="pie_icon_style">Gomb ikon stílusa</string>
+    <string name="pie_icon_color_title">Gomb ikon színe</string>
+    <string name="pie_icon_color_mode_title">Gomb ikon szín módja</string>
+    <string name="pie_icon_color_mode_dialog_title">Színezés</string>
+    <string name="pie_icon_color_mode_summary">Változtasd meg a gomb ikon szín módját</string>
+    <string name="pie_trigger_note_title">Jegyzet</string>
+    <string name="pie_trigger_note_summary">Az állapot sáv és navigációs sáv ütközésének elkerülésének érdekében azokon az éleken automatikusan kikapcsolja, ha az egyik vagy mindkettő elérhető</string>
+    <string name="pie_background_color_title">Háttér színe</string>
+    <string name="pie_snap_color_title">Fogó pont színe</string>
+    <string name="pie_text_color_title">Szöveg színe</string>
+    <string name="pie_background_alpha_title">Háttér áttetszőssége</string>
+    <string name="pie_mirror_right_title">Pie jobb tükrözése</string>
+    <string name="pie_mirror_right_summary">PIE tükrözése a vízszintes tengelyen</string>
+    <string name="pie_style">Stílus és dimenzió</string>
+    <string name="pie_style_title">Stílus</string>
+    <string name="pie_dimens_title">Dimenzió</string>
+    <string name="pie_additional_options">További opciók</string>
+    <string name="pie_show_snap_title">Fogó pont mutatása</string>
+    <string name="pie_show_snap_summary">Fogó pont mutatása az indító szélének dinamikus változásakor</string>
+    <string name="pie_show_text_title">Állapot és óra mutatása</string>
+    <string name="pie_show_text_summary">Telefon állapot, dátum és óra kijelzése</string>
+    <string name="pie_show_background_title">Háttér mutatása</string>
+    <string name="pie_show_background_summary">PIE képernyő háttér engedélyezése</string>
+    <string name="pie_button">Gombok</string>
+    <string name="pie_button_second_layer">Gombok második rétege</string>
+    <string name="pie_button_second_layer_summary">Változtasd meg a gombok második rétegét</string>
+    <string name="pie_button_style_summary">PIE gomb stílus változtatás</string>
+    <string name="pie_style_reset_message">Stílus értékek alaphelyzetbe?</string>
+    <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Eltávolít minden %1$s listában tiltott második pie réteg bejegyzést.</string>
+    <string name="icon_color_mode_all_icons">Összes ikon</string>
+    <string name="icon_color_mode_system_icons">Rendszer ikonok</string>
+    <string name="icon_color_mode_system_custom_icons">Rendszer és egyéni ikonok</string>
+    <string name="pie_disable_ime_triggers_title">Indító méretének csökkentése a billentyűzeten</string>
+    <string name="pie_disable_ime_triggers_summary">Csökkenti az indító méretét a jobb és bal oldalon, ha a billentyűzet aktív</string>
+    <string name="pie_trigger_sensitivity_title">Indító érzékenysége"</string>
+    <string name="pie_trigger_sensitivity_summary">Indító érzékenységének beállítása</string>
+    <string name="additional_options_title">További opciók</string>
+
+    <!-- Navigation bar visibility -->
+    <string name="navigation_menu_default_jb_behavior">Kérés mutatása (alapértelmezett)</string>
+    <string name="navigation_menu_never_show">Soha ne mutassa</string>
+    <string name="navigation_menu_always_show">Mindig mutassa</string>
+    <string name="title_pref_menu_display">Menü láthatósága</string>
+    <string name="summary_pref_menu_display">Hogyan és mikor jelenjen meg a menü gomb?</string>
+
+    <!-- Disable torch when screen goes off -->
+    <string name="torch_category_title">Torch</string>
+    <string name="disable_torch_screen_off_title">Zseblámpa tiltása a képernyő kikapcsolásakor</string>
+    <string name="disable_torch_screen_off_delay_title">Késleltetés</string>
+    <string name="torch_screen_off_one_second">1 mp</string>
+    <string name="torch_screen_off_ten_second">10 mp (alapértelmezett)</string>
+    <string name="torch_screen_off_thirty_second">30 mp</string>
+    <string name="torch_screen_off_one_minute">1 perc</string>
+    <string name="torch_screen_off_five_minutes">5 perc</string>
+    <string name="torch_screen_off_ten_minutes">10 perc</string>
+
+    <!-- Enable power menu -->
+    <string name="lockscreen_enable_power_menu_title">Kikapcsolási menü a zárképernyőn</string>
 
 </resources>
