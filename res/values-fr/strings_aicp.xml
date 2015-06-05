@@ -887,7 +887,7 @@
     <!-- Statusbar AICP logo -->
     <string name="status_bar_aicp_logo_title">Logo AICP</string>
     <string name="status_bar_aicp_logo_summary">Activer pour voir le logo AICP sur le côté gauche de la barre de statut</string>
-    <string name="status_bar_aicp_logo_color">AICP logo color</string>
+    <string name="status_bar_aicp_logo_color">Couleur du logo AICP</string>
 
     <!-- Data activity icons -->
     <string name="status_bar_show_network_activity_title">Flèches d\'activités du réseau</string>
