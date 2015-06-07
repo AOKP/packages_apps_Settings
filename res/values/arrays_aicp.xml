@@ -1086,4 +1086,29 @@ limitations under the License.
         <item>600</item>
     </string-array>
 
+    <!-- Recent panel -->
+    <string-array name="recent_panel_scale_entries">
+        <item>@string/recent_panel_100</item>
+        <item>@string/recent_panel_85</item>
+        <item>@string/recent_panel_70</item>
+    </string-array>
+
+    <string-array name="recent_panel_scale_values" translatable="false">
+        <item>100</item>
+        <item>85</item>
+        <item>70</item>
+    </string-array>
+
+    <string-array name="recent_panel_expanded_mode_entries">
+        <item>@string/recent_panel_expanded_mode_auto</item>
+        <item>@string/recent_panel_expanded_mode_always</item>
+        <item>@string/recent_panel_expanded_mode_never</item>
+    </string-array>
+
+    <string-array name="recent_panel_expanded_mode_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
 </resources>

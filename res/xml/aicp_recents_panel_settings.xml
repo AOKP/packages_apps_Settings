@@ -66,4 +66,9 @@
             android:title="@string/omniswitch_settings_title"
             android:fragment="com.android.settings.aicp.OmniSwitch" />
 
+        <PreferenceScreen
+            android:key="recent_panel"
+            android:fragment="com.android.settings.slim.RecentPanel"
+            android:title="@string/recent_panel_category" />
+
 </PreferenceScreen>
