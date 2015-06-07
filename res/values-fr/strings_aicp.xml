@@ -1125,4 +1125,32 @@
     <string name="title_pref_menu_display">Visibilité du bouton Menu</string>
     <string name="summary_pref_menu_display">Paramètres d\'affichage du bouton Menu</string>
 
+    <!-- Enable power menu -->
+    <string name="lockscreen_enable_power_menu_title">Menu d\'alimentation sur l\'écran de vérouillage</string>
+
+    <!-- Recent panel -->
+    <string name="recent_panel_category">SlimRecents</string>
+    <string name="use_slim_recents_title">SlimRecents</string>
+    <string name="show_running_tasks_title">Montrer uniquement les applications en cours d\'utilisation</string>
+    <string name="recents_max_apps_title">Nombre maximum d\'application permis</string>
+    <string name="recent_panel_scale_title">Taille</string>
+    <string name="recent_panel_scale_summary">Taille du panneau des applications récentes en pourcentage</string>
+    <string name="recent_panel_100">100% (par défaut)</string>
+    <string name="recent_panel_85">85%</string>
+    <string name="recent_panel_70">70%</string>
+    <string name="recent_panel_expanded_mode_title">Mode d\'aperçu</string>
+    <string name="recent_panel_expanded_mode_summary">Mode d\'aperçu des applications récentes</string>
+    <string name="recent_panel_expanded_mode_auto">Automatique (Par défaut)</string>
+    <string name="recent_panel_expanded_mode_always">Toujours étendu</string>
+    <string name="recent_panel_expanded_mode_never">Jamais étendu</string>
+    <string name="recent_panel_show_topmost_title">Affichage de l\'application en cours</string>
+    <string name="recent_panel_show_topmost_summary">Ne pas exclure l\'application en cours lors de l\'affichage des applications récentes</string>
+    <string name="recent_panel_bg_color_title">Couleur du panneau</string>
+    <string name="recent_card_bg_color_title">Couleur des cartes</string>
+    <string name="recent_card_text_color_title">Couleur du texte</string>
+
+    <!-- ATTENTION: RTL languages need to replace left with right -->
+    <string name="recent_panel_lefty_mode_title">Afficher du côté gauche</string>
+    <string name="recent_panel_lefty_mode_summary">Affiche le panneau d\'applications récentes sur le coté gauche de l\'écran</string>
+
 </resources>
