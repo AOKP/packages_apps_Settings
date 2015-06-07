@@ -120,7 +120,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
             densityEntries[idx] = Integer.toString(defaultDensity * pct / 100);
         }
         densityEntries[8] = getString(R.string.custom_density);
-        int currentDensity = getDefaultDensity();
+        int currentDensity = getCurrentDensity();
         mLcdDensityPreference.setEntries(densityEntries);
         mLcdDensityPreference.setEntryValues(densityEntries);
         mLcdDensityPreference.setValue(String.valueOf(currentDensity));
