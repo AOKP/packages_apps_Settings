@@ -932,6 +932,10 @@
     <string name="longpress_lock_icon_to_sleep_title">Appuyer longuement sur l\'icône de vérouillage pour mettre en veille</string>
     <string name="longpress_lock_icon_to_sleep_summary">Cette option ne fonctionnera pas si les deux serrure intelligente et l\'accessibilité des touches explorations sont activés</string>
 
+    <!-- Double tap gesture anywhere on the lock screen put device to sleep -->
+    <string name="double_tap_sleep_anywhere_title">Double tap n\'importe où pour mettre en veille </string>
+    <string name="double_tap_sleep_anywhere_summary">Double tap n\'importe où sur l\'écran de vérouillage pour mettre en veille</string>
+
     <!-- Wakelock blocker -->
     <string name="wakelock_blocker_title">Bloqueur de Wakelock</string>
     <string name="wakelock_blocker_summary">Bloquer les Wakelocks système</string>
