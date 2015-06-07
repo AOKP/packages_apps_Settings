@@ -296,7 +296,7 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
         setHasOptionsMenu(true);
 
             boolean enableRecentsShowTopmost = Settings.System.getInt(getContentResolver(),
-                                      Settings.System.RECENT_PANEL_SHOW_TOPMOST, 0) == 1;
+                                      Settings.System.RECENT_PANEL_SHOW_TOPMOST, 1) == 1;
         mRecentsShowTopmost = (SwitchPreference) findPreference(RECENT_PANEL_SHOW_TOPMOST);
         mRecentsShowTopmost.setChecked(enableRecentsShowTopmost);
         mRecentsShowTopmost.setOnPreferenceChangeListener(this);
