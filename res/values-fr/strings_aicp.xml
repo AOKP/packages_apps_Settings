@@ -1058,7 +1058,7 @@
 
     <!-- Task Manager -->
     <string name="enable_task_manager_title">Gestionnaire de tâche</string>
-    <string name="enable_task_manager_summary">Activer/Désactiver cette action pour le gestionnaire de tache dans la barre d\'état étendu.\nChanging cette option va redémmarer le SystemUI!</string>
+    <string name="enable_task_manager_summary">Activer/Désactiver cette action pour le gestionnaire de tache dans la barre d\'état étendu.</string>
 
     <!-- Status bar ticker -->
     <string name="status_bar_ticker_title">Téléscripteur de notification</string>
@@ -1152,5 +1152,28 @@
     <!-- ATTENTION: RTL languages need to replace left with right -->
     <string name="recent_panel_lefty_mode_title">Afficher du côté gauche</string>
     <string name="recent_panel_lefty_mode_summary">Affiche le panneau d\'applications récentes sur le coté gauche de l\'écran</string>
+
+    <!-- Custom Over scroll Settings -->
+    <string name="ui_overscroll_title">Effets de fin défilement</string>
+    <string name="overscroll_glow_title">Couleur de fin de défilement</string>
+    <string name="edge_effect_title">Effet de bord brillant</string>
+    <string name="bounce_effect_title">Effet de rebond</string>
+    <string name="none_effect_title">Aucun</string>
+    <string name="extra_heavy_title">Très fort</string>
+    <string name="heavy_title">Fort</string>
+    <string name="medium_title">Moyen</string>
+    <string name="light_title">Léger</string>
+    <string name="extra_light_title">Très léger</string>
+    <string name="overscroll_title">Effets de fin défilement</string>
+    <string name="overscroll_summary">Choisir comment les objets réagisent quand ils ont trop étirés</string>
+    <string name="overscroll_weight_title">Poids de l\'effet de fin de défilement</string>
+    <string name="overscroll_weight_summary">Choisir le poids des objets défilant</string>
+
+    <!-- Status bar power menu -->
+    <string name="status_bar_power_menu_title">Menu d\'alimentation dans le volet des notifications</string>
+    <string name="status_bar_power_menu_dialog_title">Sélectionner l\'action de l\'appui court/long</string>
+    <string name="status_bar_power_menu_off">Désactivé</string>
+    <string name="status_bar_power_menu_action_screen_off">Veille - Menu d\'alimentation</string>
+    <string name="status_bar_power_menu_action_dialog">Menu d\'alimentation - Veille</string>
 
 </resources>
