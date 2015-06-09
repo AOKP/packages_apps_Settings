@@ -143,6 +143,7 @@
   <string name="power_menu_title">Menu marche/arrêt</string>
   <string name="power_menu_reboot_title">Redémarrer</string>
   <string name="power_menu_screenshot_title">Capture d\'écran</string>
+  <string name="power_menu_screenrecord_title">Capture vidéo</string>
   <string name="power_menu_profiles_title">Profils</string>
   <string name="power_menu_airplane_title">Mode avion</string>
   <string name="power_menu_users_title">Changer d\'utilisateur</string>
@@ -152,6 +153,7 @@
   <string name="power_menu_sound_title">Son et vibreur</string>
   <string name="power_menu_bug_report_disabled">Le rapport de bug est désactivé dans les paramètres de développement</string>
   <string name="power_menu_profiles_disabled">Les profils système sont désactivés</string>
+  <string name="powermenu_screenshot_delay_title">Délai de capture d\'écran</string>
   <string name="adaptive_backlight_title">Rétroéclairage adaptatif</string>
   <string name="adaptive_backlight_summary">Régler dynamiquement la luminosité du rétroéclairage de l\'écran pour maximiser l\'autonomie tout en conservant une bonne lisibilité</string>
   <string name="sunlight_enhancement_title">Amélioration en plein soleil</string>
@@ -749,6 +751,7 @@
   <string name="lockscreen_visualizer_title">Afficher le niveau sonore de la musique</string>
   <string name="whisperpush_title">WhisperPush</string>
   <string name="whisperpush_summary">Gérer les paramètres des SMS sécurisés</string>
+  <string name="navigation_ring_enable_title">Anneau de la barre de navigation</string>
   <string name="navigation_ring_title">Raccourcis de l\'anneau de navigation</string>
   <string name="navigation_ring_message">Appuyez sur le bouton « Modifier » pour ouvrir l\'anneau de navigation en mode édition.\n\nSélectionnez une cible pour configurer son comportement.\n\nAppuyez sur le bouton « \u2713 » pour enregistrer vos modifications ou « Restaurer par défaut » pour restaurer les paramètres par défaut.</string>
   <string name="stylus_icon_enabled_title">Afficher l\'icône lors de l\'utilisation du stylet</string>
@@ -817,4 +820,7 @@
   <string name="preview_version_title">Version</string>
   <string name="preview_country_title">Pays</string>
   <string name="preview_carrier_title">Opérateur</string>
+  <string name="qs_wifi_detail_title">Vue détaillé du Wi\u2011Fi</string>
+  <string name="qs_wifi_detail_summary">Activer la vue détaillé du Wi\u2011Fi dans les paramètres rapides</string>
+  <string name="status_bar_battery_style_dotted_circle">Cercle (pointillé)</string>
 </resources>
