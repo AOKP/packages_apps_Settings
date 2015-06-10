@@ -979,6 +979,17 @@
     <string name="heads_up_touch_outside_summary_enabled">Cacher la notification sur le toucher à l\'extérieur et sur ??la pression du bouton d\'accueil</string>
     <string name="heads_up_touch_outside_summary_disabled">Ne pas cacher la notification après le contact éxterieur our sur la pression du bouton d\'accueil</string>
 
+    <!-- Heads up snooze -->
+    <string name="heads_up_snooze_title">Temps de désactivation</string>
+    <string name="heads_up_snooze_summary">Un appui sur le bouton d\'arrêt des répétitions désactive les notifications flottantes pendant <xliff:g id="number">%d</xliff:g> minutes</string>
+    <string name="heads_up_snooze_disabled_summary">Ne pas afficher le bouton</string>
+    <string name="heads_up_snooze_1min">1 minute</string>
+    <string name="heads_up_snooze_3min">3 minutes</string>
+    <string name="heads_up_snooze_5min">5 minutes</string>
+    <string name="heads_up_snooze_10min">10 minutes</string>
+    <string name="heads_up_snooze_15min">15 minutes</string>
+    <string name="heads_up_snooze_20min">20 minutes</string>
+
     <!-- UI debug setting: show CPU info? [CHAR LIMIT=25] -->
     <string name="show_cpu_info">Voir les infos du CPU</string>
     <!-- UI debug setting: show cpu usage summary [CHAR LIMIT=50] -->
@@ -1125,6 +1136,17 @@
     <string name="title_pref_menu_display">Visibilité du bouton Menu</string>
     <string name="summary_pref_menu_display">Paramètres d\'affichage du bouton Menu</string>
 
+    <!-- Disable torch when screen goes off -->
+    <string name="torch_category_title">Torche</string>
+    <string name="disable_torch_screen_off_title">Désactiver la torche sur l\'écran éteint</string>
+    <string name="disable_torch_screen_off_delay_title">Délai </string>
+    <string name="torch_screen_off_one_second">1 seconde</string>
+    <string name="torch_screen_off_ten_second">10 secondes (par défaut)</string>
+    <string name="torch_screen_off_thirty_second">30 secondes</string>
+    <string name="torch_screen_off_one_minute">1 minute</string>
+    <string name="torch_screen_off_five_minutes">5 minutes</string>
+    <string name="torch_screen_off_ten_minutes">10 minutes</string>
+
     <!-- Enable power menu -->
     <string name="lockscreen_enable_power_menu_title">Menu d\'alimentation sur l\'écran de vérouillage</string>
 
@@ -1149,7 +1171,7 @@
     <string name="recent_card_bg_color_title">Couleur des cartes</string>
     <string name="recent_card_text_color_title">Couleur du texte</string>
 
-    <!-- ATTENTION: RTL languages need to replace left with right -->
+    <!-- : RTL languages need to replace left with right -->
     <string name="recent_panel_lefty_mode_title">Afficher du côté gauche</string>
     <string name="recent_panel_lefty_mode_summary">Affiche le panneau d\'applications récentes sur le coté gauche de l\'écran</string>
 
