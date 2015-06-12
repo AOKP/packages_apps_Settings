@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/breathing_notifications_title">
+
+    <SwitchPreference
+        android:key="sms_breath"
+        android:title="@string/sms_breath_title"
+        android:summary="@string/sms_breath_summary"
+        android:persistent="false"/>
+
+    <SwitchPreference
+        android:key="missed_call_breath"
+        android:title="@string/missed_call_breath_title"
+        android:summary="@string/missed_call_breath_summary"
+        android:persistent="false"/>
+
+    <SwitchPreference
+        android:key="voicemail_breath"
+        android:title="@string/voicemail_breath_title"
+        android:summary="@string/voicemail_breath_summary"
+        android:persistent="false"/>
+
+</PreferenceScreen>

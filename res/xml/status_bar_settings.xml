@@ -100,6 +100,12 @@
             android:summary="@string/network_traffic_vector_summary"
             android:title="@string/network_traffic_vector_title" />
 
+    <!-- Breathing Notifications -->
+    <PreferenceScreen
+            android:key="breathing_notifications"
+            android:fragment="com.android.settings.aicp.BreathingNotifications"
+            android:title="@string/breathing_notifications_title" />
+
     <PreferenceCategory
             android:title="@string/status_bar_greeting_category_title">
 
