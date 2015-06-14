@@ -80,7 +80,7 @@
 
     <!-- Display : Rotation -->
     <string name="display_rotation_title">Forgatás</string>
-    <string name="display_rotation_disabled">Tiltva.</string>
+    <string name="display_rotation_disabled">Tiltva</string>
     <string name="display_rotation_unit">fok</string> 
     <string name="display_rotation_category_title">Forgatás módja</string>
     <string name="display_rotation_0_title">0 fok</string>
@@ -1151,5 +1151,56 @@
 
     <!-- Enable power menu -->
     <string name="lockscreen_enable_power_menu_title">Kikapcsolási menü a zárképernyőn</string>
+
+    <!-- Recent panel -->
+    <string name="recent_panel_category">SlimLegutóbbiak</string>
+    <string name="use_slim_recents_title">SlimLegutóbbiak</string>
+    <string name="show_running_tasks_title">Csak a futó alkalmazások</string>
+    <string name="recents_max_apps_title">Max engedélyezett alkalmazás</string>
+    <string name="recent_panel_scale_title">Méret</string>
+    <string name="recent_panel_scale_summary">Legutóbbi panel mérete százalékban</string>
+    <string name="recent_panel_100">100% (alapértelmezett)</string>
+    <string name="recent_panel_85">85%</string>
+    <string name="recent_panel_70">70%</string>
+    <string name="recent_panel_expanded_mode_title">Kiterjesztett mód</string>
+    <string name="recent_panel_expanded_mode_summary">Legutóbbi feladatok kiterjesztett előnézeti módja</string>
+    <string name="recent_panel_expanded_mode_auto">Auto (alapértelmezett)</string>
+    <string name="recent_panel_expanded_mode_always">Mindig</string>
+    <string name="recent_panel_expanded_mode_never">Soha</string>
+    <string name="recent_panel_show_topmost_title">Mutassa a leggyakoribb alkalmazást</string>
+    <string name="recent_panel_show_topmost_summary">Ne zárja ki a leggyakoribb feladatot a legutóbbi nézetben</string>
+    <string name="recent_panel_bg_color_title">Panel háttérszín</string>
+    <string name="recent_card_bg_color_title">Kártya háttérszíne</string>
+    <string name="recent_card_text_color_title">Kártya szöveg szín</string>
+
+    <!-- ATTENTION: RTL languages need to replace left with right -->
+    <string name="recent_panel_lefty_mode_title">Mutassa a jobb szélen</string>
+    <string name="recent_panel_lefty_mode_summary">Mutassa a legutóbbi alkalmazást s baloldalon</string>
+
+    <!-- Custom Over scroll Settings -->
+    <string name="ui_overscroll_title">Túl görgetési hatások</string>
+    <string name="overscroll_glow_title">Túl görgetés színe</string>
+    <string name="edge_effect_title">Él villanási hatás</string>
+    <string name="bounce_effect_title">Visszapattanó hatás</string>
+    <string name="none_effect_title">Nincs</string>
+    <string name="extra_heavy_title">Extra Nehéz</string>
+    <string name="heavy_title">Nehéz</string>
+    <string name="medium_title">Közepes</string>
+    <string name="light_title">Könnyű</string>
+    <string name="extra_light_title">Extra Könnyű</string>
+    <string name="overscroll_title">Túl görgetési hatás</string>
+    <string name="overscroll_summary">Válassza ki, hogyan görgesse az elemeket, ha túllőnek</string>
+    <string name="overscroll_weight_title">Túl görgetési magasság</string>
+    <string name="overscroll_weight_summary">Válassza ki a görgethető elem magasságát</string>
+
+    <!-- Status bar power menu -->
+    <string name="status_bar_power_menu_title">Kikapcsolási menü a kiterjesztett állapot sávon</string>
+    <string name="status_bar_power_menu_dialog_title">Érintés és hosszannyomás művelet beállítása</string>
+    <string name="status_bar_power_menu_off">Tiltva</string>
+    <string name="status_bar_power_menu_action_screen_off">Képernyő ki - Kikapcsolási menü</string>
+    <string name="status_bar_power_menu_action_dialog">Kikapcsolási menü - Képernyő ki</string>
+
+    <!-- Restart SystemUI -->
+    <string name="restart_systemui">RendszerUI Újraindítása</string>
 
 </resources>
