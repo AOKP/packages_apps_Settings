@@ -71,6 +71,12 @@
         android:fragment="com.android.settings.aicp.AppCircleBar"
         android:title="@string/app_circle_bar_title"/>
 
+    <!-- App sidebar -->
+    <PreferenceScreen
+        android:key="app_sidebar"
+        android:fragment="com.android.settings.aicp.AppSidebar"
+        android:title="@string/app_sidebar_title"/>
+
     <!-- Wakelock blocker -->
     <PreferenceScreen
         android:key="wakelock_blocker"
