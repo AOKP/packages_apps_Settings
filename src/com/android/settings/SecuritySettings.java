@@ -90,6 +90,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private static final String KEY_SECURITY_CATEGORY = "security_category";
     private static final String KEY_DEVICE_ADMIN_CATEGORY = "device_admin_category";
     private static final String KEY_VISIBLE_ERROR_PATTERN = "visible_error_pattern";
+    private static final String KEY_DIRECTLY_SHOW = "directlyshow";
     private static final String KEY_VISIBLE_DOTS = "visibledots";
     private static final String KEY_LOCK_AFTER_TIMEOUT = "lock_after_timeout";
     private static final String KEY_OWNER_INFO_SETTINGS = "owner_info_settings";
@@ -127,7 +128,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private static final String SWITCH_PREFERENCE_KEYS[] = { KEY_LOCK_AFTER_TIMEOUT,
             KEY_LOCK_ENABLED, KEY_VISIBLE_PATTERN, KEY_VISIBLE_ERROR_PATTERN, KEY_VISIBLE_DOTS,
             KEY_BIOMETRIC_WEAK_LIVELINESS, KEY_POWER_INSTANTLY_LOCKS, KEY_SHOW_PASSWORD,
-            KEY_TOGGLE_INSTALL_APPLICATIONS, KEY_VISIBLE_GESTURE };
+            KEY_DIRECTLY_SHOW, KEY_TOGGLE_INSTALL_APPLICATIONS, KEY_VISIBLE_GESTURE };
 
     // Only allow one trust agent on the platform.
     private static final boolean ONLY_ONE_TRUST_AGENT = false;
@@ -143,6 +144,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private SwitchPreference mBiometricWeakLiveliness;
     private SwitchPreference mVisiblePattern;
     private SwitchPreference mVisibleErrorPattern;
+    private SwitchPreference mDirectlyShow;
     private SwitchPreference mVisibleDots;
     private SwitchPreference mVisibleGesture;
 
@@ -344,6 +346,9 @@ public class SecuritySettings extends SettingsPreferenceFragment
 
         // visible error pattern
         mVisibleErrorPattern = (SwitchPreference) root.findPreference(KEY_VISIBLE_ERROR_PATTERN);
+
+        // directly show
+        mDirectlyShow = (SwitchPreference) root.findPreference(KEY_DIRECTLY_SHOW);
 
         // visible dots
         mVisibleDots = (SwitchPreference) root.findPreference(KEY_VISIBLE_DOTS);
@@ -727,6 +732,9 @@ public class SecuritySettings extends SettingsPreferenceFragment
         if (mVisibleErrorPattern != null) {
             mVisibleErrorPattern.setChecked(lockPatternUtils.isShowErrorPath());
         }
+        if (mDirectlyShow != null) {
+            mDirectlyShow.setChecked(lockPatternUtils.shouldPassToSecurityView());
+        }
         if (mVisibleDots != null) {
             mVisibleDots.setChecked(lockPatternUtils.isVisibleDotsEnabled());
         }
@@ -831,6 +839,8 @@ public class SecuritySettings extends SettingsPreferenceFragment
             lockPatternUtils.setLockPatternEnabled((Boolean) value);
         } else if (KEY_VISIBLE_PATTERN.equals(key)) {
             lockPatternUtils.setVisiblePatternEnabled((Boolean) value);
+        } else if (KEY_DIRECTLY_SHOW.equals(key)) {
+            lockPatternUtils.setPassToSecurityView((Boolean) value);
         } else if (KEY_VISIBLE_ERROR_PATTERN.equals(key)) {
             lockPatternUtils.setShowErrorPath((Boolean) value);
         } else if (KEY_VISIBLE_DOTS.equals(key)) {
