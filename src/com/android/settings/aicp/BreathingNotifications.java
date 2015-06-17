@@ -12,7 +12,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
-import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -30,6 +29,7 @@ import java.util.List;
 
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
+import com.android.settings.Utils;
 
 public class BreathingNotifications extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -42,6 +42,8 @@ public class BreathingNotifications extends SettingsPreferenceFragment implement
     private SwitchPreference mMissedCallBreath;
     private SwitchPreference mVoicemailBreath;
 
+    private Context mContext;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,21 +51,19 @@ public class BreathingNotifications extends SettingsPreferenceFragment implement
 
         PreferenceScreen prefSet = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
+        mContext = getActivity();
 
         mSMSBreath = (SwitchPreference) findPreference(SMS_BREATH);
         mMissedCallBreath = (SwitchPreference) findPreference(MISSED_CALL_BREATH);
         mVoicemailBreath = (SwitchPreference) findPreference(VOICEMAIL_BREATH);
 
         Context context = getActivity();
-        ConnectivityManager cm = (ConnectivityManager)
-                context.getSystemService(Context.CONNECTIVITY_SERVICE);
 
-        if(cm.isNetworkSupported(ConnectivityManager.TYPE_MOBILE)) {
+        mSMSBreath.setChecked(Settings.System.getInt(resolver,
+                Settings.System.KEY_SMS_BREATH, 0) == 1);
+        mSMSBreath.setOnPreferenceChangeListener(this);
 
-            mSMSBreath.setChecked(Settings.System.getInt(resolver,
-                    Settings.System.KEY_SMS_BREATH, 0) == 1);
-            mSMSBreath.setOnPreferenceChangeListener(this);
-
+        if (Utils.isVoiceCapable(mContext)) {
             mMissedCallBreath.setChecked(Settings.System.getInt(resolver,
                     Settings.System.KEY_MISSED_CALL_BREATH, 0) == 1);
             mMissedCallBreath.setOnPreferenceChangeListener(this);
@@ -72,7 +72,6 @@ public class BreathingNotifications extends SettingsPreferenceFragment implement
                     Settings.System.KEY_VOICEMAIL_BREATH, 0) == 1);
             mVoicemailBreath.setOnPreferenceChangeListener(this);
         } else {
-            prefSet.removePreference(mSMSBreath);
             prefSet.removePreference(mMissedCallBreath);
             prefSet.removePreference(mVoicemailBreath);
         }

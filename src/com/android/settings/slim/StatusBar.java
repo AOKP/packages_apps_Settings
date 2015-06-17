@@ -18,10 +18,12 @@ package com.android.settings.slim;
 
 import android.app.AlertDialog;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.database.ContentObserver;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.ListPreference;
@@ -57,6 +59,7 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private static final String KEY_STATUS_BAR_GREETING = "status_bar_greeting";
     private static final String KEY_STATUS_BAR_GREETING_TIMEOUT = "status_bar_greeting_timeout";
     private static final String KEY_AICP_LOGO_COLOR = "status_bar_aicp_logo_color";
+    private static final String KEY_BREATHING_NOTIFICATIONS = "breathing_notifications";
 
     private SwitchPreference mStatusBarBrightnessControl;
     private PreferenceScreen mCarrierLabel;
@@ -65,6 +68,7 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private SwitchPreference mStatusBarGreeting;
     private SeekBarPreferenceCham mStatusBarGreetingTimeout;
     private ColorPickerPreference mAicpLogoColor;
+    private Preference mBreathingNotifications;
 
     private String mCustomGreetingText = "";
 
@@ -76,6 +80,9 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
 
         PreferenceScreen prefSet = getPreferenceScreen();
         PackageManager pm = getPackageManager();
+        Context context = getActivity();
+        ConnectivityManager cm = (ConnectivityManager)
+                context.getSystemService(Context.CONNECTIVITY_SERVICE);
         Resources systemUiResources;
         try {
             systemUiResources = pm.getResourcesForApplication("com.android.systemui");
@@ -135,6 +142,12 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         String hexColor = String.format("#%08x", (0xffffffff & intColor));
             mAicpLogoColor.setSummary(hexColor);
             mAicpLogoColor.setNewPreviewColor(intColor);
+
+        // Breathing notifications
+        mBreathingNotifications = (Preference) findPreference(KEY_BREATHING_NOTIFICATIONS);
+        if(!cm.isNetworkSupported(ConnectivityManager.TYPE_MOBILE)) {
+            prefSet.removePreference(mBreathingNotifications);
+        }
 
     }
 
