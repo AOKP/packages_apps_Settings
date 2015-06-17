@@ -55,14 +55,9 @@
             android:summary="@string/recent_panel_show_topmost_summary"
             android:persistent="false" />
 
-        <ListPreference
-            android:dependency="use_slim_recents"
+        <SlimSeekBarPreference
             android:key="recent_panel_scale"
-            android:entries="@array/recent_panel_scale_entries"
-            android:entryValues="@array/recent_panel_scale_values"
-            android:title="@string/recent_panel_scale_title"
-            android:summary="@string/recent_panel_scale_summary"
-            android:persistent="false" />
+            android:title="@string/recent_panel_scale_title" />
 
         <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:dependency="use_slim_recents"
