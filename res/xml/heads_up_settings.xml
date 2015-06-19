@@ -42,7 +42,7 @@
         android:title="@string/heads_up_snooze_title"
         android:entries="@array/heads_up_snooze_entries"
         android:entryValues="@array/heads_up_snooze_values"
-        android:persistent="false" />	
+        android:persistent="false" />
 
     <PreferenceCategory
         android:title="@string/heads_up_dnd_title"
