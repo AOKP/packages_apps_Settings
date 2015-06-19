@@ -202,7 +202,7 @@ public class QSTileHolder {
                 stringId = R.string.qs_music_play_tile;
                 break;
             case QSConstants.TILE_HEADS_UP:
-                resourceName = "ic_qs_heads_up_on";
+                resourceName = "ic_headsup_toggle_on";
                 stringId = R.string.qs_tile_heads_up;
                 break;
             case QSConstants.TILE_SYSTEMUI_RESTART:
