@@ -41,6 +41,12 @@
                     android:summary="@string/doze_time_mode_summary"
                     android:dependency="doze" />
 
+            <SlimSeekBarPreference
+                    android:key="doze_brightness"
+                    android:title="@string/doze_brightness_title"
+                    android:summary="@string/doze_brightness_summary"
+                    android:dependency="doze" />
+
             <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
                     android:key="doze_overwrite_value"
                     android:title="@string/doze_overwrite_value_title"
