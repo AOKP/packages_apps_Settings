@@ -103,7 +103,7 @@
                 android:title="@string/qs_slim_action_title"
                 android:summary="@string/qs_slim_action_summary">
                 <extra android:name="actionMode" android:value="7" />
-                <extra android:name="maxAllowedActions" android:value="4" />
+                <extra android:name="maxAllowedActions" android:value="10" />
                 <extra android:name="disableLongpress" android:value="true" />
                 <extra android:name="disableDeleteLastEntry" android:value="true" />
                 <extra android:name="actionValues" android:value="shortcut_action_tile_values" />
