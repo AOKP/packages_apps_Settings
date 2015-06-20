@@ -1195,6 +1195,10 @@
     <string name="status_bar_power_menu_action_screen_off">Screen off - Power menu</string>
     <string name="status_bar_power_menu_action_dialog">Power menu - Screen off</string>
 
+    <!-- Heads Up Status Bar button -->
+    <string name="show_headsup_button_title">Show quick access button</string>
+    <string name="show_headsup_button_summary">Show a quick access button in the status bar</string>
+
     <!-- Restart SystemUI -->
     <string name="restart_systemui">Restart SystemUI</string>
 
