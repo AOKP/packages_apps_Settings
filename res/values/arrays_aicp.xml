@@ -451,6 +451,7 @@ limitations under the License.
         <item>@string/shortcut_action_ime</item>
         <item>@string/shortcut_action_power_menu</item>
         <item>@string/shortcut_action_recent</item>
+        <item>@string/shortcut_action_restartui</item>
         <item>@string/shortcut_action_power</item>
         <item>@string/shortcut_action_search</item>
         <item>@string/shortcut_action_none</item>
@@ -464,6 +465,7 @@ limitations under the License.
         <item>**ime**</item>
         <item>**power_menu**</item>
         <item>**recents**</item>
+        <item>**restartui**</item>
         <item>**power**</item>
         <item>**search**</item>
         <item>**null**</item>
@@ -850,6 +852,7 @@ limitations under the License.
         <!--<item>@string/shortcut_action_pie</item>-->
         <!--<item>@string/shortcut_action_power_menu</item>-->
         <!--<item>@string/shortcut_action_qs</item>-->
+        <item>@string/shortcut_action_restartui</item>
         <item>@string/shortcut_action_ring_silent</item>
         <item>@string/shortcut_action_ring_vib</item>
         <item>@string/shortcut_action_ring_vib_silent</item>
@@ -869,6 +872,7 @@ limitations under the License.
         <!--<item>**pie**</item>-->
         <!--<item>**power_menu**</item>-->
         <!--<item>**quicksettings**</item>-->
+        <item>**restartui**</item>
         <item>**ring_silent**</item>
         <item>**ring_vib**</item>
         <item>**ring_vib_silent**</item>
@@ -884,6 +888,7 @@ limitations under the License.
         <item>@string/shortcut_action_power_menu</item>
         <item>@string/shortcut_action_screenshot</item>
         <item>@string/shortcut_action_recent</item>
+        <item>@string/shortcut_action_restartui</item>
     </string-array>
 
     <string-array name="shortcut_action_tile_values" translatable="false">
@@ -891,6 +896,7 @@ limitations under the License.
         <item>**power_menu**</item>
         <item>**screenshot**</item>
         <item>**recents**</item>
+        <item>**restartui**</item>
     </string-array>
 
     <!-- LS Weather -->
