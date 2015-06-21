@@ -905,9 +905,8 @@ limitations under the License.
         <item>**recents**</item>
         <item>**restartui**</item>
         <item>**power**</item>
-        <item>**search**</item>
-        <item>**null**</item>
         <item>**screenshot**</item>
+        <item>**search**</item>
     </string-array>
 
     <!-- LS Weather -->
