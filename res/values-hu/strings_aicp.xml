@@ -771,7 +771,7 @@
     <string name="qs_brightness_tile">Fényerő</string>
     <string name="qs_expanded_desktop_tile">Kiterjesztett képernyő</string>
     <string name="qs_notifications_tile">Értesítések</string>
-    <string name="qs_screen_off_tile">Kéernyő ki</string>
+    <string name="qs_screen_off_tile">Képernyő ki</string>
     <string name="qs_ambient_display_tile">Környezeti kijelző</string>
 
     <!-- QuickSettings collapse panel -->
@@ -1202,5 +1202,44 @@
 
     <!-- Restart SystemUI -->
     <string name="restart_systemui">RendszerUI Újraindítása</string>
+
+   <!-- Breathing Notifications -->
+    <string name="breathing_notifications_title">Lüktető értesítések</string>
+    <string name="sms_breath_title">Lüktető SMS</string>
+    <string name="sms_breath_summary">Lüktető sms értesítés az állapot sávon</string>
+    <string name="missed_call_breath_title">Lüktető Nem fogadott hívás</string>
+    <string name="missed_call_breath_summary">Lüktető nem fogadott hívás értesítés az állapot sávon</string>
+    <string name="voicemail_breath_title">Lüktető hangüzenet</string>
+    <string name="voicemail_breath_summary">Lüktető hangüzenet értesítés az állapot sávon</string>
+
+    <!-- App sidebar -->
+    <string name="app_sidebar_title">Alkalmazás oldalsáv</string>
+    <string name="app_sidebar_enable_title">Alkalmazás sáv engedélyezése</string>
+    <string name="app_sidebar_enable_summaryOn">Alkalmazás sáv engedélyezve</string>
+    <string name="app_sidebar_enable_summaryOff">Alkalmazás sáv tiltva</string>
+    <string name="app_sidebar_setup_items_title">Alkalmazás sáv tartalmának beállítása</string>
+    <string name="app_sidebar_setup_items_summary">Hozzáadás, eltávolítás és elem pozicíók az alkalmazás sávon</string>
+    <string name="app_sidebar_transparency_title">Alkalmazás sáv áttetszőssége</string>
+    <string name="app_sidebar_transparency_summary">Beállítja az Alkalmazás sáv áttetszősségét</string>
+    <string name="app_sidebar_position_title">Alkalmazás sáv pozicíója</string>
+    <string name="app_sidebar_position_summary">Alkalmazás sáv a képernyő jobb vagy bal oldalán</string>
+    <string name="app_sidebar_position_left">Bal</string>
+    <string name="app_sidebar_position_right">Jobb</string>
+    <string name="app_sidebar_hide_labels_title">Ikon szöveg rejtése</string>
+    <string name="app_sidebar_hide_labels_summary">Alkalmazás sáv ikon szövegeinek rejtése</string>
+    <string name="tab_category">Látható fül</string>
+    <string name="use_tab_title">Kijelző fül</string>
+    <string name="use_tab_summary">Megjelenít egy látható fület az alkalmazás sávnak azon az oldalon ahol a kijelzőt megérinted.</string>
+    <string name="tab_position_title">Fül helyzete</string>
+    <string name="tab_position_summary">Fül megjelenítése a kijelző alján, tetején vagy középen.</string>
+    <string name="tab_size_title">Fül méret</string>
+    <string name="tab_size_summary">Látható fül méretének változtatása.</string>
+    <string name="trigger_category">Kapcsoló terület</string>
+    <string name="trigger_width_title">Kapcsoló szélessége</string>
+    <string name="trigger_width_summary">Beállítja a kapcsoló terület szélességét</string>
+    <string name="trigger_top_title">Kapcsoló pozicíója</string>
+    <string name="trigger_top_summary">Beállítja a kapcsolási terület függőleges pozicíóját</string>
+    <string name="trigger_bottom_title">Kapcsoló magassága</string>
+    <string name="trigger_bottom_summary">Beállítja a kapcsolási terület magasságát</string>
 
 </resources>
