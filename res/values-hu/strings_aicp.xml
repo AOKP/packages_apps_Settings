@@ -179,7 +179,6 @@
     <string name="set">Beállítás</string>
     <string name="color_default">Alapértelmezett</string>
 
-
     <!-- Status bar -->
     <string name="status_bar_title">Állapot sáv</string>
     <string name="status_bar_style_title">Stílus</string>
@@ -250,7 +249,6 @@
     <!-- Double Tap Navbar to Sleep -->
     <string name="double_tap_sleep_nav_bar_title">Dupla érintésre alvás</string>
     <string name="double_tap_sleep_nav_bar_summary">Duplán érintve a navigációs sávot alvó módba kerül</string>
-
 
     <string name="block_on_secure_keyguard_title">Tiltva a zárképernyőn</string>
     <string name="block_on_secure_keyguard_summary">Tiltja a gyors beállításokat a biztonsági zárképernyőn.</string>
@@ -332,6 +330,7 @@
     <string name="shortcut_action_ime">Billentyűzetváltó megnyítása</string>
     <string name="shortcut_action_power_menu">Power menü</string>
     <string name="shortcut_action_recent">Legutóbbiak</string>
+    <string name="shortcut_action_restartui">RendszerUI újraindítása</string>
     <string name="shortcut_action_power">Képernyő KI</string>
     <string name="shortcut_action_search">Keresés az alkalmazásban</string>
     <string name="shortcut_action_ring_vib">Cseng/Rezeg</string>
@@ -432,8 +431,10 @@
     <!-- Lockscreen Shortcuts -->
     <string name="lockscreen_shortcuts_title">Parancsikonok</string>
     <string name="lockscreen_shortcuts_summary">Nézd vagy változtasd meg az egyéni zárképernyő ikonokat</string>
-    <string name="lockscreen_shorcuts_longpress_title">Ikonok hosszannyomva</string>
-    <string name="lockscreen_shorcuts_longpress_summary">Hosszannyomásra egyéni zárképernyő parancsikont nyit meg</string>
+    <string name="lockscreen_shorcuts_launch_type_title">Parancsikon kattintás típusa</string>
+    <string name="lockscreen_shortcuts_single_tap">Kattintás</string>
+    <string name="lockscreen_shortcuts_double_tap">Dupla érintés</string>
+    <string name="lockscreen_shortcuts_longpress">Hosszannyomás</string>
 
     <!-- Unaccounted and overcounted battery stats -->
     <string name="show_unac_and_overcounted_stats_title">Mutassa a hiányzó/túlszámolt statisztikákat</string>
@@ -813,7 +814,12 @@
     <string name="task_open_behind_title">Feladat megnyítás mögötti animáció</string>
     <string name="animation_duration_title">Animáció időtartama</string>
     <string name="animation_duration_default">Alapértelmezett</string>
- <!-- The volume key answer -->
+    <string name="title_animation_no_override">Prevent App Overrides</string>
+    <string name="summary_animation_no_override">Prevent apps from overriding transitions.</string>
+    <string name="animation_exit_only_title">Csak belépési animáció</string>
+    <string name="animation_reverse_exit_title">Fordított kilépési animáció</string>
+ 
+    <!-- The volume key answer -->
     <string name="volume_answer_call_title">Hangerő gomb válasz</string>
     <string name="volume_answer_call_summary">Válasz a hangerő gomb felre</string>
 
@@ -850,6 +856,9 @@
 
     <string name="doze_time_mode_title">Óra és dátum mutatása</string>
     <string name="doze_time_mode_summary">Idő kényszerített mutatása, ha nincs értesítés</string>
+
+    <string name="doze_brightness_title">Szendergés fényerő szintje</string>
+    <string name="doze_brightness_summary">Szendergés impulzusának fényereje (maximálisan engedélyezett fényerő %)</string>
 
     <string name="twohundred_ms">200 ms</string>
     <string name="fivehundred_ms">500 ms</string>
@@ -936,6 +945,10 @@
     <string name="longpress_lock_icon_to_sleep_title">Alszik hosszan nyomva a zár ikonra</string>
     <string name="longpress_lock_icon_to_sleep_summary">Ez a funkció nem működik együtt a smart lock és a közelítő érintés felderítéssel</string>
 
+    <!-- Double tap gesture anywhere on the lock screen put device to sleep -->
+    <string name="double_tap_sleep_anywhere_title">Bárhol dupla érintésre alvás</string>
+    <string name="double_tap_sleep_anywhere_summary">Zárképernyőn bárhol duplán érintve a készülék alvó módba kerül</string>
+
     <!-- Wakelock blocker -->
     <string name="wakelock_blocker_title">Ébrentartás blokkoló</string>
     <string name="wakelock_blocker_summary">Blokkolja a rendszer ébrentartását</string>
@@ -945,12 +958,8 @@
     <string name="wakelock_blocker_warning_title">Óvatosan alkalmazd</string>
     <string name="wakelock_blocker_warning">Ébrentartások blokkolása instabilitással, összeomlással és adatvesztéssel járhat</string>
 
-
-
     <!-- Heads up -->
     <string name="category_heads_up">Felugró értesítések</string>
-    <string name="summary_heads_up_enabled">Felugró értesítések engedélyezve</string>
-    <string name="summary_heads_up_disabled">Felugró értesítések tiltve</string>
     <string name="add_heads_up_package">Alkalmazás hozzáadás</string>
     <string name="add_heads_up_dnd_summary">Ne mutasson felugró értesítéseket ezekben az alkalmazásokban</string>
     <string name="add_heads_up_blacklist_summary">Ne mutasson felugró értesítéseket ezektől az alkalmazásoktól</string>
@@ -973,11 +982,6 @@
     <string name="heads_up_time_out_8sec">8 mp</string>
     <string name="heads_up_time_out_10sec">10 mp</string>
     <string name="heads_up_time_out_never">Soha</string>
-    <string name="heads_up_bg_color_title">Háttér színe</string>
-    <string name="heads_up_text_color_title">Szöveg szín</string>
-    <string name="heads_up_colors_title">Egyéni színek</string>
-    <string name="heads_up_colors_summary">Felugró üzenetek szöveg és háttér színének testreszabása</string>
-
 
     <!-- Heads up touch outside -->
     <string name="heads_up_touch_outside_title">Külső érintés viselkedése</string>
@@ -1158,10 +1162,6 @@
     <string name="show_running_tasks_title">Csak a futó alkalmazások</string>
     <string name="recents_max_apps_title">Max engedélyezett alkalmazás</string>
     <string name="recent_panel_scale_title">Méret</string>
-    <string name="recent_panel_scale_summary">Legutóbbi panel mérete százalékban</string>
-    <string name="recent_panel_100">100% (alapértelmezett)</string>
-    <string name="recent_panel_85">85%</string>
-    <string name="recent_panel_70">70%</string>
     <string name="recent_panel_expanded_mode_title">Kiterjesztett mód</string>
     <string name="recent_panel_expanded_mode_summary">Legutóbbi feladatok kiterjesztett előnézeti módja</string>
     <string name="recent_panel_expanded_mode_auto">Auto (alapértelmezett)</string>
@@ -1199,6 +1199,10 @@
     <string name="status_bar_power_menu_off">Tiltva</string>
     <string name="status_bar_power_menu_action_screen_off">Képernyő ki - Kikapcsolási menü</string>
     <string name="status_bar_power_menu_action_dialog">Kikapcsolási menü - Képernyő ki</string>
+
+    <!-- Heads Up Status Bar button -->
+    <string name="show_headsup_button_title">Felugró értesítés gomb</string>
+    <string name="show_headsup_button_summary">Mutatja a Felugró értesítés gombot az állapot sávon</string>
 
     <!-- Restart SystemUI -->
     <string name="restart_systemui">RendszerUI Újraindítása</string>
