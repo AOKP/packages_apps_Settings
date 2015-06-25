@@ -42,7 +42,6 @@ import android.widget.EditText;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.Utils;
 import com.android.settings.widget.SeekBarPreferenceCham;
 
 import com.android.internal.util.slim.DeviceUtils;
@@ -54,14 +53,12 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
 
     private static final String STATUS_BAR_BRIGHTNESS_CONTROL = "status_bar_brightness_control";
     private static final String KEY_STATUS_BAR_CLOCK = "clock_style_pref";
-    private static final String KEY_CARRIERLABEL_PREFERENCE = "carrier_options";
     private static final String KEY_STATUS_BAR_GREETING = "status_bar_greeting";
     private static final String KEY_STATUS_BAR_GREETING_TIMEOUT = "status_bar_greeting_timeout";
     private static final String KEY_AICP_LOGO_COLOR = "status_bar_aicp_logo_color";
     private static final String KEY_BREATHING_NOTIFICATIONS = "breathing_notifications";
 
     private SwitchPreference mStatusBarBrightnessControl;
-    private PreferenceScreen mCarrierLabel;
     private PreferenceScreen mClockStyle;
     private SwitchPreference mStatusBarGreeting;
     private SeekBarPreferenceCham mStatusBarGreetingTimeout;
@@ -96,11 +93,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         mStatusBarBrightnessControl.setOnPreferenceChangeListener(this);
 
         mClockStyle = (PreferenceScreen) prefSet.findPreference(KEY_STATUS_BAR_CLOCK);
-
-        mCarrierLabel = (PreferenceScreen) prefSet.findPreference(KEY_CARRIERLABEL_PREFERENCE);
-        if (Utils.isWifiOnly(getActivity())) {
-            prefSet.removePreference(mCarrierLabel);
-        }
 
         updateClockStyleDescription();
 
