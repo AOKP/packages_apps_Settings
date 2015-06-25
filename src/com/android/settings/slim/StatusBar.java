@@ -110,10 +110,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         mStatusBarGreetingTimeout.setValue(statusBarGreetingTimeout / 1);
         mStatusBarGreetingTimeout.setOnPreferenceChangeListener(this);
 
-        if (TelephonyManager.getDefault().getPhoneCount() <= 1) {
-            removePreference(Settings.System.STATUS_BAR_MSIM_SHOW_EMPTY_ICONS);
-        }
-
         // Aicp logo color
         mAicpLogoColor =
             (ColorPickerPreference) prefSet.findPreference(KEY_AICP_LOGO_COLOR);

@@ -50,13 +50,6 @@
             android:defaultValue="0xffffffff"
             android:dependency="status_bar_aicp_logo" />
 
-    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-            android:key="status_bar_show_empty_sims"
-            android:defaultValue="true"
-            android:title="@string/status_bar_show_unused_sims_title"
-            android:summaryOn="@string/status_bar_show_unused_sims_title_summary_on"
-            android:summaryOff="@string/status_bar_show_unused_sims_title_summary_off" />
-
     <SwitchPreference
             android:key="status_bar_brightness_control"
             android:title="@string/status_bar_toggle_brightness"
