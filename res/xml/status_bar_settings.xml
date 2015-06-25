@@ -88,11 +88,6 @@
             android:summary="@string/status_bar_ticker_summary"
             android:defaultValue="false" />
 
-    <SwitchPreference
-            android:key="status_bar_show_network_activity"
-            android:title="@string/status_bar_show_network_activity_title"
-            android:defaultValue="true" />
-
     <!--Vector Network traffic indicator -->
     <PreferenceScreen
             android:key="network_traffic_state"

@@ -55,7 +55,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private static final String STATUS_BAR_BRIGHTNESS_CONTROL = "status_bar_brightness_control";
     private static final String KEY_STATUS_BAR_CLOCK = "clock_style_pref";
     private static final String KEY_CARRIERLABEL_PREFERENCE = "carrier_options";
-    private static final String KEY_STATUS_BAR_NETWORK_ARROWS= "status_bar_show_network_activity";
     private static final String KEY_STATUS_BAR_GREETING = "status_bar_greeting";
     private static final String KEY_STATUS_BAR_GREETING_TIMEOUT = "status_bar_greeting_timeout";
     private static final String KEY_AICP_LOGO_COLOR = "status_bar_aicp_logo_color";
@@ -64,7 +63,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private SwitchPreference mStatusBarBrightnessControl;
     private PreferenceScreen mCarrierLabel;
     private PreferenceScreen mClockStyle;
-    private SwitchPreference mNetworkArrows;
     private SwitchPreference mStatusBarGreeting;
     private SeekBarPreferenceCham mStatusBarGreetingTimeout;
     private ColorPickerPreference mAicpLogoColor;
@@ -103,15 +101,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         if (Utils.isWifiOnly(getActivity())) {
             prefSet.removePreference(mCarrierLabel);
         }
-
-        // Network arrows
-        mNetworkArrows = (SwitchPreference) prefSet.findPreference(KEY_STATUS_BAR_NETWORK_ARROWS);
-        mNetworkArrows.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
-            Settings.System.STATUS_BAR_SHOW_NETWORK_ACTIVITY, 1) == 1);
-        mNetworkArrows.setOnPreferenceChangeListener(this);
-        int networkArrows = Settings.System.getInt(getContentResolver(),
-                Settings.System.STATUS_BAR_SHOW_NETWORK_ACTIVITY, 1);
-        updateNetworkArrowsSummary(networkArrows);
 
         updateClockStyleDescription();
 
@@ -156,14 +145,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             Settings.System.putInt(getContentResolver(),
                     Settings.System.STATUS_BAR_BRIGHTNESS_CONTROL,
                     (Boolean) newValue ? 1 : 0);
-            return true;
-        } else if (preference == mNetworkArrows) {
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.STATUS_BAR_SHOW_NETWORK_ACTIVITY,
-                    (Boolean) newValue ? 1 : 0);
-            int networkArrows = Settings.System.getInt(getContentResolver(),
-                    Settings.System.STATUS_BAR_SHOW_NETWORK_ACTIVITY, 1);
-            updateNetworkArrowsSummary(networkArrows);
             return true;
         } else if (preference == mStatusBarGreetingTimeout) {
             int timeout = (Integer) newValue;
@@ -240,12 +221,5 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         } else {
             mClockStyle.setSummary(getString(R.string.disabled));
          }
-    }
-
-    private void updateNetworkArrowsSummary(int value) {
-        String summary = value != 0
-                ? getResources().getString(R.string.enabled)
-                : getResources().getString(R.string.disabled);
-        mNetworkArrows.setSummary(summary);
     }
 }
