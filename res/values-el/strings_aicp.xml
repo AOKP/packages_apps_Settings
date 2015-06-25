@@ -178,8 +178,6 @@
     <!-- Color Picker -->
     <string name="dialog_color_picker">Συλλογή χρωμάτων</string>
     <string name="press_color_to_apply">Πατήστε στο χρώμα για εφαρμογή</string>
-    <string name="arrow_right" translatable="false">→</string>
-    <string name="arrow_down" translatable="false">↓</string>
     <string name="hex">Hex:</string>
     <string name="hex_hint">#ff000000</string>
     <string name="set">Όρισε</string>
