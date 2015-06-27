@@ -774,6 +774,7 @@
     <string name="qs_notifications_tile">Notifications</string>
     <string name="qs_screen_off_tile">Screen off</string>
     <string name="qs_systemui_restart_tile">Restart SystemUI</string>
+    <string name="qs_tile_slim_floats">Slim Floats</string>
 
     <!-- QuickSettings collapse panel -->
     <string name="quick_settings_collapse_title">Auto close panel</string>
