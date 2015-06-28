@@ -2466,6 +2466,12 @@
 
         <service android:name="com.android.settings.aicp.hfm.CheckHosts" />
 
+        <receiver android:name="com.android.settings.aicp.utils.OnBoot">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
         <receiver android:name=".profiles.SetupDefaultProfileReceiver">
             <intent-filter>
                 <action android:name="com.cyanogenmod.setupwizard.SETUP_FINISHED" />
