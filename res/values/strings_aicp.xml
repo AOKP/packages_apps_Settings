@@ -984,6 +984,8 @@
     <string name="heads_up_dismiss_on_remove_title">Swipe behavior</string>
     <string name="heads_up_dismiss_on_remove_summary_enabled">Hide notification instead of dismiss</string>
     <string name="heads_up_dismiss_on_remove_summary_disabled">Hide and dismiss notification</string>
+    <string name="heads_up_floating_window_title">Heads Up</string>
+    <string name="heads_up_floating_window_summary">Longpress and release to open in float mode when not on home screen</string>
 
     <!-- Heads up timeout -->
     <string name="heads_up_time_out_title">Time out</string>
