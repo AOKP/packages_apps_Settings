@@ -5,7 +5,7 @@
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+          http://www.apache.org/licenses/LICENSE-2.0
 
      Unless required by applicable law or agreed to in writing, software
      distributed under the License is distributed on an "AS IS" BASIS,
@@ -14,7 +14,9 @@
      limitations under the License.
 -->
 
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/category_heads_up">
 
     <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
         android:key="heads_up_dismiss_on_remove"
@@ -38,18 +40,22 @@
         android:persistent="false"
         android:defaultValue="true" />
 
-    <ListPreference
+    <com.android.settings.widget.SeekBarPreferenceCham
         android:key="heads_up_time_out"
         android:title="@string/heads_up_time_out_title"
-        android:entries="@array/heads_up_time_out_entries"
-        android:entryValues="@array/heads_up_time_out_values"
+        android:max="10"
+        settings:minimum="0"
+        settings:unitsLeft=""
+        settings:unitsRight="sec"
         android:persistent="false" />
 
-    <ListPreference
+    <com.android.settings.widget.SeekBarPreferenceCham
         android:key="heads_up_snooze_time"
         android:title="@string/heads_up_snooze_title"
-        android:entries="@array/heads_up_snooze_entries"
-        android:entryValues="@array/heads_up_snooze_values"
+        android:max="30"
+        settings:minimum="0"
+        settings:unitsLeft=""
+        settings:unitsRight="min"
         android:persistent="false" />
 
     <PreferenceCategory
