@@ -60,8 +60,7 @@
                     android:title="@string/manage_trust_agents"
                     android:summary="@string/manage_trust_agents_summary"
                     android:persistent="false"
-                    android:fragment="com.android.settings.TrustAgentSettings"
-                    settings:advanced="true"/>
+                    android:fragment="com.android.settings.TrustAgentSettings"/>
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -77,14 +76,12 @@
         <PreferenceScreen
             android:key="lockscreen_shortcuts_settings"
             android:fragment="com.android.settings.cyanogenmod.LockscreenShortcuts"
-            android:title="@string/lockscreen_targets_message"
-            settings:advanced="true"/>
+            android:title="@string/lockscreen_targets_message"/>
 
         <com.android.settings.cyanogenmod.SecureSettingSwitchPreference
             android:key="lockscreen_visualizer"
             android:title="@string/lockscreen_visualizer_title"
-            android:defaultValue="true"
-            settings:advanced="true"/>
+            android:defaultValue="true"/>
     </PreferenceCategory>
 
 </PreferenceScreen>
