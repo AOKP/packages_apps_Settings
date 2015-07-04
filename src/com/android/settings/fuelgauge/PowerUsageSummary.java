@@ -258,32 +258,16 @@ public class PowerUsageSummary extends PowerUsageBase
         }
 
         MenuItem reset = menu.add(0, MENU_STATS_RESET, 0, R.string.battery_stats_reset)
-                .setIcon(R.drawable.ic_delete)
+                .setIcon(R.drawable.ic_actionbar_delete)
                 .setAlphabeticShortcut('d');
-        reset.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+        reset.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM |
+                MenuItem.SHOW_AS_ACTION_WITH_TEXT);
 
         MenuItem batterySaver = menu.add(0, MENU_BATTERY_SAVER, 0, R.string.battery_saver);
         batterySaver.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
 
         menu.add(0, MENU_HIGH_POWER_APPS, 0, R.string.high_power_apps);
         super.onCreateOptionsMenu(menu, inflater);
-    }
-
-    private void resetStats() {
-        AlertDialog dialog = new AlertDialog.Builder(getActivity())
-            .setTitle(R.string.battery_stats_reset)
-            .setMessage(R.string.battery_stats_message)
-            .setPositiveButton(R.string.ok_string, new OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    mStatsHelper.resetStatistics();
-                    refreshStats();
-                    mHandler.removeMessages(MSG_REFRESH_STATS);
-                }
-            })
-            .setNegativeButton(R.string.cancel, null)
-            .create();
-        dialog.show();
     }
 
     @Override
@@ -357,6 +341,24 @@ public class PowerUsageSummary extends PowerUsageBase
         Preference notAvailable = new Preference(getActivity());
         notAvailable.setTitle(R.string.power_usage_not_available);
         mAppListGroup.addPreference(notAvailable);
+    }
+
+    private void resetStats() {
+        AlertDialog dialog = new AlertDialog.Builder(getActivity())
+            .setTitle(R.string.battery_stats_reset)
+            .setMessage(R.string.battery_stats_message)
+            .setPositiveButton(R.string.ok_string, new OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    // Reset stats and request a refresh to initialize vars
+                    mStatsHelper.resetStatistics();
+                    refreshStats();
+                    mHandler.removeMessages(MSG_REFRESH_STATS);
+                }
+            })
+            .setNegativeButton(android.R.string.cancel, null)
+            .create();
+        dialog.show();
     }
 
     private void refreshBatterySaverOptions() {
