@@ -39,6 +39,8 @@ import com.android.settings.SettingsPreferenceFragment;
 public class LockScreenWeatherSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
+    private static final String PREF_CAT_NOTIFICATIONS =
+            "weather_cat_notifications";
     private static final String PREF_SHOW_WEATHER =
             "weather_show_weather";
     private static final String PREF_SHOW_LOCATION =
@@ -49,6 +51,10 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
             "weather_condition_icon";
     private static final String PREF_COLORIZE_ALL_ICONS =
             "weather_colorize_all_icons";
+    private static final String PREF_HIDE_WEATHER =
+            "weather_hide_panel";
+    private static final String PREF_NUMBER_OF_NOTIFICATIONS =
+            "weather_number_of_notifications";
 
     private static final int MONOCHROME_ICON = 0;
 
@@ -60,6 +66,8 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
     private CheckBoxPreference mShowTimestamp;
     private ListPreference mConditionIcon;
     private CheckBoxPreference mColorizeAllIcons;
+    private ListPreference mHideWeather;
+    private ListPreference mNumberOfNotifications;
 
     private ContentResolver mResolver;
 
@@ -85,6 +93,13 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
                 (CheckBoxPreference) findPreference(PREF_SHOW_WEATHER);
         mShowWeather.setChecked(showWeather);
         mShowWeather.setOnPreferenceChangeListener(this);
+
+        PreferenceCategory catNotifications =
+                (PreferenceCategory) findPreference(PREF_CAT_NOTIFICATIONS);
+        mHideWeather =
+                (ListPreference) findPreference(PREF_HIDE_WEATHER);
+        mNumberOfNotifications =
+                (ListPreference) findPreference(PREF_NUMBER_OF_NOTIFICATIONS);
 
         if (showWeather) {
             mShowLocation =
@@ -112,11 +127,36 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
             mColorizeAllIcons.setChecked(Settings.System.getInt(mResolver,
                     Settings.System.LOCK_SCREEN_WEATHER_COLORIZE_ALL_ICONS, 0) == 1);
             mColorizeAllIcons.setOnPreferenceChangeListener(this);
+
+            int  hideWeather = Settings.System.getInt(mResolver,
+                    Settings.System.LOCK_SCREEN_WEATHER_HIDE_PANEL, 0);
+            mHideWeather.setValue(String.valueOf(hideWeather));
+            mHideWeather.setOnPreferenceChangeListener(this);
+
+            if (hideWeather == 0) {
+                mHideWeather.setSummary(R.string.weather_hide_panel_auto_summary);
+                catNotifications.removePreference(mNumberOfNotifications);
+            } else if (hideWeather == 1) {
+                int numberOfNotifications = Settings.System.getInt(mResolver,
+                       Settings.System.LOCK_SCREEN_WEATHER_NUMBER_OF_NOTIFICATIONS, 6);
+                mNumberOfNotifications.setValue(String.valueOf(numberOfNotifications));
+                mNumberOfNotifications.setSummary(mNumberOfNotifications.getEntry());
+                mNumberOfNotifications.setOnPreferenceChangeListener(this);
+
+                mHideWeather.setSummary(getString(R.string.weather_hide_panel_custom_summary,
+                        mNumberOfNotifications.getEntry()));
+            } else {
+                mHideWeather.setSummary(R.string.weather_hide_panel_never_summary);
+                catNotifications.removePreference(mNumberOfNotifications);
+            }
         } else {
             removePreference(PREF_SHOW_LOCATION);
             removePreference(PREF_SHOW_TIMESTAMP);
             removePreference(PREF_CONDITION_ICON);
             removePreference(PREF_COLORIZE_ALL_ICONS);
+            catNotifications.removePreference(mHideWeather);
+            catNotifications.removePreference(mNumberOfNotifications);
+            removePreference(PREF_CAT_NOTIFICATIONS);
         }
 
         setHasOptionsMenu(true);
@@ -142,6 +182,8 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         boolean value;
+        int intValue;
+        int index;
 
         if (preference == mShowWeather) {
             value = (Boolean) newValue;
@@ -163,8 +205,8 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
                     value ? 1 : 0);
             return true;
         } else if (preference == mConditionIcon) {
-            int intValue = Integer.valueOf((String) newValue);
-            int index = mConditionIcon.findIndexOfValue((String) newValue);
+            intValue = Integer.valueOf((String) newValue);
+            index = mConditionIcon.findIndexOfValue((String) newValue);
             Settings.System.putInt(mResolver,
                     Settings.System.LOCK_SCREEN_WEATHER_CONDITION_ICON, intValue);
             mConditionIcon.setSummary(mConditionIcon.getEntries()[index]);
@@ -174,6 +216,18 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
             Settings.System.putInt(mResolver,
                     Settings.System.LOCK_SCREEN_WEATHER_COLORIZE_ALL_ICONS,
                     value ? 1 : 0);
+            return true;
+        } else if (preference == mHideWeather) {
+            intValue = Integer.valueOf((String) newValue);
+            Settings.System.putInt(mResolver,
+                    Settings.System.LOCK_SCREEN_WEATHER_HIDE_PANEL, intValue);
+            refreshSettings();
+            return true;
+        } else if (preference == mNumberOfNotifications) {
+            intValue = Integer.valueOf((String) newValue);
+            Settings.System.putInt(mResolver,
+                    Settings.System.LOCK_SCREEN_WEATHER_NUMBER_OF_NOTIFICATIONS, intValue);
+            refreshSettings();
             return true;
         }
         return false;
@@ -222,6 +276,10 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
                                     MONOCHROME_ICON);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.LOCK_SCREEN_WEATHER_COLORIZE_ALL_ICONS, 0);
+                            Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.LOCK_SCREEN_WEATHER_HIDE_PANEL, 0);
+                            Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.LOCK_SCREEN_WEATHER_NUMBER_OF_NOTIFICATIONS, 6);
                             getOwner().refreshSettings();
                         }
                     })
@@ -238,6 +296,10 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
                                     Settings.System.LOCK_SCREEN_WEATHER_CONDITION_ICON, 2);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.LOCK_SCREEN_WEATHER_COLORIZE_ALL_ICONS, 1);
+                            Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.LOCK_SCREEN_WEATHER_HIDE_PANEL, 0);
+                            Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.LOCK_SCREEN_WEATHER_NUMBER_OF_NOTIFICATIONS, 6);
                             getOwner().refreshSettings();
                         }
                     })
