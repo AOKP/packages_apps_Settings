@@ -1091,6 +1091,10 @@
     <string name="clear_all_color_title">Clear all icon color</string>
     <string name="notification_drawer_clear_all_icon_color_title">Icon</string>
 
+    <!-- Expanded header color -->
+    <string name="background_header_title">Header background color</string>
+    <string name="expanded_header_background_color_title">Color</string>
+
     <!-- Task Manager -->
     <string name="enable_task_manager_title">Task Manager</string>
     <string name="enable_task_manager_summary">Enable/Disable action for the task manager button in the expanded statusbar area.</string>
