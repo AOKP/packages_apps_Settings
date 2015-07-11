@@ -1280,4 +1280,8 @@
     <string name="slim_action_floats">Slim Actions and Pie</string>
     <string name="slim_action_floats_summary">Launch Slim and Pie Actions in Floating Window Mode</string>
 
+    <!-- Hide lock screen carrier -->
+    <string name="lock_screen_hide_carrier_title">Hide carrier on lock screen</string>
+    <string name="lock_screen_hide_carrier_summary">SystemUI will be restarted on switch toggle.</string>
+
 </resources>
