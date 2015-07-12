@@ -196,6 +196,10 @@ public class QSTileHolder {
                 resourceName = "ic_qs_reboot_recovery";
                 stringId = R.string.qs_tile_slimaction;
                 break;
+            case QSConstants.TILE_SLIMPIE:
+                resourceName = "ic_qs_pie_on";
+                stringId = R.string.qs_tile_slimpie;
+                break;
             case QSConstants.TILE_MUSIC:
                 resourceName = "ic_qs_media_play";
                 stringId = R.string.qs_music_play_tile;

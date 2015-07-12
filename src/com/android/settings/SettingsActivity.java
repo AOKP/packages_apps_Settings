@@ -129,6 +129,8 @@ import com.android.settings.wifi.AdvancedWifiSettings;
 import com.android.settings.wifi.SavedAccessPointsWifiSettings;
 import com.android.settings.wifi.WifiSettings;
 import com.android.settings.wifi.p2p.WifiP2pSettings;
+import com.android.settings.cyanogenmod.qs.QSTiles;
+import com.android.settings.aicp.PieControl;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -335,6 +337,7 @@ public class SettingsActivity extends Activity
             DisplayRotation.class.getName(),
             ExpandedDesktopPreferenceFragment.class.getName(),
             AmbientSettings.class.getName(),
+            PieControl.class.getName(),
             LiveDisplay.class.getName(),
             HeadsUpSettings.class.getName()
     };
