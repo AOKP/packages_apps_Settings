@@ -107,6 +107,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String ROTATION_ANGLE_180 = "180";
     private static final String ROTATION_ANGLE_270 = "270";
 
+    private PreferenceScreen mDisplaySettings;
     private PreferenceScreen mDisplayRotationPreference;
 
     private FontDialogPreference mFontSizePref;
@@ -126,6 +127,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private SwitchPreference mTapToWake;
     private PreferenceScreen mWakeGestures;
     private PreferenceScreen mDozeFragement;
+    private SwitchPreference mProximityWake;
 
     private CmHardwareManager mCmHardwareManager;
 
@@ -147,6 +149,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.display_settings);
 
         PreferenceScreen prefSet = getPreferenceScreen();
+
+        mDisplaySettings = (PreferenceScreen) findPreference("display_settings");
 
         mScreenSaverPreference = findPreference(KEY_SCREEN_SAVER);
         if (mScreenSaverPreference != null
@@ -172,6 +176,15 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             mAutoBrightnessPreference.setOnPreferenceChangeListener(this);
         } else {
             removePreference(KEY_AUTO_BRIGHTNESS);
+        }
+
+        // Proximity wake up
+        mProximityWake = (SwitchPreference) findPreference("proximity_on_wake");
+        boolean proximityCheckOnWait = getResources().getBoolean(
+                com.android.internal.R.bool.config_proximityCheckOnWake);
+        if (!proximityCheckOnWait) {
+            mDisplaySettings.removePreference(mProximityWake);
+            Settings.System.putInt(getContentResolver(), Settings.System.PROXIMITY_ON_WAKE, 0);
         }
 
         if (isLiftToWakeAvailable(activity)) {

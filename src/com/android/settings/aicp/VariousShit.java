@@ -129,7 +129,6 @@ public class VariousShit extends SettingsPreferenceFragment
     // Package name of the cLock app
     public static final String LOCKCLOCK_PACKAGE_NAME = "com.cyanogenmod.lockclock";
 
-    private SwitchPreference mProximityWake;
     private PreferenceScreen mVariousShitScreen;
     private Preference mCustomBootAnimation;
     private ImageView mView;
@@ -171,14 +170,6 @@ public class VariousShit extends SettingsPreferenceFragment
         Activity activity = getActivity();
 
         mVariousShitScreen = (PreferenceScreen) findPreference("various_shit_screen");
-
-        // Proximity wake up
-        mProximityWake = (SwitchPreference) findPreference("proximity_on_wake");
-        boolean proximityCheckOnWait = res.getBoolean(
-                com.android.internal.R.bool.config_proximityCheckOnWake);
-        if (!proximityCheckOnWait) {
-            mVariousShitScreen.removePreference(mProximityWake);
-        }
 
         // cLock app check
         mLockClock = (Preference) findPreference(KEY_LOCKCLOCK);

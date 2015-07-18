@@ -18,12 +18,6 @@
         android:title="@string/various_shit_title"
         android:key="various_shit_screen">
 
-    <!-- Proximity on wake -->
-    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-        android:key="proximity_on_wake"
-        android:title="@string/proximity_on_wake_title"
-        android:summary="@string/proximity_on_wake_summary" />
-
     <!-- Notifications -->
     <PreferenceCategory
         android:key="aicp_notifications_category"

@@ -17,7 +17,8 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
                   xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
         android:title="@string/display_settings"
-        settings:keywords="@string/keywords_display">
+        settings:keywords="@string/keywords_display"
+        android:key="display_settings" >
 
         <PreferenceScreen
                 android:key="brightness"
@@ -52,6 +53,13 @@
                 android:key="screensaver"
                 android:title="@string/screensaver_settings_title"
                 android:fragment="com.android.settings.DreamSettings" />
+
+        <!-- Proximity on wake -->
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+                android:key="proximity_on_wake"
+                android:title="@string/proximity_on_wake_title"
+                android:summary="@string/proximity_on_wake_summary"
+                android:defaultValue="true" />
 
         <SwitchPreference
                 android:key="lift_to_wake"
