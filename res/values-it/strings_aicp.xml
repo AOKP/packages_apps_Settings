@@ -141,7 +141,7 @@
     <string name="keyboard_rotation_toggle_title">Rotazione Automatica tastiera</string>
     <string name="keyboard_rotation_toggle_summary">Forza la rotazione automatica della tastiera quando appare</string>
     <string name="keyboard_rotation_timeout_title">Auto rotazione timeout</string>
-    <string name="keyboard_rotation_timeout_summary">Disabilita sensore rotazione<xliff:g id="rotate_timeout">%1$s</xliff:g> Secondi dopo che la tastiera è scomparsa</string>
+    <string name="keyboard_rotation_timeout_summary">Disabilita sensore rotazione <xliff:g id="rotate_timeout">%1$s</xliff:g> Secondi dopo che la tastiera è scomparsa</string>
     <string name="keyboard_rotation_dialog">Questa opzione forza la rotazione automatica quando appare la tastiera.Non ha effetto se la Rotazione Automatica è già abilitata.</string>
     <string name="show_enter_key_title">Visualizza Tasto Invio</string>
     <string name="show_enter_key_summary">Forza la visualizzazione del tasto Invio</string>
@@ -161,7 +161,7 @@
     <string name="aicp_extras_category">Altro</string>
 
     <!-- Per app controls for LP keyguard Notification -->
-    <string name="app_notification_show_on_keyguard_title">Visualizza nella Lockscreen</string>
+    <string name="app_notification_show_on_keyguard_title">Visualizza nella Scheramta di blocco</string>
     <string name="app_notification_show_on_keyguard_summary">Visualizza le Notifiche da questa app nella Schermata di blocco</string>
     <string name="app_notification_no_ongoing_on_keyguard_title">Disabilita Notifiche in corso nella Schermata di blocco</string>
     <string name="app_notification_no_ongoing_on_keyguard_summary">Non Visualizzare le Notifiche da questa app nella Schermata di blocco</string>
@@ -198,7 +198,7 @@
     <string name="enable_clock_weekday">Abilita il giorno</string>
     <string name="enable_clock_weekday_summary">Abbrevia il giorno della settimana</string>
     <string name="right_clock">Ora a Destra</string>
-    <string name="center_clock">Ora al centroCenter</string>
+    <string name="center_clock">Ora al centro</string>
     <string name="left_clock">Ora a sinistra</string>
     <string name="dont_show">Non visualizzare</string>
     <string name="clock_date_display">Data</string>
@@ -230,26 +230,26 @@
     <string name="options_settings_title">Opzioni</string>
     <string name="media_scanner_on_boot_title">Comportamento MediaScanner al boot</string>
     <string name="media_scanner_on_boot_enabled">Scansiona media</string>
-    <string name="media_scanner_on_boot_ask">Chiedi se scansionare(notification)</string>
+    <string name="media_scanner_on_boot_ask">Chiedi se scansionare (notifica)</string>
     <string name="media_scanner_on_boot_disabled">Non scansionare media</string>
 
     <!-- QuickSettings: Quick Pulldown -->
     <string name="qs_title">Impostazioni Rapide (QS)</string>
     <string name="title_quick_pulldown">Quick pulldown</string>
-    <string name="summary_quick_pulldown">%1$s Swipe sul bordo visualizza impostazioni rapide</string>
+    <string name="summary_quick_pulldown">Swipe sul bordo %1$s visualizza impostazioni rapide</string>
     <string name="quick_pulldown_off">Off</string>
     <string name="quick_pulldown_left">Sinistra</string>
     <string name="quick_pulldown_right">Destra</string>
 
     <!-- tap-to-sleep -->
     <string name="double_tap_to_sleep_title">Doppio Tap per spegnere</string>
-    <string name="double_tap_to_sleep_summary">Doppio Tap sulla barra delle notifiche per spegnere il dispaly</string>
+    <string name="double_tap_to_sleep_summary">Doppio Tap sulla barra notifiche per spegnere il dispaly</string>
 
     <!-- Double Tap Navbar to Sleep -->
     <string name="double_tap_sleep_nav_bar_title">Doppio Tap per spegnere</string>
-    <string name="double_tap_sleep_nav_bar_summary">Doppio Tap sulla barra di navigazione per spegnere il display</string>
+    <string name="double_tap_sleep_nav_bar_summary">Doppio Tap sulla barra navigazione per spegnere il display</string>
 
-    <string name="block_on_secure_keyguard_title">Disabilita nella Schermata di blocco</string>
+    <string name="block_on_secure_keyguard_title">Disabilita nella Schermata di blocco.</string>
     <string name="block_on_secure_keyguard_summary">Disabilità impostazioni rapide nella Schermata di blocco.</string>
 
     <!-- LockClocK -->
@@ -292,7 +292,7 @@
 
     <!-- Notification counter -->
     <string name="status_bar_notif_count_title">Mostra il numero sulle notifiche</string>
-    <string name="status_bar_notif_count_summary">Visualizza il numero delle nofiche pendenti nella barra delle notifiche</string>
+    <string name="status_bar_notif_count_summary">Visualizza il numero delle nofiche pendenti nella barra notifiche</string>
 
     <!--Quick unlock -->
     <string name="unlock_quick_unlock_control_title">Quick unlock</string>
@@ -306,7 +306,7 @@
     <string name="lock_numpad_random_on_request">On request</string>
 
     <!-- Search Bar Switcher -->
-    <string name="recents_show_searchbar">Barra di ricenrca nei Recenti</string>
+    <string name="recents_show_searchbar">Barra di ricerca nei Recenti</string>
     <string name="recents_show_searchbar_summary">Visualizza o nasconde la barra di ricerca Google nei recenti</string>
 
     <!-- Screenshot sound -->
@@ -428,8 +428,8 @@
     <string name="screen_off_gesture_settings_title">Screen off gestures</string>
 
     <!-- Lockscreen Shortcuts -->
-    <string name="lockscreen_shortcuts_title">Scorciatoie Schermata blocco</string>
-    <string name="lockscreen_shortcuts_summary">Visualizza nella schermata di blocco sotto l\'ora le scorciatoie</string>
+    <string name="lockscreen_shortcuts_title">Scorciatoie centrali nella schermata di sblocco</string>
+    <string name="lockscreen_shortcuts_summary">Visualizza nella schermata di sblocco sotto l\'ora le scorciatoie</string>
     <string name="lockscreen_shorcuts_launch_type_title">Tipo di attivazione</string>
     <string name="lockscreen_shortcuts_single_tap">Singolo Click</string>
     <string name="lockscreen_shortcuts_double_tap">Doppio Tap</string>
@@ -440,36 +440,36 @@
     <string name="show_unac_and_overcounted_stats_summary">Show in battery statistics unaccounted and over-counted usage.</string>
 
     <!-- Gesture Anywhere -->
-    <string name="gesture_anywhere_title">Gesture Ovunque</string>
-    <string name="gesture_anywhere_enabled_title">Gesture ovunque</string>
-    <string name="gesture_anywhere_enabled_summary">Abilita Gesture</string>
+    <string name="gesture_anywhere_title">Gesture</string>
+    <string name="gesture_anywhere_enabled_title">Gesture Ovunque</string>
+    <string name="gesture_anywhere_enabled_summary">Abilita Gesture ovunque</string>
     <string name="gesture_anywhere_position_title">Posizione</string>
     <string name="gesture_anywhere_position_left">Bordo Sinistro</string>
     <string name="gesture_anywhere_position_right">Brodo Destro</string>
-    <string name="gesture_anywhere_gestures_title">Gestures</string>
+    <string name="gesture_anywhere_gestures_title">Configura Gesture</string>
     <string name="gesture_anywhere_gestures_summary">Aggiungi, rimuovi, edita gestures</string>
     <string name="gesture_anywhere_floating">Modalità Finestra</string>
     <string name="gesture_anywhere_floating_summary">Avvia in Modalità Finestra</string>
     <!-- Label, button used to add a gesture -->
     <string name="ga_button_add">Add gesture</string>
     <!-- Label, button used to reload all gestures -->
-    <string name="ga_button_reload">Reload</string>
+    <string name="ga_button_reload">Ricarica</string>
     <!-- Label, button used to cancel the operation of adding a gesture -->
     <string name="ga_button_discard">Elimina</string>
     <!-- Label, button used to save a gesture newly created -->
-    <string name="ga_button_done">Done</string>
+    <string name="ga_button_done">Fatto</string>
     <!-- Label, prompt asking the user to enter the name of the gesture -->
-    <string name="ga_prompt_gesture_name">Name</string>
+    <string name="ga_prompt_gesture_name">Nome</string>
     <!-- Error message, informs the user he needs to enter a name before saving a gesture -->
-    <string name="ga_error_missing_name">You must enter a name</string>
+    <string name="ga_error_missing_name">Devi inserire un nome</string>
     <!-- success message, tells the user where the gesture was saved -->
-    <string name="ga_save_success">Gesture saved in %s</string>
+    <string name="ga_save_success">Gesture salvata in %s</string>
     <!-- Buttons in Rename gesture dialog box -->
     <string name="ga_rename_action">OK</string>
     <!-- Buttons in Rename gesture dialog box -->
-    <string name="ga_cancel_action">Cancel</string>
+    <string name="ga_cancel_action">Cancella</string>
     <!-- Message displayed when the user opens the gestures settings screen -->
-    <string name="ga_gestures_loading">Loading gestures...</string>
+    <string name="ga_gestures_loading">Caricamento gestures...</string>
     <!-- Message displayed when the user has no gestures -->
     <string name="ga_gestures_empty">No gestures</string>
     <!-- Title of the screen used to view/manage gestures -->
@@ -481,25 +481,25 @@
     <!-- Message displayed when a gesture is successfully deleted -->
     <string name="ga_gestures_delete_success">Gesture cancellata</string>
     <!-- Title of dialog box -->
-    <string name="ga_gestures_rename_title">Rename gesture</string>
+    <string name="ga_gestures_rename_title">Rinomina gesture</string>
     <!-- Label of gesture name field in Rename gesture dialog box -->
-    <string name="ga_gestures_rename_label">Gesture name</string>
+    <string name="ga_gestures_rename_label">Nome Gesture</string>
     <!-- Message, displayed when the sdcard cannot be found, 1st parameter is the name of the file that stores the gestures.  CHAR LIMIT=80 -->
-    <string name="ga_gestures_error_loading">Could not load %s. Make sure you have storage available.</string>
-    <string name="trigger_category">Trigger region</string>
-    <string name="trigger_width_title">Trigger width</string>
-    <string name="trigger_width_summary">Adjust the width of the trigger area</string>
-    <string name="trigger_top_title">Trigger position</string>
-    <string name="trigger_top_summary">Adjust the vertical postion of the trigger area</string>
-    <string name="trigger_bottom_title">Trigger height</string>
-    <string name="trigger_bottom_summary">Adjust the height of the trigger area</string>
-    <string name="picker_activities">Activities</string>
-    <string name="select_custom_app_title">Select custom app</string>
-    <string name="select_custom_activity_title">Select custom activity</string>
-    <string name="profile_applist_title">Applications</string>
+    <string name="ga_gestures_error_loading">Impossibile caricare %s. Controlla che lo storage è disponibile.</string>
+    <string name="trigger_category">Configura Trigger</string>
+    <string name="trigger_width_title">Larghezza Trigger</string>
+    <string name="trigger_width_summary">Modifica la larghezza della Trigger area</string>
+    <string name="trigger_top_title">Posizione Trigger</string>
+    <string name="trigger_top_summary">Modifica la posizione verticale della Trigger area</string>
+    <string name="trigger_bottom_title">Altezza Trigger</string>
+    <string name="trigger_bottom_summary">Modifica l\'altezza della Trigger area</string>
+    <string name="picker_activities">Attività</string>
+    <string name="select_custom_app_title">Selezione APP</string>
+    <string name="select_custom_activity_title">Selezione Azione</string>
+    <string name="profile_applist_title">Applicazioni</string>
 
     <!-- Display and Animations -->
-    <string name="disp_anim_settings_title">Display a Animazioni</string>
+    <string name="disp_anim_settings_title">Display e Animazioni</string>
 
     <!-- ListView animation -->
     <string name="interface_settings_animation_title">Opzioni Animazione</string>
@@ -596,19 +596,19 @@
     <!-- Circle app bar -->
     <string name="category_app_circle_bar_title">App launcher</string>
     <string name="app_circle_bar_title">App circle bar</string>
-    <string name="app_circle_bar_summary">Show circle app launcher after touching right side of screen</string>
-    <string name="app_circle_bar_included_apps_title">Included apps</string>
-    <string name="app_circle_bar_included_apps_summary">Apps will show in app circle bar</string>
-    <string name="trigger_width_title">Trigger width</string>
-    <string name="trigger_width_summary">Adjust the width of the trigger area</string>
-    <string name="trigger_top_title">Trigger position</string>
-    <string name="trigger_top_summary">Adjust the vertical postion of the trigger area</string>
-    <string name="trigger_bottom_title">Trigger height</string>
-    <string name="trigger_bottom_summary">Adjust the height of the trigger area</string>
+    <string name="app_circle_bar_summary">Visualizza la circle app bar toccando il lato destro dello schermo</string>
+    <string name="app_circle_bar_included_apps_title">Includi apps</string>
+    <string name="app_circle_bar_included_apps_summary">App che vuoi siano visibili</string>
+    <string name="trigger_width_title">Larghezza Trigger</string>
+    <string name="trigger_width_summary">Modifica la larghezza della Trigger area</string>
+    <string name="trigger_top_title">Posizione Trigger</string>
+    <string name="trigger_top_summary">Modifica la posizione verticale della Trigger area</string>
+    <string name="trigger_bottom_title">Altezza Trigger</string>
+    <string name="trigger_bottom_summary">Modifica l\'altezza della Trigger area</string>
 
     <!-- Toast Animation -->
     <string name="toast_animation_title">Toast animation</string>
-    <string name="toast_none_animation">None</string>
+    <string name="toast_none_animation">Nome</string>
     <string name="toast_default_animation">Default</string>
     <string name="toast_fade_animation">Fade</string>
     <string name="toast_SlideRight_animation">Slide right</string>
@@ -629,7 +629,7 @@
     <string name="volume_steps_title">Step Volume</string>
     <string name="volume_steps_alarm_title">Step Volume: Sveglia</string>
     <string name="volume_steps_dtmf_title">Step Volume: DTMF</string>
-    <string name="volume_steps_music_title">Step Volume: Mausica</string>
+    <string name="volume_steps_music_title">Step Volume: Musica</string>
     <string name="volume_steps_notification_title">Step Volume: Notifiche</string>
     <string name="volume_steps_ring_title">Step Volume: Suoneria</string>
     <string name="volume_steps_system_title">Step Volume: Sistema</string>
@@ -643,8 +643,8 @@
 
     <!-- Lockscreen weather -->
     <string name="weather_cat_Notification_title">Notifiche</string>
-    <string name="lock_screen_weather_settings_title">Meteo schermata di blocco</string>
-    <string name="lock_screen_colors_title">Colore Schermata di Blocco</string>
+    <string name="lock_screen_weather_settings_title">Meteo schermata di sblocco</string>
+    <string name="lock_screen_colors_title">Colori schermata di sblocco</string>
     <string name="lock_screen_color_settings_summary">Personalizza colore</string>
     <string name="weather_show_weather_title">Visualizza Meteo</string>
     <string name="weather_show_weather_summary">Abilita informazioni Meteo</string>
@@ -659,16 +659,16 @@
     <string name="weather_condition_icon_vclouds_title">VClouds</string>
     <string name="weather_colorize_all_icons_title">Colara tutte le icone</string>
     <string name="weather_colorize_all_icons_summary">Abilita colore icone, disabilitata solo con icone monocromatica</string>
-    <string name="weather_hide_panel_title">Nascondi Pannelo Meteo</string>
+    <string name="weather_hide_panel_title">Nascondi pannello Meteo</string>
     <string name="weather_hide_panel_dlg_title">Scegli quando nascondere il pannello Meteo</string>
     <string name="weather_hide_panel_auto_title">Auto</string>
     <string name="weather_hide_panel_custom_title">Personalizzata</string>
     <string name="weather_hide_panel_never_title">Mai</string>
-    <string name="weather_hide_panel_auto_summary">Il Panello Meteo sarà nasconsco, Quando le Notifiche avranno raggiunto il numero massimo nella schermata di blocco</string>
-    <string name="weather_hide_panel_custom_summary">Il Panello Meteo sarà nascosto, Quando le Notifiche avranno raggiunto il numero scelto(%s)</string>
+    <string name="weather_hide_panel_auto_summary">Il Pannello Meteo sarà nasconsco, Quando le Notifiche avranno raggiunto il numero massimo nella schermata di sblocco</string>
+    <string name="weather_hide_panel_custom_summary">Il Panello Meteo sarà nascosto, Quando le Notifiche avranno raggiunto il numero scelto (%s)</string>
     <string name="weather_hide_panel_never_summary">Il Pannello Meteo non può essere nascosto</string>
     <string name="weather_number_of_Notification_title">Numero di Notifiche</string>
-    <string name="weather_number_of_Notification_dlg_title">Scegli il numero di Notifiche per nascondere il Meteo</string>
+    <string name="weather_number_of_Notification_dlg_title">Scegli il numero max di notifiche per nascondere il Meteo</string>
     <string name="weather_number_of_Notification_always_title">Sempre</string>
     <string name="weather_number_of_Notification_two_title">2</string>
     <string name="weather_number_of_Notification_three_title">3</string>
@@ -679,19 +679,19 @@
     <string name="position_right_title">Destra</string>
     <string name="position_centered_title">Centro</string>
     <string name="hidden_title">Nascosto</string>
-    <string name="dlg_reset_values_message">Rest valori a\nAndroid- o AICP default?</string>
+    <string name="dlg_reset_values_message">Reset valori a\nAndroid- o AICP default?</string>
     <string name="dlg_reset_android">Android</string>
     <string name="dlg_reset_aicp">AICP</string>
 
     <!-- Battery Bar -->
     <string name="battery_bar_title">Barra Batteria</string>
     <string name="battery_bar">Posizione Barra Batteria</string>
-    <string name="battery_bar_color">Barra Batteria Colore</string>
+    <string name="battery_bar_color">Colore Barra Batteria</string>
     <string name="battery_bar_cat">Stile Barra Batteria</string>
     <string name="battery_bar_style_title">Posizione Barra Batteria</string>
     <string name="battery_bar_thickness_title">Spessore Barra Batteria</string>
     <string name="battery_bar_animate_title">Animazione in carica</string>
-    <string name="battery_bar_animate_summary">L\'animazione in carica potrebbe non risulta utile per l\'utilizzatore.Abilitala a tua discrezione.</string>
+    <string name="battery_bar_animate_summary">L\'animazione in carica non risulta utile per l\'utilizzatore.Abilitala a tua discrezione.</string>
 
     <!-- StatusBar Clock style -->
     <string name="clock_font_style_title">Stile Font Ora</string>
@@ -705,8 +705,8 @@
     <string name="recents_panel_settings">Configurazione Pannello Recenti</string>
     <string name="recents_panel_title">Panello Recenti</string>
     <string name="show_clear_all_recents_button_title">Tasto cancella tutti i recenti</string>
-    <string name="show_clear_all_recents_button_summary">Visualizza Tasto Cancella tutti</string>
-    <string name="recents_clear_all_location_title">Posizione Tasto Cancella Tutti</string>
+    <string name="show_clear_all_recents_button_summary">Visualizza tasto cancella tutti</string>
+    <string name="recents_clear_all_location_title">Posizione tasto cancella tutti</string>
     <string name="recents_clear_all_location_top_right">Alto a Destra</string>
     <string name="recents_clear_all_location_top_left">Alto a Sinistra</string>
     <string name="recents_clear_all_location_top_center">Alto in Centro</string>
@@ -716,7 +716,7 @@
     <string name="recents_clear_all_dismiss_all_title">Cancella tutti i Task</string>
     <string name="recents_clear_all_dismiss_all_summary">Scegli se cancellare tutti i tasks o ignora quelli in primo piano</string>
     <string name="recents_show_membar_title">Barra memoria</string>
-    <string name="recents_show_membar_summary">Visualizza la barra della Memoria disponibile</string>
+    <string name="recents_show_membar_summary">Visualizza in alto la barra della memoria disponibile</string>
 
     <!-- OmniSwitch -->
     <string name="omniswitch_settings_title">OmniSwitch</string>
@@ -728,20 +728,20 @@
     <string name="omniswitch_first_time_title">Informazioni</string>
     <string name="omniswitch_first_time_message">Sicuro che OmniSwitch è abilitato. per farlo usa \"Configurazione\"</string>
 
-    <string name="alarm_ringtone_title">Default Suoneri Sveglia</string>
+    <string name="alarm_ringtone_title">Suoneria Sveglia</string>
 
     <!-- Setting option name to change LCD density -->
     <string name="lcd_density">Densità LCD</string>
     <string name="dialog_title_lcd_density">Densità LCD</string>
     <string name="lcd_density_summary">xxx DPI</string>
-    <string name="custom_density_title">Cambiala come a tuo piacimento</string>
+    <string name="custom_density_title">Cambiala a tuo piacimento</string>
     <string name="custom_density_summary">Se non compatibile con il tuo Play Store,Controlla di avere un Multi-DPI Play Store installato.</string>
     <string name="custom_density_summary_invalid">"Densità non valida!"</string>
-    <string name="custom_density">personalizza</string>
-    <string name="set_custom_density_title">Set Densità personalizza</string>
+    <string name="custom_density">Personalizza</string>
+    <string name="set_custom_density_title">Set densità personalizza</string>
     <string name="set_custom_density_set">Set</string>
     <string name="custom_density_dialog_title">WARNING!</string>
-    <string name="custom_density_dialog_summary">Cambiare densità del display poù creare problemi con alcune apps"</string>
+    <string name="custom_density_dialog_summary">Cambiare densità del display può creare problemi con alcune apps</string>
     <string name="dpi">DPI</string>
     <string name="restarting_ui">Riavvia UI\u2026</string>
 
@@ -755,11 +755,11 @@
 
     <!-- Navigation bar -->
     <string name="navbar_style_dimen_title">Dimensioni barra di navigazione</string>
-    <string name="navbar_dimensions_reset_message">Reset la configurazione a quella di default?</string>
-    <string name="navigation_bar_height_title">Altezza Barra di Navigazione</string>
-    <string name="navigation_bar_height_summary">Altezza Barra di Navigazione in Orizzontale</string>
-    <string name="navigation_bar_width_title">larghezza Barra di navigazione</string>
-    <string name="navigation_bar_width_summary">Altezza Barra di navigazione se è sul lato lungo</string>
+    <string name="navbar_dimensions_reset_message">Resetta la configurazione a quella di default?</string>
+    <string name="navigation_bar_height_title">Altezza barra di navigazione</string>
+    <string name="navigation_bar_height_summary">Altezza barra di navigazione in Orizzontale</string>
+    <string name="navigation_bar_width_title">Larghezza barra di navigazione</string>
+    <string name="navigation_bar_width_summary">Altezza barra di navigazione in Verticale</string>
     <string name="navigation_bar_size_42_dp_default">42 dp (default)</string>
     <string name="navigation_bar_size_36_dp">36 dp</string>
     <string name="navigation_bar_size_30_dp">30 dp</string>
@@ -779,7 +779,7 @@
     <string name="creating_preview">Creating preview...</string>
     <string name="error_reading_zip_file">Errore di lettura zip file</string>
     <string name="error_creating_preview">Errore creazione preview</string>
-    <string name="install_file_manager_error">Nessuna applicazione trovata per inserire il zip file.Installa a filemanager.</string>
+    <string name="install_file_manager_error">Nessuna applicazione trovata per inserire il file zip.Installa un filemanager.</string>
     <string name="apply">Applica</string>
 
     <!-- QuickSettings tiles -->
@@ -801,7 +801,7 @@
     <string name="quick_settings_collapse_summary">Chiude i Quick Settings dopo il click su un tile</string>
 
     <!-- QuickSettings 4 columns -->
-    <string name="qs_four_columns_title">Visualizza 4 Tile per riga</string>
+    <string name="qs_four_columns_title">Visualizza 4 tile per riga</string>
 
     <!-- QuickSettings colors -->
     <string name="background_title">Sfondo</string>
@@ -814,10 +814,10 @@
     <string name="qs_transparent_shade_title">Trasparenza</string>
     <string name="qs_transparent_shade_summary">Abilita la possibilità della trasparenza</string>
     <string name="qs_color_switch_title">Personalizzazione colori tasto</string>
-    <string name="qs_color_switch_summary">Toggle to control various custom quicksettings color options below</string>
+    <string name="qs_color_switch_summary">Personaliiza il colore di sfondo dei tile</string>
 
     <!-- Navigation bar button color -->
-    <string name="navbar_button_tint_title">Colori tasti barran di Navigazione</string>
+    <string name="navbar_button_tint_title">Colori tasti barra navigazione</string>
 
     <!-- AOKP custom system animations -->
     <string name="aokp_animation_title">System animations</string>
@@ -876,10 +876,10 @@
     <string name="doze_shake_acc_threshold_summary">Configure shake strength required to trigger activation</string>
 
     <string name="doze_time_mode_title">Visualizza Data e Ora</string>
-    <string name="doze_time_mode_summary">Forza DATA e Ora se non sono presenti notifiche</string>
+    <string name="doze_time_mode_summary">Forza dara e ora se non sono presenti notifiche</string>
 
-    <string name="doze_brightness_title">livello di Lumonisità in Doze Mode </string>
-    <string name="doze_brightness_summary">livello di luminosià del display(% of max allowed brightness)</string>
+    <string name="doze_brightness_title">Livello di Lumonisità in Doze Mode </string>
+    <string name="doze_brightness_summary">Livello di luminosià del display (% massima permessa)</string>
 
     <string name="twohundred_ms">200 ms</string>
     <string name="fivehundred_ms">500 ms</string>
@@ -911,12 +911,12 @@
 
     <!-- Show carrier label and custom -->
     <string name="carrier_options">Etichetta Operatore</string>
-    <string name="show_status_bar_carrier_title">Operatore Barra di Notifiche</string>
-    <string name="show_status_bar_carrier_summary">Visualizza operatore nella barra di notifiche</string>
-    <string name="custom_carrier_label_title">Personalizza Nome Operatore</string>
+    <string name="show_status_bar_carrier_title">Operatore barra notifiche</string>
+    <string name="show_status_bar_carrier_summary">Abilita operatore nella barra di notifiche</string>
+    <string name="custom_carrier_label_title">Personalizza nome operatore</string>
     <string name="custom_carrier_label_explain">Inserisci il nome.Lascia in bianco per ritornare al nome di default.</string>
-    <string name="custom_carrier_label_notset">Nome personalizzato non configurato</string>
-    <string name="status_bar_carrier_color">Colore Nome operatore</string>
+    <string name="custom_carrier_label_notset">Nome personalizzato non configurato/Default</string>
+    <string name="status_bar_carrier_color">Colore nome operatore</string>
 
     <!-- Statusbar AICP logo -->
     <string name="status_bar_aicp_logo_title">AICP logo</string>
@@ -924,8 +924,8 @@
     <string name="status_bar_aicp_logo_color">Colore AICP logo</string>
 
     <!-- Volume pane timeout -->
-    <string name="volume_panel_time_out_title">Mostra in sec Volume panello</string>
-    <string name="volume_panel_time_out_summary">Nascondi prima <xliff:g id="number">%d</xliff:g> Secondi. Auto hide on touch outside</string>
+    <string name="volume_panel_time_out_title">Mostra pannello volume (secondi)</string>
+    <string name="volume_panel_time_out_summary">Nascondi prima <xliff:g id="number">%d</xliff:g> Secondi.Tocca per nascondere</string>
     <string name="volume_panel_time_out_1.5sec">1,5 Secondi</string>
     <string name="volume_panel_time_out_3sec">3 Secondi (default)</string>
     <string name="volume_panel_time_out_5sec">5 Secondi</string>
@@ -942,16 +942,16 @@
     <string name="timeout_500">0,5 Secondi</string>
 
     <!-- Status bar greeting -->
-    <string name="status_bar_greeting_category_title">Messaggio nella barra delle notifiche</string>
+    <string name="status_bar_greeting_category_title">Messaggio nella barra notifiche</string>
     <string name="status_bar_greeting_title">Greeting</string>
     <string name="status_bar_greeting_summary">Visualizza un messaggio personalizzato dopo lo sblocco del device</string>
     <string name="status_bar_greeting_dialog">Set Messaggio</string>
     <string name="status_bar_greeting_main">Flash ON!!!</string>
-    <string name="status_bar_greeting_timeout_title">Tempo Visualizzazione</string>
+    <string name="status_bar_greeting_timeout_title">Tempo visualizzazione</string>
 
     <!-- Force expand Notification -->
-    <string name="notification_force_expand_title">Forza Espansione Notifiche</string>
-    <string name="notification_force_expand_summary">Forza Esapnsione Notifiche di tutte le app che supportano la funzione</string>
+    <string name="notification_force_expand_title">Forza l\'espansione notifiche</string>
+    <string name="notification_force_expand_summary">Forza l\'espansione notifiche di tutte le app che supportano la funzione</string>
 
     <!-- Slim Shortcuts -->
     <string name="slim_shortcut_picker">Slim Actions</string>
@@ -960,12 +960,12 @@
     <string name="qs_slim_action_title">SlimActions</string>
 
     <!-- Long press on lock screen lock icon to sleep -->
-    <string name="longpress_lock_icon_to_sleep_title">Pressione prolungata lucchetto spegne il display</string>
-    <string name="longpress_lock_icon_to_sleep_summary">Questa opzione non funziona con smart lock Attivo</string>
+    <string name="longpress_lock_icon_to_sleep_title">Pressione lucchetto spegne display</string>
+    <string name="longpress_lock_icon_to_sleep_summary">Questa opzione non funziona con smart lock attivo</string>
 
     <!-- Double tap gesture anywhere on the lock screen put device to sleep -->
-    <string name="double_tap_sleep_anywhere_title">Doppio TAP ovunque Spegne lo schermo</string>
-    <string name="double_tap_sleep_anywhere_summary">Doppio TAP ovunque nella schermata di blocco spegne lo schermo</string>
+    <string name="double_tap_sleep_anywhere_title">Doppio TAP display spegne lo schermo</string>
+    <string name="double_tap_sleep_anywhere_summary">Doppio TAP ovunque nella schermata di sblocco spegne lo schermo</string>
 
     <!-- Wakelock blocker -->
     <string name="wakelock_blocker_title">Wakelock blocker</string>
@@ -977,23 +977,23 @@
     <string name="wakelock_blocker_warning">Blocking wakelocks have the potential to cause instability, crashes or data loss</string>
 
     <!-- Heads Up -->
-    <string name="category_heads_up">Notifiche Heads up</string>
+    <string name="category_heads_up">Notifiche Heads Up</string>
     <string name="add_heads_up_package">Aggiungi app</string>
     <string name="add_heads_up_dnd_summary">Non visualizzare head up in queste apps</string>
     <string name="add_heads_up_blacklist_summary">Non visualizzare head up da queste apps</string>
     <string name="heads_up_dnd_title">Non disturbare</string>
     <string name="heads_up_blacklist_title">Blacklist</string>
-    <string name="heads_up_disabled_notice">Per permettere le Notifiche in a pop-up window sullo schermo,abilita Heads up</string>
+    <string name="heads_up_disabled_notice">Per permettere le notifiche in pop-up window sullo schermo,abilita Heads up</string>
     <string name="heads_up_dismiss_on_remove_title">Comportamento con Swipe </string>
     <string name="heads_up_dismiss_on_remove_summary_enabled">Nascondi la notifica ma non eliminarla</string>
-    <string name="heads_up_dismiss_on_remove_summary_disabled">Nascondi ed Elimina la notifica </string>
+    <string name="heads_up_dismiss_on_remove_summary_disabled">Nascondi ed elimina la notifica </string>
     <string name="heads_up_floating_window_title">Heads Up</string>
-    <string name="heads_up_floating_window_summary">Pressione per aprire in float mode non sulla home</string>
+    <string name="heads_up_floating_window_summary">Pressione per aprire in float mode.Non sulla home</string>
 
     <!-- Heads up timeout -->
     <string name="heads_up_time_out_title">Time out</string>
-    <string name="heads_up_time_out_summary">Visualizza la notifica per<xliff:g id="number">%d</xliff:g> Secondi</string>
-    <string name="heads_up_time_out_never_summary">Verra visualizzata fino a che non verrà eliminata</string>
+    <string name="heads_up_time_out_summary">Visualizza la notifica per <xliff:g id="number">%d</xliff:g> Secondi</string>
+    <string name="heads_up_time_out_never_summary">Visualizzata fino a che non verrà eliminata</string>
     <string name="heads_up_time_out_2sec">2 Secondi</string>
     <string name="heads_up_time_out_3sec">3 Secondi</string>
     <string name="heads_up_time_out_4sec">4 Secondi</string>
@@ -1006,11 +1006,11 @@
     <!-- Heads up touch outside -->
     <string name="heads_up_touch_outside_title">Comportamento con Tocco</string>
     <string name="heads_up_touch_outside_summary_enabled">Nascondi con tocco o con tasto home</string>
-    <string name="heads_up_touch_outside_summary_disabled">Non Nascondere con tocco o tasto home</string>
+    <string name="heads_up_touch_outside_summary_disabled">Non nascondere con tocco o tasto home</string>
 
     <!-- Heads up snooze -->
     <string name="heads_up_snooze_title">Sooze timer</string>
-    <string name="heads_up_snooze_summary">Swipe heads up per posticipare<xliff:g id="number">%d</xliff:g> Minuti</string>
+    <string name="heads_up_snooze_summary">Swipe heads up per posticipare a <xliff:g id="number">%d</xliff:g> Minuti</string>
     <string name="heads_up_snooze_disabled_summary">Snooze timer disabilitato</string>
     <string name="heads_up_snooze_1min">1 Minuti</string>
     <string name="heads_up_snooze_3min">3 Minuti</string>
@@ -1040,10 +1040,10 @@
     <string name="show_network_traffic_disable">Disabilita</string>
     <string name="show_network_traffic_meter">Meter</string>
     <string name="show_network_traffic_text">Testo</string>
-    <string name="show_network_traffic_both">Entrambe</string>
-    <string name="show_network_traffic_display">Visualizza network traffic nella Barra di notifiche</string>
-    <string name="show_network_traffic_monitor">Monitor network traffic monitor</string>
-    <string name="show_network_traffic_unit">Unità Visualizzata</string>
+    <string name="show_network_traffic_both">Entrambi</string>
+    <string name="show_network_traffic_display">Visualizza network traffic nella barra di notifiche</string>
+    <string name="show_network_traffic_monitor">Monitor network traffic</string>
+    <string name="show_network_traffic_unit">Unità visualizzata</string>
     <string name="show_network_traffic_frequency">intervallo update</string>
     <string name="show_network_traffic_up">Upload</string>
     <string name="show_network_traffic_down">Download</string>
@@ -1058,8 +1058,8 @@
     <string name="show_network_traffic_byte">Bytes per secondo</string>
     <string name="network_traffic_autohide">Nascondi Automaticamente</string>
     <string name="network_traffic_autohide_summary">Nascondi traffic monitor se non c\'è attività</string>
-    <string name="network_traffic_autohide_threshold">Inactivity threshold</string>
-    <string name="network_traffic_color_style">Colore Testo</string>
+    <string name="network_traffic_autohide_threshold">Dataout - inserisci soglia</string>
+    <string name="network_traffic_color_style">Colore testo</string>
     <string name="network_traffic_color_reset">Reset colore</string>
     <string name="network_traffic_color_reset_message">Reset colore network traffic come default?</string>
 
@@ -1079,10 +1079,10 @@
     <string name="storage_options_category">Notifiche</string>
     <string name="storage_menu_options">Avanzate</string>
     <string name="storage_title_options">Opzioni Storage</string>
-    <string name="no_media_notification_title">Notifica Rimuovi Storage</string>
-    <string name="no_media_notification_summary">visualizza Notifica quando rimuovi storege</string>
-    <string name="mount_notification_title">Mount notification</string>
-    <string name="mount_notification_summary">Visualizza Notifica quando viene collegato uno storage</string>
+    <string name="no_media_notification_title">Notifica rimuovi storage</string>
+    <string name="no_media_notification_summary">Visualizza notifica quando rimuovi storage</string>
+    <string name="mount_notification_title">Notifica Mount</string>
+    <string name="mount_notification_summary">Visualizza notifica quando viene collegato uno storage</string>
 
     <!-- Calibration Control under Display-Advanced -->
     <string name="calibration_control_title">Calibrazione tocco</string>
@@ -1098,7 +1098,7 @@
 
     <!-- Task Manager -->
     <string name="enable_task_manager_title">Task Manager</string>
-    <string name="enable_task_manager_summary">Abilita/disabilita azioni per il task maneger.</string>
+    <string name="enable_task_manager_summary">Abilita/disabilita azioni per il task manager.</string>
 
     <!-- Status bar ticker -->
     <string name="status_bar_ticker_title">Notification Ticker</string>
@@ -1106,9 +1106,9 @@
 
     <!-- Pie control -->
     <string name="pie_control_title">SlimPIE</string>
-    <string name="pie_control_summary">Abilita pie sul display</string>
+    <string name="pie_control_summary">Abilita PIE sul display</string>
     <string name="pie_control_size">Navigation size</string>
-    <string name="pie_control_trigger_positions">Trigger options</string>
+    <string name="pie_control_trigger_positions">Opzioni Trigger</string>
     <string name="pie_control_trigger_left">Trigger bordo sinistro</string>
     <string name="pie_control_trigger_bottom">Trigger bordo sotto</string>
     <string name="pie_control_trigger_right">Trigger bordo destro</string>
@@ -1134,8 +1134,8 @@
     <string name="pie_background_alpha_title">Background transparency</string>
     <string name="pie_mirror_right_title">Mirror right pie</string>
     <string name="pie_mirror_right_summary">Mirror right pie on the horizontal axis</string>
-    <string name="pie_style">Style and dimension</string>
-    <string name="pie_style_title">Style</string>
+    <string name="pie_style">Stile e dimensione</string>
+    <string name="pie_style_title">Stile</string>
     <string name="pie_dimens_title">Dimension</string>
     <string name="pie_additional_options">Additional options</string>
     <string name="pie_show_snap_title">Show snap points</string>
@@ -1144,9 +1144,9 @@
     <string name="pie_show_text_summary">Shows phone status, time and date information</string>
     <string name="pie_show_background_title">Show background</string>
     <string name="pie_show_background_summary">Enable pie background screen</string>
-    <string name="pie_button">Buttons</string>
-    <string name="pie_button_second_layer">Buttons second layer</string>
-    <string name="pie_button_second_layer_summary">Change second layer buttons</string>
+    <string name="pie_button">Pulsanti</string>
+    <string name="pie_button_second_layer">Pulsanti secondo livello</string>
+    <string name="pie_button_second_layer_summary">Modifica i pulsanti del secondo livello</string>
     <string name="pie_button_style_summary">Change pie button style</string>
     <string name="pie_style_reset_message">Reset style entries to default?</string>
     <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Removing every %1$s in the list will disable the second pie layer entirely.</string>
@@ -1157,14 +1157,14 @@
     <string name="pie_disable_ime_triggers_summary">Reduces left and right trigger size if keyboard is active</string>
     <string name="pie_trigger_sensitivity_title">Trigger sensitivity"</string>
     <string name="pie_trigger_sensitivity_summary">Adjust the pie trigger sensitivity</string>
-    <string name="additional_options_title">Additional options</string>
+    <string name="additional_options_title">Opzioni Aggiuntive</string>
 
     <!-- Navigation bar visibility -->
     <string name="navigation_menu_default_jb_behavior">Show on request (default)</string>
     <string name="navigation_menu_never_show">Never show</string>
     <string name="navigation_menu_always_show">Always show</string>
-    <string name="title_pref_menu_display">Menu visibility</string>
-    <string name="summary_pref_menu_display">How and when do you want the menu buttons to appear?</string>
+    <string name="title_pref_menu_display">Visibilità tasto menu</string>
+    <string name="summary_pref_menu_display">Come e quando far apparire il tasto menu?</string>
 
     <!-- Disable torch when screen goes off -->
     <string name="torch_category_title">Torcia</string>
@@ -1178,13 +1178,13 @@
     <string name="torch_screen_off_ten_Minuti">10 Minuti</string>
 
     <!-- Enable power menu -->
-    <string name="lockscreen_enable_power_menu_title">Power menu Schermata di blocca</string>
+    <string name="lockscreen_enable_power_menu_title">Power menu schermata di sblocco</string>
 
     <!-- Recent panel -->
     <string name="recent_panel_category">SlimRecents</string>
     <string name="use_slim_recents_title">SlimRecents</string>
     <string name="show_running_tasks_title">Visualizza solo running apps</string>
-    <string name="recents_max_apps_title">Max allowed apps</string>
+    <string name="recents_max_apps_title">Max apps permesse</string>
     <string name="recent_panel_scale_title">Size</string>
     <string name="recent_panel_expanded_mode_title">Espandi Apps</string>
     <string name="recent_panel_expanded_mode_summary">Visualizza task Espansi</string>
@@ -1195,11 +1195,11 @@
     <string name="recent_panel_show_topmost_summary">Non includere the topmost task nei recenti</string>
     <string name="recent_panel_bg_color_title">Sfondo</string>
     <string name="recent_card_bg_color_title">Sfondo rettangolo App</string>
-    <string name="recent_card_text_color_title">Colore Testo Rettangolo App</string>
+    <string name="recent_card_text_color_title">Colore testo rettangolo app</string>
 
     <!-- ATTENTION: RTL languages need to replace left with right -->
-    <string name="recent_panel_lefty_mode_title">Visualizza nel lato sinistro</string>
-    <string name="recent_panel_lefty_mode_summary">Visualizza nel lato Destro</string>
+    <string name="recent_panel_lefty_mode_title">Visualizza sul lato sinistro</string>
+    <string name="recent_panel_lefty_mode_summary">Abilita l\'apertura dei SlimRecent nel lato sinistro</string>
 
     <!-- Custom Over scroll Settings -->
     <string name="ui_overscroll_title">Over scrolling effects</string>
