@@ -100,7 +100,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private static final String CATEGORY_VOLUME = "volume_keys";
     private static final String CATEGORY_BACKLIGHT = "key_backlight";
     private static final String CATEGORY_NAVBAR = "navigation_bar";
-    private static final String CATEGORY_NAVBAR_DIM = "dim_nav_buttons_cat";
 
     // Available custom actions to perform on a key press.
     // Must match values for KEY_HOME_LONG_PRESS_ACTION in:
@@ -147,7 +146,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
 
     private PreferenceCategory mNavigationPreferencesCat;
 
-    private PreferenceCategory mNavigationDimCat;
     private SwitchPreference mDimNavButtons;
     private SwitchPreference mDimNavButtonsTouchAnywhere;
     private SlimSeekBarPreference mDimNavButtonsTimeout;
@@ -181,7 +179,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         mDisableNavigationKeys = (SwitchPreference) findPreference(DISABLE_NAV_KEYS);
 
         mNavigationPreferencesCat = (PreferenceCategory) findPreference(CATEGORY_NAVBAR);
-        mNavigationDimCat = (PreferenceCategory) findPreference(CATEGORY_NAVBAR);
 
         // Navigation bar left
         mNavigationBarLeftPref = (SwitchPreference) findPreference(KEY_NAVIGATION_BAR_LEFT);
@@ -230,7 +227,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         if (mNavigationPreferencesCat.getPreferenceCount() == 0) {
             // Hide navigation bar category
             prefScreen.removePreference(mNavigationPreferencesCat);
-            prefScreen.removePreference(mNavigationDimCat);
         }
 
         Utils.updatePreferenceToSpecificActivityFromMetaDataOrRemove(getActivity(),
@@ -345,8 +341,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
                 if (settings != null) {
                     settings.updateDisableNavkeysOption();
                     settings.mNavigationPreferencesCat.setEnabled(
-                            settings.mDisableNavigationKeys.isChecked());
-                    settings.mNavigationDimCat.setEnabled(
                             settings.mDisableNavigationKeys.isChecked());
                     settings.updateDisableNavkeysCategories(
                             settings.mDisableNavigationKeys.isChecked());
@@ -833,7 +827,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         } else if (preference == mDisableNavigationKeys) {
             mDisableNavigationKeys.setEnabled(false);
             mNavigationPreferencesCat.setEnabled(false);
-            mNavigationDimCat.setEnabled(false);
             writeDisableNavkeysOption(getActivity(), mDisableNavigationKeys.isChecked());
             updateDisableNavkeysOption();
             updateDisableNavkeysCategories(true);
@@ -842,7 +835,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
                 public void run() {
                     mDisableNavigationKeys.setEnabled(true);
                     mNavigationPreferencesCat.setEnabled(mDisableNavigationKeys.isChecked());
-                    mNavigationDimCat.setEnabled(mDisableNavigationKeys.isChecked());
                     updateDisableNavkeysCategories(mDisableNavigationKeys.isChecked());
                 }
             }, 1000);
