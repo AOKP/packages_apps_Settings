@@ -58,7 +58,6 @@
             android:title="@string/lock_screen_colors_title"
             android:summary="@string/lock_screen_color_settings_summary"
             android:fragment="com.android.settings.aicp.LockScreenColorSettings" />
-
     </PreferenceCategory>
 
     <PreferenceCategory
