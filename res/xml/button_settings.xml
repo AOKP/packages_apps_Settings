@@ -75,16 +75,18 @@
             android:title="@string/navbar_button_tint_title"
             android:defaultValue="#ffffff" />
 
-        <Preference
-            android:key="dim_nav_buttons_cat"
-            android:title="@string/dim_nav_buttons_category" />
+    </PreferenceCategory>
 
-        <SwitchPreference
+    <PreferenceCategory
+            android:key="dim_nav_buttons_cat"
+            android:title="@string/dim_nav_buttons_category" >
+
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
             android:key="dim_nav_buttons"
             android:title="@string/dim_nav_buttons_title"
             android:summary="@string/dim_nav_buttons_summary" />
 
-        <SwitchPreference
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
             android:key="dim_nav_buttons_touch_anywhere"
             android:dependency="dim_nav_buttons"
             android:title="@string/dim_nav_buttons_touch_anywhere_title"
@@ -103,7 +105,7 @@
             android:title="@string/dim_nav_buttons_alpha_title"
             android:summary="@string/dim_nav_buttons_alpha_summary" />
 
-        <SwitchPreference
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
             android:key="dim_nav_buttons_animate"
             android:dependency="dim_nav_buttons"
             android:title="@string/dim_nav_buttons_animate_title"

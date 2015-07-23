@@ -100,6 +100,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private static final String CATEGORY_VOLUME = "volume_keys";
     private static final String CATEGORY_BACKLIGHT = "key_backlight";
     private static final String CATEGORY_NAVBAR = "navigation_bar";
+    private static final String CATEGORY_DIMNAVBARBUTTONS = "dim_nav_buttons_cat";
 
     // Available custom actions to perform on a key press.
     // Must match values for KEY_HOME_LONG_PRESS_ACTION in:
@@ -145,6 +146,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private SwitchPreference mVolumeAnswerCall;
 
     private PreferenceCategory mNavigationPreferencesCat;
+    private PreferenceCategory mDimNavButtonsPreferencesCat;
 
     private SwitchPreference mDimNavButtons;
     private SwitchPreference mDimNavButtonsTouchAnywhere;
@@ -196,6 +198,51 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         mNavigationRecentsLongPressAction =
                 initRecentsLongPressAction(KEY_NAVIGATION_RECENTS_LONG_PRESS);
 
+
+        // Navigation bar buttons dimming related options
+        mDimNavButtonsPreferencesCat = (PreferenceCategory) findPreference(CATEGORY_DIMNAVBARBUTTONS);
+
+        mDimNavButtons = (SwitchPreference) findPreference(DIM_NAV_BUTTONS);
+        mDimNavButtons.setOnPreferenceChangeListener(this);
+
+        mDimNavButtonsTouchAnywhere = (SwitchPreference) findPreference(DIM_NAV_BUTTONS_TOUCH_ANYWHERE);
+        mDimNavButtonsTouchAnywhere.setOnPreferenceChangeListener(this);
+
+        mDimNavButtonsTimeout = (SlimSeekBarPreference) findPreference(DIM_NAV_BUTTONS_TIMEOUT);
+        mDimNavButtonsTimeout.setDefault(3000);
+        mDimNavButtonsTimeout.isMilliseconds(true);
+        mDimNavButtonsTimeout.setInterval(1);
+        mDimNavButtonsTimeout.minimumValue(100);
+        mDimNavButtonsTimeout.multiplyValue(100);
+        mDimNavButtonsTimeout.setOnPreferenceChangeListener(this);
+        final int dimTimeout = Settings.System.getInt(getContentResolver(),
+                 Settings.System.DIM_NAV_BUTTONS_TIMEOUT, 3000);
+        // minimum 100 is 1 interval of the 100 multiplier
+        mDimNavButtonsTimeout.setInitValue((dimTimeout / 100) - 1);
+
+        mDimNavButtonsAlpha = (SlimSeekBarPreference) findPreference(DIM_NAV_BUTTONS_ALPHA);
+        mDimNavButtonsAlpha.setDefault(50);
+        mDimNavButtonsAlpha.setInterval(1);
+        mDimNavButtonsAlpha.setOnPreferenceChangeListener(this);
+        int alphaScale = Settings.System.getInt(getContentResolver(),
+                Settings.System.DIM_NAV_BUTTONS_ALPHA, 50);
+        mDimNavButtonsAlpha.setInitValue(alphaScale);
+
+        mDimNavButtonsAnimate = (SwitchPreference) findPreference(DIM_NAV_BUTTONS_ANIMATE);
+        mDimNavButtonsAnimate.setOnPreferenceChangeListener(this);
+
+        mDimNavButtonsAnimateDuration = (SlimSeekBarPreference) findPreference(DIM_NAV_BUTTONS_ANIMATE_DURATION);
+        mDimNavButtonsAnimateDuration.setDefault(2000);
+        mDimNavButtonsAnimateDuration.isMilliseconds(true);
+        mDimNavButtonsAnimateDuration.setInterval(1);
+        mDimNavButtonsAnimateDuration.minimumValue(100);
+        mDimNavButtonsAnimateDuration.multiplyValue(100);
+        mDimNavButtonsAnimateDuration.setOnPreferenceChangeListener(this);
+        final int animateDuration = Settings.System.getInt(getContentResolver(),
+                Settings.System.DIM_NAV_BUTTONS_ANIMATE_DURATION, 2000);
+        // minimum 100 is 1 interval of the 100 multiplier
+        mDimNavButtonsAnimateDuration.setInitValue((animateDuration / 100) - 1);
+
         HashMap<String, String> prefsToRemove = (HashMap<String, String>)
                 getPreferencesToRemove(this, getActivity());
         for (String key : prefsToRemove.keySet()) {
@@ -229,6 +276,11 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
             prefScreen.removePreference(mNavigationPreferencesCat);
         }
 
+        if (mDimNavButtonsPreferencesCat.getPreferenceCount() == 0) {
+            // Hide navigation bar dim category
+            prefScreen.removePreference(mDimNavButtonsPreferencesCat);
+        }
+
         Utils.updatePreferenceToSpecificActivityFromMetaDataOrRemove(getActivity(),
                 getPreferenceScreen(), KEY_BLUETOOTH_INPUT_SETTINGS);
 
@@ -243,53 +295,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
                 mCameraSleepOnRelease.setDependency(Settings.System.CAMERA_WAKE_SCREEN);
             }
         }
-
-        mDimNavButtons = (SwitchPreference) findPreference(DIM_NAV_BUTTONS);
-        mDimNavButtons.setOnPreferenceChangeListener(this);
-        mDimNavButtons.setChecked(Settings.System.getInt(getContentResolver(),
-                Settings.System.DIM_NAV_BUTTONS, 0) == 1);
-
-        mDimNavButtonsTouchAnywhere = (SwitchPreference) findPreference(DIM_NAV_BUTTONS_TOUCH_ANYWHERE);
-        mDimNavButtonsTouchAnywhere.setOnPreferenceChangeListener(this);
-        mDimNavButtonsTouchAnywhere.setChecked(Settings.System.getInt(getContentResolver(),
-                Settings.System.DIM_NAV_BUTTONS_TOUCH_ANYWHERE, 0) == 1);
-
-        mDimNavButtonsTimeout = (SlimSeekBarPreference) findPreference(DIM_NAV_BUTTONS_TIMEOUT);
-        mDimNavButtonsTimeout.setDefault(3000);
-        mDimNavButtonsTimeout.isMilliseconds(true);
-        mDimNavButtonsTimeout.setInterval(1);
-        mDimNavButtonsTimeout.minimumValue(100);
-        mDimNavButtonsTimeout.multiplyValue(100);
-        mDimNavButtonsTimeout.setOnPreferenceChangeListener(this);
-        final int dimTimeout = Settings.System.getInt(getContentResolver(),
-                Settings.System.DIM_NAV_BUTTONS_TIMEOUT, 3000);
-        // minimum 100 is 1 interval of the 100 multiplier
-        mDimNavButtonsTimeout.setInitValue((dimTimeout / 100) - 1);
-
-        mDimNavButtonsAlpha = (SlimSeekBarPreference) findPreference(DIM_NAV_BUTTONS_ALPHA);
-        mDimNavButtonsAlpha.setDefault(50);
-        mDimNavButtonsAlpha.setInterval(1);
-        mDimNavButtonsAlpha.setOnPreferenceChangeListener(this);
-        int alphaScale = Settings.System.getInt(getContentResolver(),
-                Settings.System.DIM_NAV_BUTTONS_ALPHA, 50);
-        mDimNavButtonsAlpha.setInitValue(alphaScale);
-
-        mDimNavButtonsAnimate = (SwitchPreference) findPreference(DIM_NAV_BUTTONS_ANIMATE);
-        mDimNavButtonsAnimate.setOnPreferenceChangeListener(this);
-        mDimNavButtonsAnimate.setChecked(Settings.System.getInt(getContentResolver(),
-                Settings.System.DIM_NAV_BUTTONS_ANIMATE, 0) == 1);
-
-        mDimNavButtonsAnimateDuration = (SlimSeekBarPreference) findPreference(DIM_NAV_BUTTONS_ANIMATE_DURATION);
-        mDimNavButtonsAnimateDuration.setDefault(2000);
-        mDimNavButtonsAnimateDuration.isMilliseconds(true);
-        mDimNavButtonsAnimateDuration.setInterval(1);
-        mDimNavButtonsAnimateDuration.minimumValue(100);
-        mDimNavButtonsAnimateDuration.multiplyValue(100);
-        mDimNavButtonsAnimateDuration.setOnPreferenceChangeListener(this);
-        final int animateDuration = Settings.System.getInt(getContentResolver(),
-                Settings.System.DIM_NAV_BUTTONS_ANIMATE_DURATION, 2000);
-        // minimum 100 is 1 interval of the 100 multiplier
-        mDimNavButtonsAnimateDuration.setInitValue((animateDuration / 100) - 1);
 
     }
 
@@ -341,6 +346,8 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
                 if (settings != null) {
                     settings.updateDisableNavkeysOption();
                     settings.mNavigationPreferencesCat.setEnabled(
+                            settings.mDisableNavigationKeys.isChecked());
+                    settings.mDimNavButtonsPreferencesCat.setEnabled(
                             settings.mDisableNavigationKeys.isChecked());
                     settings.updateDisableNavkeysCategories(
                             settings.mDisableNavigationKeys.isChecked());
@@ -510,6 +517,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
             if (!hasNavBar && (needsNavigationBar ||
                     !cmHardwareManager.isSupported(CmHardwareManager.FEATURE_KEY_DISABLE))) {
                 result.put(CATEGORY_NAVBAR, null);
+                result.put(CATEGORY_DIMNAVBARBUTTONS, null);
             }
         } catch (RemoteException e) {
             Log.e(TAG, "Error getting navigation bar status");
@@ -827,6 +835,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         } else if (preference == mDisableNavigationKeys) {
             mDisableNavigationKeys.setEnabled(false);
             mNavigationPreferencesCat.setEnabled(false);
+            mDimNavButtonsPreferencesCat.setEnabled(false);
             writeDisableNavkeysOption(getActivity(), mDisableNavigationKeys.isChecked());
             updateDisableNavkeysOption();
             updateDisableNavkeysCategories(true);
@@ -835,6 +844,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
                 public void run() {
                     mDisableNavigationKeys.setEnabled(true);
                     mNavigationPreferencesCat.setEnabled(mDisableNavigationKeys.isChecked());
+                    mDimNavButtonsPreferencesCat.setEnabled(mDisableNavigationKeys.isChecked());
                     updateDisableNavkeysCategories(mDisableNavigationKeys.isChecked());
                 }
             }, 1000);
