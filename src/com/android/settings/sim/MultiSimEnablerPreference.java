@@ -126,7 +126,7 @@ public class MultiSimEnablerPreference extends SwitchPreference implements
         boolean isSubValid = isCurrentSubValid();
         setEnabled(isSubValid);
         if (mSwitch != null) {
-            mSwitch.setEnabled(!mExplicitlyDisabled);
+            mSwitch.setEnabled(isSubValid && !mExplicitlyDisabled);
         }
 
         logd("update() isSubValid "  + isSubValid);
