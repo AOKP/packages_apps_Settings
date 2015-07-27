@@ -1317,5 +1317,9 @@
     <!-- Headphones icon switch -->
     <string name="show_headset_icon_title">Headset icon</string>
     <string name="show_headset_icon_summary">Shows icon when headsets are connected.</string>
+    
+    <!-- Volume icon switch -->
+    <string name="show_volume_icon_title">Volume Mode Icon</string>
+    <string name="show_volume_icon_summary">Show volume mode icon, enabled by default</string>
 
 </resources>
