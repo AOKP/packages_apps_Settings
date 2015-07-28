@@ -22,6 +22,7 @@ import cyanogenmod.profiles.BrightnessSettings;
 import cyanogenmod.profiles.ConnectionSettings;
 import android.app.Dialog;
 import android.app.NotificationGroup;
+import cyanogenmod.profiles.LockSettings;
 import cyanogenmod.profiles.RingModeSettings;
 import cyanogenmod.profiles.StreamSettings;
 import android.app.admin.DevicePolicyManager;
@@ -520,7 +521,7 @@ public class SetupActionsFragment extends SettingsPreferenceFragment
 
         int defaultIndex = 0; // no action
         for (int i = 0; i < LOCKMODE_MAPPING.length; i++) {
-            if (LOCKMODE_MAPPING[i] == mProfile.getScreenLockMode()) {
+            if (LOCKMODE_MAPPING[i] == mProfile.getScreenLockMode().getValue()) {
                 defaultIndex = i;
                 break;
             }
@@ -529,14 +530,14 @@ public class SetupActionsFragment extends SettingsPreferenceFragment
         builder.setTitle(R.string.profile_lockmode_title);
         builder.setSingleChoiceItems(lockEntries, defaultIndex,
                 new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int item) {
-                mProfile.setScreenLockMode(LOCKMODE_MAPPING[item]);
-                updateProfile();
-                mAdapter.notifyDataSetChanged();
-                dialog.dismiss();
-            }
-        });
+                    @Override
+                    public void onClick(DialogInterface dialog, int item) {
+                        mProfile.setScreenLockMode(new LockSettings(LOCKMODE_MAPPING[item]));
+                        updateProfile();
+                        mAdapter.notifyDataSetChanged();
+                        dialog.dismiss();
+                    }
+                });
 
         builder.setNegativeButton(android.R.string.cancel, null);
         builder.show();
