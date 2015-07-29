@@ -1322,4 +1322,8 @@
     <string name="show_volume_icon_title">Volume Mode Icon</string>
     <string name="show_volume_icon_summary">Show volume mode icon, enabled by default</string>
 
+    <!-- Lockscreen wallpaper -->
+    <string name="lockscreen_wallpaper_title">Wallpaper</string>
+    <string name="lockscreen_wallpaper_summary">Set lockscreen wallpaper</string>
+
 </resources>

@@ -100,6 +100,17 @@
                 android:defaultValue="true" />
 
         <PreferenceScreen
+            android:key="lockscreen_wallpaper"
+            android:title="@string/lockscreen_wallpaper_title"
+            android:summary="@string/lockscreen_wallpaper_summary">
+            <intent
+                android:targetPackage="com.slim.wallpaperpicker"
+                android:targetClass="com.slim.wallpaperpicker.WallpaperPickerActivity">
+                    <extra android:name="keyguardMode" android:value="true" />
+            </intent>
+        </PreferenceScreen>
+
+        <PreferenceScreen
             android:key="owner_info_settings"
             android:fragment="com.android.settings.OwnerInfoSettings"
             android:title="@string/owner_info_settings_title"
