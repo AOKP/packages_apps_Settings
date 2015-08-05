@@ -87,7 +87,13 @@ public class CarrierLabel extends SettingsPreferenceFragment implements OnPrefer
         mCarrierColorPicker.setSummary(hexColor);
         mCarrierColorPicker.setNewPreviewColor(intColor);
 
-        updateCustomLabelTextSummary();
+        if (TelephonyManager.getDefault().isMultiSimEnabled()) {
+            prefSet.removePreference(mStatusBarCarrier);
+            prefSet.removePreference(mCustomCarrierLabel);
+        } else {
+            updateCustomLabelTextSummary();
+        }
+
     }
 
     private void updateCustomLabelTextSummary() {
