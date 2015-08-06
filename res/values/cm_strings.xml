@@ -1200,6 +1200,9 @@
     <string name="fingerprint_enrollment_error_title_3">Hmm, something went wrong</string>
     <string name="fingerprint_enrollment_error_title_4">Uh oh, try again</string>
     <string name="fingerprint_enrollment_error_title_5">Whoops, there was an error</string>
+    <!-- Title for security settings, on dashboard, that is only used when a device supports
+         the fingerprint feature -->
+    <string name="security_settings_and_fingerprint">Security &amp; fingerprint</string>
 
     <!-- Menu label for reset the battery stats -->
     <string name="menu_stats_reset">Reset stats</string>
