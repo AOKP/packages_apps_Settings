@@ -67,15 +67,17 @@
   <string name="profile_reset_message">Eliminare tutti i profili utente creati e ripristinarli alle impostazioni predefinite?</string>
   <string name="profile_networkmode_2g">2G</string>
   <string name="profile_networkmode_3g">3G</string>
-  <string name="profile_networkmode_4g">LTE</string>
+  <string name="profile_networkmode_4g">4G</string>
   <string name="profile_networkmode_2g3g">2G/3G</string>
-  <string name="profile_networkmode_2g3g4g">2G/3G/LTE</string>
+  <string name="profile_networkmode_2g3g4g">2G/3G/4G</string>
   <string name="profile_volumeoverrides_title">Sovrascrittura volumi</string>
   <string name="volume_override_summary">Impostato su %1$s/%2$s</string>
   <string name="profile_volume_override_checkbox_label">Sovrascrivi volume</string>
   <string name="profile_profiles_manage">Profili</string>
   <string name="profile_profile_manage">Gestisci profili</string>
   <string name="profile_settings">Impostazioni profilo</string>
+  <string name="qs_wifi_detail_title">Dettagli Wi\u2011Fi</string>
+  <string name="qs_wifi_detail_summary">Abilita la visualizzazione dettagli Wi\u2011Fi nei Quick Settings</string>
   <string name="profile_trigger_connect">Alla connessione</string>
   <string name="profile_trigger_disconnect">Alla disconnessione</string>
   <string name="profile_trigger_notrigger">Nessun innesco</string>
@@ -167,14 +169,14 @@
   <string name="sunlight_enhancement_summary">Migliora la luminosità del display e la leggibilità sotto la luce del sole</string>
   <string name="color_enhancement_title">Miglioramento colore</string>
   <string name="color_enhancement_summary">Migliora dinamicamente il colore del display</string>
-  <string name="blacklist_title">Elenco bloccati</string>
+  <string name="blacklist_title">Elenco chiamanti bloccati</string>
   <string name="blacklist_edit_dialog_title">Modifica il numero telefonico bloccato</string>
   <string name="blacklist_prefs">Impostazioni</string>
   <string name="blacklist_button_delete">Elimina</string>
   <string name="blacklist_empty_text">Non hai nessun numero bloccato. Aggiungi un elemento toccando il pulsante Aggiungi (+).</string>
-  <string name="blacklist_disabled_empty_text">Per prevenire chiamate e messaggi da numeri telefonici, attiva la lista bloccati.</string>
+  <string name="blacklist_disabled_empty_text">Per prevenire chiamate e messaggi da numeri telefonici, attiva la lista dei chiamanti bloccati.</string>
   <string name="blacklist_summary_disabled">Disattivata</string>
-  <string name="blacklist_summary">Non riceverai nessuna chiamata o messaggio da numeri nella lista bloccati</string>
+  <string name="blacklist_summary">Non riceverai nessuna chiamata o messaggio da numeri nella lista dei chiamanti bloccati</string>
   <string name="blacklist_notify">Mostra notifiche</string>
   <string name="blacklist_private_numbers_title">Numeri privati</string>
   <string name="blacklist_private_numbers_summary_disabled">Non bloccare le chiamate provenienti da numeri privati</string>
@@ -189,7 +191,7 @@
   <string name="blacklist_regex_summary">Usa . come carattere jolly e * per la ripetizione. Ad esempio 123.* blocca i numeri che iniziano con 123 e .*123.* blocca i numeri che contengono 123</string>
   <string name="blacklist_policy_block_calls">Blocca chiamate in arrivo</string>
   <string name="blacklist_policy_block_messages">Blocca messaggi in arrivo</string>
-  <string name="blacklist_bad_number_add">Impossibile aggiungere un numero non valido alla lista bloccati</string>
+  <string name="blacklist_bad_number_add">Impossibile aggiungere un numero non valido alla lista dei chiamanti bloccati</string>
   <string name="remove_blacklist_number_title">Rimuovi numero</string>
   <string name="remove_blacklist_entry">Vuoi rimuovere questo numero bloccato?</string>
   <string name="select_contact">Seleziona contatto</string>
@@ -334,6 +336,7 @@
   <string name="battery_light_low_color_title">Batteria scarica</string>
   <string name="battery_light_medium_color_title">In carica</string>
   <string name="battery_light_full_color_title">Carica completa</string>
+  <string name="battery_light_really_full_color_title">Carica (100%)</string>
   <string name="notification_light_title">Luce di notifica</string>
   <string name="notification_light_general_title">Generale</string>
   <string name="notification_light_applist_title">App</string>
@@ -648,7 +651,7 @@
   <string name="sim_enabler_enabling">Attivazione <xliff:g id="name">%s</xliff:g>\u2026</string>
   <string name="sim_enabler_disabling">Disattivazione <xliff:g id="name">%s</xliff:g>\u2026</string>
   <string name="sim_enabler_deactivate">Disattiva</string>
-  <string name="primary_sub_select_title">Abbonamento 3G/LTE predefinito</string>
+  <string name="primary_sub_select_title">Abbonamento 3G/4G predefinito</string>
   <string name="usb_charging_title">Carica solo</string>
   <string name="usb_charging_summary">Disattiva tutti i trasferimenti di dati con il computer e ricarica il dispositivo tramite la porta USB</string>
   <string name="usb_sdcard_title">Memoria di massa (UMS)</string>
@@ -688,6 +691,7 @@
   <string name="unlock_scramble_pin_layout_summary">Mescola la disposizione del tastierino PIN per lo sblocco del dispositivo</string>
   <string name="link_volume_option_title">Collega volume suoneria &amp; notifiche</string>
   <string name="notification_volume_option_title">Volume notifica</string>
+  <string name="ring_notification_volume_option_tile">Volume Suoneria e Notifiche</string>
   <string name="notification_drawer_title">Menu notifiche</string>
   <string name="quick_pulldown_title">Impostazioni rapide</string>
   <string name="quick_pulldown_summary">Tira giù la barra di stato dal bordo %1$s per le Impostazioni rapide</string>
@@ -700,6 +704,8 @@
   <string name="status_bar_show_weather_summary">Visualizza il tempo sopra il pannello Impostazioni rapide</string>
   <string name="qs_category_title">Pannello Impostazioni rapide</string>
   <string name="qs_brightness_slider_title">Visualizza selettore luminosità</string>
+  <string name="qs_brightness_slider_enabled">Abilita</string>
+  <string name="qs_brightness_slider_disabled">Disabilita</string>
   <string name="qs_order_title">Seleziona e ordina i tile</string>
   <string name="add_qs">Aggiungi nuovo tile</string>
   <string name="qs_action_delete">Elimina</string>
@@ -721,7 +727,7 @@
   <string name="qs_tile_nfc">NFC</string>
   <string name="qs_tile_compass">Bussola</string>
   <string name="qs_tile_lockscreen">Schermata di sblocco</string>
-  <string name="qs_tile_lte">LTE</string>
+  <string name="qs_tile_lte">4G</string>
   <string name="qs_tile_screen_timeout">Sospensione schermo</string>
   <string name="qs_tile_usb_tether">Tethering USB</string>
   <string name="qs_tile_heads_up">Heads up</string>
@@ -764,10 +770,11 @@
   <string name="lockscreen_none_target">Nessuno</string>
   <string name="lockscreen_message">Toccare un\'icona sulla sinistra o destra per riassegnare un collegamento.</string>
   <string name="lockscreen_choose_action_title">Scegli azione</string>
-  <string name="lockscreen_visualizer_title">Mostra visualizzatore musicale</string>
+  <string name="lockscreen_visualizer_title">Mostra equalizzatore musicale</string>
   <string name="whisperpush_title">WhisperPush</string>
   <string name="whisperpush_summary">Gestisci le impostazioni SMS sicuri</string>
   <string name="navigation_ring_title">Collegamenti anello di navigazione</string>
+  <string name="navigation_ring_enable_title">Abilita anello di navigazione</string>
   <string name="navigation_ring_message">Tocca l\'icona di modifica per modificare l\'anello di navigazione.\n\nSeleziona un collegamento per configurarne il comportamento.\n\nTocca l\'icona \'\u2713\' per salvare le modifiche, o \'Ripristina le impostazioni predefinite\' per ritornare ai valori predefiniti.</string>
   <string name="lcd_density">Densità LCD</string>
   <string name="dialog_title_lcd_density">Densità LCD</string>
@@ -901,13 +908,11 @@
   <string name="fingerprint_dialog_title_max_fingers_reached">Limite di impronte raggiunto</string>
   <string name="fingerprint_dialog_msg_max_fingers_reached">Puoi registrare solo <xliff:g id="finger" example="5 fingerprints">%d</xliff:g> impronte. Eliminane una esistente.</string>
   <string name="fingerprint_title_manage_fingerprints">Gestione impronte <xliff:g id="finger">%d</xliff:g>/<xliff:g id="max">%d</xliff:g></string>
-  <string name="manage_fingerprints_description">Le impronte digitali ti consentono di sbloccare velocemente il tuo telefono e scattare foto.</string>
   <string name="fingerprint_enrollment_introduction_title">Trova il sensore</string>
   <string name="fingerprint_enrollment_introduction_instructions">Il sensore è posizionato nel retro del tuo telefono.</string>
   <string name="fingerprint_enrollment_scan_title">Tieni premuto per 3 secondi</string>
   <string name="fingerprint_enrollment_scan_instructions">Posiziona il dito sul sensore d\'impronte per iniziare il setup. Solleva il dito quando senti una vibrazione.</string>
   <string name="fingerprint_enrollment_error_title_wrong_sensor">Prova di nuovo</string>
-  <string name="fingerprint_enrollment_error_message">Posiziona saldamente il dito sul sensore d\'impronte per una scansione accurata. Assicurati anche di usare lo stesso dito di prima. Sollevalo quando senti una vibrazione.</string>
   <string name="fingerprint_enrollment_scan_instructions">Posiziona il dito sul sensore d\'impronte per iniziare il setup. Solleva il dito quando senti una vibrazione.</string>
   <string name="fingerprint_enrollment_break_title">Tienilo premuto ancora</string>
   <string name="fingerprint_enrollment_break_instructions">Continua a scansionare i bordi della tua impronta. Solleva il dito quando senti una vibrazione.</string>
@@ -941,7 +946,4 @@
   <string name="battery_info_status_charging_dock_usb">Ricarica su Dock USB</string>
   <string name="setup_lock_pattern_size_title">Complessità  sequenza</string>
   <string name="setup_lock_pattern_size_details">Quanti punti vorresti avere per la tua sequenza? Più ne hai più complessa sarà.</string>
-  <string name="lto_download_data_wifi_only">Download dati GPS-A</string>
-  <string name="lto_download_data_wifi_only_on">Da tutte le reti</string>
-  <string name="lto_download_data_wifi_only_off">Solo da reti Wi\u2011Fi</string>
 </resources>

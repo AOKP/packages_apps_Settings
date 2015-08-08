@@ -16,9 +16,9 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- About phone screen, AICP version name-->
-    <string name="mod_version">AICP version</string>
+    <string name="mod_version">Versione AICP</string>
     <!-- About phone screen, AICP unknown name-->
-    <string name="mod_version_default">Unknown</string>
+    <string name="mod_version_default">Sconosciuta</string>
     <!-- About phone screen, build date of ROM -->
     <string name="build_date">Data Build</string>
     <string name="build_date_default">2012-01-01-0000</string>
@@ -41,13 +41,13 @@
 
     <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
     <plurals name="show_dev_countdown_aicp">
-        <item quantity="one">You are now <xliff:g id="step_count">%1$d</xliff:g> step away from enabling development settings.</item>
-        <item quantity="other">You are now <xliff:g id="step_count">%1$d</xliff:g> steps away from enabling development settings.</item>
+    <item quantity="one">Mancano <xliff:g id="step_count">%1$d</xliff:g> passi per abilitare Opzioni sviluppatore.</item>
+    <item quantity="other">Mancano <xliff:g id="step_count">%1$d</xliff:g> passi per abilitare Opzioni sviluppatore.</item>
     </plurals>
     <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
-    <string name="show_dev_on_aicp">You have enabled development settings!</string>
+    <string name="show_dev_on_aicp">Hai abilitato Opzioni sviluppatore!</string>
     <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
-    <string name="show_dev_already_aicp">No need, you have already enabled development settings.</string>
+    <string name="show_dev_already_aicp">Non serve, Hai già abilitato Opzioni sviluppatore</string>
 
     <!-- Aicp Settings -->
     <string name="aicp_settings_title">AICP Extras</string>
@@ -75,7 +75,7 @@
     <string name="misc_category">Miscellaneous</string>
     <string name="lockscreen_category">Lock screen</string>
 
-     <!-- Advanced, Device specific (DeviceParts) settings  -->
+    <!-- Advanced, Device specific (DeviceParts) settings  -->
     <string name="device_settings_title">Device</string>
 
     <!-- Display : Rotation -->
@@ -103,7 +103,7 @@
     <string name="safe_headset_volume_warning_dialog_text">Attenzione il volume alto nelle cuffie può creare problemi</string>
 
     <!-- Less Notification sounds -->
-    <string name="Notification_category_title">Notifiche</string>
+    <string name="notifications_category_title">Notifiche</string>
     <string name="less_notification_sounds_title">Notifiche meno frequenti</string>
     <string name="less_notification_sounds_summary"> Limita il suono delle notifiche per ogni app nel periodo configurato</string>
     <string name="less_notification_sounds_default">Predefinito</string>
@@ -155,9 +155,8 @@
     <string name="proximity_on_wake_title">Sensore di Prossimità</string>
     <string name="proximity_on_wake_summary">Controlla il sensore di prossimità durante il risveglio</string>
     <string name="status_bar_show_weather_category">Meteo</string>
-    <string name="aicp_Notification_category">Notifiche</string>
+    <string name="aicp_notifications_category">Notifiche</string>
     <string name="navigation_bar_category">Barra di Navigazione</string>
-    <string name="navigation_ring_enable_title">Abilita anello di navigazione</string>
     <string name="navigation_ring_category">Anello di Navigazione</string>
     <string name="aicp_extras_category">Altro</string>
 
@@ -291,18 +290,18 @@
 
     <!-- Notification counter -->
     <string name="status_bar_notif_count_title">Mostra numero notifiche</string>
-    <string name="status_bar_notif_count_summary">Visualizza il numero delle nofiche pendenti nella barra notifiche</string>
+    <string name="status_bar_notif_count_summary">Visualizza il numero delle notifiche pendenti nella barra notifiche</string>
 
     <!--Quick unlock -->
-    <string name="unlock_quick_unlock_control_title">Quick unlock</string>
-    <string name="unlock_quick_unlock_control_summary">Unlock automatically when the correct PIN/password is entered</string>
+    <string name="unlock_quick_unlock_control_title">Sblocco Veloce</string>
+    <string name="unlock_quick_unlock_control_summary">Sblocca in automatico quando il PIN/password sono inserite</string>
 
     <!-- Lock screen pin shuffle -->
-    <string name="lock_numpad_random_title">Change the order of PIN pad numbers</string>
-    <string name="lock_numpad_random_dialog_title">PIN pad random order</string>
-    <string name="lock_numpad_random_off">Disabled</string>
-    <string name="lock_numpad_random_always">Always</string>
-    <string name="lock_numpad_random_on_request">On request</string>
+    <string name="lock_numpad_random_title">Cambia ordine PIN tastierino numerico</string>
+    <string name="lock_numpad_random_dialog_title">PIN ordine random tastierino numerico</string>
+    <string name="lock_numpad_random_off">Disabilita</string>
+    <string name="lock_numpad_random_always">Sempre</string>
+    <string name="lock_numpad_random_on_request">A richiesta</string>
 
     <!-- Search Bar Switcher -->
     <string name="recents_show_searchbar">Barra di ricerca nei Recenti</string>
@@ -314,7 +313,6 @@
 
     <!-- Volume adjust sound -->
     <string name="volume_adjust_sound_title">Suono alla modifica del volume</string>
-    <string name="ring_notification_volume_option_tile">Volume Suoneria e Notifiche</string>
 
     <string name="shortcut_action_none">Nessuna</string>
     <string name="shortcut_action_app">App personalizzata</string>
@@ -351,17 +349,16 @@
     <string name="shortcut_action_max">Il numero massimo di voci è stato raggiunto</string>
     <string name="shortcut_action_warning">Attenzione</string>
     <string name="shortcut_action_warning_message">Impossibile cancellare l\'ultima voce</string>
-    <string name="shortcut_action_disable_message">Disabled\nAdd an entry to enable this feature</string>
-    <string name="shortcut_image_not_valid">The chosen app did not return a valid icon or does not support image cropping. Use another app.</string>
-    <string name="shortcut_duplicate_entry">The chosen action cannot be added twice</string>
+    <string name="shortcut_action_disable_message">Disabilita\nAggiungi una riga per abilitare questa voce</string>
+    <string name="shortcut_image_not_valid">L\'applicazione scelta non ha restituito un\'icona valida o non supporta ritaglio immagine. Utilizzare un\'altra applicazione</string>
+    <string name="shortcut_duplicate_entry">L\'azione scelta non può essere aggiunto due volte</string>
     <string name="shortcut_action_help_shortcut">Scorciatoia</string>
     <string name="shortcut_action_help_button">Tasto</string>
     <string name="shortcut_action_help_app">app</string>
-    <string name="shortcut_action_help_icon">, while selecting the icon will bring up customization options</string>
-    <string name="shortcut_action_help_main">To add a %1$s, select the Add icon. Once a %1$s is added, selecting the row will change the target%2$s\n\nTo remove a %1$s, swipe the row horizontally left or right. Re-order a %1$s in the list by vertically dragging the anchor on the left.\n\nTo clear or reset to defaults, select the reset option.</string>
-    <string name="shortcut_action_help_delete_last_entry">Removing every %1$s in the list will disable the feature entirely.</string>
-    <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Removing every %1$s in the list will disable the second pie layer entirely.</string>
-
+    <string name="shortcut_action_help_icon">seleziona icona per opzioni di personalizzazione</string>
+    <string name="shortcut_action_help_main">Per aggiungere un %1$s, selezionare l\'icona Aggiungi. Una volta che un %1$s è aggiunto, selezionando la riga cambierà la destinazione %2$s\n\nPer rimuovere un %1$s, swipe verso sinistra o verso destra. Ri-ordine %1$s nella lista verticalmente trascinando l\'ancora a sinistra.\N\nPer cancellare o ripristinare le impostazioni, selezionare l\'opzione di reset</string>
+    <string name="shortcut_action_help_delete_last_entry">Rimuovere i %1$s nella lista disabiliterà tutto</string>
+    <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Rimuovere %1$s nella lista disabiliterà il secondo livello</string>
 
     <string name="shortcuts_applications">Applicazioni</string>
     <string name="shortcuts_select_custom_app_title">Seleziona un\'applicazione</string>
@@ -400,14 +397,14 @@
     <string name="shortcuts_icon_picker_joystick">Joystick</string>
     <string name="shortcuts_icon_picker_key">Keys/Accounts</string>
     <string name="shortcuts_icon_picker_laptop">Laptop</string>
-    <string name="shortcuts_icon_picker_notes">Notes</string>
+    <string name="shortcuts_icon_picker_notes">Note</string>
     <string name="shortcuts_icon_picker_luggage">Travel</string>
     <string name="shortcuts_icon_picker_maps">Maps</string>
-    <string name="shortcuts_icon_picker_market">Market</string>
-    <string name="shortcuts_icon_picker_movie">Movies</string>
-    <string name="shortcuts_icon_picker_music">Music</string>
+    <string name="shortcuts_icon_picker_market">PlayStore</string>
+    <string name="shortcuts_icon_picker_movie">Film</string>
+    <string name="shortcuts_icon_picker_music">Musica</string>
     <string name="shortcuts_icon_picker_nav">Navigation</string>
-    <string name="shortcuts_icon_picker_phone">Phone</string>
+    <string name="shortcuts_icon_picker_phone">Telefono</string>
     <string name="shortcuts_icon_picker_package">Package</string>
     <string name="shortcuts_icon_picker_pinterest">Pinterest</string>
     <string name="shortcuts_icon_picker_play">Play</string>
@@ -422,10 +419,10 @@
     <string name="shortcuts_icon_picker_transit">Transit</string>
     <string name="shortcuts_icon_picker_tv">TV</string>
     <string name="shortcuts_icon_picker_twitter">Twitter</string>
-    <string name="shortcuts_icon_picker_unlock">Unlock</string>
+    <string name="shortcuts_icon_picker_unlock">Sblocco</string>
 
     <!-- Device specific settings -->
-    <string name="screen_off_gesture_settings_title">Screen off gestures</string>
+    <string name="screen_off_gesture_settings_title">Gestures spegni schermo</string>
 
     <!-- Lockscreen Shortcuts -->
     <string name="lockscreen_shortcuts_title">Scorciatoie CENTRALI schermata di sblocco</string>
@@ -436,8 +433,8 @@
     <string name="lockscreen_shortcuts_longpress">Pressione</string>
 
     <!-- Unaccounted and overcounted battery stats -->
-    <string name="show_unac_and_overcounted_stats_title">Show unaccounted/overcounted stats</string>
-    <string name="show_unac_and_overcounted_stats_summary">Show in battery statistics unaccounted and over-counted usage.</string>
+    <string name="show_unac_and_overcounted_stats_title">Visualizza statistiche unaccounted/overcounted</string>
+    <string name="show_unac_and_overcounted_stats_summary">Visualizza nelle stat della batteria le voci di unaccounted e over-counted</string>
 
     <!-- Gesture Anywhere -->
     <string name="gesture_anywhere_title">Gesture</string>
@@ -485,7 +482,7 @@
     <!-- Label of gesture name field in Rename gesture dialog box -->
     <string name="ga_gestures_rename_label">Nome Gesture</string>
     <!-- Message, displayed when the sdcard cannot be found, 1st parameter is the name of the file that stores the gestures.  CHAR LIMIT=80 -->
-    <string name="ga_gestures_error_loading">Impossibile caricare %s. Controlla che lo storage è disponibile.</string>
+    <string name="ga_gestures_error_loading">Impossibile caricare %s. Controlla che lo storage è disponibile</string>
     <string name="trigger_category">Configura Trigger</string>
     <string name="trigger_width_title">Larghezza Trigger</string>
     <string name="trigger_width_summary">Modifica la larghezza della Trigger area</string>
@@ -540,55 +537,55 @@
     <!-- Do not translate. -->
     <string name="lockgesture_need_to_unlock_wrong_footer" />
     <!-- Security & location settings screen, change unlock gesture screen instruction on top of screen.  This si when they are supposed to draw a new unlock pattern (for example, if they are changing their unlock patterns)..-->
-    <string name="lockgesture_recording_intro_header">Draw an unlock gesture:</string>
+    <string name="lockgesture_recording_intro_header">Disegna una gesture di sblocco:</string>
     <!-- Security & location settings screen, change unlock gesture screen hint on bottom of screen.  We are telling them to press the menu button to see more options or help. -->
-    <string name="lockgesture_recording_intro_footer">Press Menu for help.</string>
+    <string name="lockgesture_recording_intro_footer">Premi Menu per Aiuto</string>
     <!-- Security & location settings screen, change unlock gesture screen instruction on top of screen while drawing pattern -->
-    <string name="lockgesture_recording_inprogress">Release finger when done.</string>
+    <string name="lockgesture_recording_inprogress">Rilascia impronta</string>
     <!-- Security & location settings screen, change unlock gesture screen message on top of screen after drawing pattern -->
-    <string name="lockgesture_pattern_entered_header">Gesture recorded.</string>
+    <string name="lockgesture_pattern_entered_header">Gesture registrata</string>
     <!-- Security & location settings screen, change unlock gesture screen instruction on top of screen to confirm pattern -->
-    <string name="lockgesture_need_to_confirm">Draw gesture again to confirm:</string>
-    <string name="lockgesture_pattern_confirmed_header">Your new unlock gesture:</string>
+    <string name="lockgesture_need_to_confirm">Disegna di nuovo gesture per confermare:</string>
+    <string name="lockgesture_pattern_confirmed_header">Nuova gesture sblocco:</string>
     <!-- Security & location settings screen, change unlock gesture screen button, on bottom of screen.  After they draw a gesture and release their finger, we display the pattern so they remember.  When they are ready to draw it once again to confirm it, they press this button. -->
-    <string name="lockgesture_confirm_button_text">Confirm</string>
+    <string name="lockgesture_confirm_button_text">Conferma</string>
     <!-- Security & location settings screen, change unlock gesture screen button, on bottom of screen.  After they draw a gesture and release their finger, we display the pattern so they remember.  If they are nto satisfied with this pattern, they click this button to redraw the pattern. -->
-    <string name="lockgesture_restart_button_text">Redraw</string>
+    <string name="lockgesture_restart_button_text">Ridisegna</string>
     <!-- Security & location settings screen, change unlock gesture screen button, on bottom of screen. If they are supposed to enter their current gesture before being able to draw another one, and they screw up, they hit this button to try again -->
-    <string name="lockgesture_retry_button_text">Retry</string>
+    <string name="lockgesture_retry_button_text">Riprova</string>
     <!-- Security & location settings screen, change unlock gesture screen button, on bottom of screen. Once they draw a new gesture and confirm it by drawing it again, they press this button to exit -->
-    <string name="lockgesture_continue_button_text">Continue</string>
+    <string name="lockgesture_continue_button_text">Continua</string>
     <!-- Security & location settings screen, unlock screen activity title -->
-    <string name="lockgesture_settings_title">Unlock gesture</string>
+    <string name="lockgesture_settings_title">Gesture Sblocco</string>
     <!-- Security & location settings screen, setting check box title if the unlock pattern MUST be drawn everytime they turn on the screen -->
-    <string name="lockgesture_settings_enable_title">Require gesture</string>
+    <string name="lockgesture_settings_enable_title">Richiede gesture</string>
     <!-- Security & location settings screen, setting summary for the checkbox "Require pattern" -->
-    <string name="lockgesture_settings_enable_summary">Must draw gesture to unlock screen</string>
-   <!-- Security & location settings screen, setting check box title. This setting controls whether a visible gesture is drawn as the user moves his finger around while drawing the unlock pattern.  If checked, this line is drawn.  If unchecked, there is nothing drawn so the user does not reveal his pattern while he unlocks the phone.-->
-    <string name="lockgesture_settings_enable_visible_pattern_title">Make gesture visible</string>
+    <string name="lockgesture_settings_enable_summary">Disegna gesture per sbloccare lo schermo</string>
+    <!-- Security & location settings screen, setting check box title. This setting controls whether a visible gesture is drawn as the user moves his finger around while drawing the unlock pattern.  If checked, this line is drawn.  If unchecked, there is nothing drawn so the user does not reveal his pattern while he unlocks the phone.-->
+    <string name="lockgesture_settings_enable_visible_pattern_title">Rendi visibile gesture</string>
     <!-- Security & location settings screen, setting check box title. This controls whether the device locks immediately when the power button is pressed. [CHAR LIMIT=28]-->
-    <string name="lockgesture_settings_enable_power_button_instantly_locks">Power button instantly locks</string>
+    <string name="lockgesture_settings_enable_power_button_instantly_locks">Power button blocca immediatamente</string>
     <!-- Security & location settings screen, setting option name when user has never set an unlock gesture -->
-    <string name="lockgesture_settings_choose_lock_pattern">Set unlock gesture</string>
+    <string name="lockgesture_settings_choose_lock_pattern">Set gesture sblocco</string>
     <!-- Security & location settings screen, setting option name when user has previously set an unlock gesture and wants to change to a new pattern -->
-    <string name="lockgesture_settings_change_lock_pattern">Change unlock gesture</string>
+    <string name="lockgesture_settings_change_lock_pattern">Cambia gesture sblocco</string>
     <!-- Security & location settings screen, the help instructions (an animation) caption -->
-    <string name="lockgesture_settings_help_how_to_record">How to draw an unlock gesture</string>
+    <string name="lockgesture_settings_help_how_to_record">Come disegnare una gesture sblocco</string>
     <!-- Security & location settings screen, change unlock gesture screen instruction on top of screen after too many incorrect attempts -->
-    <string name="lockgesture_too_many_failed_confirmation_attempts_header">Too many incorrect attempts!</string>
+    <string name="lockgesture_too_many_failed_confirmation_attempts_header">Troppi tentativi errati!</string>
     <!-- Security & location settings screen, change unlock gesture screen countdown hint on bottom of screen after too many incorrect attempts -->
-    <string name="lockgesture_too_many_failed_confirmation_attempts_footer">Try again in <xliff:g id="number">%d</xliff:g> Secondi.</string>
+    <string name="lockgesture_too_many_failed_confirmation_attempts_footer">Riprova in <xliff:g id="number">%d</xliff:g> Secondi</string>
     <!-- Toast shown if setting gesture was successful -->
-    <string name="lockpassword_gesture_set_toast">Gesture has been set</string>
+    <string name="lockpassword_gesture_set_toast">Gesture settata</string>
     <!-- Header on gesture confirm screen [CHAR LIMIT=30] -->
-    <string name="lockpassword_confirm_your_gesture_header">Confirm your gesture</string>
+    <string name="lockpassword_confirm_your_gesture_header">Conferma la tua gesture</string>
     <!-- Header on first screen of choose gesture flow [CHAR LIMIT=30] -->
-    <string name="lockpassword_choose_your_gesture_header">Draw your gesture</string>
+    <string name="lockpassword_choose_your_gesture_header">Disegna la tua gesture</string>
 
     <!-- Title for preference that guides the user through creating an unlock gesture [CHAR LIMIT=22] -->
     <string name="unlock_set_unlock_gesture_title">Gesture</string>
     <!-- Title for preference that guides the user through creating an unlock gesture [CHAR LIMIT=45] -->
-    <string name="unlock_set_unlock_gesture_summary">Low security, experimental</string>
+    <string name="unlock_set_unlock_gesture_summary">Sicurezza bassa,sperimentale</string>
 
     <!-- Summary for "Configure lockscreen" when security gesture is enabled [CHAR LIMIT=45] -->
     <string name="unlock_set_unlock_mode_gesture">Gesture</string>
@@ -642,7 +639,7 @@
     <string name="volume_steps_5">5</string>
 
     <!-- Lockscreen weather -->
-    <string name="weather_cat_Notification_title">Notifiche</string>
+    <string name="weather_cat_notifications_title">Notifiche</string>
     <string name="lock_screen_weather_settings_title">Meteo schermata di sblocco</string>
     <string name="lock_screen_colors_title">Colori schermata di sblocco</string>
     <string name="lock_screen_color_settings_summary">Personalizza colore</string>
@@ -659,22 +656,22 @@
     <string name="weather_condition_icon_vclouds_title">VClouds</string>
     <string name="weather_colorize_all_icons_title">Colora tutte le icone</string>
     <string name="weather_colorize_all_icons_summary">Abilita colore icone, disabilitata solo con icone monocromatica</string>
-    <string name="weather_hide_panel_title">Nascondi pannello Meteo</string>
+    <string name="weather_hide_panel_title">Nascondi Pannello Meteo</string>
     <string name="weather_hide_panel_dlg_title">Scegli quando nascondere il pannello Meteo</string>
     <string name="weather_hide_panel_auto_title">Auto</string>
     <string name="weather_hide_panel_custom_title">Personalizzata</string>
     <string name="weather_hide_panel_never_title">Mai</string>
-    <string name="weather_hide_panel_auto_summary">Il Pannello Meteo sarà nascosto, Quando le Notifiche avranno raggiunto il numero massimo nella schermata di sblocco</string>
-    <string name="weather_hide_panel_custom_summary">Il Pannello Meteo sarà nascosto, Quando le Notifiche avranno raggiunto il numero scelto (%s)</string>
-    <string name="weather_hide_panel_never_summary">Il Pannello Meteo non può essere nascosto</string>
-    <string name="weather_number_of_Notification_title">Numero di Notifiche</string>
-    <string name="weather_number_of_Notification_dlg_title">Scegli il numero max di notifiche per nascondere il Meteo</string>
-    <string name="weather_number_of_Notification_always_title">Sempre</string>
-    <string name="weather_number_of_Notification_two_title">2</string>
-    <string name="weather_number_of_Notification_three_title">3</string>
-    <string name="weather_number_of_Notification_four_title">4</string>
-    <string name="weather_number_of_Notification_five_title">5</string>
-    <string name="weather_number_of_Notification_six_title">6</string>
+    <string name="weather_hide_panel_auto_summary">Il Pannello Meteo sarà nascosto quando le notifiche avranno raggiunto il numero massimo</string>
+    <string name="weather_hide_panel_custom_summary">Il Pannello Meteo sarà nascosto quando le notifiche avranno raggiunto il numero scelto (%s)</string>
+    <string name="weather_hide_panel_never_summary">Il Pannello Meteo non sarà nascosto</string>
+    <string name="weather_number_of_notifications_title">Numero di notifiche</string>
+    <string name="weather_number_of_notifications_dlg_title">Scegli il numero di notifiche per nascondere il Meteo</string>
+    <string name="weather_number_of_notifications_always_title">Sempre</string>
+    <string name="weather_number_of_notifications_two_title">2</string>
+    <string name="weather_number_of_notifications_three_title">3</string>
+    <string name="weather_number_of_notifications_four_title">4</string>
+    <string name="weather_number_of_notifications_five_title">5</string>
+    <string name="weather_number_of_notifications_six_title">6</string>
     <string name="icons_title">Icone</string>
     <string name="position_right_title">Destra</string>
     <string name="position_centered_title">Centro</string>
@@ -691,7 +688,7 @@
     <string name="battery_bar_style_title">Posizione Barra Batteria</string>
     <string name="battery_bar_thickness_title">Spessore Barra Batteria</string>
     <string name="battery_bar_animate_title">Animazione in carica</string>
-    <string name="battery_bar_animate_summary">L\'animazione in carica non risulta utile per l\'utilizzatore.Abilitala a tua discrezione.</string>
+    <string name="battery_bar_animate_summary">L\'animazione in carica non risulta utile per l\'utilizzatore.Abilitala a tua discrezione</string>
 
     <!-- StatusBar Clock style -->
     <string name="clock_font_style_title">Stile Font Ora</string>
@@ -802,10 +799,6 @@
 
     <!-- QuickSettings 4 columns -->
     <string name="qs_four_columns_title">Visualizza 4 tile per riga</string>
-    <string name="qs_wifi_detail_title">Dettagli Wi\u2011Fi</string>
-    <string name="qs_wifi_detail_summary">Abilita la visualizzazione dettagli Wi\u2011Fi nei Quick Settings</string>
-    <string name="qs_brightness_slider_enabled">Abilita</string>
-    <string name="qs_brightness_slider_disabled">Disabilita</string>
 
     <!-- QuickSettings colors -->
     <string name="background_title">Sfondo</string>
@@ -1034,9 +1027,9 @@
 
     <!-- Nfc settings -->
     <string name="nfc_polling_mode_title">NFC polling mode</string>
-    <string name="nfc_polling_mode_screen_off">Screen off</string>
-    <string name="nfc_polling_mode_screen_locked">Screen on, locked</string>
-    <string name="nfc_polling_mode_screen_unlocked">Screen on, unlocked (default)</string>
+    <string name="nfc_polling_mode_screen_off">Schermo Spento</string>
+    <string name="nfc_polling_mode_screen_locked">Schermo acceso, bloccato</string>
+    <string name="nfc_polling_mode_screen_unlocked">Schermo acceso, sbloccato (default)</string>
 
     <!-- Network traffic -->
     <string name="network_traffic_vector_title">Network traffic</string>
@@ -1235,7 +1228,7 @@
     <!-- Restart SystemUI -->
     <string name="restart_systemui">Riavvia SystemUI</string>
 
-   <!-- Breathing Notification -->
+    <!-- Breathing Notification -->
     <string name="breathing_Notification_title">Notifiche Breathing</string>
     <string name="sms_breath_title">Breathing SMS</string>
     <string name="sms_breath_summary">Ottieni Notifiche SMS con effetto appare/scompare nella barra notifiche</string>
@@ -1288,7 +1281,7 @@
     <!-- Hide lock screen carrier -->
     <string name="lock_screen_hide_carrier_title">Togli Operatore schermata di sblocco</string>
     <string name="lock_screen_hide_carrier_summary">la SystemUI verrà riavviata.</string>
-	
+
     <!-- Status bar temperature -->
     <string name="status_bar_temperature_title">Temperatura Meteo</string>
     <string name="status_bar_temperature_hidden">Nascondi</string>
@@ -1328,5 +1321,9 @@
     <!-- Lockscreen wallpaper -->
     <string name="lockscreen_wallpaper_title">Sfondo Schermata Sblocco</string>
     <string name="lockscreen_wallpaper_summary">Seleziona lo sfondo per la schermata di sblocco</string>
+
+    <!-- QS Tiles Columns -->
+    <string name="qs_num_columns_title">Numero tile per riga</string>
+    <string name="qs_num_columns_showing">Visualizza %1$s tile per riga</string>
 
 </resources>
