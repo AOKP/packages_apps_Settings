@@ -305,6 +305,7 @@
   <string name="status_bar_battery_style_icon_portrait">Dikey simge</string>
   <string name="status_bar_battery_style_icon_landscape">Yatay simge</string>
   <string name="status_bar_battery_style_circle">Çember</string>
+  <string name="status_bar_battery_style_dotted_circle">Noktalı Çember</string>
   <string name="status_bar_battery_style_text">Metin</string>
   <string name="status_bar_battery_style_hidden">Gizli</string>
   <string name="status_bar_battery_percentage_title">Pil yüzdesi</string>
@@ -688,7 +689,7 @@
   <string name="unlock_scramble_pin_layout_summary">Cihaz kilidini açarken PIN düzenini karıştırır</string>
   <string name="link_volume_option_title">Zil sesi ile Bildirim sesi düzeyini bağla</string>
   <string name="notification_volume_option_title">Bildirim sesi</string>
-  <string name="notification_drawer_title">Bildirim çekmecesi</string>
+  <string name="notification_drawer_title">Bildirim Çekmecesi</string>
   <string name="quick_pulldown_title">Hızlı aşağı çekme</string>
   <string name="quick_pulldown_summary">Durum çubuğunun %1$s tarafından aşağı çekince Hızlı Ayarlar açılır</string>
   <string name="quick_pulldown_summary_left">Sol</string>
@@ -698,8 +699,12 @@
   <string name="quick_pulldown_right">Sağ</string>
   <string name="status_bar_show_weather_title">Hava Durumunu Göster</string>
   <string name="status_bar_show_weather_summary">Hava Durumunu Hızlı Ayarlar Panelinin Üstünde Göster</string>
-  <string name="qs_category_title">Hızlı Ayarlar paneli</string>
+  <string name="qs_category_title">Hızlı Ayarlar Paneli</string>
+  <string name="qs_wifi_detail_title">Genişletilmiş WiFi Görünümü</string>
+  <string name="qs_wifi_detail_summary">Hızlı Ayarlarda Genişletilmiş WiFi Görünümünü Etkinleştir</string>
   <string name="qs_brightness_slider_title">Parlaklık Kaydırıcısını Göster</string>
+  <string name="qs_brightness_slider_enabled">Etkin</string>
+  <string name="qs_brightness_slider_disabled">Devre Dışı</string>
   <string name="qs_order_title">Kareleri Seçin ve Sıralayın</string>
   <string name="add_qs">Yeni Kare Ekle</string>
   <string name="qs_action_delete">Sil</string>
@@ -768,7 +773,8 @@
   <string name="lockscreen_visualizer_title">Müzik görselleştiriciyi görüntüle</string>
   <string name="whisperpush_title">WhisperPush</string>
   <string name="whisperpush_summary">Şifreli SMS ayarlarını yönet</string>
-  <string name="navigation_ring_title">Dolaşım halkası uygulamaları</string>
+  <string name="navigation_ring_enable_title">Dolaşım Halkasını Etkinleştir</string>
+  <string name="navigation_ring_title">Dolaşım Halkası Uygulamaları</string>
   <string name="navigation_ring_message">Dolaşım halkasını düzenlemek için düzenleme simgesine dokunun.\n\nKısayol için bir uygulama seçin.\n\nDeğişikliklerinizi kaydetmek için \'\u2713\' simgesine dokunun ya da ayarları sıfırlamak için \'Varsayılanları geri yükle\'ye dokunun.</string>
   <string name="lcd_density">LCD yoğunluğu</string>
   <string name="dialog_title_lcd_density">LCD yoğunluğu</string>

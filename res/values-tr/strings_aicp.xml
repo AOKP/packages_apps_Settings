@@ -57,10 +57,10 @@
     <string name="kernel_adiutor_settings_title">Kernel Adiutor</string>
 
     <!-- Joke -->
-    <string name="hidden_shit_toast">Hidden shit UNLEASHED!!!</string>
-    <string name="hidden_shit_title">Hidden shit</string>
-    <string name="hidden_shit_summary">You are now in unleashed mode!</string>
-    <string name="hidden_anim_title">Yoga time!</string>
+    <string name="hidden_shit_toast">Gizli içerik SERBEST BIRAKILDI!!!</string>
+    <string name="hidden_shit_title">Gizli İçerik</string>
+    <string name="hidden_shit_summary">Gizli içeriğe ulaştınız!</string>
+    <string name="hidden_anim_title">Yoga Zamanı!</string>
 
     <!-- General strings -->
     <string name="ok">TAMAM</string>
@@ -403,7 +403,7 @@
     <string name="shortcuts_icon_picker_maps">Haritalar</string>
     <string name="shortcuts_icon_picker_market">Market</string>
     <string name="shortcuts_icon_picker_movie">Filmler</string>
-    <string name="shortcuts_icon_picker_music">Müzikik</string>
+    <string name="shortcuts_icon_picker_music">Müzik</string>
     <string name="shortcuts_icon_picker_nav">Navigasyon</string>
     <string name="shortcuts_icon_picker_phone">Telefon</string>
     <string name="shortcuts_icon_picker_package">Paket</string>
@@ -414,7 +414,7 @@
     <string name="shortcuts_icon_picker_rss">RSS Besleme</string>
     <string name="shortcuts_icon_picker_sdcard">SDCard</string>
     <string name="shortcuts_icon_picker_search">Arama</string>
-    <string name="shortcuts_icon_picker_sms">Mesajlaşmama</string>
+    <string name="shortcuts_icon_picker_sms">Mesajlaşma</string>
     <string name="shortcuts_icon_picker_tasks">Görevler</string>
     <string name="shortcuts_icon_picker_terminal">Terminal</string>
     <string name="shortcuts_icon_picker_transit">Transit</string>
@@ -501,7 +501,7 @@
 
     <!-- ListView animation -->
     <string name="interface_settings_animation_title">Animasyon Ayarları</string>
-    <string name="listview_animation_title">ListeGörünümü Animasyonu</string>
+    <string name="listview_animation_title">Liste Görünümü Animasyonu</string>
     <string name="listview_off">Vasrayılan</string>
     <string name="listview_wave_left">Dalga (sola)</string>
     <string name="listview_wave_right">Dalga (sağa)</string>
@@ -515,7 +515,7 @@
     <string name="listview_translate_right">Çevrilme (sağa)</string>
 
     <!-- ListView interpolator -->
-    <string name="listview_interpolator_title">ListeGörünümü Kaydırıcısı</string>
+    <string name="listview_interpolator_title">Liste Görünümü Kaydırıcısı</string>
     <string name="listview_accelerate_interpolator">Hızlandır</string>
     <string name="listview_decelerate_interpolator">Yavaşlat</string>
     <string name="listview_accelerate_decelerate_interpolator">Hızlandır ve Yavaşlat</string>
@@ -605,7 +605,7 @@
     <string name="trigger_bottom_summary">Tetikleme Alanının Yüksekliğini Ayarla</string>
 
     <!-- Toast Animation -->
-    <string name="toast_animation_title">Sistem Mesajları için Efekler</string>
+    <string name="toast_animation_title">Sistem Mesajları için Efektler</string>
     <string name="toast_none_animation">Yok</string>
     <string name="toast_default_animation">Varsayılan</string>
     <string name="toast_fade_animation">Belirme</string>
@@ -673,11 +673,11 @@
     <string name="weather_number_of_notifications_four_title">4</string>
     <string name="weather_number_of_notifications_five_title">5</string>
     <string name="weather_number_of_notifications_six_title">6</string>
-    <string name="icons_title">Icons</string>
-    <string name="position_right_title">Right</string>
-    <string name="position_centered_title">Centered</string>
-    <string name="hidden_title">Hidden</string>
-    <string name="dlg_reset_values_message">Reset values to\nAndroid- or AICP default?</string>
+    <string name="icons_title">İkonlar</string>
+    <string name="position_right_title">Sağda</string>
+    <string name="position_centered_title">Merkezde</string>
+    <string name="hidden_title">Gizle</string>
+    <string name="dlg_reset_values_message">Değerler varsayılan \nAndroid-AICP değerlerine sıfırlansın mı?</string>
     <string name="dlg_reset_android">Android</string>
     <string name="dlg_reset_aicp">AICP</string>
 
@@ -755,9 +755,9 @@
     <string name="navbar_style_dimen_title">Gezinti Çubuğu Boyutları</string>
     <string name="navbar_dimensions_reset_message">Tüm değerler sıfırlansın mı?</string>
     <string name="navigation_bar_height_title">Gezinti Çubuğu Yüksekliği</string>
-    <string name="navigation_bar_height_summary">Geniş ekran modunda bar yüksekliği</string>
+    <string name="navigation_bar_height_summary">Geniş ekran modundaki bar yüksekliği:</string>
     <string name="navigation_bar_width_title">Gezinti Çubuğu Genişliği</string>
-    <string name="navigation_bar_width_summary">Bar yan yatmışken genişliği</string>
+    <string name="navigation_bar_width_summary">Bar yan yatmışkenki genişliği:</string>
     <string name="navigation_bar_size_42_dp_default">42 dp (varsayılan)</string>
     <string name="navigation_bar_size_36_dp">36 dp</string>
     <string name="navigation_bar_size_30_dp">30 dp</string>
@@ -771,7 +771,7 @@
 
     <!-- Custom bootanim -->
     <string name="custom_bootanimation_title">Sistem Açılış Animasyonu</string>
-    <string name="custom_bootanimation_summary">Select your new boot animation.\nOn every change, current animation will be backed up to storage/AICP_ota folder with current date stamp. Old ones must be deleted manually if not needed.</string>
+    <string name="custom_bootanimation_summary">Yeni boot animasyonunu seçiniz.\nHer değişiklikte mevcut animasyon storage/AICP_ota konumuna güncel zaman etiketiyle yedeklencektir. Eğer gerekirse eskilerini siz silmelisiniz.</string>
     <string name="bootanimation_preview">Animasyon Önizlemesi</string>
     <string name="set_custom_bootanimation">Özel dosya ayarla...</string>
     <string name="creating_preview">Önizleme oluşturuluyor...</string>
@@ -861,7 +861,7 @@
     <string name="doze_pulse_duration_out_summary"></string>
 
     <string name="doze_pulse_on_notifications_title">Yanıp Sön</string>
-    <string name="doze_pulse_on_notifications_summary">Bekleyen Bildirimler içni Ekran Aralıklarla Yanıp Söner</string>
+    <string name="doze_pulse_on_notifications_summary">Bekleyen Bildirimler için Ekran Aralıklarla Yanıp Söner</string>
 
     <string name="doze_shake_title">Sallama Ayarları</string>
     <string name="doze_shake_mode_title">Sallama Modu</string>
@@ -984,8 +984,8 @@
     <string name="heads_up_blacklist_title">Kara Liste</string>
     <string name="heads_up_disabled_notice">Uygulamaların Pop-Up Şeklinde Bildirimler Göstermesi için Heads Up\'ı Etkinleştirin</string>
     <string name="heads_up_dismiss_on_remove_title">Kaydırma Davranışı</string>
-    <string name="heads_up_dismiss_on_remove_summary_enabled">\'Dismiss\' (kaldırmak) yerine bildirimi gizleHide notification instead of dismiss</string>
-    <string name="heads_up_dismiss_on_remove_summary_disabled">Bildirimi Gizle ve \'Dismiss\' Et (Kaldır)</string>
+    <string name="heads_up_dismiss_on_remove_summary_enabled">\'Dismiss\' (bildirimi kaldırmak) yerine gizle</string>
+    <string name="heads_up_dismiss_on_remove_summary_disabled">Bildirimi Gizle ve \'Dismiss\' Et (bildirimi kaldır)</string>
     <string name="heads_up_floating_window_title">Heads Up</string>
     <string name="heads_up_floating_window_summary">Ana Ekranda Değilken Yüzen Modda Bildirim Almak için Basılı Tutup Bırakın</string>
 
@@ -1009,7 +1009,7 @@
 
     <!-- Heads up snooze -->
     <string name="heads_up_snooze_title">Bildirimi Sustur</string>
-    <string name="heads_up_snooze_summary">Heads Bildirimini yukarı kaydırmak uyarıları <xliff:g id="number">%d</xliff:g> dakika boyunca susturur.</string>
+    <string name="heads_up_snooze_summary">Heads Up Bildirimini yukarı kaydırmak uyarıları <xliff:g id="number">%d</xliff:g> dakika boyunca susturur.</string>
     <string name="heads_up_snooze_disabled_summary">Bildirimi Sustur Devre Dışı</string>
     <string name="heads_up_snooze_1min">1 dk</string>
     <string name="heads_up_snooze_3min">3 dk</string>
@@ -1167,7 +1167,7 @@
 
     <!-- Disable torch when screen goes off -->
     <string name="torch_category_title">Fener</string>
-    <string name="disable_torch_screen_off_title">Ekran Kapanınca Feneri Kapatma</string>
+    <string name="disable_torch_screen_off_title">Ekran Kapanınca Feneri Kapat</string>
     <string name="disable_torch_screen_off_delay_title">Gecikme</string>
     <string name="torch_screen_off_one_second">1 sn</string>
     <string name="torch_screen_off_ten_second">10 sn (varsayılan)</string>
@@ -1202,19 +1202,19 @@
 
     <!-- Custom Over scroll Settings -->
     <string name="ui_overscroll_title">Kaydırma Efektleri</string>
-    <string name="overscroll_glow_title">Over scroll Color</string>
+    <string name="overscroll_glow_title">Kaydırmada Taşınma Mesafesi Rengi</string>
     <string name="edge_effect_title">Kenardan Parlama Efekti</string>
     <string name="bounce_effect_title">Sıçrama Efekti</string>
     <string name="none_effect_title">Yok</string>
-    <string name="extra_heavy_title">Çok Ağır</string>
-    <string name="heavy_title">Ağır</string>
+    <string name="extra_heavy_title">Çok Fazla</string>
+    <string name="heavy_title">Fazla</string>
     <string name="medium_title">Orta</string>
-    <string name="light_title">Hafif</string>
-    <string name="extra_light_title">Çok Hafif</string>
+    <string name="light_title">Az</string>
+    <string name="extra_light_title">Çok Az</string>
     <string name="overscroll_title">Kaydırma Efekti</string>
     <string name="overscroll_summary">Kaydırmada nesnelerin nasıl görüneceğini seç</string>
-    <string name="overscroll_weight_title">Over scrolling weight</string>
-    <string name="overscroll_weight_summary">Kaydırmada nesnelerin ağırlığını seç</string>
+    <string name="overscroll_weight_title">Kaydırmada Taşınma Mesafesi</string>
+    <string name="overscroll_weight_summary">Kaydırmada Nesneler Ne Kadar Aşağı veya Yukarı Taşınsın</string>
 
     <!-- Status bar power menu -->
     <string name="status_bar_power_menu_title">Genişletilmiş Durum Çubuğunda Güç Menüsü</string>
@@ -1246,7 +1246,7 @@
     <string name="app_sidebar_enable_summaryOff">Uygulama Barı devre dışı</string>
     <string name="app_sidebar_setup_items_title">Uygulama Barı içeriğini seç</string>
     <string name="app_sidebar_setup_items_summary">Uygulama Barına içerik Ekle, kaldır ve pozisyonunu değiştir</string>
-    <string name="app_sidebar_transparency_title">Uygulama Barı Trasnparanlığı</string>
+    <string name="app_sidebar_transparency_title">Uygulama Barı Saydamlığı</string>
     <string name="app_sidebar_transparency_summary">Saydamlığı Ayarla</string>
     <string name="app_sidebar_position_title">Uygulama Barı Konumu</string>
     <string name="app_sidebar_position_summary">Ekranın sol veya sağ kenarına konumlandır</string>
@@ -1270,9 +1270,9 @@
     <string name="trigger_bottom_summary">Tetikleme bölgesinin yüksekliğini ayarla</string>
 
     <!-- Selinux Switch -->
-    <string name="selinux_switch_title">Selinux Statüsünü Değiştirme</string>
+    <string name="selinux_switch_title">SELinux Statüsünü Değiştirme</string>
     <string name="selinux_switch_summary">SELinux bir grup Kernel modifikasyonu ve kullanıcı seçiminden oluşur. Bunu değiştirmek istenmeyen etkilere neden olabilir. Kullanım sorumluluğu size aittir!</string>
-    <string name="selinux_title">Selinux Modu</string>
+    <string name="selinux_title">SELinux Modu</string>
     <string name="selinux_permissive_title">Permissive</string>
     <string name="selinux_enforcing_title">Enforcing</string>
 
@@ -1281,7 +1281,7 @@
     <string name="slim_action_floats_summary">Slim ve Pie aktivitelerini Yüzen Pencere Modunda başlat</string>
 
     <!-- Hide lock screen carrier -->
-    <string name="lock_screen_hide_carrier_title">Operatör İsmini Kilit Ekranında Bizle</string>
+    <string name="lock_screen_hide_carrier_title">Operatör İsmini Kilit Ekranında Gösterme</string>
     <string name="lock_screen_hide_carrier_summary">Aktifleştirdiğinizde SystemUI (arayüz) yeniden başlatılacak.</string>
 
     <!-- Status bar temperature -->
