@@ -85,22 +85,29 @@
     </PreferenceCategory>
 
     <!-- SELinux -->
-        <Preference
-            android:key="selinux_switch"
-            android:title="@string/selinux_switch_title"
-            android:summary="@string/selinux_switch_summary"
-            android:selectable="false"/>
+    <Preference
+        android:key="selinux_switch"
+        android:title="@string/selinux_switch_title"
+        android:summary="@string/selinux_switch_summary"
+        android:selectable="false"/>
 
-        <SwitchPreference
-            android:key="selinux"
-            android:title="@string/selinux_title"
-            android:defaultValue="false" />
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+        android:key="selinux"
+        android:title="@string/selinux_title"
+        android:defaultValue="false" />
 
     <!-- Custom bootanim -->
     <Preference
         android:key="custom_bootanimation"
         android:title="@string/custom_bootanimation_title"
         android:summary="@string/custom_bootanimation_summary" />
+
+    <!-- Three-fingers-swipe to screenshot -->
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+        android:key="three_finger_gesture"
+        android:title="@string/three_finger_gesture"
+        android:summary="@string/three_finger_gesture_summary"
+        android:defaultValue="true" />
 
     <!-- LockClock settings -->
     <PreferenceScreen
@@ -110,7 +117,7 @@
         <intent android:action="android.intent.action.MAIN"
             android:targetPackage="com.cyanogenmod.lockclock"
             android:targetClass="com.cyanogenmod.lockclock.preference.Preferences" />
-        </PreferenceScreen>
+    </PreferenceScreen>
 
     <!-- Joke -->
     <Preference
