@@ -65,6 +65,14 @@
         android:key="category_display_animations_misc"
         android:title="@string/misc_category" >
 
+        <ListPreference 
+            android:key="pref_scrollingcache"
+            android:dialogTitle="@string/pref_scrollingcache_title"
+            android:title="@string/pref_scrollingcache_title"
+            android:summary="@string/pref_scrollingcache_summary"
+            android:entries="@array/entries_scrollingcache"
+            android:entryValues="@array/values_scrollingcache" />
+
         <ListPreference
                 android:key="lcd_density"
                 android:title="@string/lcd_density"

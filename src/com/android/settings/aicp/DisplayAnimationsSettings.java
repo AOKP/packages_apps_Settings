@@ -67,11 +67,15 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private static final String KEY_LISTVIEW_INTERPOLATOR = "listview_interpolator";
     private static final String KEY_TOAST_ANIMATION = "toast_animation";
     private static final String KEY_LCD_DENSITY = "lcd_density";
+    private static final String SCROLLINGCACHE_PREF = "pref_scrollingcache";
+    private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
+    private static final String SCROLLINGCACHE_DEFAULT = "1";
 
     private ListPreference mListViewAnimation;
     private ListPreference mListViewInterpolator;
     private ListPreference mToastAnimation;
     private ListPreference mLcdDensityPreference;
+    private ListPreference mScrollingCachePref;
 
     protected Context mContext;
 
@@ -126,6 +130,12 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         mLcdDensityPreference.setValue(String.valueOf(currentDensity));
         mLcdDensityPreference.setOnPreferenceChangeListener(this);
         updateLcdDensityPreferenceDescription(currentDensity);
+
+        // Scrolling cache
+        mScrollingCachePref = (ListPreference) prefSet.findPreference(SCROLLINGCACHE_PREF);
+        mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
+                SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
+        mScrollingCachePref.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -172,6 +182,11 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
             } catch (NumberFormatException e) {
                 Log.e(TAG, "could not persist display density setting", e);
             }
+            }
+        } else if (preference == mScrollingCachePref) {
+            if (objValue != null) {
+                SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String)objValue);
+            return true;
             }
         }
         return true;
