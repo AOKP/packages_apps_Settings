@@ -1325,5 +1325,12 @@
     <!-- QS Tiles Columns -->
     <string name="qs_num_columns_title">Numero tile per riga</string>
     <string name="qs_num_columns_showing">Visualizza %1$s tile per riga</string>
+    <string name="qs_num_columns_three">3</string>
+    <string name="qs_num_columns_four">4</string>
+    <string name="qs_num_columns_five">5</string>
 
+    <!-- Doze notification color invert -->
+    <string name="doze_notification_color_invert_title">Inversione Colore</string>
+    <string name="doze_notification_color_invert_summary_off">Notifiche Ambient display non sono invertite.Usa su sfondo scuro</string>
+    <string name="doze_notification_color_invert_summary_on">Notifiche Ambient display sono invertire. Usa su sfondo chiaro</string>
 </resources>

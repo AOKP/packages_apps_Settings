@@ -313,7 +313,7 @@
   <string name="status_bar_battery_percentage_default">Nascosta</string>
   <string name="status_bar_battery_percentage_text_inside">All\'interno dell\'icona</string>
   <string name="status_bar_battery_percentage_text_next">Accanto all\'icona</string>
-  <string name="edit_light_settings">Modifica impostazioni luce</string>
+  <string name="edit_light_settings">Modifica impostazioni led</string>
   <string name="pulse_speed_title">Durata e velocità del lampeggio</string>
   <string name="default_time">Normale</string>
   <string name="custom_time">Personalizzato</string>
@@ -337,7 +337,7 @@
   <string name="battery_light_medium_color_title">In carica</string>
   <string name="battery_light_full_color_title">Carica completa</string>
   <string name="battery_light_really_full_color_title">Carica (100%)</string>
-  <string name="notification_light_title">Luce di notifica</string>
+  <string name="notification_light_title">Led di notifica</string>
   <string name="notification_light_general_title">Generale</string>
   <string name="notification_light_applist_title">App</string>
   <string name="notification_light_phonelist_title">Telefono</string>
@@ -345,6 +345,8 @@
   <string name="notification_light_default_value">Predefinito</string>
   <string name="notification_light_missed_call_title">Chiamata persa</string>
   <string name="notification_light_voicemail_title">Messaggio vocale</string>
+  <string name="notification_light_advanced_title">Opzioni</string>
+  <string name="notification_light_screen_on">Led con schermo acceso</string>
   <string name="notification_ringtone_title_cm">Suoneria notifiche</string>
   <string name="headset_connect_player_title">Avvia lettore musicale</string>
   <string name="headset_connect_player_summary">Lancia il lettore musicale predefinito quando vengono connesse le cuffie</string>
@@ -823,7 +825,7 @@
   <string name="interruptions_ignore_while_media_summary">Non ridurre il volume di riproduzione multimediale quando arriva una notifica</string>
   <string name="none_is_silent_title">Non silenziare mai le sveglie</string>
   <string name="none_is_silent_summary">La modalità silenziosa permette sempre le sveglie</string>
-  <string name="allow_lights_title">Consenti luci di notifica</string>
+  <string name="allow_lights_title">Consenti led di notifica</string>
   <string name="live_display_summary">Ottimizza lo schermo in base all\'ora del giorno e alle condizioni ambientali per migliorare la leggibilità e ridurre l\'affaticamento degli occhi</string>
   <string name="live_display_mode">Modalità display</string>
   <string name="live_display_color_temperature_title">Temperatura colore</string>
