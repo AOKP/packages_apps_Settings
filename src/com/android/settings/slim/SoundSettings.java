@@ -25,6 +25,7 @@ import android.content.DialogInterface;
 import android.hardware.CmHardwareManager;
 import android.os.Bundle;
 import android.os.SystemProperties;
+import android.os.UserHandle;
 
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -65,20 +66,20 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         PreferenceScreen prefSet = getPreferenceScreen();
 
         mSafeHeadsetVolume = (SwitchPreference) findPreference(KEY_SAFE_HEADSET_VOLUME);
-        mSafeHeadsetVolume.setChecked(Settings.System.getInt(getContentResolver(),
-                Settings.System.SAFE_HEADSET_VOLUME, 1) != 0);
+        mSafeHeadsetVolume.setChecked(Settings.System.getIntForUser(getContentResolver(),
+                Settings.System.SAFE_HEADSET_VOLUME, 1, UserHandle.USER_CURRENT) != 0);
         mSafeHeadsetVolume.setOnPreferenceChangeListener(this);
 
         mAnnoyingNotifications = (ListPreference) findPreference(PREF_LESS_NOTIFICATION_SOUNDS);
-        int notificationThreshold = Settings.System.getInt(getContentResolver(),
+        int notificationThreshold = Settings.System.getIntForUser(getContentResolver(),
                 Settings.System.MUTE_ANNOYING_NOTIFICATIONS_THRESHOLD,
-                0);
+                0, UserHandle.USER_CURRENT);
         mAnnoyingNotifications.setValue(Integer.toString(notificationThreshold));
         mAnnoyingNotifications.setOnPreferenceChangeListener(this);
 
         mVolumeKeysControlMedia = (SwitchPreference) findPreference(KEY_VOL_MEDIA);
-        mVolumeKeysControlMedia.setChecked(Settings.System.getInt(getContentResolver(),
-                Settings.System.VOLUME_KEYS_CONTROL_MEDIA_STREAM, 0) != 0);
+        mVolumeKeysControlMedia.setChecked(Settings.System.getIntForUser(getContentResolver(),
+                Settings.System.VOLUME_KEYS_CONTROL_MEDIA_STREAM, 0, UserHandle.USER_CURRENT) != 0);
         mVolumeKeysControlMedia.setOnPreferenceChangeListener(this);
 
         mCameraSounds = (SwitchPreference) findPreference(KEY_CAMERA_SOUNDS);
@@ -86,8 +87,8 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         mCameraSounds.setOnPreferenceChangeListener(this);
 
         mVolBtnMusicCtrl = (SwitchPreference) findPreference(KEY_VOLBTN_MUSIC_CTRL);
-        mVolBtnMusicCtrl.setChecked(Settings.System.getInt(getContentResolver(),
-                Settings.System.VOLUME_MUSIC_CONTROLS, 1) != 0);
+        mVolBtnMusicCtrl.setChecked(Settings.System.getIntForUser(getContentResolver(),
+                Settings.System.VOLUME_MUSIC_CONTROLS, 1, UserHandle.USER_CURRENT) != 0);
         mVolBtnMusicCtrl.setOnPreferenceChangeListener(this);
 
         CmHardwareManager cmHardwareManager =
@@ -115,21 +116,21 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         final String key = preference.getKey();
         if (KEY_SAFE_HEADSET_VOLUME.equals(key)) {
             if ((Boolean) objValue) {
-                Settings.System.putInt(getContentResolver(),
-                        Settings.System.SAFE_HEADSET_VOLUME, 1);
+                Settings.System.putIntForUser(getContentResolver(),
+                        Settings.System.SAFE_HEADSET_VOLUME, 1, UserHandle.USER_CURRENT);
             } else {
                 showDialogInner(DLG_SAFE_HEADSET_VOLUME);
             }
         }
         if (PREF_LESS_NOTIFICATION_SOUNDS.equals(key)) {
             final int val = Integer.valueOf((String) objValue);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.MUTE_ANNOYING_NOTIFICATIONS_THRESHOLD, val);
+            Settings.System.putIntForUser(getContentResolver(),
+                    Settings.System.MUTE_ANNOYING_NOTIFICATIONS_THRESHOLD, val, UserHandle.USER_CURRENT);
         }
         if (KEY_VOL_MEDIA.equals(key)) {
-            Settings.System.putInt(getContentResolver(),
+            Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.VOLUME_KEYS_CONTROL_MEDIA_STREAM,
-                    (Boolean) objValue ? 1 : 0);
+                    (Boolean) objValue ? 1 : 0, UserHandle.USER_CURRENT);
         }
         if (KEY_CAMERA_SOUNDS.equals(key)) {
             if ((Boolean) objValue) {
@@ -139,9 +140,9 @@ public class SoundSettings extends SettingsPreferenceFragment implements
             }
         }
         if (KEY_VOLBTN_MUSIC_CTRL.equals(key)) {
-            Settings.System.putInt(getContentResolver(),
+            Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.VOLUME_MUSIC_CONTROLS,
-                    (Boolean) objValue ? 1 : 0);
+                    (Boolean) objValue ? 1 : 0, UserHandle.USER_CURRENT);
         }
         return true;
     }
@@ -177,8 +178,8 @@ public class SoundSettings extends SettingsPreferenceFragment implements
                     .setPositiveButton(R.string.dlg_ok,
                         new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            Settings.System.putInt(getOwner().getContentResolver(),
-                                    Settings.System.SAFE_HEADSET_VOLUME, 0);
+                            Settings.System.putIntForUser(getOwner().getContentResolver(),
+                                    Settings.System.SAFE_HEADSET_VOLUME, 0, UserHandle.USER_CURRENT);
 
                         }
                     })
