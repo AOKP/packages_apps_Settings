@@ -71,6 +71,7 @@ import com.android.settings.notification.OtherSoundSettings;
 import com.android.settings.notification.ZenModeSettings;
 import com.android.settings.print.PrintSettingsFragment;
 import com.android.settings.sim.SimSettings;
+import com.android.settings.slim.SoundSettings;
 import com.android.settings.users.UserSettings;
 import com.android.settings.voice.VoiceInputSettings;
 import com.android.settings.wifi.AdvancedWifiSettings;
@@ -495,6 +496,12 @@ public final class SearchIndexableResources {
                         GestureAnywhereSettings.class.getName(),
                         R.drawable.ic_settings_aicp));
 
+        sResMap.put(SoundSettings.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(SoundSettings.class.getName()),
+                        NO_DATA_RES_ID,
+                        SoundSettings.class.getName(),
+                        R.drawable.ic_settings_aicp));
     }
 
     private SearchIndexableResources() {

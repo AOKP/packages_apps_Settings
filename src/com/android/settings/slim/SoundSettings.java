@@ -16,6 +16,9 @@
 
 package com.android.settings.slim;
 
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.search.Indexable;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -31,14 +34,18 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
+import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.util.Log;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SoundSettings extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener {
+        Preference.OnPreferenceChangeListener, Indexable {
     private static final String TAG = "SoundSettings";
 
     private static final int DLG_SAFE_HEADSET_VOLUME = 0;
@@ -57,6 +64,8 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private SwitchPreference mVolumeKeysControlMedia;
     private SwitchPreference mCameraSounds;
     private SwitchPreference mVolBtnMusicCtrl;
+
+    private static boolean mVibratorSupported;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -93,7 +102,8 @@ public class SoundSettings extends SettingsPreferenceFragment implements
 
         CmHardwareManager cmHardwareManager =
                 (CmHardwareManager) getSystemService(Context.CMHW_SERVICE);
-        if (!cmHardwareManager.isSupported(CmHardwareManager.FEATURE_VIBRATOR)) {
+        mVibratorSupported = cmHardwareManager.isSupported(CmHardwareManager.FEATURE_VIBRATOR);
+        if (!mVibratorSupported) {
             Preference preference = prefSet.findPreference(KEY_VIBRATION_INTENSITY);
             if (preference != null) {
                 prefSet.removePreference(preference);
@@ -225,4 +235,27 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         }
     }
 
+    public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider() {
+                @Override
+                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
+                        boolean enabled) {
+                    ArrayList<SearchIndexableResource> result =
+                            new ArrayList<SearchIndexableResource>();
+
+                    SearchIndexableResource sir = new SearchIndexableResource(context);
+                    sir.xmlResId = R.xml.slim_sound_settings;
+                    result.add(sir);
+                    if (!mVibratorSupported) {
+                        result.remove(KEY_VIBRATION_INTENSITY);
+                    }
+                    return result;
+                }
+
+                @Override
+                public List<String> getNonIndexableKeys(Context context) {
+                    ArrayList<String> result = new ArrayList<String>();
+                    return result;
+                }
+            };
 }

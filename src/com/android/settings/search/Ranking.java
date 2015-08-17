@@ -67,6 +67,7 @@ import com.android.settings.notification.OtherSoundSettings;
 import com.android.settings.notification.ZenModeSettings;
 import com.android.settings.print.PrintSettingsFragment;
 import com.android.settings.sim.SimSettings;
+import com.android.settings.slim.SoundSettings;
 import com.android.settings.users.UserSettings;
 import com.android.settings.voice.VoiceInputSettings;
 import com.android.settings.wifi.AdvancedWifiSettings;
@@ -108,24 +109,25 @@ public final class Ranking {
     public static final int RANK_NAVBARDIM = 26;
     public static final int RANK_NETTRAFFIC = 27;
     public static final int RANK_VOLSTEPS = 28;
-    public static final int RANK_ANIMATIONCONTROLS = 29;
-    public static final int RANK_DISPLAYANIMS = 30;
-    public static final int RANK_OVERSCROLL = 31;
-    public static final int RANK_HOME = 32;
-    public static final int RANK_DISPLAY = 33;
-    public static final int RANK_NOTIFICATIONS = 34;
-    public static final int RANK_STORAGE = 35;
-    public static final int RANK_POWER_USAGE = 36;
-    public static final int RANK_USERS = 37;
-    public static final int RANK_LOCATION = 38;
-    public static final int RANK_SECURITY = 39;
-    public static final int RANK_IME = 40;
-    public static final int RANK_PRIVACY = 41;
-    public static final int RANK_DATE_TIME = 42;
-    public static final int RANK_ACCESSIBILITY = 43;
-    public static final int RANK_PRINTING = 44;
-    public static final int RANK_DEVELOPEMENT = 45;
-    public static final int RANK_DEVICE_INFO = 46;
+    public static final int RANK_ADVANCEDSOUNDS = 29;
+    public static final int RANK_ANIMATIONCONTROLS = 30;
+    public static final int RANK_DISPLAYANIMS = 31;
+    public static final int RANK_OVERSCROLL = 32;
+    public static final int RANK_HOME = 33;
+    public static final int RANK_DISPLAY = 34;
+    public static final int RANK_NOTIFICATIONS = 35;
+    public static final int RANK_STORAGE = 36;
+    public static final int RANK_POWER_USAGE = 37;
+    public static final int RANK_USERS = 38;
+    public static final int RANK_LOCATION = 39;
+    public static final int RANK_SECURITY = 40;
+    public static final int RANK_IME = 41;
+    public static final int RANK_PRIVACY = 42;
+    public static final int RANK_DATE_TIME = 43;
+    public static final int RANK_ACCESSIBILITY = 44;
+    public static final int RANK_PRINTING = 45;
+    public static final int RANK_DEVELOPEMENT = 46;
+    public static final int RANK_DEVICE_INFO = 47;
 
     public static final int RANK_UNDEFINED = -1;
     public static final int RANK_OTHERS = 1024;
@@ -232,6 +234,9 @@ public final class Ranking {
 
         // AICP GestureAnywhere
         sRankMap.put(GestureAnywhereSettings.class.getName(), RANK_GESTUREANYWHERE);
+
+        // AICP Advanced Sounds
+        sRankMap.put(SoundSettings.class.getName(), RANK_ADVANCEDSOUNDS);
 
         // Home
         sRankMap.put(HomeSettings.class.getName(), RANK_HOME);
