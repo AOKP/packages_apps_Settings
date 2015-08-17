@@ -844,7 +844,7 @@
     <string name="volume_answer_call_summary">Ses Açma Tuşu Çağrıyı Cevaplar</string>
 
     <!-- Doze pulse (ambient display) options -->
-    <string name="doze_overwrite_value_title">Overwrite value</string>
+    <string name="doze_overwrite_value_title">Değerleri Üzerine Yaz</string>
     <string name="doze_overwrite_value_summary">Varsayılanlar Yerine Kullanıcı Ayarlarını Kullan</string>
 
     <string name="doze_list_mode_title">Ortam Ekranı</string>
@@ -1327,4 +1327,22 @@
     <!-- QS Tiles Columns -->
     <string name="qs_num_columns_title">Her Sırada Gösterilecek Karo Sayısı</string>
     <string name="qs_num_columns_showing">Her Sırada %1$s Karo Gösteriliyor </string>
+
+    <!-- Doze notification color invert -->
+    <string name="doze_notification_color_invert_title">Renkleri Ters Çevir</string>
+    <string name="doze_notification_color_invert_summary_off">Ortam Ekranı renkleri ters çevrilmeyecek. Koyu temalar için kullanın.</string>
+    <string name="doze_notification_color_invert_summary_on">Ortam Ekranı renkleri ters çevrilmiş olarak gösterilecek.Açık renkli ve Varsayılan temalar için kullanın.</string>
+
+    <!-- Three-fingers-swipe to screenshot -->
+    <string name="three_finger_gesture">Üç Parmak Hareketi</string>
+    <string name="three_finger_gesture_summary">Ekran görüntüsü almak için üç parmağınızı ekranda kaydırın.</string>
+
+    <!-- Scrolling Cache -->
+    <string name="pref_scrollingcache_title">Kaydırma Belleği</string>
+    <string name="pref_scrollingcache_summary">Kaydırma belleğini aktifleştirmek daha akıcı bir deneyim sunar. Fakat birazcık RAM kullanır.</string>
+    <string name="pref_scrollingcache_force_enable">Etkinleştimeyi Zorla</string>
+    <string name="pref_scrollingcache_default_enable">Varsayılan Etkin</string>
+    <string name="pref_scrollingcache_default_disable">Varsayılan Devre Dışı</string>
+    <string name="pref_scrollingcache_force_disable">Devre Dışı Bırakmayı Zorla</string>
+
 </resources>
