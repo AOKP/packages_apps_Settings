@@ -25,7 +25,6 @@ import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.hardware.CmHardwareManager;
 import android.os.Bundle;
 import android.os.SystemProperties;
 import android.os.UserHandle;
@@ -40,6 +39,8 @@ import android.util.Log;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+
+import cyanogenmod.hardware.CMHardwareManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -100,10 +101,8 @@ public class SoundSettings extends SettingsPreferenceFragment implements
                 Settings.System.VOLUME_MUSIC_CONTROLS, 1, UserHandle.USER_CURRENT) != 0);
         mVolBtnMusicCtrl.setOnPreferenceChangeListener(this);
 
-        CmHardwareManager cmHardwareManager =
-                (CmHardwareManager) getSystemService(Context.CMHW_SERVICE);
-        mVibratorSupported = cmHardwareManager.isSupported(CmHardwareManager.FEATURE_VIBRATOR);
-        if (!mVibratorSupported) {
+        CMHardwareManager hardware = CMHardwareManager.getInstance(mContext);
+        if (!hardware.isSupported(CMHardwareManager.FEATURE_VIBRATOR)) {
             Preference preference = prefSet.findPreference(KEY_VIBRATION_INTENSITY);
             if (preference != null) {
                 prefSet.removePreference(preference);
