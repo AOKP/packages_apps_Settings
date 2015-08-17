@@ -33,6 +33,30 @@ import com.android.settings.WirelessSettings;
 import com.android.settings.accessibility.AccessibilitySettings;
 import com.android.settings.aicp.AicpSettings;
 import com.android.settings.aicp.AmbientSettings;
+import com.android.settings.aicp.AnimationControls;
+import com.android.settings.aicp.AppCircleBar;
+import com.android.settings.aicp.AppSidebar;
+import com.android.settings.aicp.BatterySettings;
+import com.android.settings.aicp.BreathingNotifications;
+import com.android.settings.aicp.CarrierLabel;
+import com.android.settings.aicp.DisplayAnimationsSettings;
+import com.android.settings.aicp.HeadsUpSettings;
+import com.android.settings.aicp.LockScreenColorSettings;
+import com.android.settings.aicp.LockScreenWeatherSettings;
+import com.android.settings.aicp.NavBarDimensions;
+import com.android.settings.aicp.NetworkTrafficFragment;
+import com.android.settings.aicp.OmniSwitch;
+import com.android.settings.aicp.OverscrollEffects;
+import com.android.settings.aicp.PieButtonStyleSettings;
+import com.android.settings.aicp.PieControl;
+import com.android.settings.aicp.PieStyleSettings;
+import com.android.settings.aicp.PieTriggerSettings;
+import com.android.settings.aicp.QSColors;
+import com.android.settings.aicp.RecentsPanelSettings;
+import com.android.settings.aicp.StatusBarWeather;
+import com.android.settings.aicp.VariousShit;
+import com.android.settings.aicp.VolumeSteps;
+import com.android.settings.aicp.gestureanywhere.GestureAnywhereSettings;
 import com.android.settings.bluetooth.BluetoothSettings;
 import com.android.settings.cyanogenmod.NotificationDrawerSettings;
 import com.android.settings.deviceinfo.Memory;
@@ -119,14 +143,6 @@ public final class SearchIndexableResources {
                         NO_DATA_RES_ID,
                         WirelessSettings.class.getName(),
                         R.drawable.ic_settings_more));
-
-        sResMap.put(AicpSettings.class.getName(),
-                new SearchIndexableResource(
-                        Ranking.getRankForClassName(AicpSettings.class.getName()),
-                        NO_DATA_RES_ID,
-                        AicpSettings.class.getName(),
-                        R.drawable.ic_settings_aicp));
-
 
         sResMap.put(HomeSettings.class.getName(),
                 new SearchIndexableResource(
@@ -303,6 +319,182 @@ public final class SearchIndexableResources {
                         NO_DATA_RES_ID,
                         AmbientSettings.class.getName(),
                         R.drawable.ic_settings_display));
+
+        sResMap.put(AicpSettings.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(AicpSettings.class.getName()),
+                        NO_DATA_RES_ID,
+                        AicpSettings.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
+        sResMap.put(AnimationControls.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(AnimationControls.class.getName()),
+                        NO_DATA_RES_ID,
+                        AnimationControls.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
+        sResMap.put(AppCircleBar.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(AppCircleBar.class.getName()),
+                        NO_DATA_RES_ID,
+                        AppCircleBar.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
+        sResMap.put(AppSidebar.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(AppSidebar.class.getName()),
+                        NO_DATA_RES_ID,
+                        AppSidebar.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
+        sResMap.put(BatterySettings.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(BatterySettings.class.getName()),
+                        NO_DATA_RES_ID,
+                        BatterySettings.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
+        sResMap.put(BreathingNotifications.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(BreathingNotifications.class.getName()),
+                        NO_DATA_RES_ID,
+                        BreathingNotifications.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
+        sResMap.put(CarrierLabel.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(CarrierLabel.class.getName()),
+                        NO_DATA_RES_ID,
+                        CarrierLabel.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
+        sResMap.put(DisplayAnimationsSettings.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(DisplayAnimationsSettings.class.getName()),
+                        NO_DATA_RES_ID,
+                        DisplayAnimationsSettings.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
+        sResMap.put(HeadsUpSettings.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(HeadsUpSettings.class.getName()),
+                        NO_DATA_RES_ID,
+                        HeadsUpSettings.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
+        sResMap.put(LockScreenColorSettings.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(LockScreenColorSettings.class.getName()),
+                        NO_DATA_RES_ID,
+                        LockScreenColorSettings.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
+        sResMap.put(LockScreenWeatherSettings.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(LockScreenWeatherSettings.class.getName()),
+                        NO_DATA_RES_ID,
+                        LockScreenWeatherSettings.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
+        sResMap.put(NavBarDimensions.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(NavBarDimensions.class.getName()),
+                        NO_DATA_RES_ID,
+                        NavBarDimensions.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
+        sResMap.put(NetworkTrafficFragment.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(NetworkTrafficFragment.class.getName()),
+                        NO_DATA_RES_ID,
+                        NetworkTrafficFragment.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
+        sResMap.put(OmniSwitch.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(OmniSwitch.class.getName()),
+                        NO_DATA_RES_ID,
+                        OmniSwitch.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
+        sResMap.put(OverscrollEffects.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(OverscrollEffects.class.getName()),
+                        NO_DATA_RES_ID,
+                        OverscrollEffects.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
+        sResMap.put(PieButtonStyleSettings.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(PieButtonStyleSettings.class.getName()),
+                        NO_DATA_RES_ID,
+                        PieButtonStyleSettings.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
+        sResMap.put(PieControl.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(PieControl.class.getName()),
+                        NO_DATA_RES_ID,
+                        PieControl.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
+        sResMap.put(PieStyleSettings.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(PieStyleSettings.class.getName()),
+                        NO_DATA_RES_ID,
+                        PieStyleSettings.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
+        sResMap.put(PieTriggerSettings.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(PieTriggerSettings.class.getName()),
+                        NO_DATA_RES_ID,
+                        PieTriggerSettings.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
+        sResMap.put(QSColors.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(QSColors.class.getName()),
+                        NO_DATA_RES_ID,
+                        QSColors.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
+        sResMap.put(RecentsPanelSettings.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(RecentsPanelSettings.class.getName()),
+                        NO_DATA_RES_ID,
+                        RecentsPanelSettings.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
+        sResMap.put(StatusBarWeather.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(StatusBarWeather.class.getName()),
+                        NO_DATA_RES_ID,
+                        StatusBarWeather.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
+        sResMap.put(VariousShit.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(VariousShit.class.getName()),
+                        NO_DATA_RES_ID,
+                        VariousShit.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
+        sResMap.put(VolumeSteps.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(VolumeSteps.class.getName()),
+                        NO_DATA_RES_ID,
+                        VolumeSteps.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
+        sResMap.put(GestureAnywhereSettings.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(GestureAnywhereSettings.class.getName()),
+                        NO_DATA_RES_ID,
+                        GestureAnywhereSettings.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
     }
 
     private SearchIndexableResources() {

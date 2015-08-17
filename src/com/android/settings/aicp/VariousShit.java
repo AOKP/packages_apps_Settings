@@ -17,6 +17,9 @@
 
 package com.android.settings.aicp;
 
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.search.Indexable;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ContentResolver;
@@ -46,6 +49,7 @@ import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
+import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.Display;
@@ -58,6 +62,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -93,7 +98,7 @@ import com.android.internal.util.cm.QSUtils;
  */
 public class VariousShit extends SettingsPreferenceFragment
         implements OnSharedPreferenceChangeListener,
-        Preference.OnPreferenceChangeListener {
+        Preference.OnPreferenceChangeListener, Indexable {
 
     private static final String TAG = "VariousShit";
 
@@ -605,5 +610,33 @@ public class VariousShit extends SettingsPreferenceFragment
                 "chmod 644 /system/media/bootanimation.zip",
                 "mount -o ro,remount /system");
     }
-}
 
+    public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider() {
+                @Override
+                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
+                        boolean enabled) {
+                    ArrayList<SearchIndexableResource> result =
+                            new ArrayList<SearchIndexableResource>();
+
+                    SearchIndexableResource sir = new SearchIndexableResource(context);
+                    sir.xmlResId = R.xml.aicp_various_shit;
+                    result.add(sir);
+
+                    return result;
+                }
+
+                @Override
+                public List<String> getNonIndexableKeys(Context context) {
+                    ArrayList<String> result = new ArrayList<String>();
+                    if (Helpers.isPackageInstalled(LOCKCLOCK_PACKAGE_NAME, context.getPackageManager())) {
+                        result.add(LOCKCLOCK_PACKAGE_NAME);
+                    }
+                    if (!QSUtils.deviceSupportsFlashLight(context)) {
+                        result.remove(DISABLE_TORCH_ON_SCREEN_OFF);
+                        result.remove(DISABLE_TORCH_ON_SCREEN_OFF_DELAY);
+                    }
+                    return result;
+                }
+            };
+}

@@ -29,6 +29,31 @@ import com.android.settings.SecuritySettings;
 import com.android.settings.WirelessSettings;
 import com.android.settings.accessibility.AccessibilitySettings;
 import com.android.settings.aicp.AicpSettings;
+import com.android.settings.aicp.AmbientSettings;
+import com.android.settings.aicp.AnimationControls;
+import com.android.settings.aicp.AppCircleBar;
+import com.android.settings.aicp.AppSidebar;
+import com.android.settings.aicp.BatterySettings;
+import com.android.settings.aicp.BreathingNotifications;
+import com.android.settings.aicp.CarrierLabel;
+import com.android.settings.aicp.DisplayAnimationsSettings;
+import com.android.settings.aicp.HeadsUpSettings;
+import com.android.settings.aicp.LockScreenColorSettings;
+import com.android.settings.aicp.LockScreenWeatherSettings;
+import com.android.settings.aicp.NavBarDimensions;
+import com.android.settings.aicp.NetworkTrafficFragment;
+import com.android.settings.aicp.OmniSwitch;
+import com.android.settings.aicp.OverscrollEffects;
+import com.android.settings.aicp.PieButtonStyleSettings;
+import com.android.settings.aicp.PieControl;
+import com.android.settings.aicp.PieStyleSettings;
+import com.android.settings.aicp.PieTriggerSettings;
+import com.android.settings.aicp.QSColors;
+import com.android.settings.aicp.RecentsPanelSettings;
+import com.android.settings.aicp.StatusBarWeather;
+import com.android.settings.aicp.VariousShit;
+import com.android.settings.aicp.VolumeSteps;
+import com.android.settings.aicp.gestureanywhere.GestureAnywhereSettings;
 import com.android.settings.bluetooth.BluetoothSettings;
 import com.android.settings.deviceinfo.Memory;
 import com.android.settings.deviceinfo.UsbSettings;
@@ -61,21 +86,46 @@ public final class Ranking {
     public static final int RANK_DATA_USAGE = 4;
     public static final int RANK_WIRELESS = 5;
     public static final int RANK_AICP = 6;
-    public static final int RANK_HOME = 6;
-    public static final int RANK_DISPLAY = 7;
-    public static final int RANK_NOTIFICATIONS = 9;
-    public static final int RANK_STORAGE = 10;
-    public static final int RANK_POWER_USAGE = 11;
-    public static final int RANK_USERS = 12;
-    public static final int RANK_LOCATION = 13;
-    public static final int RANK_SECURITY = 14;
-    public static final int RANK_IME = 15;
-    public static final int RANK_PRIVACY = 16;
-    public static final int RANK_DATE_TIME = 17;
-    public static final int RANK_ACCESSIBILITY = 18;
-    public static final int RANK_PRINTING = 19;
-    public static final int RANK_DEVELOPEMENT = 20;
-    public static final int RANK_DEVICE_INFO = 21;
+    public static final int RANK_VARIOUSSHIT = 7;
+    public static final int RANK_BATTERYSETTINGS = 8;
+    public static final int RANK_HEADSUP = 9;
+    public static final int RANK_AMBIENT = 10;
+    public static final int RANK_OMNISWITCH = 11;
+    public static final int RANK_RECENTSPANEL = 12;
+    public static final int RANK_BREATHINGNOTIF = 13;
+    public static final int RANK_CARRIERLABEL = 14;
+    public static final int RANK_GESTUREANYWHERE = 15;
+    public static final int RANK_LSCOLOR = 16;
+    public static final int RANK_QSCOLOR = 17;
+    public static final int RANK_LSWEATHER = 18;
+    public static final int RANK_STATUSBARWEATHER = 19;
+    public static final int RANK_APPCIRCLEBAR = 20;
+    public static final int RANK_APPSIDEBAR = 21;
+    public static final int RANK_PIESTYLE = 22;
+    public static final int RANK_PIECONTROL = 23;
+    public static final int RANK_PIEBUTTON = 24;
+    public static final int RANK_PIETRIGGER = 25;
+    public static final int RANK_NAVBARDIM = 26;
+    public static final int RANK_NETTRAFFIC = 27;
+    public static final int RANK_VOLSTEPS = 28;
+    public static final int RANK_ANIMATIONCONTROLS = 29;
+    public static final int RANK_DISPLAYANIMS = 30;
+    public static final int RANK_OVERSCROLL = 31;
+    public static final int RANK_HOME = 32;
+    public static final int RANK_DISPLAY = 33;
+    public static final int RANK_NOTIFICATIONS = 34;
+    public static final int RANK_STORAGE = 35;
+    public static final int RANK_POWER_USAGE = 36;
+    public static final int RANK_USERS = 37;
+    public static final int RANK_LOCATION = 38;
+    public static final int RANK_SECURITY = 39;
+    public static final int RANK_IME = 40;
+    public static final int RANK_PRIVACY = 41;
+    public static final int RANK_DATE_TIME = 42;
+    public static final int RANK_ACCESSIBILITY = 43;
+    public static final int RANK_PRINTING = 44;
+    public static final int RANK_DEVELOPEMENT = 45;
+    public static final int RANK_DEVICE_INFO = 46;
 
     public static final int RANK_UNDEFINED = -1;
     public static final int RANK_OTHERS = 1024;
@@ -107,6 +157,81 @@ public final class Ranking {
 
         // AICP Extras
         sRankMap.put(AicpSettings.class.getName(), RANK_AICP);
+
+        // AICP Animation Controls
+        sRankMap.put(AnimationControls.class.getName(), RANK_ANIMATIONCONTROLS);
+
+        // AICP App CircleBar
+        sRankMap.put(AppCircleBar.class.getName(), RANK_APPCIRCLEBAR);
+
+        // AICP App CircleBar
+        sRankMap.put(AppSidebar.class.getName(), RANK_APPSIDEBAR);
+
+        // AICP Battery Settings
+        sRankMap.put(BatterySettings.class.getName(), RANK_BATTERYSETTINGS);
+
+        // AICP Breathing Notifications
+        sRankMap.put(BreathingNotifications.class.getName(), RANK_BREATHINGNOTIF);
+
+        // AICP Carrier Label
+        sRankMap.put(CarrierLabel.class.getName(), RANK_CARRIERLABEL);
+
+        // AICP Display Animations Settings
+        sRankMap.put(DisplayAnimationsSettings.class.getName(), RANK_DISPLAYANIMS);
+
+        // AICP HeadsUP
+        sRankMap.put(HeadsUpSettings.class.getName(), RANK_HEADSUP);
+
+        // AICP Ambient Settings
+        sRankMap.put(AmbientSettings.class.getName(), RANK_AMBIENT);
+
+        // AICP Lockscreen Color
+        sRankMap.put(LockScreenColorSettings.class.getName(), RANK_LSCOLOR);
+
+        // AICP Lockscreen Weather
+        sRankMap.put(LockScreenWeatherSettings.class.getName(), RANK_LSWEATHER);
+
+        // AICP NavigationBar Dimensions
+        sRankMap.put(NavBarDimensions.class.getName(), RANK_NAVBARDIM);
+
+        // AICP Network Traffic
+        sRankMap.put(NetworkTrafficFragment.class.getName(), RANK_NETTRAFFIC);
+
+        // AICP OmniSwitch
+        sRankMap.put(OmniSwitch.class.getName(), RANK_OMNISWITCH);
+
+        // AICP Overscroll Effects
+        sRankMap.put(OverscrollEffects.class.getName(), RANK_OVERSCROLL);
+
+        // AICP PIE Button Style
+        sRankMap.put(PieButtonStyleSettings.class.getName(), RANK_PIEBUTTON);
+
+        // AICP PIE Control
+        sRankMap.put(PieControl.class.getName(), RANK_PIECONTROL);
+
+        // AICP PIE Style
+        sRankMap.put(PieStyleSettings.class.getName(), RANK_PIESTYLE);
+
+        // AICP PIE Trigger
+        sRankMap.put(PieStyleSettings.class.getName(), RANK_PIETRIGGER);
+
+        // AICP QS Colors
+        sRankMap.put(QSColors.class.getName(), RANK_QSCOLOR);
+
+        // AICP Recents Panel
+        sRankMap.put(RecentsPanelSettings.class.getName(), RANK_RECENTSPANEL);
+
+        // AICP Statusbar Weather
+        sRankMap.put(StatusBarWeather.class.getName(), RANK_STATUSBARWEATHER);
+
+        // AICP Various Shit
+        sRankMap.put(VariousShit.class.getName(), RANK_VARIOUSSHIT);
+
+        // AICP Volume Steps
+        sRankMap.put(VolumeSteps.class.getName(), RANK_VOLSTEPS);
+
+        // AICP GestureAnywhere
+        sRankMap.put(GestureAnywhereSettings.class.getName(), RANK_GESTUREANYWHERE);
 
         // Home
         sRankMap.put(HomeSettings.class.getName(), RANK_HOME);

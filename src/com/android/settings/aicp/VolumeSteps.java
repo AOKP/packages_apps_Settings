@@ -16,6 +16,9 @@
 
 package com.android.settings.aicp;
 
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.search.Indexable;
+
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.res.Resources;
@@ -23,6 +26,7 @@ import android.media.AudioManager;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
+import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.provider.MediaStore;
 import android.telephony.TelephonyManager;
@@ -31,8 +35,11 @@ import android.util.Log;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class VolumeSteps extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener  {
+        Preference.OnPreferenceChangeListener, Indexable  {
 
     private static final String TAG = "VolumeSteps";
     private static final String KEY_VOLUME_STEPS_ALARM = "volume_steps_alarm";
@@ -159,4 +166,32 @@ public class VolumeSteps extends SettingsPreferenceFragment implements
 
         Log.i(TAG, "Volume steps:" + settingsKey + "" +String.valueOf(steps));
     }
+
+    public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider() {
+                boolean isPhone = TelephonyManager.getDefault().getCurrentPhoneType() != TelephonyManager.PHONE_TYPE_NONE;
+                @Override
+                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
+                        boolean enabled) {
+                    ArrayList<SearchIndexableResource> result =
+                            new ArrayList<SearchIndexableResource>();
+
+                    SearchIndexableResource sir = new SearchIndexableResource(context);
+                    sir.xmlResId = R.xml.aicp_volume_steps_settings;
+                    result.add(sir);
+
+                    return result;
+                }
+
+                @Override
+                public List<String> getNonIndexableKeys(Context context) {
+                    ArrayList<String> result = new ArrayList<String>();
+                    if (isPhone) {
+                        result.add(KEY_VOLUME_STEPS_DTMF);
+                        result.add(KEY_VOLUME_STEPS_RING);
+                        result.add(KEY_VOLUME_STEPS_VOICE_CALL);
+                    }
+                    return result;
+                }
+            };
 }

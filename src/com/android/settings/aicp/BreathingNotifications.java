@@ -1,5 +1,8 @@
 package com.android.settings.aicp;
 
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.search.Indexable;
+
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 
@@ -21,10 +24,12 @@ import android.preference.Preference;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
+import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.android.settings.SettingsPreferenceFragment;
@@ -32,7 +37,7 @@ import com.android.settings.R;
 import com.android.settings.Utils;
 
 public class BreathingNotifications extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener {
+        Preference.OnPreferenceChangeListener, Indexable {
 
     private static final String SMS_BREATH = "sms_breath";
     private static final String MISSED_CALL_BREATH = "missed_call_breath";
@@ -99,4 +104,30 @@ public class BreathingNotifications extends SettingsPreferenceFragment implement
 
         return true;
     }
+
+    public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider() {
+                @Override
+                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
+                        boolean enabled) {
+                    ArrayList<SearchIndexableResource> result =
+                            new ArrayList<SearchIndexableResource>();
+
+                    SearchIndexableResource sir = new SearchIndexableResource(context);
+                    sir.xmlResId = R.xml.breathing_notifications;
+                    result.add(sir);
+
+                    return result;
+                }
+
+                @Override
+                public List<String> getNonIndexableKeys(Context context) {
+                    ArrayList<String> result = new ArrayList<String>();
+                    if (Utils.isVoiceCapable(context)) {
+                        result.add(MISSED_CALL_BREATH);
+                        result.add(VOICEMAIL_BREATH);
+                    }
+                    return result;
+                }
+            };
 }

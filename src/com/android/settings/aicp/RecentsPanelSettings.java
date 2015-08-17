@@ -16,9 +16,13 @@
  */
 package com.android.settings.aicp;
 
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.search.Indexable;
+
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.preference.ListPreference;
@@ -26,14 +30,18 @@ import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
+import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
 import com.android.settings.util.Helpers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class RecentsPanelSettings extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener {
+        Preference.OnPreferenceChangeListener, Indexable {
 
     private static final String TAG = "RecentsPanelSettings";
 
@@ -42,7 +50,7 @@ public class RecentsPanelSettings extends SettingsPreferenceFragment implements
 
     private static final String SHOW_CLEAR_ALL_RECENTS = "show_clear_all_recents";
     private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
-    
+
     private SwitchPreference mRecentsClearAll;
     private ListPreference mRecentsClearAllLocation;
     private Preference mOmniSwitch;
@@ -120,10 +128,35 @@ public class RecentsPanelSettings extends SettingsPreferenceFragment implements
             summary = R.string.recents_clear_all_location_bottom_left;
         } else if (value == 5) {
             Settings.System.putInt(resolver, Settings.System.RECENTS_CLEAR_ALL_LOCATION, 5);
-            summary = R.string.recents_clear_all_location_bottom_center;			
+            summary = R.string.recents_clear_all_location_bottom_center;
         }
         if (mRecentsClearAllLocation != null && summary != -1) {
             mRecentsClearAllLocation.setSummary(res.getString(summary));
         }
     }
+
+    public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider() {
+                @Override
+                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
+                        boolean enabled) {
+                    ArrayList<SearchIndexableResource> result =
+                            new ArrayList<SearchIndexableResource>();
+
+                    SearchIndexableResource sir = new SearchIndexableResource(context);
+                    sir.xmlResId = R.xml.aicp_recents_panel_settings;
+                    result.add(sir);
+
+                    return result;
+                }
+
+                @Override
+                public List<String> getNonIndexableKeys(Context context) {
+                    ArrayList<String> result = new ArrayList<String>();
+                    if (Helpers.isPackageInstalled(OMNISWITCH_PACKAGE_NAME, context.getPackageManager())) {
+                        result.add(KEY_OMNISWITCH);
+                    }
+                    return result;
+                }
+            };
 }

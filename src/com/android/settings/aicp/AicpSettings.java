@@ -17,7 +17,11 @@
 
 package com.android.settings.aicp;
 
+import android.provider.SearchIndexableResource;
+import com.android.settings.search.BaseSearchIndexProvider;
+
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.SharedPreferences;
@@ -27,14 +31,18 @@ import android.preference.Preference;
 import android.preference.PreferenceScreen;
 
 import com.android.settings.R;
+import com.android.settings.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.util.Helpers;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * LAB files borrowed from excellent ChameleonOS for AICP
  */
 public class AicpSettings extends SettingsPreferenceFragment
-        implements OnSharedPreferenceChangeListener {
+        implements OnSharedPreferenceChangeListener, Indexable {
 
     private static final String TAG = "AicpLabs";
 
@@ -104,5 +112,27 @@ public class AicpSettings extends SettingsPreferenceFragment
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
+
+    public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+        new BaseSearchIndexProvider() {
+        @Override
+        public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
+                                                                    boolean enabled) {
+            ArrayList<SearchIndexableResource> result =
+                new ArrayList<SearchIndexableResource>();
+
+            SearchIndexableResource sir = new SearchIndexableResource(context);
+            sir.xmlResId = R.xml.aicp_lab_prefs;
+            result.add(sir);
+
+            return result;
+        }
+
+        @Override
+        public List<String> getNonIndexableKeys(Context context) {
+            ArrayList<String> result = new ArrayList<String>();
+            return result;
+        }
+    };
 }
 
