@@ -1347,4 +1347,6 @@
     <string name="pref_scrollingcache_default_disable">Default disable</string>
     <string name="pref_scrollingcache_force_disable">Force disable</string>
 
+    <string name="shake_clear_recents">Shake to clear</string>
+    <string name="shake_clear_recents_summary">Clear recents by shaking your phone</string>
 </resources>
