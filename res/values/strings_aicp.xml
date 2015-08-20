@@ -1287,7 +1287,7 @@
     <string name="lock_screen_hide_carrier_summary">SystemUI will be restarted on switch toggle.</string>
 
     <!-- Status bar temperature -->
-    <string name="status_bar_temperature_title">Temperature</string>
+    <string name="status_bar_temperature_title">Weather temperature</string>
     <string name="status_bar_temperature_hidden">Hidden</string>
     <string name="status_bar_temperature_show_scale">Shown with scale</string>
     <string name="status_bar_temperature_hide_scale">Shown without scale</string>
