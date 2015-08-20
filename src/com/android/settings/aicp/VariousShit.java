@@ -225,7 +225,7 @@ public class VariousShit extends SettingsPreferenceFragment
         mSelinux = (SwitchPreference) findPreference(SELINUX);
         mSelinux.setOnPreferenceChangeListener(this);
 
-        if (CMDProcessor.runSuCommand("getenforce").getStdout().contains("Enforcing")) {
+        if (CMDProcessor.runShellCommand("getenforce").getStdout().contains("Enforcing")) {
             mSelinux.setChecked(true);
             mSelinux.setSummary(R.string.selinux_enforcing_title);
         } else {
