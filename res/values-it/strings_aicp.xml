@@ -73,7 +73,7 @@
     <string name="default_string">Default</string>
     <string name="reset_message">Resetta tutto alle impostazioni di default?</string>
     <string name="misc_category">Miscellaneous</string>
-    <string name="lockscreen_category">Lock screen</string>
+    <string name="lockscreen_category">Schermata Sblocco</string>
 
     <!-- Advanced, Device specific (DeviceParts) settings  -->
     <string name="device_settings_title">Device</string>
@@ -105,7 +105,7 @@
     <!-- Less Notification sounds -->
     <string name="notifications_category_title">Notifiche</string>
     <string name="less_notification_sounds_title">Notifiche meno frequenti</string>
-    <string name="less_notification_sounds_summary"> Limita il suono delle notifiche per ogni app nel periodo configurato</string>
+    <string name="less_notification_sounds_summary">Limita il suono delle notifiche per ogni app nel periodo configurato</string>
     <string name="less_notification_sounds_default">Predefinito</string>
     <string name="less_notification_sounds_3s">3 Secondi</string>
     <string name="less_notification_sounds_5s">5 Secondi</string>
@@ -203,7 +203,7 @@
     <string name="clock_date_display_summary">Visualizza data personalizzata prima dell\'ora</string>
     <string name="clock_date_style">Stile Data</string>
     <string name="clock_date_format">Formato Data</string>
-    <string name="clock_date_string_edittext_title">Deve essere ex. MM/dd/yy</string>
+    <string name="clock_date_string_edittext_title">Deve essere ex. MM/gg/aa</string>
     <string name="clock_date_string_edittext_summary">Inserisci riga</string>
     <string name="am_pm_clock_normal">Font Normale</string>
     <string name="am_pm_clock_small">Font Piccolo</string>
@@ -317,15 +317,15 @@
     <string name="shortcut_action_none">Nessuna</string>
     <string name="shortcut_action_app">App personalizzata</string>
     <string name="shortcut_action_home">Home</string>
-    <string name="shortcut_action_back">Back</string>
-    <string name="shortcut_action_kill">Kill app</string>
+    <string name="shortcut_action_back">Indietro</string>
+    <string name="shortcut_action_kill">Termina app</string>
     <string name="shortcut_action_lastapp">Ultima app</string>
     <string name="shortcut_action_assist">Cerca</string>
     <string name="shortcut_action_screenshot">Screenshot</string>
     <string name="shortcut_action_torch">Torcia</string>
     <string name="shortcut_action_menu">Menu</string>
-    <string name="shortcut_action_ime">Open IME Switcher</string>
-    <string name="shortcut_action_power_menu">Power menu</string>
+    <string name="shortcut_action_ime">Apri selettore IME</string>
+    <string name="shortcut_action_power_menu">Tasto Power</string>
     <string name="shortcut_action_recent">Recenti</string>
     <string name="shortcut_action_restartui">Riavvia SystemUI</string>
     <string name="shortcut_action_power">Spegni schermo</string>
@@ -412,7 +412,7 @@
     <string name="shortcuts_icon_picker_quicksettings">Quick Settings</string>
     <string name="shortcuts_icon_picker_rss">RSS Feed</string>
     <string name="shortcuts_icon_picker_sdcard">SDCard</string>
-    <string name="shortcuts_icon_picker_search">Search</string>
+    <string name="shortcuts_icon_picker_search">Cerca</string>
     <string name="shortcuts_icon_picker_sms">Messaggi</string>
     <string name="shortcuts_icon_picker_tasks">Tasks</string>
     <string name="shortcuts_icon_picker_terminal">Terminale</string>
@@ -514,14 +514,14 @@
     <string name="listview_translate_right">Translate (right)</string>
 
     <!-- ListView interpolator -->
-    <string name="listview_interpolator_title">ListView interpolator</string>
-    <string name="listview_accelerate_interpolator">Accelerate</string>
-    <string name="listview_decelerate_interpolator">Decelerate</string>
-    <string name="listview_accelerate_decelerate_interpolator">Accelerate and decelerate</string>
-    <string name="listview_anticipate_interpolator">Anticipate</string>
-    <string name="listview_overshoot_interpolator">Overshoot</string>
-    <string name="listview_anticipate_overshoot_interpolator">Anticipate and overshoot</string>
-    <string name="listview_bounce_interpolator">Bounce</string>
+    <string name="listview_interpolator_title">Velocità effetto ListView</string>
+    <string name="listview_accelerate_interpolator">Accellerato</string>
+    <string name="listview_decelerate_interpolator">Decellerato</string>
+    <string name="listview_accelerate_decelerate_interpolator">Accellerato e decellerato</string>
+    <string name="listview_anticipate_interpolator">Anticipato</string>
+    <string name="listview_overshoot_interpolator">Vai oltre</string>
+    <string name="listview_anticipate_overshoot_interpolator">Anticipato e vai oltre</string>
+    <string name="listview_bounce_interpolator">Rimbalzo</string>
 
     <!-- Lock Gesture settings -->
     <!-- Security & location settings screen, setting option name -->
@@ -564,7 +564,7 @@
     <!-- Security & location settings screen, setting check box title. This setting controls whether a visible gesture is drawn as the user moves his finger around while drawing the unlock pattern.  If checked, this line is drawn.  If unchecked, there is nothing drawn so the user does not reveal his pattern while he unlocks the phone.-->
     <string name="lockgesture_settings_enable_visible_pattern_title">Rendi visibile gesture</string>
     <!-- Security & location settings screen, setting check box title. This controls whether the device locks immediately when the power button is pressed. [CHAR LIMIT=28]-->
-    <string name="lockgesture_settings_enable_power_button_instantly_locks">Power button blocca immediatamente</string>
+    <string name="lockgesture_settings_enable_power_button_instantly_locks">Tasto Power blocca immediatamente</string>
     <!-- Security & location settings screen, setting option name when user has never set an unlock gesture -->
     <string name="lockgesture_settings_choose_lock_pattern">Set gesture sblocco</string>
     <!-- Security & location settings screen, setting option name when user has previously set an unlock gesture and wants to change to a new pattern -->
@@ -776,21 +776,21 @@
     <string name="creating_preview">Creazione preview...</string>
     <string name="error_reading_zip_file">Errore di lettura zip file</string>
     <string name="error_creating_preview">Errore creazione preview</string>
-    <string name="install_file_manager_error">Nessuna applicazione trovata per inserire il file zip.Installa un file manager.</string>
+    <string name="install_file_manager_error">Nessuna applicazione trovata per inserire il file zip.Installa un file manager</string>
     <string name="apply">Applica</string>
 
     <!-- QuickSettings tiles -->
     <string name="qs_screenshot_tile">Screenshot</string>
-    <string name="qs_screenrecord_tile">Screenrecord</string>
+    <string name="qs_screenrecord_tile">Registra Schermo</string>
     <string name="qs_sync_tile">Sync</string>
-    <string name="qs_tile_powermenu">Power Menu</string>
+    <string name="qs_tile_powermenu">Tasto Power</string>
     <string name="qs_tile_slimpie">Pie Control</string>
-    <string name="qs_battery_saver_tile">Modalità Batteria</string>
+    <string name="qs_battery_saver_tile">Salva Batteria</string>
     <string name="qs_brightness_tile">Luminosità</string>
     <string name="qs_expanded_desktop_tile">Desktop Esteso</string>
     <string name="qs_Notification_tile">Notifiche</string>
-    <string name="qs_screen_off_tile">Screen off</string>
-    <string name="qs_systemui_restart_tile">Restart SystemUI</string>
+    <string name="qs_screen_off_tile">Spegni Schermo</string>
+    <string name="qs_systemui_restart_tile">Riavvia SystemUI</string>
     <string name="qs_tile_slim_floats">Slim Floats</string>
 
     <!-- QuickSettings collapse panel -->
@@ -846,21 +846,21 @@
     <string name="doze_overwrite_value_title">Sovrascrivi Valori</string>
     <string name="doze_overwrite_value_summary">permetti di sovrascrivere i valori di default</string>
 
-    <string name="doze_list_mode_title">Doze mode</string>
-    <string name="doze_list_mode_summary">Configura doze mode</string>
+    <string name="doze_list_mode_title">Modalità</string>
+    <string name="doze_list_mode_summary">Configura Ambient Display</string>
 
     <string name="doze_pulse_title">Settaggi Tempo</string>
-    <string name="doze_pulse_duration_in_title">Fade in</string>
+    <string name="doze_pulse_duration_in_title">Dissolvenza ingresso</string>
     <string name="doze_pulse_duration_in_summary"></string>
 
     <string name="doze_pulse_duration_visible_title">Durata Visibilità</string>
     <string name="doze_pulse_duration_visible_summary"></string>
 
-    <string name="doze_pulse_duration_out_title">Fade out</string>
+    <string name="doze_pulse_duration_out_title">Dissolvenza uscita</string>
     <string name="doze_pulse_duration_out_summary"></string>
 
-    <string name="doze_pulse_on_Notification_title">Pulse doze</string>
-    <string name="doze_pulse_on_Notification_summary">Pulse display con notifiche</string>
+    <string name="doze_pulse_on_Notification_title">Ambient Display</string>
+    <string name="doze_pulse_on_Notification_summary">Attiva display con notifiche</string>
 
     <string name="doze_shake_title">Settaggi Shake Mode</string>
     <string name="doze_shake_mode_title">Shake mode</string>
@@ -900,12 +900,12 @@
     <string name="veryhard_shake">Molto forte</string>
     <string name="strong_shake">Fortissima</string>
 
-    <string name="fully_mode">Full mode</string>
-    <string name="pocket_shake_mode">Pocket and shake</string>
-    <string name="pocket_pulse_mode">Pocket and pulse</string>
-    <string name="pocket_only_mode">Pocket</string>
-    <string name="shake_pulse_mode">Shake and pulse</string>
-    <string name="pulse_only_mode">Pulse (default)</string>
+    <string name="fully_mode">Completo</string>
+    <string name="pocket_shake_mode">Tasca e Agita</string>
+    <string name="pocket_pulse_mode">Tasca e Pulsa</string>
+    <string name="pocket_only_mode">Tasca</string>
+    <string name="shake_pulse_mode">Agita e Pulsa</string>
+    <string name="pulse_only_mode">Pulsa(default)</string>
 
     <!-- Show carrier label and custom -->
     <string name="carrier_options">Etichetta Operatore</string>
@@ -1036,6 +1036,8 @@
     <string name="network_traffic_vector_title">Network traffic</string>
     <string name="network_traffic_vector_summary">Abilita traffico rete nella barra notifiche</string>
     <string name="show_network_traffic_disable">Disabilita</string>
+    <string name="network_traffic_hide_arrow">Nascondi Freccine</string>
+    <string name="network_traffic_hide_arrow_summary">Nasconde le freccine su/giu nell\'indicatore di traffico</string>
     <string name="show_network_traffic_meter">Meter</string>
     <string name="show_network_traffic_text">Testo</string>
     <string name="show_network_traffic_both">Entrambi</string>
@@ -1058,12 +1060,12 @@
     <string name="network_traffic_autohide_summary">Nascondi monitor traffic se non c\'è attività</string>
     <string name="network_traffic_autohide_threshold">Dataout - inserisci soglia</string>
     <string name="network_traffic_color_style">Colore testo</string>
-    <string name="network_traffic_color_reset">Reset colore</string>
-    <string name="network_traffic_color_reset_message">Reset colore network traffic come default?</string>
+    <string name="network_traffic_color_reset">Resetta colore</string>
+    <string name="network_traffic_color_reset_message">Resetta colore network traffic come default?</string>
 
     <!-- Battery saver -->
     <string name="battery_saver_title">Colore di allarme</string>
-    <string name="battery_saver_style_reset_message">Reset Colore di allarme a default?</string>
+    <string name="battery_saver_style_reset_message">Resetta Colore di allarme a default?</string>
 
     <!-- Partition Info -->
     <string name="partition_info_title">Info partizioni</string>
@@ -1176,7 +1178,7 @@
     <string name="torch_screen_off_ten_Minuti">10 Minuti</string>
 
     <!-- Enable power menu -->
-    <string name="lockscreen_enable_power_menu_title">Power menu schermata di sblocco</string>
+    <string name="lockscreen_enable_power_menu_title">Tasto Power schermata di sblocco</string>
 
     <!-- Recent panel -->
     <string name="recent_panel_category">SlimRecents</string>
@@ -1189,8 +1191,8 @@
     <string name="recent_panel_expanded_mode_auto">Auto (default)</string>
     <string name="recent_panel_expanded_mode_always">Sempre</string>
     <string name="recent_panel_expanded_mode_never">Mai</string>
-    <string name="recent_panel_show_topmost_title">Visualizza topmost task</string>
-    <string name="recent_panel_show_topmost_summary">Non includere the topmost task nei recenti</string>
+    <string name="recent_panel_show_topmost_title">Visualizza task in rilievo</string>
+    <string name="recent_panel_show_topmost_summary">Non includere task in rilievo nei recenti</string>
     <string name="recent_panel_bg_color_title">Sfondo</string>
     <string name="recent_card_bg_color_title">Sfondo rettangolo App</string>
     <string name="recent_card_text_color_title">Colore testo rettangolo app</string>
@@ -1219,8 +1221,8 @@
     <string name="status_bar_power_menu_title">Tasto Power nella barra di notifiche espansa</string>
     <string name="status_bar_power_menu_dialog_title">Selezionare azioni per tap e pressione</string>
     <string name="status_bar_power_menu_off">Disabilita</string>
-    <string name="status_bar_power_menu_action_screen_off">Screen off - Power menu</string>
-    <string name="status_bar_power_menu_action_dialog">Power menu - Screen off</string>
+    <string name="status_bar_power_menu_action_screen_off">Spegni schermo - Tasto Power</string>
+    <string name="status_bar_power_menu_action_dialog">Tasto Power - Spegni schermo</string>
 
     <!-- Heads Up Status Bar button -->
     <string name="show_headsup_button_title">Heads Up button</string>
@@ -1350,4 +1352,8 @@
     <!-- Lock screen rotation -->
     <string name="display_lockscreen_rotation_title">Rotazione Schermata Sblocco</string>
 
+    <!--Time Contexual Header -->
+    <string name="notification_title">Pannello Notifiche</string>
+    <string name="status_bar_custom_header_title">Immagine giornata solare</string>
+    <string name="status_bar_custom_header_summary">Abilita l\'immagine della giornata solare nel pannello notifiche</string>
 </resources>

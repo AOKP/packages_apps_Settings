@@ -659,7 +659,7 @@
   <string name="usb_charging_title">Carica solo</string>
   <string name="usb_charging_summary">Disattiva tutti i trasferimenti di dati con il computer e ricarica il dispositivo tramite la porta USB</string>
   <string name="usb_sdcard_title">Memoria di massa (UMS)</string>
-  <string name="usb_sdcard_summary">Consente di trasferire file tra il computer e la scheda SD montandola come un dispositivo flash</string>
+  <string name="usb_sdcard_summary">Consente di trasferire file tra il computer e la scheda SD montandola come un dispositivo</string>
   <string name="usb_not_connected">USB disconnesso</string>
   <string name="external_storage_turn_on">Archiviazione esterna è stata attivata</string>
   <string name="external_storage_turn_off">Archiviazione esterna è stata disattivata</string>
@@ -952,4 +952,9 @@
   <string name="setup_lock_pattern_size_title">Complessità  sequenza</string>
   <string name="setup_lock_pattern_size_details">Quanti punti vorresti avere per la tua sequenza? Più ne hai più complessa sarà.</string>
   <string name="quick_settings_reset_message">Resetta i quick settings?</string>
+  <string name="power_menu_torch_title">Torcia</string>
+  <string name="qs_tile_reboot">Riavvia</string>
+  <string name="powermenu_screenshot_delay_title">imposta ritardo screenshot</string>
+  <string name="power_menu_screenrecord_title">Registra schermo</string>
+
 </resources>
