@@ -1405,4 +1405,7 @@
     <string name="lockscreen_colors_reset_message">Are you sure you want to reset these colors to default?</string>
     <string name="yes">YES</string>
 
+    <!-- Whether the keyguard will directly pass to gesture entry -->
+    <string name="lock_directly_show_gesture">Directly show gesture</string>
+
 </resources>
