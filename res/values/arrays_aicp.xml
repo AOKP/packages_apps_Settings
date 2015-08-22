@@ -1251,9 +1251,9 @@ limitations under the License.
     </string-array>
 
     <string-array name="qs_num_columns_entries">
-        <item>Three</item>
-        <item>Four</item>
-        <item>Five</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
     </string-array>
 
     <!-- Scrolling Cache -->
