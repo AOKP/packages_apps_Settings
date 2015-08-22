@@ -347,6 +347,7 @@
   <string name="notification_light_voicemail_title">Messaggio vocale</string>
   <string name="notification_light_advanced_title">Opzioni</string>
   <string name="notification_light_screen_on">Led con schermo acceso</string>
+  <string name="keywords_lights_brightness_level">Led bassa luminosità</string>
   <string name="notification_ringtone_title_cm">Suoneria notifiche</string>
   <string name="headset_connect_player_title">Avvia lettore musicale</string>
   <string name="headset_connect_player_summary">Lancia il lettore musicale predefinito quando vengono connesse le cuffie</string>
@@ -950,4 +951,5 @@
   <string name="battery_info_status_charging_dock_usb">Ricarica su Dock USB</string>
   <string name="setup_lock_pattern_size_title">Complessità  sequenza</string>
   <string name="setup_lock_pattern_size_details">Quanti punti vorresti avere per la tua sequenza? Più ne hai più complessa sarà.</string>
+  <string name="quick_settings_reset_message">Resetta i quick settings?</string>
 </resources>
