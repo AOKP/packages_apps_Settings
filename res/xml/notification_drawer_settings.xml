@@ -100,6 +100,12 @@
             android:summary="@string/show_headsup_button_summary"
             android:defaultValue="false" />
 
+       <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+          android:key="status_bar_custom_header"
+          android:title="@string/status_bar_custom_header_title"
+          android:summary="@string/status_bar_custom_header_summary"
+          android:defaultValue="false"/>
+
         <PreferenceScreen
                 android:key="navbar_targets_settings"
                 android:fragment="com.android.settings.slim.dslv.ActionListViewSettings"
