@@ -104,7 +104,7 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
         PreferenceGroup mPhonePrefs = (PreferenceGroup) prefSet.findPreference("phone_list");
 
         mBrightnessNotificationLed = resources.getBoolean(
-                com.android.internal.R.bool.config_brightnessNotificationLed);
+                com.android.internal.R.bool.config_adjustableNotificationLedBrightness);
         mMultiColorNotificationLed = resources.getBoolean(
                 com.android.internal.R.bool.config_multiColorNotificationLed);
 
