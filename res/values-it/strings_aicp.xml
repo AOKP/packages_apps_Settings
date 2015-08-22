@@ -415,7 +415,7 @@
     <string name="shortcuts_icon_picker_search">Search</string>
     <string name="shortcuts_icon_picker_sms">Messaggi</string>
     <string name="shortcuts_icon_picker_tasks">Tasks</string>
-    <string name="shortcuts_icon_picker_terminal">Terminal</string>
+    <string name="shortcuts_icon_picker_terminal">Terminale</string>
     <string name="shortcuts_icon_picker_transit">Transit</string>
     <string name="shortcuts_icon_picker_tv">TV</string>
     <string name="shortcuts_icon_picker_twitter">Twitter</string>
@@ -604,7 +604,7 @@
     <string name="trigger_bottom_summary">Modifica l\'altezza della Trigger area</string>
 
     <!-- Toast Animation -->
-    <string name="toast_animation_title">Toast animation</string>
+    <string name="toast_animation_title">Animazioni Toast</string>
     <string name="toast_none_animation">Nome</string>
     <string name="toast_default_animation">Default</string>
     <string name="toast_fade_animation">Fade</string>
@@ -817,25 +817,26 @@
     <string name="navbar_button_tint_title">Colore tasti barra navigazione</string>
 
     <!-- AOKP custom system animations -->
-    <string name="aokp_animation_title">System animations</string>
-    <string name="aokp_animation_summary">AOKP custom animation</string>
-    <string name="activity_open_title">Activity open animation</string>
-    <string name="activity_close_title">Activity close animation</string>
-    <string name="task_open_title">Task open animation</string>
-    <string name="task_close_title">Task close animation</string>
-    <string name="task_move_to_front_title">Move to front animation</string>
-    <string name="task_move_to_back_title">Move to back animation</string>
-    <string name="wallpaper_open_title">Wallpaper open animation</string>
-    <string name="wallpaper_close_title">Wallpaper close animation</string>
-    <string name="wallpaper_intra_open_title">Wallpaper intra open animation</string>
-    <string name="wallpaper_intra_close_title">Wallpaper intra close animation</string>
-    <string name="task_open_behind_title">Task open behind animation</string>
-    <string name="animation_duration_title">Animation duration</string>
+    <string name="aokp_animation_title">Animazioni di Sistema</string>
+    <string name="aokp_animation_summary">Animazioni AOKP</string>
+    <string name="activity_open_title">Animazione di apertura attività</string>
+    <string name="activity_close_title">Animazione di chiusura attività</string>
+    <string name="task_open_title">Animazione apertura Task</string>
+    <string name="task_close_title">Animazione chiusura Task</string>
+    <string name="task_move_to_front_title">Animazione movimento avanti</string>
+    <string name="task_move_to_back_title">Animazione movimento indietro</string>
+    <string name="wallpaper_open_title">Animazione apertura sfondo</string>
+    <string name="wallpaper_close_title">Animazione chiusura sfondo</string>
+    <string name="wallpaper_intra_open_title">Animazione apertura intra sfondo</string>
+    <string name="wallpaper_intra_close_title">Animazione chiusura intra sfondo</string>
+    <string name="task_open_behind_title">Animazione apertura Task indietro</string>
+    <string name="animation_duration_title">Durata Animazione</string>
     <string name="animation_duration_default">Default</string>
-    <string name="title_animation_no_override">Prevent App Overrides</string>
-    <string name="summary_animation_no_override">Prevent apps from overriding transitions.</string>
-    <string name="animation_exit_only_title">Enter only animation</string>
-    <string name="animation_reverse_exit_title">Reverse exit animation</string>
+    <string name="title_animation_no_override">Previene sostituzione</string>
+    <string name="summary_animation_no_override">Previene sostituzione transazioni</string>
+    <string name="animation_exit_only_title">Solo animazioni in uscita</string>
+    <string name="animation_reverse_exit_title">Inverti animazione uscita</string>
+
 
     <!-- The volume key answer -->
     <string name="volume_answer_call_title">Tasti volume per rispondere</string>
@@ -1199,20 +1200,20 @@
     <string name="recent_panel_lefty_mode_summary">Abilita l\'apertura SlimRecent nel lato sinistro</string>
 
     <!-- Custom Over scroll Settings -->
-    <string name="ui_overscroll_title">Over scrolling effects</string>
-    <string name="overscroll_glow_title">Over scroll Color</string>
-    <string name="edge_effect_title">Edge Glow effect</string>
-    <string name="bounce_effect_title">Bounce effect</string>
-    <string name="none_effect_title">None</string>
-    <string name="extra_heavy_title">Extra Heavy</string>
-    <string name="heavy_title">Heavy</string>
-    <string name="medium_title">Medium</string>
-    <string name="light_title">Light</string>
-    <string name="extra_light_title">Extra Light</string>
-    <string name="overscroll_title">Over scrolling effect</string>
-    <string name="overscroll_summary">Choose how scrollable objects look when they overshoot</string>
-    <string name="overscroll_weight_title">Over scrolling weight</string>
-    <string name="overscroll_weight_summary">Select the weight of the scrollable objects</string>
+    <string name="ui_overscroll_title">Effetti di scorrimento</string>
+    <string name="overscroll_glow_title">Colore effetti scorrimento</string>
+    <string name="edge_effect_title">Effetto bagliore su bordo</string>
+    <string name="bounce_effect_title">Effetto rimbalzo</string>
+    <string name="none_effect_title">Nessuno</string>
+    <string name="extra_heavy_title">Molto accentuato</string>
+    <string name="heavy_title">accentuato</string>
+    <string name="medium_title">Medio</string>
+    <string name="light_title">Leggero</string>
+    <string name="extra_light_title">Molto leggero</string>
+    <string name="overscroll_title">Effetto di scorrimento</string>
+    <string name="overscroll_summary">Scegli come appare quando va oltre</string>
+    <string name="overscroll_weight_title">Modalità effetto</string>
+    <string name="overscroll_weight_summary">Seleziona la modalità degli effetti</string
 
     <!-- Status bar power menu -->
     <string name="status_bar_power_menu_title">Tasto Power nella barra di notifiche espansa</string>
@@ -1325,12 +1326,28 @@
     <!-- QS Tiles Columns -->
     <string name="qs_num_columns_title">Numero tile per riga</string>
     <string name="qs_num_columns_showing">Visualizza %1$s tile per riga</string>
-    <string name="qs_num_columns_three">3</string>
-    <string name="qs_num_columns_four">4</string>
-    <string name="qs_num_columns_five">5</string>
 
     <!-- Doze notification color invert -->
     <string name="doze_notification_color_invert_title">Inversione Colore</string>
     <string name="doze_notification_color_invert_summary_off">Notifiche Ambient display non sono invertite.Usa su sfondo scuro</string>
-    <string name="doze_notification_color_invert_summary_on">Notifiche Ambient display sono invertire. Usa su sfondo chiaro</string>
+    <string name="doze_notification_color_invert_summary_on">Notifiche Ambient display sono invertite. Usa su sfondo chiaro</string>
+
+    <!-- Three-fingers-swipe to screenshot -->
+    <string name="three_finger_gesture">Gesture 3 dita</string>
+    <string name="three_finger_gesture_summary">Swipe con 3 dita per screenshot</string>
+
+    <!-- Scrolling Cache -->
+    <string name="pref_scrollingcache_title">Scrolling cache</string>
+    <string name="pref_scrollingcache_summary">Scrolling cache aumenta le performance di scrolling a discapito della Memoria</string>
+    <string name="pref_scrollingcache_force_enable">Forza Attiva</string>
+    <string name="pref_scrollingcache_default_enable">Default Attiva</string>
+    <string name="pref_scrollingcache_default_disable">Default Disattiva</string>
+    <string name="pref_scrollingcache_force_disable">Forza Disattiva</string>
+
+    <string name="shake_clear_recents">Shake per cancella</string>
+    <string name="shake_clear_recents_summary">Cancella Recenti con uno shake del telefono</string>
+
+    <!-- Lock screen rotation -->
+    <string name="display_lockscreen_rotation_title">Rotazione Schermata Sblocco</string>
+
 </resources>
