@@ -314,11 +314,10 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     }
 
     private void updateDisplayRotationPreferenceDescription() {
-        PreferenceScreen preference = mDisplayRotationPreference;
-        if (preference == null) {
+        if (mDisplayRotationPreference == null) {
             return;
         }
-        preference.setEnabled(RotationPolicy.isRotationLockToggleVisible(getActivity()));
+        PreferenceScreen preference = mDisplayRotationPreference;
         StringBuilder summary = new StringBuilder();
         Boolean rotationEnabled = Settings.System.getInt(getContentResolver(),
                 Settings.System.ACCELEROMETER_ROTATION, 0) != 0;
