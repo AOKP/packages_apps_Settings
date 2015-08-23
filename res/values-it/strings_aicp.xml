@@ -1213,7 +1213,7 @@
     <string name="overscroll_title">Effetto di scorrimento</string>
     <string name="overscroll_summary">Scegli come appare quando va oltre</string>
     <string name="overscroll_weight_title">Modalità effetto</string>
-    <string name="overscroll_weight_summary">Seleziona la modalità degli effetti</string
+    <string name="overscroll_weight_summary">Seleziona la modalità degli effetti</string>
 
     <!-- Status bar power menu -->
     <string name="status_bar_power_menu_title">Tasto Power nella barra di notifiche espansa</string>
