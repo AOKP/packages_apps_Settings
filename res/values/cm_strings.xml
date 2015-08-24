@@ -273,14 +273,6 @@
     <string name="double_tap_to_wake_title">Double-tap to wake</string>
     <string name="double_tap_to_wake_summary">Double-tap on the screen to turn on the display</string>
 
-    <!--- Sweep To Wake -->
-    <string name="sweep_to_wake_title">Sweep to wake</string>
-    <string name="sweep_to_wake_summary">Swipe on the screen to turn on the display</string>
-
-    <!--- Sweep To Sleep -->
-    <string name="sweep_to_sleep_title">Sweep to sleep</string>
-    <string name="sweep_to_sleep_summary">Swipe rigth to left on the lower part of the screen to turn on the display</string>
-
     <!-- Privacy Settings Header item -->
     <string name="privacy_settings_cyanogenmod_title">Privacy</string>
 
