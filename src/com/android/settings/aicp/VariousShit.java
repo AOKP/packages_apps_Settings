@@ -266,7 +266,7 @@ public class VariousShit extends SettingsPreferenceFragment
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         if (preference == mHiddenShit) {
-            System.arraycopy(mHits, 1, mHits, 0, mHits.length-1);
+            java.lang.System.arraycopy(mHits, 1, mHits, 0, mHits.length-1);
             mHits[mHits.length-1] = SystemClock.uptimeMillis();
             if ((Settings.System.getInt(getActivity().getContentResolver(),
                     Settings.System.HIDDEN_SHIT, 0) == 0) &&
@@ -282,7 +282,7 @@ public class VariousShit extends SettingsPreferenceFragment
                 addPreference(mHiddenImg);
             }
         } else if (preference == mHiddenImg) {
-            System.arraycopy(mHits, 1, mHits, 0, mHits.length-1);
+            java.lang.System.arraycopy(mHits, 1, mHits, 0, mHits.length-1);
             mHits[mHits.length-1] = SystemClock.uptimeMillis();
             if  (mHits[0] >= (SystemClock.uptimeMillis()-500)) {
                 startActivity(INTENT_YOGA);

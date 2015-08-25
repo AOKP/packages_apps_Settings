@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2013 The ChameleonOS Open Source Project
- * Copyright (C) 2014 The Android Ice Cold Project
+ * Copyright (C) 2015 The Android Ice Cold Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,122 +17,186 @@
 
 package com.android.settings.aicp;
 
-import android.provider.SearchIndexableResource;
-import com.android.settings.search.BaseSearchIndexProvider;
+import java.util.Locale;
 
-import android.content.ContentResolver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
+import android.app.Activity;
+import android.app.ActionBar;
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
+import android.support.v13.app.FragmentPagerAdapter;
 import android.os.Bundle;
-import android.preference.Preference;
-import android.preference.PreferenceScreen;
-
+import android.support.v4.view.ViewPager;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import com.android.settings.R;
-import com.android.settings.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.util.Helpers;
+import com.android.settings.aicp.tabs.Stuff;
+import com.android.settings.aicp.tabs.Ui;
+import com.android.settings.aicp.tabs.StatusBar;
+import com.android.settings.aicp.tabs.System;
 
-import java.util.ArrayList;
-import java.util.List;
 
-/**
- * LAB files borrowed from excellent ChameleonOS for AICP
- */
-public class AicpSettings extends SettingsPreferenceFragment
-        implements OnSharedPreferenceChangeListener, Indexable {
+public class AicpSettings extends SettingsPreferenceFragment implements ActionBar.TabListener {
 
-    private static final String TAG = "AicpLabs";
+    /**
+     * The {@link android.support.v4.view.PagerAdapter} that will provide
+     * fragments for each of the sections. We use a
+     * {@link FragmentPagerAdapter} derivative, which will keep every
+     * loaded fragment in memory. If this becomes too memory intensive, it
+     * may be best to switch to a
+     * {@link android.support.v13.app.FragmentStatePagerAdapter}.
+     */
+    SectionsPagerAdapter mSectionsPagerAdapter;
 
-    private static final String KEY_AICPOTA_START = "aicp_ota_start";
-    private static final String KEY_KERNEL_AUDIUTOR_START = "kernel_adiutor_start";
+    /**
+     * The {@link ViewPager} that will host the section contents.
+     */
+    ViewPager mViewPager;
 
-    // Package name of the AICP OTA app
-    public static final String AICPOTA_PACKAGE_NAME = "com.aicp.aicpota";
-    // Intent for launching the AICP OTA main actvity
-    public static Intent INTENT_AICPOTA = new Intent(Intent.ACTION_MAIN)
-            .setClassName(AICPOTA_PACKAGE_NAME, AICPOTA_PACKAGE_NAME + ".MainActivity");
-
-    // Package name of the Kernel Adiutor app
-    public static final String KERNEL_AUDIUTOR_PACKAGE_NAME = "com.grarak.kerneladiutor";
-    // Intent for launching the Kernel Adiutor main actvity
-    public static Intent INTENT_KERNEL_AUDIUTOR = new Intent(Intent.ACTION_MAIN)
-            .setClassName(KERNEL_AUDIUTOR_PACKAGE_NAME, KERNEL_AUDIUTOR_PACKAGE_NAME + ".MainActivity");
-
-    private Preference mAicpOta;
-    private Preference mKernelAdiutor;
+  
 
     @Override
-    public void onCreate(Bundle icicle) {
-        super.onCreate(icicle);
+    public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        addPreferencesFromResource(R.xml.aicp_lab_prefs);
+        getActivity().setTitle("AICP Extras");
+        getActivity().setTheme(android.R.style.Theme_Material_Light);
+	View view = inflater.inflate(R.layout.activity_aicp_settings, container, false);
 
-        PreferenceScreen prefSet = getPreferenceScreen();
-        PackageManager pm = getPackageManager();
 
-        mAicpOta = (Preference)
-                prefSet.findPreference(KEY_AICPOTA_START);
-        if (!Helpers.isPackageInstalled(AICPOTA_PACKAGE_NAME, pm)) {
-            prefSet.removePreference(mAicpOta);
+        // Set up the action bar.
+        final ActionBar actionBar = getActivity().getActionBar();
+        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+
+        // Create the adapter that will return a fragment for each of the three
+        // primary sections of the activity.
+        mSectionsPagerAdapter = new SectionsPagerAdapter(getFragmentManager());
+
+        // Set up the ViewPager with the sections adapter.
+        mViewPager = (ViewPager) view.findViewById(R.id.pager);
+        mViewPager.setAdapter(mSectionsPagerAdapter);
+
+        // When swiping between different sections, select the corresponding
+        // tab. We can also use ActionBar.Tab#select() to do this if we have
+        // a reference to the Tab.
+        mViewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
+            @Override
+            public void onPageSelected(int position) {
+                actionBar.setSelectedNavigationItem(position);
+            }
+        });
+
+        // For each of the sections in the app, add a tab to the action bar.
+        for (int i = 0; i < mSectionsPagerAdapter.getCount(); i++) {
+            // Create a tab with text corresponding to the page title defined by
+            // the adapter. Also specify this Activity object, which implements
+            // the TabListener interface, as the callback (listener) for when
+            // this tab is selected.
+            actionBar.addTab(
+                    actionBar.newTab()
+                            .setText(mSectionsPagerAdapter.getPageTitle(i))
+                            .setTabListener(this));
         }
 
-        mKernelAdiutor = (Preference)
-                prefSet.findPreference(KEY_KERNEL_AUDIUTOR_START);
-        if (!Helpers.isPackageInstalled(KERNEL_AUDIUTOR_PACKAGE_NAME, pm)) {
-            prefSet.removePreference(mKernelAdiutor);
+        return view;
+    }
+
+    @Override
+    public void onTabSelected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
+        // When the given tab is selected, switch to the corresponding page in
+        // the ViewPager.
+        mViewPager.setCurrentItem(tab.getPosition());
+    }
+
+    @Override
+    public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
+    }
+
+    @Override
+    public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
+    }
+
+    /**
+     * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
+     * one of the sections/tabs/pages.
+     */
+    public class SectionsPagerAdapter extends FragmentPagerAdapter {
+
+        public SectionsPagerAdapter(FragmentManager fm) {
+            super(fm);
         }
 
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-    }
-
-    @Override
-    public void onSharedPreferenceChanged(SharedPreferences preferences, String key) {
-    }
-
-    @Override
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        if (preference == mAicpOta) {
-            startActivity(INTENT_AICPOTA);
-            return true;
-        } else if (preference == mKernelAdiutor) {
-            startActivity(INTENT_KERNEL_AUDIUTOR);
-            return true;
-        }
-        return super.onPreferenceTreeClick(preferenceScreen, preference);
-    }
-
-    public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-        new BaseSearchIndexProvider() {
         @Override
-        public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
-                                                                    boolean enabled) {
-            ArrayList<SearchIndexableResource> result =
-                new ArrayList<SearchIndexableResource>();
-
-            SearchIndexableResource sir = new SearchIndexableResource(context);
-            sir.xmlResId = R.xml.aicp_lab_prefs;
-            result.add(sir);
-
-            return result;
+        public Fragment getItem(int position) {
+            Fragment fragment = null;
+            switch (position) {
+                case 0:
+                    fragment = new Stuff();
+                    break;
+                case 1:
+                    fragment = new Ui();
+                    break;
+                case 2:
+                    fragment = new StatusBar();
+                    break;
+                case 3:
+                    fragment = new System();
+                    break;
+            }
+            return fragment;
         }
 
         @Override
-        public List<String> getNonIndexableKeys(Context context) {
-            ArrayList<String> result = new ArrayList<String>();
-            return result;
+        public int getCount() {
+            // Show 4 total pages.
+            return 4;
         }
-    };
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            Locale l = Locale.getDefault();
+            switch (position) {
+                case 0:
+                    return getString(R.string.aicp_settings_tab1).toUpperCase(l);
+                case 1:
+                    return getString(R.string.aicp_settings_tab2).toUpperCase(l);
+                case 2:
+                    return getString(R.string.aicp_settings_tab3).toUpperCase(l);
+                case 3:
+                    return getString(R.string.aicp_settings_tab4).toUpperCase(l);
+            }
+            return null;
+        }
+    }
+
+    /**
+     * A placeholder fragment containing a simple view.
+     */
+    public static class PlaceholderFragment extends Fragment {
+        /**
+         * The fragment argument representing the section number for this
+         * fragment.
+         */
+        private static final String ARG_SECTION_NUMBER = "section_number";
+
+        /**
+         * Returns a new instance of this fragment for the given section
+         * number.
+         */
+        public static PlaceholderFragment newInstance(int sectionNumber) {
+            PlaceholderFragment fragment = new PlaceholderFragment();
+            Bundle args = new Bundle();
+            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
+            fragment.setArguments(args);
+            return fragment;
+        }
+
+        public PlaceholderFragment() {
+        }
+
+    }
+
 }
-

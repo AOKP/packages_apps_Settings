@@ -1319,7 +1319,7 @@
     <!-- Headphones icon switch -->
     <string name="show_headset_icon_title">Headset icon</string>
     <string name="show_headset_icon_summary">Shows icon when headsets are connected.</string>
-    
+
     <!-- Volume icon switch -->
     <string name="show_volume_icon_title">Volume Mode Icon</string>
     <string name="show_volume_icon_summary">Show volume mode icon, enabled by default</string>
@@ -1360,4 +1360,9 @@
     <string name="status_bar_custom_header_title">Custom header image</string>
     <string name="status_bar_custom_header_summary">Enable notification panel header image</string>
     
+    <!-- Aicp Settings Tabs -->
+    <string name="aicp_settings_tab1">Stuff</string>
+    <string name="aicp_settings_tab2">Ui</string>
+    <string name="aicp_settings_tab3">Status Bar</string>
+    <string name="aicp_settings_tab4">System</string>
 </resources>
