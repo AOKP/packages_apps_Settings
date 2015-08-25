@@ -94,6 +94,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_SWEEP_TO_SLEEP = "sweep_sleep_gesture";
     private static final String KEY_SWEEP_TO_WAKE = "sweep_wake_gesture";
     private static final String KEY_TAP_TO_WAKE = "double_tap_wake_gesture";
+    private static final String KEY_PROXIMITY_WAKE = "proximity_on_wake";
     private static final String KEY_WAKE_GESTURES = "wake_gestures";
     private static final String KEY_SCREEN_OFF_GESTURE_SETTINGS = "screen_off_gesture_settings";
     private static final String KEY_CALIBRATION_CONTROL = "calibration_control";
@@ -127,7 +128,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private SwitchPreference mTapToWake;
     private PreferenceScreen mWakeGestures;
     private PreferenceScreen mDozeFragement;
-    private SwitchPreference mProximityWake;
+    private SwitchPreference mProximityWakePreference;
 
     private CMHardwareManager mHardware;
 
@@ -179,12 +180,16 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         }
 
         // Proximity wake up
-        mProximityWake = (SwitchPreference) findPreference("proximity_on_wake");
-        boolean proximityCheckOnWait = getResources().getBoolean(
+        mProximityWakePreference = (SwitchPreference) findPreference(KEY_PROXIMITY_WAKE);
+        boolean proximityCheckOnWake = getResources().getBoolean(
                 com.android.internal.R.bool.config_proximityCheckOnWake);
-        if (!proximityCheckOnWait) {
-            mDisplaySettings.removePreference(mProximityWake);
-            Settings.System.putInt(getContentResolver(), Settings.System.PROXIMITY_ON_WAKE, 0);
+        if (mProximityWakePreference != null && proximityCheckOnWake) {
+            mProximityWakePreference.setOnPreferenceChangeListener(this);
+        } else {
+            if (mDisplaySettings != null && mProximityWakePreference != null) {
+                mDisplaySettings.removePreference(mProximityWakePreference);
+                Settings.System.putInt(getContentResolver(), Settings.System.PROXIMITY_ON_WAKE, 0);
+            }
         }
 
         if (isLiftToWakeAvailable(activity)) {
@@ -460,6 +465,15 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             int value = Settings.Secure.getInt(getContentResolver(), WAKE_GESTURE_ENABLED, 0);
             mLiftToWakePreference.setChecked(value != 0);
         }
+
+        // Update proximity wake if it is available.
+        if (mProximityWakePreference != null) {
+            boolean defaultValue = getResources().getBoolean(
+                com.android.internal.R.bool.config_proximityCheckOnWakeEnabledByDefault);
+            boolean enabled = Settings.System.getInt(getContentResolver(),
+                    Settings.System.PROXIMITY_ON_WAKE, defaultValue ? 1 : 0) == 1;
+            mProximityWakePreference.setChecked(enabled);
+        }
     }
 
     private void updateScreenSaverSummary() {
@@ -569,7 +583,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     Settings.System.WAKEUP_WHEN_PLUGGED_UNPLUGGED,
                     (Boolean) objValue ? 1 : 0);
         }
-
+        if (preference == mProximityWakePreference) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(getContentResolver(), Settings.System.PROXIMITY_ON_WAKE,
+                    value ? 1 : 0);
+        }
         return true;
     }
 
@@ -664,6 +682,10 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     if (!context.getResources().getBoolean(
                             com.android.internal.R.bool.config_dreamsSupported)) {
                         result.add(KEY_SCREEN_SAVER);
+                    }
+                    if (!context.getResources().getBoolean(
+                            com.android.internal.R.bool.config_proximityCheckOnWake)) {
+                        result.add(KEY_PROXIMITY_WAKE);
                     }
                     if (!hardware.isSupported(FEATURE_TAP_TO_WAKE)) {
                         result.add(KEY_TAP_TO_WAKE);
