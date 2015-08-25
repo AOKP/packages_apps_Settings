@@ -1354,4 +1354,10 @@
 
     <!-- Lock screen rotation -->
     <string name="display_lockscreen_rotation_title">Lock screen</string>
+
+    <!--Time Contexual Header -->
+    <string name="notification_title">Notification panel</string>
+    <string name="status_bar_custom_header_title">Custom header image</string>
+    <string name="status_bar_custom_header_summary">Enable notification panel header image</string>
+    
 </resources>
