@@ -234,5 +234,6 @@
         <!-- Used by controls, e.g. CheckBox, ProgressBar, etc. -->
         <item name="android:colorAccent">@color/switch_accent_color</item>
     </style>
-
+	
+    <style name="aicp_extras" parent="Theme.SettingsBase"></style>
 </resources>

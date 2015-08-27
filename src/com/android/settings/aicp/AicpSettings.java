@@ -56,13 +56,13 @@ public class AicpSettings extends SettingsPreferenceFragment implements ActionBa
      * The {@link ViewPager} that will host the section contents.
      */
     ViewPager mViewPager;
-
-  
+   
 
     @Override
     public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         getActivity().setTitle(R.string.aicp_settings_title);
+        getActivity().setTheme(R.style.aicp_extras);
         View view = inflater.inflate(R.layout.activity_aicp_settings, container, false);
 
         // Set up the action bar.
