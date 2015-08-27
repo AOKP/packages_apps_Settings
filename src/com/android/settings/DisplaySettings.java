@@ -67,8 +67,6 @@ import com.android.settings.slim.DisplayRotation;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.android.settings.Utils;
-
 import cyanogenmod.hardware.CMHardwareManager;
 
 public class DisplaySettings extends SettingsPreferenceFragment implements
@@ -227,7 +225,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         Utils.updatePreferenceToSpecificActivityFromMetaDataOrRemove(getActivity(),
                 getPreferenceScreen(), KEY_SCREEN_OFF_GESTURE_SETTINGS);
 
-        if (!mHardware.isSupported(FEATURE_TAP_TO_WAKE) {
+        if (!mHardware.isSupported(FEATURE_TAP_TO_WAKE)) {
                 prefSet.removePreference(advancedPrefs);
         }
 
