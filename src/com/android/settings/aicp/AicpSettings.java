@@ -62,9 +62,8 @@ public class AicpSettings extends SettingsPreferenceFragment implements ActionBa
     @Override
     public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        getActivity().setTitle("AICP Extras");
+        getActivity().setTitle(R.string.aicp_settings_title);
         View view = inflater.inflate(R.layout.activity_aicp_settings, container, false);
-
 
         // Set up the action bar.
         final ActionBar actionBar = getActivity().getActionBar();
