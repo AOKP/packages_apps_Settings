@@ -1346,8 +1346,8 @@
     <string name="pref_scrollingcache_default_disable">Default Disattiva</string>
     <string name="pref_scrollingcache_force_disable">Forza Disattiva</string>
 
-    <string name="shake_clear_recents">Shake per cancella</string>
-    <string name="shake_clear_recents_summary">Cancella Recenti con uno shake del telefono</string>
+    <string name="shake_clear_recents">Agita per cancellare</string>
+    <string name="shake_clear_recents_summary">Cancella Recenti agitando il telefono</string>
 
     <!-- Lock screen rotation -->
     <string name="display_lockscreen_rotation_title">Rotazione Schermata Sblocco</string>
@@ -1356,4 +1356,10 @@
     <string name="notification_title">Pannello Notifiche</string>
     <string name="status_bar_custom_header_title">Immagine giornata solare</string>
     <string name="status_bar_custom_header_summary">Abilita l\'immagine della giornata solare nel pannello notifiche</string>
+
+    <!-- Aicp Settings Tabs -->
+    <string name="aicp_settings_tab1">Altro</string>
+    <string name="aicp_settings_tab2">Interfaccia</string>
+    <string name="aicp_settings_tab3">Barra notifiche</string>
+    <string name="aicp_settings_tab4">Sistema</string>
 </resources>
