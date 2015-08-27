@@ -38,8 +38,4 @@
 
     <!-- Whether to add SIM/AKA in EAP method for adding network -->
     <bool name="config_eap_sim_function">false</bool>
-
-    <!-- Wake gestures -->
-    <bool name="config_wake_gestures_available">false</bool>
-
 </resources>
