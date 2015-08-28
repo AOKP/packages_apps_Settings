@@ -858,6 +858,17 @@ public class InstalledAppDetails extends AppInfoBase
         } else {
             appVersion.setVisibility(View.INVISIBLE);
         }
+
+        // Set application package path.
+        TextView packagePath = (TextView) appSnippet.findViewById(R.id.path);
+        try {
+            PackageManager pm = packagePath.getContext().getPackageManager();
+            ApplicationInfo ainfo = pm.getApplicationInfo(packageName, 0);
+            packagePath.setText(ainfo.publicSourceDir);
+            packagePath.setVisibility(View.VISIBLE);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     private static NetworkTemplate getTemplate(Context context) {

@@ -44,4 +44,16 @@
         android:ellipsize="marquee"
         android:duplicateParentState="true" />
 
+    <TextView
+        android:id="@+id/path"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal|top"
+        android:textAppearance="@android:style/TextAppearance.Material.Body1"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textAlignment="viewStart"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:duplicateParentState="true" />
+
 </LinearLayout>
