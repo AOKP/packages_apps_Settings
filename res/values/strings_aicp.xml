@@ -926,6 +926,10 @@
     <string name="status_bar_aicp_logo_title">AICP logo</string>
     <string name="status_bar_aicp_logo_summary">Enable to show AICP logo on the left side of statusbar</string>
     <string name="status_bar_aicp_logo_color">AICP logo color</string>
+    <string name="status_bar_aicp_logo_position">Location</string>
+    <string name="status_bar_aicp_logo_position_summary">Choose which side to display the logo on, left or right</string>
+    <string name="status_bar_logo_position_right">Right</string>
+    <string name="status_bar_logo_position_left">Left</string>
 
     <!-- Volume pane timeout -->
     <string name="volume_panel_time_out_title">Volume panel timeout</string>
