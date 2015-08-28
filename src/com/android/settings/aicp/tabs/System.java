@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class System extends SettingsPreferenceFragment {
+public class System extends SettingsPreferenceFragment implements Indexable {
 
     private static final String TAG = "AicpLabs";
 

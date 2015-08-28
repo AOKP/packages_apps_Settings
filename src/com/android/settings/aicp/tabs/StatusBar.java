@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class StatusBar extends SettingsPreferenceFragment {
+public class StatusBar extends SettingsPreferenceFragment implements Indexable {
 
     @Override
     public void onCreate(Bundle savedInstanceState)
