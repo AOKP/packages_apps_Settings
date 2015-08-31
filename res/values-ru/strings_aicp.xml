@@ -600,7 +600,7 @@
     <string name="trigger_bottom_summary">Указать высоту области срабатывания</string>
 
     <!-- Toast Animation -->
-    <string name="toast_animation_title">Анимация подсказок</string>
+    <string name="toast_animation_title">Анимация всплывающих уведомлений</string>
     <string name="toast_none_animation">Отсутствует</string>
     <string name="toast_default_animation">По умолчанию</string>
     <string name="toast_fade_animation">Угасание</string>
@@ -617,6 +617,9 @@
     <string name="toast_Translucent_animation">Прозрачное</string>
     <string name="toast_SlideLeftRight_animation">Скольжение слева направо</string>
     <string name="toast_SlideRightLeft_animation">Скольжение справа налево</string>
+
+    <!-- Toast Icons -->
+    <string name="toast_icon_title">Иконка приложения в уведомлении</string>
 
     <!-- Volume Steps -->
     <string name="volume_steps_title">Уровень громкости</string>
@@ -733,6 +736,10 @@
     <!-- Text for forcing expanded notifications -->
     <string name="disable_fc_notifications_title">Отключить уведомления о принудительном закрытии (FC)</string>
     <string name="disable_fc_notifications_summary">Это спрячет все уведомления связанные с FC (принудительное закрытие)</string>
+
+    <!-- Long press on lock screen lock icon to launch torch-->
+    <string name="longpress_lock_icon_torch_title">Долгое нажатие на иконку блокировки включает фонарик</string>
+    <string name="longpress_lock_icon_torch_summary">Эта функция не будет работать при одновременно включенных Smart Lock и \"Предотвращение случайных нажатий\"</string>
 
     <!-- Navigation bar -->
     <string name="navbar_style_dimen_title">Размер панели навигации</string>
@@ -891,9 +898,13 @@
     <string name="status_bar_carrier_color">Цвет логотипа</string>
 
     <!-- Statusbar AICP logo -->
-    <string name="status_bar_aicp_logo_title">AICP логотип</string>
-    <string name="status_bar_aicp_logo_summary">Включить отображение AICP логотипа на левой стороне строки состояния</string>
+    <string name="status_bar_aicp_logo_title">Логотип AICP</string>
+    <string name="status_bar_aicp_logo_summary">Включить отображение логотипа AICP в строке состояния</string>
     <string name="status_bar_aicp_logo_color">Цвет логотипа AICP</string>
+    <string name="status_bar_aicp_logo_position">Расположение</string>
+    <string name="status_bar_aicp_logo_position_summary">Выберите, с какой стороны отображать логотип</string>
+    <string name="status_bar_logo_position_right">Справа</string>
+    <string name="status_bar_logo_position_left">Слева</string>
 
     <!-- Volume pane timeout -->
     <string name="volume_panel_time_out_title">Таймаут панели громкости</string>
@@ -930,10 +941,6 @@
     <string name="qs_tile_slimaction">Действие</string>
     <string name="qs_slim_action_summary">Добавить и установить порядок действий</string>
     <string name="qs_slim_action_title">Действия</string>
-
-    <!-- Long press on lock screen lock icon to sleep -->
-    <string name="longpress_lock_icon_to_sleep_title">Долгое нажатие на иконку блокировки уводит в сон</string>
-    <string name="longpress_lock_icon_to_sleep_summary">Эта функция не будет работать при одновременно включенных Smart Lock и \"Предотвращение случайных нажатий\"</string>
 
     <!-- Double tap gesture anywhere on the lock screen put device to sleep -->
     <string name="double_tap_sleep_anywhere_title">Двойное касание уводит в сон</string>
@@ -1057,10 +1064,6 @@
     <string name="no_media_notification_summary">Показывать уведомление когда хранилище отключено</string>
     <string name="mount_notification_title">Уведомление подключения</string>
     <string name="mount_notification_summary">Показывать уведомление, когда хранилище подключено</string>
-
-    <!-- Calibration Control under Display-Advanced -->
-    <string name="calibration_control_title">Калибровка</string>
-    <string name="calibration_control_summary">Нажмите для настройки калибровки</string>
 
     <!-- Clear button color -->
     <string name="clear_all_color_title">Цвет кнопки очистки</string>
@@ -1260,16 +1263,22 @@
     <string name="lock_screen_hide_carrier_summary">После переключения, интерфейс перезагрузится.</string>
 
     <!-- Status bar temperature -->
-    <string name="status_bar_temperature_title">Температура</string>
+    <string name="status_bar_temperature_title">Температура воздуха</string>
     <string name="status_bar_temperature_hidden">Не показывать</string>
     <string name="status_bar_temperature_show_scale">Показывать с единицами измерения</string>
     <string name="status_bar_temperature_hide_scale">Показывать без единиц измерения</string>
     <string name="status_bar_temperature_location_title">Расположение</string>
-    <string name="status_bar_temperature_location_summary">Выбор места расположения тепературы в строке состояния</string>
+    <string name="status_bar_temperature_location_summary">Выбор места расположения тепературы воздуха в строке состояния</string>
     <string name="status_bar_temperature_location_right">Показывать справа</string>
     <string name="status_bar_temperature_location_left">Показывать слева</string>
     <string name="status_bar_weather_color_title">Цвет температуры</string>
     <string name="status_bar_weather_size_title">Размер шрифта</string>
+    <string name="status_bar_weather_font_style_title">Шрифт</string>
+    <string name="status_bar_weather_font_normal">Обычный</string>
+    <string name="status_bar_weather_font_bold">Жирный</string>
+    <string name="status_bar_weather_font_condensed">Уплотнённый</string>
+    <string name="status_bar_weather_font_light">Тонкий</string>
+    <string name="status_bar_weather_font_light_italic">Тонкий курсив</string>
 
     <!-- SlimDim -->
     <string name="dim_nav_buttons_category">Затемнение кнопок</string>
@@ -1328,12 +1337,17 @@
 
     <!--Time Contexual Header -->
     <string name="notification_title">Панель уведомлений</string>
-    <string name="status_bar_custom_header_title">Изображение заголовка</string>
-    <string name="status_bar_custom_header_summary">Включить изображение заголовка панели уведомлений</string>
+    <string name="status_bar_custom_header_title">Изображение в заголовке</string>
+    <string name="status_bar_custom_header_summary">Показывать изображение в заголовке панели уведомлений</string>
 
     <!-- Aicp Settings Tabs -->
     <string name="aicp_settings_tab1">Разное</string>
     <string name="aicp_settings_tab2">Интерфейс</string>
     <string name="aicp_settings_tab3">Строка состояния</string>
     <string name="aicp_settings_tab4">Система</string>
+
+    <!-- Chamber of Secrets -->
+    <string name="chamber_title">Тайная комната</string>
+    <string name="chamber_toast">Тайная комната снова открыта</string>
+
 </resources>
