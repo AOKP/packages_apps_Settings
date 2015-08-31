@@ -54,6 +54,7 @@ import android.telephony.SubscriptionInfo;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.android.internal.util.cm.QSUtils;
 import com.android.internal.widget.LockPatternUtils;
 import com.android.settings.ManageFingerprints;
 import com.android.settings.TrustAgentUtils.TrustAgentComponentInfo;
@@ -120,6 +121,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private static final String KEY_SMS_SECURITY_CHECK_PREF = "sms_security_check_limit";
     private static final String KEY_SHOW_VISUALIZER = "lockscreen_visualizer";
     private static final String KEY_LOCKSCREEN_WALLPAPER = "lockscreen_wallpaper";
+    private static final String KEY_LONGPRESS_LOCK_FOR_TORCH = "long_press_lock_icon_torch";
 
     // These switch preferences need special handling since they're not all stored in Settings.
     private static final String SWITCH_PREFERENCE_KEYS[] = { KEY_LOCK_AFTER_TIMEOUT,
@@ -149,12 +151,14 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private KeyStore mKeyStore;
     private Preference mResetCredentials;
 
-    private SwitchPreference mToggleAppInstallation;
     private DialogInterface mWarnInstallApps;
+
+    private SwitchPreference mLongPressForTorch;
     private SwitchPreference mPowerButtonInstantlyLocks;
     private SwitchPreference mQuickUnlockScreen;
-    private ListPreference mLockNumpadRandom;
+    private SwitchPreference mToggleAppInstallation;
 
+    private ListPreference mLockNumpadRandom;
     private ListPreference mSmsSecurityCheck;
 
     private boolean mIsPrimary;
@@ -312,6 +316,15 @@ public class SecuritySettings extends SettingsPreferenceFragment
                     generalCategory.findPreference(KEY_SHOW_VISUALIZER);
             if (displayVisualizer != null) {
                 generalCategory.removePreference(displayVisualizer);
+            }
+        }
+
+        // Remove Long Press Lock Icon for Torch option for non-flash devices
+        if(!QSUtils.deviceSupportsFlashLight(getActivity()) && generalCategory != null) {
+            mLongPressForTorch = (SwitchPreference) generalCategory
+                    .findPreference(KEY_LONGPRESS_LOCK_FOR_TORCH);
+            if (mLongPressForTorch != null) {
+                generalCategory.removePreference(mLongPressForTorch);
             }
         }
 
