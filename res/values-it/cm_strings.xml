@@ -957,5 +957,7 @@
   <string name="qs_tile_reboot">Riavvia</string>
   <string name="powermenu_screenshot_delay_title">imposta ritardo screenshot</string>
   <string name="power_menu_screenrecord_title">Registra schermo</string>
+  <string name="qs_tile_volume_panel">Pannello Volumi</string>
+  <string name="qs_hide_tiles_with_sensitive_data">Nascondi tile importanti quando bloccato</string>
 
 </resources>
