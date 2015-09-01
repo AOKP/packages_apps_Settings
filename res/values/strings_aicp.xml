@@ -1374,4 +1374,9 @@
     <string name="aicp_settings_tab2">Ui</string>
     <string name="aicp_settings_tab3">Status Bar</string>
     <string name="aicp_settings_tab4">System</string>
+
+    <!-- Chamber of Secrets -->
+    <string name="chamber_title">Chamber of secrets</string>
+    <string name="chamber_toast">The chamber of secrets has opened</string>
+
 </resources>
