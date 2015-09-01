@@ -15,25 +15,27 @@ limitations under the License.
 <resources>
 
     <string-array name="clock_date_format_entries_values">
-        <item>gg/MM/aa</item>
-        <item>MM/gg/aa</item>
-        <item>aaaa-MM-gg</item>
-        <item>aaaa-gg-MM</item>
-        <item>gg-MM-aaaa</item>
-        <item>MM-gg-aaaa</item>
-        <item>MMM gg</item>
-        <item>MMM gg, aaaa</item>
-        <item>MMMM gg, aaaa</item>
+        <item>dd/MM/yy</item>
+        <item>MM/dd/yy</item>
+        <item>yyyy-MM-dd</item>
+        <item>yyyy-dd-MM</item>
+        <item>dd-MM-yyyy</item>
+        <item>MM-dd-yyyy</item>
+        <item>MMM dd</item>
+        <item>MMM dd, yyyy</item>
+        <item>MMMM dd, yyyy</item>
         <item>EEE</item>
-        <item>EEE gg</item>
-        <item>EEE gg/MM</item>
-        <item>EEE MM/gg</item>
-        <item>EEE gg MMM</item>
-        <item>EEE MMM gg</item>
-        <item>EEE MMMM gg</item>
-        <item>EEEE gg/MM</item>
-        <item>EEEE MM/gg</item>
+        <item>EEE dd</item>
+        <item>EEE dd/MM</item>
+        <item>EEE MM/dd</item>
+        <item>EEE dd MMM</item>
+        <item>EEE MMM dd</item>
+        <item>EEE MMMM dd</item>
+        <item>EEEE dd/MM</item>
+        <item>EEEE MM/dd</item>
+        <item>@string/clock_date_format_custom</item>
     </string-array>
+
 
     <string-array name="battery_bar_entries">
         <item>Nascondi</item>
