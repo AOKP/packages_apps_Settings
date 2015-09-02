@@ -699,6 +699,7 @@
     <!-- StatusBar Clock style -->
     <string name="clock_font_style_title">Clock font style</string>
     <string name="clock_font_bold">Bold</string>
+    <string name="clock_font_bold_italic">Bold italic</string>
     <string name="clock_font_condensed">Condensed</string>
     <string name="clock_font_light">Light</string>
     <string name="clock_font_light_italic">Light italic</string>
