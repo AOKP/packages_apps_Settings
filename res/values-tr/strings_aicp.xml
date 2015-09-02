@@ -1345,4 +1345,21 @@
     <string name="pref_scrollingcache_default_disable">Varsayılan Devre Dışı</string>
     <string name="pref_scrollingcache_force_disable">Devre Dışı Bırakmayı Zorla</string>
 
+    <string name="shake_clear_recents">Temizlemek için Salla</string>
+    <string name="shake_clear_recents_summary">En Son Uygulamaları Cihazı Sallayarak Temizleyin</string>
+
+    <!-- Lock screen rotation -->
+    <string name="display_lockscreen_rotation_title">Kilit Ekranı</string>
+
+    <!--Time Contexual Header -->
+    <string name="notification_title">Bildirim Paneli</string>
+    <string name="status_bar_custom_header_title">Özel Başlık Resmi</string>
+    <string name="status_bar_custom_header_summary">Bildirim Paneli için Başlık Resmini Etkinleştir</string>
+
+    <!-- Aicp Settings Tabs -->
+    <string name="aicp_settings_tab1">Çeşitli</string>
+    <string name="aicp_settings_tab2">Arayüz</string>
+    <string name="aicp_settings_tab3">Durum Çubuğu</string>
+    <string name="aicp_settings_tab4">Sistem</string>
+
 </resources>
