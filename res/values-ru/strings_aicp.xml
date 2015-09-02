@@ -218,7 +218,6 @@
     <string name="status_bar_toggle_brightness">Управление яркостью</string>
     <string name="status_bar_toggle_brightness_summary">Менять яркость свайпом по строке состояния</string>
     <string name="status_bar_toggle_info">Автоматическое регулирование подсветки включено</string>
-    <string name="status_bar_show_clock_second_title">Показывать секунды</string>
 
     <!-- SuperSU header name - the app hides itself from launcher based on this resource name being present in com.android.settings -->
     <string name="supersu_title">Суперпользователь</string>
@@ -683,16 +682,27 @@
     <string name="battery_bar_animate_title">Анимация заряда</string>
     <string name="battery_bar_animate_summary">Анимация заряда может снижать производительность. Включить по своему усмотрению.</string>
 
-    <!-- StatusBar Clock style -->
+    <!-- StatusBar Clock -->
     <string name="clock_font_style_title">Стиль шрифта часов</string>
+    <string name="clock_font_normal">Обычный</string>
+    <string name="clock_font_italic">Курсивный</string>
     <string name="clock_font_bold">Жирный</string>
+    <string name="clock_font_bold_italic">Жирный курсив</string>
+    <string name="clock_font_light">Светлый</string>
+    <string name="clock_font_light_italic">Светлый курсив</string>
+    <string name="clock_font_thin">Тонкий</string>
+    <string name="clock_font_thin_italic">Тонкий курсив</string>
     <string name="clock_font_condensed">Уплотнённый</string>
-    <string name="clock_font_light">Тонкий</string>
-    <string name="clock_font_light_italic">Тонкий курсив</string>
-    <string name="clock_font_normal">Нормальный</string>
+    <string name="clock_font_condensed_italic">Уплотнённый курсив</string>
+    <string name="clock_font_condensed_bold">Уплотнённый жирный</string>
+    <string name="clock_font_condensed_bold_italic">Уплотнённый жирный курсив</string>
+    <string name="clock_font_medium">Средний</string>
+    <string name="clock_font_medium_italic">Средний курсив</string>
+    <string name="clock_font_size_title">Размер шрифта</string>
+    <string name="status_bar_show_clock_second_title">Показывать секунды</string>
 
     <!-- Recents panel settings -->
-    <string name="recents_panel_settings">Настройки панели недавних приложений</string>
+    <string name="recents_panel_settings">Панель недавних приложений</string>
     <string name="recents_panel_title">Панель недавних</string>
     <string name="show_clear_all_recents_button_title">Кнопка очистки</string>
     <string name="show_clear_all_recents_button_summary">Показывать кнопку очистки в панели</string>
@@ -723,7 +733,6 @@
     <!-- Setting option name to change LCD density -->
     <string name="lcd_density">Плотность экрана</string>
     <string name="dialog_title_lcd_density">Плотность экрана</string>
-    <string name="lcd_density_summary">xxx DPI</string>
     <string name="custom_density_title">Измнените все как, Вам нравится</string>
     <string name="custom_density_summary">Если Вы столкнетесь с проблемами совместимости ПО в Play Store, перепроверьте стоит ли у Вас, модифицированный Play Store.</string>
     <string name="custom_density_summary_invalid">"Неверное значение!"</string>
@@ -901,6 +910,7 @@
     <string name="custom_carrier_label_explain">Пожалуйста, введите своё имя оператора. Оставить пустым для отображения по умолчанию.</string>
     <string name="custom_carrier_label_notset">Пользовательский логотип не установлен</string>
     <string name="status_bar_carrier_color">Цвет логотипа</string>
+    <string name="status_bar_carrier_size">Размер текста метки оператора</string>
 
     <!-- Statusbar AICP logo -->
     <string name="status_bar_aicp_logo_title">Логотип AICP</string>
@@ -1050,6 +1060,7 @@
     <string name="network_traffic_color_reset_message">Сбросить цвет сетевого трафика на цвет по умолчанию?</string>
 
     <!-- Battery saver -->
+    <string name="battery_saver_settings_title">Настройки энергосбережения</string>
     <string name="battery_saver_title">Цвет оповещения</string>
     <string name="battery_saver_style_reset_message">Сбросить цвет оповещения о низном заряде?</string>
 
@@ -1280,10 +1291,19 @@
     <string name="status_bar_weather_size_title">Размер шрифта</string>
     <string name="status_bar_weather_font_style_title">Шрифт</string>
     <string name="status_bar_weather_font_normal">Обычный</string>
+    <string name="status_bar_weather_font_italic">Курсивный</string>
     <string name="status_bar_weather_font_bold">Жирный</string>
+    <string name="status_bar_weather_font_bold_italic">Жирный курсив</string>
+    <string name="status_bar_weather_font_light">Светлый</string>
+    <string name="status_bar_weather_font_light_italic">Светлый курсив</string>
+    <string name="status_bar_weather_font_thin">Тонкий</string>
+    <string name="status_bar_weather_font_thin_italic">Тонкий курсив</string>
     <string name="status_bar_weather_font_condensed">Уплотнённый</string>
-    <string name="status_bar_weather_font_light">Тонкий</string>
-    <string name="status_bar_weather_font_light_italic">Тонкий курсив</string>
+    <string name="status_bar_weather_font_condensed_italic">Уплотнённый курсив</string>
+    <string name="status_bar_weather_font_condensed_bold">Уплотнённый жирный</string>
+    <string name="status_bar_weather_font_condensed_bold_italic">Уплотнённый жирный курсив</string>
+    <string name="status_bar_weather_font_medium">Средний</string>
+    <string name="status_bar_weather_font_medium_italic">Средний курсив</string>
 
     <!-- SlimDim -->
     <string name="dim_nav_buttons_category">Затемнение кнопок</string>
