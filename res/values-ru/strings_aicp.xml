@@ -223,6 +223,11 @@
     <!-- SuperSU header name - the app hides itself from launcher based on this resource name being present in com.android.settings -->
     <string name="supersu_title">Суперпользователь</string>
 
+    <!-- Change Log -->
+    <string name="changelog_title">Список изменений</string>
+    <string name="changelog_title_summary">Посмотреть последние изменения в прошивке</string>
+    <string name="changelog_error">Не удаётся загрузить список изменений</string>
+
     <!-- MediaScanner behavior on boot -->
     <string name="options_settings_title">Опции</string>
     <string name="media_scanner_on_boot_title">Поведение медиасканнера при загрузке</string>
