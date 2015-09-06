@@ -221,7 +221,6 @@
     <string name="status_bar_toggle_brightness">Brightness control</string>
     <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across status bar</string>
     <string name="status_bar_toggle_info">Automatic brightness is enabled</string>
-    <string name="status_bar_show_clock_second_title">Clock seconds</string>
 
     <!-- SuperSU header name - the app hides itself from launcher based on this resource name being present in com.android.settings -->
     <string name="supersu_title">SuperSU</string>
@@ -701,7 +700,7 @@
     <string name="battery_bar_animate_title">Charging animation</string>
     <string name="battery_bar_animate_summary">The charging animation may result in a poor user experience. Enable at your own discretion.</string>
 
-    <!-- StatusBar Clock style -->
+    <!-- StatusBar Clock -->
     <string name="clock_font_style_title">Clock font style</string>
     <string name="clock_font_bold">Bold</string>
     <string name="clock_font_bold_italic">Bold italic</string>
@@ -709,6 +708,8 @@
     <string name="clock_font_light">Light</string>
     <string name="clock_font_light_italic">Light italic</string>
     <string name="clock_font_normal">Normal</string>
+    <string name="status_bar_show_clock_second_title">Clock seconds</string>
+    <string name="clock_font_size_title">Font size</string>
 
     <!-- Recents panel settings -->
     <string name="recents_panel_settings">Recents Panel Settings</string>

@@ -16,6 +16,7 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/status_bar_clock_title">
 
        <SwitchPreference
@@ -71,6 +72,16 @@
             android:entries="@array/clock_font_style_entries"
             android:entryValues="@array/clock_font_style_values"
             android:title="@string/clock_font_style_title"
+            android:dependency="status_bar_show_clock" />
+
+        <com.android.settings.widget.SeekBarPreferenceCham
+            android:key="font_size"
+            android:title="@string/clock_font_size_title"
+            android:defaultValue="14"
+            android:max="23"
+            settings:min="4"
+            settings:unitsLeft=""
+            settings:unitsRight="dp"
             android:dependency="status_bar_show_clock" />
 
         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
