@@ -702,14 +702,22 @@
 
     <!-- StatusBar Clock -->
     <string name="clock_font_style_title">Clock font style</string>
-    <string name="clock_font_bold">Bold</string>
-    <string name="clock_font_bold_italic">Bold italic</string>
-    <string name="clock_font_condensed">Condensed</string>
-    <string name="clock_font_light">Light</string>
-    <string name="clock_font_light_italic">Light italic</string>
     <string name="clock_font_normal">Normal</string>
-    <string name="status_bar_show_clock_second_title">Clock seconds</string>
+    <string name="clock_font_italic">Italic</string>
+    <string name="clock_font_bold">Bold</string>
+    <string name="clock_font_bold_italic">Bold Italic</string>
+    <string name="clock_font_light">Light</string>
+    <string name="clock_font_light_italic">Light Italic</string>
+    <string name="clock_font_thin">Thin</string>
+    <string name="clock_font_thin_italic">Thin Italic</string>
+    <string name="clock_font_condensed">Condensed</string>
+    <string name="clock_font_condensed_italic">Condensed Italic</string>
+    <string name="clock_font_condensed_bold">Condensed Bold</string>
+    <string name="clock_font_condensed_bold_italic">Condensed Bold Italic</string>
+    <string name="clock_font_medium">Medium</string>
+    <string name="clock_font_medium_italic">Medium Italic</string>
     <string name="clock_font_size_title">Font size</string>
+    <string name="status_bar_show_clock_second_title">Clock seconds</string>
 
     <!-- Recents panel settings -->
     <string name="recents_panel_settings">Recents Panel Settings</string>
