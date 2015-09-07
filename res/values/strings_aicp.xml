@@ -70,6 +70,7 @@
     <string name="help">Help</string>
     <string name="attention">Attention</string>
     <string name="enabled">Enabled</string>
+    <string name="disabled">Disabled</string>
     <string name="default_string">Default</string>
     <string name="reset_message">Reset all entries to default?</string>
     <string name="misc_category">Miscellaneous</string>
