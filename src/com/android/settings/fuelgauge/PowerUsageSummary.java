@@ -111,7 +111,7 @@ public class PowerUsageSummary extends SettingsPreferenceFragment
     private BatteryManager mBatteryManager;
     private PowerManager mPowerManager;
     private ListPreference mPerfProfilePref;
-    private SwitchPreference mBatterySaverPref;
+    private Preference mBatterySaverPref;
     private String[] mPerfProfileEntries;
     private String[] mPerfProfileValues;
     private String mPerfProfileDefaultEntry;
@@ -168,7 +168,7 @@ public class PowerUsageSummary extends SettingsPreferenceFragment
         setHasOptionsMenu(true);
 
         mPerfProfilePref = (ListPreference) findPreference(KEY_PERF_PROFILE);
-        mBatterySaverPref = (SwitchPreference) findPreference(KEY_BATTERY_SAVER);
+        mBatterySaverPref = (Preference) findPreference(Settings.Global.LOW_POWER_MODE);
         mPerAppProfiles = (SwitchPreference) findPreference(KEY_PER_APP_PROFILES);
         if (mPerfProfilePref != null && !mPowerManager.hasPowerProfiles()) {
             removePreference(KEY_PERF_PROFILE);
@@ -397,12 +397,18 @@ public class PowerUsageSummary extends SettingsPreferenceFragment
     }
 
     private void refreshBatterySaverOptions() {
-        if (mBatterySaverPref != null) {
-            mBatterySaverPref.setEnabled(!mBatteryPluggedIn);
-            mBatterySaverPref.setChecked(!mBatteryPluggedIn && mPowerManager.isPowerSaveMode());
+        if (mBatterySaverPref != null && mBatteryPluggedIn) {
             mBatterySaverPref.setSummary(mBatteryPluggedIn
                     ? R.string.battery_saver_summary_unavailable
                     : R.string.battery_saver_summary);
+            mBatterySaverPref.setEnabled(false);
+        } else if (mBatterySaverPref != null && !mBatteryPluggedIn) {
+            boolean batterySaverEnabled = Settings.Global.getInt(
+                getContentResolver(), Settings.Global.LOW_POWER_MODE, 0) != 0;
+            mBatterySaverPref.setSummary(batterySaverEnabled
+                    ? R.string.enabled
+                    : R.string.disabled);
+            mBatterySaverPref.setEnabled(true);
         }
     }
 
