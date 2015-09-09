@@ -64,7 +64,9 @@
             android:title="@string/pie_trigger_sensitivity_title"
             android:summary="@string/pie_trigger_sensitivity_summary"
             android:max="10"
-            android:defaultValue="10" />
+            settings:minimum="1"
+            settings:defaultValue="8"
+            settings:interval="1" />
 
    </PreferenceCategory>
 
