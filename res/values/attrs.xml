@@ -121,8 +121,9 @@
         <attr name="digits" format="integer" />
     </declare-styleable>
 
-    <declare-styleable name="SeekBarPreference">
-        <attr name="maximum" format="integer" />
+    <!-- For SeekBarPreferenceCham -->
+    <declare-styleable name="SeekBarPreferenceCham">
+        <attr name="defaultVal" format="integer" />
         <attr name="minimum" format="integer" />
         <attr name="unitsLeft" format="string" />
         <attr name="unitsRight" format="string" />
