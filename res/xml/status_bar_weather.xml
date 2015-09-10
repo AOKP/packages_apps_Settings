@@ -44,9 +44,9 @@
         <com.android.settings.widget.SeekBarPreferenceCham
             android:key="status_bar_weather_size"
             android:title="@string/status_bar_weather_size_title"
-            android:defaultValue="14"
             android:max="23"
-            settings:min="4"
+            settings:minimum="4"
+            settings:defaultVal="14"
             settings:unitsLeft=""
             settings:unitsRight="dp" />
 

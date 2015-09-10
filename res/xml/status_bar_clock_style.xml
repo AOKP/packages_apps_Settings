@@ -77,9 +77,9 @@
         <com.android.settings.widget.SeekBarPreferenceCham
             android:key="font_size"
             android:title="@string/clock_font_size_title"
-            android:defaultValue="14"
             android:max="23"
-            settings:min="4"
+            settings:minimum="4"
+            settings:defaultVal="14"
             settings:unitsLeft=""
             settings:unitsRight="dp"
             android:dependency="status_bar_show_clock" />

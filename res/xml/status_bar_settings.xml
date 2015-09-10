@@ -132,7 +132,7 @@
                 android:key="status_bar_greeting_timeout"
                 android:title="@string/status_bar_greeting_timeout_title"
                 android:max="10000"
-                settings:min="100"
+                settings:minimum="100"
                 settings:unitsLeft=""
                 settings:unitsRight="ms"
                 android:dependency="status_bar_greeting"

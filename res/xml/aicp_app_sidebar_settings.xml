@@ -53,10 +53,10 @@
         android:title="@string/app_sidebar_transparency_title"
         android:summary="@string/app_sidebar_transparency_summary"
         android:max="50"
-        settings:min="0"
+        settings:defaultVal="0"
+        settings:minimum="0"
         settings:unitsLeft=""
         settings:unitsRight="%"
-        android:defaultValue="0"
         android:dependency="sidebar_enable" />
 
     <PreferenceCategory
@@ -66,9 +66,9 @@
         android:key="trigger_width"
         android:title="@string/trigger_width_title"
         android:summary="@string/trigger_width_summary"
-        android:defaultValue="4"
         android:max="64"
-        settings:min="4"
+        settings:defaultVal="4"
+        settings:minimum="4"
         settings:unitsLeft=""
         settings:unitsRight="px"
         android:dependency="sidebar_enable" />
@@ -77,9 +77,9 @@
         android:key="trigger_top"
         android:title="@string/trigger_top_title"
         android:summary="@string/trigger_top_summary"
-        android:defaultValue="0"
         android:max="99"
-        settings:min="0"
+        settings:defaultVal="0"
+        settings:minimum="0"
         settings:unitsLeft=""
         settings:unitsRight="%"
         android:dependency="sidebar_enable" />
@@ -88,9 +88,9 @@
         android:key="trigger_bottom"
         android:title="@string/trigger_bottom_title"
         android:summary="@string/trigger_bottom_summary"
-        android:defaultValue="100"
         android:max="100"
-        settings:min="1"
+        settings:defaultVal="100"
+        settings:minimum="1"
         settings:unitsLeft=""
         settings:unitsRight="%"
         android:dependency="sidebar_enable" />
