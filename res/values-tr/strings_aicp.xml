@@ -976,17 +976,17 @@
     <string name="wakelock_blocker_warning">Wakelockları engellemek stabiliteyi bozabilir, hatalara, veri kaybına neden olabilir. Ne yaptığınızı bilmiyorsanız kullanmayın!</string>
 
     <!-- Heads Up -->
-    <string name="category_heads_up">Heads Up Bildirimleri</string>
+    <string name="category_heads_up">Ekran Üstü Bildirimleri</string>
     <string name="add_heads_up_package">Uygulama Ekle</string>
     <string name="add_heads_up_dnd_summary">Bu uygulamalar açıkken gelen bildirimleri gösterme</string>
-    <string name="add_heads_up_blacklist_summary">Bu uygulamalalardan gelen Heads Up Bildirimlerini gösterme</string>
+    <string name="add_heads_up_blacklist_summary">Bu uygulamalalardan gelen Ekran Üstü Bildirimlerini gösterme</string>
     <string name="heads_up_dnd_title">Rahatsız Etme</string>
     <string name="heads_up_blacklist_title">Kara Liste</string>
-    <string name="heads_up_disabled_notice">Uygulamaların Pop-Up Şeklinde Bildirimler Göstermesi için Heads Up\'ı Etkinleştirin</string>
+    <string name="heads_up_disabled_notice">Uygulamaların Pop-Up Şeklinde Bildirimler Göstermesi için Ekran Üstü Bildirimlerini Etkinleştirin</string>
     <string name="heads_up_dismiss_on_remove_title">Kaydırma Davranışı</string>
     <string name="heads_up_dismiss_on_remove_summary_enabled">\'Dismiss\' (bildirimi kaldırmak) yerine gizle</string>
     <string name="heads_up_dismiss_on_remove_summary_disabled">Bildirimi Gizle ve \'Dismiss\' Et (bildirimi kaldır)</string>
-    <string name="heads_up_floating_window_title">Heads Up</string>
+    <string name="heads_up_floating_window_title">Ekran Üstü Bildirimler</string>
     <string name="heads_up_floating_window_summary">Ana Ekranda Değilken Yüzen Modda Bildirim Almak için Basılı Tutup Bırakın</string>
 
     <!-- Heads up timeout -->
@@ -1009,7 +1009,7 @@
 
     <!-- Heads up snooze -->
     <string name="heads_up_snooze_title">Bildirimi Sustur</string>
-    <string name="heads_up_snooze_summary">Heads Up Bildirimini yukarı kaydırmak uyarıları <xliff:g id="number">%d</xliff:g> dakika boyunca susturur.</string>
+    <string name="heads_up_snooze_summary">Ekran Üstü Bildirimleri yukarı kaydırmak uyarıları <xliff:g id="number">%d</xliff:g> dakika boyunca susturur.</string>
     <string name="heads_up_snooze_disabled_summary">Bildirimi Sustur Devre Dışı</string>
     <string name="heads_up_snooze_1min">1 dk</string>
     <string name="heads_up_snooze_3min">3 dk</string>
@@ -1224,8 +1224,8 @@
     <string name="status_bar_power_menu_action_dialog">Güç Menüsü - Ekranı Kapat</string>
 
     <!-- Heads Up Status Bar button -->
-    <string name="show_headsup_button_title">Heads Up Tuşu</string>
-    <string name="show_headsup_button_summary">Durum Çubuğunda Heads Up Bildirimler için Buton Göster</string>
+    <string name="show_headsup_button_title">Ekran Üstü Bildirimler Tuşu</string>
+    <string name="show_headsup_button_summary">Durum Çubuğunda Ekran Üstü Bildirimler için Buton Göster</string>
 
     <!-- Restart SystemUI -->
     <string name="restart_systemui">SystemUI (arayüz) Yeniden Başlat</string>

@@ -730,7 +730,7 @@
   <string name="qs_tile_lte">LTE</string>
   <string name="qs_tile_screen_timeout">Ekran Zaman Aşımı</string>
   <string name="qs_tile_usb_tether">USB İnternet Paylaşımı</string>
-  <string name="qs_tile_heads_up">Bildirim Pencereleri</string>
+  <string name="qs_tile_heads_up">Ekran Üstü Bildirim Pencereleri</string>
   <string name="qs_tile_ambient_display">Bildirim Ekranı</string>
   <string name="qs_tile_sync">Eşitleme</string>
   <string name="qs_dynamic_tile_next_alarm">Sonraki Alarm</string>
@@ -854,9 +854,9 @@
   <string name="preview_version_title">Sürüm</string>
   <string name="preview_country_title">Ülke</string>
   <string name="preview_carrier_title">Operatör</string>
-  <string name="heads_up_notifications">Bildirim Pencereleri</string>
-  <string name="summary_heads_up_enabled">Açılır bildirimler etkinleştirildi</string>
-  <string name="summary_heads_up_disabled">Açılır bildirimler devre dışı bırakıldı</string>
+  <string name="heads_up_notifications">Ekran Üstü Bildirim Pencereleri</string>
+  <string name="summary_heads_up_enabled">Ekran Üstü Bildirimler etkinleştirildi</string>
+  <string name="summary_heads_up_disabled">Ekran Üstü Bildirimler devre dışı bırakıldı</string>
   <string name="master_clear_desc_cm" product="tablet">Bu işlem tabletinizin <b>dahili belleğinde</b> bulunan tüm verileri silecek, \n\n<li>Cihazdaki hesaplar</li>\n<li>Sistem ve uygulama veri ve ayarları</li>\n<li>İndirilen uygulamalar</li> dahil.</string>
   <string name="master_clear_desc_cm" product="default">Bu işlem telefonunuzun<b>dahili belleğinde</b> bulunan tüm verileri silecek, \n\n<li>Cihazdaki hesaplar</li>\n<li>Sistem ve uygulama veri ve ayarları</li>\n<li>İndirilen uygulamalar</li> dahil.</string>
   <string name="lock_to_cyanogen_title">Cihaz Koruması</string>
