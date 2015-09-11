@@ -343,6 +343,8 @@
   <string name="notification_light_default_value">Varsayılan</string>
   <string name="notification_light_missed_call_title">Cevapsız arama</string>
   <string name="notification_light_voicemail_title">Sesli mesaj</string>
+  <string name="notification_light_screen_on">Ekran açıkken ışıklar</string>
+  <string name="keywords_lights_brightness_level">Sönük LED Parlaklığı</string>
   <string name="notification_ringtone_title_cm">Bildirim sesi</string>
   <string name="headset_connect_player_title">Müzik uygulamasını başlat</string>
   <string name="headset_connect_player_summary">Kulaklık bağlandığında müzik uygulamasını başlatır</string>
@@ -704,6 +706,7 @@
   <string name="qs_wifi_detail_title">Genişletilmiş WiFi Görünümü</string>
   <string name="qs_wifi_detail_summary">Hızlı Ayarlarda Genişletilmiş WiFi Görünümünü Etkinleştir</string>
   <string name="qs_brightness_slider_title">Parlaklık Kaydırıcısını Göster</string>
+  <string name="qs_hide_tiles_with_sensitive_data">Kilitlendiğinde hassas kareleri gizle</string>
   <string name="qs_brightness_slider_enabled">Etkin</string>
   <string name="qs_brightness_slider_disabled">Devre Dışı</string>
   <string name="qs_order_title">Kareleri Seçin ve Sıralayın</string>
@@ -728,7 +731,8 @@
   <string name="qs_tile_compass">Pusula</string>
   <string name="qs_tile_lockscreen">Kilit Ekranı</string>
   <string name="qs_tile_lte">LTE</string>
-  <string name="qs_tile_screen_timeout">Ekran Zaman Aşımı</string>
+  <string name="qs_tile_volume_panel">Ses paneli</string>
+  <string name="qs_tile_screen_timeout">Ekran zaman aşımı</string>
   <string name="qs_tile_usb_tether">USB İnternet Paylaşımı</string>
   <string name="qs_tile_heads_up">Ekran Üstü Bildirim Pencereleri</string>
   <string name="qs_tile_ambient_display">Bildirim Ekranı</string>
