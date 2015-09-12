@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2015 DarkKat
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2015 The Dirty Unicorns Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,17 +13,41 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/colors_title" >
 
-     <net.margaritov.preference.colorpicker.ColorPickerPreference
-        android:key="colors_text_color"
-        android:title="@string/text_title"
+<PreferenceScreen
+    android:title="@string/lockscreen_colors"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
+        android:key="lockscreen_clock_color"
+        android:title="@string/lockscreen_clock_color"
         android:defaultValue="0xffffffff" />
 
-     <net.margaritov.preference.colorpicker.ColorPickerPreference
-        android:key="colors_icon_color"
-        android:title="@string/icons_title"
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
+        android:key="lockscreen_clock_date_color"
+        android:title="@string/lockscreen_clock_date_color"
+        android:defaultValue="0xffffffff" />
+
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
+        android:key="lockscreen_alarm_color"
+        android:title="@string/lockscreen_alarm_color"
+        android:defaultValue="0xffffffff" />
+
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
+        android:key="lockscreen_indication_text_color"
+        android:title="@string/lockscreen_indication_text_color"
+        android:defaultValue="0xffffffff" />
+
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
+        android:key="lockscreen_owner_info_color"
+        android:title="@string/lockscreen_owner_info_color"
+        android:defaultValue="0xffffffff" />
+
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
+        android:key="lockscreen_bottom_icons_color"
+        android:title="@string/lockscreen_bottom_icons_color"
         android:defaultValue="0xffffffff" />
 
 </PreferenceScreen>
+
