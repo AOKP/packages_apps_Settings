@@ -70,6 +70,7 @@
     <string name="help">Aiuto</string>
     <string name="attention">Attenzione</string>
     <string name="enabled">Abilita</string>
+    <string name="disabled">Disabilità</string>
     <string name="default_string">Default</string>
     <string name="reset_message">Resetta tutto alle impostazioni di default?</string>
     <string name="misc_category">Miscellaneous</string>
@@ -208,6 +209,7 @@
     <string name="am_pm_clock_normal">Font Normale</string>
     <string name="am_pm_clock_small">Font Piccolo</string>
     <string name="am_pm_clock_none">Non visualizzare</string>
+    <string name="clock_date_position">Posizione Data</string>
     <string name="clock_date_display_none">Non visualizzare</string>
     <string name="clock_date_display_small">Font Piccolo</string>
     <string name="clock_date_display_normal">Font Normale</string>
@@ -220,6 +222,8 @@
     <string name="status_bar_toggle_brightness_summary">Modifica la luminosità con uno swipe sulla barra notifiche</string>
     <string name="status_bar_toggle_info">Luminosità Automatica abilitata</string>
     <string name="status_bar_show_clock_second_title">Visualizza i Secondi</string>
+    <string name="clock_date_right">Destra dell\'ora</string>
+    <string name="clock_date_left">Sinistra dell\'ora</string>
 
     <!-- SuperSU header name - the app hides itself from launcher based on this resource name being present in com.android.settings -->
     <string name="supersu_title">SuperSU</string>
@@ -701,10 +705,19 @@
     <!-- StatusBar Clock style -->
     <string name="clock_font_style_title">Stile Font Ora</string>
     <string name="clock_font_bold">Grossetto</string>
+    <string name="clock_font_italic">Corsivo</string>
+    <string name="clock_font_bold">Grossetto</string>
     <string name="clock_font_bold_italic">Grossetto corsivo</string>
-    <string name="clock_font_condensed">Condensato</string>
     <string name="clock_font_light">Fine</string>
     <string name="clock_font_light_italic">Fine corsivo</string>
+    <string name="clock_font_thin">Sottile</string>
+    <string name="clock_font_thin_italic">Sottile corsivo</string>
+    <string name="clock_font_condensed">Condensato</string>
+    <string name="clock_font_condensed_italic">Condensato corsivo</string>
+    <string name="clock_font_condensed_bold">Condensato grossetto</string>
+    <string name="clock_font_condensed_bold_italic">Condensato grossetto corsivo</string>
+    <string name="clock_font_medium">Medio</string>
+    <string name="clock_font_medium_italic">Medio corsivo</string>
     <string name="clock_font_normal">Normale</string>
 
     <!-- Recents panel settings -->
@@ -801,6 +814,7 @@
     <string name="qs_screen_off_tile">Spegni Schermo</string>
     <string name="qs_systemui_restart_tile">Riavvia SystemUI</string>
     <string name="qs_tile_slim_floats">Slim Floats</string>
+    <string name="qs_tile_themes">Temi</string>
 
     <!-- QuickSettings collapse panel -->
     <string name="quick_settings_collapse_title">Chiudi Automaticamente le impostazioni rapide</string>
@@ -924,6 +938,7 @@
     <string name="custom_carrier_label_explain">Inserisci il nome,lascia in bianco per ritornare al nome di default</string>
     <string name="custom_carrier_label_notset">Nome personalizzato non configurato/Default</string>
     <string name="status_bar_carrier_color">Colore nome operatore</string>
+    <string name="status_bar_carrier_size">Dimensione font operatore</string>
 
     <!-- Statusbar AICP logo -->
     <string name="status_bar_aicp_logo_title">AICP logo</string>
@@ -1077,6 +1092,7 @@
     <string name="network_traffic_color_reset_message">Resetta colore traffico rete come default?</string>
 
     <!-- Battery saver -->
+    <string name="battery_saver_settings_title">Settaggi salva batteria</string>
     <string name="battery_saver_title">Colore di allarme</string>
     <string name="battery_saver_style_reset_message">Resetta Colore di allarme a default?</string>
 
@@ -1311,12 +1327,19 @@
     <string name="status_bar_weather_size_title">Dimensione Font</string>
     <string name="status_bar_weather_font_style_title">Carattere</string>
     <string name="status_bar_weather_font_normal">Normale</string>
+    <string name="status_bar_weather_font_italic">Corsivo</string>
     <string name="status_bar_weather_font_bold">Grossetto</string>
-    <string name="status_bar_weather_font_bold_italic">Grossetto corsivo</string>
-    <string name="status_bar_weather_font_condensed">Condensato</string>
+    <string name="status_bar_weather_font_bold_italic">Grosseto corsivo</string>
     <string name="status_bar_weather_font_light">Fine</string>
     <string name="status_bar_weather_font_light_italic">Fine corsivo</string>
-
+    <string name="status_bar_weather_font_thin">Sottile</string>
+    <string name="status_bar_weather_font_thin_italic">Sottile corsivo</string>
+    <string name="status_bar_weather_font_condensed">Condensato</string>
+    <string name="status_bar_weather_font_condensed_italic">Condensato corsivo</string>
+    <string name="status_bar_weather_font_condensed_bold">Condensato grossetto</string>
+    <string name="status_bar_weather_font_condensed_bold_italic">Condensato grossetto corsivo</string>
+    <string name="status_bar_weather_font_medium">Medio</string>
+    <string name="status_bar_weather_font_medium_italic">Medio corsivo</string>
 
     <!-- SlimDim -->
     <string name="dim_nav_buttons_category">SlimDim</string>
@@ -1384,11 +1407,14 @@
     <string name="aicp_settings_tab3">Notifiche</string>
     <string name="aicp_settings_tab4">Sistema</string>
 
-   <!-- Long press on lock screen lock icon to launch torch-->
-   <string name="longpress_lock_icon_torch_title">Pressione lucchetto attiva torcia</string>
-   <string name="longpress_lock_icon_torch_summary">Questa opzione non funziona con smart lock e con gesture attive in accessibilità</string>
+    <!-- Long press on lock screen lock icon to launch torch-->
+    <string name="longpress_lock_icon_torch_title">Pressione lucchetto attiva torcia</string>
+    <string name="longpress_lock_icon_torch_summary">Questa opzione non funziona con smart lock e con gesture attive in accessibilità</string>
 
     <string name="chamber_title">Camera dei Segreti</string>
     <string name="chamber_toast">La camera dei segreti è aperta</string>
 
+    <!-- Device policy override -->
+    <string name="device_policy_override_title">Riscrivi Policy dispositivo</string>
+    <string name="device_policy_override_summary">Permette alle app di forzare la sicurezza dello sblocco e settaggi profili</string>
 </resources>
