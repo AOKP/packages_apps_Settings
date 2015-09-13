@@ -1329,10 +1329,19 @@
     <string name="notification_title">Paneau de notifications</string>
     <string name="status_bar_custom_header_title">Image d\'en-tête personnalisé</string>
     <string name="status_bar_custom_header_summary">Activer l\'image d\'en-tête personnalisé dans le panneau de notifications</string>
-    
+
     <!-- Aicp Settings Tabs -->
     <string name="aicp_settings_tab1">Divers</string>
     <string name="aicp_settings_tab2">UI</string>
     <string name="aicp_settings_tab3">Barre de statut</string>
     <string name="aicp_settings_tab4">Système</string>
+
+    <!-- Chamber of Secrets -->
+    <string name="chamber_title">Chambre des secrets</string>
+    <string name="chamber_toast">La chambre des secrets est ouvert</string>
+
+    <!-- Device policy override -->
+    <string name="device_policy_override_title">Annuler politique de périphériques</string>
+    <string name="device_policy_override_summary">Autoriser les applications à forcer l\'écran de verrouillage et outrepasser les profils système</string>
+
 </resources>
