@@ -38,6 +38,9 @@
     <string name="chipset_info">Чипсет</string>
     <!-- About phone screen, Free memory info -->
     <string name="mem_info">Память</string>
+    <!-- About phone screen, AICP device maintainer name -->
+    <string name="device_maintainer">Cопровождающий устройство</string>
+    <string name="device_maintainers">Сопровождающие устройство</string>
 
     <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
     <plurals name="show_dev_countdown_aicp">
@@ -69,6 +72,7 @@
     <string name="add">Добавить</string>
     <string name="attention">Внимание</string>
     <string name="enabled">Включено</string>
+    <string name="disabled">Выключено</string>
     <string name="default_string">По умолчанию</string>
     <string name="reset_message">Сбросить всё по умолчанию?</string>
     <string name="misc_category">Разное</string>
@@ -201,6 +205,7 @@
     <string name="clock_date_display">Дата</string>
     <string name="clock_date_display_summary">Отображать свою дату перед часами</string>
     <string name="clock_date_style">Стиль даты</string>
+    <string name="clock_date_position">Расположение даты</string>
     <string name="clock_date_format">Формат даты</string>
     <string name="clock_date_string_edittext_title">Должен быть в формате даты, например: ММ/дд/гг</string>
     <string name="clock_date_string_edittext_summary">Введите значение</string>
@@ -213,6 +218,8 @@
     <string name="clock_date_style_normal">Обычный</string>
     <string name="clock_date_style_lowercase">строчными</string>
     <string name="clock_date_style_uppercase">ПРОПИСНЫМИ</string>
+    <string name="clock_date_right">Справа от часов</string>
+    <string name="clock_date_left">Слева от часов</string>
     <string name="clock_date_format_custom">Свой формат даты</string>
     <string name="status_bar_clock_style_reset_message">Восстановить цвет часов?</string>
     <string name="status_bar_toggle_brightness">Управление яркостью</string>
@@ -916,8 +923,8 @@
     <string name="status_bar_aicp_logo_title">Логотип AICP</string>
     <string name="status_bar_aicp_logo_summary">Включить отображение логотипа AICP в строке состояния</string>
     <string name="status_bar_aicp_logo_color">Цвет логотипа AICP</string>
-    <string name="status_bar_aicp_logo_position">Расположение</string>
-    <string name="status_bar_aicp_logo_position_summary">Выберите, с какой стороны отображать логотип</string>
+    <string name="status_bar_aicp_logo_position">Расположение логотипа AICP</string>
+    <string name="status_bar_aicp_logo_position_summary">Выберите, с какой стороны отображать логотип, справа или слева</string>
     <string name="status_bar_logo_position_right">Справа</string>
     <string name="status_bar_logo_position_left">Слева</string>
 
@@ -977,7 +984,7 @@
     <string name="add_heads_up_blacklist_summary">Не показывать всплывающие уведомления от этих приложений</string>
     <string name="heads_up_dnd_title">Не беспокоить</string>
     <string name="heads_up_blacklist_title">Чёрный список</string>
-    <string name="heads_up_disabled_notice">Чтобы включить интерективные уведомления от приложений, включите всплывающие уведомления</string>
+    <string name="heads_up_disabled_notice">\"Всплывающие уведомления\" позволяют отображать интерактивные уведомления от приложений во всплывающем окне.</string>
     <string name="heads_up_dismiss_on_remove_title">Настройка поведения</string>
     <string name="heads_up_dismiss_on_remove_summary_enabled">Скрывать уведомление вместо удаления</string>
     <string name="heads_up_dismiss_on_remove_summary_disabled">Скрывать и удалять уведомление</string>
@@ -985,33 +992,15 @@
     <string name="heads_up_floating_window_summary">Долгое нажатие и отпускание, когда не на домашнем экране, открывает приложение в плавающем окне</string>
 
     <!-- Heads up timeout -->
-    <string name="heads_up_time_out_title">Длительность</string>
-    <string name="heads_up_time_out_summary">Уведомление будет отображаться <xliff:g id="number">%d</xliff:g> секунд</string>
-    <string name="heads_up_time_out_never_summary">Уведомление будет отображаться пока не будет отклонено</string>
-    <string name="heads_up_time_out_2sec">2 секунды</string>
-    <string name="heads_up_time_out_3sec">3 секунды</string>
-    <string name="heads_up_time_out_4sec">4 секунды</string>
-    <string name="heads_up_time_out_5sec">5 секунд</string>
-    <string name="heads_up_time_out_6sec">6 секунд</string>
-    <string name="heads_up_time_out_8sec">8 секунд</string>
-    <string name="heads_up_time_out_10sec">10 секунд</string>
-    <string name="heads_up_time_out_never">Никогда</string>
+    <string name="heads_up_time_out_title">Время отображения</string>
+
+    <!-- Heads up snooze -->
+    <string name="heads_up_snooze_title">Период повтора</string>
 
     <!-- Heads up touch outside -->
     <string name="heads_up_touch_outside_title">Поведение при нажатии вне области уведомления</string>
     <string name="heads_up_touch_outside_summary_enabled">Скрывать при нажатии вне уведомления и нажатии кнопки домой</string>
     <string name="heads_up_touch_outside_summary_disabled">Не скрывать при нажатии вне уведомления и нажатии кнопки домой</string>
-
-    <!-- Heads up snooze -->
-    <string name="heads_up_snooze_title">Длительность \"отложить\"</string>
-    <string name="heads_up_snooze_summary">Свайп по всплывающему уведомлению отложит его на <xliff:g id="number">%d</xliff:g> минут</string>
-    <string name="heads_up_snooze_disabled_summary">Функция отключена</string>
-    <string name="heads_up_snooze_1min">1 минута</string>
-    <string name="heads_up_snooze_3min">3 минуты</string>
-    <string name="heads_up_snooze_5min">5 минут</string>
-    <string name="heads_up_snooze_10min">10 минут</string>
-    <string name="heads_up_snooze_15min">15 минут</string>
-    <string name="heads_up_snooze_20min">20 минут</string>
 
     <!-- UI debug setting: show CPU info? [CHAR LIMIT=25] -->
     <string name="show_cpu_info">Показывать информацию о процессоре</string>
@@ -1374,5 +1363,21 @@
     <!-- Chamber of Secrets -->
     <string name="chamber_title">Тайная комната</string>
     <string name="chamber_toast">Тайная комната снова открыта</string>
+
+    <!-- Device policy override -->
+    <string name="device_policy_override_title">Переопределение политики устройства</string>
+    <string name="device_policy_override_summary">Разрешить приложениям усилить безопасность Блокировки и переопределить настройки профиля</string>
+
+    <!-- Lockscreen Colors -->
+    <string name="lockscreen_colors">Цвета экрана блокировки</string>
+    <string name="lockscreen_bottom_icons_color">Нижние ярлыки</string>
+    <string name="lockscreen_owner_info_color">Текст сведений о владельце</string>
+    <string name="lockscreen_alarm_color">Текст будильника</string>
+    <string name="lockscreen_indication_text_color">Текст индикации</string>
+    <string name="lockscreen_clock_color">Часы</string>
+    <string name="lockscreen_clock_date_color">Дата</string>
+    <string name="lockscreen_colors_reset_title">Сброс цветов экрана блокировки</string>
+    <string name="lockscreen_colors_reset_message">Вы уверены, что хотите сбросить эти цвета по умолчанию?</string>
+    <string name="yes">ДА</string>
 
 </resources>
