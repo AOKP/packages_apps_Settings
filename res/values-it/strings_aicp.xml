@@ -70,7 +70,7 @@
     <string name="help">Aiuto</string>
     <string name="attention">Attenzione</string>
     <string name="enabled">Abilita</string>
-    <string name="disabled">Disabilità</string>
+    <string name="disabled">Disabilita</string>
     <string name="default_string">Default</string>
     <string name="reset_message">Resetta tutto alle impostazioni di default?</string>
     <string name="misc_category">Miscellaneous</string>
@@ -1417,4 +1417,17 @@
     <!-- Device policy override -->
     <string name="device_policy_override_title">Riscrivi Policy dispositivo</string>
     <string name="device_policy_override_summary">Permette alle app di forzare la sicurezza dello sblocco e settaggi profili</string>
+
+    <!-- Lockscreen Colors -->
+    <string name="lockscreen_colors">Colori schermata sblocco</string>
+    <string name="lockscreen_bottom_icons_color">Scorciatoie in basso</string>
+    <string name="lockscreen_owner_info_color">Info proprietario</string>
+    <string name="lockscreen_alarm_color">Sveglia</string>
+    <string name="lockscreen_indication_text_color">Testo indicazione</string>
+    <string name="lockscreen_clock_color">Ora</string>
+    <string name="lockscreen_clock_date_color">Data</string>
+    <string name="lockscreen_colors_reset_title">Resetta colori sblocco</string>
+    <string name="lockscreen_colors_reset_message">Sei sicuro di voler resettare i colori a quelli di defualt?</string>
+    <string name="yes">SI</string>
+
 </resources>
