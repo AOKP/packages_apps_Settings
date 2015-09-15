@@ -19,7 +19,6 @@
     <string name="mod_version">AICP verzió</string>
     <!-- About phone screen, AICP unknown name-->
     <string name="mod_version_default">Ismeretlen</string>
-    <string name="model_name">Model név</string>
     <!-- About phone screen, build date of ROM -->
     <string name="build_date">Építési dátum</string>
     <string name="build_date_default">2012-01-01-0000</string>
@@ -39,6 +38,9 @@
     <string name="chipset_info">Chipset</string>
     <!-- About phone screen, Free memory info -->
     <string name="mem_info">Memória</string>
+    <!-- About phone screen, AICP device maintainer name -->
+    <string name="device_maintainer">Eszköz fenntartó</string>
+    <string name="device_maintainers">Eszköz fenntartók</string>
 
     <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
     <plurals name="show_dev_countdown_aicp">
@@ -55,6 +57,8 @@
     <string name="aicp_ota_settings_title">Aicp OTA</string>
     <string name="battery_settings_title">Akkumulátor beállítások</string>
     <string name="status_bar_battery_title">Akkumulátor ikon</string>
+    <string name="kernel_adiutor_settings_title">Kernel Adiutor</string>
+
 
     <!-- Joke -->
     <string name="hidden_shit_toast">Rejett baromság SZABADON!!!</string>
@@ -157,7 +161,7 @@
     <string name="status_bar_show_weather_category">Időjárás</string>
     <string name="aicp_notifications_category">Értesítések</string>
     <string name="navigation_bar_category">Navigációs Sáv</string>
-    <string name="aicp_apps_category">AICP Alkalmazások</string>
+    <string name="navigation_ring_category">Navigációs gyűrű</string>
     <string name="aicp_extras_category">Több beállítás</string>
 
     <!-- Per app controls for LP keyguard notifications -->
@@ -204,6 +208,7 @@
     <string name="clock_date_display">Dátum</string>
     <string name="clock_date_display_summary">Egyéni dátum kijelzése az óra előtt</string>
     <string name="clock_date_style">Dátum stílus</string>
+    <string name="clock_date_position">Dátum pozicíó</string>
     <string name="clock_date_format">Dátum formátum</string>
     <string name="clock_date_string_edittext_title">Add meg a dátum formátumot, pl. MM/dd/yy</string>
     <string name="clock_date_string_edittext_summary">Szöveg bevitel</string>
@@ -216,16 +221,21 @@
     <string name="clock_date_style_normal">Normál</string>
     <string name="clock_date_style_lowercase">Kisbetűs</string>
     <string name="clock_date_style_uppercase">Nagybetűs</string>
+    <string name="clock_date_right">Jobb idő</string>
+    <string name="clock_date_left">Bal idő</string>
     <string name="clock_date_format_custom">Egyéni java formátum</string>
     <string name="status_bar_clock_style_reset_message">Óra színek alaphelyzetbe?</string>
-    <string name="status_bar_ticker_title">Értesítés Jelölő</string>
-    <string name="status_bar_ticker_summary">Értesítési szöveg animáció az állapot sávon</string>
     <string name="status_bar_toggle_brightness">Fényerő beállítás</string>
     <string name="status_bar_toggle_brightness_summary">Engedélyezi a fényerő állítást csúsztatva az állapotsávon</string>
     <string name="status_bar_toggle_info">Automatikus fényerő engedélyezve</string>
 
     <!-- SuperSU header name - the app hides itself from launcher based on this resource name being present in com.android.settings -->
     <string name="supersu_title">SuperSU</string>
+
+    <!-- Change Log -->
+    <string name="changelog_title">Változások</string>
+    <string name="changelog_title_summary">Nézd meg a legutóbbi változásokat a ROM-ban</string>
+    <string name="changelog_error">Nem tudja betölteni a változásokat</string>
 
     <!-- MediaScanner behavior on boot -->
     <string name="options_settings_title">Opciók</string>
@@ -449,6 +459,8 @@
     <string name="gesture_anywhere_position_right">Jobb szélen</string>
     <string name="gesture_anywhere_gestures_title">Gesztusok</string>
     <string name="gesture_anywhere_gestures_summary">Hozzáad, eltávolít és szerkeszti a gesztusokat</string>
+    <string name="gesture_anywhere_floating">Lebegő Mód</string>
+    <string name="gesture_anywhere_floating_summary">Parancsikon indítása lebegő módban</string>
     <!-- Label, button used to add a gesture -->
     <string name="ga_button_add">Gesztus hozzáadás</string>
     <!-- Label, button used to reload all gestures -->
@@ -606,7 +618,7 @@
     <string name="trigger_bottom_summary">Állítsd be a kapcsoló magasságát</string>
 
     <!-- Toast Animation -->
-    <string name="toast_animation_title">Toast animáció</string>
+    <string name="toast_animation_title">Buborék animáció</string>
     <string name="toast_none_animation">Nincs</string>
     <string name="toast_default_animation">Alapértelmezett</string>
     <string name="toast_fade_animation">Áttűnés</string>
@@ -623,6 +635,9 @@
     <string name="toast_Translucent_animation">Áttetsző</string>
     <string name="toast_SlideLeftRight_animation">Balról jobbra</string>
     <string name="toast_SlideRightLeft_animation">Jobbról balra</string>
+
+    <!-- Toast Icons -->
+    <string name="toast_icon_title">Buborék ikon</string>
 
     <!-- Volume Steps -->
     <string name="volume_steps_title">Hangerőskála</string>
@@ -641,6 +656,7 @@
     <string name="volume_steps_5">5</string>
     
     <!-- Lockscreen weather -->
+    <string name="weather_cat_notifications_title">Értesítések</string>
     <string name="lock_screen_weather_settings_title">Zárképernyő időjárás</string>
     <string name="lock_screen_colors_title">Zárképernyő színek</string>
     <string name="lock_screen_color_settings_summary">Színek testreszabása</string>
@@ -657,6 +673,22 @@
     <string name="weather_condition_icon_vclouds_title">VClouds</string>
     <string name="weather_colorize_all_icons_title">Összes ikon átszínezése</string>
     <string name="weather_colorize_all_icons_summary">Engedélyezve átszínezi az összes ikont, tiltva csak egyszínűek az ikonok</string>
+    <string name="weather_hide_panel_title">Időjárás panel rejtése</string>
+    <string name="weather_hide_panel_dlg_title">Válaszd, ha rejteni akarod az időjárás panelt</string>
+    <string name="weather_hide_panel_auto_title">Auto</string>
+    <string name="weather_hide_panel_custom_title">Egyéni</string>
+    <string name="weather_hide_panel_never_title">Soha</string>
+    <string name="weather_hide_panel_auto_summary">Az időjárás panel rejtve lesz, ha a látható értesítések elérik a maximum engedélyezett értesítéseket a zárképernyőn</string>
+    <string name="weather_hide_panel_custom_summary">Az időjárás panel rejtve lesz, ha az értesítések száma eléri a megadott értéket (%s)</string>
+    <string name="weather_hide_panel_never_summary">Az időjárás panel nem lesz rejtve</string>
+    <string name="weather_number_of_notifications_title">Értesítések száma</string>
+    <string name="weather_number_of_notifications_dlg_title">Add meg az értesítések számát amire rejti a panelt</string>
+    <string name="weather_number_of_notifications_always_title">Mindig</string>
+    <string name="weather_number_of_notifications_two_title">2</string>
+    <string name="weather_number_of_notifications_three_title">3</string>
+    <string name="weather_number_of_notifications_four_title">4</string>
+    <string name="weather_number_of_notifications_five_title">5</string>
+    <string name="weather_number_of_notifications_six_title">6</string>
     <string name="icons_title">Ikonok</string>
     <string name="position_right_title">Jobb</string>
     <string name="position_centered_title">Középen</string>
@@ -677,11 +709,22 @@
 
     <!-- StatusBar Clock style -->
     <string name="clock_font_style_title">Óra betű stílus</string>
-    <string name="clock_font_bold">Vastag</string>
-    <string name="clock_font_condensed">Sűrű</string>
-    <string name="clock_font_light">Vékony</string>
-    <string name="clock_font_light_italic">Vékony dőlt</string>
+    <string name="clock_font_italic">Dőlt</string>
+    <string name="clock_font_bold">Kövér</string>
+    <string name="clock_font_bold_italic">Kövér dőlt</string>
+    <string name="clock_font_thin">Vékony</string>
+    <string name="clock_font_thin_italic">Vékony dőlt</string>
+    <string name="clock_font_condensed">Keskeny</string>
+    <string name="clock_font_light">Könnyű</string>
+    <string name="clock_font_light_italic">Könnyű dőlt</string>
     <string name="clock_font_normal">Normál</string>
+    <string name="clock_font_condensed_italic">Keskeny dőlt</string>
+    <string name="clock_font_condensed_bold">Keskeny kővér</string>
+    <string name="clock_font_condensed_bold_italic">Keskeny kővér dőlt</string>
+    <string name="clock_font_medium">Közepes</string>
+    <string name="clock_font_medium_italic">Közepes dőlt</string>
+    <string name="clock_font_size_title">Betű méret</string>
+    <string name="status_bar_show_clock_second_title">Óra másodpercek</string>
 
     <!-- Recents panel settings -->
     <string name="recents_panel_settings">Legutóbbi Panel Beállítások</string>
@@ -735,6 +778,10 @@
     <string name="disable_fc_notifications_title">Tiltja az FC Értesítéseket</string>
     <string name="disable_fc_notifications_summary">El fogja rejteni az összes kényszer bezárási értesítést</string>
 
+    <!-- Long press on lock screen lock icon to launch torch-->
+    <string name="longpress_lock_icon_torch_title">Hosszan nyomva a zár ikont, indítja a zseblámpát</string>
+    <string name="longpress_lock_icon_torch_summary">Ez az opció nem fog mükődni, ha az okos zár és a közelségi érintés felfeldezés engedélyezve van</string>
+
     <!-- Navigation bar -->
     <string name="navbar_style_dimen_title">Állapot sáv méretek</string>
     <string name="navbar_dimensions_reset_message">Az összes méretet alaphelyzetbe állítod?</string>
@@ -747,6 +794,7 @@
     <string name="navigation_bar_size_30_dp">30 dp</string>
     <string name="navigation_bar_size_24_dp">24 dp</string>
     <string name="navigation_bar_size_48_dp_default">48 dp (alapértelmezett)</string>
+    <string name="navigation_bar_size_46_dp">46 dp</string>
     <string name="navigation_bar_size_44_dp">44 dp</string>
     <string name="navigation_bar_size_40_dp">40 dp</string>
     <string name="navigation_bar_size_42_dp">42 dp</string>
@@ -768,12 +816,15 @@
     <string name="qs_screenrecord_tile">Képernyőfelvétel</string>
     <string name="qs_sync_tile">Szinkronizálás</string>
     <string name="qs_tile_powermenu">Kikapcsolási Menü</string>
+    <string name="qs_tile_slimpie">Pie Vezérlés</string>
     <string name="qs_battery_saver_tile">Akkumulátor kimélő</string>
     <string name="qs_brightness_tile">Fényerő</string>
     <string name="qs_expanded_desktop_tile">Kiterjesztett képernyő</string>
     <string name="qs_notifications_tile">Értesítések</string>
     <string name="qs_screen_off_tile">Képernyő ki</string>
-    <string name="qs_ambient_display_tile">Környezeti kijelző</string>
+    <string name="qs_systemui_restart_tile">RendszerUI Újraindítása</string>
+    <string name="qs_tile_slim_floats">Slim Lebegők</string>
+    <string name="qs_tile_themes">Témák</string>
 
     <!-- QuickSettings collapse panel -->
     <string name="quick_settings_collapse_title">Panel auto zárás</string>
@@ -896,15 +947,17 @@
     <string name="custom_carrier_label_explain">Add meg az új felíratot. Üresen hagyva visszaáll a gyári felíratra.</string>
     <string name="custom_carrier_label_notset">Egyéni felírat jelenleg nincs beállítva</string>
     <string name="status_bar_carrier_color">Szolgáltatói felírat színe</string>
+    <string name="status_bar_carrier_size">Szolgáltatói felírat mérete</string>
 
     <!-- Statusbar AICP logo -->
     <string name="status_bar_aicp_logo_title">AICP logo</string>
     <string name="status_bar_aicp_logo_summary">Engedélyezi az AICP logót az állapot sáv baloldalán</string>
     <string name="status_bar_aicp_logo_color">AICP logo színe</string>
+    <string name="status_bar_aicp_logo_position">Helyzet</string>
+    <string name="status_bar_aicp_logo_position_summary">Válaszd ki melyik oldalon legyen a logo, bal vagy jobb</string>
+    <string name="status_bar_logo_position_right">Jobb</string>
+    <string name="status_bar_logo_position_left">Bal</string>
     
-    <!-- Data activity icons -->
-    <string name="status_bar_show_network_activity_title">Hálóztai aktívitási nyílak</string>
-
     <!-- Volume pane timeout -->
     <string name="volume_panel_time_out_title">Hangerő panel késleltetése</string>
     <string name="volume_panel_time_out_summary">Eltünteti <xliff:g id="number">%d</xliff:g> másodperc alatt. Automatikusan eltünteti, ha rajta kivül érinti meg</string>
@@ -941,10 +994,6 @@
     <string name="qs_slim_action_summary">Add meg és állítsd be a SlimMűvelet sorrendjét a SlimMűveletek csempén</string>
     <string name="qs_slim_action_title">SlimMűveletek</string>
 
-    <!-- Long press on lock screen lock icon to sleep -->
-    <string name="longpress_lock_icon_to_sleep_title">Alszik hosszan nyomva a zár ikonra</string>
-    <string name="longpress_lock_icon_to_sleep_summary">Ez a funkció nem működik együtt a smart lock és a közelítő érintés felderítéssel</string>
-
     <!-- Double tap gesture anywhere on the lock screen put device to sleep -->
     <string name="double_tap_sleep_anywhere_title">Bárhol dupla érintésre alvás</string>
     <string name="double_tap_sleep_anywhere_summary">Zárképernyőn bárhol duplán érintve a készülék alvó módba kerül</string>
@@ -969,35 +1018,19 @@
     <string name="heads_up_dismiss_on_remove_title">Söprési viselkedés</string>
     <string name="heads_up_dismiss_on_remove_summary_enabled">Értesítés elrejtése elutasítás helyett</string>
     <string name="heads_up_dismiss_on_remove_summary_disabled">Rejti és elutasítja az értesítést</string>
+    <string name="heads_up_floating_window_title">Felugró értesítések</string>
+    <string name="heads_up_floating_window_summary">Hosszannyomva és engedélyezve megnyítja lebegő nézetben, ha nincs a kezdőképernyőn</string>
 
     <!-- Heads up timeout -->
     <string name="heads_up_time_out_title">Időtúllépés</string>
-    <string name="heads_up_time_out_summary">Felugró értesítéseket fogja mutatni <xliff:g id="number">%d</xliff:g> mp-ig</string>
-    <string name="heads_up_time_out_never_summary">Értesítés mutatása elutasításig</string>
-    <string name="heads_up_time_out_2sec">2 mp</string>
-    <string name="heads_up_time_out_3sec">3 mp</string>
-    <string name="heads_up_time_out_5sec">5 mp</string>
-    <string name="heads_up_time_out_4sec">4 mp</string>
-    <string name="heads_up_time_out_6sec">6 mp</string>
-    <string name="heads_up_time_out_8sec">8 mp</string>
-    <string name="heads_up_time_out_10sec">10 mp</string>
-    <string name="heads_up_time_out_never">Soha</string>
+
+    <!-- Heads up snooze -->
+    <string name="heads_up_snooze_title">Szundi időzítő</string>
 
     <!-- Heads up touch outside -->
     <string name="heads_up_touch_outside_title">Külső érintés viselkedése</string>
     <string name="heads_up_touch_outside_summary_enabled">Értesítés rejtése, ha azon kivül érinted meg vagy nyommod a kezdőlap gombot</string>
     <string name="heads_up_touch_outside_summary_disabled">Ne rejtse el az értesítést, ha azon kivül érinted meg vagy nyomod meg a kezdőlap gombot</string>
-
-    <!-- Heads up snooze -->
-    <string name="heads_up_snooze_title">Szundi ideje</string>
-    <string name="heads_up_snooze_summary">Söprés felfelé a felugró értesítésen szundi <xliff:g id="number">%d</xliff:g> percig</string>
-    <string name="heads_up_snooze_disabled_summary">Szundi idő tiltva</string>
-    <string name="heads_up_snooze_1min">1 perc</string>
-    <string name="heads_up_snooze_3min">3 perc</string>
-    <string name="heads_up_snooze_5min">5 perc</string>
-    <string name="heads_up_snooze_10min">10 perc</string>
-    <string name="heads_up_snooze_15min">15 perc</string>
-    <string name="heads_up_snooze_20min">20 perc</string>
 
     <!-- UI debug setting: show CPU info? [CHAR LIMIT=25] -->
     <string name="show_cpu_info">CPU info mutatása</string>
@@ -1018,6 +1051,8 @@
     <string name="network_traffic_vector_title">Hálózati forgalom</string>
     <string name="network_traffic_vector_summary">Engedélyezi a különféle hálózati forgalom beállításokat az állapotsávon</string>
     <string name="show_network_traffic_disable">Tiltva</string>
+    <string name="network_traffic_hide_arrow">Nyílak rejtése</string>
+    <string name="network_traffic_hide_arrow_summary">Rejti a hálózati nyíl megjelenítést</string>
     <string name="show_network_traffic_meter">Méter</string>
     <string name="show_network_traffic_text">Szöveg</string>
     <string name="show_network_traffic_both">Együtt</string>
@@ -1044,6 +1079,7 @@
     <string name="network_traffic_color_reset_message">Hálózati forgalom színeit alaphelyzetbe állítod?</string>
 
     <!-- Battery saver -->
+    <string name="battery_saver_settings_title">Akkumulátor kimélő beállítások</string>
     <string name="battery_saver_title">Figyelmeztető szín</string>
     <string name="battery_saver_style_reset_message">Alaphelyzetbe az akkumulátor kimélő színeit?</string>
 
@@ -1064,13 +1100,13 @@
     <string name="mount_notification_title">Csatolási értesítés</string>
     <string name="mount_notification_summary">Értesítés kijelzése tároló csatolásánál</string>
 
-    <!-- Calibration Control under Display-Advanced -->
-    <string name="calibration_control_title">Kalibrálás vezérlés</string>
-    <string name="calibration_control_summary">Érintő képernyő kalibrálásának bekapcsolása</string>
-
     <!-- Clear button color -->
     <string name="clear_all_color_title">Összes ikon szín törlése</string>
     <string name="notification_drawer_clear_all_icon_color_title">Ikon</string>
+
+    <!-- Expanded header color -->
+    <string name="background_header_title">Fejléc háttér színe</string>
+    <string name="expanded_header_background_color_title">Szín</string>
 
     <!-- Task Manager -->
     <string name="enable_task_manager_title">Feladat kezelő</string>
@@ -1143,7 +1179,7 @@
     <string name="summary_pref_menu_display">Hogyan és mikor jelenjen meg a menü gomb?</string>
 
     <!-- Disable torch when screen goes off -->
-    <string name="torch_category_title">Torch</string>
+    <string name="torch_category_title">Zseblámpa</string>
     <string name="disable_torch_screen_off_title">Zseblámpa tiltása a képernyő kikapcsolásakor</string>
     <string name="disable_torch_screen_off_delay_title">Késleltetés</string>
     <string name="torch_screen_off_one_second">1 mp</string>
@@ -1246,4 +1282,120 @@
     <string name="trigger_bottom_title">Kapcsoló magassága</string>
     <string name="trigger_bottom_summary">Beállítja a kapcsolási terület magasságát</string>
 
+    <!-- Selinux Switch -->
+    <string name="selinux_switch_title">Selinux Kapcsoló opciók</string>
+    <string name="selinux_switch_summary">SELinux egy beállítás a kernel módosításoknak és a felhasználói-terület eszközöknek. A módosított változtatások nem kivánt hatásokat okozhatnak. Saját felelősségedre használd</string>
+    <string name="selinux_title">Selinux Mód</string>
+    <string name="selinux_permissive_title">Megengedő</string>
+    <string name="selinux_enforcing_title">Kényszerítő</string>
+
+    <!-- Floating Windows -->
+    <string name="slim_action_floats">Slim Műveletek és Pie</string>
+    <string name="slim_action_floats_summary">Indítsd a Slim and Pie Műveleteket Lebegő Ablak Módban</string>
+
+    <!-- Hide lock screen carrier -->
+    <string name="lock_screen_hide_carrier_title">Szolgáltatói felirat rejése a zátképernyőn</string>
+    <string name="lock_screen_hide_carrier_summary">RendszerUI újraindul a kapcsolásra.</string>
+
+    <!-- Status bar temperature -->
+    <string name="status_bar_temperature_title">Hőmérséklet stílus</string>
+    <string name="status_bar_temperature_hidden">Rejtett</string>
+    <string name="status_bar_temperature_show_scale">Skála mutatása</string>
+    <string name="status_bar_temperature_hide_scale">Skála rejtése</string>
+    <string name="status_bar_temperature_location_title">Elhelyezés</string>
+    <string name="status_bar_temperature_location_summary">Válassza ki, hol legyen az időjárás hőmérséklet az állapot sávon</string>
+    <string name="status_bar_temperature_location_right">Jobb oldalon mutatja</string>
+    <string name="status_bar_temperature_location_left">Bal oldalon mutatja</string>
+    <string name="status_bar_weather_color_title">Hőmérséklet szín</string>
+    <string name="status_bar_weather_size_title">Betű méret</string>
+    <string name="status_bar_weather_font_style_title">Betű</string>
+    <string name="status_bar_weather_font_normal">Normál</string>
+    <string name="status_bar_weather_font_italic">Dőlt</string>
+    <string name="status_bar_weather_font_bold">Kövér</string>
+    <string name="status_bar_weather_font_bold_italic">Kövér dőlt</string>
+    <string name="status_bar_weather_font_thin">Vékony</string>
+    <string name="status_bar_weather_font_thin_italic">Vékony dőlt</string>
+    <string name="status_bar_weather_font_condensed">Keskeny</string>
+    <string name="status_bar_weather_font_condensed_italic">Keskeny dőlt</string>
+    <string name="status_bar_weather_font_condensed_bold">Keskeny kövér</string>
+    <string name="status_bar_weather_font_condensed_bold_italic">Keskeny kövér dőlt</string>
+    <string name="status_bar_weather_font_medium">Közepes</string>
+    <string name="status_bar_weather_font_medium_italic">Közepes dőlt</string>
+    <string name="status_bar_weather_font_light">Könnyű</string>
+    <string name="status_bar_weather_font_light_italic">Könnyűdőlt</string>
+
+    <!-- SlimDim -->
+    <string name="dim_nav_buttons_category">SlimDim</string>
+    <string name="dim_nav_buttons_title">Dim buttons after inactivity</string>
+    <string name="dim_nav_buttons_summary">Dim navigation bar buttons after not interacting with navigation bar for a specified time</string>
+    <string name="dim_nav_buttons_timeout_title">Timeout before dimming</string>
+    <string name="dim_nav_buttons_timeout_summary">Time (in milliseconds) to wait before dimming buttons</string>
+    <string name="dim_nav_buttons_alpha_title">Dim alpha</string>
+    <string name="dim_nav_buttons_alpha_summary">Alpha value to dim buttons to</string>
+    <string name="dim_nav_buttons_animate_title">Dim animation</string>
+    <string name="dim_nav_buttons_animate_summary">Animate the alpha fade</string>
+    <string name="dim_nav_buttons_animate_duration_title">Animation duration</string>
+    <string name="dim_nav_buttons_animate_duration_summary">Duration (in milliseconds) of the alpha animation</string>
+    <string name="dim_nav_buttons_touch_anywhere_title">Listen for touches on entire screen</string>
+    <string name="dim_nav_buttons_touch_anywhere_summary_on">Touching anywhere on the screen will cause buttons to un-dim</string>
+    <string name="dim_nav_buttons_touch_anywhere_summary_off">Only touches on the navbar will cause buttons to un-dim</string>
+
+    <!-- Headphones icon switch -->
+    <string name="show_headset_icon_title">Fejhallgató ikon</string>
+    <string name="show_headset_icon_summary">Mutatja az ikont, ha a fejhallgató csatlakoztatva van.</string>
+    
+    <!-- Volume icon switch -->
+    <string name="show_volume_icon_title">Hangerő Mód Ikon</string>
+    <string name="show_volume_icon_summary">Mutatja a hangerő ikont, alapértelmezetként engedélyezve</string>
+
+    <!-- Lockscreen wallpaper -->
+    <string name="lockscreen_wallpaper_title">Háttérkép</string>
+    <string name="lockscreen_wallpaper_summary">Zárképernyő háttérkép beállítás</string>
+
+    <!-- QS Tiles Columns -->
+    <string name="qs_num_columns_title">Csempék száma soronként</string>
+    <string name="qs_num_columns_showing">%1$s csempe megjelenítése soronként</string>
+
+    <!-- Doze notification color invert -->
+    <string name="doze_notification_color_invert_title">Szín inverzió</string>
+    <string name="doze_notification_color_invert_summary_off">Környezeti kijelző értesítés nem lesz fordított. Sötét témák használják.</string>
+    <string name="doze_notification_color_invert_summary_on">Környezeti kijelző értesítés fordított lesz. Használja a világos/alap téma.</string>
+
+    <!-- Three-fingers-swipe to screenshot -->
+    <string name="three_finger_gesture">Három újjas gesztus</string>
+    <string name="three_finger_gesture_summary">Húzd három újjal a képernyőképhez</string>
+
+    <!-- Scrolling Cache -->
+    <string name="pref_scrollingcache_title">Gördülő gyorsítótár</string>
+    <string name="pref_scrollingcache_summary">Görgetési gyorsítótár javíthatja a görgetési teljesítményt némi memória árán</string>
+    <string name="pref_scrollingcache_force_enable">Kényszerítve engedélyez</string>
+    <string name="pref_scrollingcache_default_enable">Alapértelmezetten engedélyezve</string>
+    <string name="pref_scrollingcache_default_disable">Alapértelmezetten tiltva</string>
+    <string name="pref_scrollingcache_force_disable">Kényszerítve tiltva</string>
+
+    <string name="shake_clear_recents">Rázásra törlés</string>
+    <string name="shake_clear_recents_summary">Rázásra törli a legutóbbi alkalmazásokat</string>
+
+    <!-- Lock screen rotation -->
+    <string name="display_lockscreen_rotation_title">Zárképernyő</string> 
+
+    <!--Time Contexual Header -->
+    <string name="notification_title">Értesítési panel</string>
+    <string name="status_bar_custom_header_title">Egyéni fejléc kép</string>
+    <string name="status_bar_custom_header_summary">Engedélyezi az értesítési panel fejléc képet</string>
+    
+    <!-- Aicp Settings Tabs -->
+    <string name="aicp_settings_tab1">Stuff</string>
+    <string name="aicp_settings_tab2">Felület</string>
+    <string name="aicp_settings_tab3">Állapot sáv</string>
+    <string name="aicp_settings_tab4">Rendszer</string>
+
+    <!-- Chamber of Secrets -->
+    <string name="chamber_title">Titkok kamrája</string>
+    <string name="chamber_toast">A titkok kamrája nyitva</string>
+
+    <!-- Device policy override -->
+    <string name="device_policy_override_title">Eszköz házirend felülbírálása</string>
+    <string name="device_policy_override_summary">Lehetővé teszi alkalmazásoknak kényszeríteni a biztonsági zár képernyőt és felülírni a profil beállításokat</string>
+   
 </resources>
