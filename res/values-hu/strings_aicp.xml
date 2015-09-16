@@ -1397,5 +1397,17 @@
     <!-- Device policy override -->
     <string name="device_policy_override_title">Eszköz házirend felülbírálása</string>
     <string name="device_policy_override_summary">Lehetővé teszi alkalmazásoknak kényszeríteni a biztonsági zár képernyőt és felülírni a profil beállításokat</string>
+
+    <!-- Lockscreen Colors -->
+    <string name="lockscreen_colors">Zárképernyő színek</string>
+    <string name="lockscreen_bottom_icons_color">Alsó hivatkozások</string>
+    <string name="lockscreen_owner_info_color">Tulajdonos szöveg</string>
+    <string name="lockscreen_alarm_color">Riasztási szöveg</string>
+    <string name="lockscreen_indication_text_color">Jelző szöveg</string>
+    <string name="lockscreen_clock_color">Óra</string>
+    <string name="lockscreen_clock_date_color">Dátum</string>
+    <string name="lockscreen_colors_reset_title">Zárképernyő színek alaphelyzetbe</string>
+    <string name="lockscreen_colors_reset_message">Biztos vissza akarod állítani a színeket alaphelyzetbe?</string>
+    <string name="yes">IGEN</string>
    
 </resources>
