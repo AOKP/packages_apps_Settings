@@ -153,8 +153,10 @@
   <string name="power_menu_title">Меню при долгом нажатии</string>
   <string name="power_menu_reboot_title">Перезагрузка</string>
   <string name="power_menu_screenshot_title">Скриншот</string>
+  <string name="power_menu_screenrecord_title">Запись экрана</string>
   <string name="power_menu_profiles_title">Выбор профиля</string>
   <string name="power_menu_airplane_title">Режим полета</string>
+  <string name="power_menu_torch_title">Фонарик</string>
   <string name="power_menu_users_title">Пользователи</string>
   <string name="power_menu_settings_title">Ярлык настроек</string>
   <string name="power_menu_lockdown_title">Блокировка устройства</string>
@@ -162,6 +164,7 @@
   <string name="power_menu_sound_title">Звуковая панель</string>
   <string name="power_menu_bug_report_disabled">Отчет об ошибке отключен в настройках для разработчика</string>
   <string name="power_menu_profiles_disabled">Профили системы отключены</string>
+  <string name="powermenu_screenshot_delay_title">Задержка скриншота</string>
   <string name="adaptive_backlight_title">Адаптивная подсветка</string>
   <string name="adaptive_backlight_summary">Интеллектуальное изменение яркости подсветки экрана для сохранения заряда аккумулятора</string>
   <string name="sunlight_enhancement_title">Режим «На улице»</string>
@@ -237,6 +240,10 @@
   <string name="phone_service_state">Голосовая связь: <xliff:g id="voice_state">%1$s</xliff:g>\nПередача данных: <xliff:g id="data_state">%2$s</xliff:g></string>
   <string name="double_tap_to_wake_title">Включение при двойном нажатии</string>
   <string name="double_tap_to_wake_summary">Дважды коснитесь экрана, чтобы вывести устройство из спящего режима</string>
+  <string name="sweep_to_wake_title">Жест для пробуждения</string>
+  <string name="sweep_to_wake_summary">Проведите по экрану, чтобы включить дисплей</string>
+  <string name="sweep_to_sleep_title">Жест для сна</string>
+  <string name="sweep_to_sleep_summary">Проведите справа налево в нижней части экрана, чтобы выключить дисплей</string>
   <string name="proximity_wake_title">Предотвращать случайное включение</string>
   <string name="proximity_wake_summary">Проверять датчик приближения при выходе из режима сна</string>
   <string name="privacy_settings_cyanogenmod_title">Конфиденциальность</string>
@@ -250,6 +257,7 @@
   <string name="privacy_guard_reset_text">Сбросить разрешения?</string>
   <string name="privacy_guard_help_text">В этом разделе вы можете выбрать приложения, которые будут работать в защищенном режиме, нажав на них. Такие приложения не будут иметь доступа к персональным данным, таким как контакты, сообщения или журнал вызовов. Долгое нажатие откроет подробные сведения о разрешениях данного приложения.\n\nПо умолчанию системные приложения скрыты. Для их отображения или для перехода к расширенным настройкам выберите соответствующий пункт в меню.</string>
   <string name="privacy_guard_manager_show_system_apps">Системные приложения</string>
+  <string name="privacy_guard_advanced_settings_title">Дополнительно</string>
   <string name="app_ops_btn_text">Изменить</string>
   <string name="increasing_ring_volume_option_title">Возрастающая громкость звонка</string>
   <string name="increasing_ring_min_volume_title">Начальная громкость</string>
@@ -334,7 +342,8 @@
   <string name="battery_light_list_title">Цвета</string>
   <string name="battery_light_low_color_title">Батарея разряжена</string>
   <string name="battery_light_medium_color_title">Заряжается</string>
-  <string name="battery_light_full_color_title">Полностью заряжена</string>
+  <string name="battery_light_full_color_title">Заряжено (90%)</string>
+  <string name="battery_light_really_full_color_title">Полностью заряжена</string>
   <string name="notification_light_title">Индикатор событий</string>
   <string name="notification_light_general_title">Общие</string>
   <string name="notification_light_applist_title">Приложения</string>
@@ -344,7 +353,8 @@
   <string name="notification_light_missed_call_title">Пропущенный вызов</string>
   <string name="notification_light_voicemail_title">Голосовая почта</string>
   <string name="notification_light_screen_on">Использ. индикатор при вкл. экране</string>
-  <string name="keywords_lights_brightness_level">светодиоды яркость приглушить уменьшить</string>
+  <string name="notification_light_use_multiple_leds">Несколько светодиодов</string>
+  <string name="keywords_lights_brightness_level">уменьшить яркость светодиодов</string>
   <string name="notification_ringtone_title_cm">Звук уведомления</string>
   <string name="headset_connect_player_title">Автозапуск плеера</string>
   <string name="headset_connect_player_summary">Запускать плеер при подключении наушников</string>
@@ -692,6 +702,7 @@
   <string name="unlock_scramble_pin_layout_summary">Переставлять кнопки ввода PIN-кода в случайном порядке</string>
   <string name="link_volume_option_title">Связать громкость рингтона и уведомлений</string>
   <string name="notification_volume_option_title">Громкость уведомлений</string>
+  <string name="ring_notification_volume_option_tile">Громкость рингтона и уведомлений</string>
   <string name="notification_drawer_title">Панель уведомлений</string>
   <string name="quick_pulldown_title">Быстрый доступ</string>
   <string name="quick_pulldown_summary">%1$s край строки состояния вытягивает быстрые настройки</string>
@@ -703,7 +714,9 @@
   <string name="status_bar_show_weather_title">Сведения о погоде</string>
   <string name="status_bar_show_weather_summary">Показывать погоду над панелью быстрых настроек</string>
   <string name="qs_category_title">Панель быстрых настроек</string>
-  <string name="qs_brightness_slider_title">Показывать регулятор яркости</string>
+  <string name="qs_brightness_slider_title">Регулятор яркости</string>
+  <string name="qs_brightness_slider_enabled">Включен</string>
+  <string name="qs_brightness_slider_disabled">Отключен</string>
   <string name="qs_hide_tiles_with_sensitive_data">Скрывать плитки для обеспеч. конфиденциальности при блокировке</string>
   <string name="qs_order_title">Выбрать и упорядочить плитки</string>
   <string name="add_qs">Добавление плитки</string>
@@ -723,6 +736,7 @@
   <string name="qs_tile_adb_over_network">Отладка по сети</string>
   <string name="qs_tile_profiles">Профили системы</string>
   <string name="qs_tile_performance">Энергопотребление</string>
+  <string name="qs_music_play_tile">Играть</string>
   <string name="qs_tile_nfc">NFC</string>
   <string name="qs_tile_compass">Компас</string>
   <string name="qs_tile_lockscreen">Экран блокировки</string>
@@ -730,17 +744,23 @@
   <string name="qs_tile_volume_panel">Панель громкости</string>
   <string name="qs_tile_screen_timeout">Спящий режим</string>
   <string name="qs_tile_usb_tether">USB-модем</string>
+  <string name="qs_tile_reboot">Перезагрузка</string>
   <string name="qs_tile_heads_up">Всплывающие уведомления</string>
   <string name="qs_tile_ambient_display">Индикация событий</string>
+  <string name="qs_tile_kernel_adiutor">Настройки ядра</string>
+  <string name="qs_tile_navbar">Панель навигации</string>
   <string name="qs_tile_sync">Синхронизация</string>
   <string name="qs_dynamic_tile_next_alarm">Следующий будильник</string>
   <string name="qs_dynamic_tile_ime_selector">Выбор метода ввода</string>
   <string name="qs_dynamic_tile_su">Суперпользователь</string>
   <string name="qs_main_tiles_title">Увеличить первый ряд</string>
-  <string name="qs_main_tiles_summary_on">Две главные плитки на первом ряду</string>
-  <string name="qs_main_tiles_summary_off">Три плитки на каждом ряду</string>
+  <string name="qs_main_tiles_summary_on">Две главные плитки в первом ряду</string>
+  <string name="qs_main_tiles_summary_off">Одинаковое количество плиток в каждом ряду</string>
+  <string name="qs_wifi_detail_title">Детальный просмотр Wi\u2011Fi</string>
+  <string name="qs_wifi_detail_summary">Включить детальный просмотр Wi\u2011Fi в панели быстрых настроек</string>
   <string name="qs_advanced_location_title">Расширенные настройки местоположения</string>
   <string name="qs_advanced_location_summary">Включить расширенные настройки для местоположения в быстрых настройках</string>
+  <string name="qs_pulldown_title">Доступ к панели</string>
   <string name="sim_no_number_set">Номер не присвоен</string>
   <string name="gesture_settings_title">Жесты</string>
   <string name="themes_settings_title">Темы</string>
@@ -950,6 +970,7 @@
   <string name="fingerprint_enrollment_error_title_3">Хмм, что-то пошло не так</string>
   <string name="fingerprint_enrollment_error_title_4">О нет, попробуйте ещё раз</string>
   <string name="fingerprint_enrollment_error_title_5">Ой-ой-ой! Произошла ошибка</string>
+  <string name="security_settings_and_fingerprint">Безопасность и отпечатки пальцев</string>
   <string name="lockscreen_settings_and_fingerprint">Блокировка экрана и отпечатки пальцев</string>
   <string name="menu_stats_reset">Сброс статистики</string>
   <string name="reset_stats_msg">История использования батареи будет удалена</string>
