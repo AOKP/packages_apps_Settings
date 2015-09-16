@@ -78,6 +78,8 @@ import com.android.settings.accounts.AccountSyncSettings;
 import com.android.settings.aicp.AicpSettings;
 import com.android.settings.aicp.AmbientSettings;
 import com.android.settings.aicp.HeadsUpSettings;
+import com.android.settings.aicp.PieControl;
+import com.android.settings.aicp.VariousShit;
 import com.android.settings.applications.ExpandedDesktopPreferenceFragment;
 import com.android.settings.applications.InstalledAppDetails;
 import com.android.settings.applications.ManageApplications;
@@ -131,7 +133,6 @@ import com.android.settings.wifi.SavedAccessPointsWifiSettings;
 import com.android.settings.wifi.WifiSettings;
 import com.android.settings.wifi.p2p.WifiP2pSettings;
 import com.android.settings.cyanogenmod.qs.QSTiles;
-import com.android.settings.aicp.PieControl;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -340,7 +341,8 @@ public class SettingsActivity extends Activity
             AmbientSettings.class.getName(),
             PieControl.class.getName(),
             LiveDisplay.class.getName(),
-            HeadsUpSettings.class.getName()
+            HeadsUpSettings.class.getName(),
+            VariousShit.class.getName()
     };
 
 
