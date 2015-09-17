@@ -70,7 +70,6 @@
     <string name="reset">Reset</string>
     <string name="help">Help</string>
     <string name="add">Add</string>
-    <string name="help">Help</string>
     <string name="attention">Attention</string>
     <string name="enabled">Enabled</string>
     <string name="disabled">Disabled</string>
@@ -79,7 +78,7 @@
     <string name="misc_category">Miscellaneous</string>
     <string name="lockscreen_category">Lock screen</string>
 
-     <!-- Advanced, Device specific (DeviceParts) settings  -->
+    <!-- Advanced, Device specific (DeviceParts) settings  -->
     <string name="device_settings_title">Device</string>
 
     <!-- Display : Rotation -->
@@ -376,7 +375,6 @@
     <string name="shortcut_action_help_delete_last_entry">Removing every %1$s in the list will disable the feature entirely.</string>
     <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Removing every %1$s in the list will disable the second pie layer entirely.</string>
 
-
     <string name="shortcuts_applications">Applications</string>
     <string name="shortcuts_select_custom_app_title">Select custom application</string>
     <string name="shortcuts_icon_picker_type">Select icon type:</string>
@@ -453,6 +451,15 @@
     <string name="show_unac_and_overcounted_stats_title">Show unaccounted/overcounted stats</string>
     <string name="show_unac_and_overcounted_stats_summary">Show in battery statistics unaccounted and over-counted usage.</string>
 
+    <!-- Trigger -->
+    <string name="trigger_category">Trigger region</string>
+    <string name="trigger_width_title">Trigger width</string>
+    <string name="trigger_width_summary">Adjust the width of the trigger area</string>
+    <string name="trigger_top_title">Trigger position</string>
+    <string name="trigger_top_summary">Adjust the vertical postion of the trigger area</string>
+    <string name="trigger_bottom_title">Trigger height</string>
+    <string name="trigger_bottom_summary">Adjust the height of the trigger area</string>
+
     <!-- Gesture Anywhere -->
     <string name="gesture_anywhere_title">Gesture Anywhere</string>
     <string name="gesture_anywhere_enabled_title">Gesture Anywhere</string>
@@ -500,13 +507,6 @@
     <string name="ga_gestures_rename_label">Gesture name</string>
     <!-- Message, displayed when the sdcard cannot be found, 1st parameter is the name of the file that stores the gestures.  CHAR LIMIT=80 -->
     <string name="ga_gestures_error_loading">Could not load %s. Make sure you have storage available.</string>
-    <string name="trigger_category">Trigger region</string>
-    <string name="trigger_width_title">Trigger width</string>
-    <string name="trigger_width_summary">Adjust the width of the trigger area</string>
-    <string name="trigger_top_title">Trigger position</string>
-    <string name="trigger_top_summary">Adjust the vertical postion of the trigger area</string>
-    <string name="trigger_bottom_title">Trigger height</string>
-    <string name="trigger_bottom_summary">Adjust the height of the trigger area</string>
     <string name="picker_activities">Activities</string>
     <string name="select_custom_app_title">Select custom app</string>
     <string name="select_custom_activity_title">Select custom activity</string>
@@ -578,7 +578,7 @@
     <string name="lockgesture_settings_enable_title">Require gesture</string>
     <!-- Security & location settings screen, setting summary for the checkbox "Require pattern" -->
     <string name="lockgesture_settings_enable_summary">Must draw gesture to unlock screen</string>
-   <!-- Security & location settings screen, setting check box title. This setting controls whether a visible gesture is drawn as the user moves his finger around while drawing the unlock pattern.  If checked, this line is drawn.  If unchecked, there is nothing drawn so the user does not reveal his pattern while he unlocks the phone.-->
+    <!-- Security & location settings screen, setting check box title. This setting controls whether a visible gesture is drawn as the user moves his finger around while drawing the unlock pattern.  If checked, this line is drawn.  If unchecked, there is nothing drawn so the user does not reveal his pattern while he unlocks the phone.-->
     <string name="lockgesture_settings_enable_visible_pattern_title">Make gesture visible</string>
     <!-- Security & location settings screen, setting check box title. This controls whether the device locks immediately when the power button is pressed. [CHAR LIMIT=28]-->
     <string name="lockgesture_settings_enable_power_button_instantly_locks">Power button instantly locks</string>
@@ -613,12 +613,6 @@
     <string name="app_circle_bar_summary">Show circle app launcher after touching right side of screen</string>
     <string name="app_circle_bar_included_apps_title">Included apps</string>
     <string name="app_circle_bar_included_apps_summary">Apps will show in app circle bar</string>
-    <string name="trigger_width_title">Trigger width</string>
-    <string name="trigger_width_summary">Adjust the width of the trigger area</string>
-    <string name="trigger_top_title">Trigger position</string>
-    <string name="trigger_top_summary">Adjust the vertical postion of the trigger area</string>
-    <string name="trigger_bottom_title">Trigger height</string>
-    <string name="trigger_bottom_summary">Adjust the height of the trigger area</string>
 
     <!-- Toast Animation -->
     <string name="toast_animation_title">Toast animation</string>
@@ -1170,7 +1164,6 @@
     <string name="pie_button_second_layer_summary">Change second layer buttons</string>
     <string name="pie_button_style_summary">Change pie button style</string>
     <string name="pie_style_reset_message">Reset style entries to default?</string>
-    <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Removing every %1$s in the list will disable the second pie layer entirely.</string>
     <string name="icon_color_mode_all_icons">All icons</string>
     <string name="icon_color_mode_system_icons">System icons</string>
     <string name="icon_color_mode_system_custom_icons">System and custom icons</string>
@@ -1252,7 +1245,7 @@
     <!-- Restart SystemUI -->
     <string name="restart_systemui">Restart SystemUI</string>
 
-   <!-- Breathing Notifications -->
+    <!-- Breathing Notifications -->
     <string name="breathing_notifications_title">Breathing notifications</string>
     <string name="sms_breath_title">Breathing SMS</string>
     <string name="sms_breath_summary">Will give your sms notifications a breathing effect in the statusbar</string>
@@ -1283,13 +1276,6 @@
     <string name="tab_position_summary">Display the tab on the top, middle, or bottom on the side of the screen.</string>
     <string name="tab_size_title">Tab size</string>
     <string name="tab_size_summary">Change the size of the visible tab.</string>
-    <string name="trigger_category">Trigger region</string>
-    <string name="trigger_width_title">Trigger width</string>
-    <string name="trigger_width_summary">Adjust the width of the trigger area</string>
-    <string name="trigger_top_title">Trigger position</string>
-    <string name="trigger_top_summary">Adjust the vertical postion of the trigger area</string>
-    <string name="trigger_bottom_title">Trigger height</string>
-    <string name="trigger_bottom_summary">Adjust the height of the trigger area</string>
 
     <!-- Selinux Switch -->
     <string name="selinux_switch_title">Selinux Switch options</string>
@@ -1388,7 +1374,7 @@
     <string name="notification_title">Notification panel</string>
     <string name="status_bar_custom_header_title">Custom header image</string>
     <string name="status_bar_custom_header_summary">Enable notification panel header image</string>
-    
+
     <!-- Aicp Settings Tabs -->
     <string name="aicp_settings_tab1">UI</string>
     <string name="aicp_settings_tab2">Built-in</string>
