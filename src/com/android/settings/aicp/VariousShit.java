@@ -118,8 +118,6 @@ public class VariousShit extends SettingsPreferenceFragment
     private static final String DISABLE_TORCH_ON_SCREEN_OFF = "disable_torch_on_screen_off";
     private static final String DISABLE_TORCH_ON_SCREEN_OFF_DELAY = "disable_torch_on_screen_off_delay";
 
-    private static final String SELINUX = "selinux";
-
     private static final String CARRIERLABEL_ON_LOCKSCREEN="lock_screen_hide_carrier";
 
     // Package name of the yoga
@@ -147,7 +145,6 @@ public class VariousShit extends SettingsPreferenceFragment
     private ListPreference mTorchOffDelay;
     private PreferenceCategory mTorchCategory;
     private Preference mLockClock;
-    private SwitchPreference mSelinux;
     private SwitchPreference mCarrierLabelOnLockScreen;
 
     private Preference mHiddenShit;
@@ -219,18 +216,6 @@ public class VariousShit extends SettingsPreferenceFragment
 
         if (!QSUtils.deviceSupportsFlashLight(activity)) {
             prefSet.removePreference(mTorchCategory);
-        }
-
-        //SELinux
-        mSelinux = (SwitchPreference) findPreference(SELINUX);
-        mSelinux.setOnPreferenceChangeListener(this);
-
-        if (CMDProcessor.runShellCommand("getenforce").getStdout().contains("Enforcing")) {
-            mSelinux.setChecked(true);
-            mSelinux.setSummary(R.string.selinux_enforcing_title);
-        } else {
-            mSelinux.setChecked(false);
-            mSelinux.setSummary(R.string.selinux_permissive_title);
         }
 
         //CarrierLabel on LockScreen
@@ -312,15 +297,6 @@ public class VariousShit extends SettingsPreferenceFragment
             Settings.System.putIntForUser(getActivity().getContentResolver(),
                     Settings.System.DISABLE_TORCH_ON_SCREEN_OFF_DELAY, torchOffDelay, UserHandle.USER_CURRENT);
             mTorchOffDelay.setSummary(mTorchOffDelay.getEntries()[index]);
-            return true;
-        } else if (preference == mSelinux) {
-            if (objValue.toString().equals("true")) {
-                CMDProcessor.runSuCommand("setenforce 1");
-                mSelinux.setSummary(R.string.selinux_enforcing_title);
-            } else if (objValue.toString().equals("false")) {
-                CMDProcessor.runSuCommand("setenforce 0");
-                mSelinux.setSummary(R.string.selinux_permissive_title);
-            }
             return true;
         } else if (preference == mCarrierLabelOnLockScreen) {
             Settings.System.putInt(getActivity().getContentResolver(),
