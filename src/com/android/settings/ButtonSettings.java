@@ -102,7 +102,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private static final String CATEGORY_VOLUME = "volume_keys";
     private static final String CATEGORY_BACKLIGHT = "key_backlight";
     private static final String CATEGORY_NAVBAR = "navigation_bar";
-    private static final String CATEGORY_DIMNAVBARBUTTONS = "dim_nav_buttons_cat";
 
     // Available custom actions to perform on a key press.
     // Must match values for KEY_HOME_LONG_PRESS_ACTION in:
@@ -148,7 +147,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private SwitchPreference mVolumeAnswerCall;
 
     private PreferenceCategory mNavigationPreferencesCat;
-    private PreferenceCategory mDimNavButtonsPreferencesCat;
 
     private SwitchPreference mDimNavButtons;
     private SwitchPreference mDimNavButtonsTouchAnywhere;
@@ -207,10 +205,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         // Navigation bar recents long press activity needs custom setup
         mNavigationRecentsLongPressAction =
                 initRecentsLongPressAction(KEY_NAVIGATION_RECENTS_LONG_PRESS);
-
-
-        // Navigation bar buttons dimming related options
-        mDimNavButtonsPreferencesCat = (PreferenceCategory) findPreference(CATEGORY_DIMNAVBARBUTTONS);
 
         mDimNavButtons = (SwitchPreference) findPreference(DIM_NAV_BUTTONS);
         mDimNavButtons.setOnPreferenceChangeListener(this);
@@ -284,11 +278,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         if (mNavigationPreferencesCat.getPreferenceCount() == 0) {
             // Hide navigation bar category
             prefScreen.removePreference(mNavigationPreferencesCat);
-        }
-
-        if (mDimNavButtonsPreferencesCat.getPreferenceCount() == 0) {
-            // Hide navigation bar dim category
-            prefScreen.removePreference(mDimNavButtonsPreferencesCat);
         }
 
         Utils.updatePreferenceToSpecificActivityFromMetaDataOrRemove(getActivity(),
