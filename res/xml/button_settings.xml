@@ -100,47 +100,47 @@
             android:title="@string/navigation_ring_title"
             android:dependency="search_panel_enabled" />
 
-    </PreferenceCategory>
-
-    <PreferenceCategory
-            android:key="dim_nav_buttons_cat"
-            android:title="@string/dim_nav_buttons_category" >
-
         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
             android:key="dim_nav_buttons"
             android:title="@string/dim_nav_buttons_title"
-            android:summary="@string/dim_nav_buttons_summary" />
+            android:summary="@string/dim_nav_buttons_summary"
+            android:dependency="enable_nav_bar" />
 
         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
             android:key="dim_nav_buttons_touch_anywhere"
             android:dependency="dim_nav_buttons"
             android:title="@string/dim_nav_buttons_touch_anywhere_title"
             android:summaryOn="@string/dim_nav_buttons_touch_anywhere_summary_on"
-            android:summaryOff="@string/dim_nav_buttons_touch_anywhere_summary_off" />
+            android:summaryOff="@string/dim_nav_buttons_touch_anywhere_summary_off"
+            android:dependency="dim_nav_buttons" />
 
         <SlimSeekBarPreference
             android:key="dim_nav_buttons_timeout"
             android:dependency="dim_nav_buttons"
             android:title="@string/dim_nav_buttons_timeout_title"
-            android:summary="@string/dim_nav_buttons_timeout_summary" />
+            android:summary="@string/dim_nav_buttons_timeout_summary"
+            android:dependency="dim_nav_buttons" />
 
         <SlimSeekBarPreference
             android:key="dim_nav_buttons_alpha"
             android:dependency="dim_nav_buttons"
             android:title="@string/dim_nav_buttons_alpha_title"
-            android:summary="@string/dim_nav_buttons_alpha_summary" />
+            android:summary="@string/dim_nav_buttons_alpha_summary"
+            android:dependency="dim_nav_buttons" />
 
         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
             android:key="dim_nav_buttons_animate"
             android:dependency="dim_nav_buttons"
             android:title="@string/dim_nav_buttons_animate_title"
-            android:summary="@string/dim_nav_buttons_animate_summary" />
+            android:summary="@string/dim_nav_buttons_animate_summary"
+            android:dependency="dim_nav_buttons" />
 
         <SlimSeekBarPreference
             android:key="dim_nav_buttons_animate_duration"
             android:dependency="dim_nav_buttons_animate"
             android:title="@string/dim_nav_buttons_animate_duration_title"
-            android:summary="@string/dim_nav_buttons_animate_duration_summary" />
+            android:summary="@string/dim_nav_buttons_animate_duration_summary"
+            android:dependency="dim_nav_buttons" />
 
     </PreferenceCategory>
 
