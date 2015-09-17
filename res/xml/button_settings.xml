@@ -17,12 +17,6 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <SwitchPreference
-        android:key="disable_nav_keys"
-        android:title="@string/disable_navkeys_title"
-        android:summary="@string/disable_navkeys_summary"
-        android:defaultValue="false" />
-
     <com.android.settings.cyanogenmod.ButtonBacklightBrightness
         android:key="button_backlight"
         android:title="@string/button_backlight_title"
@@ -42,38 +36,69 @@
         android:key="navigation_bar"
         android:title="@string/navigation_bar_category" >
 
+        <SwitchPreference
+            android:key="enable_nav_bar"
+            android:title="@string/navbar_enable_bar_title"
+            android:summary="@string/navbar_enable_bar_summary"
+            android:defaultValue="false" />
+
         <PreferenceScreen
             android:key="navigation_bar"
             android:fragment="com.android.settings.cyanogenmod.NavBar"
-            android:title="@string/navigation_bar_title" />
+            android:title="@string/navigation_bar_title"
+            android:dependency="enable_nav_bar" />
 
         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
             android:key="navigation_bar_left"
             android:title="@string/navigation_bar_left_title"
             android:summary="@string/navigation_bar_left_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false"
+            android:dependency="enable_nav_bar" />
 
         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
             android:key="double_tap_sleep_navbar"
             android:title="@string/double_tap_sleep_nav_bar_title"
             android:summary="@string/double_tap_sleep_nav_bar_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false"
+            android:dependency="enable_nav_bar" />
 
         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
             android:key="navigation_bar_menu_arrow_keys"
             android:title="@string/navigation_bar_arrow_keys_title"
             android:summary="@string/navigation_bar_arrow_keys_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false"
+            android:dependency="enable_nav_bar" />
+
+        <ListPreference
+            android:key="navigation_recents_long_press"
+            android:dialogTitle="@string/navigation_bar_recents_title"
+            android:title="@string/navigation_bar_recents_title"
+            android:persistent="false"
+            android:dependency="enable_nav_bar" />
 
         <PreferenceScreen
             android:key="navbar_dimensions"
             android:fragment="com.android.settings.aicp.NavBarDimensions"
-            android:title="@string/navbar_style_dimen_title" />
+            android:title="@string/navbar_style_dimen_title"
+            android:dependency="enable_nav_bar" />
 
         <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="navigation_bar_tint"
             android:title="@string/navbar_button_tint_title"
-            android:defaultValue="#ffffff" />
+            android:defaultValue="#ffffff"
+            android:dependency="enable_nav_bar" />
+
+        <com.android.settings.cyanogenmod.SecureSettingSwitchPreference
+            android:key="search_panel_enabled"
+            android:title="@string/navigation_ring_enable_title"
+            android:defaultValue="true"
+            android:dependency="enable_nav_bar" />
+
+        <PreferenceScreen
+            android:key="navigation_bar_ring"
+            android:fragment="com.android.settings.cyanogenmod.NavRing"
+            android:title="@string/navigation_ring_title"
+            android:dependency="search_panel_enabled" />
 
     </PreferenceCategory>
 
@@ -116,29 +141,6 @@
             android:dependency="dim_nav_buttons_animate"
             android:title="@string/dim_nav_buttons_animate_duration_title"
             android:summary="@string/dim_nav_buttons_animate_duration_summary" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="navigation_ring"
-        android:title="@string/navigation_ring_category" >
-
-        <com.android.settings.cyanogenmod.SecureSettingSwitchPreference
-            android:key="search_panel_enabled"
-            android:title="@string/navigation_ring_enable_title"
-            android:defaultValue="true" />
-
-        <PreferenceScreen
-            android:key="navigation_bar_ring"
-            android:fragment="com.android.settings.cyanogenmod.NavRing"
-            android:title="@string/navigation_ring_title"
-            android:dependency="search_panel_enabled" />
-
-        <ListPreference
-            android:key="navigation_recents_long_press"
-            android:dialogTitle="@string/navigation_bar_recents_title"
-            android:title="@string/navigation_bar_recents_title"
-            android:persistent="false" />
 
     </PreferenceCategory>
 
