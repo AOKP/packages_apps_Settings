@@ -118,8 +118,6 @@ public class VariousShit extends SettingsPreferenceFragment
     private static final String DISABLE_TORCH_ON_SCREEN_OFF = "disable_torch_on_screen_off";
     private static final String DISABLE_TORCH_ON_SCREEN_OFF_DELAY = "disable_torch_on_screen_off_delay";
 
-    private static final String CARRIERLABEL_ON_LOCKSCREEN="lock_screen_hide_carrier";
-
     // Package name of the yoga
     public static final String YOGA_PACKAGE_NAME = "com.android.settings";
     // Intent for launching the yoga actvity
@@ -145,7 +143,6 @@ public class VariousShit extends SettingsPreferenceFragment
     private ListPreference mTorchOffDelay;
     private PreferenceCategory mTorchCategory;
     private Preference mLockClock;
-    private SwitchPreference mCarrierLabelOnLockScreen;
 
     private Preference mHiddenShit;
     private PreferenceScreen mHiddenImg;
@@ -217,20 +214,6 @@ public class VariousShit extends SettingsPreferenceFragment
         if (!QSUtils.deviceSupportsFlashLight(activity)) {
             prefSet.removePreference(mTorchCategory);
         }
-
-        //CarrierLabel on LockScreen
-        mCarrierLabelOnLockScreen = (SwitchPreference) findPreference(CARRIERLABEL_ON_LOCKSCREEN);
-        if (!Utils.isWifiOnly(getActivity())) {
-            mCarrierLabelOnLockScreen.setOnPreferenceChangeListener(this);
-
-            boolean hideCarrierLabelOnLS = Settings.System.getInt(
-                    getActivity().getContentResolver(),
-                    Settings.System.LOCK_SCREEN_HIDE_CARRIER, 0) == 1;
-            mCarrierLabelOnLockScreen.setChecked(hideCarrierLabelOnLS);
-        } else {
-            prefSet.removePreference(mCarrierLabelOnLockScreen);
-        }
-
     }
 
     @Override
@@ -297,12 +280,6 @@ public class VariousShit extends SettingsPreferenceFragment
             Settings.System.putIntForUser(getActivity().getContentResolver(),
                     Settings.System.DISABLE_TORCH_ON_SCREEN_OFF_DELAY, torchOffDelay, UserHandle.USER_CURRENT);
             mTorchOffDelay.setSummary(mTorchOffDelay.getEntries()[index]);
-            return true;
-        } else if (preference == mCarrierLabelOnLockScreen) {
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.LOCK_SCREEN_HIDE_CARRIER,
-                    (Boolean) objValue ? 1 : 0);
-            Helpers.restartSystemUI();
             return true;
         }
         return false;
