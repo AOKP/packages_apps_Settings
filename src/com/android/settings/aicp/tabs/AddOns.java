@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class System extends SettingsPreferenceFragment implements Indexable {
+public class AddOns extends SettingsPreferenceFragment implements Indexable {
 
     private static final String TAG = "AicpLabs";
 
@@ -49,7 +49,7 @@ public class System extends SettingsPreferenceFragment implements Indexable {
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.system);
+        addPreferencesFromResource(R.xml.aicp_extras_addons);
 
         PreferenceScreen prefSet = getPreferenceScreen();
         PackageManager pm = getActivity().getPackageManager();
@@ -89,7 +89,7 @@ public class System extends SettingsPreferenceFragment implements Indexable {
                 new ArrayList<SearchIndexableResource>();
 
             SearchIndexableResource sir = new SearchIndexableResource(context);
-            sir.xmlResId = R.xml.system;
+            sir.xmlResId = R.xml.aicp_extras_addons;
             result.add(sir);
 
             return result;

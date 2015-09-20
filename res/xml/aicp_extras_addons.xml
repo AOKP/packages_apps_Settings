@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- AICP OTA -->
+    <PreferenceScreen
+        android:id="@+id/aicp_ota"
+        android:key="aicp_ota_start"
+        android:title="@string/aicp_ota_settings_title" />
+
+    <!-- Kernel Adiutor -->
+    <PreferenceScreen
+        android:id="@+id/kernel_adiutor"
+        android:key="kernel_adiutor_start"
+        android:title="@string/kernel_adiutor_settings_title" />
+
+</PreferenceScreen>

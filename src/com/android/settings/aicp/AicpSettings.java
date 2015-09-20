@@ -34,11 +34,9 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.aicp.tabs.Stuff;
+import com.android.settings.aicp.tabs.AddOns;
+import com.android.settings.aicp.tabs.BuiltIn;
 import com.android.settings.aicp.tabs.Ui;
-import com.android.settings.aicp.tabs.StatusBar;
-import com.android.settings.aicp.tabs.System;
-
 
 public class AicpSettings extends SettingsPreferenceFragment implements ActionBar.TabListener {
 
@@ -56,7 +54,7 @@ public class AicpSettings extends SettingsPreferenceFragment implements ActionBa
      * The {@link ViewPager} that will host the section contents.
      */
     ViewPager mViewPager;
-   
+
 
     @Override
     public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -76,6 +74,7 @@ public class AicpSettings extends SettingsPreferenceFragment implements ActionBa
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) view.findViewById(R.id.pager);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+        mViewPager.setOffscreenPageLimit(2);
 
         // When swiping between different sections, select the corresponding
         // tab. We can also use ActionBar.Tab#select() to do this if we have
@@ -132,16 +131,13 @@ public class AicpSettings extends SettingsPreferenceFragment implements ActionBa
             Fragment fragment = null;
             switch (position) {
                 case 0:
-                    fragment = new Stuff();
-                    break;
-                case 1:
                     fragment = new Ui();
                     break;
-                case 2:
-                    fragment = new StatusBar();
+                case 1:
+                    fragment = new BuiltIn();
                     break;
-                case 3:
-                    fragment = new System();
+                case 2:
+                    fragment = new AddOns();
                     break;
             }
             return fragment;
@@ -149,8 +145,8 @@ public class AicpSettings extends SettingsPreferenceFragment implements ActionBa
 
         @Override
         public int getCount() {
-            // Show 4 total pages.
-            return 4;
+            // Show 3 total pages.
+            return 3;
         }
 
         @Override
@@ -163,38 +159,8 @@ public class AicpSettings extends SettingsPreferenceFragment implements ActionBa
                     return getString(R.string.aicp_settings_tab2).toUpperCase(l);
                 case 2:
                     return getString(R.string.aicp_settings_tab3).toUpperCase(l);
-                case 3:
-                    return getString(R.string.aicp_settings_tab4).toUpperCase(l);
             }
             return null;
         }
     }
-
-    /**
-     * A placeholder fragment containing a simple view.
-     */
-    public static class PlaceholderFragment extends Fragment {
-        /**
-         * The fragment argument representing the section number for this
-         * fragment.
-         */
-        private static final String ARG_SECTION_NUMBER = "section_number";
-
-        /**
-         * Returns a new instance of this fragment for the given section
-         * number.
-         */
-        public static PlaceholderFragment newInstance(int sectionNumber) {
-            PlaceholderFragment fragment = new PlaceholderFragment();
-            Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            fragment.setArguments(args);
-            return fragment;
-        }
-
-        public PlaceholderFragment() {
-        }
-
-    }
-
 }

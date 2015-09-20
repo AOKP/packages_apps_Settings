@@ -17,7 +17,7 @@ public class Ui extends SettingsPreferenceFragment implements Indexable {
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.ui);
+        addPreferencesFromResource(R.xml.aicp_extras_ui);
     }
 
     public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
@@ -29,7 +29,7 @@ public class Ui extends SettingsPreferenceFragment implements Indexable {
                 new ArrayList<SearchIndexableResource>();
 
             SearchIndexableResource sir = new SearchIndexableResource(context);
-            sir.xmlResId = R.xml.ui;
+            sir.xmlResId = R.xml.aicp_extras_ui;
             result.add(sir);
 
             return result;

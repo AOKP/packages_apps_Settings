@@ -153,7 +153,7 @@
     <string name="ime_switcher_notify_summary">Display input method selector notification</string>
 
     <!-- Various shit -->
-    <string name="various_shit_title">Various Shit</string>
+    <string name="various_shit_title">Various shit</string>
     <string name="battery_percentage_title">Battery percentage</string>
     <string name="battery_percentage_summary">Show percentage in battery icon.</string>
     <string name="proximity_on_wake_title">Proximity on wake</string>
@@ -727,7 +727,7 @@
     <string name="status_bar_show_clock_second_title">Clock seconds</string>
 
     <!-- Recents panel settings -->
-    <string name="recents_panel_settings">Recents Panel Settings</string>
+    <string name="recents_panel_settings">Recents panel</string>
     <string name="recents_panel_title">Recents Panel</string>
     <string name="show_clear_all_recents_button_title">Clear All Recents Button</string>
     <string name="show_clear_all_recents_button_summary">Show clear all button on recents panel</string>
@@ -1380,10 +1380,9 @@
     <string name="status_bar_custom_header_summary">Enable notification panel header image</string>
     
     <!-- Aicp Settings Tabs -->
-    <string name="aicp_settings_tab1">Stuff</string>
-    <string name="aicp_settings_tab2">Ui</string>
-    <string name="aicp_settings_tab3">Status Bar</string>
-    <string name="aicp_settings_tab4">System</string>
+    <string name="aicp_settings_tab1">UI</string>
+    <string name="aicp_settings_tab2">Built-in</string>
+    <string name="aicp_settings_tab3">Add-ons</string>
 
     <!-- Chamber of Secrets -->
     <string name="chamber_title">Chamber of secrets</string>

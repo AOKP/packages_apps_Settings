@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Ad blocker -->
+    <PreferenceScreen
+        android:key="hfm_settings"
+        android:title="@string/hfm_pref_screen_title"
+        android:fragment="com.android.settings.aicp.hfm.HfmSettings" />
+
+    <!-- Circle app bar -->
+    <PreferenceScreen
+        android:key="app_circle_bar"
+        android:fragment="com.android.settings.aicp.AppCircleBar"
+        android:title="@string/app_circle_bar_title"/>
+
+    <!-- App sidebar -->
+    <PreferenceScreen
+        android:key="app_sidebar"
+        android:fragment="com.android.settings.aicp.AppSidebar"
+        android:title="@string/app_sidebar_title"/>
+
+    <!-- Gesture anywhere -->
+    <PreferenceScreen
+        android:key="gesture_anywhere"
+        android:fragment="com.android.settings.aicp.gestureanywhere.GestureAnywhereSettings"
+        android:title="@string/gesture_anywhere_title" />
+
+    <!-- PIE Controls -->
+    <PreferenceScreen
+        android:key="pie_settings"
+        android:fragment="com.android.settings.aicp.PieControl"
+        android:title="@string/pie_control_title" />
+
+    <!-- Wakelock blocker -->
+    <PreferenceScreen
+        android:key="wakelock_blocker"
+        android:fragment="com.android.settings.aicp.WakeLockBlocker"
+        android:title="@string/wakelock_blocker_title" />
+
+</PreferenceScreen>

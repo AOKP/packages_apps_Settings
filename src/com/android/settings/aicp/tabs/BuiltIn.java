@@ -11,13 +11,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class StatusBar extends SettingsPreferenceFragment implements Indexable {
+public class BuiltIn extends SettingsPreferenceFragment implements Indexable {
 
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.status_bar);
+        addPreferencesFromResource(R.xml.aicp_extras_builtin);
     }
 
     public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
@@ -29,7 +29,7 @@ public class StatusBar extends SettingsPreferenceFragment implements Indexable {
                 new ArrayList<SearchIndexableResource>();
 
             SearchIndexableResource sir = new SearchIndexableResource(context);
-            sir.xmlResId = R.xml.status_bar;
+            sir.xmlResId = R.xml.aicp_extras_builtin;
             result.add(sir);
 
             return result;

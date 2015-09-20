@@ -32,9 +32,8 @@ import com.android.settings.SecuritySettings;
 import com.android.settings.WirelessSettings;
 import com.android.settings.accessibility.AccessibilitySettings;
 import com.android.settings.aicp.AicpSettings;
-import com.android.settings.aicp.tabs.Stuff;
-import com.android.settings.aicp.tabs.StatusBar;
-import com.android.settings.aicp.tabs.System;
+import com.android.settings.aicp.tabs.AddOns;
+import com.android.settings.aicp.tabs.BuiltIn;
 import com.android.settings.aicp.tabs.Ui;
 import com.android.settings.aicp.AmbientSettings;
 import com.android.settings.aicp.AnimationControls;
@@ -332,25 +331,18 @@ public final class SearchIndexableResources {
                         AicpSettings.class.getName(),
                         R.drawable.ic_settings_aicp));
 
-        sResMap.put(Stuff.class.getName(),
+        sResMap.put(AddOns.class.getName(),
                 new SearchIndexableResource(
-                        Ranking.getRankForClassName(Stuff.class.getName()),
+                        Ranking.getRankForClassName(AddOns.class.getName()),
                         NO_DATA_RES_ID,
-                        Stuff.class.getName(),
+                        AddOns.class.getName(),
                         R.drawable.ic_settings_aicp));
 
-        sResMap.put(StatusBar.class.getName(),
+        sResMap.put(BuiltIn.class.getName(),
                 new SearchIndexableResource(
-                        Ranking.getRankForClassName(StatusBar.class.getName()),
+                        Ranking.getRankForClassName(BuiltIn.class.getName()),
                         NO_DATA_RES_ID,
-                        StatusBar.class.getName(),
-                        R.drawable.ic_settings_aicp));
-
-        sResMap.put(System.class.getName(),
-                new SearchIndexableResource(
-                        Ranking.getRankForClassName(System.class.getName()),
-                        NO_DATA_RES_ID,
-                        System.class.getName(),
+                        BuiltIn.class.getName(),
                         R.drawable.ic_settings_aicp));
 
         sResMap.put(Ui.class.getName(),
