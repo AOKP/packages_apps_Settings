@@ -31,11 +31,11 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceScreen;
+import android.preference.SlimSeekBarPreference;
 import android.preference.SwitchPreference;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.aicp.AnimBarPreference;
 import com.android.settings.R;
 
 import com.android.internal.util.aicp.AwesomeAnimationHelper;
@@ -73,7 +73,7 @@ public class AnimationControls extends SettingsPreferenceFragment implements OnP
     ListPreference mWallpaperIntraOpen;
     ListPreference mWallpaperIntraClose;
     ListPreference mTaskOpenBehind;
-    AnimBarPreference mAnimationDuration;
+    SlimSeekBarPreference mAnimationDuration;
     SwitchPreference mAnimNoOverride;
     SwitchPreference mAnimExitOnly;
     SwitchPreference mAnimReverseOnly;
@@ -167,10 +167,15 @@ public class AnimationControls extends SettingsPreferenceFragment implements OnP
         mTaskOpenBehind.setEntries(mAnimationsStrings);
         mTaskOpenBehind.setEntryValues(mAnimationsNum);
 
-        int defaultDuration = Settings.System.getInt(mContentRes,
-                Settings.System.ANIMATION_CONTROLS_DURATION, 0);
-        mAnimationDuration = (AnimBarPreference) findPreference(ANIMATION_DURATION);
-        mAnimationDuration.setInitValue((int) (defaultDuration));
+        mAnimationDuration = (SlimSeekBarPreference) findPreference(ANIMATION_DURATION);
+        mAnimationDuration.setDefault(0);
+        mAnimationDuration.isMilliseconds(true);
+        mAnimationDuration.setInterval(1);
+        mAnimationDuration.minimumValue(0);
+        mAnimationDuration.multiplyValue(50);
+        final int animateDuration = Settings.System.getInt(mContentRes,
+                Settings.System.ANIMATION_CONTROLS_DURATION, 50);
+        mAnimationDuration.setInitValue((animateDuration / 50));
         mAnimationDuration.setOnPreferenceChangeListener(this);
 
         mAnimNoOverride = (SwitchPreference) prefs.findPreference(ANIMATION_CONTROLS_NO_OVERRIDE);
