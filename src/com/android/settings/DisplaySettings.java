@@ -29,6 +29,8 @@ import static android.provider.Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC;
 import static android.provider.Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL;
 import static android.provider.Settings.System.SCREEN_OFF_TIMEOUT;
 import static cyanogenmod.hardware.CMHardwareManager.FEATURE_TAP_TO_WAKE;
+import static cyanogenmod.hardware.CMHardwareManager.FEATURE_SWEEP_TO_WAKE;
+import static cyanogenmod.hardware.CMHardwareManager.FEATURE_SWEEP_TO_SLEEP;
 
 import android.app.Activity;
 import android.app.ActivityManagerNative;
@@ -86,6 +88,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_WAKEUP_CATEGORY = "category_wakeup_options";
 
     private static final String CATEGORY_ADVANCED = "advanced_display_prefs";
+    private static final String KEY_SWEEP_TO_SLEEP = "sweep_sleep_gesture";
+    private static final String KEY_SWEEP_TO_WAKE = "sweep_wake_gesture";
     private static final String KEY_TAP_TO_WAKE = "double_tap_wake_gesture";
     private static final String KEY_PROXIMITY_WAKE = "proximity_on_wake";
     private static final String KEY_SCREEN_OFF_GESTURE_SETTINGS = "screen_off_gesture_settings";
@@ -113,6 +117,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private Preference mScreenSaverPreference;
     private SwitchPreference mLiftToWakePreference;
     private SwitchPreference mAutoBrightnessPreference;
+    private SwitchPreference mSweepToSleep;
+    private SwitchPreference mSweepToWake;
     private SwitchPreference mTapToWake;
     private PreferenceScreen mDozeFragement;
     private SwitchPreference mProximityWakePreference;
@@ -214,6 +220,23 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             mWakeUpWhenPluggedOrUnplugged.setOnPreferenceChangeListener(this);
         }
 
+        mSweepToSleep = (SwitchPreference) findPreference(KEY_SWEEP_TO_SLEEP);
+
+        if (advancedPrefs != null && mSweepToSleep != null
+                && !mHardware.isSupported(FEATURE_SWEEP_TO_SLEEP)) {
+            advancedPrefs.removePreference(mSweepToSleep);
+            mSweepToSleep = null;
+        }
+
+        mSweepToWake = (SwitchPreference) findPreference(KEY_SWEEP_TO_WAKE);
+
+        if (advancedPrefs != null && mSweepToWake != null
+                && !mHardware.isSupported(FEATURE_SWEEP_TO_WAKE)) {
+            advancedPrefs.removePreference(mSweepToWake);
+            mSweepToWake = null;
+        }
+
+
         mTapToWake = (SwitchPreference) findPreference(KEY_TAP_TO_WAKE);
 
         if (advancedPrefs != null && mTapToWake != null
@@ -225,7 +248,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         Utils.updatePreferenceToSpecificActivityFromMetaDataOrRemove(getActivity(),
                 getPreferenceScreen(), KEY_SCREEN_OFF_GESTURE_SETTINGS);
 
-        if (!mHardware.isSupported(FEATURE_TAP_TO_WAKE)) {
+        if (!mHardware.isSupported(FEATURE_SWEEP_TO_SLEEP) && !mHardware.isSupported(FEATURE_SWEEP_TO_WAKE)
+                && !mHardware.isSupported(FEATURE_TAP_TO_WAKE)) {
                 prefSet.removePreference(advancedPrefs);
         }
 
@@ -359,6 +383,14 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     public void onResume() {
         super.onResume();
 
+        if (mSweepToSleep != null) {
+            mSweepToSleep.setChecked(mHardware.get(FEATURE_SWEEP_TO_SLEEP));
+        }
+
+        if (mSweepToWake != null) {
+            mSweepToWake.setChecked(mHardware.get(FEATURE_SWEEP_TO_WAKE));
+        }
+
         if (mTapToWake != null) {
             mTapToWake.setChecked(mHardware.get(FEATURE_TAP_TO_WAKE));
         }
@@ -453,6 +485,10 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         if (preference == mTapToWake) {
             return mHardware.set(FEATURE_TAP_TO_WAKE, mTapToWake.isChecked());
+        } else if (preference == mSweepToWake) {
+            return mHardware.set(FEATURE_SWEEP_TO_WAKE, mSweepToWake.isChecked());
+        } else if (preference == mSweepToSleep) {
+            return mHardware.set(FEATURE_SWEEP_TO_SLEEP, mSweepToSleep.isChecked());
         }
 
         return super.onPreferenceTreeClick(preferenceScreen, preference);
@@ -525,6 +561,28 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 Log.e(TAG, "Failed to restore tap-to-wake settings.");
             } else {
                 Log.d(TAG, "Tap-to-wake settings restored.");
+            }
+        }
+
+        if (hardware.isSupported(FEATURE_SWEEP_TO_WAKE)) {
+            final boolean enabled = prefs.getBoolean(KEY_SWEEP_TO_WAKE,
+                hardware.get(FEATURE_SWEEP_TO_WAKE));
+
+            if (!hardware.set(FEATURE_SWEEP_TO_WAKE, enabled)) {
+                Log.e(TAG, "Failed to restore sweep-to-wake settings.");
+            } else {
+                Log.d(TAG, "Sweep-to-wake settings restored.");
+            }
+        }
+
+        if (hardware.isSupported(FEATURE_SWEEP_TO_SLEEP)) {
+            final boolean enabled = prefs.getBoolean(KEY_SWEEP_TO_SLEEP,
+                hardware.get(FEATURE_SWEEP_TO_SLEEP));
+
+            if (!hardware.set(FEATURE_SWEEP_TO_SLEEP, enabled)) {
+                Log.e(TAG, "Failed to restore sweep-to-sleep settings.");
+            } else {
+                Log.d(TAG, "Sweep-to-sleep settings restored.");
             }
         }
     }
