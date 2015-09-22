@@ -1410,4 +1410,8 @@
     <!-- Whether the keyguard will directly pass to gesture entry -->
     <string name="lock_directly_show_gesture">Directly show gesture</string>
 
+    <!-- Ability to disable hardware keys via nav bar settings -->
+    <string name="hw_keys_title">Hardware keys</string>
+    <string name="hw_keys_summary">Enable hardware keys</string>
+
 </resources>
