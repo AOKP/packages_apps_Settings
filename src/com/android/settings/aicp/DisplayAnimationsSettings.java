@@ -35,6 +35,7 @@ import android.os.Bundle;
 import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.os.SystemProperties;
+import android.os.UserHandle;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -122,19 +123,25 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
 
         // LCD density
         mLcdDensityPreference = (ListPreference) prefSet.findPreference(KEY_LCD_DENSITY);
-        int defaultDensity = getDefaultDensity();
-        String[] densityEntries = new String[9];
-        for (int idx = 0; idx < 8; ++idx) {
-            int pct = (75 + idx*5);
-            densityEntries[idx] = Integer.toString(defaultDensity * pct / 100);
+        if (mLcdDensityPreference != null) {
+            if (UserHandle.myUserId() != UserHandle.USER_OWNER) {
+                prefSet.removePreference(mLcdDensityPreference);
+            } else {
+                int defaultDensity = getDefaultDensity();
+                String[] densityEntries = new String[9];
+                for (int idx = 0; idx < 8; ++idx) {
+                    int pct = (75 + idx*5);
+                    densityEntries[idx] = Integer.toString(defaultDensity * pct / 100);
+                }
+                densityEntries[8] = getString(R.string.custom_density);
+                int currentDensity = getCurrentDensity();
+                mLcdDensityPreference.setEntries(densityEntries);
+                mLcdDensityPreference.setEntryValues(densityEntries);
+                mLcdDensityPreference.setValue(String.valueOf(currentDensity));
+                mLcdDensityPreference.setOnPreferenceChangeListener(this);
+                updateLcdDensityPreferenceDescription(currentDensity);
+            }
         }
-        densityEntries[8] = getString(R.string.custom_density);
-        int currentDensity = getCurrentDensity();
-        mLcdDensityPreference.setEntries(densityEntries);
-        mLcdDensityPreference.setEntryValues(densityEntries);
-        mLcdDensityPreference.setValue(String.valueOf(currentDensity));
-        mLcdDensityPreference.setOnPreferenceChangeListener(this);
-        updateLcdDensityPreferenceDescription(currentDensity);
 
         // Scrolling cache
         mScrollingCachePref = (ListPreference) prefSet.findPreference(SCROLLINGCACHE_PREF);
