@@ -86,6 +86,7 @@ import com.android.settings.applications.ManageApplications;
 import com.android.settings.applications.ProcessStatsUi;
 import com.android.settings.blacklist.BlacklistSettings;
 import com.android.settings.bluetooth.BluetoothSettings;
+import com.android.settings.ButtonSettings;
 import com.android.settings.slim.DisplayRotation;
 import com.android.settings.cyanogenmod.qs.QSTiles;
 import com.android.settings.dashboard.DashboardCategory;
@@ -342,7 +343,8 @@ public class SettingsActivity extends Activity
             PieControl.class.getName(),
             LiveDisplay.class.getName(),
             HeadsUpSettings.class.getName(),
-            VariousShit.class.getName()
+            VariousShit.class.getName(),
+            ButtonSettings.class.getName()
     };
 
 

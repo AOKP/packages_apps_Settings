@@ -2451,6 +2451,21 @@
                 android:resource="@id/sim_settings" />
         </activity>
 
+        <!-- ButtonSettings -->
+        <activity android:name="Settings$ButtonSettingsActivity"
+            android:label="@string/button_pref_title"
+            android:taskAffinity="">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.ButtonSettings" />
+        </activity>
+
+        <activity
+             android:name=".ButtonSettings" />
+
         <!-- Aicp Extras -->
         <activity android:name="Settings$AicpSettingsActivity"
             android:label="@string/aicp_settings_title"
