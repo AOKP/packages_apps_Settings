@@ -761,6 +761,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
                 Settings.System.ENABLE_HW_KEYS, 1) == 1;
 
         mEnableHwKeys.setChecked(enabled);
+        updateDisableHwkeysCategories(enabled);
     }
 
     private void updateDisableHwkeysCategories(boolean enabled) {
