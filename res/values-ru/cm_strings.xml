@@ -696,6 +696,9 @@
   <string name="settings_cmlicense_activity_title">Политика конфиденциальности CyanogenMod</string>
   <string name="lockpattern_settings_enable_error_path_title">Показывать неверный ввод</string>
   <string name="lockpattern_settings_enable_dots_title">Показывать точки</string>
+  <string name="lock_directly_show_password">Сразу предлагать ввод пароля</string>
+  <string name="lock_directly_show_pattern">Сразу предлагать ввод граф.ключа</string>
+  <string name="lock_directly_show_pin">Сразу предлагать ввод PIN-кода</string>
   <string name="unlock_quick_unlock_control_title">Быстрая разблокировка</string>
   <string name="unlock_quick_unlock_control_summary">Автоматическая разблокировка при вводе правильного пароля или PIN-кода</string>
   <string name="unlock_scramble_pin_layout_title">Перемешивать кнопки</string>
@@ -760,7 +763,7 @@
   <string name="qs_wifi_detail_summary">Включить детальный просмотр Wi\u2011Fi в панели быстрых настроек</string>
   <string name="qs_advanced_location_title">Расширенные настройки местоположения</string>
   <string name="qs_advanced_location_summary">Включить расширенные настройки для местоположения в быстрых настройках</string>
-  <string name="qs_pulldown_title">Доступ к панели</string>
+  <string name="qs_pulldown_title">Доступ к панели быстрых настроек</string>
   <string name="sim_no_number_set">Номер не присвоен</string>
   <string name="gesture_settings_title">Жесты</string>
   <string name="themes_settings_title">Темы</string>

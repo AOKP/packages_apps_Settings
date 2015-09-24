@@ -844,8 +844,8 @@
     <string name="animation_reverse_exit_title">Обратная анимация выхода</string>
 
     <!-- The volume key answer -->
-    <string name="volume_answer_call_title">Ответ кнопкой громкости</string>
-    <string name="volume_answer_call_summary">Кнопка увеличения громкости поднимает трубку</string>
+    <string name="volume_answer_call_title">Ответ на звонок</string>
+    <string name="volume_answer_call_summary">Отвечать на звонок нажатием кнопки «Увеличение громкости»</string>
 
     <!-- Doze pulse (ambient display) options -->
     <string name="doze_overwrite_value_title">Изменить значения</string>
@@ -1083,8 +1083,8 @@
     <string name="expanded_header_background_color_title">Цвет</string>
 
     <!-- Task Manager -->
-    <string name="enable_task_manager_title">Диспечер задач</string>
-    <string name="enable_task_manager_summary">Включить/Отключить диспечер задач в панели уведомлений.\nИзменение этой опции перезагрузит графический интерфейс!</string>
+    <string name="enable_task_manager_title">Диспетчер задач</string>
+    <string name="enable_task_manager_summary">Включить/Отключить кнопку диспетчера задач в заголовке панели быстрых настроек.</string>
 
     <!-- Status bar ticker -->
     <string name="status_bar_ticker_title">Тикер уведомления</string>
@@ -1156,7 +1156,7 @@
     <string name="disable_torch_screen_off_title">Отключать фонарик при выключенном экране</string>
     <string name="disable_torch_screen_off_delay_title">Задержка</string>
     <string name="torch_screen_off_one_second">1 секунда</string>
-    <string name="torch_screen_off_ten_second">10 секунд (стандартно)</string>
+    <string name="torch_screen_off_ten_second">10 секунд (по умолчанию)</string>
     <string name="torch_screen_off_thirty_second">30 секунд</string>
     <string name="torch_screen_off_one_minute">1 минута</string>
     <string name="torch_screen_off_five_minutes">5 минут</string>
@@ -1211,7 +1211,7 @@
 
     <!-- Heads Up Status Bar button -->
     <string name="show_headsup_button_title">Кнопка всплывающих уведомлений</string>
-    <string name="show_headsup_button_summary">Показывать кнопку всплывающих уведомлений в заголовке строки состояния</string>
+    <string name="show_headsup_button_summary">Показывать кнопку всплывающих уведомлений в заголовке панели быстрых настроек</string>
 
     <!-- Restart SystemUI -->
     <string name="restart_systemui">Перезапустить интерфейс</string>
@@ -1360,7 +1360,7 @@
     <string name="device_policy_override_summary">Разрешить приложениям усилить безопасность Блокировки и переопределить настройки профиля</string>
 
     <!-- Lockscreen Colors -->
-    <string name="lockscreen_colors">Цвета экрана блокировки</string>
+    <string name="lockscreen_colors">Тематизация экрана блокировки</string>
     <string name="lockscreen_bottom_icons_color">Нижние ярлыки</string>
     <string name="lockscreen_owner_info_color">Текст сведений о владельце</string>
     <string name="lockscreen_alarm_color">Текст будильника</string>
@@ -1377,5 +1377,15 @@
     <!-- Ability to disable hardware keys via nav bar settings -->
     <string name="hw_keys_title">Аппаратные кнопки</string>
     <string name="hw_keys_summary">Включить аппаратные кнопки</string>
+
+    <!-- Lockscreen see through -->
+    <string name="lockscreen_see_through_title">Размытие экрана блокировки</string>
+    <string name="lockscreen_see_through_summary">Размывать и отображать содержимое за экраном блокировки.</string>
+    <string name="lockscreen_blur_radius">Интенсивность размытия</string>
+
+    <!-- On-The-Go -->
+    <string name="power_menu_onthego_title">Режим \"На ходу\"</string>
+    <string name="onthego_alpha_title">\"На ходу\" альфа</string>
+    <string name="onthego_alpha_summary">Использовать альфа значения для режима \"На ходу\".</string>
 
 </resources>
