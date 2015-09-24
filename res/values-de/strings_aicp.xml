@@ -324,12 +324,15 @@
     <string name="shortcut_action_screenshot">Bildschirmfoto</string>
     <string name="shortcut_action_torch">Taschenlampe</string>
     <string name="shortcut_action_menu">Menü</string>
+    <string name="shortcut_action_menu_big">Großes Menü</string>
+    <string name="shortcut_action_notifications">Benachrichtigungen</string>
     <string name="shortcut_action_ime">Wechsle Eingabemethode</string>
-    <string name="shortcut_action_power_menu">Power Menü</string>
-    <string name="shortcut_action_recent">Vorherige</string>
+    <string name="shortcut_action_power_menu">Ein/Aus-Menü</string>
+    <string name="shortcut_action_qs">Schnelleinstellungen</string>
+    <string name="shortcut_action_recent">Anwendungsverlauf</string>
     <string name="shortcut_action_restartui">Neustart der SystemUI</string>
     <string name="shortcut_action_power">Bildschirm aus</string>
-    <string name="shortcut_action_search">Suche in der Anwendung</string>
+    <string name="shortcut_action_search">Suche in Anwendung</string>
     <string name="shortcut_action_ring_vib">Ton/Vibration</string>
     <string name="shortcut_action_ring_silent">Lautlos</string>
     <string name="shortcut_action_ring_vib_silent">Klingeln/Vib/Stumm</string>
@@ -359,7 +362,6 @@
     <string name="shortcut_action_help_main">Um eine %1$s hinzuzufügen, wähle das "Plus" Icon. Wenn eine %1$s hinzugefügt wurde, wird die Auswahl der Reihe das Ziel ändern%2$s\n\nUm eine %1$s zu entfernen, wische horizontal über die Reihe von links nach rechts. Zum Neuanordnen einer %1$s in der Liste verschiebe die Verankerung auf der linken Seite.\n\nZum Löschen oder dem Rücksetzen von Allem auf den Standard, wähle die Option Zurücksetzen.</string>
     <string name="shortcut_action_help_delete_last_entry">Das Entfernen jeglicher %1$s aus der Liste führt zum kompletten Abschalten dieses Features.</string>
     <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Das Entfernen jeglicher %1$s aus der Liste führt zum kompletten Abschalten der zweiten PIE Ebene.</string>
-
 
     <string name="shortcuts_applications">Anwendungen</string>
     <string name="shortcuts_select_custom_app_title">Wähle spezifische Anwendung</string>
@@ -592,9 +594,9 @@
     <string name="unlock_set_unlock_mode_gesture">Muster (Geste)</string>
 
     <!-- Circle app bar -->
-    <string name="category_app_circle_bar_title">App Starter</string>
-    <string name="app_circle_bar_title">App Kreisleiste</string>
-    <string name="app_circle_bar_summary">Zeige die App Kreisleiste bei Berührung des rechten Bildschirmrands</string>
+    <string name="category_app_circle_bar_title">Anwendungs-Starter</string>
+    <string name="app_circle_bar_title">Kreisleiste für Anwendungen</string>
+    <string name="app_circle_bar_summary">Zeige die Kreisleiste bei Berührung des rechten Bildschirmrands</string>
     <string name="app_circle_bar_included_apps_title">Enthaltene Apps</string>
     <string name="app_circle_bar_included_apps_summary">Zu erscheinende Apps in der Kreisleiste</string>
     <string name="trigger_width_title">Breite des Auslösers</string>
@@ -617,7 +619,7 @@
     <string name="toast_Honami_animation">Honami</string>
     <string name="toast_FastFade_animation">Schnell ausblenden</string>
     <string name="toast_GrowFade_animation">Ausblenden und vergrößern</string>
-    <string name="toast_GrowFadeCenter_animation">zentriert ausblenden und vergrößern</string>
+    <string name="toast_GrowFadeCenter_animation">Zentriert ausblenden und vergrößern</string>
     <string name="toast_GrowFadeBottom_animation">Nach unten ausblenden und vergrößern</string>
     <string name="toast_Translucent_animation">Durchsichtig</string>
     <string name="toast_SlideLeftRight_animation">Gleite von links nach rechts</string>
@@ -700,7 +702,7 @@
     <string name="clock_font_normal">Normal</string>
 
     <!-- Recents panel settings -->
-    <string name="recents_panel_settings">Einstellungen zum Anwendungsverlauf</string>
+    <string name="recents_panel_settings">Anwendungsverlauf</string>
     <string name="recents_panel_title">Anwendungsverlauf</string>
     <string name="show_clear_all_recents_button_title">Lösch-Taste für den gesamten Verlauf</string>
     <string name="show_clear_all_recents_button_summary">Zeige Taste zum Löschen aller geöffneten Anwendungen</string>
@@ -739,7 +741,7 @@
     <string name="set_custom_density_title">Eigene Dichte einstellen</string>
     <string name="set_custom_density_set">Einstellen</string>
     <string name="custom_density_dialog_title">WARNUNG!</string>
-    <string name="custom_density_dialog_summary">Das Ändern der Standard LCD Dichte kann manchmal dazu führen, dass bestimmte Anwendungen nicht richtig/funktionieren oder der Play Store diese als inkompatibel mit dem Gerät angibt"</string>
+    <string name="custom_density_dialog_summary">Das Ändern der Standard LCD-Dichte kann manchmal dazu führen, dass bestimmte Anwendungen nicht richtig/funktionieren oder der Play Store diese als inkompatibel mit dem Gerät angibt"</string>
     <string name="dpi">DPI</string>
     <string name="restarting_ui">Neustart der UI\u2026</string>
 
@@ -752,6 +754,8 @@
     <string name="disable_fc_notifications_summary">Dies versteckt alle Absturz-Benachrichtungen</string>
 
     <!-- Navigation bar -->
+    <string name="navbar_enable_bar_title">On-Screen Navigationsleiste einschalten</string>
+    <string name="navbar_enable_bar_summary">On-Screen Navigationsleiste einschalten und Hardware-Tasten deaktivieren</string>
     <string name="navbar_style_dimen_title">Größe der Navigationsleiste</string>
     <string name="navbar_dimensions_reset_message">Rücksetzen aller Größeneinträge auf Standard?</string>
     <string name="navigation_bar_height_title">Höhe der Navigationsleiste</string>
@@ -771,7 +775,7 @@
 
     <!-- Custom bootanim -->
     <string name="custom_bootanimation_title">Startanimation</string>
-    <string name="custom_bootanimation_summary">Wähle deine eigene Startanimation..\nBei jedem Wechsel wird die vorhandene Animation im Verzeichnis storage/AICP_ota mit Zeitstempel gesichert. Alte müssen manuell gelöscht werden, wenn sie nicht mehr gebraucht werden.</string>
+    <string name="custom_bootanimation_summary">Wähle deine eigene Startanimation..\nBei jedem Wechsel wird die vorhandene Animation im Verzeichnis storage/AICP_ota mit Zeitstempel gesichert. Alte Animationen müssen manuell gelöscht werden, wenn sie nicht mehr gebraucht werden.</string>
     <string name="bootanimation_preview">Vorschau der Startanimation</string>
     <string name="set_custom_bootanimation">Eigene setzen...</string>
     <string name="creating_preview">Vorschau erzeugen...</string>
@@ -785,7 +789,7 @@
     <string name="qs_screenrecord_tile">Bildschirmaufnahme</string>
     <string name="qs_sync_tile">Sync</string>
     <string name="qs_tile_powermenu">Ein/Aus-Menü</string>
-    <string name="qs_tile_slimpie">Pie Control</string>
+    <string name="qs_tile_slimpie">PIE Navigation</string>
     <string name="qs_battery_saver_tile">Energiesparmodus</string>
     <string name="qs_brightness_tile">Helligkeit</string>
     <string name="qs_expanded_desktop_tile">Erweiterter Desktop</string>
@@ -808,7 +812,7 @@
     <string name="qs_colors_title">Eigene Farbeinstellungen</string>
     <string name="reset_android">Android</string>
     <string name="reset_swag">Swag</string>
-    <string name="colors_title">QS colors</string>
+    <string name="colors_title">QS Farben</string>
     <string name="text_title">Text</string>
     <string name="qs_transparent_shade_title">Alpha-Schattierung</string>
     <string name="qs_transparent_shade_summary">Möglichkeit zum Anwenden eines Alpha-Farbwertes, um Benachrichtigungen transparent erscheinen zu lassen</string>
@@ -833,7 +837,7 @@
     <string name="wallpaper_intra_close_title">Animation für Bildhintergrund intra schließen</string>
     <string name="task_open_behind_title">Animation hinter offener Aufgabe</string>
     <string name="animation_duration_title">Animationsdauer</string>
-    <string name="animation_duration_default">Standard</string>
+    <string name="animation_duration_default">Dauer (in Millisekunden) der oben gewählten Animationen</string>
     <string name="title_animation_no_override">Verhindere App-Überschreibungen</string>
     <string name="summary_animation_no_override">Verhindere, dass Anwendungen die Überblendeffekte überschreiben.</string>
     <string name="animation_exit_only_title">Animation nur fürs Ausführen (Starten)</string>
@@ -916,6 +920,11 @@
     <string name="custom_carrier_label_explain">Bitte eine neue Bezeichnung eingeben. Leerlassen für die Standardanzeige.</string>
     <string name="custom_carrier_label_notset">Eigene Bezeichnung zur Zeit nicht gesetzt</string>
     <string name="status_bar_carrier_color">Farbe der Anbieterbezeichnung</string>
+    <string name="show_carrier_disabled">Deaktiviert</string>
+    <string name="show_carrier_keyguard">Nur auf Sperrbildschirm</string>
+    <string name="show_carrier_statusbar">Nur in Statusleiste</string>
+    <string name="show_carrier_enabled">Sperrbildschirm &amp; Statusleiste</string>
+    <string name="status_bar_carrier_size">Textgröße der Anbieterbezeichnung</string>
 
     <!-- Statusbar AICP logo -->
     <string name="status_bar_aicp_logo_title">AICP Logo</string>
@@ -963,8 +972,8 @@
     <string name="longpress_lock_icon_to_sleep_summary">Diese Option funktioniert nicht, wenn Smart Lock und Tippen &amp; Entdecken der Bedienungshilfen an sind</string>
 
     <!-- Double tap gesture anywhere on the lock screen put device to sleep -->
-    <string name="double_tap_sleep_anywhere_title">Doppeltes Tippen zum Schlafen überall</string>
-    <string name="double_tap_sleep_anywhere_summary">Doppeltes Tippen, um das Gerät zum schlafen zu schicken</string>
+    <string name="double_tap_sleep_anywhere_title">Schlummermodus bei Doppeltem Tippen</string>
+    <string name="double_tap_sleep_anywhere_summary">Doppeltes Tippen, um das Gerät in den Schlummermodus zu setzen</string>
 
     <!-- Wakelock blocker -->
     <string name="wakelock_blocker_title">Wakelock Blockierer</string>
@@ -976,9 +985,9 @@
     <string name="wakelock_blocker_warning">Das Blockieren von Wakelocks kann zu Abstürzen und Datenverlust führen</string>
 
     <!-- Heads Up -->
-    <string name="category_heads_up">Pop-up-Benachrichtigungen</string>
+    <string name="category_heads_up">Pop-up Benachrichtigungen</string>
     <string name="add_heads_up_package">Anwendung hinzufügen</string>
-    <string name="add_heads_up_dnd_summary">Zeige keine Pop-ups in diesem Anwendungen</string>
+    <string name="add_heads_up_dnd_summary">Zeige keine Pop-ups in diesen Anwendungen</string>
     <string name="add_heads_up_blacklist_summary">Zeige keine Pop-ups von diesen Anwendungen</string>
     <string name="heads_up_dnd_title">Nicht stören</string>
     <string name="heads_up_blacklist_title">Sperrliste</string>
@@ -1034,34 +1043,34 @@
     <string name="nfc_polling_mode_screen_unlocked">Display an und entsperrt (Standard)</string>
 
     <!-- Network traffic -->
-    <string name="network_traffic_vector_title">Network traffic</string>
-    <string name="network_traffic_vector_summary">Enable various network traffic options in statusbar</string>
-    <string name="show_network_traffic_disable">Disabled</string>
-    <string name="network_traffic_hide_arrow">Hide arrows</string>
-    <string name="network_traffic_hide_arrow_summary">Hide the traffic arrow indicator</string>
-    <string name="show_network_traffic_meter">Meter</string>
+    <string name="network_traffic_vector_title">Netzwerk-Datenverkehr</string>
+    <string name="network_traffic_vector_summary">Darstellung verschiedener Netzwerkdatenverkehr-Optionen in der Statusleiste</string>
+    <string name="show_network_traffic_disable">Deaktiviert</string>
+    <string name="network_traffic_hide_arrow">Pfeile verstecken</string>
+    <string name="network_traffic_hide_arrow_summary">Pfeile der Datenrichtung verstecken</string>
+    <string name="show_network_traffic_meter">Anzeige</string>
     <string name="show_network_traffic_text">Text</string>
-    <string name="show_network_traffic_both">Both</string>
-    <string name="show_network_traffic_display">Status bar traffic display</string>
-    <string name="show_network_traffic_monitor">Status bar traffic monitor</string>
-    <string name="show_network_traffic_unit">Display unit</string>
-    <string name="show_network_traffic_frequency">Update interval</string>
-    <string name="show_network_traffic_up">Outgoing</string>
-    <string name="show_network_traffic_down">Incoming</string>
-    <string name="show_network_traffic_all">Outgoing and incoming</string>
+    <string name="show_network_traffic_both">Beides</string>
+    <string name="show_network_traffic_display">Datenmonitor in der Statusleiste</string>
+    <string name="show_network_traffic_monitor">Datenmonitor in der Statusleiste</string>
+    <string name="show_network_traffic_unit">Einheit der Anzeige</string>
+    <string name="show_network_traffic_frequency">Aktualisierungsintervall</string>
+    <string name="show_network_traffic_up">Ausgehend</string>
+    <string name="show_network_traffic_down">Eingehend</string>
+    <string name="show_network_traffic_all">Aus- und eingehend</string>
     <string name="show_network_traffic_500">500 ms</string>
     <string name="show_network_traffic_1000">1000 ms</string>
     <string name="show_network_traffic_1500">1500 ms</string>
     <string name="show_network_traffic_2000">2000 ms</string>
     <string name="show_network_traffic_2500">2500 ms</string>
     <string name="show_network_traffic_3000">3000 ms</string>
-    <string name="show_network_traffic_bit">Bits per second</string>
-    <string name="show_network_traffic_byte">Bytes per second</string>
-    <string name="network_traffic_autohide">Auto hide</string>
-    <string name="network_traffic_autohide_summary">Hide the traffic monitor when there is no activity</string>
-    <string name="network_traffic_autohide_threshold">Inactivity threshold</string>
-    <string name="network_traffic_color_style">Text color style</string>
-    <string name="network_traffic_color_reset">Reset color</string>
+    <string name="show_network_traffic_bit">Bits pro Sekunde</string>
+    <string name="show_network_traffic_byte">Bytes pro Sekunde</string>
+    <string name="network_traffic_autohide">Automatisch ausblenden</string>
+    <string name="network_traffic_autohide_summary">Versteckt den Datenmonitor, wenn keine Aktivität vorhanden ist</string>
+    <string name="network_traffic_autohide_threshold">Inaktivitätsschwelle</string>
+    <string name="network_traffic_color_style">Farbstil des Textes</string>
+    <string name="network_traffic_color_reset">Farbe zurücksetzen</string>
     <string name="network_traffic_color_reset_message">Reset network traffic color to default?</string>
 
     <!-- Battery saver -->
@@ -1221,12 +1230,12 @@
     <!-- Status bar power menu -->
     <string name="status_bar_power_menu_title">Ein/Aus-Menü in erweiterter Statusleiste</string>
     <string name="status_bar_power_menu_dialog_title">Setzen der Aktionen für Tippen und langes Drücken</string>
-    <string name="status_bar_power_menu_off">Deaktivieren</string>
+    <string name="status_bar_power_menu_off">Deaktiviert</string>
     <string name="status_bar_power_menu_action_screen_off">Bildschirm Aus - Ein/Aus-Menü</string>
     <string name="status_bar_power_menu_action_dialog">Ein/Aus-Menü - Bildschirm Aus</string>
 
     <!-- Heads Up Status Bar button -->
-    <string name="show_headsup_button_title">Pop-up Taste</string>
+    <string name="show_headsup_button_title">Taste für Pop-up Nachrichten</string>
     <string name="show_headsup_button_summary">Zeige eine Taste für Pop-ups in der Statusleiste</string>
 
     <!-- Restart SystemUI -->
@@ -1244,12 +1253,12 @@
     <!-- App sidebar -->
     <string name="app_sidebar_title">Seitenleiste für Anwendungen</string>
     <string name="app_sidebar_enable_title">Anwendungsleiste einschalten</string>
-    <string name="app_sidebar_enable_summaryOn">Anwendungsleiste ist eingeschaltet</string>
-    <string name="app_sidebar_enable_summaryOff">Anwendungsleiste ist ausgeschaltet</string>
+    <string name="app_sidebar_enable_summaryOn">Seitenleiste ist eingeschaltet</string>
+    <string name="app_sidebar_enable_summaryOff">Seitenleiste ist ausgeschaltet</string>
     <string name="app_sidebar_setup_items_title">Inhalt der Anwendungsleiste einrichten</string>
-    <string name="app_sidebar_setup_items_summary">Hinzufügen, entfernen und Position von Objekten in der Anwendungsleiste</string>
+    <string name="app_sidebar_setup_items_summary">Hinzufügen, entfernen und Position von Apps in der Seitenleiste</string>
     <string name="app_sidebar_transparency_title">Transparenz der Anwendungsleiste</string>
-    <string name="app_sidebar_transparency_summary">Anpassen der Transparenz-Stufe der Anwendungsleiste</string>
+    <string name="app_sidebar_transparency_summary">Anpassen der Transparenz-Stufe der Seitenleiste</string>
     <string name="app_sidebar_position_title">Position der Anwendungsleiste</string>
     <string name="app_sidebar_position_summary">Position der Leiste auf der linken oder rechten Bildschirmseite festlegen</string>
     <string name="app_sidebar_position_left">Links</string>
@@ -1272,7 +1281,7 @@
     <string name="trigger_bottom_summary">Stelle die Höhe der Auslöser-Region ein</string>
 
     <!-- Selinux Switch -->
-    <string name="selinux_switch_title">SELinux Optionen</string>
+    <string name="selinux_switch_title">SELinux-Schalter Optionen</string>
     <string name="selinux_switch_summary">SELinux sind verschiedene Kernel-Modificationen und "user-space" Werkzeuge. Eine Änderung des Modus kann unerwartetes Telefonverhalten auslösen. Benutzung auf eigenes Risiko!</string>
     <string name="selinux_title">SELinux Modus</string>
     <string name="selinux_permissive_title">Moderat</string>
@@ -1280,11 +1289,7 @@
 
     <!-- Floating Windows -->
     <string name="slim_action_floats">Slim Aktionen und PIE</string>
-    <string name="slim_action_floats_summary">Aktiviere Slim und PIE im Schwebe-Modus</string>
-
-    <!-- Hide lock screen carrier -->
-    <string name="lock_screen_hide_carrier_title">Verstecke Anbieter auf dem Sperrbildschirm</string>
-    <string name="lock_screen_hide_carrier_summary">SystemUI wird bei Aktivierung neu gestartet</string>
+    <string name="slim_action_floats_summary">Aktiviere Slim und PIE Aktionen im Schwebe-Modus</string>
 
     <!-- Status bar temperature -->
     <string name="status_bar_temperature_title">Anzeige der Umgebungstemperatur</string>
@@ -1324,7 +1329,7 @@
 
     <!-- Lockscreen wallpaper -->
     <string name="lockscreen_wallpaper_title">Sperrbildschirm-Hintergrund</string>
-    <string name="lockscreen_wallpaper_summary">Stelle Hintergrundbild des Sperrbildschirms ein</string>
+    <string name="lockscreen_wallpaper_summary">Hintergrundbild des Sperrbildschirms einstellen</string>
 
     <!-- QS Tiles Columns -->
     <string name="qs_num_columns_title">Anzahl der Kacheln pro Reihe</string>
@@ -1351,10 +1356,43 @@
     <string name="shake_clear_recents_summary">Lösche Verlauf durch Schütteln des Geräts</string>
 
     <!-- Lock screen rotation -->
-    <string name="display_lockscreen_rotation_title">Sperrbildschirm</string>
+    <string name="display_lockscreen_rotation_title">Sperrbildschirm-Rotation</string>
 
     <!--Time Contexual Header -->
-    <string name="notification_title">Benachrichtigungsfenster</string>
-    <string name="status_bar_custom_header_title">Benutzerdefinierter Fensterhintergrund</string>
+    <string name="notification_title">Benachrichtigungsleiste</string>
+    <string name="status_bar_custom_header_title">Benutzerdefinierter Hintergrund</string>
     <string name="status_bar_custom_header_summary">Aktiviere Hintergrundbild für die Benachrichtigungsleiste</string>
+
+    <!-- Aicp Settings Tabs -->
+    <string name="aicp_settings_tab1">UI</string>
+    <string name="aicp_settings_tab2">Intern</string>
+    <string name="aicp_settings_tab3">Extern</string>
+
+    <!-- Chamber of Secrets -->
+    <string name="chamber_title">Kammer der Geheimnisse</string>
+    <string name="chamber_toast">Die Kammer der Geheimnisse wurde geäffnet</string>
+
+    <!-- Device policy override -->
+    <string name="device_policy_override_title">Übergehen der Profileinstellung</string>
+    <string name="device_policy_override_summary">Erlaubt Apps einen sicheren Sperrbildschirm zu erzwingen und Profileinstellungen zu übergehen</string>
+
+    <!-- Lockscreen Colors -->
+    <string name="lockscreen_colors">Sperrbildschirm-Farben</string>
+    <string name="lockscreen_bottom_icons_color">Untere Tasten</string>
+    <string name="lockscreen_owner_info_color">Text des Eigentümerinfos</string>
+    <string name="lockscreen_alarm_color">Text für Alarme</string>
+    <string name="lockscreen_indication_text_color">Text von Hinweisen</string>
+    <string name="lockscreen_clock_color">Uhr</string>
+    <string name="lockscreen_clock_date_color">Datum</string>
+    <string name="lockscreen_colors_reset_title">Sperrbildschirm-Farben zurücksetzen</string>
+    <string name="lockscreen_colors_reset_message">Diese Farben wirklich auf Standard zurücksetzen?</string>
+    <string name="yes">JA</string>
+
+    <!-- Whether the keyguard will directly pass to gesture entry -->
+    <string name="lock_directly_show_gesture">Geste sofort anzeigen</string>
+
+    <!-- Ability to disable hardware keys via nav bar settings -->
+    <string name="hw_keys_title">Hardware-Tasten</string>
+    <string name="hw_keys_summary">Hardware-Tasten aktivieren</string>
+
 </resources>
