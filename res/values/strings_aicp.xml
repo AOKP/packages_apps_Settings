@@ -1389,7 +1389,7 @@
     <string name="device_policy_override_summary">Allow apps to force secure lock screen and override profile settings</string>
 
     <!-- Lockscreen Colors -->
-    <string name="lockscreen_colors">Lockscreen Colors</string>
+    <string name="lockscreen_colors">Lockscreen Theming</string>
     <string name="lockscreen_bottom_icons_color">Bottom shortcuts</string>
     <string name="lockscreen_owner_info_color">Owner info text</string>
     <string name="lockscreen_alarm_color">Alarm text</string>

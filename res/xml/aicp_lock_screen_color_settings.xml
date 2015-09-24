@@ -19,6 +19,20 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+        android:key="lockscreen_see_through"
+        android:title="@string/lockscreen_see_through_title"
+        android:summary="@string/lockscreen_see_through_summary"
+        android:defaultValue="false" />
+
+    <com.android.settings.widget.SeekBarPreferenceCham
+        android:key="lockscreen_blur_radius"
+        android:title="@string/lockscreen_blur_radius"
+        android:max="25"
+        settings:min="0"
+        android:defaultValue="14"
+        android:dependency="lockscreen_see_through" />
+
     <net.margaritov.preference.colorpicker.ColorPickerPreference
         android:key="lockscreen_clock_color"
         android:title="@string/lockscreen_clock_color"
@@ -48,19 +62,6 @@
         android:key="lockscreen_bottom_icons_color"
         android:title="@string/lockscreen_bottom_icons_color"
         android:defaultValue="0xffffffff" />
-
-    <com.android.settings.screwd.SystemSettingSwitchPreference
-        android:key="lockscreen_see_through"
-        android:title="@string/lockscreen_see_through_title"
-        android:summary="@string/lockscreen_see_through_summary"
-        android:defaultValue="false" />
-
-    <com.android.settings.widget.SeekBarPreferenceCham
-        android:key="lockscreen_blur_radius"
-        android:title="@string/lockscreen_blur_radius"
-        android:max="25"
-        settings:min="0"
-        android:defaultValue="14" />
 
 </PreferenceScreen>
 
