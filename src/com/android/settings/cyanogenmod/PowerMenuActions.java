@@ -26,10 +26,11 @@ import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.preference.CheckBoxPreference;
+import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
-import android.preference.ListPreference;
 import android.preference.Preference.OnPreferenceChangeListener;
+import android.preference.SlimSeekBarPreference;
 import android.provider.Settings;
 
 import com.android.settings.R;
@@ -49,6 +50,7 @@ public class PowerMenuActions extends SettingsPreferenceFragment
     final static String TAG = "PowerMenuActions";
 
     private static final String SCREENSHOT_DELAY = "screenshot_delay";
+    private static final String PREF_ON_THE_GO_ALPHA = "on_the_go_alpha";
 
     private CheckBoxPreference mRebootPref;
     private CheckBoxPreference mScreenshotPref;
@@ -61,6 +63,7 @@ public class PowerMenuActions extends SettingsPreferenceFragment
     private CheckBoxPreference mBugReportPref;
     private CheckBoxPreference mSilentPref;
     private CheckBoxPreference mOnTheGoPref;
+    private SlimSeekBarPreference mOnTheGoAlphaPref;
 
     Context mContext;
     private ArrayList<String> mLocalUserConfig = new ArrayList<String>();
@@ -130,6 +133,11 @@ public class PowerMenuActions extends SettingsPreferenceFragment
         int ssDelay = Settings.System.getInt(mCr,
                 Settings.System.SCREENSHOT_DELAY, 1);
         mScreenshotDelay.setCurrentValue(ssDelay);
+
+        mOnTheGoAlphaPref = (SlimSeekBarPreference) findPreference(PREF_ON_THE_GO_ALPHA);
+        mOnTheGoAlphaPref.setDefault(50);
+        mOnTheGoAlphaPref.setInterval(1);
+        mOnTheGoAlphaPref.setOnPreferenceChangeListener(this);
 
         getUserConfig();
     }
@@ -263,6 +271,11 @@ public class PowerMenuActions extends SettingsPreferenceFragment
             int value = Integer.parseInt(newValue.toString());
             Settings.System.putInt(mCr, Settings.System.SCREENSHOT_DELAY,
                     value);
+            return true;
+        } else if (preference == mOnTheGoAlphaPref) {
+            float val = Float.parseFloat((String) newValue);
+            Settings.System.putFloat(mCr, Settings.System.ON_THE_GO_ALPHA,
+                    val / 100);
             return true;
         }
         return false;

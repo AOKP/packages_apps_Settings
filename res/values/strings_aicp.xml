@@ -1414,5 +1414,8 @@
 
     <!-- On-The-Go -->
     <string name="power_menu_onthego_title">On-The-Go Mode</string>
+    <string name="onthego_alpha_title">On-The-Go Alpha</string>
+    <string name="onthego_alpha_summary">Alpha value of the On-The-Go overlay.</string>
+
 
 </resources>

@@ -79,6 +79,12 @@
         android:title="@string/power_menu_onthego_title"
         android:defaultValue="false" />
 
+    <SlimSeekBarPreference
+        android:key="on_the_go_alpha"
+        android:title="@string/onthego_alpha_title"
+        android:summary="@string/onthego_alpha_summary"
+        android:dependency="onthego" />
+
     <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
         android:key="lockscreen_enable_power_menu"
         android:title="@string/lockscreen_enable_power_menu_title"
