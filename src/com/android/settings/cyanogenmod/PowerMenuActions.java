@@ -60,6 +60,7 @@ public class PowerMenuActions extends SettingsPreferenceFragment
     private CheckBoxPreference mLockdownPref;
     private CheckBoxPreference mBugReportPref;
     private CheckBoxPreference mSilentPref;
+    private CheckBoxPreference mOnTheGoPref;
 
     Context mContext;
     private ArrayList<String> mLocalUserConfig = new ArrayList<String>();
@@ -116,6 +117,8 @@ public class PowerMenuActions extends SettingsPreferenceFragment
                 mBugReportPref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_BUGREPORT);
             } else if (action.equals(GLOBAL_ACTION_KEY_SILENT)) {
                 mSilentPref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_SILENT);
+            } else if (action.equals(GLOBAL_ACTION_KEY_ONTHEGO)) {
+                mOnTheGoPref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_ONTHEGO);
             }
         }
 
@@ -187,6 +190,10 @@ public class PowerMenuActions extends SettingsPreferenceFragment
             mSilentPref.setChecked(settingsArrayContains(GLOBAL_ACTION_KEY_SILENT));
         }
 
+        if (mOnTheGoPref != null) {
+            mOnTheGoPref.setChecked(settingsArrayContains(GLOBAL_ACTION_KEY_ONTHEGO));
+        }
+
         updatePreferences();
     }
 
@@ -239,6 +246,10 @@ public class PowerMenuActions extends SettingsPreferenceFragment
         } else if (preference == mSilentPref) {
             value = mSilentPref.isChecked();
             updateUserConfig(value, GLOBAL_ACTION_KEY_SILENT);
+
+        } else if (preference == mOnTheGoPref) {
+            value = mOnTheGoPref.isChecked();
+            updateUserConfig(value, GLOBAL_ACTION_KEY_ONTHEGO);
 
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
