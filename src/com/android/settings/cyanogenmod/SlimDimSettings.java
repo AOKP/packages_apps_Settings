@@ -31,8 +31,14 @@ import android.provider.Settings;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
+import android.provider.SearchIndexableResource;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.search.Indexable;
+import java.util.ArrayList;
+import java.util.List;
+
 public class SlimDimSettings extends SettingsPreferenceFragment implements
-        OnPreferenceChangeListener {
+        Indexable, OnPreferenceChangeListener {
     private static final String TAG = "SlimDimSettings";
 
     private static final String DIM_NAV_BUTTONS = "dim_nav_buttons";
@@ -141,4 +147,25 @@ public class SlimDimSettings extends SettingsPreferenceFragment implements
         return false;
     }
 
+    public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+        new BaseSearchIndexProvider() {
+        @Override
+        public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
+                                                                    boolean enabled) {
+            ArrayList<SearchIndexableResource> result =
+                new ArrayList<SearchIndexableResource>();
+
+            SearchIndexableResource sir = new SearchIndexableResource(context);
+            sir.xmlResId = R.xml.slimdim_settings;
+            result.add(sir);
+
+            return result;
+        }
+
+        @Override
+        public List<String> getNonIndexableKeys(Context context) {
+            ArrayList<String> result = new ArrayList<String>();
+            return result;
+        }
+    };
 }

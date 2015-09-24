@@ -57,6 +57,7 @@ import com.android.settings.aicp.VariousShit;
 import com.android.settings.aicp.VolumeSteps;
 import com.android.settings.aicp.gestureanywhere.GestureAnywhereSettings;
 import com.android.settings.bluetooth.BluetoothSettings;
+import com.android.settings.cyanogenmod.SlimDimSettings;
 import com.android.settings.deviceinfo.Memory;
 import com.android.settings.deviceinfo.UsbSettings;
 import com.android.settings.fuelgauge.BatterySaverSettings;
@@ -111,27 +112,28 @@ public final class Ranking {
     public static final int RANK_PIEBUTTON = 26;
     public static final int RANK_PIETRIGGER = 27;
     public static final int RANK_NAVBARDIM = 28;
-    public static final int RANK_NETTRAFFIC = 29;
-    public static final int RANK_VOLSTEPS = 30;
-    public static final int RANK_ADVANCEDSOUNDS = 31;
-    public static final int RANK_ANIMATIONCONTROLS = 32;
-    public static final int RANK_DISPLAYANIMS = 33;
-    public static final int RANK_OVERSCROLL = 34;
-    public static final int RANK_HOME = 35;
-    public static final int RANK_DISPLAY = 36;
-    public static final int RANK_NOTIFICATIONS = 37;
-    public static final int RANK_STORAGE = 38;
-    public static final int RANK_POWER_USAGE = 39;
-    public static final int RANK_USERS = 40;
-    public static final int RANK_LOCATION = 41;
-    public static final int RANK_SECURITY = 42;
-    public static final int RANK_IME = 43;
-    public static final int RANK_PRIVACY = 44;
-    public static final int RANK_DATE_TIME = 45;
-    public static final int RANK_ACCESSIBILITY = 46;
-    public static final int RANK_PRINTING = 47;
-    public static final int RANK_DEVELOPEMENT = 48;
-    public static final int RANK_DEVICE_INFO = 49;
+    public static final int RANK_SLIMDIM = 29;
+    public static final int RANK_NETTRAFFIC = 30;
+    public static final int RANK_VOLSTEPS = 31;
+    public static final int RANK_ADVANCEDSOUNDS = 32;
+    public static final int RANK_ANIMATIONCONTROLS = 33;
+    public static final int RANK_DISPLAYANIMS = 34;
+    public static final int RANK_OVERSCROLL = 35;
+    public static final int RANK_HOME = 36;
+    public static final int RANK_DISPLAY = 37;
+    public static final int RANK_NOTIFICATIONS = 38;
+    public static final int RANK_STORAGE = 39;
+    public static final int RANK_POWER_USAGE = 40;
+    public static final int RANK_USERS = 41;
+    public static final int RANK_LOCATION = 42;
+    public static final int RANK_SECURITY = 43;
+    public static final int RANK_IME = 44;
+    public static final int RANK_PRIVACY = 45;
+    public static final int RANK_DATE_TIME = 46;
+    public static final int RANK_ACCESSIBILITY = 47;
+    public static final int RANK_PRINTING = 48;
+    public static final int RANK_DEVELOPEMENT = 49;
+    public static final int RANK_DEVICE_INFO = 50;
 
     public static final int RANK_UNDEFINED = -1;
     public static final int RANK_OTHERS = 1024;
@@ -205,6 +207,9 @@ public final class Ranking {
 
         // AICP NavigationBar Dimensions
         sRankMap.put(NavBarDimensions.class.getName(), RANK_NAVBARDIM);
+
+        // AICP NavigationBar Slim Dim
+        sRankMap.put(SlimDimSettings.class.getName(), RANK_SLIMDIM);
 
         // AICP Network Traffic
         sRankMap.put(NetworkTrafficFragment.class.getName(), RANK_NETTRAFFIC);

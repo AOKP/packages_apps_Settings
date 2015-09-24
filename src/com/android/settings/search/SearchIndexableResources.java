@@ -62,6 +62,7 @@ import com.android.settings.aicp.VolumeSteps;
 import com.android.settings.aicp.gestureanywhere.GestureAnywhereSettings;
 import com.android.settings.bluetooth.BluetoothSettings;
 import com.android.settings.cyanogenmod.NotificationDrawerSettings;
+import com.android.settings.cyanogenmod.SlimDimSettings;
 import com.android.settings.deviceinfo.Memory;
 import com.android.settings.deviceinfo.UsbSettings;
 import com.android.settings.fuelgauge.BatterySaverSettings;
@@ -518,6 +519,13 @@ public final class SearchIndexableResources {
                         Ranking.getRankForClassName(GestureAnywhereSettings.class.getName()),
                         NO_DATA_RES_ID,
                         GestureAnywhereSettings.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
+        sResMap.put(SlimDimSettings.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(SlimDimSettings.class.getName()),
+                        NO_DATA_RES_ID,
+                        SlimDimSettings.class.getName(),
                         R.drawable.ic_settings_aicp));
 
         sResMap.put(SoundSettings.class.getName(),
