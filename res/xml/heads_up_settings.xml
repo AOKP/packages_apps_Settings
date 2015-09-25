@@ -46,16 +46,16 @@
         android:max="10"
         settings:minimum="0"
         settings:unitsLeft=""
-        settings:unitsRight="sec"
+        settings:unitsRight=" sec"
         android:persistent="false" />
 
     <com.android.settings.widget.SeekBarPreferenceCham
         android:key="heads_up_snooze_time"
         android:title="@string/heads_up_snooze_title"
-        android:max="30"
+        android:max="120"
         settings:minimum="0"
         settings:unitsLeft=""
-        settings:unitsRight="min"
+        settings:unitsRight=" min"
         android:persistent="false" />
 
     <PreferenceCategory
