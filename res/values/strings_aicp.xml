@@ -1401,5 +1401,7 @@
     <string name="onthego_alpha_title">On-The-Go Alpha</string>
     <string name="onthego_alpha_summary">Alpha value of the On-The-Go overlay.</string>
 
+    <!-- AdAway -->
+    <string name="adaway_settings_title">AdAway</string>
 
 </resources>

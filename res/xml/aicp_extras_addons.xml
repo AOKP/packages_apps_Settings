@@ -13,4 +13,10 @@
         android:key="kernel_adiutor_start"
         android:title="@string/kernel_adiutor_settings_title" />
 
+    <!-- AdAway -->
+    <PreferenceScreen
+        android:id="@+id/adaway"
+        android:key="adaway_start"
+        android:title="@string/adaway_settings_title" />
+
 </PreferenceScreen>

@@ -28,6 +28,7 @@ public class AddOns extends SettingsPreferenceFragment implements Indexable {
 
     private static final String KEY_AICPOTA_START = "aicp_ota_start";
     private static final String KEY_KERNEL_AUDIUTOR_START = "kernel_adiutor_start";
+    private static final String KEY_ADAWAY_START = "adaway_start";
 
     // Package name of the AICP OTA app
     public static final String AICPOTA_PACKAGE_NAME = "com.aicp.aicpota";
@@ -41,8 +42,15 @@ public class AddOns extends SettingsPreferenceFragment implements Indexable {
     public static Intent INTENT_KERNEL_AUDIUTOR = new Intent(Intent.ACTION_MAIN)
             .setClassName(KERNEL_AUDIUTOR_PACKAGE_NAME, KERNEL_AUDIUTOR_PACKAGE_NAME + ".MainActivity");
 
+    // Package name of the AdAway app
+    public static final String ADAWAY_PACKAGE_NAME = "org.adaway";
+    // Intent for launching the AdAway main actvity
+    public static Intent INTENT_ADAWAY = new Intent(Intent.ACTION_MAIN)
+            .setClassName(ADAWAY_PACKAGE_NAME, ADAWAY_PACKAGE_NAME + ".ui.BaseActivity");
+
     private Preference mAicpOta;
     private Preference mKernelAdiutor;
+    private Preference mAdAway;
 
 
     @Override
@@ -66,6 +74,12 @@ public class AddOns extends SettingsPreferenceFragment implements Indexable {
             prefSet.removePreference(mKernelAdiutor);
         }
 
+        mAdAway = (Preference)
+                prefSet.findPreference(KEY_ADAWAY_START);
+        if (!Helpers.isPackageInstalled(ADAWAY_PACKAGE_NAME, pm)) {
+            prefSet.removePreference(mAdAway);
+        }
+
     }
 
 	@Override
@@ -75,6 +89,9 @@ public class AddOns extends SettingsPreferenceFragment implements Indexable {
 		    return true;
 		} else if (preference == mKernelAdiutor) {
 		    startActivity(INTENT_KERNEL_AUDIUTOR);
+		    return true;
+		} else if (preference == mAdAway) {
+		    startActivity(INTENT_ADAWAY);
 		    return true;
 		}
 		return super.onPreferenceTreeClick(preferenceScreen, preference);
