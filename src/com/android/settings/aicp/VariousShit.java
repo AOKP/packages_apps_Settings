@@ -119,6 +119,7 @@ public class VariousShit extends SettingsPreferenceFragment
     private static final String DISABLE_TORCH_ON_SCREEN_OFF_DELAY = "disable_torch_on_screen_off_delay";
 
     private static final String PREF_SELINUX_SWITCH_STATE = "selinux_switch_state";
+    private static final String PREF_SELINUX_SWITCH_ONBOOT = "selinux_switch_onboot";
 
     // Package name of the yoga
     public static final String YOGA_PACKAGE_NAME = "com.android.settings";
@@ -146,6 +147,7 @@ public class VariousShit extends SettingsPreferenceFragment
     private PreferenceCategory mTorchCategory;
     private Preference mLockClock;
     private SwitchPreference mSelinux;
+    private SwitchPreference mSelinuxOnBoot;
 
     private Preference mHiddenShit;
     private PreferenceScreen mHiddenImg;
@@ -229,6 +231,11 @@ public class VariousShit extends SettingsPreferenceFragment
             mSelinux.setSummary(R.string.selinux_permissive_title);
         }
 
+        mSelinuxOnBoot = (SwitchPreference) findPreference(PREF_SELINUX_SWITCH_ONBOOT);
+        mSelinuxOnBoot.setChecked(Settings.System.getIntForUser(resolver,
+                Settings.System.SELINUX_SWITCH_ONBOOT, 0, UserHandle.USER_CURRENT) == 1);
+        mSelinuxOnBoot.setOnPreferenceChangeListener(this);
+
     }
 
     @Override
@@ -306,6 +313,11 @@ public class VariousShit extends SettingsPreferenceFragment
             }
             Settings.System.putIntForUser(resolver,
                     Settings.System.SELINUX_SWITCH_STATE,
+                    (Boolean) objValue ? 1 : 0, UserHandle.USER_CURRENT);
+            return true;
+        } else if (preference == mSelinux) {
+            Settings.System.putIntForUser(resolver,
+                    Settings.System.SELINUX_SWITCH_ONBOOT,
                     (Boolean) objValue ? 1 : 0, UserHandle.USER_CURRENT);
             return true;
         }

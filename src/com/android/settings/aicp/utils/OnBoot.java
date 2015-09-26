@@ -32,13 +32,16 @@ public class OnBoot extends BroadcastReceiver {
             }
         }
         if(!mSetupRunning) {
-             if(Settings.System.getIntForUser(context.getContentResolver(),
+            if(Settings.System.getIntForUser(context.getContentResolver(),
+                        Settings.System.SELINUX_SWITCH_ONBOOT, 0, UserHandle.USER_CURRENT) == 1) {
+                if(Settings.System.getIntForUser(context.getContentResolver(),
                         Settings.System.SELINUX_SWITCH_STATE, 1, UserHandle.USER_CURRENT) == 1) {
-                 CMDProcessor.runSuCommand("setenforce 1");
-             } else if (Settings.System.getIntForUser(context.getContentResolver(),
+                    CMDProcessor.runSuCommand("setenforce 1");
+                } else if (Settings.System.getIntForUser(context.getContentResolver(),
                         Settings.System.SELINUX_SWITCH_STATE, 1, UserHandle.USER_CURRENT) == 0) {
-                 CMDProcessor.runSuCommand("setenforce 0");
-             }
+                    CMDProcessor.runSuCommand("setenforce 0");
+                }
+            }
         }
     }
 }
