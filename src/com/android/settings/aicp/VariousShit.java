@@ -118,7 +118,7 @@ public class VariousShit extends SettingsPreferenceFragment
     private static final String DISABLE_TORCH_ON_SCREEN_OFF = "disable_torch_on_screen_off";
     private static final String DISABLE_TORCH_ON_SCREEN_OFF_DELAY = "disable_torch_on_screen_off_delay";
 
-    private static final String SELINUX = "selinux";
+    private static final String PREF_SELINUX_SWITCH_STATE = "selinux_switch_state";
 
     // Package name of the yoga
     public static final String YOGA_PACKAGE_NAME = "com.android.settings";
@@ -219,14 +219,13 @@ public class VariousShit extends SettingsPreferenceFragment
         }
 
         //SELinux
-        mSelinux = (SwitchPreference) findPreference(SELINUX);
+        mSelinux = (SwitchPreference) findPreference(PREF_SELINUX_SWITCH_STATE);
+        mSelinux.setChecked(Settings.System.getIntForUser(resolver,
+                Settings.System.SELINUX_SWITCH_STATE, 1, UserHandle.USER_CURRENT) == 1);
         mSelinux.setOnPreferenceChangeListener(this);
-
         if (CMDProcessor.runShellCommand("getenforce").getStdout().contains("Enforcing")) {
-            mSelinux.setChecked(true);
             mSelinux.setSummary(R.string.selinux_enforcing_title);
         } else {
-            mSelinux.setChecked(false);
             mSelinux.setSummary(R.string.selinux_permissive_title);
         }
 
@@ -286,14 +285,14 @@ public class VariousShit extends SettingsPreferenceFragment
         ContentResolver resolver = getActivity().getContentResolver();
         final String key = preference.getKey();
         if (preference == mHiddenShitUnlocked) {
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.HIDDEN_SHIT,
                     (Boolean) objValue ? 1 : 0);
             return true;
         } else if (preference == mTorchOffDelay) {
             int torchOffDelay = Integer.valueOf((String) objValue);
             int index = mTorchOffDelay.findIndexOfValue((String) objValue);
-            Settings.System.putIntForUser(getActivity().getContentResolver(),
+            Settings.System.putIntForUser(resolver,
                     Settings.System.DISABLE_TORCH_ON_SCREEN_OFF_DELAY, torchOffDelay, UserHandle.USER_CURRENT);
             mTorchOffDelay.setSummary(mTorchOffDelay.getEntries()[index]);
             return true;
@@ -305,6 +304,9 @@ public class VariousShit extends SettingsPreferenceFragment
                 CMDProcessor.runSuCommand("setenforce 0");
                 mSelinux.setSummary(R.string.selinux_permissive_title);
             }
+            Settings.System.putIntForUser(resolver,
+                    Settings.System.SELINUX_SWITCH_STATE,
+                    (Boolean) objValue ? 1 : 0, UserHandle.USER_CURRENT);
             return true;
         }
         return false;

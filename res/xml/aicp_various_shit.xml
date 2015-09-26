@@ -85,10 +85,10 @@
         android:summary="@string/selinux_switch_summary"
         android:selectable="false"/>
 
-    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-        android:key="selinux"
+    <SwitchPreference
+        android:key="selinux_switch_state"
         android:title="@string/selinux_title"
-        android:defaultValue="false" />
+        android:defaultValue="true" />
 
     <!-- Custom bootanim -->
     <Preference

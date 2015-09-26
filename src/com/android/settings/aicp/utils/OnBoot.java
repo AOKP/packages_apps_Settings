@@ -4,8 +4,9 @@ import android.app.ActivityManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
+import android.os.UserHandle;
 import android.preference.PreferenceManager;
+import android.provider.Settings;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -31,10 +32,11 @@ public class OnBoot extends BroadcastReceiver {
             }
         }
         if(!mSetupRunning) {
-             SharedPreferences sharedpreferences = PreferenceManager.getDefaultSharedPreferences(context);
-             if(sharedpreferences.getBoolean("selinux", true)) {
+             if(Settings.System.getIntForUser(context.getContentResolver(),
+                        Settings.System.SELINUX_SWITCH_STATE, 1, UserHandle.USER_CURRENT) == 1) {
                  CMDProcessor.runSuCommand("setenforce 1");
-             } else if (!sharedpreferences.getBoolean("selinux", true)) {
+             } else if (Settings.System.getIntForUser(context.getContentResolver(),
+                        Settings.System.SELINUX_SWITCH_STATE, 1, UserHandle.USER_CURRENT) == 0) {
                  CMDProcessor.runSuCommand("setenforce 0");
              }
         }
