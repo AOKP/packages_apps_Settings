@@ -262,24 +262,6 @@
     <string name="smart_pulldown_persistent">Kalıcı Yoksa</string>
     <string name="smart_pulldown_all">Kovulabilir de Kalıcı da Yoksa</string>
 
-    <!-- Host File Manager -->
-    <string name="hfm_disable_ads_title">Reklamları Kaldır</string>
-    <string name="hfm_disable_ads_summary">Reklamları Kaldırmak için Host Dosyasını Değiştir</string>
-    <string name="hfm_pref_screen_title">Reklam Engelleyici</string>
-    <string name="hfm_update_hosts">Host Dosyasını Güncelle</string>
-    <string name="hfm_update_hosts_summary">Yeni Host Dosyası İndir ve Uygula</string>
-    <string name="hfm_dialog_wait">Uygulanıyor, lütfen bekleyin..</string>
-    <string name="hfm_dialog_failed">Host dosyası güncellenemedi. Lütfen tekrar deneyin.</string>
-    <string name="hfm_dialog_success">/4 Hosta Kaynağı Başarıyla Uygulandı!</string>
-    <string name="hfm_dialog_conn_error">Hata: İnternet bağlantısı yok!</string>
-    <string name="hfm_dialog_title">Host Dosyaları Güncelleniyor</string>
-    <string name="hfm_whitelist_title">Beyaz Liste</string>
-    <string name="hfm_whitelist_summary">Girdilere Reklam Engelleyici Tarafından İzin Verilir (URL\'lerin bir kısmı)</string>
-    <string name="hfm_whitelist_pref_text">Eklemek için Adres Girin</string>
-    <string name="hfm_whitelist_pref_button_add">URL Ekle</string>
-    <string name="hfm_whitelist_pref_empty">Beyaz Liste Boş</string>
-    <string name="hfm_whitelist_pref_menu_apply">Uygula</string>
-
     <!-- Volume rocker music seek options -->
     <string name="volbtn_music_controls_title">Ses Butonlarıyla Şarkı Kontrolü</string>
     <string name="volbtn_music_controls_summary">Ekran kapalıyken, ses tuşlarına uzun basmanız şarkıyı değiştirir</string>

@@ -2493,10 +2493,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.android.settings.aicp.hfm.HfmWhitelist"
-            android:label="@string/hfm_whitelist_title"
-            android:taskAffinity="com.android.settings" />
-
         <activity android:name=".sim.SimDialogActivity"
                 android:theme="@android:style/Theme.Material.Light.Dialog.NoActionBar"
                 android:label="@string/sim_settings_title"
@@ -2525,14 +2521,6 @@
                 <action android:name="cyanogenmod.intent.action.PACKAGE_PROTECTED" />
             </intent-filter>
         </receiver>
-
-        <receiver android:name="com.android.settings.aicp.hfm.IntentReceiver" >
-            <intent-filter>
-                 <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
-        </receiver>
-
-        <service android:name="com.android.settings.aicp.hfm.CheckHosts" />
 
         <receiver android:name="com.android.settings.aicp.utils.OnBoot">
             <intent-filter>

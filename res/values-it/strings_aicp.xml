@@ -271,24 +271,6 @@
     <string name="smart_pulldown_persistent">Non persistenti</string>
     <string name="smart_pulldown_all">Non eliminabili o persistenti</string>
 
-    <!-- Host File Manager -->
-    <string name="hfm_disable_ads_title">Disabilita Ads</string>
-    <string name="hfm_disable_ads_summary">Cambia hosts file per disabilitare ads</string>
-    <string name="hfm_pref_screen_title">Ad blocker</string>
-    <string name="hfm_update_hosts">Aggiorna hosts file</string>
-    <string name="hfm_update_hosts_summary">Download e applica nuovi hosts</string>
-    <string name="hfm_dialog_wait">in lavorazione, prego attendere...</string>
-    <string name="hfm_dialog_failed">Aggiornamento fallito. Riprova.</string>
-    <string name="hfm_dialog_success">/4 hosts file aggiornati con successo!</string>
-    <string name="hfm_dialog_conn_error">Errore: Manca connessione dati</string>
-    <string name="hfm_dialog_title">Aggiornamenti Hosts in lavorazione..</string>
-    <string name="hfm_whitelist_title">Whitelist</string>
-    <string name="hfm_whitelist_summary">lista degli URL permessi da ad blocker</string>
-    <string name="hfm_whitelist_pref_text">Aggiungi una riga nella whitelist</string>
-    <string name="hfm_whitelist_pref_button_add">Aggiungi URL</string>
-    <string name="hfm_whitelist_pref_empty">Whitelist è vuota</string>
-    <string name="hfm_whitelist_pref_menu_apply">Applica</string>
-
     <!-- Volume rocker music seek options -->
     <string name="volbtn_music_controls_title">Controllo volume app Musica</string>
     <string name="volbtn_music_controls_summary">Quando lo schermo è spento,pressione prolungata dei tasti volume cambia traccia</string>

@@ -262,24 +262,6 @@
     <string name="smart_pulldown_persistent">Nicht bleibende</string>
     <string name="smart_pulldown_all">Nicht verwerfbare oder bleibende</string>
 
-    <!-- Host File Manager -->
-    <string name="hfm_disable_ads_title">Deaktiviere Werbung</string>
-    <string name="hfm_disable_ads_summary">Ändere die Host-Dateien, um Werbung zu blockieren</string>
-    <string name="hfm_pref_screen_title">Werbeblocker</string>
-    <string name="hfm_update_hosts">Aktuallisiere Host-Dateien</string>
-    <string name="hfm_update_hosts_summary">Downloade und aktiviere neue Host-Datei</string>
-    <string name="hfm_dialog_wait">Arbeite, bitte warten...</string>
-    <string name="hfm_dialog_failed">Aktualiseren der Host-Dateien fehlgeschlagen. Bitte erneut versuchen!</string>
-    <string name="hfm_dialog_success">/4 Hosts Sourcen erfolgreich aktiviert!</string>
-    <string name="hfm_dialog_conn_error">Fehler: Keine Netzwerkverbindung</string>
-    <string name="hfm_dialog_title">Host Update</string>
-    <string name="hfm_whitelist_title">Weiße Liste</string>
-    <string name="hfm_whitelist_summary">Liste von Zeichenketten (als Teil von URL\'s), die vom Werbeblocker erlaubt werden sollen</string>
-    <string name="hfm_whitelist_pref_text">Tippe, um einen Eintrag in die Weiße Liste zu schreiben</string>
-    <string name="hfm_whitelist_pref_button_add">Füge URL hinzu</string>
-    <string name="hfm_whitelist_pref_empty">Weiße Liste ist leer</string>
-    <string name="hfm_whitelist_pref_menu_apply">Aktiviere</string>
-
     <!-- Volume rocker music seek options -->
     <string name="volbtn_music_controls_title">Musikkontrolle über Lautstärketasten</string>
     <string name="volbtn_music_controls_summary">Wenn das Display aus ist, wechseln die Lautstärketasten den Titel</string>

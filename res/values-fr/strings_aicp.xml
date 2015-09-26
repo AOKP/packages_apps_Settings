@@ -258,23 +258,6 @@
     <string name="smart_pulldown_persistent">Non-persistantes</string>
     <string name="smart_pulldown_all">Non-effaçables et non-persistantes</string>
 
-    <!-- Host File Manager -->
-    <string name="hfm_disable_ads_title">Désactiver les publicités</string>
-    <string name="hfm_disable_ads_summary">Modifier le fichier hosts pour désactiver les publicités</string>
-    <string name="hfm_pref_screen_title">Bloqueur de publicités</string>
-    <string name="hfm_update_hosts">Mise à jour du fichier hosts</string>
-    <string name="hfm_update_hosts_summary">Télécharger et appliquer les fichiers hosts récents</string>
-    <string name="hfm_dialog_wait">En cours, veuillez patienter...</string>
-    <string name="hfm_dialog_failed">Échec de la mise à jour du fichier hosts. Veuillez essayez à nouveau.</string>
-    <string name="hfm_dialog_success">/4 sources hosts appliquées avec succès\u00A0!</string>
-    <string name="hfm_dialog_conn_error">Erreur\u00A0: Aucune connexion Internet</string>
-    <string name="hfm_whitelist_title">Liste blanche</string>
-    <string name="hfm_whitelist_summary">Liste des chaînes (partie des URLs) qui doit être autorisée par le Bloqueur de publicités</string>
-    <string name="hfm_whitelist_pref_text">Saisir une chaîne à ajouter à la Liste blanche</string>
-    <string name="hfm_whitelist_pref_button_add">Ajouter une URL</string>
-    <string name="hfm_whitelist_pref_empty">Liste blanche vide</string>
-    <string name="hfm_whitelist_pref_menu_apply">Appliquer</string>
-
     <!-- Volume rocker music seek options -->
     <string name="volbtn_music_controls_title">Contrôle de lecture</string>
     <string name="volbtn_music_controls_summary">Sur écran éteint, un appui prolongé sur les touches Volume change la chanson</string>

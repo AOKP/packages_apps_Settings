@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Ad blocker -->
-    <PreferenceScreen
-        android:key="hfm_settings"
-        android:title="@string/hfm_pref_screen_title"
-        android:fragment="com.android.settings.aicp.hfm.HfmSettings" />
-
     <!-- Circle app bar -->
     <PreferenceScreen
         android:key="app_circle_bar"

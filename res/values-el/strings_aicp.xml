@@ -268,24 +268,6 @@
     <string name="smart_pulldown_persistent">Δεν θα παραμείνουν</string>
     <string name="smart_pulldown_all">Μη αποκρυφτούν ή παραμείνουν</string>
 
-    <!-- Host File Manager -->
-    <string name="hfm_disable_ads_title">Διαφημίσεις εκτός</string>
-    <string name="hfm_disable_ads_summary">Αλλαγή αρχείου hosts για απενεργοποίηση διαφημίσεων</string>
-    <string name="hfm_pref_screen_title">Μπλοκάρισμα διαφημίσεων</string>
-    <string name="hfm_update_hosts">Ενημέρωση αρχείου hosts</string>
-    <string name="hfm_update_hosts_summary">Κατέβασε νέα αρχεία hosts</string>
-    <string name="hfm_dialog_wait">Λειτουργεί, παρακαλώ περιμένετε...</string>
-    <string name="hfm_dialog_failed">Ενημέρωση αρχείου hosts απέτυχε. Παρακαλώ δοκιμάστε ξανά.</string>
-    <string name="hfm_dialog_success">/4 πηγές hosts εφαρμόστηκαν με επιτυχία!</string>
-    <string name="hfm_dialog_conn_error">Σφάλμα: Δεν υπάρχει σύνδεση</string>
-    <string name="hfm_dialog_title">Αρχεία Hosts πρόοδος αναβάθμισης</string>
-    <string name="hfm_whitelist_title">Λευκή Λίστα</string>
-    <string name="hfm_whitelist_summary">Κατάλογος γραμμών (μέρος του URL\'s) να επιτρέπεται από τον blocker διαφημίσεων</string>
-    <string name="hfm_whitelist_pref_text">Προσθέστε στη λίστα επιτρεπόμενων</string>
-    <string name="hfm_whitelist_pref_button_add">Προσθήκη URL</string>
-    <string name="hfm_whitelist_pref_empty">Λευκή λίστα κενή</string>
-    <string name="hfm_whitelist_pref_menu_apply">Εφαρμογή</string>
-
     <!-- Volume rocker music seek options -->
     <string name="volbtn_music_controls_title">Έλεγχος έντασης με πλήκτρα μουσικής</string>
     <string name="volbtn_music_controls_summary">Όταν η οθόνη εκτός, πιέστε παρατεταμένα τα κουμπιά έντασης</string>
