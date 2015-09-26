@@ -315,7 +315,7 @@ public class VariousShit extends SettingsPreferenceFragment
                     Settings.System.SELINUX_SWITCH_STATE,
                     (Boolean) objValue ? 1 : 0, UserHandle.USER_CURRENT);
             return true;
-        } else if (preference == mSelinux) {
+        } else if (preference == mSelinuxOnBoot) {
             Settings.System.putIntForUser(resolver,
                     Settings.System.SELINUX_SWITCH_ONBOOT,
                     (Boolean) objValue ? 1 : 0, UserHandle.USER_CURRENT);
