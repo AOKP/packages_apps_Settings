@@ -190,7 +190,7 @@
   <string name="blacklist_summary_type_messages_only">сообщения</string>
   <string name="blacklist_summary_type_calls_and_messages">вызовы и сообщения</string>
   <string name="blacklist_regex_title">Регулярные выражения</string>
-  <string name="blacklist_regex_summary">Используйте «.» как маску и «*» для повторения. Например, выражение «123.*» будет блокировать номера, начинающиеся с «123», а «.*123.*» — номера, содержащие «123» в любой их части.</string>
+  <string name="blacklist_regex_summary">Используйте «.» как маску и «*» для повторения. Например, выражение «123.*» будет блокировать номера, начинающиеся с «123», а «.*123.*» — номера, содержащие «123» в любой их части.</string>
   <string name="blacklist_policy_block_calls">Блокировать входящие вызовы</string>
   <string name="blacklist_policy_block_messages">Блокировать входящие сообщения</string>
   <string name="blacklist_bad_number_add">Некорректный номер, добавление невозможно</string>
@@ -314,6 +314,7 @@
   <string name="status_bar_battery_style_icon_portrait">Вертикальный значок</string>
   <string name="status_bar_battery_style_icon_landscape">Горизонтальный значок</string>
   <string name="status_bar_battery_style_circle">Круг</string>
+  <string name="status_bar_battery_style_dotted_circle">Пунктирный круг</string>
   <string name="status_bar_battery_style_text">Текст</string>
   <string name="status_bar_battery_style_hidden">Не показывать индикатор</string>
   <string name="status_bar_battery_percentage_title">Процент заряда батареи</string>

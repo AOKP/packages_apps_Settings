@@ -175,8 +175,6 @@
     <!-- Color Picker -->
     <string name="dialog_color_picker">Выбор цвета</string>
     <string name="press_color_to_apply">Нажмите на цвет, чтобы применить</string>
-    <string name="hex">Hex:</string>
-    <string name="hex_hint">#ff000000</string>
     <string name="set">Установить</string>
     <string name="color_default">По умолчанию</string>
 
@@ -732,7 +730,7 @@
 
     <!-- Privacy guard notification -->
     <string name="privacy_guard_notification_title">Уведомления</string>
-    <string name="privacy_guard_notifiation_summary">Показывать уведомление, если режим безопасности активирован</string>
+    <string name="privacy_guard_notifiation_summary">Показывать уведомления, если активирован защищенный режим</string>
 
     <!-- Text for forcing expanded notifications -->
     <string name="disable_fc_notifications_title">Отключить уведомления о принудительном закрытии (FC)</string>
@@ -916,7 +914,7 @@
 
     <!-- Volume pane timeout -->
     <string name="volume_panel_time_out_title">Таймаут панели громкости</string>
-    <string name="volume_panel_time_out_summary">Скрывать до <xliff:g id="number">%d</xliff:g> секунд. Автоматически скрывать при нажатии на экран</string>
+    <string name="volume_panel_time_out_summary">Скрывать до <xliff:g id="number">%d</xliff:g> сек. Автоматически скрывать при нажатии на экран</string>
     <string name="volume_panel_time_out_1.5sec">1,5 секунды</string>
     <string name="volume_panel_time_out_3sec">3 секунды (по умолчанию)</string>
     <string name="volume_panel_time_out_5sec">5 секунд</string>
@@ -979,9 +977,13 @@
 
     <!-- Heads up timeout -->
     <string name="heads_up_time_out_title">Время отображения</string>
+    <string name="heads_up_time_out_summary">Уведомление будет отображаться: </string>
+    <string name="heads_up_time_out_never_summary">Уведомление будет отображаться, пока не будет отклонено</string>
 
     <!-- Heads up snooze -->
-    <string name="heads_up_snooze_title">Период повтора</string>
+    <string name="heads_up_snooze_title">Таймер переноса</string>
+    <string name="heads_up_snooze_summary">При нажатии кнопки \"Отложить\" всплывающие уведомления будут приостановлены на: </string>
+    <string name="heads_up_snooze_disabled_summary">Отключен</string>
 
     <!-- Heads up touch outside -->
     <string name="heads_up_touch_outside_title">Поведение при нажатии вне области уведомления</string>
@@ -1236,6 +1238,8 @@
     <string name="selinux_title">Режим SELinux</string>
     <string name="selinux_permissive_title">Разрешающий</string>
     <string name="selinux_enforcing_title">Принудительный</string>
+    <string name="selinux_switch_onboot_title">Применять при загрузке</string>
+    <string name="selinux_switch_onboot_summary">Применять параметры SELinux при загрузке.</string>
 
     <!-- Floating Windows -->
     <string name="slim_action_floats">Действия узкой панели задач и Pie</string>
@@ -1369,5 +1373,12 @@
     <string name="power_menu_onthego_title">Режим \"На ходу\"</string>
     <string name="onthego_alpha_title">\"На ходу\" альфа</string>
     <string name="onthego_alpha_summary">Использовать альфа значения для режима \"На ходу\".</string>
+
+    <!-- AdAway -->
+    <string name="adaway_settings_title">Блокировка рекламы</string>
+
+    <!-- Media art -->
+    <string name="media_art_title">Обложка медиа</string>
+    <string name="media_art_summary">Показывать обложку медиа на экране блокировки</string>
 
 </resources>
