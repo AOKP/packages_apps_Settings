@@ -38,6 +38,9 @@
     <string name="chipset_info">Chipset</string>
     <!-- About phone screen, Free memory info -->
     <string name="mem_info">Memoria</string>
+    <!-- About phone screen, AICP device maintainer name -->
+    <string name="device_maintainer">Device maintainer</string>
+    <string name="device_maintainers">Device maintainers</string>
 
     <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
     <plurals name="show_dev_countdown_aicp">
@@ -67,7 +70,6 @@
     <string name="reset">Reset</string>
     <string name="help">Aiuto</string>
     <string name="add">Aggiungi</string>
-    <string name="help">Aiuto</string>
     <string name="attention">Attenzione</string>
     <string name="enabled">Abilita</string>
     <string name="disabled">Disabilita</string>
@@ -221,7 +223,6 @@
     <string name="status_bar_toggle_brightness">Controllo Luminosità</string>
     <string name="status_bar_toggle_brightness_summary">Modifica la luminosità con uno swipe sulla barra notifiche</string>
     <string name="status_bar_toggle_info">Luminosità Automatica abilitata</string>
-    <string name="status_bar_show_clock_second_title">Visualizza i Secondi</string>
     <string name="clock_date_right">Destra dell\'ora</string>
     <string name="clock_date_left">Sinistra dell\'ora</string>
 
@@ -315,8 +316,11 @@
     <string name="shortcut_action_screenshot">Screenshot</string>
     <string name="shortcut_action_torch">Torcia</string>
     <string name="shortcut_action_menu">Menu</string>
+    <string name="shortcut_action_menu_big">Menu Big</string>
+    <string name="shortcut_action_notifications">Notifiche</string>
     <string name="shortcut_action_ime">Apri selettore IME</string>
     <string name="shortcut_action_power_menu">Tasto Power</string>
+    <string name="shortcut_action_qs">Panello QS</string>
     <string name="shortcut_action_recent">Recenti</string>
     <string name="shortcut_action_restartui">Riavvia SystemUI</string>
     <string name="shortcut_action_power">Spegni schermo</string>
@@ -427,6 +431,15 @@
     <string name="show_unac_and_overcounted_stats_title">Visualizza statistiche unaccounted/overcounted</string>
     <string name="show_unac_and_overcounted_stats_summary">Visualizza nelle stat della batteria le voci di unaccounted e over-counted</string>
 
+    <!-- Trigger -->
+    <string name="trigger_category">Configura Trigger</string>
+    <string name="trigger_width_title">Larghezza Trigger</string>
+    <string name="trigger_width_summary">Modifica la larghezza della Trigger area</string>
+    <string name="trigger_top_title">Posizione Trigger</string>
+    <string name="trigger_top_summary">Modifica la posizione verticale della Trigger area</string>
+    <string name="trigger_bottom_title">Altezza Trigger</string>
+    <string name="trigger_bottom_summary">Modifica l\'altezza della Trigger area</string>
+
     <!-- Gesture Anywhere -->
     <string name="gesture_anywhere_title">Gesture</string>
     <string name="gesture_anywhere_enabled_title">Gesture Ovunque</string>
@@ -474,13 +487,6 @@
     <string name="ga_gestures_rename_label">Nome Gesture</string>
     <!-- Message, displayed when the sdcard cannot be found, 1st parameter is the name of the file that stores the gestures.  CHAR LIMIT=80 -->
     <string name="ga_gestures_error_loading">Impossibile caricare %s. Controlla che lo storage è disponibile</string>
-    <string name="trigger_category">Configura Trigger</string>
-    <string name="trigger_width_title">Larghezza Trigger</string>
-    <string name="trigger_width_summary">Modifica la larghezza della Trigger area</string>
-    <string name="trigger_top_title">Posizione Trigger</string>
-    <string name="trigger_top_summary">Modifica la posizione verticale della Trigger area</string>
-    <string name="trigger_bottom_title">Altezza Trigger</string>
-    <string name="trigger_bottom_summary">Modifica l\'altezza della Trigger area</string>
     <string name="picker_activities">Attività</string>
     <string name="select_custom_app_title">Selezione APP</string>
     <string name="select_custom_activity_title">Selezione Azione</string>
@@ -587,12 +593,6 @@
     <string name="app_circle_bar_summary">Visualizza la circle appbar toccando il lato destro dello schermo</string>
     <string name="app_circle_bar_included_apps_title">Includi apps</string>
     <string name="app_circle_bar_included_apps_summary">App che vuoi siano visibili</string>
-    <string name="trigger_width_title">Larghezza Trigger</string>
-    <string name="trigger_width_summary">Modifica la larghezza della Trigger area</string>
-    <string name="trigger_top_title">Posizione Trigger</string>
-    <string name="trigger_top_summary">Modifica la posizione verticale della Trigger area</string>
-    <string name="trigger_bottom_title">Altezza Trigger</string>
-    <string name="trigger_bottom_summary">Modifica l\'altezza della Trigger area</string>
 
     <!-- Toast Animation -->
     <string name="toast_animation_title">Animazioni Toast</string>
@@ -701,6 +701,7 @@
     <string name="clock_font_medium">Medio</string>
     <string name="clock_font_medium_italic">Medio corsivo</string>
     <string name="clock_font_normal">Normale</string>
+    <string name="status_bar_show_clock_second_title">Visualizza Secondi</string>
 
     <!-- Recents panel settings -->
     <string name="recents_panel_settings">Configurazione Pannello Recenti</string>
@@ -754,7 +755,13 @@
     <string name="disable_fc_notifications_title">Disabilita notifiche FC</string>
     <string name="disable_fc_notifications_summary">Nasconde tutte le notifiche di force close</string>
 
+    <!-- Long press on lock screen lock icon to launch torch-->
+    <string name="longpress_lock_icon_torch_title">Pressione lucchetto attiva torcia</string>
+    <string name="longpress_lock_icon_torch_summary">Questa opzione non funziona con smart lock e con gesture attive in accessibilità</string>
+
     <!-- Navigation bar -->
+    <string name="navbar_enable_bar_title">Abilita navbar</string>
+    <string name="navbar_enable_bar_summary">Abilita la navbar e disattiva i tasti hw</string>
     <string name="navbar_style_dimen_title">Dimensioni barra di navigazione</string>
     <string name="navbar_dimensions_reset_message">Resetta la configurazione a quella di default?</string>
     <string name="navigation_bar_height_title">Altezza barra di navigazione</string>
@@ -920,6 +927,10 @@
     <string name="custom_carrier_label_explain">Inserisci il nome,lascia in bianco per ritornare al nome di default</string>
     <string name="custom_carrier_label_notset">Nome personalizzato non configurato/Default</string>
     <string name="status_bar_carrier_color">Colore nome operatore</string>
+    <string name="show_carrier_disabled">Disabilità</string>
+    <string name="show_carrier_keyguard">Solo sblocco</string>
+    <string name="show_carrier_statusbar">Solo barra notifiche</string>
+    <string name="show_carrier_enabled">Sblocco &amp; barra notifiche</string>
     <string name="status_bar_carrier_size">Dimensione font operatore</string>
 
     <!-- Statusbar AICP logo -->
@@ -967,10 +978,6 @@
     <string name="qs_slim_action_summary">Aggiungi e configura l\'ordine per il tile SlimAction</string>
     <string name="qs_slim_action_title">SlimActions</string>
 
-    <!-- Long press on lock screen lock icon to sleep -->
-    <string name="longpress_lock_icon_to_sleep_title">Pressione lucchetto spegne display</string>
-    <string name="longpress_lock_icon_to_sleep_summary">Questa opzione non funziona con smart lock attivo</string>
-
     <!-- Double tap gesture anywhere on the lock screen put device to sleep -->
     <string name="double_tap_sleep_anywhere_title">Doppio TAP display spegne schermo</string>
     <string name="double_tap_sleep_anywhere_summary">Doppio TAP ovunque nella schermata di sblocco spegne lo schermo</string>
@@ -1000,32 +1007,19 @@
 
     <!-- Heads up timeout -->
     <string name="heads_up_time_out_title">Time out</string>
-    <string name="heads_up_time_out_summary">Visualizza la notifica per <xliff:g id="number">%d</xliff:g> Secondi</string>
-    <string name="heads_up_time_out_never_summary">Visualizzata fino a che non verrà eliminata</string>
-    <string name="heads_up_time_out_2sec">2 Secondi</string>
-    <string name="heads_up_time_out_3sec">3 Secondi</string>
-    <string name="heads_up_time_out_4sec">4 Secondi</string>
-    <string name="heads_up_time_out_5sec">5 Secondi</string>
-    <string name="heads_up_time_out_6sec">6 Secondi</string>
-    <string name="heads_up_time_out_8sec">8 Secondi</string>
-    <string name="heads_up_time_out_10sec">10 Secondi</string>
-    <string name="heads_up_time_out_never">Mai</string>
+    <string name="heads_up_time_out_summary">Le notifiche saranno visibili per: </string>
+    <string name="heads_up_time_out_never_summary">Le notifiche saranno visibili fino a che non cancellate</string>
+
+    <!-- Heads up snooze -->
+    <string name="heads_up_snooze_title">Snooze timer</string>
+    <string name="heads_up_snooze_summary">Se premuto il tasto snooze,disabilità heads up for: </string>
+    <string name="heads_up_snooze_disabled_summary">Snooze timer è disabilitato</string>
+
 
     <!-- Heads up touch outside -->
     <string name="heads_up_touch_outside_title">Comportamento Tocco</string>
     <string name="heads_up_touch_outside_summary_enabled">Nascondi con tocco o con tasto home</string>
     <string name="heads_up_touch_outside_summary_disabled">Non nascondere con tocco o tasto home</string>
-
-    <!-- Heads up snooze -->
-    <string name="heads_up_snooze_title">Snooze timer</string>
-    <string name="heads_up_snooze_summary">Swipe heads up per posticipare a <xliff:g id="number">%d</xliff:g> Minuti</string>
-    <string name="heads_up_snooze_disabled_summary">Snooze timer disabilitato</string>
-    <string name="heads_up_snooze_1min">1 Minuto</string>
-    <string name="heads_up_snooze_3min">3 Minuti</string>
-    <string name="heads_up_snooze_5min">5 Minuti</string>
-    <string name="heads_up_snooze_10min">10 Minuti</string>
-    <string name="heads_up_snooze_15min">15 Minuti</string>
-    <string name="heads_up_snooze_20min">20 Minuti</string>
 
     <!-- UI debug setting: show CPU info? [CHAR LIMIT=25] -->
     <string name="show_cpu_info">Visualizza CPU info</string>
@@ -1095,10 +1089,6 @@
     <string name="mount_notification_title">Notifica Mount</string>
     <string name="mount_notification_summary">Visualizza notifica quando viene collegato uno storage</string>
 
-    <!-- Calibration Control under Display-Advanced -->
-    <string name="calibration_control_title">Calibrazione tocco</string>
-    <string name="calibration_control_summary">Abilita Controllo Calibrazione tocco</string>
-
     <!-- Clear button color -->
     <string name="clear_all_color_title">Colore tasto cancella notifiche nel drawer</string>
     <string name="notification_drawer_clear_all_icon_color_title">Icona</string>
@@ -1160,7 +1150,6 @@
     <string name="pie_button_second_layer_summary">Modifica i pulsanti del secondo livello</string>
     <string name="pie_button_style_summary">Cambia stile tasti pie</string>
     <string name="pie_style_reset_message">Reset alla configurazione di default?</string>
-    <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Rimuovere tutti i tasti del secondo livello lo disabilita</string>
     <string name="icon_color_mode_all_icons">Tutte le icone</string>
     <string name="icon_color_mode_system_icons">Icone di sistema</string>
     <string name="icon_color_mode_system_custom_icons">Icone sistema e personalizzate</string>
@@ -1273,13 +1262,6 @@
     <string name="tab_position_summary">Visualizza il TAP sopra,centrale,sotto</string>
     <string name="tab_size_title">Dimensione Tab</string>
     <string name="tab_size_summary">Cambia la misura del TAB visibile</string>
-    <string name="trigger_category">Opzioni Trigger</string>
-    <string name="trigger_width_title">Larghezza Trigger</string>
-    <string name="trigger_width_summary">Modifica la larghezza della trigger area</string>
-    <string name="trigger_top_title">Posizione Trigger</string>
-    <string name="trigger_top_summary">Modifica la posizione verticale della trigger area</string>
-    <string name="trigger_bottom_title">Altezza Trigger</string>
-    <string name="trigger_bottom_summary">Modifica l\'altezza della trigger area</string>
 
     <!-- Selinux Switch -->
     <string name="selinux_switch_title">Opzioni SElinux</string>
@@ -1287,14 +1269,12 @@
     <string name="selinux_title">SElinux Mode</string>
     <string name="selinux_permissive_title">Permissive</string>
     <string name="selinux_enforcing_title">Enforcing</string>
+    <string name="selinux_switch_onboot_title">Applica al boot</string>
+    <string name="selinux_switch_onboot_summary">Applica lo stato selinux al boot</string>
 
     <!-- Floating Windows -->
     <string name="slim_action_floats">Azioni SlimRecents e Pie</string>
     <string name="slim_action_floats_summary">lancia azioni SlimRecents e del Pie in Floating Window Mode</string>
-
-    <!-- Hide lock screen carrier -->
-    <string name="lock_screen_hide_carrier_title">Togli Operatore schermata di sblocco</string>
-    <string name="lock_screen_hide_carrier_summary">la SystemUI verrà riavviata.</string>
 
     <!-- Status bar temperature -->
     <string name="status_bar_temperature_title">Temperatura Meteo</string>
@@ -1384,15 +1364,11 @@
     <string name="status_bar_custom_header_summary">Abilita l\'immagine della giornata solare nel pannello notifiche</string>
 
     <!-- Aicp Settings Tabs -->
-    <string name="aicp_settings_tab1">Altro</string>
+    <string name="aicp_settings_tab1">Notifiche</string>
     <string name="aicp_settings_tab2">Interfaccia</string>
-    <string name="aicp_settings_tab3">Notifiche</string>
-    <string name="aicp_settings_tab4">Sistema</string>
+    <string name="aicp_settings_tab3">Sistema</string>
 
-    <!-- Long press on lock screen lock icon to launch torch-->
-    <string name="longpress_lock_icon_torch_title">Pressione lucchetto attiva torcia</string>
-    <string name="longpress_lock_icon_torch_summary">Questa opzione non funziona con smart lock e con gesture attive in accessibilità</string>
-
+    <!-- Chamber of Secrets -->
     <string name="chamber_title">Camera dei Segreti</string>
     <string name="chamber_toast">La camera dei segreti è aperta</string>
 
@@ -1411,5 +1387,25 @@
     <string name="lockscreen_colors_reset_title">Resetta colori sblocco</string>
     <string name="lockscreen_colors_reset_message">Sei sicuro di voler resettare i colori a quelli di defualt?</string>
     <string name="yes">SI</string>
+
+    <!-- Whether the keyguard will directly pass to gesture entry -->
+    <string name="lock_directly_show_gesture">Visualizza direttamente le gesture</string>
+
+    <!-- Ability to disable hardware keys via nav bar settings -->
+    <string name="hw_keys_title">Tasti Hw</string>
+    <string name="hw_keys_summary">Abilita tasti hw</string>
+
+    <!-- Lockscreen see through -->
+    <string name="lockscreen_see_through_title">Sblocco sfuocato</string>
+    <string name="lockscreen_see_through_summary">Sfuoca il contenuto dietro la schermata di sblocco</string>
+    <string name="lockscreen_blur_radius">Intensità effetto</string>
+
+    <!-- On-The-Go -->
+    <string name="power_menu_onthego_title">Modalità On-The-Go</string>
+    <string name="onthego_alpha_title">Trasparenza On-The-Go</string>
+    <string name="onthego_alpha_summary">Il vaore della trasparenza in modalità On-The-Go è sovrascritto</string>
+
+    <!-- AdAway -->
+    <string name="adaway_settings_title">AdAway</string>
 
 </resources>
