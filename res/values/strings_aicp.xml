@@ -904,6 +904,7 @@
     <string name="qs_systemui_restart_tile">Restart SystemUI</string>
     <string name="qs_tile_slim_floats">Slim Floats</string>
     <string name="qs_tile_themes">Themes</string>
+    <string name="qs_tile_trds">TRDS</string>
 
     <!-- QuickSettings collapse panel -->
     <string name="quick_settings_collapse_title">Auto close panel</string>
