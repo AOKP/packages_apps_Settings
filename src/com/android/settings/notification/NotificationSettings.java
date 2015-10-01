@@ -365,11 +365,11 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
     private void initRingtones(PreferenceCategory root) {
         DefaultRingtonePreference phoneRingtonePreference =
                 (DefaultRingtonePreference) root.findPreference(KEY_PHONE_RINGTONE);
-        mPhoneRingtonePreferences = new ArrayList<DefaultRingtonePreference>();
-        if (mPhoneRingtonePreferences != null && !mVoiceCapable) {
+        if (phoneRingtonePreference != null && !mVoiceCapable) {
             root.removePreference(phoneRingtonePreference);
             mPhoneRingtonePreferences = null;
         } else {
+            mPhoneRingtonePreferences = new ArrayList<DefaultRingtonePreference>();
             TelephonyManager telephonyManager = (TelephonyManager) mContext.getSystemService(
                     Context.TELEPHONY_SERVICE);
             if (telephonyManager.isMultiSimEnabled()) {
