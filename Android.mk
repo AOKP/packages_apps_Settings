@@ -38,8 +38,10 @@ LOCAL_AAPT_FLAGS := \
     --extra-packages android.support.v7.cardview \
     --extra-packages org.antipiracy.support
 
-include frameworks/opt/setupwizard/navigationbar/common.mk
+LOCAL_AAPT_INCLUDE_ALL_RESOURCES := true
+LOCAL_ASSET_DIR := $(LOCAL_PATH)/assets
 
+include frameworks/opt/setupwizard/navigationbar/common.mk
 include $(BUILD_PACKAGE)
 
 # Use the following include to make our test apk.
