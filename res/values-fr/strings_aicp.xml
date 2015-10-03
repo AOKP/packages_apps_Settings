@@ -953,7 +953,7 @@
     <string name="heads_up_dismiss_on_remove_title">Comportement du swype </string>
     <string name="heads_up_dismiss_on_remove_summary_enabled">Masquer la notification au lieu de la rejeter</string>
     <string name="heads_up_dismiss_on_remove_summary_disabled">Cacher et rejeter la notification</string>
-    <string name="heads_up_floating_window_summary">Appuie long pour ouvrir en mode flottant lorsque vous n\'êtes pas sur l\'écran d'accueil</string>
+    <string name="heads_up_floating_window_summary">Appuie long pour ouvrir en mode flottant lorsque vous n\'êtes pas sur l\'écran d\'accueil</string>
 
     <!-- Heads up timeout -->
     <string name="heads_up_time_out_title">Délai d\'affichage</string>
