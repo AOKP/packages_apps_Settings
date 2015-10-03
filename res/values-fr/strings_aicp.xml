@@ -35,6 +35,9 @@
     <string name="chipset_info">Chipset</string>
     <!-- About phone screen, Free memory info -->
     <string name="mem_info">Mémoire</string>
+    <!-- About phone screen, AICP device maintainer name -->
+    <string name="device_maintainer">Mainteneur de l\'appareil</string>
+    <string name="device_maintainers">Mainteneurs de l\'appareil</string>
 
     <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
     <plurals name="show_dev_countdown_aicp">
@@ -146,7 +149,7 @@
     <string name="ime_switcher_notify_summary">Afficher un raccourci pour accéder au sélecteur de mode de saisie</string>
 
     <!-- Various shit -->
-    <string name="various_shit_title">Divers Merde/ajouts</string>
+    <string name="various_shit_title">Divers ajouts</string>
     <string name="battery_percentage_title">Pourcentage de batterie</string>
     <string name="battery_percentage_summary">Montrer le pourcentage de la batterie dans l\'icônes .</string>
     <string name="proximity_on_wake_title">Proximité sur le réveil</string>
@@ -155,7 +158,7 @@
     <string name="aicp_notifications_category">Notifications</string>
     <string name="navigation_bar_category">Barre de navigation</string>
     <string name="navigation_ring_category">Anneau de la barre de navigation</string>
-    <string name="aicp_extras_category">Plus de Merde !</string>
+    <string name="aicp_extras_category">Plus d\'ajouts !</string>
 
     <!-- Per app controls for LP keyguard notifications -->
     <string name="app_notification_show_on_keyguard_title">Afficher sur l\'écran de verrouillage</string>
@@ -219,6 +222,12 @@
 
     <!-- SuperSU header name - the app hides itself from launcher based on this resource name being present in com.android.settings -->
     <string name="supersu_title">SuperSU</string>
+
+    <!-- Change Log -->
+    <string name="changelog_title">Changelog</string>
+    <string name="changelog_title_summary">Voir les récents changelogs de la ROM</string>
+    <string name="changelog_error">Impossible de charger le changelog</string>
+
 
     <!-- MediaScanner behavior on boot -->
     <string name="options_settings_title">Options</string>
@@ -423,6 +432,8 @@
     <string name="gesture_anywhere_position_right">Côté droit</string>
     <string name="gesture_anywhere_gestures_title">Gestes</string>
     <string name="gesture_anywhere_gestures_summary">Ajouter, supprimer, et modifier des gestes</string>
+    <string name="gesture_anywhere_floating">Mode flottant</string>
+    <string name="gesture_anywhere_floating_summary">Lancez les raccourcis en mode flottant</string>
     <!-- Label, button used to add a gesture -->
     <string name="ga_button_add">Ajouter un geste</string>
     <!-- Label, button used to reload all gestures -->
@@ -597,6 +608,9 @@
     <string name="toast_Translucent_animation">Animation translucide</string>
     <string name="toast_SlideLeftRight_animation">Glisser de gauche à droite</string>
     <string name="toast_SlideRightLeft_animation">Glisser de droite à gauche</string>
+
+  <!-- Toast Icons -->
+    <string name="toast_icon_title">Icône Toast</string>
 
     <!-- Volume Steps -->
     <string name="volume_steps_title">Étapes de volume</string>
@@ -939,6 +953,7 @@
     <string name="heads_up_dismiss_on_remove_title">Comportement du swype </string>
     <string name="heads_up_dismiss_on_remove_summary_enabled">Masquer la notification au lieu de la rejeter</string>
     <string name="heads_up_dismiss_on_remove_summary_disabled">Cacher et rejeter la notification</string>
+    <string name="heads_up_floating_window_summary">Appuie long pour ouvrir en mode flottant lorsque vous n\'êtes pas sur l\'écran d'accueil</string>
 
     <!-- Heads up timeout -->
     <string name="heads_up_time_out_title">Délai d\'affichage</string>
@@ -1233,7 +1248,9 @@
     <string name="selinux_title">Etat SElinux</string>
     <string name="selinux_permissive_title">Permissif</string>
     <string name="selinux_enforcing_title">Application</string>
-    
+    <string name="selinux_switch_onboot_title">Appliquer au démarrage</string>
+    <string name="selinux_switch_onboot_summary">Appliquer l\'état SElinux au démarrage.</string>
+
     <!-- Hide lock screen carrier -->
     <string name="lock_screen_hide_carrier_title">Cacher l\'opérateur sur l\'écran de déverouillage</string>
     <string name="lock_screen_hide_carrier_summary">Le SystemUI sera redémarré lors de ce changement.</string>
@@ -1265,7 +1282,7 @@
     <string name="dim_nav_buttons_animate_summary">Animer le fondu alpha</string>
     <string name="dim_nav_buttons_animate_duration_title">Durée de l\'animation</string>
     <string name="dim_nav_buttons_animate_duration_summary">Durée (en millisecondes) de l\'animation alpha</string>
-    <string name="dim_nav_buttons_touch_anywhere_title">Listen for touches on entire screen</string>
+    <string name="dim_nav_buttons_touch_anywhere_title">Attendre le toucher sur tout l\'écran</string>
     <string name="dim_nav_buttons_touch_anywhere_summary_on">Toucher n\'importe où sur l\'écran provoque l\'éclaircissement des boutons</string>
     <string name="dim_nav_buttons_touch_anywhere_summary_off">Toucher uniquement la barre de naviguation pour l\'éclaircissement des boutons</string>
 
@@ -1314,17 +1331,16 @@
     <string name="status_bar_custom_header_summary">Activer l\'image d\'en-tête personnalisé dans le panneau de notifications</string>
 
     <!-- Aicp Settings Tabs -->
-    <string name="aicp_settings_tab1">Divers</string>
-    <string name="aicp_settings_tab2">UI</string>
-    <string name="aicp_settings_tab3">Barre de statut</string>
-    <string name="aicp_settings_tab4">Système</string>
+     <string name="aicp_settings_tab1">UI</string>
+    <string name="aicp_settings_tab2">Intégré</string>
+    <string name="aicp_settings_tab3">Ajouts</string>
 
     <!-- Chamber of Secrets -->
     <string name="chamber_title">Chambre des secrets</string>
-    <string name="chamber_toast">La chambre des secrets est ouvert</string>
+    <string name="chamber_toast">La chambre des secrets est ouverte</string>
 
     <!-- Device policy override -->
-    <string name="device_policy_override_title">Annuler politique de périphériques</string>
+    <string name="device_policy_override_title">Annuler politique de périphérique</string>
     <string name="device_policy_override_summary">Autoriser les applications à forcer l\'écran de verrouillage et outrepasser les profils système</string>
 
   <!-- Lockscreen Colors -->
@@ -1361,6 +1377,6 @@
 
     <!-- Media art -->
     <string name="media_art_title">Pochette des médias </string>
-    <string name="media_art_summary">Activer les pochettes des média sur l\'écran de déverrouillag</string>
+    <string name="media_art_summary">Activer les pochettes des média sur l\'écran de déverrouillage</string>
 
 </resources>

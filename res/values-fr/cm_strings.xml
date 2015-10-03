@@ -947,4 +947,12 @@ Vous êtes maintenant à <xliff:g id="step_count">%1$d</xliff:g> étapes de l\'a
   <string name="lto_download_data_wifi_only">Téléchargement de données assisté par GPS</string>
   <string name="lto_download_data_wifi_only_on">Via n\'importe quel réseau</string>
   <string name="lto_download_data_wifi_only_off">Uniquement via les réseaux Wi\u2011Fi</string>
+  <string name="sim_ringtone_title">Sonnerie %d SIM</string>
+  <string name="keep_screen_on_never">Jamais</string>
+  <string name="keep_screen_on_debugging">Lors du débogage USB</string>
+  <string name="keep_screen_on_charging">Lors du chargement</string>
+  <string name="quick_settings_reset_message">Restaurer l\'organisation du volet des paramètres?</string>
+  <string name="disable_navkeys_title">Activer barre de navigation à l\'écran </string>
+  <string name="disable_navkeys_summary">Activer barre de navigation à l\'écran et désactiver les boutons tactiles</string>
+  <string name="navigation_ring_enable_title">Activer les raccourcis de l\'anneau de navigation</string>
 </resources>
