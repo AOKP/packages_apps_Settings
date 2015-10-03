@@ -262,7 +262,7 @@
 
     <!-- LockClocK -->
     <string name="lock_clock_title">cLock Einstellungen</string>
-    <string name="lock_clock_summary">Ansicht und Änderung wie das \'cLock\' widget dargestellt wird.</string>
+    <string name="lock_clock_summary">Ansicht und Änderung wie das \'cLock\' Widget dargestellt wird.</string>
 
     <!-- QuickSettings: Smart Pulldown -->
     <string name="smart_pulldown_title">Intelligentes Runterziehen</string>
@@ -307,13 +307,12 @@
     <string name="volume_adjust_sound_title">Sound bei Toneinstellung</string>
 
     <string name="shortcut_action_none">Keine</string>
-    <string name="shortcut_action_app">Andere Anwendung</string>
+    <string name="shortcut_action_app">Eigene App</string>
     <string name="shortcut_action_home">Home</string>
     <string name="shortcut_action_back">Zurück</string>
-    <string name="shortcut_action_kill">Beende Anwendung</string>
-    <string name="shortcut_action_lastapp">Letzte Anwendung</string>
+    <string name="shortcut_action_kill">Beende App</string>
+    <string name="shortcut_action_lastapp">Letzte App</string>
     <string name="shortcut_action_assist">Suche</string>
-    <string name="shortcut_action_smart">Intelligentes Runterziehen</string>
     <string name="shortcut_action_screenshot">Bildschirmfoto</string>
     <string name="shortcut_action_torch">Taschenlampe</string>
     <string name="shortcut_action_menu">Menü</string>
@@ -325,14 +324,14 @@
     <string name="shortcut_action_recent">Anwendungsverlauf</string>
     <string name="shortcut_action_restartui">Neustart der SystemUI</string>
     <string name="shortcut_action_power">Bildschirm aus</string>
-    <string name="shortcut_action_search">Suche in Anwendung</string>
-    <string name="shortcut_action_ring_vib">Ton/Vibration</string>
-    <string name="shortcut_action_ring_silent">Lautlos</string>
+    <string name="shortcut_action_search">Suche in App</string>
+    <string name="shortcut_action_ring_vib">Klingeln/Vibration</string>
+    <string name="shortcut_action_ring_silent">Klingeln/Lautlos</string>
     <string name="shortcut_action_ring_vib_silent">Klingeln/Vib/Stumm</string>
     <string name="shortcut_action_camera">Kamera</string>
     <string name="shortcut_action_media_next">Musik - nächster Titel</string>
     <string name="shortcut_action_media_play_pause">Musik - Abspielen/Pause</string>
-    <string name="shortcut_action_media_previous">Vorheriges Lied</string>
+    <string name="shortcut_action_media_previous">Musik - Vorheriges Lied</string>
     <string name="shortcut_action_wake_device">Gerät aufwecken</string>
 
     <string name="shortcut_action_longpress">Lange Drücken:</string>
@@ -416,6 +415,102 @@
     <string name="shortcuts_icon_picker_tv">TV</string>
     <string name="shortcuts_icon_picker_twitter">Twitter</string>
     <string name="shortcuts_icon_picker_unlock">Entsperren</string>
+    <string name="airplay">AirPlay</string>
+    <string name="android">Android</string>
+    <string name="badoo">Badoo</string>
+    <string name="battery">Akku</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="bookmarks">Lesezeichen</string>
+    <string name="browser">Browser</string>
+    <string name="browser2">Browser2</string>
+    <string name="calculator">Calculator</string>
+    <string name="calendar">Calendar</string>
+    <string name="calls">Anrufe</string>
+    <string name="camera">Kamera</string>
+    <string name="chrome">Chrome</string>
+    <string name="clock">Uhr</string>
+    <string name="cnn">CNN</string>
+    <string name="deezer2">Deezer2</string>
+    <string name="deezer">Deezer</string>
+    <string name="dolphin2">Dolphin</string>
+    <string name="downloads">Downloads</string>
+    <string name="dropbox">Dropbox</string>
+    <string name="ebay">Ebay</string>
+    <string name="email">E-Mail</string>
+    <string name="evernote">Evernote</string>
+    <string name="explorer">Explorer</string>
+    <string name="falcon">Falcon</string>
+    <string name="fb">Facebook</string>
+    <string name="flipboard">Flipboard</string>
+    <string name="foursquare">Foursquare</string>
+    <string name="firefox">Firefox</string>
+    <string name="googlebuzz">Google Buzz</string>
+    <string name="googledocs">Google Docs</string>
+    <string name="googlewallet">Google Wallet</string>
+    <string name="line">Buchse</string>
+    <string name="mic">Mikrofon</string>
+    <string name="newyorktimes">The New York Times</string>
+    <string name="rootexplorer">Root Explorer</string>
+    <string name="sim">SIM</string>
+    <string name="teamviewer">TeamViewer</string>
+    <string name="totalcommander">Total Commander</string>
+    <string name="weather">Wetter</string>
+    <string name="golocker">GO Locker</string>
+    <string name="googlecurrents">Google Currents</string>
+    <string name="googletalk">Google Talk</string>
+    <string name="gosms">GO SMS</string>
+    <string name="meebo">Meebo</string>
+    <string name="maps2">Maps2</string>
+    <string name="memorycleaner">Memory Cleaner</string>
+    <string name="navigation">Navigation</string>
+    <string name="pulse">Pulse</string>
+    <string name="shazam">Shazam</string>
+    <string name="swiftkey">Swiftkey</string>
+    <string name="tmobile">T-Mobile</string>
+    <string name="trash">Papierkorb</string>
+    <string name="games">Spiele</string>
+    <string name="gmail">Gmail</string>
+    <string name="docs">Dokumente</string>
+    <string name="googledrive">Google Drive</string>
+    <string name="googleearth">Google Earth</string>
+    <string name="googlehangouts">Google Hangouts</string>
+    <string name="googlekeep">Google Keep</string>
+    <string name="googleplay">Google Play</string>
+    <string name="googletranslate">Google Übersetzer</string>
+    <string name="google">Google Suche</string>
+    <string name="googleplus">Google Plus</string>
+    <string name="imdb">IMDB</string>
+    <string name="instagram">Instagram</string>
+    <string name="lastfm">Last.fm</string>
+    <string name="maps">Google Maps</string>
+    <string name="messages">Nachrichten</string>
+    <string name="music">Musik</string>
+    <string name="mxplayer">MX Player</string>
+    <string name="notepad">Notiz</string>
+    <string name="opera">Opera</string>
+    <string name="paint">Paint</string>
+    <string name="paypal">Paypal</string>
+    <string name="phone">Telefon</string>
+    <string name="picasa">Picasa</string>
+    <string name="pictures2">Pictures2</string>
+    <string name="player_pro">Player Pro</string>
+    <string name="playstation">Playstation</string>
+    <string name="reddit">Reddit</string>
+    <string name="settings">Einstellungen</string>
+    <string name="skype">Skype</string>
+    <string name="soundscloud">SoundCloud</string>
+    <string name="spotifiy">Spotify</string>
+    <string name="tapatalk">Tapatalk</string>
+    <string name="tunein">TuneIn</string>
+    <string name="twitter">Twitter</string>
+    <string name="viber">Viber</string>
+    <string name="videocamera">Videokamera</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="wifi">Wi-Fi</string>
+    <string name="xda">XDA</string>
+    <string name="yahoo">Yahoo</string>
+    <string name="youtube">YouTube</string>
+    <string name="zedge">Zedge</string>
 
     <!-- Device specific settings -->
     <string name="screen_off_gesture_settings_title">Gesten zur Displayabschaltung</string>
@@ -1007,9 +1102,13 @@
 
     <!-- Heads up timeout -->
     <string name="heads_up_time_out_title">Timeout</string>
+    <string name="heads_up_time_out_summary">Benachrichtigung wird gezeigt für: </string>
+    <string name="heads_up_time_out_never_summary">Benachrichtigung wird solange gezeigt, bis sie verworfen wird</string>
 
     <!-- Heads up snooze -->
     <string name="heads_up_snooze_title">Schlaf-Timer</string>
+    <string name="heads_up_snooze_summary">Wenn die Schlaf-Taste gedrückt wird, verhindere Pop-ups für: </string>
+    <string name="heads_up_snooze_disabled_summary">Schlaf-Timer ist deaktiviert</string>
 
     <!-- Heads up touch outside -->
     <string name="heads_up_touch_outside_title">Verhalten bei Berührung außerhalb</string>
@@ -1393,7 +1492,7 @@
     <!-- Lockscreen see through -->
     <string name="lockscreen_see_through_title">Sperrbildschirm-Trübung</string>
     <string name="lockscreen_see_through_summary">Trübt und zeigt stattdessen den Inhalt hinter dem Sperrbildschirm.</string>
-    <string name="lockscreen_blur_radius">Blur effect intensity</string>
+    <string name="lockscreen_blur_radius">Intensität der Trübung</string>
 
     <!-- On-The-Go -->
     <string name="power_menu_onthego_title">On-The-Go Modus</string>
@@ -1402,5 +1501,9 @@
 
     <!-- AdAway -->
     <string name="adaway_settings_title">AdAway Werbeblocker</string>
+
+    <!-- Media art -->
+    <string name="media_art_title">Medien-Cover</string>
+    <string name="media_art_summary">Aktiviere die Darstellung von Medien-Covern auf dem Sperrbildschirm</string>
 
 </resources>
