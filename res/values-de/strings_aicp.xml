@@ -333,6 +333,8 @@
     <string name="shortcut_action_media_play_pause">Musik - Abspielen/Pause</string>
     <string name="shortcut_action_media_previous">Musik - Vorheriges Lied</string>
     <string name="shortcut_action_wake_device">Gerät aufwecken</string>
+    <string name="shortcut_action_pie">PIE</string>
+    <string name="shortcut_action_theme_switch">Wechsle Thema</string>
 
     <string name="shortcut_action_longpress">Lange Drücken:</string>
     <string name="shortcut_action_select_action_longpress">Aktion bei langem Druck:</string>
@@ -371,8 +373,8 @@
     <string name="shortcuts_icon_picker_camera">Kamera</string>
     <string name="shortcuts_icon_picker_cloud">Cloud</string>
     <string name="shortcuts_icon_picker_contact">Kontakt</string>
-    <string name="shortcuts_icon_picker_directdial">Direktes Anrufen</string>
-    <string name="shortcuts_icon_picker_directmessage">Direkte Nachricht</string>
+    <string name="shortcuts_icon_picker_directdial">Direktanruf</string>
+    <string name="shortcuts_icon_picker_directmessage">Sofortnachricht</string>
     <string name="shortcuts_icon_picker_drive">Drive</string>
     <string name="shortcuts_icon_picker_dropbox">Dropbox</string>
     <string name="shortcuts_icon_picker_email">Email</string>
@@ -406,7 +408,7 @@
     <string name="shortcuts_icon_picker_pocket">Pocket</string>
     <string name="shortcuts_icon_picker_quicksettings">Schnelleinstellungen</string>
     <string name="shortcuts_icon_picker_rss">RSS Feed</string>
-    <string name="shortcuts_icon_picker_sdcard">SDCard</string>
+    <string name="shortcuts_icon_picker_sdcard">SD-Karte</string>
     <string name="shortcuts_icon_picker_search">Suche</string>
     <string name="shortcuts_icon_picker_sms">SMS</string>
     <string name="shortcuts_icon_picker_tasks">Aufgaben</string>
@@ -900,6 +902,7 @@
     <string name="qs_systemui_restart_tile">SystemUI neustarten</string>
     <string name="qs_tile_slim_floats">Slim Floats</string>
     <string name="qs_tile_themes">Themen</string>
+    <string name="qs_tile_trds">TRDS</string>
 
     <!-- QuickSettings collapse panel -->
     <string name="quick_settings_collapse_title">Paneel automatisch schließen</string>
@@ -922,7 +925,7 @@
     <string name="qs_color_switch_summary">Einstellen um unten verschiedene Farboptionen für Schnelleinstellungen vorzunehmen</string>
 
     <!-- Navigation bar button color -->
-    <string name="navbar_button_tint_title">Tönung der Navigationsleiste</string>
+    <string name="navbar_button_tint_title">Tönung der Navigationsleistenelemente</string>
 
     <!-- AOKP custom system animations -->
     <string name="aokp_animation_title">Systemanimationen</string>
@@ -1416,7 +1419,7 @@
     <!-- Headphones icon switch -->
     <string name="show_headset_icon_title">Symbol für Kopfhörer</string>
     <string name="show_headset_icon_summary">Zeigt ein Symbol, wenn ein Kopfhörer/Headset verbunden ist.</string>
-    
+
     <!-- Volume icon switch -->
     <string name="show_volume_icon_title">Symbol für Lautstärke-Modus</string>
     <string name="show_volume_icon_summary">Zeige Symbol für den Lautstärke-Modus (Standard=Aktiviert).</string>
@@ -1505,5 +1508,15 @@
     <!-- Media art -->
     <string name="media_art_title">Medien-Cover</string>
     <string name="media_art_summary">Aktiviere die Darstellung von Medien-Covern auf dem Sperrbildschirm</string>
+
+    <!-- TRDS 5.0 -->
+    <string name="theme_settings_title">TRDS (The Real Dark Slim)</string>
+    <string name="theme_auto_mode_title">Thema wechseln</string>
+    <string name="theme_auto_mode_off">Manuell</string>
+    <string name="theme_auto_mode_lightsensor">Bei Lichtwechsel (experimentell)</string>
+    <string name="theme_auto_mode_twilight">Am Tage</string>
+    <string name="theme_auto_switch_mode_error">Der automatische Modus bei Lichtwechsel ist aktiviert. Manuelles Umschalten ist nicht möglich.</string>
+    <string name="theme_reset_message">Themeneinstellung auf Standard zurücksetzen?</string>
+    <string name="reset_default_message">Standard wiederherstellen</string>
 
 </resources>
