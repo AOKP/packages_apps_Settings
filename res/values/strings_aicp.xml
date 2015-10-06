@@ -335,8 +335,6 @@
     <string name="shortcut_action_media_play_pause">Music - play/pause</string>
     <string name="shortcut_action_media_previous">Music - previous track</string>
     <string name="shortcut_action_wake_device">Wake up device</string>
-    <string name="shortcut_action_pie">Pie</string>
-    <string name="shortcut_action_theme_switch">Theme switcher</string>
 
     <string name="shortcut_action_longpress">Longpress:</string>
     <string name="shortcut_action_select_action_longpress">Choose longpress action:</string>
@@ -904,7 +902,6 @@
     <string name="qs_systemui_restart_tile">Restart SystemUI</string>
     <string name="qs_tile_slim_floats">Slim Floats</string>
     <string name="qs_tile_themes">Themes</string>
-    <string name="qs_tile_trds">TRDS</string>
 
     <!-- QuickSettings collapse panel -->
     <string name="quick_settings_collapse_title">Auto close panel</string>
@@ -1510,15 +1507,5 @@
     <!-- Media art -->
     <string name="media_art_title">Media cover art</string>
     <string name="media_art_summary">Enable media cover art on the lockscreen</string>
-
-    <!-- TRDS 5.0 -->
-    <string name="theme_settings_title">TRDS</string>
-    <string name="theme_auto_mode_title">Switch theme</string>
-    <string name="theme_auto_mode_off">Manual</string>
-    <string name="theme_auto_mode_lightsensor">On light condition change (experimental)</string>
-    <string name="theme_auto_mode_twilight">On daytime</string>
-    <string name="theme_auto_switch_mode_error">Automatic light condition change mode is enabled. Manual switching is not possible.</string>
-    <string name="theme_reset_message">Reset theme state to default?</string>
-    <string name="reset_default_message">Reset default</string>
 
 </resources>
