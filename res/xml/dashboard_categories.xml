@@ -123,14 +123,6 @@
             </intent>
         </dashboard-tile>
 
-        <!-- TRDS -->
-        <dashboard-tile
-                android:id="@+id/theme_settings"
-                android:icon="@drawable/ic_settings_theme"
-                android:fragment="com.android.settings.slim.themes.ThemeSettings"
-                android:title="@string/theme_settings_title"
-                />
-
     </dashboard-category>
 
     <!-- DEVICE -->
