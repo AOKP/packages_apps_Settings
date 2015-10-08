@@ -905,7 +905,7 @@
     <string name="qs_tile_trds">TRDS</string>
 
     <!-- QuickSettings collapse panel -->
-    <string name="quick_settings_collapse_title">Paneel automatisch schließen</string>
+    <string name="quick_settings_collapse_title">Schnelleinstellungen automatisch schließen</string>
     <string name="quick_settings_collapse_summary">Schließe die Schnelleinstellungen beim Umschalten</string>
 
     <!-- QuickSettings 4 columns -->
@@ -1362,8 +1362,8 @@
 
     <!-- Selinux Switch -->
     <string name="selinux_switch_title">SELinux-Schalter Optionen</string>
-    <string name="selinux_switch_summary">SELinux sind verschiedene Kernel-Modificationen und "user-space" Werkzeuge. Eine Änderung des Modus kann unerwartetes Telefonverhalten auslösen. Benutzung auf eigenes Risiko!</string>
-    <string name="selinux_title">SELinux Modus</string>
+    <string name="selinux_switch_summary">SELinux sind verschiedene Kernel-Modifikationen und \"user-space\" Werkzeuge. Eine Änderung des Modus kann unerwartetes Telefonverhalten auslösen. Benutzung auf eigenes Risiko!</string>
+    <string name="selinux_title">SELinux-Modus</string>
     <string name="selinux_permissive_title">Moderat</string>
     <string name="selinux_enforcing_title">Strikt</string>
     <string name="selinux_switch_onboot_title">Beim Systemstart setzen</string>
@@ -1467,7 +1467,7 @@
 
     <!-- Chamber of Secrets -->
     <string name="chamber_title">Geheimkammer</string>
-    <string name="chamber_toast">Die Geheimkammer wurde geäffnet</string>
+    <string name="chamber_toast">Die Geheimkammer wurde geöffnet</string>
 
     <!-- Device policy override -->
     <string name="device_policy_override_title">Übergehen der Profileinstellung</string>
@@ -1508,15 +1508,5 @@
     <!-- Media art -->
     <string name="media_art_title">Medien-Cover</string>
     <string name="media_art_summary">Aktiviere die Darstellung von Medien-Covern auf dem Sperrbildschirm</string>
-
-    <!-- TRDS 5.0 -->
-    <string name="theme_settings_title">TRDS (The Real Dark Slim)</string>
-    <string name="theme_auto_mode_title">Thema wechseln</string>
-    <string name="theme_auto_mode_off">Manuell</string>
-    <string name="theme_auto_mode_lightsensor">Bei Lichtwechsel (experimentell)</string>
-    <string name="theme_auto_mode_twilight">Am Tage</string>
-    <string name="theme_auto_switch_mode_error">Der automatische Modus bei Lichtwechsel ist aktiviert. Manuelles Umschalten ist nicht möglich.</string>
-    <string name="theme_reset_message">Themeneinstellung auf Standard zurücksetzen?</string>
-    <string name="reset_default_message">Standard wiederherstellen</string>
 
 </resources>
