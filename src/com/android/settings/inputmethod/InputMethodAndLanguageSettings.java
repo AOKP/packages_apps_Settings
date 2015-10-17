@@ -65,6 +65,7 @@ import com.android.settings.search.Indexable;
 import com.android.settings.search.SearchIndexableRaw;
 
 import cyanogenmod.hardware.CMHardwareManager;
+import cyanogenmod.providers.CMSettings;
 
 import java.text.Collator;
 import java.util.ArrayList;
@@ -418,15 +419,14 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
         }
         if (preference == mStylusIconEnabled) {
             Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.STYLUS_ICON_ENABLED,
-                    mStylusIconEnabled.isChecked() ? 1 : 0);
+                    Settings.System.STYLUS_ICON_ENABLED, mStylusIconEnabled.isChecked() ? 1 : 0);
         } else if (preference == mHighTouchSensitivity) {
-            boolean mHighTouchSensitivityEnabled = mHighTouchSensitivity.isChecked();
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.CM_HARDWARE_HIGH_TOUCH_SENSITIVITY_ENABLE,
-                    mHighTouchSensitivityEnabled ? 1 : 0);
+            boolean mHighTouchSensitivityEnable = mHighTouchSensitivity.isChecked();
+            CMSettings.System.putInt(getActivity().getContentResolver(),
+                    CMSettings.System.HIGH_TOUCH_SENSITIVITY_ENABLE,
+                    mHighTouchSensitivityEnable ? 1 : 0);
             return mHardware.set(CMHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY,
-                    mHighTouchSensitivityEnabled);
+                    mHighTouchSensitivityEnable);
         } else if (preference == mTouchscreenHovering) {
             return mHardware.set(CMHardwareManager.FEATURE_TOUCH_HOVERING,
                     mTouchscreenHovering.isChecked());
