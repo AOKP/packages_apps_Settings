@@ -90,6 +90,15 @@
         <org.lineageos.internal.preference.deviceinfo.LineageAPIVersionPreference
                 android:key="lineage_api_level" />
 
+        <!-- AOKP firmware version -->
+        <org.lineageos.internal.preference.deviceinfo.LineageVersionPreference
+                android:key="aokp_version"
+                android:enabled="false"
+                android:shouldDisableView="false"
+                android:title="@string/aokp_version_title"
+                android:summary="@string/aokp_version_default"
+                android:icon="@drawable/ic_aokp_alpha" />
+
         <!-- Security patch level -->
         <Preference android:key="security_patch"
                 android:title="@string/security_patch"
