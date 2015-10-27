@@ -22,4 +22,7 @@
     <dimen name="pa_security_width">320dp</dimen>
     <!-- Height of the sliding KeyguardSecurityContainer (includes 2x keyguard_security_view_margin) -->
     <dimen name="pa_security_height">400dp</dimen>
+
+    <!-- Shortcur picker -->
+    <dimen name="shortcut_picker_left_padding">40dip</dimen>
 </resources>
