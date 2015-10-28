@@ -1047,18 +1047,16 @@
 
   <string name="interruptions_ignore_while_media_title">Lehalkítás megelőzése</string>
   <string name="interruptions_ignore_while_media_summary">Ne csökkentse a lejátszott média hangerejét értesítés érkezésekor</string>
-    <string name="allow_lights_title">Értesítési fény engedélyezése</string>
-
-    <!-- LiveDisplay -->
-    <string name="live_display_title" translatable="false">LiveDisplay</string>
-    <string name="live_display_summary">Optimalizálja a képernyőt a napszaknak és a fényviszonyoknak megfelelően, javítva az olvashatóságot és csökkentve a szemek terhelését</string>
-    <string name="live_display_mode">Képernyő mód</string>
-    <string name="live_display_color_temperature_title">Színhőmérséklet</string>
-    <string name="live_display_color_temperature_summary">Nappal:<xliff:g id="day_temperature">%1$d</xliff:g>K Éjszaka:<xliff:g id="night_temperature">%2$d</xliff:g>K</string>
-    <string name="live_display_color_temperature_label"><xliff:g id="degrees">%1$d</xliff:g>K</string>
-    <string name="live_display_day">Nappal</string>
-    <string name="live_display_night">Éjszaka</string>
-    <string name="live_display_outdoor_mode_title">Automatikus kültéri mód</string>
+  <string name="none_is_silent_title">Soha ne némítsa az ébresztést</string>
+  <string name="allow_lights_title">Értesítési fény engedélyezése</string>
+  <string name="live_display_summary">Optimalizálja a képernyőt a napszaknak és a fényviszonyoknak megfelelően, javítva az olvashatóságot és csökkentve a szemek terhelését</string>
+  <string name="live_display_mode">Képernyő mód</string>
+  <string name="live_display_color_temperature_title">Színhőmérséklet</string>
+  <string name="live_display_color_temperature_summary">Nappal:<xliff:g id="day_temperature">%1$d</xliff:g>K Éjszaka:<xliff:g id="night_temperature">%2$d</xliff:g>K</string>
+  <string name="live_display_color_temperature_label"><xliff:g id="degrees">%1$d</xliff:g>K</string>
+  <string name="live_display_day">Nappal</string>
+  <string name="live_display_night">Éjszaka</string>
+  <string name="live_display_outdoor_mode_title">Automatikus kültéri mód</string>
   <string name="live_display_outdoor_mode_summary">Fényerő és színtelítettség automatikus növelése erős napsütésben</string>
   <string name="live_display_low_power_title">Energiafogyasztás csökkentése</string>
   <string name="live_display_low_power_summary">A kijelző beállítása a legkisebb energiafogyasztásra, minőségromlás nélkül</string>

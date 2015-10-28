@@ -813,6 +813,8 @@
   <string name="sim_ringtone_title">Tono de llamada para SIM %d</string>
   <string name="interruptions_ignore_while_media_title">Prevenir reducción de audio</string>
   <string name="interruptions_ignore_while_media_summary">No reducir el volumen de reproducción cuando llegue una notificación</string>
+  <string name="none_is_silent_title">Nunca silenciar alarmas</string>
+  <string name="allow_lights_title">Permitir led de notificaciones</string>
   <string name="live_display_summary">Optimizar la pantalla según la hora del día y las condiciones ambientales para mejorar la legibilidad y reducir la fatiga visual</string>
   <string name="live_display_mode">Modo de visualización</string>
   <string name="live_display_color_temperature_title">Temperatura de color</string>
