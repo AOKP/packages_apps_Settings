@@ -82,7 +82,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_SAFETY_LEGAL = "safetylegal";
 
     private static final String KEY_MOD_BUILD_DATE = "build_date";
-    private static final String KEY_MOD_API_LEVEL = "mod_api_level";
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
 
@@ -132,8 +131,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         findPreference(KEY_BUILD_NUMBER).setEnabled(true);
         findPreference(KEY_KERNEL_VERSION).setSummary(getFormattedKernelVersion());
         setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
-        setExplicitValueSummary(KEY_MOD_API_LEVEL, constructApiLevelString());
-        findPreference(KEY_MOD_API_LEVEL).setEnabled(true);
 
         if (!SELinux.isSELinuxEnabled()) {
             String status = getResources().getString(R.string.selinux_status_disabled);
@@ -326,14 +323,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         }
     }
 
-    private void setExplicitValueSummary(String preference, String value) {
-        try {
-            findPreference(preference).setSummary(value);
-        } catch (RuntimeException e) {
-            // No recovery
-        }
-    }
-
     private void sendFeedback() {
         String reporterPackage = getFeedbackReporterPackage(getActivity());
         if (TextUtils.isEmpty(reporterPackage)) {
@@ -370,14 +359,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
 
             return "Unavailable";
         }
-    }
-
-    private static String constructApiLevelString() {
-        int sdkInt = cyanogenmod.os.Build.CM_VERSION.SDK_INT;
-        StringBuilder builder = new StringBuilder();
-        builder.append(cyanogenmod.os.Build.getNameForSDKInt(sdkInt))
-                .append(" (" + sdkInt + ")");
-        return builder.toString();
     }
 
     public static String formatKernelVersion(String rawKernelVersion) {
