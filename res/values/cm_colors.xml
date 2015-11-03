@@ -18,4 +18,7 @@ limitations under the License.
     <!-- Action bar icons -->
     <color name="action_bar_icon_tint">@android:color/white</color>
     <color name="text_color_white">@android:color/white</color>
+
+    <!-- Storage Summary Title -->
+    <color name="storage_summary_title_color">#ff607d8b</color>
 </resources>
