@@ -27,6 +27,18 @@
             android:summary="@string/unlock_set_unlock_mode_none"
             android:persistent="false"/>
 
+        <ListPreference
+            android:key="lock_after_timeout"
+            android:title="@string/lock_after_timeout"
+            android:summary="@string/lock_after_timeout_summary"
+            android:entries="@array/lock_after_timeout_entries"
+            android:entryValues="@array/lock_after_timeout_values"
+            android:persistent="false"/>
+
+        <SwitchPreference
+            android:key="power_button_instantly_locks"
+            android:title="@string/lockpattern_settings_enable_power_button_instantly_locks"/>
+
         <com.android.settings.SingleLineSummaryPreference
             android:key="owner_info_settings"
             android:title="@string/owner_info_settings_title"
