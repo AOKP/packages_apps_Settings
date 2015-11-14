@@ -2148,6 +2148,11 @@
             android:theme="@style/CryptKeeperBlankTheme"
         />
 
+        <!-- AICP activities Start -->
+
+
+        <!-- AICP activities End -->
+
         <!-- CyanogenMod activities Start -->
         <activity android:name=".profiles.ProfilesSettings" />
         <activity android:name="Settings$ProfilesSettingsActivity"
