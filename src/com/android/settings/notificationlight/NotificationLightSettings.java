@@ -62,6 +62,7 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
     private static final String DEFAULT_PREF = "default";
     private static final String MISSED_CALL_PREF = "missed_call";
     private static final String VOICEMAIL_PREF = "voicemail";
+    private static final String KEY_ALLOW_LIGHTS = "allow_lights";
     public static final int ACTION_TEST = 0;
     public static final int ACTION_DELETE = 1;
     private static final int MENU_ADD = 0;
@@ -103,6 +104,12 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
                 org.cyanogenmod.platform.internal.R.bool.config_adjustableNotificationLedBrightness);
         mMultiColorNotificationLed = resources.getBoolean(
                 com.android.internal.R.bool.config_multiColorNotificationLed);
+
+        // Remove of the "Allow notification light" setting if an led is not supported
+            if (!getResources().getBoolean(
+                    com.android.internal.R.bool.config_intrusiveNotificationLed)) {
+                prefSet.removePreference(findPreference(KEY_ALLOW_LIGHTS));
+            }
 
         // Get the system defined default notification color
         mDefaultColor = resources.getColor(com.android.internal.R.color.config_defaultNotificationColor);
