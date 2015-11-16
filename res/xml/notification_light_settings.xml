@@ -62,7 +62,7 @@
 
         <!-- Whether to allow notification lights in zen mode -->
         <!-- This is set to true to match the default state in Android 5.1 -->
-        <com.android.settings.preference.SystemSettingSwitchPreference
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
             android:key="allow_lights"
             android:title="@string/allow_lights_title"
             android:defaultValue="true" />
