@@ -266,16 +266,6 @@
         <item>8</item>
     </string-array>
 
-    <string-array name="power_menu_actions_array" translatable="false">
-        <item>power</item>
-        <item>reboot</item>
-        <item>screenshot</item>
-        <item>profile</item>
-        <item>airplane</item>
-        <item>users</item>
-        <item>bugreport</item>
-    </string-array>
-
     <!-- Gamma calibration descriptors, deliberately empty as string values populated via
          per-device overlay. Required to build on non-hardware tunable devices -->
     <string-array name="gamma_descriptors" translatable="false">
