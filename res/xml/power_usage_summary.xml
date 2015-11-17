@@ -19,6 +19,13 @@
         android:title="@string/power_usage_summary_title"
         settings:keywords="@string/keywords_battery">
 
+        <!-- Bars color -->
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="battery_save_mode_color"
+            android:title="@string/battery_saver_color_title"
+            android:summary="@string/battery_saver_color_summary"
+            android:defaultValue="true" />
+
         <ListPreference
             android:key="pref_perf_profile"
             android:dialogTitle="@string/perf_profile_title"

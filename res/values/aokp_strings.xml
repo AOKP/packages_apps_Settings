@@ -65,4 +65,8 @@
     <string name="timeout_1000">1 second</string>
     <string name="timeout_500">0,5 second</string>
 
+    <!-- Battery saver color -->
+    <string name="battery_saver_color_title">Warning color</string>
+    <string name="battery_saver_color_summary">Enable orange status and navigation bars when battery saver is activated</string>
+
 </resources>
