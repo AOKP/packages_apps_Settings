@@ -124,6 +124,16 @@
             </intent>
         </dashboard-tile>
 
+        <!-- AOKP ROMControl hook -->
+        <dashboard-tile
+            android:icon="@drawable/ic_settings_rom_control_teal"
+            android:title="@string/rom_control_title">
+        <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.aokp.romcontrol.MainActivity"
+                android:targetPackage="com.aokp.romcontrol" />
+        </dashboard-tile>
+
         <!-- Notifications -->
         <dashboard-tile
                 android:id="@+id/notification_settings"
