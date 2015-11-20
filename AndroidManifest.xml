@@ -3118,7 +3118,7 @@
         <activity android:name=".Settings$SystemDashboardActivity"
                   android:label="@string/header_category_system"
                   android:icon="@drawable/ic_settings_about">
-            <intent-filter android:priority="-1">
+            <intent-filter android:priority="-2">
                 <action android:name="com.android.settings.action.SETTINGS"/>
             </intent-filter>
             <meta-data android:name="com.android.settings.category"
@@ -3134,7 +3134,7 @@
                   android:icon="@drawable/ic_help"
                   android:theme="@android:style/Theme.DeviceDefault.Light.Panel"
                   android:enabled="@bool/config_support_enabled">
-            <intent-filter android:priority="-2">
+            <intent-filter android:priority="-3">
                 <action android:name="com.android.settings.action.SETTINGS"/>
             </intent-filter>
             <intent-filter>
@@ -3319,5 +3319,20 @@
         </activity>
 
         <!-- This is the longest AndroidManifest.xml ever. -->
+        <!-- Begin AOKP Settings -->
+        <activity android:name="Settings$ROMControlActivity"
+                android:label="@string/rom_control_title"
+                android:icon="@drawable/ic_settings_rom_control_teal"
+                android:taskAffinity="">
+            <intent-filter android:priority="-1">
+                <action android:name="com.android.settings.action.SETTINGS"/>
+            </intent-filter>
+            <meta-data android:name="com.android.settings.category"
+                       android:value="com.android.settings.category.ia.homepage"/>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.ROMControl" />
+            <meta-data android:name="com.android.settings.summary"
+                       android:resource="@string/rom_control_category"/>
+        </activity>
     </application>
 </manifest>

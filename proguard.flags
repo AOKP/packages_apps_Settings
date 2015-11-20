@@ -3,6 +3,7 @@
 
 # Keep all Fragments in this package, which are used by reflection.
 -keep public class com.android.settings.** extends android.app.Fragment
+-keep class com.aokp.romcontrol.**
 
 # We want to keep methods in Activity that could be used in the XML attribute onClick.
 -keepclassmembers class * extends android.app.Activity {

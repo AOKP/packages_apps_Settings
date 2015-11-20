@@ -13,6 +13,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- Rom Control -->
+    <string name="rom_control_title">ROM Control</string>
+    <string name="rom_control_category">AOKP</string>
+
     <!-- About phone screen, AOKP version -->
     <string name="aokp_version_title">AOKP Version</string>
     <string name="aokp_version_default">Unknown</string>
