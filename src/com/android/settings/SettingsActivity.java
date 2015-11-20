@@ -232,6 +232,8 @@ public class SettingsActivity extends SettingsDrawerActivity
 
     private static final String ACTION_TIMER_SWITCH = "qualcomm.intent.action.TIMER_SWITCH";
 
+    private static final String ROMCONTROL_FRAGMENT = "com.android.settings.ROMControl";
+
     private String mFragmentClass;
     private String mActivityAction;
 
@@ -1033,6 +1035,14 @@ public class SettingsActivity extends SettingsDrawerActivity
      */
     private Fragment switchToFragment(String fragmentName, Bundle args, boolean validate,
             boolean addToBackStack, int titleResId, CharSequence title, boolean withTransition) {
+
+        if (ROMCONTROL_FRAGMENT.equals(fragmentName)) {
+            Intent ROMControlIntent = new Intent();
+            ROMControlIntent.setClassName("com.aokp", "com.aokp.romcontrol.MainActivity");
+            startActivity(ROMControlIntent);
+            finish();
+            return null;
+        }
 
         if (validate && !isValidFragment(fragmentName)) {
             throw new IllegalArgumentException("Invalid fragment for this activity: "
