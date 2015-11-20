@@ -19,6 +19,7 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_USE_AAPT2 := true
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
+LOCAL_SRC_FILES += $(call all-java-files-under, ../ROMControl/src) 
 
 LOCAL_STATIC_ANDROID_LIBRARIES := \
     android-slices-builders \
@@ -37,10 +38,22 @@ LOCAL_JAVA_LIBRARIES := \
     bouncycastle \
     telephony-common \
     ims-common
+    
+LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res \
+    frameworks/support/v4 \
+    frameworks/support/v7/appcompat/res \
+    frameworks/support/v7/cardview/res \
+    frameworks/support/v7/preference/res \
+    frameworks/support/v7/recyclerview/res \
+    frameworks/support/v13 \
+    frameworks/support/v14/preference/res \
+	packages/apps/ROMControl/res
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
     android-arch-lifecycle-runtime \
     android-arch-lifecycle-extensions \
+    AndroidAsync \
+    gson \
     guava \
     jsr305 \
     settings-logtags \
@@ -48,6 +61,17 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
 
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 
+LOCAL_AAPT_FLAGS := --auto-add-overlay \
+    --extra-packages android.support.v4 \
+    --extra-packages android.support.v7.appcompat \
+    --extra-packages android.support.v7.cardview \
+    --extra-packages android.support.v7.preference \
+    --extra-packages android.support.v7.recyclerview \
+    --extra-packages android.support.v13 \
+    --extra-packages android.support.v14.preference \
+    --extra-packages android.support.design \
+    --extra-packages com.aokp.romcontrol
+    
 ifneq ($(INCREMENTAL_BUILDS),)
     LOCAL_PROGUARD_ENABLED := disabled
     LOCAL_JACK_ENABLED := incremental
