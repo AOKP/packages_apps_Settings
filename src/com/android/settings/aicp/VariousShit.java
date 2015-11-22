@@ -598,7 +598,7 @@ public class VariousShit extends SettingsPreferenceFragment
             }
         }.execute("mount -o rw,remount /system",
                 "cp -f /system/media/bootanimation.zip " + BACKUP_PATH + "/bootanimation_backup_" + current + ".zip",
-                "cp -f " + bootAnimationPath + " /system/media/bootanimation.zip",
+                "cp -f '" + bootAnimationPath + "' /system/media/bootanimation.zip",
                 "chmod 644 /system/media/bootanimation.zip",
                 "mount -o ro,remount /system");
     }
