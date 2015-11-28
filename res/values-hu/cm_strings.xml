@@ -298,11 +298,8 @@
   <string name="privacy_guard_reset_text">Visszaállítja az engedélyeket?</string>
   <string name="privacy_guard_help_text">Ezen a képernyőn egyszerű érintéssel kiválaszthatja, hogy mely alkalmazásoknál legyen aktív az adatvédelmi mód. A kiválasztott alkalmazás nem fog hozzáférni a személyes adataihoz, mint például a névjegyzéke, üzenetei, vagy a hívásnaplója. Egy sort hosszan megérintve megjelenik az adott alkalmazás részleteit tartalmazó képernyő.\n\nAlapértelmezetten a rendszeralkalmazások nem jelennek meg. Amennyiben szeretné, hogy a rendszeralkalmazások, vagy csak azon alkalmazások jelenjenek meg, amelyek hozzáférést kérnek a személyes adatokhoz, válassza ki a megfelelő beállításokat a menüben.</string>
   <string name="privacy_guard_manager_show_system_apps">Rendszeralkalmazások megjelenítése</string>
-    <string name="privacy_guard_advanced_settings_title">Haladó</string>
-
-    <string name="app_ops_btn_text">Módosítás</string>
-
-    <!-- Increasing ring tone volume -->
+  <string name="privacy_guard_notification_title">Értesítés megjelenítése</string>
+  <string name="app_ops_btn_text">Módosítás</string>
   <string name="increasing_ring_volume_option_title">Emelkedő csengőhang</string>
   <string name="increasing_ring_min_volume_title">Kezdeti hangerő</string>
   <string name="increasing_ring_ramp_up_time_title">Felfutási idő</string>
@@ -405,24 +402,18 @@
   <string name="notification_light_default_value">Alapértelmezés</string>
   <string name="notification_light_missed_call_title">Nem fogadott hívás</string>
   <string name="notification_light_voicemail_title">Hangposta</string>
-    <string name="notification_light_screen_on">Fény bekapcsolt képernyővel</string>
-    <string name="notification_light_use_multiple_leds">Többszörös LED</string>
-    <string name="keywords_lights_brightness_level">dim led fényerő</string>
-
-    <!-- Sound & notification > Sound section: Title for the option defining the default notification ringtone. [CHAR LIMIT=30] -->
-    <string name="notification_ringtone_title_cm">Értesítés hangja</string>
-
-    <!-- Setting checkbox title for root access -->
-  <string name="root_access">Rendszergazda hozzáférés</string>
-  <string name="root_access_warning_title">Engedélyezi a rendszergazdai hozzáférést?</string>
-  <string name="root_access_warning_message">Veszélyes rendszergazda jogosultságot adni az alkalmazásoknak, és veszélyeztetheti a rendszere biztonságát!</string>
-  <string name="root_access_none">Letiltva</string>
-  <string name="root_access_apps">Csak alkalmazások</string>
-  <string name="root_access_adb">Csak ADB</string>
-  <string name="root_access_all">Alkalmazások és ADB</string>
-
-    <!-- High touch sensitivity -->
-    <string name="high_touch_sensitivity_title">Magas érintési érzékenység</string>
+  <string name="notification_light_screen_on">Értesítési LED bekapcsolt képernyőnél</string>
+  <string name="keywords_lights_brightness_level">ledek fényerősségének állítása</string>
+  <string name="notification_ringtone_title_cm">Értesítés hangja</string>
+  <string name="headset_connect_player_title">Zenelejátszó indítása</string>
+  <string name="headset_connect_player_summary">Alapértelmezett zenelejátszó elindítása fülhallgató csatlakoztatásakor</string>
+  <string name="ime_switcher_notify">Választó ikon</string>
+  <string name="ime_switcher_notify_summary">Beviteli mód választó ikon megjelenítése</string>
+  <string name="app_notification_show_on_keyguard_title">Megjelenítés a zárképernyőn</string>
+  <string name="app_notification_show_on_keyguard_summary">Ezen alkalmazáshoz tartozó értesítések megjelenítése a zárképernyőn</string>
+  <string name="app_notification_no_ongoing_on_keyguard_title">Állandó értesítés tiltása a zárképernyőn</string>
+  <string name="app_notification_no_ongoing_on_keyguard_summary">Ezen alkalmazáshoz tartozó állandó értesítés soha ne jelenjen meg a zárképernyőn</string>
+  <string name="high_touch_sensitivity_title">Magas érintési érzékenység</string>
   <string name="high_touch_sensitivity_summary">Érintőképernyő érzékenységének növelése, így kesztyű viselése esetén is használható</string>
 
     <!-- Touchscreen hovering -->
@@ -865,40 +856,34 @@
     <!-- EdgeGesture service -->
   <string name="edge_gesture_service_title">Kézmozdulatok letiltása</string>
   <string name="edge_gesture_service_summary">Az alkalmazások nem veszik figyelembe a navigációs- és állapotsáv érintéseket</string>
-
-    <!-- Sizes for pattern lockscreen -->
-    <string name="lock_pattern_size_3" translatable="false">3 \u00d7 3</string>
-    <string name="lock_pattern_size_4" translatable="false">4 \u00d7 4</string>
-    <string name="lock_pattern_size_5" translatable="false">5 \u00d7 5</string>
-    <string name="lock_pattern_size_6" translatable="false">6 \u00d7 6</string>
-
-    <!-- Whether a visible red line will be drawn after the user has drawn the unlock pattern incorrectly -->
-    <string name="lockpattern_settings_enable_error_path_title">Hibás minta megjelenítése</string>
-    <!-- Whether the dots will be drawn when using the lockscreen pattern -->
-    <string name="lockpattern_settings_enable_dots_title">Feloldási pontok megjelenítése</string>
-    <!-- Whether the keyguard will directly pass to password entry -->
-    <string name="lock_directly_show_password">Közvetlenül mutatja a jelszavas belépést</string>
-    <!-- Whether the keyguard will directly pass to pattern view -->
-    <string name="lock_directly_show_pattern">Közvetlenül mutatja a minta nézetet</string>
-    <!-- Whether the keyguard will directly pass to PIN entry -->
-    <string name="lock_directly_show_pin">Közvetlenül mutatja a PIN belépést</string>
-
-    <string name="link_volume_option_title">Csengő és értesítési hangok összekötése</string>
+  <string name="cmlicense_title">CyanogenMod jogi nyilatkozat</string>
+  <string name="settings_cmlicense_activity_title">CyanogenMod jogi nyilatkozat</string>
+  <string name="lockpattern_settings_enable_error_path_title">Hibás minta megjelenítése</string>
+  <string name="lockpattern_settings_enable_dots_title">Feloldási pontok megjelenítése</string>
+  <string name="lock_directly_show_password">Közvetlen jelszó megadás megjelenítése</string>
+  <string name="lock_directly_show_pattern">Közvetlen minta nézet megjelenítése</string>
+  <string name="lock_directly_show_pin">Közvetlen PIN megadás megjelenítése</string>
+  <string name="unlock_quick_unlock_control_title">Gyors feloldás</string>
+  <string name="unlock_quick_unlock_control_summary">Automatikus feloldás a helyes jelszó/PIN kód beütése után</string>
+  <string name="unlock_scramble_pin_layout_title">Szoros elrendezés</string>
+  <string name="unlock_scramble_pin_layout_summary">PIN szoros elrendezése az eszköz feloldásakor</string>
+  <string name="link_volume_option_title">Csengő és értesítési hangok összekötése</string>
   <string name="notification_volume_option_title">Értesítési hangerő</string>
-  <string name="ring_notification_volume_option_tile">Csengő és értesítési hangerő</string>
-
-    <!-- Advanced reboot options -->
-  <string name="advanced_reboot_title">Speciális újraindítás</string>
-  <string name="advanced_reboot_summary">Feloldott képernyő esetén, a kikapcsoló menüben a recovery, bootloader, vagy a lágy újraindítás módok megjelenítése</string>
-
-    <!-- Notification drawer -->
-    <string name="notification_drawer_title">Értesítési sáv</string>
-    <string name="qs_category_title">Gyors Beállítások</string>
-
-    <!-- Quick Settings -->
-    <string name="qs_order_title">Csempék kiválasztása és átrendezése</string>
-    <string name="add_qs">Új csempe hozzáadása</string>
-
+  <string name="notification_drawer_title">Gyorsbeállítások sáv</string>
+  <string name="quick_pulldown_title">Gyors legördítés</string>
+  <string name="quick_pulldown_summary">Csempék megjelenítése az értesítési sáv %1$s oldalán történő legörgetéskor</string>
+  <string name="quick_pulldown_summary_left">bal</string>
+  <string name="quick_pulldown_summary_right">jobb</string>
+  <string name="quick_pulldown_off">Ki</string>
+  <string name="quick_pulldown_left">Bal</string>
+  <string name="quick_pulldown_right">Jobb</string>
+  <string name="status_bar_show_weather_title">Időjárás megjelenítése</string>
+  <string name="status_bar_show_weather_summary">Időjárás megjelenítése a Gyors beállítások panel fölött</string>
+  <string name="qs_category_title">Gyors beállítások panel</string>
+  <string name="qs_brightness_slider_title">Fényerő csúszka megjelenítése</string>
+  <string name="qs_hide_tiles_with_sensitive_data">Érzékeny csempék elrejtése zárolt képernyőnél</string>
+  <string name="qs_order_title">Csempék kiválasztása és átrendezése</string>
+  <string name="add_qs">Új csempe hozzáadása</string>
   <string name="qs_action_delete">Törlés</string>
   <string name="qs_action_add">Hozzáadás</string>
   <string name="qs_action_no_more_tiles">Nincs több rendelkezésre álló csempe</string>
@@ -916,13 +901,12 @@
   <string name="qs_tile_adb_over_network">ADB hálózaton keresztül</string>
   <string name="qs_tile_profiles">Rendszer profilok</string>
   <string name="qs_tile_performance">Akkumulátor mód</string>
-    <string name="qs_music_play_tile">Lejátszás</string>
+  <string name="qs_music_play_tile">Lejátszás</string>
   <string name="qs_tile_nfc">NFC</string>
   <string name="qs_tile_compass">Iránytű</string>
   <string name="qs_tile_lockscreen">Képernyőzár</string>
   <string name="qs_tile_lte">LTE</string>
-    <string name="qs_tile_visualizer" translatable="false">AudioFX</string>
-    <string name="qs_tile_volume_panel">Hangerő panel</string>
+  <string name="qs_tile_volume_panel">Hangerőszabályzás</string>
   <string name="qs_tile_screen_timeout">Képernyő időkorlátja</string>
   <string name="qs_tile_usb_tether">USB megosztás</string>
     <string name="qs_tile_reboot">Újraindítás</string>
@@ -931,6 +915,8 @@
     <string name="qs_tile_kernel_adiutor">Kernel Adiutor</string>
     <string name="qs_tile_navbar">Navigációs sáv</string>
 
+  <string name="qs_tile_sync">Szinkronizálás</string>
+  <string name="qs_tile_battery_saver">Akkumulátor kímélő</string>
   <string name="qs_dynamic_tile_next_alarm">Következő riasztás</string>
   <string name="qs_dynamic_tile_ime_selector">IME választó</string>
   <string name="qs_dynamic_tile_su">Rendszergazda hozzáférés</string>
@@ -1001,10 +987,9 @@
   <string name="lockscreen_choose_action_title">Válasszon műveletet</string>
   <string name="lockscreen_visualizer_title">Zenei vizualítás megjelenítése</string>
 
-    <!-- WhisperPush -->
-    <string name="whisperpush_title">WhisperPush</string>
-    <string name="whisperpush_summary">Biztonságos SMS beállítások kezelése</string>
-
+  <string name="nfc_title_category">NFC</string>
+  <string name="whisperpush_title">WhisperPush</string>
+  <string name="whisperpush_summary">Biztonságos SMS beállítások kezelése</string>
   <string name="navigation_ring_enable_title">Navigációs gyűrűk engedélyezése</string>
   <string name="navigation_ring_title">Navigációs gyűrű hivatkozások</string>
   <string name="navigation_ring_message">A navigációs gyűrű módosításához érintse meg a szerkesztés ikont.\n\nVálasszon célt a viselkedés megadásához.\n\nÉrintse meg az \"\u2713\" ikont a mentéshez, vagy \"Az alapértelmezett beállítások visszaállítása\" ikont az újrakezdéshez.</string>
@@ -1062,146 +1047,112 @@
   <string name="live_display_low_power_summary">A kijelző beállítása a legkisebb energiafogyasztásra, minőségromlás nélkül</string>
   <string name="live_display_enhance_color_title">Színek élénkítése</string>
   <string name="live_display_enhance_color_summary">Bőr színek, tájképek és egyéb képek színerősségének javítása</string>
-    <string name="category_calibration">Kalibrációk</string>
-
-    <string name="live_display_color_profile_title">Színprofil</string>
-    <string name="live_display_color_profile_standard_title">Általános</string>
-    <string name="live_display_color_profile_standard_summary">Accurate colors and bright whites</string>
-    <string name="live_display_color_profile_natural_title">Természetes</string>
-    <string name="live_display_color_profile_natural_summary">Realistic colors and flesh tones</string>
-    <string name="live_display_color_profile_dynamic_title">Dinamikus</string>
-    <string name="live_display_color_profile_dynamic_summary">Enhanced colors and bright whites</string>
-    <string name="live_display_color_profile_cinema_title">Mozi</string>
-    <string name="live_display_color_profile_cinema_summary">Perfect color reproduction for media</string>
-    <string name="live_display_color_profile_astronomy_title">Csillagászat</string>
-    <string name="live_display_color_profile_astronomy_summary">Deep red for preserving night vision</string>
-
-    <string name="power_usage_history_title">Akkumulátor használat</string>
-    <string name="battery_saver_threshold">Akkumulátor kímélő küszöb</string>
-    <string name="battery_saver_summary">Csökkenti a teljesítményt és korlátozza a háttér adatokat</string>
-    <string name="battery_saver_summary_unavailable">Töltés közben nem érhető el</string>
-
-    <!-- SD card & phone storage settings screen, message on screen after user selects Factory data reset [CHAR LIMIT=NONE] -->
-    <string name="master_clear_desc_cm" product="tablet">Ezzel törölni fog minden adatot a táblagépének <b>belső tárhelyéről</b> beleértve:\n\n<li>Eszköz fiókok</li>\n<li>Rendszer és alkalmazás adatok, beállítások</li>\n<li>Letöltött alkalmazások</li></string>
-    <!-- SD card & phone storage settings screen, message on screen after user selects Factory data reset [CHAR LIMIT=NONE] -->
-    <string name="master_clear_desc_cm" product="default">Ezzel törölni fog minden adatot a telefonjának <b>belső tárhelyéről</b> beleértve:\n\n<li>Eszköz fiókok</li>\n<li>Rendszer és alkalmazás adatok, beállítások</li>\n<li>Letöltött alkalmazások</li></string>
-
-    <!-- MSIM SIM status -->
-    <string name="sim_card_status_title">SIM %d állapot</string>
-    <string name="sim_card_lock_settings_title">SIM %d zárolási beállítások</string>
-    <string name="sim_card_summary_empty">SIM nincs behelyezve</string>
-    <string name="sim_mobile_network_settings_category_title">Mobilhálózati beállítások</string>
-    <string name="sim_mobile_network_settings_title">SIM %d beállítások</string>
-
-    <!-- Factory reset strings -->
-    <string name="factory_reset_instructions_title">Személyes adatok &amp; alkalmazások</string>
-    <string name="factory_reset_instructions_summary">Ezzel minden fiókját, alkalmazását, adatát és rendszerbeállítását törli ezen a készüléken</string>
-    <string name="factory_reset_personal_content">Személyes tartalom</string>
-    <string name="factory_reset_erase_stored_content">Tárolt tartalom törlése</string>
-    <string name="factory_reset_erase_stored_content_summary">Zenék, fotók, videók és egyéb ezen az eszközön tárolt felhasználói adatok törlése</string>
-    <string name="factory_reset_erase_stored_content_summary_forced">Zenék, képek, videók és egyéb ezen az eszközön tárolt felhasználói adatok törlése.\n\n<b>Tartalom nem menthető az eszköz titkosítása miatt.</b></string>
-    <string name="factory_reset_erase_sd_card">SD-kártya formázása</string>
-    <string name="factory_reset_erase_sd_card_summary">Az összes adatot törli az SD-kártyán, beleértve a zenéket és a fotókat</string>
-    <string name="factory_reset_warning_text_reset_now">VISSZAÁLLÍTÁS MOST</string>
-    <string name="factory_reset_warning_text_message">Minden fiókja, alkalmazása, adata és rendszerbeállítása eltávolításra kerül erről a készülékről. Nem lehet visszavonni.</string>
-
-    <!-- Wi-Fi region code -->
-    <string name="wifi_setting_countrycode_title">Wi\u2011Fi régió kód</string>
-    <!-- Wi-Fi settings screen, setting summary for setting the wifi frequency band [CHAR LIMIT=50]-->
-    <string name="wifi_setting_countrycode_summary">Wi\u2011Fi régió kód megadása</string>
-    <!-- Wi-Fi settings screen, error message when the frequency band could not be set [CHAR LIMIT=50]. -->
-    <string name="wifi_setting_countrycode_error">Hiba történt a régiókód beállítása közben.</string>
-
-    <!-- Wi-Fi region countries -->
-    <string name="wifi_countrycode_entries_us">Amerikai Egyesült Államok</string>
-    <string name="wifi_countrycode_entries_ca">Kanada, Tajvan</string>
-    <string name="wifi_countrycode_entries_de">Németország</string>
-    <string name="wifi_countrycode_entries_gb">Európa</string>
-    <string name="wifi_countrycode_entries_jp">Japán, Oroszország</string>
-    <string name="wifi_countrycode_entries_au">Ausztrália</string>
-    <string name="wifi_countrycode_entries_cn">Kína</string>
-    <string name="wifi_countrycode_entries_kr">Korea</string>
-    <string name="wifi_countrycode_entries_tr">Dél-afrikai Köztársaság, Törökország</string>
-    <string name="wifi_countrycode_entries_sg">Izrael, Szingapúr</string>
-    <string name="wifi_countrycode_entries_br">Brazília</string>
-    <string name="wifi_countrycode_entries_in">India</string>
-
-    <!-- FINGERPRINT -->
-    <!-- Title for preference which sets the unlock. This is only used when the device has
-         a fingerprint sensor , otherwise just "unlock_set_unlock_launch_picker_title" is used -->
-    <string name="unlock_set_unlock_launch_picker_title_with_fingerprint">Képernyő feloldás &amp; ujjlenyomat</string>
-    <!-- Summary for "Configure lockscreen" when security Fingerprint is enabled [CHAR LIMIT=45] -->
-    <string name="unlock_set_unlock_mode_fingerprint">Ujjlenyomat</string>
-    <!-- Title for preference that guides the user through creating a fingerprint [CHAR LIMIT=22] -->
-    <string name="unlock_set_unlock_fingerprint_title">Ujjlenyomat</string>
-    <!-- List item title to add a new fingerprint in fingerprint list screen -->
-    <string name="fingerprint_item_add_new_fingerprint">Új ujjlenyomat hozzáadása</string>
-    <!-- Title for preference in fingerprint lockscreen settings, takes user to fingerprint list -->
-    <string name="fingerprint_manage_fingerprints">Ujjlenyomatok kezelése</string>
-    <!-- Summary for preference in fingerprint lockscreen settings, takes user to fingerprint list -->
-    <string name="fingerprint_manage_fingerprints_summary">Beolvasott ujjlenyomatok kezelése</string>
-    <!-- Info explaining the backup lock which is used for fingerprint -->
-    <string name="unlock_backup_fingerprint_info_summary">Ha nem tudja az ujját használni, hogyan szeretné feloldani?</string>
-    <!-- Dialog title for renaming your fingerprint -->
-    <string name="fingerprint_dialog_title_rename">Ujjlenyomat szerkesztése</string>
-    <!-- EditText label for renaming your fingerprint in rename dialog -->
-    <string name="fingerprint_dialog_name_label">Ujjlenyomat neve</string>
-    <!-- Title for dialog that shows when the user cannot add anymore fingers -->
-    <string name="fingerprint_dialog_title_max_fingers_reached">Elérte az ujjlenyomatok maximális számát</string>
-    <!-- Message for dialog that shows when the user cannot add anymore fingers -->
-    <string name="fingerprint_dialog_msg_max_fingers_reached">Egyszerre csak <xliff:g id="finger" example="5 fingerprints">%d</xliff:g> ujjlenyomatot vehet fel. Töröljön egy meglévő ujjlenyomatot.</string>
-    <!-- Dialog title for renaming your fingerprint -->
-    <string name="fingerprint_dialog_title_rename">Ujjlenyomat szerkesztése</string>
-    <!-- EditText label for renaming your fingerprint in rename dialog -->
-    <string name="fingerprint_dialog_name_label">Ujjlenyomat neve</string>
-    <!-- Title for number of finger prints enrolled -->
-    <string name="fingerprint_title_manage_fingerprints">Ujjlenyomatok kezelése <xliff:g id="finger">%d</xliff:g>/<xliff:g id="max">%d</xliff:g></string>
-    <!-- Description for managing fingerprints -->
-    <string name="manage_fingerprints_description">Ujjlenyomatával gyorsan feloldhatja telefonját és készíthet fotókat.</string>
-    <!-- Fingerprint enrollment introduction title -->
-    <string name="fingerprint_enrollment_introduction_title">Találja meg érzékelőjét</string>
-    <!-- Fingerprint enrollment introduction instructions -->
-    <string name="fingerprint_enrollment_introduction_instructions">Az ujjlenyomat-érzékelő a telefon elején vagy hátoldalán található.</string>
-    <!-- Fingerprint enrollment scan fingerprint title -->
-    <string name="fingerprint_enrollment_scan_title">Tartsa 3 másodpercig</string>
-    <!-- Fingerprint enrollment scan fingerprint instructions -->
-    <string name="fingerprint_enrollment_scan_instructions">Helyezze a mutatóujját az ujjlenyomat-érzékelőre a beállítás megkezdéséhez. Emelje fel az ujját mikor rezgést érez.</string>
-    <!-- Fingerprint enrollment error title during first step only -->
-    <string name="fingerprint_enrollment_error_title_wrong_sensor">Kérjük, próbálja újra</string>
-    <!-- Fingerprint enrollment error message -->
-    <string name="fingerprint_enrollment_error_message">Helyezze az ujját az ujjlenyomat-érzékelőre a pontos beolvasáshoz. Ügyeljen rá, hogy ugyanazt az ujját használja mint előtte. Emelje fel az ujját mikor rezgést érez.</string>
-    <!-- Fingerprint enrollment error instructions -->
-    <string name="fingerprint_enrollment_scan_instructions">Helyezze a mutatóujját az ujjlenyomat-érzékelőre a beállítás megkezdéséhez. Emelje fel az ujját mikor rezgést érez.</string>
-    <!-- Fingerprint enrollment half way break title -->
-    <string name="fingerprint_enrollment_break_title">Folytassa a jelenlegi lenyomattal</string>
-    <!-- Fingerprint enrollment introduction instructions -->
-    <string name="fingerprint_enrollment_break_instructions">Folytassa az ujja széleinek feldolgozásához. Emelje fel az ujját mikor rezgést érez.</string>
-    <!-- Fingerprint enrollment finished title -->
-    <string name="fingerprint_enrollment_finished_title">Ujjlenyomat hozzáadva!</string>
-    <!-- Fingerprint enrollment finished instructions -->
-    <string name="fingerprint_enrollment_finished_message">Most már feloldhatja a kijelzőt az ujjlenyomatával vagy szelfiket készíthet a kamerával.</string>
-    <!-- Next button title for finding sensor -->
-    <string name="fingerprint_enrollment_found_it_label">Megtaláltam</string>
-    <!-- Next button title for finding sensor -->
-    <string name="fingerprint_enrollment_add_another_label">Újabb hozzáadása</string>
-    <!-- Next button title for finding sensor -->
-    <string name="fingerprint_enrollment_done_label">Kész</string>
-    <!-- Wrong fingerprint sensor dialog title -->
-    <string name="fingerprint_dialog_title_wrong_sensor">Hoppá, ez nem az érzékelő</string>
-    <!-- Wrong fingerprint sensor dialog message -->
-    <string name="fingerprint_dialog_msg_wrong_sensor">A telefon elején vagy hátoldalán található ujjlenyomat-érzékelőt használja</string>
-    <!-- Failed fingerprint enrollment dialog title -->
-    <string name="fingerprint_dialog_title_failed_enrollment">Ujjlenyomat olvasása sikertelen</string>
-    <!-- Failed fingerprint enrollment dialog message -->
-    <string name="fingerprint_dialog_msg_failed_enrollment">Próbáljon másik ujjat használni. Ez az ujjlenyomat nem olvasható.</string>
-    <!-- Failed fingerprint enrollment button label -->
-    <string name="fingerprint_enrollment_restart_label">Újraindítás</string>
-    <!-- Successful scan title for first successful scan -->
-    <string name="fingerprint_successful_scan_title_first">Tökéletes! Most ismételje meg</string>
-    <!-- Successful scan title for second to last successful scan -->
-    <string name="fingerprint_successful_scan_final">Még egyszer</string>
-    <!-- Successful scan title for all other successful scans -->
-    <string name="fingerprint_successful_scan_title_1">Ez megvan! Folytassa</string>
+  <string name="live_display_color_profile_title">Színprofil</string>
+  <string name="live_display_color_profile_standard_title">Általános</string>
+  <string name="live_display_color_profile_standard_summary">Pontos színek és fényes fehér</string>
+  <string name="live_display_color_profile_natural_title">Természetes</string>
+  <string name="live_display_color_profile_natural_summary">Realisztikus színek és telített tónusok</string>
+  <string name="live_display_color_profile_dynamic_title">Dinamikus</string>
+  <string name="live_display_color_profile_dynamic_summary">Továbbfejlesztett színek és fényes fehér</string>
+  <string name="live_display_color_profile_cinema_title">Mozi</string>
+  <string name="live_display_color_profile_cinema_summary">Tökéletes színreprodukció a médiák számára</string>
+  <string name="live_display_color_profile_astronomy_title">Csillagászat</string>
+  <string name="live_display_color_profile_astronomy_summary">Mélyvörös az éjjellátás megőrzéséhez</string>
+  <string name="battery_saver_threshold">Akkumulátor kímélő küszöb</string>
+  <string name="battery_saver_summary">Csökkenti a teljesítményt és korlátozza a háttér adatokat</string>
+  <string name="battery_saver_summary_unavailable">Töltés közben nem érhető el</string>
+  <string name="anonymous_statistics_title">CyanogenMod Statisztika</string>
+  <string name="anonymous_statistics_summary">Segítsen a CyanogenMod jobbá tételében, kapcsolja be a névtelen statisztikai adatok gyűjtését</string>
+  <string name="anonymous_statistics_warning_title">Névjegy</string>
+  <string name="anonymous_statistics_warning">A CyanogenMod statisztika engedélyezése nem terjed ki személyes adatokra, csak egy egyedi azonosítóval azonosítjuk az eszközöket. A beküldött adatok beleértve az egyedi azonosítót, nem veszélyeztetik az adatvédelmi vagy személyes adatokat. A statisztika minden rendszerindításkor elküldésre kerül.\n\nAz elküldött adatok menüpont alatt tekintheti meg a statisztikai adatokat.</string>
+  <string name="enable_reporting_title">Statisztika engedélyezése</string>
+  <string name="preview_data_title">Elküldött adatok</string>
+  <string name="view_stats_title">Statisztika megtekintése</string>
+  <string name="anonymous_learn_more">Tudjon meg többet</string>
+  <string name="preview_id_title">Egyedi azonosító</string>
+  <string name="preview_device_title">Eszköz</string>
+  <string name="preview_version_title">Verzió</string>
+  <string name="preview_country_title">Ország</string>
+  <string name="preview_carrier_title">Szolgáltató</string>
+  <string name="heads_up_notifications">Lebegő értesítés</string>
+  <string name="summary_heads_up_enabled">Lebegő értesítések engedélyezve</string>
+  <string name="summary_heads_up_disabled">Lebegő értesítések letiltva</string>
+  <string name="master_clear_desc_cm" product="tablet">Ezzel törölni fog minden adatot a táblagépének <b>belső tárhelyéről</b> beleértve:\n\n<li>Eszköz fiókok</li>\n<li>Rendszer és alkalmazás adatok, beállítások</li>\n<li>Letöltött alkalmazások</li></string>
+  <string name="master_clear_desc_cm" product="default">Ezzel törölni fog minden adatot a telefonjának <b>belső tárhelyéről</b> beleértve:\n\n<li>Eszköz fiókok</li>\n<li>Rendszer és alkalmazás adatok, beállítások</li>\n<li>Letöltött alkalmazások</li></string>
+  <string name="lock_to_cyanogen_title">Eszközvédelem</string>
+  <string name="lock_to_cyanogen_summary">Cyanogen OS jelszót igényel még gyári visszaállítás után is</string>
+  <string name="lock_to_cyanogen_create_account_msg">A készüléke Cyanogen OS jelszót használ az eszköz védelme érdekében, még gyári visszaállítás után is. Létre kell hoznia egy Cyanogen OS fiókot.</string>
+  <string name="lock_to_cyanogen_disable_msg">A funkció letiltásával jogosulatlan személyek visszaállíthatják a telefont a gyári beállításokra lopás esetén. Személyes adatai nem lesznek biztonságban. Biztosan letiltja ezt a funkciót?</string>
+  <string name="lock_to_cyanogen_master_clear_warning">Eszközvédelem engedélyezve van. Tiltsa le a készülék visszaállításának folytatásához.</string>
+  <string name="bluetooth_pan_profile_summary_use_for_error">Csatlakozási hiba; Engedélyezve van a Bluetooth megosztás a készüléken?</string>
+  <string name="sim_card_status_title">SIM %d állapot</string>
+  <string name="sim_card_lock_settings_title">SIM %d zárolási beállítások</string>
+  <string name="sim_card_summary_empty">SIM nincs behelyezve</string>
+  <string name="sim_mobile_network_settings_category_title">Mobilhálózati beállítások</string>
+  <string name="sim_mobile_network_settings_title">SIM %d beállítások</string>
+  <string name="factory_reset_instructions_title">Személyes adatok &amp; alkalmazások</string>
+  <string name="factory_reset_instructions_summary">Ezzel minden fiókját, alkalmazását, adatát és rendszerbeállítását törli ezen a készüléken</string>
+  <string name="factory_reset_personal_content">Személyes tartalom</string>
+  <string name="factory_reset_erase_stored_content">Tárolt tartalom törlése</string>
+  <string name="factory_reset_erase_stored_content_summary">Zenék, fotók, videók és egyéb ezen az eszközön tárolt felhasználói adatok törlése</string>
+  <string name="factory_reset_erase_stored_content_summary_forced">Zenék, képek, videók és egyéb ezen az eszközön tárolt felhasználói adatok törlése.\n\n<b>Tartalom nem menthető az eszköz titkosítása miatt.</b></string>
+  <string name="factory_reset_erase_sd_card">SD-kártya formázása</string>
+  <string name="factory_reset_erase_sd_card_summary">Az összes adatot törli az SD-kártyán, beleértve a zenéket és a fotókat</string>
+  <string name="factory_reset_warning_text_reset_now">VISSZAÁLLÍTÁS MOST</string>
+  <string name="factory_reset_warning_text_message">Minden fiókja, alkalmazása, adata és rendszerbeállítása eltávolításra kerül erről a készülékről. Nem lehet visszavonni.</string>
+  <string name="wifi_show_all">Mindet mutassa</string>
+  <string name="wifi_show_protected">Védett hálózatok megjelenítése</string>
+  <string name="wifi_show_open">Nyílt hálózatok megjelenítése</string>
+  <string name="wifi_empty_list_protected">Nincs védett Wi\u2011Fi hálózat</string>
+  <string name="wifi_empty_list_open">Nincs nyílt Wi\u2011Fi hálózat</string>
+  <string name="wifi_setting_countrycode_title">Wi\u2011Fi régió kód</string>
+  <string name="wifi_setting_countrycode_summary">Wi\u2011Fi régió kód megadása</string>
+  <string name="wifi_setting_countrycode_error">Hiba történt a régiókód beállítása közben.</string>
+  <string name="wifi_countrycode_entries_us">Amerikai Egyesült Államok</string>
+  <string name="wifi_countrycode_entries_ca">Kanada, Tajvan</string>
+  <string name="wifi_countrycode_entries_de">Németország</string>
+  <string name="wifi_countrycode_entries_gb">Európa</string>
+  <string name="wifi_countrycode_entries_jp">Japán, Oroszország</string>
+  <string name="wifi_countrycode_entries_au">Ausztrália</string>
+  <string name="wifi_countrycode_entries_cn">Kína</string>
+  <string name="wifi_countrycode_entries_kr">Korea</string>
+  <string name="wifi_countrycode_entries_tr">Dél-afrikai Köztársaság, Törökország</string>
+  <string name="wifi_countrycode_entries_sg">Izrael, Szingapúr</string>
+  <string name="wifi_countrycode_entries_br">Brazília</string>
+  <string name="wifi_countrycode_entries_in">India</string>
+  <string name="unlock_set_unlock_launch_picker_title_with_fingerprint">Képernyő feloldás &amp; ujjlenyomat</string>
+  <string name="unlock_set_unlock_mode_fingerprint">Ujjlenyomat</string>
+  <string name="unlock_set_unlock_fingerprint_title">Ujjlenyomat</string>
+  <string name="fingerprint_item_add_new_fingerprint">Új ujjlenyomat hozzáadása</string>
+  <string name="fingerprint_manage_fingerprints">Ujjlenyomatok kezelése</string>
+  <string name="fingerprint_manage_fingerprints_summary">Beolvasott ujjlenyomatok kezelése</string>
+  <string name="unlock_backup_fingerprint_info_summary">Ha nem tudja az ujját használni, hogyan szeretné feloldani?</string>
+  <string name="fingerprint_dialog_title_rename">Ujjlenyomat szerkesztése</string>
+  <string name="fingerprint_dialog_name_label">Ujjlenyomat neve</string>
+  <string name="fingerprint_dialog_title_max_fingers_reached">Elérte az ujjlenyomatok maximális számát</string>
+  <string name="manage_fingerprints_description">Ujjlenyomatával gyorsan feloldhatja telefonját és készíthet fotókat.</string>
+  <string name="fingerprint_enrollment_introduction_title">Találja meg érzékelőjét</string>
+  <string name="fingerprint_enrollment_introduction_instructions">Az ujjlenyomat-érzékelő a telefon elején vagy hátoldalán található.</string>
+  <string name="fingerprint_enrollment_scan_title">Tartsa 3 másodpercig</string>
+  <string name="fingerprint_enrollment_scan_instructions">Helyezze a mutatóujját az ujjlenyomat-érzékelőre a beállítás megkezdéséhez. Emelje fel az ujját mikor rezgést érez.</string>
+  <string name="fingerprint_enrollment_error_title_wrong_sensor">Kérjük, próbálja újra</string>
+  <string name="fingerprint_enrollment_error_message">Helyezze az ujját az ujjlenyomat-érzékelőre a pontos beolvasáshoz. Ügyeljen rá, hogy ugyanazt az ujját használja mint előtte. Emelje fel az ujját mikor rezgést érez.</string>
+  <string name="fingerprint_enrollment_scan_instructions">Helyezze a mutatóujját az ujjlenyomat-érzékelőre a beállítás megkezdéséhez. Emelje fel az ujját mikor rezgést érez.</string>
+  <string name="fingerprint_enrollment_break_title">Folytassa a jelenlegi lenyomattal</string>
+  <string name="fingerprint_enrollment_break_instructions">Folytassa az ujja széleinek feldolgozásához. Emelje fel az ujját mikor rezgést érez.</string>
+  <string name="fingerprint_enrollment_finished_title">Ujjlenyomat hozzáadva!</string>
+  <string name="fingerprint_enrollment_finished_message">Most már feloldhatja a kijelzőt az ujjlenyomatával vagy szelfiket készíthet a kamerával.</string>
+  <string name="fingerprint_enrollment_found_it_label">Megtaláltam</string>
+  <string name="fingerprint_enrollment_add_another_label">Újabb hozzáadása</string>
+  <string name="fingerprint_enrollment_done_label">Kész</string>
+  <string name="fingerprint_dialog_title_wrong_sensor">Hoppá, ez nem az érzékelő</string>
+  <string name="fingerprint_dialog_msg_wrong_sensor">A telefon elején vagy hátoldalán található ujjlenyomat-érzékelőt használja</string>
+  <string name="fingerprint_dialog_title_failed_enrollment">Ujjlenyomat olvasása sikertelen</string>
+  <string name="fingerprint_dialog_msg_failed_enrollment">Próbáljon másik ujjat használni. Ez az ujjlenyomat nem olvasható.</string>
+  <string name="fingerprint_enrollment_restart_label">Újraindítás</string>
+  <string name="fingerprint_successful_scan_title_first">Tökéletes! Most ismételje meg</string>
+  <string name="fingerprint_successful_scan_final">Még egyszer</string>
+  <string name="fingerprint_successful_scan_title_1">Ez megvan! Folytassa</string>
   <string name="fingerprint_successful_scan_title_2">Nagyszerű! És újra</string>
   <string name="fingerprint_successful_scan_title_3">Szép munka! Csak így tovább</string>
   <string name="fingerprint_successful_scan_title_4">Csak még néhányszor</string>

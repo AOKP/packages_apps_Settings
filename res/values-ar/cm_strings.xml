@@ -179,16 +179,16 @@
   <string name="blacklist_summary">لن تتلقى المكالمات أو الرسائل الواردة من أرقام الهاتف في قائمة المتصلين المحظورين</string>
   <string name="blacklist_notify">أظهر في شريط الإشعارات</string>
   <string name="blacklist_private_numbers_title">الأرقام الخاصة</string>
-  <string name="blacklist_private_numbers_summary_disabled">لا تحجب المكالمات من الأرقام الخاصة</string>
+  <string name="blacklist_private_numbers_summary_disabled">عدم حظر المكالمات من الأرقام السّرّيّة</string>
   <string name="blacklist_private_numbers_summary"><xliff:g id="type"> %s </xliff:g> منع الواردة من الأرقام الخاصة</string>
-  <string name="blacklist_unknown_numbers_title">أرقام غير معروفة</string>
-  <string name="blacklist_unknown_numbers_summary_disabled">لا لي حجب مكالمات أو رسائل من أرقام غير موجود في قائمة جهات الاتصال</string>
+  <string name="blacklist_unknown_numbers_title">الأرقام غير المعروفة</string>
+  <string name="blacklist_unknown_numbers_summary_disabled">عدم حظر المكالمات أو الرسائل من الأرقام غير الموجودة في قائمة جهات الاتصال</string>
   <string name="blacklist_unknown_numbers_summary"><xliff:g id="type"> %s </xliff:g> منع  من أرقام غير موجود في قائمة جهات الاتصال</string>
   <string name="blacklist_summary_type_calls_only">المكالمات</string>
   <string name="blacklist_summary_type_messages_only">رسائل</string>
   <string name="blacklist_summary_type_calls_and_messages">المكالمات والرسائل</string>
   <string name="blacklist_regex_title">استخدام أحرف البدل</string>
-  <string name="blacklist_regex_summary">استخدام. كعلامة شاملة و* لالتكرار. على سبيل المثال 123 * كتل أرقام بدءا من 123 و. * 123 * كتل تحتوي على أرقام 123</string>
+  <string name="blacklist_regex_summary">استخدام النقطة (.) كحرف بدل والنجمة (*) للتكرار. على سبيل المثال: 123 متبوعة بنقطة ثمّ نجمة (‎123.*‎) تعني حظر الأرقام التي تبدأ بـ123؛ أما ‎.*123.*‎ (نقطة ثمّ نجمة ثمّ 123 ثمّ نقطة ثمّ نجمة) فتعني حظر الأرقام التي تتضمن 123 في أي موضع منها</string>
   <string name="blacklist_policy_block_calls">حظر المكالمات الواردة</string>
   <string name="blacklist_policy_block_messages">حظر الرسائل الواردة</string>
   <string name="blacklist_bad_number_add">تعذر إضافة رقم هاتف غير صالح إلى قائمة المتصلين المحظورين</string>
@@ -940,4 +940,25 @@
   <string name="battery_info_status_charging_dock_usb">شحن على الإرساء عبر USB</string>
   <string name="setup_lock_pattern_size_title">مدى تعقيد النمط</string>
   <string name="setup_lock_pattern_size_details">كم عدد العقد التي تريد أن تستخدمها في نمطك؟ كلما زادت العقد، كان النمط أكثر تعقيداً.</string>
+  <string name="lto_download_data_wifi_only">تنزيل البيانات المُساعدة لنظام تحديد المواقع العالمي (GPS)</string>
+  <string name="lto_download_data_wifi_only_on">عبر كلّ الشبكات</string>
+  <string name="lto_download_data_wifi_only_off">عبر شبكات Wi\u2011Fi فقط</string>
+  <string name="keep_screen_on_never">لا تُبقها مطلقًا</string>
+  <string name="keep_screen_on_debugging">في وضع التنقيح عبر USB</string>
+  <string name="keep_screen_on_charging">خلال شحن الجهاز</string>
+  <string name="contributors_cloud_fragment_title">المُساهمون</string>
+  <string name="contributors_cloud_loading_message">يُحمِّل بيانات المُساهمين\u2026</string>
+  <string name="contributors_cloud_failed_message">تعذّر تحميل بيانات المُساهمين</string>
+  <string name="contributor_info_menu">معلومات المُساهمين</string>
+  <string name="contributor_info_msg">
+<![CDATA[<b>الاسم:</b> <xliff:g id="name">%1$s</xliff:g><br/><br/>
+                 <b>الاسم الحركيّ:</b> <xliff:g id="nick">%2$s</xliff:g><br/><br/>
+                 <b>الإيداعات:</b> <xliff:g id="commits">%3$s</xliff:g><br/><br/>
+                 <b>الرتبة:</b> <xliff:g id="rank">%4$s</xliff:g>]]></string>
+  <string name="contributions_info_menu">معلومات المساهَمات</string>
+  <string name="contributions_info_msg">
+<![CDATA[<b>المساهمات الكلّيّة:</b> <xliff:g id="total_contributors">%1$s</xliff:g><br/><br/>
+                 <b>الإيداعات الكلّيّة:</b> <xliff:g id="total_commits">%2$s</xliff:g><br/><br/>
+                 <b>آخر تحديث:</b> <xliff:g id="date">%3$s</xliff:g>]]></string>
+  <string name="quick_settings_reset_message">أتريد إعادة ضبط مربّعات الإعدادات السريعة؟</string>
 </resources>
