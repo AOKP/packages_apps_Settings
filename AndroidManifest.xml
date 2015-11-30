@@ -2559,5 +2559,11 @@
             </intent-filter>
         </receiver>
 
+        <receiver android:name=".cyanogenmod.ShortcutCleanupReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package"></data>
+            </intent-filter>
+        </receiver>
     </application>
 </manifest>
