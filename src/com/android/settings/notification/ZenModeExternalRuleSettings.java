@@ -58,8 +58,8 @@ public class ZenModeExternalRuleSettings extends ZenModeRuleSettingsBase {
     }
 
     @Override
-    protected int getEnabledToastText() {
-        return 0;
+    protected String getEnabledToastText() {
+        return null;
     }
 
     @Override

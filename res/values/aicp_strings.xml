@@ -380,4 +380,7 @@
     <!-- UI debug setting: show cpu usage summary [CHAR LIMIT=50] -->
     <string name="show_cpu_info_summary">Screen overlay showing current CPU info</string>
 
+    <!-- Snackbar action button -->
+    <string name="dev_settings_action_button">Settings</string>
+
 </resources>

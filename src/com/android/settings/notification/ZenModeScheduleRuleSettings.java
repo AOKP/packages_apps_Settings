@@ -74,8 +74,8 @@ public class ZenModeScheduleRuleSettings extends ZenModeRuleSettingsBase {
     }
 
     @Override
-    protected int getEnabledToastText() {
-        return R.string.zen_schedule_rule_enabled_toast;
+    protected String getEnabledToastText() {
+        return getString(R.string.zen_schedule_rule_enabled_toast);
     }
 
     @Override

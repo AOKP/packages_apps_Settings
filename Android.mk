@@ -2,11 +2,13 @@ LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_JAVA_LIBRARIES := bouncycastle conscrypt telephony-common ims-common
+
 LOCAL_STATIC_JAVA_LIBRARIES := \
-	android-support-v4 \
-	android-support-v13 \
-	jsr305 \
-	org.cyanogenmod.platform.internal
+    android-support-v4 \
+    android-support-v13 \
+    jsr305 \
+    org.cyanogenmod.platform.internal \
+    android-snackbar
 
 LOCAL_MODULE_TAGS := optional
 
@@ -15,6 +17,11 @@ LOCAL_SRC_FILES := \
         src/com/android/settings/EventLogTags.logtags
 
 LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
+LOCAL_RESOURCE_DIR += external/android-snackbar/res
+
+LOCAL_AAPT_FLAGS := \
+    --auto-add-overlay \
+    --extra-packages com.nispok.snackbar
 
 LOCAL_SRC_FILES += \
         src/com/android/display/IPPService.aidl

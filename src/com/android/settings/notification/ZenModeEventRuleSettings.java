@@ -63,8 +63,8 @@ public class ZenModeEventRuleSettings extends ZenModeRuleSettingsBase {
     }
 
     @Override
-    protected int getEnabledToastText() {
-        return R.string.zen_event_rule_enabled_toast;
+    protected String getEnabledToastText() {
+        return getString(R.string.zen_event_rule_enabled_toast);
     }
 
     @Override

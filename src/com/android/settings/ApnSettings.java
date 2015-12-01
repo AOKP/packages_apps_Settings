@@ -49,7 +49,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.nispok.snackbar.Snackbar;
 
 import com.android.internal.logging.MetricsLogger;
 import com.android.internal.telephony.PhoneConstants;
@@ -59,6 +60,8 @@ import com.android.internal.telephony.uicc.IccRecords;
 import com.android.internal.telephony.uicc.UiccController;
 
 import android.telephony.TelephonyManager;
+
+import com.android.settings.Utils;
 
 import java.util.ArrayList;
 
@@ -460,11 +463,8 @@ public class ApnSettings extends SettingsPreferenceFragment implements
                     getPreferenceScreen().setEnabled(true);
                     mRestoreDefaultApnMode = false;
                     removeDialog(DIALOG_RESTORE_DEFAULTAPN);
-                    Toast.makeText(
-                        activity,
-                        getResources().getString(
-                                R.string.restore_default_apn_completed),
-                        Toast.LENGTH_LONG).show();
+                    Utils.showSnackbar(getString(R.string.restore_default_apn_completed),
+                            Snackbar.SnackbarDuration.LENGTH_LONG, null, null, activity);
                     break;
             }
         }
