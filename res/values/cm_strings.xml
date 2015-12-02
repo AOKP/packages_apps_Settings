@@ -30,7 +30,7 @@
 
     <!-- Development shortcut -->
     <string name="development_shortcut_title">Development shortcut</string>
-    <string name="development_shortcut_summary">Enable application management shortcuts in notification area and recent apps list</string>
+    <string name="development_shortcut_summary">Enable application management shortcuts in recent apps list</string>
 
     <!-- Setting checkbox title for root access -->
     <string name="root_access">Root access</string>
@@ -458,7 +458,7 @@
 
     <!-- tap-to-sleep -->
     <string name="double_tap_to_sleep_title">Double-tap to sleep</string>
-    <string name="double_tap_to_sleep_summary">Double tap status bar or lock screen slider to put the device to sleep</string>
+    <string name="double_tap_to_sleep_summary">Double tap on the status bar to put the device to sleep</string>
 
     <!-- Proximity wake -->
     <string name="proximity_wake_title">Prevent accidental wake-up</string>
