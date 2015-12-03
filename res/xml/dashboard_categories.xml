@@ -94,7 +94,7 @@
                 android:title="@string/aicp_settings_title">
 		<intent
                     android:action="android.intent.action.MAIN"
-                    android:targetPackage="com.lordclockan.aicpextras"
+                    android:targetPackage="com.lordclockan"
                     android:targetClass="com.lordclockan.aicpextras.MainActivity" />
         </dashboard-tile>
 

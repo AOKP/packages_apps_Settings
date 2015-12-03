@@ -1323,7 +1323,7 @@ public class SettingsActivity extends Activity
                 } else if (id == R.id.aicp_settings) {
                     boolean supported = false;
                     try {
-                        supported = (getPackageManager().getPackageInfo("com.lordclockan.aicpextras", 0).versionCode > 0);
+                        supported = (getPackageManager().getPackageInfo("com.lordclockan", 0).versionCode > 0);
                     } catch (PackageManager.NameNotFoundException e) {
                     }
                     if (!supported) {
