@@ -23,4 +23,7 @@
     <!-- Rom Control -->
     <string name="rom_control_title">ROM Control</string>
 
+    <!-- SuperSU -->
+    <string name="supersu_title">SuperSU</string>
+
 </resources>
