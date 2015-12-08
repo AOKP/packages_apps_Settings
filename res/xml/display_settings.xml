@@ -103,12 +103,6 @@
                 android:summary="@string/proximity_wake_summary"
                 android:defaultValue="true" />
 
-        <com.android.settings.cyanogenmod.CMSystemSettingSwitchPreference
-                android:key="double_tap_sleep_gesture"
-                android:title="@string/double_tap_to_sleep_title"
-                android:summary="@string/double_tap_to_sleep_summary"
-                android:defaultValue="true" />
-
         <ListPreference
                 android:key="lcd_density"
                 android:title="@string/lcd_density"
@@ -135,12 +129,6 @@
                     android:key="expanded_desktop"
                     android:title="@string/power_menu_expanded_desktop"
                     android:fragment="com.android.settings.applications.ExpandedDesktopPreferenceFragment" />
-
-            <!-- Search in Recents -->
-            <com.android.settings.cyanogenmod.CMSystemSettingSwitchPreference
-                    android:key="recents_show_search_bar"
-                    android:title="@string/recents_show_searchbar"
-                    android:defaultValue="true" />
 
             <com.android.settings.FontDialogPreference
                     android:key="font_size"

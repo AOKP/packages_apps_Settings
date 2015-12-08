@@ -88,19 +88,21 @@
             android:key="@string/category_key_device"
             android:title="@string/header_category_device" >
 
+        <!-- AOKP ROMControl hook -->
+        <dashboard-tile
+            android:icon="@drawable/ic_settings_rom_control_teal"
+            android:title="@string/rom_control_title">
+        <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.aokp.romcontrol.MainActivity"
+                android:targetPackage="com.aokp.romcontrol" />
+        </dashboard-tile>
+
         <dashboard-tile
                 android:id="@+id/button_settings"
                 android:title="@string/button_pref_title"
                 android:fragment="com.android.settings.ButtonSettings"
                 android:icon="@drawable/ic_settings_buttons"
-                />
-
-        <!-- Home -->
-        <dashboard-tile
-                android:id="@+id/home_settings"
-                android:title="@string/home_settings"
-                android:fragment="com.android.settings.HomeSettings"
-                android:icon="@drawable/ic_settings_home"
                 />
 
         <!-- Display -->
@@ -109,6 +111,14 @@
                 android:title="@string/display_settings"
                 android:fragment="com.android.settings.DisplaySettings"
                 android:icon="@drawable/ic_settings_display"
+                />
+
+        <!-- Notifications -->
+        <dashboard-tile
+                android:id="@+id/notification_settings"
+                android:title="@string/notification_settings"
+                android:fragment="com.android.settings.notification.NotificationSettings"
+                android:icon="@drawable/ic_settings_notifications"
                 />
 
         <!-- Gestures -->
@@ -133,24 +143,6 @@
                 <categories android:name="cyanogenmod.intent.category.APP_THEMES" />
             </intent>
         </dashboard-tile>
-
-        <!-- AOKP ROMControl hook -->
-        <dashboard-tile
-            android:icon="@drawable/ic_settings_rom_control_teal"
-            android:title="@string/rom_control_title">
-        <intent
-                android:action="android.intent.action.MAIN"
-                android:targetClass="com.aokp.romcontrol.MainActivity"
-                android:targetPackage="com.aokp.romcontrol" />
-        </dashboard-tile>
-
-        <!-- Notifications -->
-        <dashboard-tile
-                android:id="@+id/notification_settings"
-                android:title="@string/notification_settings"
-                android:fragment="com.android.settings.notification.NotificationSettings"
-                android:icon="@drawable/ic_settings_notifications"
-                />
 
         <!-- Application Settings -->
         <dashboard-tile
@@ -215,20 +207,20 @@
             android:key="@string/category_key_personal"
             android:title="@string/header_category_personal" >
 
+        <!-- Home -->
+        <dashboard-tile
+                android:id="@+id/home_settings"
+                android:title="@string/home_settings"
+                android:fragment="com.android.settings.HomeSettings"
+                android:icon="@drawable/ic_settings_home"
+                />
+
         <!-- Profiles -->
         <dashboard-tile
                 android:id="@+id/profile_settings"
                 android:fragment="com.android.settings.profiles.ProfilesSettings"
                 android:title="@string/profiles_settings_title"
                 android:icon="@drawable/ic_settings_profiles"
-                />
-
-        <!-- Status bar -->
-        <dashboard-tile
-                android:id="@+id/status_bar_settings"
-                android:title="@string/status_bar_title"
-                android:fragment="com.android.settings.cyanogenmod.StatusBarSettings"
-                android:icon="@drawable/ic_settings_extdesk_hidenavbar"
                 />
 
         <!-- Location -->
