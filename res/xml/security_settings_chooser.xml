@@ -27,6 +27,12 @@
             android:summary="@string/unlock_set_unlock_mode_none"
             android:persistent="false"/>
 
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="general_category"
+        android:title="@string/title_general">
+
         <ListPreference
             android:key="lock_after_timeout"
             android:title="@string/lock_after_timeout"

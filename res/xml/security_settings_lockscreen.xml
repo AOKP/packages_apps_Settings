@@ -29,6 +29,12 @@
             settings:keywords="@string/keywords_lockscreen"
             android:persistent="false"/>
 
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="general_category"
+        android:title="@string/title_general">
+
         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
             android:key="lockscreen_media_metadata"
             android:title="@string/media_art_title"
@@ -40,6 +46,14 @@
             android:enabled="false"
             android:title="@string/owner_info_settings_title"
             android:summary="@string/owner_info_settings_summary"/>
+
+        <PreferenceScreen
+            android:key="lockscreen_shortcuts_settings"
+            android:title="@string/lockscreen_targets_message" >
+            <intent
+                android:targetPackage="com.android.systemui"
+                android:targetClass="com.android.systemui.cm.LockscreenShortcutsActivity" />
+        </PreferenceScreen>
 
     </PreferenceCategory>
 
