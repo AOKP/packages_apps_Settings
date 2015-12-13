@@ -52,6 +52,13 @@
                 android:key="alarm_volume"
                 android:icon="@*android:drawable/ic_audio_alarm"
                 android:title="@string/alarm_volume_option_title" />
+
+        <!-- Volume Steps -->
+        <PreferenceScreen
+                android:key="volume_steps"
+                android:title="@string/volume_steps_title"
+                android:fragment="com.android.settings.aicp.VolumeSteps" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
