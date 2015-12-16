@@ -212,8 +212,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         // hide option if device is already set to never wake up
         if(!getResources().getBoolean(
                 com.android.internal.R.bool.config_unplugTurnsOnScreen)) {
-                mWakeUpOptions.removePreference(mWakeUpWhenPluggedOrUnplugged);
-                prefSet.removePreference(mWakeUpOptions);
+                prefSet.removePreference(mWakeUpWhenPluggedOrUnplugged);
         } else {
             mWakeUpWhenPluggedOrUnplugged.setChecked(Settings.System.getInt(resolver,
                         Settings.System.WAKEUP_WHEN_PLUGGED_UNPLUGGED, 1) == 1);
