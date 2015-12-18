@@ -18,4 +18,5 @@
 -->
 <resources>
     <item type="id" name="preference_highlight_key" />
+    <item type="id" name="drag_handle" />
 </resources>
