@@ -1077,6 +1077,8 @@
     <string name="live_display_color_profile_cinema_summary">Perfect color reproduction for media</string>
     <string name="live_display_color_profile_astronomy_title">Astronomy</string>
     <string name="live_display_color_profile_astronomy_summary">Deep red for preserving night vision</string>
+    <string name="live_display_color_profile_basic_title">Basic</string>
+    <string name="live_display_color_profile_basic_summary">Use the display uncalibrated</string>
 
     <string name="power_usage_history_title">Battery usage</string>
     <string name="battery_saver_threshold">Battery saver threshold</string>
