@@ -492,7 +492,7 @@
   </string-array>
   <string-array name="track_frame_time_entries">
     <item msgid="2193584639058893150">"Aus"</item>
-    <item msgid="2751513398307949636">"Auf Bildschirm als Balken"</item>
+    <item msgid="2751513398307949636">"Auf dem Bildschirm als Balken"</item>
     <item msgid="1851438178120770973">"In adb shell dumpsys gfxinfo"</item>
   </string-array>
   <string-array name="debug_hw_overdraw_entries">
