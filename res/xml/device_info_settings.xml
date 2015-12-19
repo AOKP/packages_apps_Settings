@@ -94,6 +94,12 @@
                 android:title="@string/mod_version"
                 android:summary="@string/mod_version_default" />
 
+        <!-- Device Maintainer -->
+        <Preference android:key="device_maintainer"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/device_maintainer"
+                android:summary="@string/device_info_default" />
+
         <!-- Security patch level -->
         <Preference android:key="security_patch"
                 style="?android:preferenceInformationStyle"
