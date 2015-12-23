@@ -175,4 +175,8 @@
     <string name="shortcut_action_power">Screen Off</string>
     <string name="shortcut_action_search">Search in app</string>
 
+    <!-- Double tap power button camera vibration toggle -->
+    <string name="dbl_tap_vib_title">Double tap power for camera vibration</string>
+    <string name="dbl_tap_vib_summary">Vibrate on double tap of power button when enabled</string>
+
 </resources>

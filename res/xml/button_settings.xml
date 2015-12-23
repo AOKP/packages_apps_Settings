@@ -93,6 +93,12 @@
             android:summary="@string/camera_double_tap_power_gesture_desc"
             android:persistent="false" />
 
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="double_tap_vibrate"
+            android:title="@string/dbl_tap_vib_title"
+            android:summary="@string/dbl_tap_vib_summary"
+            android:defaultValue="true" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
