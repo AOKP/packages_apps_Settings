@@ -209,4 +209,7 @@
     <string name="doze_notification_color_invert_summary_off">Ambient display notifications will not be inverted. Use for dark themes.</string>
     <string name="doze_notification_color_invert_summary_on">Ambient display notifications will show as inverted. Use for light/stock theme.</string>
 
+    <!-- On-The-Go -->
+    <string name="power_menu_onthego_title">On-The-Go Mode</string>
+
 </resources>
