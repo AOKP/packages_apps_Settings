@@ -31,6 +31,7 @@
   <string-array name="screen_timeout_entries">
     <item>15 Sekonnen</item>
     <item>30 Sekonnen</item>
+    <item>45 Sekonnen</item>
     <item>1 Minutt</item>
     <item>2 Minutten</item>
     <item>5 Minutten</item>
@@ -41,6 +42,7 @@
     <item>Ni</item>
     <item>15 Sekonnen</item>
     <item>30 Sekonnen</item>
+    <item>45 Sekonnen</item>
     <item>1 Minutt</item>
     <item>2 Minutten</item>
     <item>5 Minutten</item>
@@ -52,6 +54,7 @@
     <item>5 Sekonnen</item>
     <item>15 Sekonnen</item>
     <item>30 Sekonnen</item>
+    <item>45 Sekonnen</item>
     <item>1 Minutt</item>
     <item>2 Minutten</item>
     <item>5 Minutten</item>

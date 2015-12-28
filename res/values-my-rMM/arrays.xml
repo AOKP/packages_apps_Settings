@@ -32,6 +32,7 @@
   <string-array name="screen_timeout_entries">
     <item msgid="3342301044271143016">"၁၅ စက္ကန့်"</item>
     <item msgid="8881760709354815449">"၃၀ စက္ကန့်"</item>
+    <item msgid="45SecondsScreenXXXX">"၃၀ စက္ကန့်"</item>
     <item msgid="7589406073232279088">"၁ မိနစ်"</item>
     <item msgid="7001195990902244174">"၂ မိနစ်"</item>
     <item msgid="7489864775127957179">"၅မိနစ်"</item>
@@ -42,6 +43,7 @@
     <item msgid="3149294732238283185">"မည်သည့်အခါမှ"</item>
     <item msgid="2194151041885903260">"၁၅ စက္ကန့်"</item>
     <item msgid="5892295237131074341">"၃၀ စက္ကန့်"</item>
+    <item msgid="45SecondsDreamXXXXX">"၃၀ စက္ကန့်"</item>
     <item msgid="3538441365970038213">"၁ မိနစ်"</item>
     <item msgid="412343871668955639">"၂ မိနစ်"</item>
     <item msgid="5076853889688991690">"၅မိနစ်"</item>
@@ -53,6 +55,7 @@
     <item msgid="6736512735606834431">"၅ စက္ကန့်"</item>
     <item msgid="8044619388267891375">"၁၅ စက္ကန့်"</item>
     <item msgid="1822002388249545488">"၃၀ စက္ကန့်"</item>
+    <item msgid="45SecondsLockXXXXXX">"၃၀ စက္ကန့်"</item>
     <item msgid="8538071621211916519">"၁ မိနစ်"</item>
     <item msgid="5663439580228932882">"၂ မိနစ်"</item>
     <item msgid="49888496216106852">"၅မိနစ်"</item>

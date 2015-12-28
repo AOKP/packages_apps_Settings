@@ -31,6 +31,7 @@
   <string-array name="screen_timeout_entries">
     <item>15 چرکه‌</item>
     <item>30 چرکه‌</item>
+    <item>45 چرکه‌</item>
     <item>1 خوله‌ک</item>
     <item>3 خوله‌ک</item>
     <item>5 خوله‌ک</item>
@@ -41,6 +42,7 @@
     <item>هه‌رگیز</item>
     <item>15 چرکه‌</item>
     <item>30 چرکه‌</item>
+    <item>45 چرکه‌</item>
     <item>1 خوله‌ک</item>
     <item>2 خوله‌ک</item>
     <item>5 خوله‌ک</item>
@@ -52,6 +54,7 @@
     <item>5 چرکه‌</item>
     <item>15 چرکه‌</item>
     <item>30 چرکه‌</item>
+    <item>45 چرکه‌</item>
     <item>1 خوله‌ک</item>
     <item>2 خوله‌ک</item>
     <item>5 خوله‌ک</item>

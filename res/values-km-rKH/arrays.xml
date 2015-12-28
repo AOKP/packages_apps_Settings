@@ -32,6 +32,7 @@
   <string-array name="screen_timeout_entries">
     <item msgid="3342301044271143016">"១៥ វិនាទី"</item>
     <item msgid="8881760709354815449">"៣០ វិនាទី"</item>
+    <item msgid="45SecondsScreenXXXX">"៣០ វិនាទី"</item>
     <item msgid="7589406073232279088">"១ នាទី"</item>
     <item msgid="7001195990902244174">"២ នាទី"</item>
     <item msgid="7489864775127957179">"៥ នាទី"</item>
@@ -42,6 +43,7 @@
     <item msgid="3149294732238283185">"កុំ"</item>
     <item msgid="2194151041885903260">"១៥ វិនាទី"</item>
     <item msgid="5892295237131074341">"៣០ វិនាទី"</item>
+    <item msgid="45SecondsDreamXXXXX">"៣០ វិនាទី"</item>
     <item msgid="3538441365970038213">"១ នាទី"</item>
     <item msgid="412343871668955639">"២ នាទី"</item>
     <item msgid="5076853889688991690">"៥ នាទី"</item>
@@ -53,6 +55,7 @@
     <item msgid="6736512735606834431">"៥ វិនាទី"</item>
     <item msgid="8044619388267891375">"១៥ វិនាទី"</item>
     <item msgid="1822002388249545488">"៣០ វិនាទី"</item>
+    <item msgid="45SecondsLockXXXXXX">"៣០ វិនាទី"</item>
     <item msgid="8538071621211916519">"១ នាទី"</item>
     <item msgid="5663439580228932882">"២ នាទី"</item>
     <item msgid="49888496216106852">"៥ នាទី"</item>

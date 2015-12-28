@@ -32,6 +32,7 @@
   <string-array name="screen_timeout_entries">
     <item msgid="3342301044271143016">"۱۵ ثانیه"</item>
     <item msgid="8881760709354815449">"۳۰ ثانیه"</item>
+    <item msgid="45SecondsScreenXXXX">"۳۰ ثانیه"</item>
     <item msgid="7589406073232279088">"۱ دقیقه"</item>
     <item msgid="7001195990902244174">"۲ دقیقه"</item>
     <item msgid="7489864775127957179">"۵ دقیقه"</item>
@@ -42,6 +43,7 @@
     <item msgid="3149294732238283185">"هیچ‌وقت"</item>
     <item msgid="2194151041885903260">"۱۵ ثانیه"</item>
     <item msgid="5892295237131074341">"۳۰ ثانیه"</item>
+    <item msgid="45SecondsDreamXXXXX">"۳۰ ثانیه"</item>
     <item msgid="3538441365970038213">"۱ دقیقه"</item>
     <item msgid="412343871668955639">"۲ دقیقه"</item>
     <item msgid="5076853889688991690">"۵ دقیقه"</item>
@@ -53,6 +55,7 @@
     <item msgid="6736512735606834431">"۵ ثانیه"</item>
     <item msgid="8044619388267891375">"۱۵ ثانیه"</item>
     <item msgid="1822002388249545488">"۳۰ ثانیه"</item>
+    <item msgid="45SecondsLockXXXXXX">"۳۰ ثانیه"</item>
     <item msgid="8538071621211916519">"۱ دقیقه"</item>
     <item msgid="5663439580228932882">"۲ دقیقه"</item>
     <item msgid="49888496216106852">"۵ دقیقه"</item>

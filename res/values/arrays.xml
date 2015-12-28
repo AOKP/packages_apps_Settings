@@ -43,6 +43,7 @@
     <string-array name="screen_timeout_entries">
         <item>15 seconds</item>
         <item>30 seconds</item>
+        <item>45 seconds</item>
         <item>1 minute</item>
         <item>2 minutes</item>
         <item>5 minutes</item>
@@ -56,6 +57,8 @@
         <item>15000</item>
         <!-- Do not translate. -->
         <item>30000</item>
+        <!-- Do not translate. -->
+        <item>45000</item>
         <!-- Do not translate. -->
         <item>60000</item>
         <!-- Do not translate. -->
@@ -73,6 +76,7 @@
         <item>Never</item>
         <item>15 seconds</item>
         <item>30 seconds</item>
+        <item>45 seconds</item>
         <item>1 minute</item>
         <item>2 minutes</item>
         <item>5 minutes</item>
@@ -88,6 +92,8 @@
         <item>15000</item>
         <!-- Do not translate. -->
         <item>30000</item>
+        <!-- Do not translate. -->
+        <item>45000</item>
         <!-- Do not translate. -->
         <item>60000</item>
         <!-- Do not translate. -->
@@ -107,6 +113,7 @@
         <item>5 seconds</item>
         <item>15 seconds</item>
         <item>30 seconds</item>
+        <item>45 seconds</item>
         <item>1 minute</item>
         <item>2 minutes</item>
         <item>5 minutes</item>
@@ -124,6 +131,8 @@
         <item>15000</item>
         <!-- Do not translate. -->
         <item>30000</item>
+        <!-- Do not translate. -->
+        <item>45000</item>
         <!-- Do not translate. -->
         <item>60000</item>
         <!-- Do not translate. -->
