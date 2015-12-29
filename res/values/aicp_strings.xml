@@ -245,4 +245,10 @@
     <string name="less_notification_sounds_2m">2 minutes</string>
     <string name="less_notification_sounds_5m">5 minutes</string>
 
+    <!-- Battery notifications -->
+    <string name="battery_saver_notif_title">Battery saver notification</string>
+    <string name="battery_saver_notif_summary">Show battery saver notification when enabled</string>
+    <string name="battery_low_notif_title">Low battery notification</string>
+    <string name="battery_low_notif_summary">Show low battery notification when enabled</string>
+
 </resources>
