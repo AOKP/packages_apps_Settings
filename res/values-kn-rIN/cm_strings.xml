@@ -33,7 +33,7 @@
   <string name="root_access_adb">ಎಡಿಬಿ ಮಾತ್ರ</string>
   <string name="root_access_all">ಆಪ್ಸ್ ಮತ್ತು ಎಡಿಬಿ</string>
   <string name="nfc_title_category">ಎನ್ಎಫ್‍ಸಿ</string>
-  <string name="mod_version">CyanogenMod ಆವೃತ್ತಿ</string>
+  <string name="mod_version">AICP ಆವೃತ್ತಿ</string>
   <string name="mod_version_default">ಅಜ್ಞಾತ</string>
   <string name="device_model">ಸಾಧನ ಮಾದರಿ</string>
   <string name="device_name">ಸಾಧನ ಹೆಸರು</string>

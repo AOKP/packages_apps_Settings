@@ -32,7 +32,7 @@
   <string name="root_access_apps">Apps only</string>
   <string name="root_access_adb">ADB only</string>
   <string name="root_access_all">Apps and ADB</string>
-  <string name="mod_version">CyanogenMod version</string>
+  <string name="mod_version">AICP version</string>
   <string name="mod_version_default">Unknown</string>
   <string name="mod_api_level_default">Unknown</string>
   <string name="build_date">Build date</string>

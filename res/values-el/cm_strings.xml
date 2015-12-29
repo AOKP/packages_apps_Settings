@@ -29,7 +29,7 @@
   <string name="root_access_adb">Μόνο ADB</string>
   <string name="root_access_all">Εφαρμογές και ADB</string>
   <string name="nfc_title_category">NFC</string>
-  <string name="mod_version">Έκδοση CyanogenMod</string>
+  <string name="mod_version">Έκδοση AICP</string>
   <string name="mod_version_default">Άγνωστη</string>
   <string name="device_model">Μοντέλο συσκευής</string>
   <string name="device_name">Όνομα συσκευής</string>

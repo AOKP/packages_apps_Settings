@@ -32,7 +32,7 @@
   <string name="root_access_apps">Doar aplicații</string>
   <string name="root_access_adb">Doar ADB</string>
   <string name="root_access_all">Aplicații și ADB</string>
-  <string name="mod_version">versiune CyanogenMod</string>
+  <string name="mod_version">versiune AICP</string>
   <string name="mod_version_default">Necunoscut</string>
   <string name="device_model">Modelul dispozitivului</string>
   <string name="device_name">Numele dispozitivului</string>
