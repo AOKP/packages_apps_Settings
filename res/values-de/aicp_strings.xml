@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2015 AICP
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Aicp Settings -->
+    <string name="aicp_settings_title">AICP Extras</string>
+    <string name="header_category_personalization">Personalisierung</string>
+    <string name="supersu_title">SuperSU</string>
+
+    <string name="allow_lights_title">Beleuchtung an während \"Nicht stören\"-Modus</string>
+
+    <!-- Media art -->
+    <string name="media_art_title">Medien-Cover</string>
+    <string name="media_art_summary">Aktiviere die Darstellung von Medien-Covern auf dem Sperrbildschirm</string>
+
+    <!-- Sound & Notification Settings -->
+    <!-- Linked / unlinked notification volume -->
+    <string name="link_volume_option_title">Verbinde Lautstärke für Klingelton und Benachrichtigungen</string>
+    <string name="notification_volume_option_title">Lautstärke für Benachrichtigung</string>
+    <string name="ring_notification_volume_option_title">Lautstärke für Klingelton und Benachrichtigung</string>
+
+    <!-- Hold back to kill timeout -->
+    <string name="hold_back_to_kill_timeout_title">Timeout für Zurücktaste beendet aktuelle App</string>
+    <string name="default_string">Standard</string>
+
+    <!-- Volume Steps -->
+    <string name="volume_steps_title">Lautstärke-Schritte</string>
+    <string name="volume_steps_alarm_title">Lautstärke-Schritte: Wecker</string>
+    <string name="volume_steps_dtmf_title">Lautstärke-Schritte: MFV</string>
+    <string name="volume_steps_music_title">Lautstärke-Schritte: Musik</string>
+    <string name="volume_steps_notification_title">Lautstärke-Schritte: Benachrichtigung</string>
+    <string name="volume_steps_ring_title">Lautstärke-Schritte: Klingelton</string>
+    <string name="volume_steps_system_title">Lautstärke-Schritte: System</string>
+    <string name="volume_steps_voice_call_title">Lautstärke-Schritte: Sprachanruf</string>
+    <string name="volume_steps_reset">Zurücksetzen</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
+
+    <!-- Navigation Bar -->
+    <string name="navigation_bar_dimensions_reset_message">Alle Größenanpassungen auf Standard zurücksetzen?</string>
+    <string name="navigation_bar_dimensions_title"><b>Größe der Navigationsleiste</b></string>
+    <string name="navigation_bar_dimensions_title_summary">Größenänderung der Navigationsleiste</string>
+    <string name="navigation_bar_height_title">Höhe der Navigationsleiste</string>
+    <string name="navigation_bar_height_summary">Höhe der Navigationsleiste im Hochformat (Portrait)</string>
+    <string name="navigation_bar_height_landscape_title">Höhe der Navigationsleiste (Landscape)</string>
+    <string name="navigation_bar_height_landscape_summary">Höhe der Navigationsleiste im Querformat (Landscape).</string>
+    <string name="navigation_bar_width_title">Breite der Navigationsleiste</string>
+    <string name="navigation_bar_width_summary">Breite der Navigationsleiste, wenn sie auf der Seite des Displays ist (Querformat)</string>
+    <string name="navigation_bar_size_48_dp_default">48 dp (Standard)</string>
+    <string name="navigation_bar_size_44_dp">44 dp</string>
+    <string name="navigation_bar_size_42_dp_default">42 dp (Standard)</string>
+    <string name="navigation_bar_size_42_dp">42 dp</string>
+    <string name="navigation_bar_size_40_dp">40 dp</string>
+    <string name="navigation_bar_size_36_dp">36 dp</string>
+    <string name="navigation_bar_size_30_dp">30 dp</string>
+    <string name="navigation_bar_size_24_dp">24 dp</string>
+    <string name="navigation_bar_size_0_dp">0 dp (Aus)</string>
+    <string name="nav_bar_title">Navigationsleiste</string>
+    <string name="navbar_enable_bar_title">Tasten der Navigationsleiste</string>
+    <string name="navbar_enable_bar_summary">Aktiviere On-Screen Tasten für die Navigationsleiste</string>
+
+    <!-- Slim lockscreen shortcuts -->
+    <string name="shortcut_action_none">Keiner</string>
+    <string name="shortcut_action_longpress">Lange Drücken:</string>
+    <string name="shortcut_action_select_action_longpress">Aktion bei langem Druck:</string>
+    <string name="shortcut_action_select_action">Wähle Aktion:</string>
+    <string name="shortcut_action_select_action_newaction">Wähle neue Aktion:</string>
+    <string name="shortcut_action_reset">Zurücksetzen</string>
+    <string name="shortcut_action_add">Hinzufügen</string>
+    <string name="shortcut_action_reset_message">Alle Einträge auf Standard zurücksetzen?</string>
+    <string name="shortcut_action_max">Die Maximalgröße für Einträge wurde erreicht</string>
+    <string name="shortcut_action_warning">Warnung</string>
+    <string name="shortcut_action_warning_message">Es ist nicht möglich den letzten Eintrag zu löschen</string>
+    <string name="shortcut_action_disable_message">Lösche\nFüge einen Eintrag hinzu, um dieses Feature zu aktivieren</string>
+    <string name="shortcut_image_not_valid">Die gewählte App hat kein gültiges Icon oder erlaubt keinen Bildzuschnitt. Wähle eine andere App.</string>
+    <string name="shortcut_duplicate_entry">Die gewählte Aktion kann nicht zweimal hinzugefügt werden</string>
+    <string name="shortcut_action_help_shortcut">Verknüpfung</string>
+    <string name="shortcut_action_help_button">Taste</string>
+    <string name="shortcut_action_help_app">App</string>
+    <string name="shortcut_action_help_icon">, während die Auswahl des Icons die Anpassungsoptionen aufruft</string>
+    <string name="shortcut_action_help_main">Um eine %1$s hinzuzufügen, wähle das \"Plus\" Icon. Wenn die %1$s hinzugefügt wurde, wird die Auswahl der Reihe das Ziel auswechseln%2$s\n\nUm eine %1$s zu entfernen, wische horizontal über die Reihe von links oder rechts. Verschiebe eine %1$s in der Liste durch vertikales Ziehen am Ankerpunkt auf der linken Seite.\n\nZum Säubern oder um auf Standard zurückzusetzen, wähle das \"Zurücksetzen\" Icon.</string>
+    <string name="shortcut_action_help_delete_last_entry">Das Entfernen jeder %1$s von der Liste deaktiviert dieses Feature komplett.</string>
+    <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Das Entfernen jeder %1$s von der Liste deaktiviert die zweite PIE Ebene komplett.</string>
+    <string name="shortcuts_applications">Anwendungen</string>
+    <string name="shortcuts_select_custom_app_title">Wähle spezifische Anwendung</string>
+    <string name="shortcuts_icon_picker_type">Wähle Icontyp:</string>
+    <string name="shortcuts_icon_default">Original</string>
+    <string name="shortcuts_icon_presets">System Symbole</string>
+    <string name="shortcuts_icon_custom">Galerie</string>
+    <string name="shortcuts_icon_picker_choose_icon_title">Wähle Icon</string>
+    <string name="shortcuts_icon_picker_alarm">Wecker</string>
+    <string name="shortcuts_icon_picker_andy">Andy</string>
+    <string name="shortcuts_icon_picker_battery">Akku</string>
+    <string name="shortcuts_icon_picker_browser">Browser</string>
+    <string name="shortcuts_icon_picker_calendar">Kalender</string>
+    <string name="shortcuts_icon_picker_camera">Kamera</string>
+    <string name="shortcuts_icon_picker_cloud">Cloud</string>
+    <string name="shortcuts_icon_picker_contact">Kontakt</string>
+    <string name="shortcuts_icon_picker_directdial">Direktanruf</string>
+    <string name="shortcuts_icon_picker_directmessage">Sofortnachricht</string>
+    <string name="shortcuts_icon_picker_drive">Drive</string>
+    <string name="shortcuts_icon_picker_dropbox">Dropbox</string>
+    <string name="shortcuts_icon_picker_email">Email</string>
+    <string name="shortcuts_icon_picker_email2">Alternative Email</string>
+    <string name="shortcuts_icon_picker_evernote">Evernote</string>
+    <string name="shortcuts_icon_picker_facebook">Facebook</string>
+    <string name="shortcuts_icon_picker_favorite">Favorit</string>
+    <string name="shortcuts_icon_picker_file_browser">Dateimanager</string>
+    <string name="shortcuts_icon_picker_file_browser2">Alternativer Dateimanager</string>
+    <string name="shortcuts_icon_picker_fitness">Fitness</string>
+    <string name="shortcuts_icon_picker_gallery">Galerie</string>
+    <string name="shortcuts_icon_picker_gears">Gears</string>
+    <string name="shortcuts_icon_picker_google_small">Google</string>
+    <string name="shortcuts_icon_picker_gplus">Google Plus</string>
+    <string name="shortcuts_icon_picker_gtalk">Hangouts</string>
+    <string name="shortcuts_icon_picker_help">Hilfe</string>
+    <string name="shortcuts_icon_picker_joystick">Joystick</string>
+    <string name="shortcuts_icon_picker_key">Schlüssel/Konten</string>
+    <string name="shortcuts_icon_picker_laptop">Laptop</string>
+    <string name="shortcuts_icon_picker_notes">Notizen</string>
+    <string name="shortcuts_icon_picker_luggage">Reisen</string>
+    <string name="shortcuts_icon_picker_maps">Maps</string>
+    <string name="shortcuts_icon_picker_market">Market</string>
+    <string name="shortcuts_icon_picker_movie">Filme</string>
+    <string name="shortcuts_icon_picker_music">Musik</string>
+    <string name="shortcuts_icon_picker_nav">Navigation</string>
+    <string name="shortcuts_icon_picker_phone">Telefon</string>
+    <string name="shortcuts_icon_picker_package">Paket</string>
+    <string name="shortcuts_icon_picker_pinterest">Pinterest</string>
+    <string name="shortcuts_icon_picker_play">Play</string>
+    <string name="shortcuts_icon_picker_pocket">Pocket</string>
+    <string name="shortcuts_icon_picker_quicksettings">Schnelleinstellungen</string>
+    <string name="shortcuts_icon_picker_rss">RSS Feed</string>
+    <string name="shortcuts_icon_picker_sdcard">SD-Karte</string>
+    <string name="shortcuts_icon_picker_search">Suche</string>
+    <string name="shortcuts_icon_picker_sms">SMS</string>
+    <string name="shortcuts_icon_picker_tasks">Aufgaben</string>
+    <string name="shortcuts_icon_picker_terminal">Terminal</string>
+    <string name="shortcuts_icon_picker_transit">Transit</string>
+    <string name="shortcuts_icon_picker_tv">TV</string>
+    <string name="shortcuts_icon_picker_twitter">Twitter</string>
+    <string name="shortcuts_icon_picker_unlock">Entsperren</string>
+    <string name="reset_message">Alle Einträge auf Standard zurücksetzen?</string>
+    <string name="lockscreen_shortcuts_title">Verknüpfungen auf Displaymitte</string>
+    <string name="lockscreen_shortcuts_summary">Ansehen oder Ändern von eigenen Sperrbildschirmverknüpfungen</string>
+    <string name="lockscreen_shorcuts_launch_type_title">Shortcut click type</string>
+    <string name="lockscreen_shortcuts_single_tap">Einmal Tippen</string>
+    <string name="lockscreen_shortcuts_double_tap">Zweimal Tippen</string>
+    <string name="lockscreen_shortcuts_longpress">Lange Drücken</string>
+    <string name="help">Hilfe</string>
+    <string name="shortcut_action_app">Eigene App</string>
+    <string name="shortcut_action_home">Home</string>
+    <string name="shortcut_action_back">Zurück</string>
+    <string name="shortcut_action_menu">Menü</string>
+    <string name="shortcut_action_ime">Wechsle Eingabemethode</string>
+    <string name="shortcut_action_power_menu">Ein/Aus-Menü</string>
+    <string name="shortcut_action_recent">Anwendungsverlauf</string>
+    <string name="shortcut_action_power">Display aus</string>
+    <string name="shortcut_action_search">Suche in App</string>
+
+    <!-- Double tap power button camera vibration toggle -->
+    <string name="dbl_tap_vib_title">Zweimal Ein/Aus drücken für Kamera-Vibration</string>
+    <string name="dbl_tap_vib_summary">Vibrieren, wenn der Ein/Aus-Knopf zweimal gedrückt wurde.</string>
+
+    <!-- Battery Saver Settings -->
+    <!-- Disable Battery Saver Warning Color -->
+    <string name="battery_saver_color_title">Farbe der Akkustand-Warnung</string>
+    <string name="battery_saver_color_summary">Aktiviere orangefarbene Status- und Navigationsleisten, wenn die Akkustand-Warnung aktiv ist</string>
+
+    <!-- Doze options -->
+    <string name="display_category_doze_options_title">Inaktivitätsdisplay</string>
+    <string name="doze_settings_title">Erweiterte Inaktivitätsoptionen (Doze)</string>
+    <string name="doze_timeout_title">Timeout für das Pulsieren bei Inaktivität</string>
+    <string name="doze_timeout_summary">Zeit, die das Display für pulsierende Benachrichtigungen anbleibt</string>
+    <string name="doze_trigger_pickup_title">Auslösung bei Aufnahme des Geräts</string>
+    <string name="doze_trigger_pickup_summary_on">Das Pulsieren bei Inaktivität wird bei Erkennung der Geräte-Aufnahme ausgelöst</string>
+    <string name="doze_trigger_pickup_summary_off">Die Aufnahme des Geräts (Sensor) wird nicht als Auslösemechanismus verwendet</string>
+    <string name="doze_trigger_sigmotion_title">Auslösung bei signifikanten Bewegungen</string>
+    <string name="doze_trigger_sigmotion_summary_on">Das Pulsieren bei Inaktivität wird bei signifikanten Bewegungen (Sensor) ausgelöst</string>
+    <string name="doze_trigger_sigmotion_summary_off">Signifikante Bewegungsmeldungen des Sensors werden nicht als Auslösemechanismus verwendet</string>
+    <string name="doze_trigger_notification_title">Auslösung durch Benachrichtigungen</string>
+    <string name="doze_trigger_notification_summary_on">Das Pulsieren bei Inaktivität wird durch Benachrichtigungen ausgelöst</string>
+    <string name="doze_trigger_notification_summary_off">Benachrichtigungen werden nicht als Auslöser verwendet</string>
+    <string name="doze_schedule_title">Zeitintervall beim Pulsieren</string>
+    <string name="doze_schedule_summary_on">Vordefinierte Wiederholungsintervalle (normalerweise [1s,10s,30s,60s,120s]) werden bei Inaktivität verwendet (Standard)</string>
+    <string name="doze_schedule_summary_off">Benachrichtigung pulsiert nur einmal bei Inaktivität</string>
+    <string name="doze_brightness_title">Helligkeitsstufe beim Pulsieren</string>
+    <string name="doze_brightness_summary">Display-Helligkeitsstufe für das Pulsieren bei Inaktivität (% der max. zulässigen Helligkeit)</string>
+
+    <!-- Doze notification color invert -->
+    <string name="doze_notification_color_invert_title">Farbumkehr</string>
+    <string name="doze_notification_color_invert_summary_off">Farbe der Benachrichtigungen bei Inaktivitätsdisplay nicht umkehren. Für dunkle Themen benutzen.</string>
+    <string name="doze_notification_color_invert_summary_on">Farbe der Benachrichtigungen bei Inaktivitätsdisplay umkehren. Für helle Themen/Standardthema benutzen.</string>
+
+    <!-- On-The-Go -->
+    <string name="power_menu_onthego_title">On-The-Go Modus</string>
+    <string name="onthego_alpha_title">On-The-Go Transparenz</string>
+    <string name="onthego_alpha_summary">Transparenzwert für die On-The-Go Überlagerung.</string>
+
+    <!-- SlimDim -->
+    <string name="dim_nav_buttons_category">SlimDim</string>
+    <string name="dim_nav_buttons_title">Dimme Navigationstasten bei Inaktivität</string>
+    <string name="dim_nav_buttons_summary">Navigationstasten abdunkeln, wenn nach einer bestimmten Zeitspanne keine Taste gedrückt wurde</string>
+    <string name="dim_nav_buttons_timeout_title">Wartezeit bis zum Ausblenden (Dimmen)</string>
+    <string name="dim_nav_buttons_timeout_summary">Wartezeit (in Millisekunden) bevor die Tasten abgedunkelt werden</string>
+    <string name="dim_nav_buttons_alpha_title">Transparenz der Abdunklung</string>
+    <string name="dim_nav_buttons_alpha_summary">Transparenz bis zu welcher abgedunkelt wird</string>
+    <string name="dim_nav_buttons_animate_title">Abdunklungsanimation</string>
+    <string name="dim_nav_buttons_animate_summary">Animiere den Transparenz-Status</string>
+    <string name="dim_nav_buttons_animate_duration_title">Animationslänge</string>
+    <string name="dim_nav_buttons_animate_duration_summary">Zeit (in Millisekunden) für das Abdunkeln bis zum eingestellten Wert</string>
+    <string name="dim_nav_buttons_touch_anywhere_title">Bemerke das Berühren des Displays</string>
+    <string name="dim_nav_buttons_touch_anywhere_summary_on">Berühre irgendwo, um die Abdunklung zu verhindern</string>
+    <string name="dim_nav_buttons_touch_anywhere_summary_off">Nur das Berühren der Navigationsleiste wird die Abdunklung verhindern</string>
+
+    <!-- Less Notification sounds -->
+    <string name="notifications_category_title">Benachrichtigungen</string>
+    <string name="less_notification_sounds_title">Weniger häufige Benachrichtigungstöne</string>
+    <string name="less_notification_sounds_summary">Begrenze Benachrichtigungstöne pro App, so dass diese nur einmal pro Zeitspanne ertönen</string>
+    <string name="less_notification_sounds_default">Standardverhalten</string>
+    <string name="less_notification_sounds_3s">3 Sekunden</string>
+    <string name="less_notification_sounds_5s">5 Sekunden</string>
+    <string name="less_notification_sounds_10s">10 Sekunden</string>
+    <string name="less_notification_sounds_15s">15 Sekunden</string>
+    <string name="less_notification_sounds_30s">30 Sekunden</string>
+    <string name="less_notification_sounds_45s">45 Sekunden</string>
+    <string name="less_notification_sounds_1m">1 Minute</string>
+    <string name="less_notification_sounds_2m">2 Minuten</string>
+    <string name="less_notification_sounds_5m">5 Minuten</string>
+
+</resources>
