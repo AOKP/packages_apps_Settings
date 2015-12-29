@@ -32,7 +32,7 @@
   <string name="root_access_adb">فقط ای‌دی‌بی</string>
   <string name="root_access_all">برنامه‌ها و ای‌دی‌بی</string>
   <string name="nfc_title_category">ان‌اف‌سی</string>
-  <string name="mod_version">نسخه سایانوژن‌مود</string>
+  <string name="mod_version">نسخه AICP</string>
   <string name="mod_version_default">ناشناخته</string>
   <string name="device_model">مدل دستگاه</string>
   <string name="device_name">نام دستگاه</string>

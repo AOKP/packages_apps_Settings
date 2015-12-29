@@ -32,7 +32,7 @@
   <string name="root_access_apps">Endast appar</string>
   <string name="root_access_adb">Endast ADB</string>
   <string name="root_access_all">Appar och ADB</string>
-  <string name="mod_version">CyanogenMod-version</string>
+  <string name="mod_version">AICP-version</string>
   <string name="mod_version_default">Okänd</string>
   <string name="device_model">Enhetsmodell</string>
   <string name="device_name">Enhetsnamn</string>

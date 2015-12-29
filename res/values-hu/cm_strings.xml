@@ -33,7 +33,7 @@
   <string name="root_access_adb">Csak ADB</string>
   <string name="root_access_all">Alkalmazások és ADB</string>
   <string name="nfc_title_category">NFC</string>
-  <string name="mod_version">CyanogenMod verzió</string>
+  <string name="mod_version">AICP verzió</string>
   <string name="mod_version_default">Ismeretlen</string>
   <string name="device_model">Eszköz modellje</string>
   <string name="device_name">Eszköz neve</string>

@@ -33,7 +33,7 @@
   <string name="root_access_adb">Solo ADB</string>
   <string name="root_access_all">App e ADB</string>
   <string name="nfc_title_category">NFC</string>
-  <string name="mod_version">Versione CyanogenMod</string>
+  <string name="mod_version">Versione AICP</string>
   <string name="mod_version_default">Sconosciuto</string>
   <string name="device_model">Modello dispositivo</string>
   <string name="device_name">Nome dispositivo</string>
