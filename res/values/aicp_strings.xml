@@ -20,6 +20,8 @@
     <string name="header_category_personalization">Personalization</string>
     <string name="supersu_title">SuperSU</string>
 
+    <string name="general_options_title">General</string>
+
     <string name="allow_lights_title">Lights in do not disturb mode</string>
 
     <!-- Media art -->
@@ -252,7 +254,6 @@
     <string name="battery_low_notif_summary">Show low battery notification when enabled</string>
 
     <!--Status bar date -->
-    <string name="status_bar_clock_category">Clock</string>
     <string name="status_bar_date_title">Date</string>
     <string name="status_bar_date_none">Hidden (default)</string>
     <string name="status_bar_date_small">Small</string>
@@ -267,6 +268,7 @@
     <string name="status_bar_date_string_edittext_summary">Enter string</string>
 
     <!-- Status bar - Clock -->
+    <string name="status_bar_clock_category">Clock</string>
     <string name="clock_color_title">Color</string>
     <string name="status_bar_clock_style_reset">Reset color</string>
     <string name="status_bar_clock_style_reset_message">Reset clock color?</string>
