@@ -19,8 +19,24 @@
     <string name="aicp_settings_title">AICP Extras</string>
     <string name="header_category_personalization">Personalisierung</string>
     <string name="supersu_title">SuperSU</string>
+    <string name="reset">Zurücksetzen</string>
+    <string name="attention">Aufmerksamkeit</string>
+
+    <string name="general_options_title">Allgemein</string>
 
     <string name="allow_lights_title">Beleuchtung an während \"Nicht stören\"-Modus</string>
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Farbwähler</string>
+    <string name="press_color_to_apply">Wähle unten eine Farbe</string>
+    <!-- Do not translate arrow. -->
+    <string name="arrow_right">→</string>
+    <!-- Do not translate arrow. -->
+    <string name="arrow_down">↓</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#ff000000</string>
+    <string name="set">Setzen</string>
+    <string name="color_default">Standard</string>
 
     <!-- Media art -->
     <string name="media_art_title">Medien-Cover</string>
@@ -215,7 +231,7 @@
     <string name="onthego_alpha_summary">Transparenzwert für die On-The-Go Überlagerung.</string>
 
     <!-- SlimDim -->
-    <string name="dim_nav_buttons_category">SlimDim</string>
+    <string name="dim_nav_buttons_category">Slim Dim</string>
     <string name="dim_nav_buttons_title">Dimme Navigationstasten bei Inaktivität</string>
     <string name="dim_nav_buttons_summary">Navigationstasten abdunkeln, wenn nach einer bestimmten Zeitspanne keine Taste gedrückt wurde</string>
     <string name="dim_nav_buttons_timeout_title">Wartezeit bis zum Ausblenden (Dimmen)</string>
@@ -227,8 +243,8 @@
     <string name="dim_nav_buttons_animate_duration_title">Animationslänge</string>
     <string name="dim_nav_buttons_animate_duration_summary">Zeit (in Millisekunden) für das Abdunkeln bis zum eingestellten Wert</string>
     <string name="dim_nav_buttons_touch_anywhere_title">Bemerke das Berühren des Displays</string>
-    <string name="dim_nav_buttons_touch_anywhere_summary_on">Berühre irgendwo, um die Abdunklung zu verhindern</string>
-    <string name="dim_nav_buttons_touch_anywhere_summary_off">Nur das Berühren der Navigationsleiste wird die Abdunklung verhindern</string>
+    <string name="dim_nav_buttons_touch_anywhere_summary_on">Berühre das Display irgendwo, um die Abdunklung aufzuheben</string>
+    <string name="dim_nav_buttons_touch_anywhere_summary_off">Nur das Berühren der Navigationsleiste hebt die Abdunklung auf</string>
 
     <!-- Less Notification sounds -->
     <string name="notifications_category_title">Benachrichtigungen</string>
@@ -244,5 +260,80 @@
     <string name="less_notification_sounds_1m">1 Minute</string>
     <string name="less_notification_sounds_2m">2 Minuten</string>
     <string name="less_notification_sounds_5m">5 Minuten</string>
+
+<!-- Battery notifications -->
+    <string name="battery_saver_notif_title">Benachrichtigung Energiesparmodus</string>
+    <string name="battery_saver_notif_summary">Zeigt eine Benachrichtigung beim Einschalten des Energiesparmodus</string>
+    <string name="battery_low_notif_title">Benachrichtigung bei schwachem Akku</string>
+    <string name="battery_low_notif_summary">Zeigt eine Benachrichtigung bei sehr niedrigem Akkustand</string>
+
+    <!--Status bar date -->
+    <string name="status_bar_date_title">Datum</string>
+    <string name="status_bar_date_none">Versteckt (Standard)</string>
+    <string name="status_bar_date_small">Klein</string>
+    <string name="status_bar_date_normal">Normal</string>
+    <string name="status_bar_date_format_title">Datumsformat</string>
+    <string name="status_bar_date_style">Datumsstil</string>
+    <string name="status_bar_date_style_normal">Normal</string>
+    <string name="status_bar_date_style_lowercase">Kleingeschrieben</string>
+    <string name="status_bar_date_style_uppercase">Großgeschrieben</string>
+    <string name="status_bar_date_format_custom">Eigenes Datumsformat (Java)</string>
+    <string name="status_bar_date_string_edittext_title">Muss ein spezielles Format haben, z.B. dd/MM/yy</string>
+    <string name="status_bar_date_string_edittext_summary">Eingabe</string>
+
+    <!-- Status bar - Clock -->
+    <string name="status_bar_clock_category">Uhrzeit</string>
+    <string name="clock_color_title">Farbe</string>
+    <string name="status_bar_clock_style_reset">Farben zurücksetzen</string>
+    <string name="status_bar_clock_style_reset_message">Farbe der Uhrzeit zurücksetzen?</string>
+    <string name="clock_font_style_title">Schrfitart</string>
+    <string name="clock_font_normal">Normal</string>
+    <string name="clock_font_italic">Kursiv</string>
+    <string name="clock_font_bold">Fett</string>
+    <string name="clock_font_bold_italic">Fett &amp; kursiv</string>
+    <string name="clock_font_light">Leicht</string>
+    <string name="clock_font_light_italic">Leicht &amp; kursiv</string>
+    <string name="clock_font_thin">Dünn</string>
+    <string name="clock_font_thin_italic">Dünn &amp; kursiv</string>
+    <string name="clock_font_condensed">Gestaucht</string>
+    <string name="clock_font_condensed_italic">Gestaucht &amp; kursiv</string>
+    <string name="clock_font_condensed_bold">Gestaucht &amp; fett</string>
+    <string name="clock_font_condensed_bold_italic">Gestaucht, fett, kursiv</string>
+    <string name="clock_font_medium">Mittel</string>
+    <string name="clock_font_medium_italic">Mittel &amp; kursiv</string>
+    <string name="clock_font_size_title">Schriftgröße</string>
+    <string name="status_bar_show_clock_second_title">Uhr-Sekundenanzeige</string>
+    <string name="clock_font_size_4">4</string>
+    <string name="clock_font_size_5">5</string>
+    <string name="clock_font_size_6">6</string>
+    <string name="clock_font_size_7">7</string>
+    <string name="clock_font_size_8">8</string>
+    <string name="clock_font_size_9">9</string>
+    <string name="clock_font_size_10">10</string>
+    <string name="clock_font_size_11">11</string>
+    <string name="clock_font_size_12">12</string>
+    <string name="clock_font_size_13">13</string>
+    <string name="clock_font_size_14">14</string>
+    <string name="clock_font_size_15">15</string>
+    <string name="clock_font_size_16">16</string>
+    <string name="clock_font_size_17">17</string>
+    <string name="clock_font_size_18">18</string>
+    <string name="clock_font_size_19">19</string>
+    <string name="clock_font_size_20">20</string>
+    <string name="clock_font_size_21">21</string>
+    <string name="clock_font_size_22">22</string>
+    <string name="clock_font_size_23">23</string>
+
+    <!-- Keyboard and Input ASS methods  -->
+    <string name="title_keyboard_input">Erweiterte Optionen</string>
+    <string name="disable_fullscreen_keyboard_title">Deaktiviere Vollbild-Tastatur</string>
+    <string name="disable_fullscreen_keyboard_summary">Im Querformat wird die Tastatur niemals das ganze Display einnehmen</string>
+    <string name="keyboard_rotation_toggle_title">Automatische Tastatur-Rotation</string>
+    <string name="keyboard_rotation_toggle_summary">Erzwinge die Auto-Rotation, wenn die Tastatur dargestellt wird</string>
+    <string name="keyboard_rotation_timeout_title">Timeout der Auto-Rotation</string>
+    <string name="keyboard_rotation_timeout_summary">Deaktiviert den Sensor für die Auto-Rotation <xliff:g id="rotate_timeout">%1$s</xliff:g> Sekunden nachdem die Tastatur nicht mehr angezeigt wird</string>
+    <string name="keyboard_rotation_dialog">Diese Option erzwingt temporär die Auto-Rotation, wenn die Tastatur angezeigt wird. Sie funktioniert nicht, wenn die Auto-Rotation bereits aktiviert ist.</string>
+    <string name="show_enter_key_title">Zeige Eingabe-Taste</string>
+    <string name="show_enter_key_summary">Erzwingt die Anzeige der Eingabe-Taste an Stelle der Emoji-Taste</string>
 
 </resources>
