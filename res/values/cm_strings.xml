@@ -748,10 +748,6 @@
     <string name="kill_app_longpress_back">Kill app back button</string>
     <string name="kill_app_longpress_back_summary">Kill the foreground app by long-pressing the back button</string>
 
-    <!-- Show/Hide Search Bar -->
-    <string name="recents_show_searchbar">Show search bar in recents menu</string>
-    <string name="keywords_recents_show_searchbar">recent recents disable enable show hide search bar searchbar</string>
-
     <!-- Voice Wakeup -->
     <string name="voice_wakeup_settings_title">Voice wakeup</string>
     <string name="voice_wakeup_retrain_title">Retrain your voice</string>
