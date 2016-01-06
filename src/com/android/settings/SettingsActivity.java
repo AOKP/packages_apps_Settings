@@ -71,6 +71,7 @@ import com.android.settings.accessibility.AccessibilitySettings;
 import com.android.settings.accessibility.CaptionPropertiesFragment;
 import com.android.settings.accounts.AccountSettings;
 import com.android.settings.accounts.AccountSyncSettings;
+import com.android.settings.aicp.AicpSettingsExternal;
 import com.android.settings.applications.DrawOverlayDetails;
 import com.android.settings.applications.InstalledAppDetails;
 import com.android.settings.applications.ManageApplications;
@@ -374,7 +375,8 @@ public class SettingsActivity extends Activity
             com.android.settings.cyanogenmod.PrivacySettings.class.getName(),
             BlacklistSettings.class.getName(),
             ProfilesSettings.class.getName(),
-            NotificationManagerSettings.class.getName()
+            NotificationManagerSettings.class.getName(),
+            AicpSettingsExternal.class.getName()
     };
 
 
