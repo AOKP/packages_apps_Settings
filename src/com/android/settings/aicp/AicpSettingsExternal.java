@@ -20,20 +20,22 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
+import android.provider.Settings;
 
 import com.android.internal.logging.MetricsLogger;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-public class AicpSettingsExternal extends SettingsPreferenceFragment
-        implements OnSharedPreferenceChangeListener {
+public class AicpSettingsExternal extends SettingsPreferenceFragment {
 
     private static final String TAG = "AicpLabs";
+
+    private static final String PREF_RECENT_APP_SIDEBAR = "recent_app_sidebar_content";
+
+    private PreferenceScreen mRecentAppSidebar;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -43,6 +45,14 @@ public class AicpSettingsExternal extends SettingsPreferenceFragment
 
         PreferenceScreen prefSet = getPreferenceScreen();
         PackageManager pm = getPackageManager();
+        ContentResolver resolver = getActivity().getContentResolver();
+
+        mRecentAppSidebar = (PreferenceScreen) prefSet.findPreference(PREF_RECENT_APP_SIDEBAR);
+
+        if (Settings.System.getInt(resolver,
+                    Settings.System.USE_SLIM_RECENTS, 0) == 0) {
+            prefSet.removePreference(mRecentAppSidebar);
+        }
 
     }
 
@@ -59,10 +69,6 @@ public class AicpSettingsExternal extends SettingsPreferenceFragment
     @Override
     public void onPause() {
         super.onPause();
-    }
-
-    @Override
-    public void onSharedPreferenceChanged(SharedPreferences preferences, String key) {
     }
 
 }
