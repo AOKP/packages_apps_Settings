@@ -718,7 +718,7 @@ public final class Utils {
     public static boolean hasVolumeRocker(Context context) {
         final int deviceKeys = context.getResources().getInteger(
                 com.android.internal.R.integer.config_deviceHardwareKeys);
-        return (deviceKeys & ButtonSettings.KEY_MASK_VOLUME) != 0;
+        return (deviceKeys) != 0;
     }
 
     public static boolean isPackageInstalled(Context context, String pkg, boolean ignoreState) {

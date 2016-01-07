@@ -151,14 +151,6 @@
                 <extra android:name="filter_type" android:value="0" />
         </dashboard-tile>
 
-        <!-- Buttons -->
-        <dashboard-tile
-                android:id="@+id/button_settings"
-                android:title="@string/button_pref_title"
-                android:fragment="com.android.settings.ButtonSettings"
-                android:icon="@drawable/ic_settings_buttons"
-                />
-
         <!-- O-Click -->
         <dashboard-tile
                 android:id="@+id/oclick"

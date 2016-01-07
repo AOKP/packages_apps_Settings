@@ -19,7 +19,6 @@ package com.android.settings.cyanogenmod;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import com.android.settings.ButtonSettings;
 import com.android.settings.R;
 import com.android.settings.Utils;
 import com.android.settings.contributors.ContributorsCloudFragment;
@@ -35,7 +34,6 @@ public class BootReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context ctx, Intent intent) {
         /* Restore the hardware tunable values */
-        ButtonSettings.restoreKeyDisabler(ctx);
         DisplayGamma.restore(ctx);
         VibratorIntensity.restore(ctx);
         InputMethodAndLanguageSettings.restore(ctx);
