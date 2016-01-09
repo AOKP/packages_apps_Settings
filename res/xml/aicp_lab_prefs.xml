@@ -15,6 +15,18 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-        android:title="@string/aicp_settings_external_title">
+        android:title="@string/aicp_settings_external_title"
+        android:key="aicp_settings_external">
+
+    <PreferenceScreen
+            android:key="recent_app_sidebar_content"
+            android:fragment="com.android.settings.aicp.dslv.ActionListViewSettings"
+            android:title="@string/recent_app_sidebar_title"
+            android:summary="@string/recent_app_sidebar_summary">
+        <extra android:name="actionMode" android:value="7" />
+        <extra android:name="maxAllowedActions" android:value="-1" />
+        <extra android:name="useAppPickerOnly" android:value="true" />
+        <extra android:name="fragment" android:value="com.android.settings.aicp.RecentAppSidebarFragment" />
+   </PreferenceScreen>
 
 </PreferenceScreen>
