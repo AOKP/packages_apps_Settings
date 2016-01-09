@@ -72,6 +72,8 @@ import com.android.settings.accessibility.CaptionPropertiesFragment;
 import com.android.settings.accounts.AccountSettings;
 import com.android.settings.accounts.AccountSyncSettings;
 import com.android.settings.aicp.AicpSettingsExternal;
+import com.android.settings.aicp.LockscreenShortcutFragment;
+import com.android.settings.aicp.RecentAppSidebarFragment;
 import com.android.settings.applications.DrawOverlayDetails;
 import com.android.settings.applications.InstalledAppDetails;
 import com.android.settings.applications.ManageApplications;
@@ -376,7 +378,9 @@ public class SettingsActivity extends Activity
             BlacklistSettings.class.getName(),
             ProfilesSettings.class.getName(),
             NotificationManagerSettings.class.getName(),
-            AicpSettingsExternal.class.getName()
+            com.android.settings.aicp.AicpSettingsExternal.class.getName(),
+            com.android.settings.aicp.LockscreenShortcutFragment.class.getName(),
+            com.android.settings.aicp.RecentAppSidebarFragment.class.getName()
     };
 
 
