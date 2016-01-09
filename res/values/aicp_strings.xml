@@ -17,6 +17,7 @@
 
     <!-- Aicp Settings -->
     <string name="aicp_settings_title">AICP Extras</string>
+    <string name="aicp_settings_external_title">AICP External</string>
     <string name="header_category_personalization">Personalization</string>
     <string name="supersu_title">SuperSU</string>
     <string name="reset">Reset</string>
