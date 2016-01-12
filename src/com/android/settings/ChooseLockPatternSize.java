@@ -22,7 +22,6 @@ import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceScreen;
 
-import com.android.internal.logging.MetricsConstants;
 import com.android.internal.widget.LockPatternUtils;
 import org.cyanogenmod.internal.logging.CMMetricsLogger;
 
