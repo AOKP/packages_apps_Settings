@@ -46,7 +46,7 @@ import java.util.Collections;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.internal.logging.MetricsLogger;
+import org.cyanogenmod.internal.logging.CMMetricsLogger;
 
 public class WakelockBlocker extends SettingsPreferenceFragment {
 
@@ -108,7 +108,7 @@ public class WakelockBlocker extends SettingsPreferenceFragment {
 
     @Override
     protected int getMetricsCategory() {
-        return MetricsLogger.APPLICATION;
+        return CMMetricsLogger.AICPEXTRAS;
     }
 
     @Override
