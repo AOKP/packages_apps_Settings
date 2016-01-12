@@ -47,9 +47,27 @@ import java.util.Collections;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.MetricsLogger;
-import com.android.settings.Utils;
 
 public class WakelockBlocker extends SettingsPreferenceFragment {
+
+    private static final String TAG = "WakelockBlocker";
+
+    private Switch mBlockerEnabled;
+    private ListView mWakeLockList;
+    private List<String> mSeenWakeLocks;
+    private List<String> mBlockedWakeLocks;
+    private LayoutInflater mInflater;
+    private Map<String, Boolean> mWakeLockState;
+    private WakeLockListAdapter mListAdapter;
+    private boolean mEnabled;
+    private AlertDialog mAlertDialog;
+    private boolean mAlertShown = false;
+    private TextView mWakeLockListHeader;
+
+    private static final int MENU_RELOAD = Menu.FIRST;
+    private static final int MENU_SAVE = Menu.FIRST + 1;
+
+    public class WakeLockListAdapter extends ArrayAdapter<String> {
 
         public WakeLockListAdapter(Context context, int resource, List<String> values) {
             super(context, R.layout.wakelock_item, resource, values);
@@ -235,15 +253,13 @@ public class WakelockBlocker extends SettingsPreferenceFragment {
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         menu.add(0, MENU_RELOAD, 0, R.string.wakelock_blocker_reload)
-                .setIcon(R.drawable.ic_menu_refresh_holo_dark)
+                .setIcon(com.android.internal.R.drawable.ic_menu_refresh)
                 .setAlphabeticShortcut('r')
-                .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM |
-                        MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+                .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
         menu.add(0, MENU_SAVE, 0, R.string.wakelock_blocker_save)
-                .setIcon(R.drawable.ic_menu_save)
+                .setIcon(R.drawable.ic_wakelockblocker_save)
                 .setAlphabeticShortcut('s')
-                .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM |
-                        MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+                .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
     }
 
     @Override
