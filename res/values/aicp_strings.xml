@@ -92,6 +92,9 @@
     <string name="navbar_enable_bar_title">Navigation bar buttons</string>
     <string name="navbar_enable_bar_summary">Enable on-screen nav bar buttons</string>
 
+    <!-- Navigation bar button color -->
+    <string name="navbar_button_tint_title">Navigation button tint</string>
+
     <!-- Slim lockscreen shortcuts -->
     <string name="shortcut_action_none">None</string>
     <string name="shortcut_action_longpress">Longpress:</string>
