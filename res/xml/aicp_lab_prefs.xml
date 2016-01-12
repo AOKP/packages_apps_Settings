@@ -29,4 +29,9 @@
         <extra android:name="fragment" android:value="com.android.settings.aicp.RecentAppSidebarFragment" />
    </PreferenceScreen>
 
+   <Preference
+        android:key="wakelock_blocker"
+        android:title="@string/wakelock_blocker_title"
+        android:fragment="com.android.settings.aicp.WakelockBlocker" />
+
 </PreferenceScreen>
