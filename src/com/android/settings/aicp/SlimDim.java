@@ -29,7 +29,7 @@ import android.preference.SwitchPreference;
 import android.preference.SlimSeekBarPreference;
 import android.provider.Settings;
 
-import com.android.internal.logging.MetricsLogger;
+import org.cyanogenmod.internal.logging.CMMetricsLogger;
 
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
@@ -71,7 +71,7 @@ public class SlimDim extends SettingsPreferenceFragment implements
 
     @Override
     protected int getMetricsCategory() {
-        return MetricsLogger.DONT_TRACK_ME_BRO;
+        return CMMetricsLogger.AICPEXTRAS;
     }
 
     @Override

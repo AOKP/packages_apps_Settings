@@ -30,7 +30,7 @@ import android.widget.ListView;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import com.android.internal.logging.MetricsLogger;
+import org.cyanogenmod.internal.logging.CMMetricsLogger;
 
 public class LockscreenShortcutFragment extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
@@ -57,7 +57,7 @@ public class LockscreenShortcutFragment extends SettingsPreferenceFragment imple
 
     @Override
     protected int getMetricsCategory() {
-        return MetricsLogger.DONT_TRACK_ME_BRO;
+        return CMMetricsLogger.AICPEXTRAS;
     }
 
     @Override

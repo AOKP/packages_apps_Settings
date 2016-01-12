@@ -35,7 +35,7 @@ import android.view.MenuItem;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.internal.logging.MetricsLogger;
+import org.cyanogenmod.internal.logging.CMMetricsLogger;
 
 public class NavBarDimensions extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
@@ -87,7 +87,7 @@ public class NavBarDimensions extends SettingsPreferenceFragment implements
 
     @Override
     protected int getMetricsCategory() {
-        return MetricsLogger.DONT_TRACK_ME_BRO;
+        return CMMetricsLogger.AICPEXTRAS;
     }
 
     private void updateDimension() {
