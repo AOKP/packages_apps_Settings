@@ -16,7 +16,6 @@
 
 package com.android.settings.search;
 
-import com.android.settings.ButtonSettings;
 import com.android.settings.ChooseLockGeneric;
 import com.android.settings.DataUsageSummary;
 import com.android.settings.DateTimeSettings;
@@ -35,7 +34,6 @@ import com.android.settings.accessibility.AccessibilitySettings;
 import com.android.settings.applications.AdvancedAppSettings;
 import com.android.settings.applications.ManageDefaultApps;
 import com.android.settings.bluetooth.BluetoothSettings;
-import com.android.settings.cyanogenmod.StatusBarSettings;
 import com.android.settings.deviceinfo.StorageSettings;
 import com.android.settings.fuelgauge.PowerUsageSummary;
 import com.android.settings.inputmethod.InputMethodAndLanguageSettings;
@@ -84,8 +82,6 @@ public final class Ranking {
     public static final int RANK_PRINTING = 20;
     public static final int RANK_DEVELOPEMENT = 21;
     public static final int RANK_DEVICE_INFO = 22;
-    public static final int RANK_BUTTONS = 23;
-    public static final int RANK_STATUSBAR = 24;
 
     public static final int RANK_UNDEFINED = -1;
     public static final int RANK_OTHERS = 1024;
@@ -176,12 +172,6 @@ public final class Ranking {
         // Device infos
         sRankMap.put(DeviceInfoSettings.class.getName(), RANK_DEVICE_INFO);
         sRankMap.put(LegalSettings.class.getName(), RANK_DEVICE_INFO);
-
-        // Button settings
-        sRankMap.put(ButtonSettings.class.getName(), RANK_BUTTONS);
-
-        // Statusbar settings
-        sRankMap.put(StatusBarSettings.class.getName(), RANK_STATUSBAR);
 
         sBaseRankMap.put("com.android.settings", 0);
     }
