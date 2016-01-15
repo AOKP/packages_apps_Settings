@@ -143,6 +143,12 @@
                 android:summary="@string/dashboard_switches_summary"
                 android:persistent="false" />
 
+        <ListPreference
+                android:key="dashboard_font_style"
+                android:entries="@array/dashboard_font_style_entries"
+                android:entryValues="@array/dashboard_font_style_values"
+                android:title="@string/dashboard_font_style_title" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
