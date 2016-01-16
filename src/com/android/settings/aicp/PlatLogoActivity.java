@@ -21,6 +21,7 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
@@ -93,6 +94,7 @@ public class PlatLogoActivity extends Activity {
                                 Snackbar.with(getApplicationContext())
                                 .text(getString(R.string.easter_egg_snack))
                                 .textColor(Color.YELLOW)
+                                .textTypeface(Typeface.DEFAULT_BOLD)
                                 .color(Color.BLUE)
                                 .duration(Snackbar.SnackbarDuration.LENGTH_LONG)
                         , PlatLogoActivity.this);
