@@ -51,7 +51,6 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.android.internal.util.aicp.ActionConfig;
 import com.android.internal.util.aicp.ActionConstants;
@@ -62,9 +61,12 @@ import com.android.internal.util.aicp.DeviceUtils.FilteredDeviceFeaturesArray;
 
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
+import com.android.settings.Utils;
 import com.android.settings.aicp.dslv.DragSortListView;
 import com.android.settings.aicp.dslv.DragSortController;
 import com.android.settings.aicp.util.ShortcutPickerHelper;
+
+import com.nispok.snackbar.Snackbar;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -359,9 +361,8 @@ public class ActionListViewSettings extends ListFragment implements
             } else if (requestCode == REQUEST_PICK_CUSTOM_ICON && mPendingIndex != -1) {
                 if (mImageTmp.length() == 0 || !mImageTmp.exists()) {
                     mPendingIndex = -1;
-                    Toast.makeText(mActivity,
-                            getResources().getString(R.string.shortcut_image_not_valid),
-                            Toast.LENGTH_LONG).show();
+                    Utils.showSnackbar(getString(R.string.shortcut_image_not_valid),
+                            Snackbar.SnackbarDuration.LENGTH_LONG, null, null, mActivity);
                     return;
                 }
                 File image = new File(mActivity.getFilesDir() + File.separator
@@ -421,9 +422,8 @@ public class ActionListViewSettings extends ListFragment implements
         for (int i = 0; i < mActionConfigs.size(); i++) {
             actionConfig = mActionConfigsAdapter.getItem(i);
             if (actionConfig.getClickAction().equals(action)) {
-                Toast.makeText(mActivity,
-                        getResources().getString(R.string.shortcut_duplicate_entry),
-                        Toast.LENGTH_LONG).show();
+                Utils.showSnackbar(getString(R.string.shortcut_duplicate_entry),
+                            Snackbar.SnackbarDuration.LENGTH_LONG, null, null, mActivity);
                 return true;
             }
         }
@@ -457,9 +457,8 @@ public class ActionListViewSettings extends ListFragment implements
         switch (item.getItemId()) {
             case MENU_ADD:
                 if (mActionConfigs.size() == mMaxAllowedActions) {
-                    Toast.makeText(mActivity,
-                            getResources().getString(R.string.shortcut_action_max),
-                            Toast.LENGTH_LONG).show();
+                    Utils.showSnackbar(getString(R.string.shortcut_action_max),
+                            Snackbar.SnackbarDuration.LENGTH_LONG, null, null, mActivity);
                     break;
                 }
                 if (mUseFullAppsOnly) {

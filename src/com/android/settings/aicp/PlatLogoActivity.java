@@ -20,6 +20,7 @@ import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
@@ -27,10 +28,14 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.widget.ImageView;
-import android.widget.Toast;
+
+import com.android.settings.R;
+import com.android.settings.Utils;
+
+import com.nispok.snackbar.Snackbar;
+import com.nispok.snackbar.SnackbarManager;
 
 public class PlatLogoActivity extends Activity {
-    Toast mToast;
     ImageView mContent;
     Vibrator mZzz;
     int mCount;
@@ -65,8 +70,6 @@ public class PlatLogoActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mToast = Toast.makeText(this, "A. I. C. P.", Toast.LENGTH_SHORT);
-
         mZzz = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
         mContent = new ImageView(this);
@@ -86,7 +89,13 @@ public class PlatLogoActivity extends Activity {
                     if (mContent.isPressed()) {
                         mContent.setPressed(false);
                         mHandler.removeCallbacks(mSuperLongPress);
-                        mToast.show();
+                        SnackbarManager.show(
+                                Snackbar.with(getApplicationContext())
+                                .text(getString(R.string.easter_egg_snack))
+                                .textColor(Color.YELLOW)
+                                .color(Color.BLUE)
+                                .duration(Snackbar.SnackbarDuration.LENGTH_LONG)
+                        , PlatLogoActivity.this);
                     }
                 }
                 return true;
