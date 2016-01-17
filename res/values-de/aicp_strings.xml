@@ -17,10 +17,12 @@
 
     <!-- Aicp Settings -->
     <string name="aicp_settings_title">AICP Extras</string>
+    <string name="aicp_settings_external_title">AICP Extern</string>
     <string name="header_category_personalization">Personalisierung</string>
     <string name="supersu_title">SuperSU</string>
     <string name="reset">Zurücksetzen</string>
-    <string name="attention">Aufmerksamkeit</string>
+    <string name="attention">Achtung</string>
+    <string name="easter_egg_snack">"A. I. C. P."</string>
 
     <string name="general_options_title">Allgemein</string>
 
@@ -105,22 +107,22 @@
     <string name="shortcut_action_warning">Warnung</string>
     <string name="shortcut_action_warning_message">Es ist nicht möglich den letzten Eintrag zu löschen</string>
     <string name="shortcut_action_disable_message">Lösche\nFüge einen Eintrag hinzu, um dieses Feature zu aktivieren</string>
-    <string name="shortcut_image_not_valid">Die gewählte App hat kein gültiges Icon oder erlaubt keinen Bildzuschnitt. Wähle eine andere App.</string>
+    <string name="shortcut_image_not_valid">Die gewählte App hat kein gültiges Symbol oder erlaubt keinen Bildzuschnitt. Wähle eine andere App.</string>
     <string name="shortcut_duplicate_entry">Die gewählte Aktion kann nicht zweimal hinzugefügt werden</string>
     <string name="shortcut_action_help_shortcut">Verknüpfung</string>
     <string name="shortcut_action_help_button">Taste</string>
     <string name="shortcut_action_help_app">App</string>
-    <string name="shortcut_action_help_icon">, während die Auswahl des Icons die Anpassungsoptionen aufruft</string>
-    <string name="shortcut_action_help_main">Um eine %1$s hinzuzufügen, wähle das \"Plus\" Icon. Wenn die %1$s hinzugefügt wurde, wird die Auswahl der Reihe das Ziel auswechseln%2$s\n\nUm eine %1$s zu entfernen, wische horizontal über die Reihe von links oder rechts. Verschiebe eine %1$s in der Liste durch vertikales Ziehen am Ankerpunkt auf der linken Seite.\n\nZum Säubern oder um auf Standard zurückzusetzen, wähle das \"Zurücksetzen\" Icon.</string>
+    <string name="shortcut_action_help_icon">, während die Auswahl des Symbols die Anpassungsoptionen aufruft</string>
+    <string name="shortcut_action_help_main">Um eine %1$s hinzuzufügen, wähle das \"Plus\" Symbol. Wenn die %1$s hinzugefügt wurde, wird die Auswahl der Reihe das Ziel auswechseln%2$s\n\nUm eine %1$s zu entfernen, wische horizontal über die Reihe von links oder rechts. Verschiebe eine %1$s in der Liste durch vertikales Ziehen am Ankerpunkt auf der linken Seite.\n\nZum Säubern oder um auf Standard zurückzusetzen, wähle das \"Zurücksetzen\" Symbol.</string>
     <string name="shortcut_action_help_delete_last_entry">Das Entfernen jeder %1$s von der Liste deaktiviert dieses Feature komplett.</string>
     <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Das Entfernen jeder %1$s von der Liste deaktiviert die zweite PIE Ebene komplett.</string>
     <string name="shortcuts_applications">Anwendungen</string>
     <string name="shortcuts_select_custom_app_title">Wähle spezifische Anwendung</string>
-    <string name="shortcuts_icon_picker_type">Wähle Icontyp:</string>
+    <string name="shortcuts_icon_picker_type">Wähle Symboltyp:</string>
     <string name="shortcuts_icon_default">Original</string>
     <string name="shortcuts_icon_presets">System Symbole</string>
     <string name="shortcuts_icon_custom">Galerie</string>
-    <string name="shortcuts_icon_picker_choose_icon_title">Wähle Icon</string>
+    <string name="shortcuts_icon_picker_choose_icon_title">Wähle Symbol</string>
     <string name="shortcuts_icon_picker_alarm">Wecker</string>
     <string name="shortcuts_icon_picker_andy">Andy</string>
     <string name="shortcuts_icon_picker_battery">Akku</string>
@@ -129,7 +131,7 @@
     <string name="shortcuts_icon_picker_camera">Kamera</string>
     <string name="shortcuts_icon_picker_cloud">Cloud</string>
     <string name="shortcuts_icon_picker_contact">Kontakt</string>
-    <string name="shortcuts_icon_picker_directdial">Direktanruf</string>
+    <string name="shortcuts_icon_picker_directdial">Direktwahl</string>
     <string name="shortcuts_icon_picker_directmessage">Sofortnachricht</string>
     <string name="shortcuts_icon_picker_drive">Drive</string>
     <string name="shortcuts_icon_picker_dropbox">Dropbox</string>
@@ -153,7 +155,7 @@
     <string name="shortcuts_icon_picker_notes">Notizen</string>
     <string name="shortcuts_icon_picker_luggage">Reisen</string>
     <string name="shortcuts_icon_picker_maps">Maps</string>
-    <string name="shortcuts_icon_picker_market">Market</string>
+    <string name="shortcuts_icon_picker_market">Markt</string>
     <string name="shortcuts_icon_picker_movie">Filme</string>
     <string name="shortcuts_icon_picker_music">Musik</string>
     <string name="shortcuts_icon_picker_nav">Navigation</string>
@@ -163,7 +165,7 @@
     <string name="shortcuts_icon_picker_play">Play</string>
     <string name="shortcuts_icon_picker_pocket">Pocket</string>
     <string name="shortcuts_icon_picker_quicksettings">Schnelleinstellungen</string>
-    <string name="shortcuts_icon_picker_rss">RSS Feed</string>
+    <string name="shortcuts_icon_picker_rss">RSS-Feed</string>
     <string name="shortcuts_icon_picker_sdcard">SD-Karte</string>
     <string name="shortcuts_icon_picker_search">Suche</string>
     <string name="shortcuts_icon_picker_sms">SMS</string>
@@ -176,13 +178,13 @@
     <string name="reset_message">Alle Einträge auf Standard zurücksetzen?</string>
     <string name="lockscreen_shortcuts_title">Verknüpfungen auf Displaymitte</string>
     <string name="lockscreen_shortcuts_summary">Ansehen oder Ändern von eigenen Sperrbildschirmverknüpfungen</string>
-    <string name="lockscreen_shorcuts_launch_type_title">Shortcut click type</string>
+    <string name="lockscreen_shorcuts_launch_type_title">Auswahlart für Verknüpfung</string>
     <string name="lockscreen_shortcuts_single_tap">Einmal Tippen</string>
     <string name="lockscreen_shortcuts_double_tap">Zweimal Tippen</string>
     <string name="lockscreen_shortcuts_longpress">Lange Drücken</string>
     <string name="help">Hilfe</string>
     <string name="shortcut_action_app">Eigene App</string>
-    <string name="shortcut_action_home">Home</string>
+    <string name="shortcut_action_home">Startbildschirm</string>
     <string name="shortcut_action_back">Zurück</string>
     <string name="shortcut_action_menu">Menü</string>
     <string name="shortcut_action_ime">Wechsle Eingabemethode</string>
@@ -286,7 +288,7 @@
     <string name="clock_color_title">Farbe</string>
     <string name="status_bar_clock_style_reset">Farben zurücksetzen</string>
     <string name="status_bar_clock_style_reset_message">Farbe der Uhrzeit zurücksetzen?</string>
-    <string name="clock_font_style_title">Schrfitart</string>
+    <string name="clock_font_style_title">Schriftart</string>
     <string name="clock_font_normal">Normal</string>
     <string name="clock_font_italic">Kursiv</string>
     <string name="clock_font_bold">Fett</string>
@@ -297,10 +299,14 @@
     <string name="clock_font_thin_italic">Dünn &amp; kursiv</string>
     <string name="clock_font_condensed">Gestaucht</string>
     <string name="clock_font_condensed_italic">Gestaucht &amp; kursiv</string>
+    <string name="clock_font_condensed_light">Gestaucht &amp; leicht</string>
+    <string name="clock_font_condensed_light_italic">Gestaucht, leicht, kursiv</string>
     <string name="clock_font_condensed_bold">Gestaucht &amp; fett</string>
     <string name="clock_font_condensed_bold_italic">Gestaucht, fett, kursiv</string>
     <string name="clock_font_medium">Mittel</string>
     <string name="clock_font_medium_italic">Mittel &amp; kursiv</string>
+    <string name="clock_font_black">Schwarz</string>
+    <string name="clock_font_black_italic">Schwarz &amp; kursiv</string>
     <string name="clock_font_size_title">Schriftgröße</string>
     <string name="status_bar_show_clock_second_title">Uhr-Sekundenanzeige</string>
     <string name="clock_font_size_4">4</string>
@@ -324,6 +330,10 @@
     <string name="clock_font_size_22">22</string>
     <string name="clock_font_size_23">23</string>
 
+    <!-- Quick unlock -->
+    <string name="unlock_quick_unlock_control_title">Schnelles Entsperren</string>
+    <string name="unlock_quick_unlock_control_summary">Automatisch Entsperren, wenn PIN oder Passwort korrekt eingegeben wurden</string>
+
     <!-- Keyboard and Input ASS methods  -->
     <string name="title_keyboard_input">Erweiterte Optionen</string>
     <string name="disable_fullscreen_keyboard_title">Deaktiviere Vollbild-Tastatur</string>
@@ -335,5 +345,45 @@
     <string name="keyboard_rotation_dialog">Diese Option erzwingt temporär die Auto-Rotation, wenn die Tastatur angezeigt wird. Sie funktioniert nicht, wenn die Auto-Rotation bereits aktiviert ist.</string>
     <string name="show_enter_key_title">Zeige Eingabe-Taste</string>
     <string name="show_enter_key_summary">Erzwingt die Anzeige der Eingabe-Taste an Stelle der Emoji-Taste</string>
+
+    <!-- Battery stats reset -->
+    <string name="battery_stats_reset">Statistiken zurücksetzen</string>
+    <string name="battery_stats_message">Die Statistiken des Akku-Verbrauchs werden zurückgesetzt</string>
+    <string name="ok_string">Ok</string>
+
+   <!-- Slim Recent App Sidebar  -->
+    <string name="recent_panel_category">Slim Recents</string>
+    <string name="recent_app_sidebar_title">Seitenleiste für Apps</string>
+    <string name="recent_app_sidebar_summary">Zeige App-Verknüpfungen auf der anderen Seite</string>
+    <string name="recent_app_sidebar_style_title">Stil der App-Leiste</string>
+    <string name="recent_app_sidebar_style_summary">Ändere den Stil der App-Seitenleiste</string>
+    <string name="recent_app_sidebar_hide_labels_title">Beschriftung der Symbole ausblenden</string>
+    <string name="recent_app_sidebar_label_color_title">Farbe des Etiketts</string>
+    <string name="recent_app_sidebar_bg_color_title">Hintergrundfarbe</string>
+    <string name="recent_app_sidebar_scale_title">Größe</string>
+
+   <!-- app notifications hide on lockscreen -->
+    <string name="app_notification_no_keyguard_title">Verstecken bei Sperre</string>
+    <string name="app_notification_no_keyguard_summary">Versteckt Benachrichtigungen dieser App, wenn das Gerät gesperrt ist</string>
+    <string name="filter_notif_no_keyguard">Ausgeblendet bei Sperre</string>
+    <string name="notifications_no_keyguard">Ausgeblendet bei Sperre</string>
+    <string name="notifications_four_items"><xliff:g id="notif_state" example="Priority">%1$s</xliff:g> / <xliff:g id="notif_state" example="Priority">%2$s</xliff:g> / <xliff:g id="notif_state" example="Priority">%3$s</xliff:g> / <xliff:g id="notif_state" example="Priority">%4$s</xliff:g></string>
+
+    <!-- Wakelock blocker -->
+    <string name="wakelock_blocker_title">Wakelock Blockierer</string>
+    <string name="wakelock_blocker_summary">Blockiert System-Wakelocks</string>
+    <string name="wakelock_blocker_save">Speichern</string>
+    <string name="wakelock_list_header">Verfügbare Wakelocks</string>
+    <string name="wakelock_blocker_reload">Neu Laden</string>
+    <string name="wakelock_blocker_warning_title">Mit Vorsicht fortfahren</string>
+    <string name="wakelock_blocker_warning">Das Blockieren von Wakelocks kann zu Instabilität, Abstürzen und Datenverlust führen</string>
+
+    <!-- UI debug setting: show CPU info? [CHAR LIMIT=25] -->
+    <string name="show_cpu_info">Zeige CPU-Info</string>
+    <!-- UI debug setting: show cpu usage summary [CHAR LIMIT=50] -->
+    <string name="show_cpu_info_summary">Display-Overlay mit Echtzeit-Infos der CPU</string>
+
+    <!-- Snackbar action button -->
+    <string name="dev_settings_action_button">Einstellungen</string>
 
 </resources>
