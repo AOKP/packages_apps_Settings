@@ -324,7 +324,7 @@ public final class SearchIndexableResources {
                         Ranking.getRankForClassName(StatusBarSettings.class.getName()),
                         NO_DATA_RES_ID,
                         StatusBarSettings.class.getName(),
-                        R.drawable.ic_settings_extdesk_hidenavbar));
+                        R.drawable.ic_extdesk_hidenavbar));
     }
 
     private SearchIndexableResources() {
