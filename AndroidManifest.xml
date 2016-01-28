@@ -2189,6 +2189,12 @@
             </intent-filter>
         </activity>
 
+        <receiver android:name="com.android.settings.aicp.util.OnBoot">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
 
         <!-- AICP activities End -->
 

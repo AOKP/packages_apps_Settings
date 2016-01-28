@@ -81,10 +81,16 @@ import com.android.internal.logging.MetricsLogger;
 import com.android.settings.fuelgauge.InactiveApps;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
+import com.android.settings.util.AbstractAsyncSuCMDProcessor;
+import com.android.settings.util.CMDProcessor;
+import com.android.settings.util.Helpers;
 import com.android.settings.widget.SwitchBar;
 import com.android.settings.widget.SeekBarPreferenceCham;
 import cyanogenmod.providers.CMSettings;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.DataOutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -195,6 +201,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
     private static final String DEVELOPMENT_SHORTCUT_KEY = "development_shortcut";
 
+    private static final String SELINUX = "selinux";
+
     private static final int RESULT_DEBUG_APP = 1000;
     private static final int RESULT_MOCK_LOCATION_APP = 1001;
 
@@ -290,6 +298,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private SwitchPreference mAdvancedReboot;
 
     private SwitchPreference mDevelopmentShortcut;
+
+    private SwitchPreference mSelinux;
 
     private final ArrayList<Preference> mAllPrefs = new ArrayList<Preference>();
 
@@ -464,6 +474,18 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
                 Settings.System.HOLD_BACK_TO_KILL_TIMEOUT, 750);
         mHoldBackToKillTimeout.setValue(holdBackToKillTimeout / 1);
         mHoldBackToKillTimeout.setOnPreferenceChangeListener(this);
+
+        //SELinux
+        mSelinux = (SwitchPreference) findPreference(SELINUX);
+        mSelinux.setOnPreferenceChangeListener(this);
+
+        if (CMDProcessor.runShellCommand("getenforce").getStdout().contains("Enforcing")) {
+            mSelinux.setChecked(true);
+            mSelinux.setSummary(R.string.selinux_enforcing_title);
+        } else {
+            mSelinux.setChecked(false);
+            mSelinux.setSummary(R.string.selinux_permissive_title);
+        }
 
         Preference hdcpChecking = findPreference(HDCP_CHECKING_KEY);
         if (hdcpChecking != null) {
@@ -2090,6 +2112,15 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             int killTimeout = (Integer) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.HOLD_BACK_TO_KILL_TIMEOUT, killTimeout * 1);
+            return true;
+        } else if (preference == mSelinux) {
+            if (newValue.toString().equals("true")) {
+                CMDProcessor.runSuCommand("setenforce 1");
+                mSelinux.setSummary(R.string.selinux_enforcing_title);
+            } else if (newValue.toString().equals("false")) {
+                CMDProcessor.runSuCommand("setenforce 0");
+                mSelinux.setSummary(R.string.selinux_permissive_title);
+            }
             return true;
         }
         return false;
