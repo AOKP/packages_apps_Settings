@@ -64,6 +64,11 @@
             android:title="@string/navigation_bar_dimensions_title"
             android:dependency="enable_nav_bar" />
 
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="navigation_bar_tint"
+            android:title="@string/navbar_button_tint_title"
+            android:defaultValue="#ffffff" />
+
         <ListPreference
             android:key="navigation_recents_long_press"
             android:dialogTitle="@string/navigation_bar_recents_title"
