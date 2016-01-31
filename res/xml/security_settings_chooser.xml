@@ -27,12 +27,6 @@
             android:summary="@string/unlock_set_unlock_mode_none"
             android:persistent="false"/>
 
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="general_category"
-        android:title="@string/title_general">
-
         <ListPreference
             android:key="lock_after_timeout"
             android:title="@string/lock_after_timeout"
@@ -45,11 +39,11 @@
             android:key="power_button_instantly_locks"
             android:title="@string/lockpattern_settings_enable_power_button_instantly_locks"/>
 
-        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-            android:key="lockscreen_media_metadata"
-            android:title="@string/media_art_title"
-            android:summary="@string/media_art_summary"
-            android:defaultValue="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="general_category"
+        android:title="@string/title_general">
 
         <com.android.settings.SingleLineSummaryPreference
             android:key="owner_info_settings"
@@ -75,6 +69,12 @@
              <extra android:name="useAppPickerOnly" android:value="true" />
              <extra android:name="fragment" android:value="com.android.settings.aicp.LockscreenShortcutFragment" />
         </PreferenceScreen>
+
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="lockscreen_media_metadata"
+            android:title="@string/media_art_title"
+            android:summary="@string/media_art_summary"
+            android:defaultValue="true" />
 
         <com.android.settings.cyanogenmod.CMSecureSettingSwitchPreference
             android:key="lockscreen_visualizer"
