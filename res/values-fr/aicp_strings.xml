@@ -89,6 +89,10 @@
     <string name="navbar_enable_bar_title">Boutons de la barre de navigation</string>
     <string name="navbar_enable_bar_summary">Activer à l\'écran les boutons de la barre de navigation</string>
 
+    <!-- Navigation bar button color -->
+    <string name="navbar_button_tint_title">Couleur des boutons de la barre de navigation</string>
+    <string name="navbar_button_tint_switch_title">Colorer les boutons de la barre de navigation</string>
+
     <!-- Slim lockscreen shortcuts -->
     <string name="shortcut_action_none">Aucun</string>
     <string name="shortcut_action_longpress">Appui long :</string>
@@ -301,6 +305,13 @@
     <string name="clock_font_medium_italic">Moyen Italique</string>
     <string name="clock_font_black">Noir</string>
     <string name="clock_font_black_italic">Noir Italique</string>
+    <string name="clock_font_dancingscript">DancingScript</string>
+    <string name="clock_font_dancingscript_bold">DancingScript Gras</string>
+    <string name="clock_font_comingsoon">ComingSoon</string>
+    <string name="clock_font_notoserif">NotoSerif Normal</string>
+    <string name="clock_font_notoserif_italic">NotoSerif Italique</string>
+    <string name="clock_font_notoserif_bold">NotoSerif Gras</string>
+    <string name="clock_font_notoserif_bold_italic">NotoSerif Gras Italique</string>
     <string name="clock_font_size_title">Taille de la police</string>
     <string name="status_bar_show_clock_second_title">Horloge avec les secondes</string>
     <string name="clock_font_size_4">4</string>
@@ -393,5 +404,12 @@
     <string name="dashboard_tileview_double_lines_title">Nombre de ligne</string>
     <string name="dashboard_tileview_double_lines_summary_on">Afficher les intitulés du tableau de bord sur une ligne</string>
     <string name="dashboard_tileview_double_lines_summary_off">Afficher les intitulés du tableau de bord sur deux lignes</string>
+
+    <!-- Selinux Switch -->
+    <string name="selinux_switch_title">Options de changement du mode Selinux</string>
+    <string name="selinux_switch_summary">Le SELinux est un lot de modifications du kernel et des outils et de l\'espace utilisateur. Changer de mode peut causer des effets indésirables. À utiliser à vos risques et périls.</string>
+    <string name="selinux_title">Mode Selinux</string>
+    <string name="selinux_permissive_title">Permissive</string>
+    <string name="selinux_enforcing_title">Enforcing</string>
 
 </resources>
