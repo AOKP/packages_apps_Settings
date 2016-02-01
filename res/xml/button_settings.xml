@@ -64,10 +64,17 @@
             android:title="@string/navigation_bar_dimensions_title"
             android:dependency="enable_nav_bar" />
 
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="navigation_bar_tint_switch"
+            android:title="@string/navbar_button_tint_switch_title"
+            android:defaultValue="false"
+            android:dependency="enable_nav_bar" />
+
         <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="navigation_bar_tint"
             android:title="@string/navbar_button_tint_title"
-            android:defaultValue="#ffffff" />
+            android:defaultValue="#ffffff"
+            android:dependency="navigation_bar_tint_switch" />
 
         <ListPreference
             android:key="navigation_recents_long_press"
