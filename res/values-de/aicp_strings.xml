@@ -31,10 +31,6 @@
     <!-- Color Picker -->
     <string name="dialog_color_picker">Farbwähler</string>
     <string name="press_color_to_apply">Wähle unten eine Farbe</string>
-    <!-- Do not translate arrow. -->
-    <string name="arrow_right">→</string>
-    <!-- Do not translate arrow. -->
-    <string name="arrow_down">↓</string>
     <string name="hex">Hex:</string>
     <string name="hex_hint">#ff000000</string>
     <string name="set">Setzen</string>
@@ -51,13 +47,13 @@
     <string name="ring_notification_volume_option_title">Lautstärke für Klingelton und Benachrichtigung</string>
 
     <!-- Hold back to kill timeout -->
-    <string name="hold_back_to_kill_timeout_title">Timeout für Zurücktaste beendet aktuelle App</string>
+    <string name="hold_back_to_kill_timeout_title">Timeout der Zurücktaste zum Beenden der aktuellen App</string>
     <string name="default_string">Standard</string>
 
     <!-- Volume Steps -->
     <string name="volume_steps_title">Lautstärke-Schritte</string>
     <string name="volume_steps_alarm_title">Lautstärke-Schritte: Wecker</string>
-    <string name="volume_steps_dtmf_title">Lautstärke-Schritte: MFV</string>
+    <string name="volume_steps_dtmf_title">Lautstärke-Schritte: MFV-Töne</string>
     <string name="volume_steps_music_title">Lautstärke-Schritte: Musik</string>
     <string name="volume_steps_notification_title">Lautstärke-Schritte: Benachrichtigung</string>
     <string name="volume_steps_ring_title">Lautstärke-Schritte: Klingelton</string>
@@ -93,6 +89,10 @@
     <string name="nav_bar_title">Navigationsleiste</string>
     <string name="navbar_enable_bar_title">Tasten der Navigationsleiste</string>
     <string name="navbar_enable_bar_summary">Aktiviere On-Screen Tasten für die Navigationsleiste</string>
+
+    <!-- Navigation bar button color -->
+    <string name="navbar_button_tint_title">Farbton Navigationstasten</string>
+<!--     <string name="navbar_button_tint_switch_title">Navigationsleisten-Tasten einfärben</string>-->
 
     <!-- Slim lockscreen shortcuts -->
     <string name="shortcut_action_none">Keiner</string>
@@ -307,6 +307,13 @@
     <string name="clock_font_medium_italic">Mittel &amp; kursiv</string>
     <string name="clock_font_black">Schwarz</string>
     <string name="clock_font_black_italic">Schwarz &amp; kursiv</string>
+    <string name="clock_font_dancingscript">DancingScript</string>
+    <string name="clock_font_dancingscript_bold">DancingScript fett</string>
+    <string name="clock_font_comingsoon">ComingSoon</string>
+    <string name="clock_font_notoserif">NotoSerif Normal</string>
+    <string name="clock_font_notoserif_italic">NotoSerif kursiv</string>
+    <string name="clock_font_notoserif_bold">NotoSerif fett</string>
+    <string name="clock_font_notoserif_bold_italic">NotoSerif fett &amp; kursiv</string>
     <string name="clock_font_size_title">Schriftgröße</string>
     <string name="status_bar_show_clock_second_title">Uhr-Sekundenanzeige</string>
     <string name="clock_font_size_4">4</string>
@@ -355,7 +362,7 @@
     <string name="recent_panel_category">Slim Recents</string>
     <string name="recent_app_sidebar_title">Seitenleiste für Apps</string>
     <string name="recent_app_sidebar_summary">Zeige App-Verknüpfungen auf der anderen Seite</string>
-    <string name="recent_app_sidebar_style_title">Stil der App-Leiste</string>
+    <string name="recent_app_sidebar_style_title">Stil der Seitenleiste</string>
     <string name="recent_app_sidebar_style_summary">Ändere den Stil der App-Seitenleiste</string>
     <string name="recent_app_sidebar_hide_labels_title">Beschriftung der Symbole ausblenden</string>
     <string name="recent_app_sidebar_label_color_title">Farbe des Etiketts</string>
@@ -385,5 +392,27 @@
 
     <!-- Snackbar action button -->
     <string name="dev_settings_action_button">Einstellungen</string>
+
+    <!-- Dashboard columns -->
+    <string name="dashboard_columns_title">Spaltenanzahl der Übersicht</string>
+    <string name="dashboard_columns_summary">Wechselt die Spaltenanzahl in der Übersicht der Einstellungen</string>
+    <string name="dashboard_columns_dialog_title">Wähle Spaltenanzahl</string>
+    <string name="dashboard_columns_default">Eine (Standard)</string>
+    <string name="dashboard_columns_two">Zwei</string>
+    <string name="dashboard_columns_three">Drei</string>
+
+    <!-- Dashboard tileview double lines -->
+    <string name="dashboard_category">Einstellungen der Übersicht</string>
+    <string name="dashboard_tileview_double_lines_title">Zeilenanzahl der Überschriften der Einstellungen</string>
+    <string name="dashboard_tileview_double_lines_summary_on">Titel der Einstellungen in der Übersicht einzeilig</string>
+    <string name="dashboard_tileview_double_lines_summary_off">Titel der Einstellungen in der Übersicht zweizeilig</string>
+
+    <!-- Selinux Switch -->
+    <string name="selinux_switch_title">SELinux-Schalter Optionen</string>
+    <string name="selinux_switch_summary">SELinux sind verschiedene Kernel-Modifikationen und \"user-space\" Werkzeuge. Eine Änderung des Modus kann unerwartetes Telefonverhalten auslösen. Benutzung auf eigenes Risiko!</string>
+    <string name="selinux_title">SELinux-Modus</string>
+    <string name="selinux_permissive_title">Moderat</string>
+    <string name="selinux_enforcing_title">Strikt</string>
+    <string name="selinux_permissive_toast_title">SELinux-Modus auf \"Moderat\" gesetzt!</string>
 
 </resources>
