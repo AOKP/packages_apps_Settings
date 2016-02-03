@@ -61,6 +61,8 @@ import com.android.settingslib.bluetooth.BluetoothDeviceFilter;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
 
+import cyanogenmod.providers.CMSettings;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
