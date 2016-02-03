@@ -24,6 +24,10 @@
     <string name="cpu_info">CPU</string>
     <string name="mem_info">Memory</string>
 
+    <!-- Changelog -->
+    <string name="changelog_title">Changelog</string>
+    <string name="changelog_error">Unable to load changelog</string>
+
     <!-- Rom Control -->
     <string name="rom_control_title">ROM Control</string>
 
