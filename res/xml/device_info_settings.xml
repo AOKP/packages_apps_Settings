@@ -50,6 +50,12 @@
                 android:title="@string/device_feedback">
         </PreferenceScreen>
 
+        <!-- Changelog -->
+        <PreferenceScreen android:key="changelog"
+                android:title="@string/changelog_crdroid_title"
+                android:fragment="com.android.settings.crdroid.Changelog" />
+
+
         <!-- Contributors cloud -->
         <PreferenceScreen android:key="contributors_cloud"
             android:title="@string/contributors_cloud_fragment_title"
