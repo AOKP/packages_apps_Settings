@@ -493,4 +493,8 @@
     <string name="ambient_display_show_battery_title">Battery Status</string>
     <string name="ambient_display_show_battery_summary">Show battery indicator during pulse</string>
 
+    <!-- Changelog -->
+    <string name="changelog_title">Changelog</string>
+    <string name="changelog_error">Unable to load changelog</string>
+
 </resources>
