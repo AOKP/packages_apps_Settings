@@ -309,6 +309,23 @@ public final class SearchIndexableResources {
                         R.xml.wifi_calling_settings,
                         WifiCallingSettings.class.getName(),
                         R.drawable.ic_settings_wireless));
+
+        // CyanogenMod Settings
+        sResMap.put(com.android.settings.cyanogenmod.PrivacySettings.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(
+                                com.android.settings.cyanogenmod.PrivacySettings.class.getName()),
+                        R.xml.privacy_settings_cyanogenmod,
+                        com.android.settings.cyanogenmod.PrivacySettings.class.getName(),
+                        R.drawable.ic_settings_privacy));
+
+        sResMap.put(com.android.settings.cyanogenmod.LockscreenSettingsAlias.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(
+                                com.android.settings.cyanogenmod.LockscreenSettingsAlias.class.getName()),
+                        NO_DATA_RES_ID,
+                        com.android.settings.cyanogenmod.LockscreenSettingsAlias.class.getName(),
+                        R.drawable.ic_settings_lockscreen));
     }
 
     private SearchIndexableResources() {
