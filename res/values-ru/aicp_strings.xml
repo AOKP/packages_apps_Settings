@@ -31,8 +31,6 @@
     <!-- Color Picker -->
     <string name="dialog_color_picker">Изменить цвет</string>
     <string name="press_color_to_apply">Нажать на цвет что бы принять</string>
-    <string name="arrow_right">?</string>
-    <string name="arrow_down">?</string>
     <string name="hex">Цвет в Hex:</string>
     <string name="hex_hint">#ff000000</string>
     <string name="set">Выбрать</string>
