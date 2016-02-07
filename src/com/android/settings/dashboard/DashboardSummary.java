@@ -21,6 +21,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -150,8 +151,13 @@ public class DashboardSummary extends InstrumentedFragment {
             View categoryView = mLayoutInflater.inflate(R.layout.dashboard_category, mDashboard,
                     false);
 
+            categoryView.setBackgroundResource(R.drawable.dashboard_tile_background);
+            categoryView.setBackgroundColor(Settings.System.getInt(context.getContentResolver(),
+                    Settings.System.SETTINGS_BG_COLOR, 0xff000000));
             TextView categoryLabel = (TextView) categoryView.findViewById(R.id.category_title);
             categoryLabel.setText(category.getTitle(res));
+            categoryLabel.setTextColor(Settings.System.getInt(context.getContentResolver(),
+                    Settings.System.SETTINGS_CATEGORY_TEXT_COLOR, 0xff1976D2));
 
             ViewGroup categoryContent =
                     (ViewGroup) categoryView.findViewById(R.id.category_content);
@@ -180,22 +186,24 @@ public class DashboardSummary extends InstrumentedFragment {
     public void updateTileView(Context context, Resources res, DashboardTile tile,
             ImageView tileIcon, TextView tileTextView, TextView statusTextView, Switch switchBar) {
 
+        final int iconColor = Settings.System.getInt(context.getContentResolver(),
+                    Settings.System.SETTINGS_TITLE_TEXT_COLOR, 0xff1976D2);
         if (!TextUtils.isEmpty(tile.iconPkg)) {
             try {
                 Drawable drawable = context.getPackageManager()
                         .getResourcesForApplication(tile.iconPkg).getDrawable(tile.iconRes, null);
                 if (!tile.iconPkg.equals(context.getPackageName()) && drawable != null) {
                     // If this drawable is coming from outside Settings, tint it to match the color.
-                    TypedValue tintColorValue = new TypedValue();
+                    /* TypedValue tintColorValue = new TypedValue();
                     context.getResources().getValue(R.color.external_tile_icon_tint_color,
                             tintColorValue, true);
                     // If tintColorValue is TYPE_ATTRIBUTE, resolve it
                     if (tintColorValue.type == TypedValue.TYPE_ATTRIBUTE) {
                         context.getTheme().resolveAttribute(tintColorValue.data,
                                 tintColorValue, true);
-                    }
+                    }*/
                     drawable.setTintMode(android.graphics.PorterDuff.Mode.SRC_ATOP);
-                    drawable.setTint(tintColorValue.data);
+                    drawable.setTint(iconColor);
                 }
                 tileIcon.setImageDrawable(drawable);
             } catch (NameNotFoundException | Resources.NotFoundException e) {

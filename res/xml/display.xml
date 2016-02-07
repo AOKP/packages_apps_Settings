@@ -149,6 +149,12 @@
                 android:entryValues="@array/dashboard_font_style_values"
                 android:title="@string/dashboard_font_style_title" />
 
+        <PreferenceScreen
+                android:key="settings_colors"
+                android:title="@string/settings_colors_title"
+                android:fragment="com.android.settings.aicp.DashboardColors"
+                android:summary="@string/settings_colors_summary" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
