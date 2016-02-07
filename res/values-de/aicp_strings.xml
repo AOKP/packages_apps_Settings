@@ -31,6 +31,8 @@
     <!-- Color Picker -->
     <string name="dialog_color_picker">Farbwähler</string>
     <string name="press_color_to_apply">Wähle unten eine Farbe</string>
+    <!-- DO NOT TRANSLATE <string name="arrow_right">→</string> -->
+    <!-- DO NOT TRANSLATE <string name="arrow_down">↓</string> -->
     <string name="hex">Hex:</string>
     <string name="hex_hint">#ff000000</string>
     <string name="set">Setzen</string>
@@ -92,7 +94,7 @@
 
     <!-- Navigation bar button color -->
     <string name="navbar_button_tint_title">Farbton Navigationstasten</string>
-<!--     <string name="navbar_button_tint_switch_title">Navigationsleisten-Tasten einfärben</string>-->
+    <string name="navbar_button_tint_switch_title">Navigationsleisten-Tasten einfärben</string>
 
     <!-- Slim lockscreen shortcuts -->
     <string name="shortcut_action_none">Keiner</string>
