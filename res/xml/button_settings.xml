@@ -76,6 +76,13 @@
             android:defaultValue="#ffffff"
             android:dependency="navigation_bar_tint_switch" />
 
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="nav_buttons_rotation"
+            android:title="@string/nav_buttons_rotation_title"
+            android:summary="@string/nav_buttons_rotation_summary"
+            android:defaultValue="true"
+            android:dependency="enable_nav_bar" />
+
         <ListPreference
             android:key="navigation_recents_long_press"
             android:dialogTitle="@string/navigation_bar_recents_title"
