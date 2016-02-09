@@ -107,9 +107,9 @@
     <string name="shortcut_action_disable_message">Désactiver\nAjoutez une entrée pour activer cette fonction</string>
     <string name="shortcut_image_not_valid">L\'application choisie ne retourne pas d\'icône valide ou ne supporte pas le redimensionnement d\'image. Utilisez une autre application.</string>
     <string name="shortcut_duplicate_entry">L\'action choisie ne peut pas être ajoutée deux fois.</string>
-    <string name="shortcut_action_help_shortcut">raccourci</string>
-    <string name="shortcut_action_help_button">bouton</string>
-    <string name="shortcut_action_help_app">application</string>
+    <string name="shortcut_action_help_shortcut">Raccourci</string>
+    <string name="shortcut_action_help_button">Bouton</string>
+    <string name="shortcut_action_help_app">Application</string>
     <string name="shortcut_action_help_icon">, quand l\'icône est sélectionnée les options de personnalisation seront affichés</string>
     <string name="shortcut_action_help_main">Pour ajouter une %1$s, sélectionnez l\'icône d\'ajout. Une fois une %1$s est ajoutée, la sélection de la ligne va changer %2$s de la cible\n\n pour supprimer %1$s, balayer horizontalement vers la droite ou vers la gauche. Réorganisez %1$s dans la liste en déplaçant le symbole sur la gauche vers le haut ou vers le bas.\n\nPour revenir aux paramètres par défaut, choisissez rétablir paramètres par défaut.</string>
     <string name="shortcut_action_help_delete_last_entry">Supprimer tout %1$s dans la liste va désactiver cette fonction totalement.</string>
@@ -353,7 +353,7 @@
 
     <!-- Battery stats reset -->
     <string name="battery_stats_reset">Réinitialiser les statistiques</string>
-    <string name="battery_stats_message">L\'historique des statistiques de la batterie vont être réinitialiser</string>
+    <string name="battery_stats_message">L\'historique des statistiques de la batterie va être réinitialiser</string>
     <string name="ok_string">Ok</string>
 
     <!-- Slim Recent App Sidebar  -->
