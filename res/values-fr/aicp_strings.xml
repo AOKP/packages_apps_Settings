@@ -406,10 +406,14 @@
     <string name="dashboard_tileview_double_lines_summary_off">Afficher les intitulés du tableau de bord sur deux lignes</string>
 
     <!-- Selinux Switch -->
-    <string name="selinux_switch_title">Options de changement du mode Selinux</string>
+    <string name="selinux_switch_title">Options de changement du mode SElinux</string>
     <string name="selinux_switch_summary">Le SELinux est un lot de modifications du kernel et des outils et de l\'espace utilisateur. Changer de mode peut causer des effets indésirables. À utiliser à vos risques et périls.</string>
     <string name="selinux_title">Mode Selinux</string>
-    <string name="selinux_permissive_title">Permissive</string>
-    <string name="selinux_enforcing_title">Enforcing</string>
+    <string name="selinux_permissive_title">Permissif</string>
+    <string name="selinux_enforcing_title">Application</string>
+
+    <!-- Navbar buttons rotating icons -->
+    <string name="nav_buttons_rotation_title">Animation de rotation pour les icônes</string>
+    <string name="nav_buttons_rotation_summary">Activer pour que les icônes aient un effet de rotation lorsque l\'écran est retourné.</string>
 
 </resources>
