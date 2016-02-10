@@ -47,7 +47,7 @@
     <string name="ring_notification_volume_option_title">Рингтона и уведомлении</string>
 
     <!-- Hold back to kill timeout -->
-    <string name="hold_back_to_kill_timeout_title">Убить все приложение кнопкой назад</string>
+    <string name="hold_back_to_kill_timeout_title">Задержка кнопки назад</string>
     <string name="default_string">По умолчанию</string>
 
     <!-- Volume Steps -->
@@ -91,8 +91,8 @@
     <string name="navbar_enable_bar_summary">Включить панель навигации</string>
 
     <!-- Navigation bar button color -->
-    <string name="navbar_button_tint_title">Цвет кнопок навигационной панели</string>
-    <string name="navbar_button_tint_switch_title">Цвет кнопок навигационной панели</string>
+    <string name="navbar_button_tint_title">Изменить цвет кнопок панели навигации</string>
+    <string name="navbar_button_tint_switch_title">Цвет кнопок панели навигации</string>
 
     <!-- Slim lockscreen shortcuts -->
     <string name="shortcut_action_none">Нет</string>
@@ -113,7 +113,8 @@
     <string name="shortcut_action_help_button">кнопка</string>
     <string name="shortcut_action_help_app">приложение</string>
     <string name="shortcut_action_help_icon">, в процессе выбора значка будут показаны настройки кастомизации</string>
-    <string name="shortcut_action_help_main">Чтобы добавить %1$s, нажмите значок \"Добавить\". Когда %1$s добавлено, выбором ряда можно изменить цель%2$s\n\nЧтобы удалить %1$s, сдвиньте ряд по горизонтали. Изменить порядок %1$s в списке можно вертикальным перетаскиванием якоря слева.\n\nЧтобы сбросить все к значениям по умолчанию, нажмите значок \"Сбросить\".</string>
+    <string name="shortcut_action_help_main">Чтобы добавить %1$s, нажмите значок \"Добавить\". Когда %1$s добавлено, выбором ряда можно изменить цель%2$s\n\nЧтобы удалить %1$s, сдвиньте ряд по горизонтали. 
+       Изменить порядок %1$s в списке можно вертикальным перетаскиванием якоря слева.\n\nЧтобы сбросить все к значениям по умолчанию, нажмите значок \"Сбросить\".</string>
     <string name="shortcut_action_help_delete_last_entry">Удаление последнего(-ей) %1$s в списке отключит эту функцию.</string>
     <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Удаление последнего %1$s отключит весь второй уровень pie.</string>
     <string name="shortcuts_applications">Приложения</string>
@@ -153,7 +154,7 @@
     <string name="shortcuts_icon_picker_key">Ключи/Аккаунты</string>
     <string name="shortcuts_icon_picker_laptop">Ноутбук</string>
     <string name="shortcuts_icon_picker_notes">Заметки</string>
-     <string name="shortcuts_icon_picker_luggage">Путешествия</string>
+    <string name="shortcuts_icon_picker_luggage">Путешествия</string>
     <string name="shortcuts_icon_picker_maps">Карты</string>
     <string name="shortcuts_icon_picker_market">Маркет</string>
     <string name="shortcuts_icon_picker_movie">Фильмы</string>
@@ -307,13 +308,13 @@
     <string name="clock_font_medium_italic">Средний курсив</string>
     <string name="clock_font_black">Затемненный</string>
     <string name="clock_font_black_italic">Затемненный курсив</string>
-    <string name="clock_font_dancingscript">DancingScript</string>
-    <string name="clock_font_dancingscript_bold">DancingScript Bold</string>
-    <string name="clock_font_comingsoon">ComingSoon</string>
-    <string name="clock_font_notoserif">NotoSerif Normal</string>
-    <string name="clock_font_notoserif_italic">NotoSerif Italic</string>
-    <string name="clock_font_notoserif_bold">NotoSerif Bold</string>
-    <string name="clock_font_notoserif_bold_italic">NotoSerif Bold Italic</string>
+    <string name="clock_font_dancingscript">Рукописный</string>
+    <string name="clock_font_dancingscript_bold">Рукописный жирный</string>
+    <string name="clock_font_comingsoon">Комикс</string>
+    <string name="clock_font_notoserif">НотоШериф</string>
+    <string name="clock_font_notoserif_italic">НотоШериф курсив</string>
+    <string name="clock_font_notoserif_bold">НотоШериф жирный</string>
+    <string name="clock_font_notoserif_bold_italic">НотоШериф жирный курсив</string>
     <string name="clock_font_size_title">Размер шрифта</string>
     <string name="status_bar_show_clock_second_title">Показывать секунды</string>
     <string name="clock_font_size_4">4</string>
@@ -339,7 +340,7 @@
 
     <!-- Quick unlock -->
     <string name="unlock_quick_unlock_control_title">Быстрая разблокировка</string>
-    <string name="unlock_quick_unlock_control_summary">Разблокировать автоматически , когда правильный PIN</string>
+    <string name="unlock_quick_unlock_control_summary">Разблокировать автоматически, когда правильный PIN</string>
 
     <!-- Keyboard and Input ASS methods  -->
     <string name="title_keyboard_input">Расширенные опции</string>
@@ -348,7 +349,7 @@
     <string name="keyboard_rotation_toggle_summary">Деиствие автоматического поворота , когда клавиатура отображается</string>
     <string name="keyboard_rotation_timeout_title">Автоповорот таймаут</string>
     <string name="keyboard_rotation_timeout_summary">Отключение автоматического поворота</string>
-    <string name="keyboard_rotation_dialog">Эта функция авто поворота , включена временно, пока клавиатура показана . Это не имеет никакого эффекта, когда авто поворот уже включен.</string>
+    <string name="keyboard_rotation_dialog">Эта функция авто поворота, включена временно, пока клавиатура показана. Это не имеет никакого эффекта, когда авто поворот уже включен.</string>
     <string name="show_enter_key_title">Показать клавишу ввода</string>
     <string name="show_enter_key_summary">Ввод смайлов вместо букв</string>
 
@@ -370,7 +371,7 @@
 
     <!-- app notifications hide on lockscreen -->
     <string name="app_notification_no_keyguard_title">Скрыть при блокировке</string>
-    <string name="app_notification_no_keyguard_summary">Скрыть уведомления приложении , когда устройство заблокировано</string>
+    <string name="app_notification_no_keyguard_summary">Скрыть уведомления приложении, когда устройство заблокировано</string>
     <string name="filter_notif_no_keyguard">Скрытие при блокировке</string>
     <string name="notifications_no_keyguard">Скрытие при блокировке</string>
     <string name="notifications_four_items"><xliff:g id="notif_state" example="Priority">%1$s</xliff:g> / <xliff:g id="notif_state" example="Priority">%2$s</xliff:g> / <xliff:g id="notif_state" example="Priority">%3$s</xliff:g> / <xliff:g id="notif_state" example="Priority">%4$s</xliff:g></string>
@@ -414,4 +415,23 @@
     <string name="selinux_enforcing_title">Принудительный</string>
     <string name="selinux_switch_onboot_title">Применять при загрузке</string>
     <string name="selinux_switch_onboot_summary">Применять параметры SELinux при загрузке.</string>
+
+    <!-- Device maintainer -->
+    <string name="device_maintainer">Сопровождающие устройство</string>
+    <string name="device_maintainers">Сопровождающие устройство</string>
+
+    <!-- Hardware info -->
+    <string name="hardware_info">Информация об устройстве</string>
+    <string name="chipset_info">Чипсет</string>
+    <string name="device_rear_camera">Основная камера</string>
+    <string name="device_front_camera">Фронтальная камера</string>
+    <string name="device_screen_resolution">Разрешение экрана</string>
+    <string name="gpu_info">Видеоускоритель</string>
+    <string name="cpu_info">Процессор</string>
+    <string name="mem_info">Память</string>
+
+    <!-- Live lockscreen -->
+    <string name="live_lock_screen_title">Живой экран блокировки</string>
+    <string name="live_lock_screen_summary">Настройка живого экрана блокировки</string>
+
 </resources>
