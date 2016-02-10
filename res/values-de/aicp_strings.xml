@@ -31,8 +31,6 @@
     <!-- Color Picker -->
     <string name="dialog_color_picker">Farbwähler</string>
     <string name="press_color_to_apply">Wähle unten eine Farbe</string>
-    <!-- DO NOT TRANSLATE <string name="arrow_right">→</string> -->
-    <!-- DO NOT TRANSLATE <string name="arrow_down">↓</string> -->
     <string name="hex">Hex:</string>
     <string name="hex_hint">#ff000000</string>
     <string name="set">Setzen</string>
@@ -416,5 +414,9 @@
     <string name="selinux_permissive_title">Moderat</string>
     <string name="selinux_enforcing_title">Strikt</string>
     <string name="selinux_permissive_toast_title">SELinux-Modus auf \"Moderat\" gesetzt!</string>
+
+    <!-- Navbar buttons rotating icons -->
+    <string name="nav_buttons_rotation_title">Animation für Symbolrotation</string>
+    <string name="nav_buttons_rotation_summary">Aktivieren, damit Symbole bei Displaydrehung rotieren oder die Navigationsleiste neugezeichnet wird.</string>
 
 </resources>
