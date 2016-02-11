@@ -421,4 +421,9 @@
     <string name="nav_buttons_rotation_title">Rotation animation for icons</string>
     <string name="nav_buttons_rotation_summary">Enable for icons to rotate when screen is rotated or navbar recreated.</string>
 
+    <!-- Date position -->
+    <string name="clock_date_position">Date position</string>
+    <string name="clock_date_right">Right of time</string>
+    <string name="clock_date_left">Left of time</string>
+
 </resources>
