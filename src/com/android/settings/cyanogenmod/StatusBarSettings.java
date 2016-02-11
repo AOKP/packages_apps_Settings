@@ -74,6 +74,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
     private static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
     private static final String STATUS_BAR_QUICK_QS_PULLDOWN = "qs_quick_pulldown";
+    private static final String PREF_SMART_PULLDOWN = "smart_pulldown";
 
     private static final int STATUS_BAR_BATTERY_STYLE_HIDDEN = 4;
     private static final int STATUS_BAR_BATTERY_STYLE_TEXT = 6;
@@ -98,6 +99,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     private ListPreference mStatusBarBattery;
     private ListPreference mStatusBarBatteryShowPercent;
     private ListPreference mQuickPulldown;
+    private ListPreference mSmartPulldown;
 
     private boolean mCheckPreferences;
 
@@ -226,6 +228,13 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         }
         mQuickPulldown.setOnPreferenceChangeListener(this);
 
+        mSmartPulldown = (ListPreference) findPreference(PREF_SMART_PULLDOWN);
+        mSmartPulldown.setOnPreferenceChangeListener(this);
+        int smartPulldown = Settings.System.getInt(resolver,
+                Settings.System.QS_SMART_PULLDOWN, 0);
+        mSmartPulldown.setValue(String.valueOf(smartPulldown));
+        updateSmartPulldownSummary(smartPulldown);
+
         setHasOptionsMenu(true);
         mCheckPreferences = true;
         return prefSet;
@@ -325,7 +334,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
                 dialog.show();
             } else {
                 if ((String) newValue != null) {
-                    Settings.System.putString(getActivity().getContentResolver(),
+                    Settings.System.putString(resolver,
                         Settings.System.STATUS_BAR_DATE_FORMAT, (String) newValue);
                 }
             }
@@ -351,20 +360,20 @@ public class StatusBarSettings extends SettingsPreferenceFragment
                     .valueOf(newValue)));
             preference.setSummary(hex);
             int intHex = ColorPickerPreference.convertToColorInt(hex);
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.STATUSBAR_CLOCK_COLOR, intHex);
             return true;
         } else if (preference == mFontStyle) {
             int val = Integer.parseInt((String) newValue);
             int index = mFontStyle.findIndexOfValue((String) newValue);
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.STATUSBAR_CLOCK_FONT_STYLE, val);
             mFontStyle.setSummary(mFontStyle.getEntries()[index]);
             return true;
         } else if (preference == mStatusBarClockFontSize) {
             int val = Integer.parseInt((String) newValue);
             int index = mStatusBarClockFontSize.findIndexOfValue((String) newValue);
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.STATUSBAR_CLOCK_FONT_SIZE, val);
             mStatusBarClockFontSize.setSummary(mStatusBarClockFontSize.getEntries()[index]);
             return true;
@@ -382,6 +391,11 @@ public class StatusBarSettings extends SettingsPreferenceFragment
                 mQuickPulldown.setSummary(
                         res.getString(R.string.status_bar_quick_qs_pulldown_summary, direction));
             }
+            return true;
+        } else if (preference == mSmartPulldown) {
+            int smartPulldown = Integer.valueOf((String) newValue);
+            Settings.System.putInt(resolver, Settings.System.QS_SMART_PULLDOWN, smartPulldown);
+            updateSmartPulldownSummary(smartPulldown);
             return true;
         }
         return false;
@@ -456,6 +470,31 @@ public class StatusBarSettings extends SettingsPreferenceFragment
             }
         }
         mStatusBarDateFormat.setEntries(parsedDateEntries);
+    }
+
+    private void updateSmartPulldownSummary(int value) {
+        Resources res = getResources();
+
+        if (value == 0) {
+            // Smart pulldown deactivated
+            mSmartPulldown.setSummary(res.getString(R.string.smart_pulldown_off));
+        } else {
+            String type = null;
+            switch (value) {
+                case 1:
+                    type = res.getString(R.string.smart_pulldown_dismissable);
+                    break;
+                case 2:
+                    type = res.getString(R.string.smart_pulldown_persistent);
+                    break;
+                default:
+                    type = res.getString(R.string.smart_pulldown_all);
+                    break;
+            }
+            // Remove title capitalized formatting
+            type = type.toLowerCase();
+            mSmartPulldown.setSummary(res.getString(R.string.smart_pulldown_summary, type));
+        }
     }
 
     private void showDialogInner(int id) {
