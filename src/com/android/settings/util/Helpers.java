@@ -304,7 +304,7 @@ public class Helpers {
     }
 
     public static void restartSystemUI() {
-        CMDProcessor.startSuCommand("pkill -TERM -f com.android.systemui");
+        CMDProcessor.startSuCommand("pkill -f com.android.systemui");
     }
 
     public static void restartSystem() {
