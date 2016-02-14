@@ -201,24 +201,24 @@
     <string name="battery_saver_color_summary">Activez les barres de notification et de navigation en orange quand l\'économiseur de batterie est activé.</string>
 
     <!-- Doze options -->
-    <string name="display_category_doze_options_title">Affichage ambiant</string>
-    <string name="doze_settings_title">Options avancées de l\'affichage ambiant</string>
-    <string name="doze_timeout_title">Définir les délais</string>
-    <string name="doze_timeout_summary">Temps que l\'écran reste activé pour une pulsion venant d\'une notification</string>
-    <string name="doze_trigger_pickup_title">Déclencheur du geste de prise en main</string>
-    <string name="doze_trigger_pickup_summary_on">Doze pulse will be triggered by pick up gesture sensor events</string>
-    <string name="doze_trigger_pickup_summary_off">Pick up gesture sensor will not be utilized as a triggering mechanism</string>
-    <string name="doze_trigger_sigmotion_title">Significant motion trigger</string>
-    <string name="doze_trigger_sigmotion_summary_on">Doze pulse will be triggered by significant motion sensor events</string>
-    <string name="doze_trigger_sigmotion_summary_off">Significant motion sensor will not be utilized as a triggering mechanism</string>
-    <string name="doze_trigger_notification_title">Notification trigger</string>
-    <string name="doze_trigger_notification_summary_on">Doze pulse will be triggered by notifications</string>
-    <string name="doze_trigger_notification_summary_off">Notifications will not be utilized as a trigger</string>
-    <string name="doze_schedule_title">Doze schedule</string>
-    <string name="doze_schedule_summary_on">Predefined doze repeat intervals (normally [1s,10s,30s,60s,120s]) will be used (default)</string>
-    <string name="doze_schedule_summary_off">Doze will only pulse once per notification</string>
-    <string name="doze_brightness_title">Doze brightness level</string>
-    <string name="doze_brightness_summary">Brightness level of doze pulse screen (% of max allowed brightness)</string>
+    <string name="display_category_doze_options_title">Options de l\'affichage en mode veille (doze)</string>
+    <string name="doze_settings_title">Options avancées de l\'affichage en mode veille</string>
+    <string name="doze_timeout_title">Durée d\'activation de l\'impulsion</string>
+    <string name="doze_timeout_summary">Durée d\'activation de l\'écran lors d\'un événement</string>
+    <string name="doze_trigger_pickup_title">Déclenchement par détection de geste</string>
+    <string name="doze_trigger_pickup_summary_on">L\'impulsion sera déclenchée par la détection d\'un mouvement de l\'appareil</string>
+    <string name="doze_trigger_pickup_summary_off">L\'impulsion ne sera pas déclenchée par la détection d\'un mouvement de l\'appareil</string>
+    <string name="doze_trigger_sigmotion_title">Déclenchement par mouvement important</string>
+    <string name="doze_trigger_sigmotion_summary_on">L\'impulsion sera déclenchée par des mouvements importants</string>
+    <string name="doze_trigger_sigmotion_summary_off">L\'impulsion ne sera pas déclenchée par des mouvements importants</string>
+    <string name="doze_trigger_notification_title">Déclenchement par une notification</string>
+    <string name="doze_trigger_notification_summary_on">L\'impulsion sera déclenchée par les notifications</string>
+    <string name="doze_trigger_notification_summary_off">L\'impulsion ne sera pas déclenchée par les notifications</string>
+    <string name="doze_schedule_title">Répétition de l\'impulsion</string>
+     <string name="doze_schedule_summary_on">L\'intervalle prédéfini des répétitions sera utilisé: [1s, 10s, 30s, 60s, 120s] (par défaut)</string>
+    <string name="doze_schedule_summary_off">Une seule impulson par notification</string>
+    <string name="doze_brightness_title">Niveau de luminosité de l\'affichage en mode veille</string>
+    <string name="doze_brightness_summary">Luminosité de l\'affichage en mode veille (% de la luminosité maximale)</string>
 
     <!-- Doze notification color invert -->
     <string name="doze_notification_color_invert_title">Inversion des couleurs</string>
@@ -232,19 +232,19 @@
 
     <!-- SlimDim -->
     <string name="dim_nav_buttons_category">SlimDim</string>
-    <string name="dim_nav_buttons_title">Boutons Dim après inactivité</string>
-    <string name="dim_nav_buttons_summary">Boutons de barre de navigation Dim après non interaction avec la barre de navigation pendant une durée spécifiée.</string>
-    <string name="dim_nav_buttons_timeout_title">Délai d\'attente avant Dim</string>
-    <string name="dim_nav_buttons_timeout_summary">Temps (en millisecondes) d\'attente avant les boutons Dim</string>
-    <string name="dim_nav_buttons_alpha_title">Alpha Dim</string>
-    <string name="dim_nav_buttons_alpha_summary">Valeur alpha pour les boutons Dim</string>
-    <string name="dim_nav_buttons_animate_title">Animation Dim</string>
-    <string name="dim_nav_buttons_animate_summary">Animer le fondu alpha</string>
+    <string name="dim_nav_buttons_title">Atténuer les boutons après inactivité</string>
+    <string name="dim_nav_buttons_summary">Atténuer les boutons de la barre de navigation après un temps définit d\'inactivité sur la barre de navigation</string>
+    <string name="dim_nav_buttons_timeout_title">Temps avant atténuation</string>
+    <string name="dim_nav_buttons_timeout_summary">Temps (en millisecondes) d\'attente avant l\'atténuation des boutons</string>
+    <string name="dim_nav_buttons_alpha_title">Niveau d\'atténuation</string>
+    <string name="dim_nav_buttons_alpha_summary">Niveau d\'atténuation appliqué aux boutons</string>
+    <string name="dim_nav_buttons_animate_title">Animation d\'atténuation</string>
+    <string name="dim_nav_buttons_animate_summary">Animer l\'atténuation</string>
     <string name="dim_nav_buttons_animate_duration_title">Durée de l\'animation</string>
-    <string name="dim_nav_buttons_animate_duration_summary">Durée (en millisecondes) de l\'animation alpha.</string>
-    <string name="dim_nav_buttons_touch_anywhere_title">A l\'écoute des touches sur l\'écran entier</string>
-    <string name="dim_nav_buttons_touch_anywhere_summary_on">En touchant n\'importe où sur l\'écran va causer au boutons de ne plus être Dim</string>
-    <string name="dim_nav_buttons_touch_anywhere_summary_off">Uniquement sur la barre de navigation va causer au boutons de ne plus être Dim</string>
+    <string name="dim_nav_buttons_animate_duration_summary">Durée (en millisecondes) de l\'animation</string>
+    <string name="dim_nav_buttons_touch_anywhere_title">Prendre en compte tout l\'écran</string>
+    <string name="dim_nav_buttons_touch_anywhere_summary_on">Un appui n\'importe où sur l\'écran empêchera l\'atténuation des boutons</string>
+    <string name="dim_nav_buttons_touch_anywhere_summary_off">Seul un appui dans la barre de navigation empêchera l\'atténuation de l\'écran</string>
 
     <!-- Less Notification sounds -->
     <string name="notifications_category_title">Notifications</string>
@@ -342,9 +342,9 @@
     <!-- Keyboard and Input ASS methods  -->
     <string name="title_keyboard_input">Options avancées</string>
     <string name="disable_fullscreen_keyboard_title">Désactiver le clavier plein-écran</string>
-    <string name="disable_fullscreen_keyboard_summary">Le clavier en mode paysage ne prendra jamais l\'écran en entier</string>
+    <string name="disable_fullscreen_keyboard_summary">Le clavier en mode paysage ne remplira jamais la totalité de l\'écran</string>
     <string name="keyboard_rotation_toggle_title">Rotation automatique du clavier</string>
-    <string name="keyboard_rotation_toggle_summary">Forcer la rotation automatique quand le clavier est affiché</string>
+    <string name="keyboard_rotation_toggle_summary">Forcer la rotation automatique lorsque le clavier est affiché</string>
     <string name="keyboard_rotation_timeout_title">Délai de la rotation automatique</string>
     <string name="keyboard_rotation_timeout_summary">Désactiver le capteur de rotation automatique pendant <xliff:g id="rotate_timeout">%1$s</xliff:g> secondes après la disparition du clavier</string>
     <string name="keyboard_rotation_dialog">Cette fonction force la rotation automatique à s\'activer temporairement quand le clavier est visible. Cela n\'a aucun effet si la rotation automatique est déjà activée.</string>
@@ -415,5 +415,10 @@
     <!-- Navbar buttons rotating icons -->
     <string name="nav_buttons_rotation_title">Animation de rotation pour les icônes</string>
     <string name="nav_buttons_rotation_summary">Activer pour que les icônes aient un effet de rotation lorsque l\'écran est retourné.</string>
+
+    <!-- Date position -->
+    <string name="clock_date_position">Position de la date</string>
+    <string name="clock_date_right">A droite de l\'heure</string>
+    <string name="clock_date_left">A gauche de l\'heure</string>
 
 </resources>
