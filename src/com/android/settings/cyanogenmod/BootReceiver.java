@@ -26,6 +26,7 @@ import com.android.settings.hardware.VibratorIntensity;
 import com.android.settings.inputmethod.InputMethodAndLanguageSettings;
 import com.android.settings.livedisplay.DisplayGamma;
 import com.android.settings.location.LocationSettings;
+import com.android.settings.DevelopmentSettings;
 
 public class BootReceiver extends BroadcastReceiver {
 
@@ -41,5 +42,7 @@ public class BootReceiver extends BroadcastReceiver {
 
         // Extract the contributors database
         ContributorsCloudFragment.extractContributorsCloudDatabase(ctx);
+
+        DevelopmentSettings.initializeUpdateRecoveryOption();
     }
 }
