@@ -397,15 +397,14 @@
     <string name="dashboard_columns_title">Spaltenanzahl der Übersicht</string>
     <string name="dashboard_columns_summary">Wechselt die Spaltenanzahl in der Übersicht der Einstellungen</string>
     <string name="dashboard_columns_dialog_title">Wähle Spaltenanzahl</string>
-    <string name="dashboard_columns_default">Eine (Standard)</string>
+    <string name="dashboard_columns_one">Eine</string>
     <string name="dashboard_columns_two">Zwei</string>
     <string name="dashboard_columns_three">Drei</string>
 
     <!-- Dashboard tileview double lines -->
     <string name="dashboard_category">Einstellungen der Übersicht</string>
     <string name="dashboard_tileview_double_lines_title">Zeilenanzahl der Überschriften der Einstellungen</string>
-    <string name="dashboard_tileview_double_lines_summary_on">Titel der Einstellungen in der Übersicht einzeilig</string>
-    <string name="dashboard_tileview_double_lines_summary_off">Titel der Einstellungen in der Übersicht zweizeilig</string>
+    <string name="dashboard_tileview_double_lines_summary">Titel der Einstellungen in der Übersicht zweizeilig</string>
 
     <!-- Selinux Switch -->
     <string name="selinux_switch_title">SELinux-Schalter Optionen</string>

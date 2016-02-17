@@ -395,15 +395,14 @@
     <string name="dashboard_columns_title">Nombre de colonnes</string>
     <string name="dashboard_columns_summary">Définir le nombre de colonnes affichées dans le tableau de bord</string>
     <string name="dashboard_columns_dialog_title">Nombre de colonnes</string>
-    <string name="dashboard_columns_default">Une (Par défaut)</string>
+    <string name="dashboard_columns_one">Une</string>
     <string name="dashboard_columns_two">Deux</string>
     <string name="dashboard_columns_three">Trois</string>
 
     <!-- Dashboard tileview double lines -->
     <string name="dashboard_category">Paramètres du tableau de bord</string>
     <string name="dashboard_tileview_double_lines_title">Nombre de ligne</string>
-    <string name="dashboard_tileview_double_lines_summary_on">Afficher les intitulés du tableau de bord sur une ligne</string>
-    <string name="dashboard_tileview_double_lines_summary_off">Afficher les intitulés du tableau de bord sur deux lignes</string>
+    <string name="dashboard_tileview_double_lines_summary">Afficher les intitulés du tableau de bord sur deux lignes</string>
 
     <!-- Selinux Switch -->
     <string name="selinux_switch_title">Options de changement du mode SElinux</string>

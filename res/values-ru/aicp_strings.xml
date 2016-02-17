@@ -208,6 +208,7 @@
     <string name="doze_settings_title">Настройка спящего режима(Doze)</string>
     <string name="doze_timeout_title">Импульс спящего режима</string>
     <string name="doze_timeout_summary">Время, что экран остается включенным в течение импульса уведомления</string>
+
     <string name="doze_trigger_pickup_title">Область жеста</string>
     <string name="doze_trigger_pickup_summary_on">Выход из спящего режима при помощи датчика</string>
     <string name="doze_trigger_pickup_summary_off">Выход из спящего режима не используется датчик</string>
@@ -397,15 +398,14 @@
    <string name="dashboard_columns_title">Количество столбцов панели управления</string>
     <string name="dashboard_columns_summary">Изменение количества отображаемых столбцов в панели</string>
     <string name="dashboard_columns_dialog_title">Выбрать количество столбцов</string>
-    <string name="dashboard_columns_default">Один (по умолчанию)</string>
+    <string name="dashboard_columns_one">Один</string>
     <string name="dashboard_columns_two">Два</string>
     <string name="dashboard_columns_three">Три</string>
 
     <!-- Dashboard tileview double lines -->
     <string name="dashboard_category">Настройка панели управления</string>
     <string name="dashboard_tileview_double_lines_title">Вид панели управления</string>
-    <string name="dashboard_tileview_double_lines_summary_on">Показывать в одну строки</string>
-    <string name="dashboard_tileview_double_lines_summary_off">Показывать в две строки</string>
+    <string name="dashboard_tileview_double_lines_summary">Показывать в две строки</string>
 
     <!-- Selinux Switch -->
     <string name="selinux_switch_title">Переключение параметров SELinux</string>

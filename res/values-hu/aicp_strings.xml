@@ -388,14 +388,13 @@
     <string name="dashboard_columns_title">Kapcsoló oszlopok</string>
     <string name="dashboard_columns_summary">Megváltoztatja a kapcsoló oszlopok számát</string>
     <string name="dashboard_columns_dialog_title">Kapcsoló oszlopok száma</string>
-    <string name="dashboard_columns_default">Egy (alapértelmezett)</string>
+    <string name="dashboard_columns_one">Egy</string>
     <string name="dashboard_columns_two">Kettő</string>
     <string name="dashboard_columns_three">Három</string>
 
     <!-- Dashboard tileview double lines -->
     <string name="dashboard_category">Kapcsoló beállítások</string>
     <string name="dashboard_tileview_double_lines_title">Kapcsoló csempe nézet címke</string>
-    <string name="dashboard_tileview_double_lines_summary_on">Kapcsoló csempe címke 1 sorban</string>
-    <string name="dashboard_tileview_double_lines_summary_off">Kapcsoló csempe címkék 2 sorban</string>
+    <string name="dashboard_tileview_double_lines_summary">Kapcsoló csempe címkék 2 sorban</string>
 
 </resources>
