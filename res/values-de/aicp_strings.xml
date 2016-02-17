@@ -419,4 +419,9 @@
     <string name="nav_buttons_rotation_title">Animation für Symbolrotation</string>
     <string name="nav_buttons_rotation_summary">Aktivieren, damit Symbole bei Displaydrehung rotieren oder die Navigationsleiste neugezeichnet wird.</string>
 
+    <!-- Date position -->
+    <string name="clock_date_position">Datum Position</string>
+    <string name="clock_date_right">Rechts von der Uhrzeit</string>
+    <string name="clock_date_left">Links von der Uhrzeit</string>
+
 </resources>
