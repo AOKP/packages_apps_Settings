@@ -31,6 +31,8 @@
     <!-- Color Picker -->
     <string name="dialog_color_picker">Farbwähler</string>
     <string name="press_color_to_apply">Wähle unten eine Farbe</string>
+    <!--<string name="arrow_right">→</string>-->
+    <!--<string name="arrow_down">↓</string>-->
     <string name="hex">Hex:</string>
     <string name="hex_hint">#ff000000</string>
     <string name="set">Setzen</string>
@@ -393,18 +395,18 @@
     <!-- Snackbar action button -->
     <string name="dev_settings_action_button">Einstellungen</string>
 
-    <!-- Dashboard columns -->
+    <!-- Dashboard settings -->
+    <string name="dashboard_category">Einstellungen der Übersicht</string>
     <string name="dashboard_columns_title">Spaltenanzahl der Übersicht</string>
     <string name="dashboard_columns_summary">Wechselt die Spaltenanzahl in der Übersicht der Einstellungen</string>
     <string name="dashboard_columns_dialog_title">Wähle Spaltenanzahl</string>
     <string name="dashboard_columns_one">Eine</string>
     <string name="dashboard_columns_two">Zwei</string>
     <string name="dashboard_columns_three">Drei</string>
-
-    <!-- Dashboard tileview double lines -->
-    <string name="dashboard_category">Einstellungen der Übersicht</string>
-    <string name="dashboard_tileview_double_lines_title">Zeilenanzahl der Überschriften der Einstellungen</string>
-    <string name="dashboard_tileview_double_lines_summary">Titel der Einstellungen in der Übersicht zweizeilig</string>
+    <string name="dashboard_tileview_double_lines_title">Zeilenanzahl der Überschriften</string>
+    <string name="dashboard_tileview_double_lines_summary">Titel der Einstellungen in der Übersicht 2-zeilig anzeigen</string>
+    <string name="dashboard_tileview_dividers_title">Trennlinien in der Übersicht</string>
+    <string name="dashboard_tileview_dividers_summary">Blendet die Trennlinien zwischen Menüpunkten der Übersicht aus</string>
 
     <!-- Selinux Switch -->
     <string name="selinux_switch_title">SELinux-Schalter Optionen</string>
@@ -419,8 +421,8 @@
     <string name="nav_buttons_rotation_summary">Aktivieren, damit Symbole bei Displaydrehung rotieren oder die Navigationsleiste neugezeichnet wird.</string>
 
     <!-- Date position -->
-    <string name="clock_date_position">Datum Position</string>
-    <string name="clock_date_right">Rechts von der Uhrzeit</string>
-    <string name="clock_date_left">Links von der Uhrzeit</string>
+    <string name="clock_date_position">Datumsposition</string>
+    <string name="clock_date_right">Rechts der Uhrzeit</string>
+    <string name="clock_date_left">Links der Uhrzeit</string>
 
 </resources>
