@@ -425,4 +425,8 @@
     <string name="clock_date_right">Right of time</string>
     <string name="clock_date_left">Left of time</string>
 
+    <!-- The volume key answer -->
+    <string name="volume_answer_call_title">Volume key answer</string>
+    <string name="volume_answer_call_summary">Volume up key answers call</string>
+
 </resources>

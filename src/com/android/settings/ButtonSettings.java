@@ -90,6 +90,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private static final String KEY_CAMERA_DOUBLE_TAP_POWER_GESTURE
             = "camera_double_tap_power_gesture";
     private static final String NAVIGATION_BAR_TINT = "navigation_bar_tint";
+    private static final String KEY_VOLUME_ANSWER_CALL = "volume_answer_call";
 
     private static final String CATEGORY_POWER = "power_key";
     private static final String CATEGORY_HOME = "home_key";
@@ -147,6 +148,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private SwitchPreference mPowerEndCall;
     private SwitchPreference mHomeAnswerCall;
     private SwitchPreference mCameraDoubleTapPowerGesture;
+    private SwitchPreference mVolumeAnswerCall;
 
     private PreferenceCategory mNavigationPreferencesCat;
     private SwitchPreference mDisableNavigationKeys;	
@@ -176,7 +178,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         final boolean hasAppSwitchKey = (deviceKeys & KEY_MASK_APP_SWITCH) != 0;
         final boolean hasCameraKey = (deviceKeys & KEY_MASK_CAMERA) != 0;
         final boolean hasVolumeKeys = (deviceKeys & KEY_MASK_VOLUME) != 0;
-
         final boolean showHomeWake = (deviceWakeKeys & KEY_MASK_HOME) != 0;
         final boolean showBackWake = (deviceWakeKeys & KEY_MASK_BACK) != 0;
         final boolean showMenuWake = (deviceWakeKeys & KEY_MASK_MENU) != 0;
@@ -184,6 +185,10 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         final boolean showAppSwitchWake = (deviceWakeKeys & KEY_MASK_APP_SWITCH) != 0;
         final boolean showCameraWake = (deviceWakeKeys & KEY_MASK_CAMERA) != 0;
         final boolean showVolumeWake = (deviceWakeKeys & KEY_MASK_VOLUME) != 0;
+
+        // Volume button answers calls.
+        mVolumeAnswerCall = (SwitchPreference) findPreference(KEY_VOLUME_ANSWER_CALL);
+        mVolumeAnswerCall.setOnPreferenceChangeListener(this);
 
         boolean hasAnyBindableKey = false;
         final PreferenceCategory powerCategory =
@@ -489,6 +494,11 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
                 (incallHomeBehavior == CMSettings.Secure.RING_HOME_BUTTON_BEHAVIOR_ANSWER);
             mHomeAnswerCall.setChecked(homeButtonAnswersCall);
         }
+
+        // Volume button answers calls.
+        mVolumeAnswerCall.setChecked((Settings.System.getInt(getContentResolver(),
+                  Settings.System.ANSWER_VOLUME_BUTTON_BEHAVIOR_ANSWER, 0) == 1));
+
     }
 
     private ListPreference initActionList(String key, int value) {
@@ -654,6 +664,11 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
             boolean value = (Boolean) newValue;
             Settings.Secure.putInt(getContentResolver(), CAMERA_DOUBLE_TAP_POWER_GESTURE_DISABLED,
                     value ? 0 : 1 /* Backwards because setting is for disabling */);
+            return true;
+        } else if (preference == mVolumeAnswerCall) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getContentResolver(),
+                   Settings.System.ANSWER_VOLUME_BUTTON_BEHAVIOR_ANSWER, value ? 1 : 0);
             return true;
         }
         return false;
