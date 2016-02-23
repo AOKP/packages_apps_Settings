@@ -92,6 +92,10 @@
     <string name="navbar_enable_bar_title">Navigációs sáv gombok</string>
     <string name="navbar_enable_bar_summary">Engedélyezi a képernyőn megjelenő navigációs gombokat</string>
 
+    <!-- Navigation bar button color -->
+    <string name="navbar_button_tint_title">Navigációs gomb színe</string>
+    <string name="navbar_button_tint_switch_title">Navigációs gomb színezése</string>
+
     <!-- Slim lockscreen shortcuts -->
     <string name="shortcut_action_none">Nincs</string>
     <string name="shortcut_action_longpress">Hosszannyomás:</string>
@@ -305,6 +309,13 @@
     <string name="clock_font_medium_italic">Medium Italic</string>
     <string name="clock_font_black">Black</string>
     <string name="clock_font_black_italic">Black Italic</string>
+    <string name="clock_font_dancingscript">DancingScript</string>
+    <string name="clock_font_dancingscript_bold">DancingScript Bold</string>
+    <string name="clock_font_comingsoon">ComingSoon</string>
+    <string name="clock_font_notoserif">NotoSerif Normal</string>
+    <string name="clock_font_notoserif_italic">NotoSerif Italic</string>
+    <string name="clock_font_notoserif_bold">NotoSerif Bold</string>
+    <string name="clock_font_notoserif_bold_italic">NotoSerif Bold Italic</string>
     <string name="clock_font_size_title">Font size</string>
     <string name="status_bar_show_clock_second_title">Clock seconds</string>
     <string name="clock_font_size_4">4</string>
@@ -388,13 +399,30 @@
     <string name="dashboard_columns_title">Kapcsoló oszlopok</string>
     <string name="dashboard_columns_summary">Megváltoztatja a kapcsoló oszlopok számát</string>
     <string name="dashboard_columns_dialog_title">Kapcsoló oszlopok száma</string>
-    <string name="dashboard_columns_one">Egy</string>
+    <string name="dashboard_columns_default">Egy (alapértelmezett)</string>
     <string name="dashboard_columns_two">Kettő</string>
     <string name="dashboard_columns_three">Három</string>
-
-    <!-- Dashboard tileview double lines -->
     <string name="dashboard_category">Kapcsoló beállítások</string>
     <string name="dashboard_tileview_double_lines_title">Kapcsoló csempe nézet címke</string>
-    <string name="dashboard_tileview_double_lines_summary">Kapcsoló csempe címkék 2 sorban</string>
+    <string name="dashboard_tileview_double_lines_summary">Kapcsoló csempe címkéket 2 sorban mutatja</string>
+    <string name="dashboard_tileview_dividers_title">Kapcsoló elválasztók</string>
+    <string name="dashboard_tileview_dividers_summary">Kapcsoló csempe elválasztó elrejtése</string>
+
+    <!-- Selinux Switch -->
+    <string name="selinux_switch_title">Selinux Kapcsoló opciók</string>
+    <string name="selinux_switch_summary">SELinux egy beállítás a kernel módosításoknak és a felhasználói-terület eszközőknek.A módosított változtatások nem kivánt hatást okozhatnak. Saját felelősségedre használd</string>
+    <string name="selinux_title">Selinux Mód</string>
+    <string name="selinux_permissive_title">Megengedő</string>
+    <string name="selinux_enforcing_title">Kényszerítő</string>
+    <string name="selinux_permissive_toast_title">Selinux beállítva megengedőnek!</string>
+
+    <!-- Navbar buttons rotating icons -->
+    <string name="nav_buttons_rotation_title">Ikonok forgási animációja</string>
+    <string name="nav_buttons_rotation_summary">Engedélyezi az ikonok forgatását a képernyőt elforgatva vagy a navigációs sáv újraalkotásakor.</string>
+
+    <!-- Date position -->
+    <string name="clock_date_position">Dátum pozicíó</string>
+    <string name="clock_date_right">Jobbra az időtől</string>
+    <string name="clock_date_left">Balra az időtől</string>
 
 </resources>
