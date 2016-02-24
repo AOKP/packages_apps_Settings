@@ -698,6 +698,7 @@
     <string name="text_cat_title">Category Text</string>
     <string name="settings_colors_summary">Set custom colors for dashboard background, text, categories etc</string>
     <string name="colors_title">Colors</string>
+    <string name="icons_title">Icons</string>
     <string name="background_title">Background</string>
     <string name="text_title">Text</string>
 </resources>

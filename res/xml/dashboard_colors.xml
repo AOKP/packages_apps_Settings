@@ -27,6 +27,11 @@
             android:defaultValue="0xff000000" />
 
         <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="settings_icon_color"
+            android:title="@string/icons_title"
+            android:defaultValue="0xffffffff" />
+
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="settings_category_text_color"
             android:title="@string/text_cat_title"
             android:defaultValue="0xffc0c0c0" />

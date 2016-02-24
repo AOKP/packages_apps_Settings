@@ -187,7 +187,7 @@ public class DashboardSummary extends InstrumentedFragment {
             ImageView tileIcon, TextView tileTextView, TextView statusTextView, Switch switchBar) {
 
         final int iconColor = Settings.System.getInt(context.getContentResolver(),
-                    Settings.System.SETTINGS_TITLE_TEXT_COLOR, 0xff1976D2);
+                    Settings.System.SETTINGS_ICON_COLOR, 0xff1976D2);
         if (!TextUtils.isEmpty(tile.iconPkg)) {
             try {
                 Drawable drawable = context.getPackageManager()
