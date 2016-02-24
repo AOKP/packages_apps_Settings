@@ -429,4 +429,10 @@
     <string name="volume_answer_call_title">Volume key answer</string>
     <string name="volume_answer_call_summary">Volume up key answers call</string>
 
+    <!-- Nfc settings -->
+    <string name="nfc_polling_mode_title">NFC polling mode</string>
+    <string name="nfc_polling_mode_screen_off">Screen off</string>
+    <string name="nfc_polling_mode_screen_locked">Screen on, locked</string>
+    <string name="nfc_polling_mode_screen_unlocked">Screen on, unlocked (default)</string>
+
 </resources>
