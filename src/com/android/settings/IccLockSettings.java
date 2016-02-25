@@ -34,6 +34,7 @@ import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 
@@ -212,6 +213,16 @@ public class IccLockSettings extends InstrumentedPreferenceActivity
         mRes = getResources();
         updatePreferences();
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        }
+        return false;
+    }
+
 
     private void updatePreferences() {
         mPinDialog.setEnabled(mPhone != null);
