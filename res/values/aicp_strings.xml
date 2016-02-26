@@ -435,4 +435,10 @@
     <string name="nfc_polling_mode_screen_locked">Screen on, locked</string>
     <string name="nfc_polling_mode_screen_unlocked">Screen on, unlocked (default)</string>
 
+    <!-- Nfc sound mode -->
+    <string name="nfc_sound_mode_title">NFC sound mode</string>
+    <string name="nfc_sound_mode_default">Sound</string>
+    <string name="nfc_sound_mode_vibration">Vibration</string>
+    <string name="nfc_sound_mode_mute">Mute</string>
+
 </resources>
