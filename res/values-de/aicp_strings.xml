@@ -425,15 +425,20 @@
     <string name="clock_date_right">Rechts der Uhrzeit</string>
     <string name="clock_date_left">Links der Uhrzeit</string>
 
-
     <!-- The volume key answer -->
-    <string name="volume_answer_call_title">Lautstärketaste Anruf entgegennehmen</string>
-    <string name="volume_answer_call_summary">Anruf per Lautstärketasten annehmen</string>
+    <string name="volume_answer_call_title">Gesprächsannahme mit Lautstärketaste</string>
+    <string name="volume_answer_call_summary">Gespräche mit \"Lauter\"-Taste annehmen</string>
 
     <!-- Nfc settings -->
-    <string name="nfc_polling_mode_title">NFC polling mode</string>
+    <string name="nfc_polling_mode_title">NFC Übertragungsmodus</string>
     <string name="nfc_polling_mode_screen_off">Bildschirm aus</string>
-    <string name="nfc_polling_mode_screen_locked">Bildschirm an, gesperrt</string>
-    <string name="nfc_polling_mode_screen_unlocked">Bildschirm an, entsperrt (standart)</string>
+    <string name="nfc_polling_mode_screen_locked">Bildschirm an und gesperrt</string>
+    <string name="nfc_polling_mode_screen_unlocked">Bildschirm an und entsperrt (Standard)</string>
+
+    <!-- Nfc sound mode
+    <string name="nfc_sound_mode_title">Ton bei NFC Verbindung</string>
+    <string name="nfc_sound_mode_default">Ton</string>
+    <string name="nfc_sound_mode_vibration">Vibration</string>
+    <string name="nfc_sound_mode_mute">Stumm</string> -->
 
 </resources>
