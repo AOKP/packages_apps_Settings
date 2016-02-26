@@ -425,4 +425,15 @@
     <string name="clock_date_right">Rechts der Uhrzeit</string>
     <string name="clock_date_left">Links der Uhrzeit</string>
 
+
+    <!-- The volume key answer -->
+    <string name="volume_answer_call_title">Lautstärketaste Anruf entgegennehmen</string>
+    <string name="volume_answer_call_summary">Anruf per Lautstärketasten annehmen</string>
+
+    <!-- Nfc settings -->
+    <string name="nfc_polling_mode_title">NFC polling mode</string>
+    <string name="nfc_polling_mode_screen_off">Bildschirm aus</string>
+    <string name="nfc_polling_mode_screen_locked">Bildschirm an, gesperrt</string>
+    <string name="nfc_polling_mode_screen_unlocked">Bildschirm an, entsperrt (standart)</string>
+
 </resources>
