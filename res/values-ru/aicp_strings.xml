@@ -124,7 +124,7 @@
     <string name="shortcuts_icon_presets">Системные иконки</string>
     <string name="shortcuts_icon_custom">Галерея</string>
     <string name="shortcuts_icon_picker_choose_icon_title">Выберите иконку</string>
-     <string name="shortcuts_icon_picker_alarm">Сигнал</string>
+    <string name="shortcuts_icon_picker_alarm">Сигнал</string>
     <string name="shortcuts_icon_picker_andy">Andy</string>
     <string name="shortcuts_icon_picker_battery">Батарея</string>
     <string name="shortcuts_icon_picker_browser">Браузер</string>
@@ -235,7 +235,7 @@
     <string name="onthego_alpha_summary">Значение режима при ходьбе.</string>
 
     <!-- SlimDim -->
-   <string name="dim_nav_buttons_category">Затемнение кнопок</string>
+    <string name="dim_nav_buttons_category">Затемнение кнопок</string>
     <string name="dim_nav_buttons_title">Затемнять кнопки при отсутствии активности</string>
     <string name="dim_nav_buttons_summary">Затемнять кнопки панели навигации, когда их не трогают в течение определенного времени</string>
     <string name="dim_nav_buttons_timeout_title">Длительность отсутствия активности</string>
@@ -291,7 +291,7 @@
     <string name="status_bar_clock_style_reset">Сброс цвета</string>
     <string name="status_bar_clock_style_reset_message">Сбросить цвет часов?</string>
     <string name="clock_font_style_title">Шрифт часов</string>
-   <string name="clock_font_normal">Обычный</string>
+    <string name="clock_font_normal">Обычный</string>
     <string name="clock_font_italic">Курсив</string>
     <string name="clock_font_bold">Жирный</string>
     <string name="clock_font_bold_italic">Жирный курсив</string>
@@ -433,5 +433,14 @@
     <!-- Live lockscreen -->
     <string name="live_lock_screen_title">Живой экран блокировки</string>
     <string name="live_lock_screen_summary">Настройка живого экрана блокировки</string>
+
+    <!-- Navbar buttons rotating icons -->
+    <string name="nav_buttons_rotation_title">Анимация иконок нав-нной панели</string>
+    <string name="nav_buttons_rotation_summary">Анимация иконок навигационной панели при перевороте экрана.</string>
+
+    <!-- Date position -->
+    <string name="clock_date_position">Положение даты</string>
+    <string name="clock_date_right">Справа от часов</string>
+    <string name="clock_date_left">Слева от часов</string>
 
 </resources>
