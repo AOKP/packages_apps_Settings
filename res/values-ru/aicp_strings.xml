@@ -208,7 +208,6 @@
     <string name="doze_settings_title">Настройка спящего режима(Doze)</string>
     <string name="doze_timeout_title">Импульс спящего режима</string>
     <string name="doze_timeout_summary">Время, что экран остается включенным в течение импульса уведомления</string>
-
     <string name="doze_trigger_pickup_title">Область жеста</string>
     <string name="doze_trigger_pickup_summary_on">Выход из спящего режима при помощи датчика</string>
     <string name="doze_trigger_pickup_summary_off">Выход из спящего режима не используется датчик</string>
@@ -347,7 +346,7 @@
     <string name="title_keyboard_input">Расширенные опции</string>
     <string name="disable_fullscreen_keyboard_summary">Клавиатуры  не будет горизонтально во весь экран </string>
     <string name="keyboard_rotation_toggle_title">Авто ориентация клавиатуры</string>
-    <string name="keyboard_rotation_toggle_summary">Деиствие автоматического поворота , когда клавиатура отображается</string>
+    <string name="keyboard_rotation_toggle_summary">Деиствие автоматического поворота, когда клавиатура отображается</string>
     <string name="keyboard_rotation_timeout_title">Автоповорот таймаут</string>
     <string name="keyboard_rotation_timeout_summary">Отключение автоматического поворота</string>
     <string name="keyboard_rotation_dialog">Эта функция авто поворота, включена временно, пока клавиатура показана. Это не имеет никакого эффекта, когда авто поворот уже включен.</string>
@@ -395,7 +394,7 @@
     <string name="dev_settings_action_button">Настройки</string>
 
     <!-- Dashboard columns -->
-   <string name="dashboard_columns_title">Количество столбцов панели управления</string>
+    <string name="dashboard_columns_title">Количество столбцов панели управления</string>
     <string name="dashboard_columns_summary">Изменение количества отображаемых столбцов в панели</string>
     <string name="dashboard_columns_dialog_title">Выбрать количество столбцов</string>
     <string name="dashboard_columns_one">Один</string>
@@ -430,10 +429,6 @@
     <string name="cpu_info">Процессор</string>
     <string name="mem_info">Память</string>
 
-    <!-- Live lockscreen -->
-    <string name="live_lock_screen_title">Живой экран блокировки</string>
-    <string name="live_lock_screen_summary">Настройка живого экрана блокировки</string>
-
     <!-- Navbar buttons rotating icons -->
     <string name="nav_buttons_rotation_title">Анимация иконок нав-нной панели</string>
     <string name="nav_buttons_rotation_summary">Анимация иконок навигационной панели при перевороте экрана.</string>
@@ -442,5 +437,21 @@
     <string name="clock_date_position">Положение даты</string>
     <string name="clock_date_right">Справа от часов</string>
     <string name="clock_date_left">Слева от часов</string>
+
+    <!-- The volume key answer -->
+    <string name="volume_answer_call_title">Ответ на звонок</string>
+    <string name="volume_answer_call_summary">Отвечать на звонок нажатием кнопки «Увеличение громкости»</string>
+
+    <!-- Nfc settings -->
+    <string name="nfc_polling_mode_title">Настройки NFC</string>
+    <string name="nfc_polling_mode_screen_off">Экран выключен</string>
+    <string name="nfc_polling_mode_screen_locked">Экран включен, заблокирован</string>
+    <string name="nfc_polling_mode_screen_unlocked">Экран включен, разблокирован (по умолчанию)</string>
+
+    <!-- Nfc sound mode -->
+    <string name="nfc_sound_mode_title">Режим звука NFC</string>
+    <string name="nfc_sound_mode_default">Звук</string>
+    <string name="nfc_sound_mode_vibration">Вибрация</string>
+    <string name="nfc_sound_mode_mute">Беззвучный</string>
 
 </resources>
