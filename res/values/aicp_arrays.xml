@@ -492,4 +492,17 @@
        <item>3</item>
     </string-array>
 
+    <!-- NFC sound mode -->
+    <string-array name="nfc_sound_mode_entries">
+       <item>@string/nfc_sound_mode_default</item>
+       <item>@string/nfc_sound_mode_vibration</item>
+       <item>@string/nfc_sound_mode_mute</item>
+    </string-array>
+
+    <string-array name="nfc_sound_mode_values">
+       <item>0</item>
+       <item>1</item>
+       <item>2</item>
+    </string-array>
+
 </resources>
