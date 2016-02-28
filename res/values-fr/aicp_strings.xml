@@ -398,6 +398,10 @@
     <string name="dashboard_columns_one">Une</string>
     <string name="dashboard_columns_two">Deux</string>
     <string name="dashboard_columns_three">Trois</string>
+    <string name="dashboard_tileview_double_lines_title">Nombre de lignes</string>
+    <string name="dashboard_tileview_double_lines_summary">Afficher les intitulés du tableau de bord sur deux lignes</string>
+    <string name="dashboard_tileview_dividers_title">Séparateurs</string>
+    <string name="dashboard_tileview_dividers_summary">Masquer les séparateurs du tableau de bord</string>
 
     <!-- Dashboard tileview double lines -->
     <string name="dashboard_category">Paramètres du tableau de bord</string>
@@ -419,5 +423,21 @@
     <string name="clock_date_position">Position de la date</string>
     <string name="clock_date_right">A droite de l\'heure</string>
     <string name="clock_date_left">A gauche de l\'heure</string>
+
+    <!-- The volume key answer -->
+    <string name="volume_answer_call_title">Réponse avec les touches de volume</string>
+    <string name="volume_answer_call_summary">Appuyer sur la touche du volume du haut pour répondre à un appel</string>
+
+    <!-- Nfc settings -->
+    <string name="nfc_polling_mode_title">Mode du NFC</string>
+    <string name="nfc_polling_mode_screen_off">Écran éteint</string>
+    <string name="nfc_polling_mode_screen_locked">Écran allumé, vérouillé</string>
+    <string name="nfc_polling_mode_screen_unlocked">Écran allumé, dévérouillé (par défaut)</string>
+
+    <!-- Nfc sound mode -->
+    <string name="nfc_sound_mode_title">Mode du son NFC</string>
+    <string name="nfc_sound_mode_default">Son</string>
+    <string name="nfc_sound_mode_vibration">Vibration</string>
+    <string name="nfc_sound_mode_mute">Muet</string>
 
 </resources>
