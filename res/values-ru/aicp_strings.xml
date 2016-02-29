@@ -346,7 +346,7 @@
     <string name="title_keyboard_input">Расширенные опции</string>
     <string name="disable_fullscreen_keyboard_summary">Клавиатуры  не будет горизонтально во весь экран </string>
     <string name="keyboard_rotation_toggle_title">Авто ориентация клавиатуры</string>
-    <string name="keyboard_rotation_toggle_summary">Деиствие автоматического поворота, когда клавиатура отображается</string>
+    <string name="keyboard_rotation_toggle_summary">Деиствие автоматического поворота , когда клавиатура отображается</string>
     <string name="keyboard_rotation_timeout_title">Автоповорот таймаут</string>
     <string name="keyboard_rotation_timeout_summary">Отключение автоматического поворота</string>
     <string name="keyboard_rotation_dialog">Эта функция авто поворота, включена временно, пока клавиатура показана. Это не имеет никакого эффекта, когда авто поворот уже включен.</string>
@@ -394,17 +394,17 @@
     <string name="dev_settings_action_button">Настройки</string>
 
     <!-- Dashboard columns -->
-    <string name="dashboard_columns_title">Количество столбцов панели управления</string>
-    <string name="dashboard_columns_summary">Изменение количества отображаемых столбцов в панели</string>
+    <string name="dashboard_category">Персонализация настроек</string>
+    <string name="dashboard_columns_title">Количество столбцов в настройках</string>
+    <string name="dashboard_columns_summary">Изменение количества отображаемых столбцов в настройках</string>
     <string name="dashboard_columns_dialog_title">Выбрать количество столбцов</string>
     <string name="dashboard_columns_one">Один</string>
     <string name="dashboard_columns_two">Два</string>
     <string name="dashboard_columns_three">Три</string>
-
-    <!-- Dashboard tileview double lines -->
-    <string name="dashboard_category">Настройка панели управления</string>
-    <string name="dashboard_tileview_double_lines_title">Вид панели управления</string>
+    <string name="dashboard_tileview_double_lines_title">Вид настроек</string>
     <string name="dashboard_tileview_double_lines_summary">Показывать в две строки</string>
+    <string name="dashboard_tileview_dividers_title">Разделители настроек</string>
+    <string name="dashboard_tileview_dividers_summary">Скрыть разделители настроек</string>
 
     <!-- Selinux Switch -->
     <string name="selinux_switch_title">Переключение параметров SELinux</string>
@@ -414,20 +414,6 @@
     <string name="selinux_enforcing_title">Принудительный</string>
     <string name="selinux_switch_onboot_title">Применять при загрузке</string>
     <string name="selinux_switch_onboot_summary">Применять параметры SELinux при загрузке.</string>
-
-    <!-- Device maintainer -->
-    <string name="device_maintainer">Сопровождающие устройство</string>
-    <string name="device_maintainers">Сопровождающие устройство</string>
-
-    <!-- Hardware info -->
-    <string name="hardware_info">Информация об устройстве</string>
-    <string name="chipset_info">Чипсет</string>
-    <string name="device_rear_camera">Основная камера</string>
-    <string name="device_front_camera">Фронтальная камера</string>
-    <string name="device_screen_resolution">Разрешение экрана</string>
-    <string name="gpu_info">Видеоускоритель</string>
-    <string name="cpu_info">Процессор</string>
-    <string name="mem_info">Память</string>
 
     <!-- Navbar buttons rotating icons -->
     <string name="nav_buttons_rotation_title">Анимация иконок нав-нной панели</string>
