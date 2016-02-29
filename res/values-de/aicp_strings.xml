@@ -31,8 +31,6 @@
     <!-- Color Picker -->
     <string name="dialog_color_picker">Farbwähler</string>
     <string name="press_color_to_apply">Wähle unten eine Farbe</string>
-    <!--<string name="arrow_right">→</string>-->
-    <!--<string name="arrow_down">↓</string>-->
     <string name="hex">Hex:</string>
     <string name="hex_hint">#ff000000</string>
     <string name="set">Setzen</string>
@@ -435,10 +433,10 @@
     <string name="nfc_polling_mode_screen_locked">Bildschirm an und gesperrt</string>
     <string name="nfc_polling_mode_screen_unlocked">Bildschirm an und entsperrt (Standard)</string>
 
-    <!-- Nfc sound mode
+    <!-- Nfc sound mode -->
     <string name="nfc_sound_mode_title">Ton bei NFC Verbindung</string>
     <string name="nfc_sound_mode_default">Ton</string>
     <string name="nfc_sound_mode_vibration">Vibration</string>
-    <string name="nfc_sound_mode_mute">Stumm</string> -->
+    <string name="nfc_sound_mode_mute">Stumm</string>
 
 </resources>
