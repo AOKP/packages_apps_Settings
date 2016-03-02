@@ -582,7 +582,7 @@
     <string name="power_menu_title">Меню при долгом нажатии</string>
     <string name="power_menu_reboot_title">Перезагрузка</string>
     <string name="power_menu_screenshot_title">Скриншот</string>
-    <string name="power_menu_screenrecord_title">Запиь экрана</string>
+    <string name="power_menu_screenrecord_title">Запись экрана</string>
     <string name="power_menu_airplane_title">Режим полета</string>
     <string name="power_menu_users_title">Пользователи</string>
     <string name="power_menu_settings_title">Ярлык настроек</string>
@@ -710,11 +710,11 @@
     <string name="add_heads_up_package">Добавить приложение</string>
     <string name="add_heads_up_dnd_summary">Не показывать всплывающие уведомления в этих приложениях</string>
     <string name="add_heads_up_blacklist_summary">Не показывать всплывающие уведомления от этих приложений</string>
-    <string name="add_heads_up_whitelist_summary">Post all notification from these applications to heads up</string>
+    <string name="add_heads_up_whitelist_summary">Опубликовать все уведомления от этих приложений</string>
     <string name="heads_up_dnd_title">Не беспокоить</string>
     <string name="heads_up_blacklist_title">Чёрный список</string>
-    <string name="heads_up_whitelist_title">Whitelist</string>
-    <string name="heads_up_contains_key">Already added this application to the list</string>
+    <string name="heads_up_whitelist_title">Белый список</string>
+    <string name="heads_up_contains_key">Уже добавили это приложение в список</string>
 
     <!-- Bluetooth settings.  A checkbox to set if we should accept all the file types regardless of their presence in MIME type whitelist -->
     <string name="bluetooth_accept_all_files">Принимать все типы файлов</string>
@@ -994,15 +994,15 @@
     <string name="pa_login_incorrect_login">Не удалось войти</string>
     <string name="pa_pattern_or_fingerprint_header">Требуется граф. ключ или отпечаток пальца для разблокировки</string>
 
-    <string name="category_sounds">Звуки</string>
-    <string name="notification_manager">Уведомления</string>
-    <string name="lockscreen_settings">Экран блокировки</string>
-    <string name="category_lights">Индикация</string>
-    <string name="category_volume">Громкость</string>
-    <string name="category_vibrate">Вибрация</string>
-    <string name="category_misc">Прочее</string>
-    <string name="title_general">Общие настройки</string>
-    <string name="advanced">Дополнительные функции</string>
+   <string name="category_sounds">Звуки</string>
+   <string name="notification_manager">Уведомления</string>
+   <string name="lockscreen_settings">Экран блокировки</string>
+   <string name="category_lights">Индикация</string>
+   <string name="category_volume">Громкость</string>
+   <string name="category_vibrate">Вибрация</string>
+   <string name="category_misc">Прочее</string>
+   <string name="title_general">Общие настройки</string>
+   <string name="advanced">Дополнительные функции</string>
 
     <!-- Edit access point labels: PPP number -->
     <string name="apn_ppp_number">Номер телефона APN PPP</string>

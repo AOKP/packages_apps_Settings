@@ -26,7 +26,7 @@
 
     <string name="general_options_title">Основные</string>
 
-    <string name="allow_lights_title">Lights in do not disturb mode</string>
+    <string name="allow_lights_title">Индикатор событий в режиме не беспокоить</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Изменить цвет</string>
@@ -208,6 +208,7 @@
     <string name="doze_settings_title">Настройка спящего режима(Doze)</string>
     <string name="doze_timeout_title">Импульс спящего режима</string>
     <string name="doze_timeout_summary">Время, что экран остается включенным в течение импульса уведомления</string>
+
     <string name="doze_trigger_pickup_title">Область жеста</string>
     <string name="doze_trigger_pickup_summary_on">Выход из спящего режима при помощи датчика</string>
     <string name="doze_trigger_pickup_summary_off">Выход из спящего режима не используется датчик</string>
