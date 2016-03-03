@@ -441,4 +441,7 @@
     <string name="nfc_sound_mode_vibration">Vibration</string>
     <string name="nfc_sound_mode_mute">Mute</string>
 
+    <!-- Power menu torch -->
+    <string name="power_menu_torch_title">Torch</string>
+
 </resources>
