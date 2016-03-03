@@ -102,6 +102,7 @@
     <string name="shortcut_action_reset">Réinitialiser</string>
     <string name="shortcut_action_add">Ajouter</string>
     <string name="shortcut_action_reset_message">Réinitialiser toutes les entrées par défaut?</string>
+    <string name="shortcut_action_max">Nombre de raccourcis maximal atteint</string>
     <string name="shortcut_action_warning">Avertissement</string>
     <string name="shortcut_action_warning_message">Il n\'est pas possible de supprimer la dernière entrée</string>
     <string name="shortcut_action_disable_message">Désactiver\nAjoutez une entrée pour activer cette fonction</string>
@@ -368,10 +369,10 @@
     <string name="recent_app_sidebar_scale_title">Taille</string>
 
     <!-- app notifications hide on lockscreen -->
-    <string name="app_notification_no_keyguard_title">Cacher pendant le vérouillage</string>
-    <string name="app_notification_no_keyguard_summary">Cache les notifications de cette application quand l\'appareil est vérouillé</string>
-    <string name="filter_notif_no_keyguard">Caché pendant le vérouillage</string>
-    <string name="notifications_no_keyguard">Caché pendant le vérouillage</string>
+    <string name="app_notification_no_keyguard_title">Cacher pendant le verrouillage</string>
+    <string name="app_notification_no_keyguard_summary">Cache les notifications de cette application quand l\'appareil est verrouillé</string>
+    <string name="filter_notif_no_keyguard">Caché pendant le verrouillage</string>
+    <string name="notifications_no_keyguard">Caché pendant le verrouillage</string>
     <string name="notifications_four_items"><xliff:g id="notif_state" example="Priority">%1$s</xliff:g> / <xliff:g id="notif_state" example="Priority">%2$s</xliff:g> / <xliff:g id="notif_state" example="Priority">%3$s</xliff:g> / <xliff:g id="notif_state" example="Priority">%4$s</xliff:g></string>
 
     <!-- Wakelock blocker -->
@@ -392,6 +393,7 @@
     <string name="dev_settings_action_button">Paramètres</string>
 
     <!-- Dashboard columns -->
+    <string name="dashboard_category">Paramètres du tableau de bord</string>
     <string name="dashboard_columns_title">Nombre de colonnes</string>
     <string name="dashboard_columns_summary">Définir le nombre de colonnes affichées dans le tableau de bord</string>
     <string name="dashboard_columns_dialog_title">Nombre de colonnes</string>
@@ -403,17 +405,13 @@
     <string name="dashboard_tileview_dividers_title">Séparateurs</string>
     <string name="dashboard_tileview_dividers_summary">Masquer les séparateurs du tableau de bord</string>
 
-    <!-- Dashboard tileview double lines -->
-    <string name="dashboard_category">Paramètres du tableau de bord</string>
-    <string name="dashboard_tileview_double_lines_title">Nombre de ligne</string>
-    <string name="dashboard_tileview_double_lines_summary">Afficher les intitulés du tableau de bord sur deux lignes</string>
-
     <!-- Selinux Switch -->
     <string name="selinux_switch_title">Options de changement du mode SElinux</string>
     <string name="selinux_switch_summary">Le SELinux est un lot de modifications du kernel et des outils et de l\'espace utilisateur. Changer de mode peut causer des effets indésirables. À utiliser à vos risques et périls.</string>
     <string name="selinux_title">Mode Selinux</string>
     <string name="selinux_permissive_title">Permissif</string>
     <string name="selinux_enforcing_title">Application</string>
+    <string name="selinux_permissive_toast_title">Selinux défini en mode permissif !</string>
 
     <!-- Navbar buttons rotating icons -->
     <string name="nav_buttons_rotation_title">Animation de rotation pour les icônes</string>
