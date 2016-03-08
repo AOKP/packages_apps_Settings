@@ -406,6 +406,13 @@
     <string name="dashboard_tileview_dividers_title">Trennlinien in der Übersicht</string>
     <string name="dashboard_tileview_dividers_summary">Blendet die Trennlinien zwischen Menüpunkten der Übersicht aus</string>
 
+    <!-- Optional Dashboard Switches -->
+    <string name="dashboard_switches_title">Schalter in der Übersicht</string>
+    <string name="dashboard_switches_off">Schalter Aus</string>
+    <string name="dashboard_switches_on">Schalter An</string>
+    <string name="dashboard_switches_summary">Ändert die Anzeige der Schalter in der Übersicht</string>
+    <string name="dashboard_switches_dialog_title">Wähle die Anzeigeoption</string>
+
     <!-- Selinux Switch -->
     <string name="selinux_switch_title">SELinux-Schalter Optionen</string>
     <string name="selinux_switch_summary">SELinux sind verschiedene Kernel-Modifikationen und \"user-space\" Werkzeuge. Eine Änderung des Modus kann unerwartetes Telefonverhalten auslösen. Benutzung auf eigenes Risiko!</string>
@@ -438,5 +445,8 @@
     <string name="nfc_sound_mode_default">Ton</string>
     <string name="nfc_sound_mode_vibration">Vibration</string>
     <string name="nfc_sound_mode_mute">Stumm</string>
+
+    <!-- Power menu torch -->
+    <string name="power_menu_torch_title">Taschenlampe</string>
 
 </resources>
