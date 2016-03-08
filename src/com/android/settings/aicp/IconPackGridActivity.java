@@ -18,13 +18,17 @@
 
 package com.android.settings.aicp;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
@@ -50,6 +54,7 @@ import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.ArrayMap;
+import android.util.ArraySet;
 import android.util.DisplayMetrics;
 import android.util.LruCache;
 import android.view.LayoutInflater;
@@ -122,7 +127,7 @@ public class IconPackGridActivity extends Activity {
 
         mGridView = (GridView) findViewById(R.id.icon_grid);
         mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
-        mGridData = new ArrayList<IconInfo>();
+        mGridData = new ArrayList<>();
         mAdapter = new IconGridAdapter(this);
         mGridView.setAdapter(mAdapter);
         mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -150,17 +155,84 @@ public class IconPackGridActivity extends Activity {
         return false;
     }
 
-    public class AsyncIconLoaderTask extends AsyncTask<String, Void, Integer> {
+    public class AsyncIconLoaderTask extends AsyncTask<String, Void, Boolean> {
         @Override
-        protected Integer doInBackground(String... params) {
-            Integer result = 0;
+        protected Boolean doInBackground(String... params) {
             String packageName = params[0];
+            Set<String> set = new HashSet<>();
+
+            //From assets
             try {
                 InputStream appfilterstream = mIconRes.getAssets().open("drawable.xml");
+                set.addAll(xmlInputStreamToSet(appfilterstream, packageName));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            //From res/xml
+            try {
+                int xmlId = mIconRes.getIdentifier("drawable", "xml", packageName);
+                set.addAll(xmlPullParserToSet(mIconRes.getXml(xmlId)));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+
+            for (String drawableName : set) {
+                int resId = mIconRes.getIdentifier(drawableName, "drawable", packageName);
+                if (resId > 0) {
+                    Drawable d = mIconRes.getDrawable(resId);
+                    if (d != null) {
+                        IconInfo info = new IconInfo();
+                        info.id = resId;
+                        info.name = drawableName;
+                        mGridData.add(info);
+                    }
+                }
+            }
+
+            Collections.sort(mGridData, new Comparator<IconInfo>() {
+                @Override
+                public int compare(IconInfo lhs, IconInfo rhs) {
+                    return lhs.name.compareTo(rhs.name);
+                }
+
+            });
+            return !mGridData.isEmpty();
+        }
+
+        @Override
+        protected void onPostExecute(Boolean result) {
+            if (result) {
+                mAdapter.setGridData(mGridData);
+            } else {
+                setResult(RESULT_CANCELED);
+                finish();
+            }
+            mProgressBar.setVisibility(View.GONE);
+        }
+
+        private Set<String> xmlInputStreamToSet(InputStream inputStream, String packageName) {
+
+            Set<String> set = new HashSet<>();
+
+            try {
                 XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
                 factory.setNamespaceAware(true);
                 XmlPullParser xpp = factory.newPullParser();
-                xpp.setInput(appfilterstream, "utf-8");
+                xpp.setInput(inputStream, "utf-8");
+                set.addAll(xmlPullParserToSet(xpp));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            return set;
+        }
+
+        private Set<String> xmlPullParserToSet(XmlPullParser xpp) {
+
+            Set<String> set = new HashSet<>();
+            try {
                 if (xpp != null) {
                     int eventType = xpp.getEventType();
                     while (eventType != XmlPullParser.END_DOCUMENT) {
@@ -169,19 +241,7 @@ public class IconPackGridActivity extends Activity {
                                 for (int i = 0; i < xpp.getAttributeCount(); i++) {
                                     if (xpp.getAttributeName(i).startsWith("drawable")) {
                                         String drawableName = xpp.getAttributeValue(i);
-                                        int resId = mIconRes.getIdentifier(drawableName,
-                                                "drawable", packageName);
-                                        if (resId > 0) {
-                                            Drawable d = mIconRes.getDrawable(resId);
-                                            if (d != null) {
-                                                Bitmap b = drawableToBitmap(d);
-                                                mMemoryCache.put(drawableName, b);
-                                                IconInfo info = new IconInfo();
-                                                info.id = resId;
-                                                info.name = drawableName;
-                                                mGridData.add(info);
-                                            }
-                                        }
+                                        set.add(drawableName);
                                     }
                                 }
                             }
@@ -189,31 +249,14 @@ public class IconPackGridActivity extends Activity {
                         eventType = xpp.next();
                     }
                 }
-                Collections.sort(mGridData, new Comparator<IconInfo>() {
-                    @Override
-                    public int compare(IconInfo lhs, IconInfo rhs) {
-                        return lhs.name.compareTo(rhs.name);
-                    }
-
-                });
-                result = 1;
             } catch (Exception e) {
                 e.printStackTrace();
-                result = 0;
             }
-            return result;
+
+            return set;
+
         }
 
-        @Override
-        protected void onPostExecute(Integer result) {
-            if (result == 1) {
-                mAdapter.setGridData(mGridData);
-            } else {
-                setResult(RESULT_CANCELED);
-                finish();
-            }
-            mProgressBar.setVisibility(View.GONE);
-        }
     }
 
     public static Bitmap drawableToBitmap(Drawable drawable) {
