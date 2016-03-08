@@ -222,7 +222,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
 
         mNavigationPreferencesCat = (PreferenceCategory) findPreference(CATEGORY_NAVBAR);
 
-	mEnableNavigationBar = (SwitchPreference) findPreference(KEY_ENABLE_NAVIGATION_BAR);
+        mEnableNavigationBar = (SwitchPreference) findPreference(KEY_ENABLE_NAVIGATION_BAR);
 
         // Navigation bar left
         mNavigationBarLeftPref = (SwitchPreference) findPreference(KEY_NAVIGATION_BAR_LEFT);
@@ -240,18 +240,20 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         mNavigationRecentsLongPressAction =
                 initRecentsLongPressAction(KEY_NAVIGATION_RECENTS_LONG_PRESS);
 
-       mDisableNavigationKeys = (SwitchPreference) findPreference(DISABLE_NAV_KEYS);
+        mDisableNavigationKeys = (SwitchPreference) findPreference(DISABLE_NAV_KEYS);
 
         final CMHardwareManager hardware = CMHardwareManager.getInstance(getActivity());
 
-	boolean needsNavigationBar = false;
+	    boolean needsNavigationBar = false;
+	    boolean hasNavBarByDefault = getResources().getBoolean(
+                com.android.internal.R.bool.config_showNavigationBar);
         if (hardware.isSupported(CMHardwareManager.FEATURE_KEY_DISABLE)) {
             try {
                 IWindowManager wm = WindowManagerGlobal.getWindowManagerService();
                 needsNavigationBar = wm.needsNavigationBar();
             } catch (RemoteException e) {
-           }
-      if (needsNavigationBar) {
+            }
+        if (needsNavigationBar && hasNavBarByDefault) {
                 prefScreen.removePreference(mDisableNavigationKeys);
             } else {
                 // Remove keys that can be provided by the navbar
@@ -263,9 +265,9 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
             prefScreen.removePreference(mDisableNavigationKeys);
         }
 
-	// Internal bool to check if the device have a navbar by default or not!
-        boolean hasNavBarByDefault = getResources().getBoolean(
-                com.android.internal.R.bool.config_showNavigationBar);
+	    // Internal bool to check if the device have a navbar by default or not!
+        /*boolean hasNavBarByDefault = getResources().getBoolean(
+                com.android.internal.R.bool.config_showNavigationBar);*/
         boolean enableNavigationBar = Settings.System.getInt(getContentResolver(),
                 Settings.System.NAVIGATION_BAR_SHOW, hasNavBarByDefault ? 1 : 0) == 1;
         mEnableNavigationBar.setChecked(enableNavigationBar);
