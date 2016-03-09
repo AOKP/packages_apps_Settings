@@ -300,7 +300,8 @@ public class SettingsActivity extends Activity
             R.id.dashboard,
             R.id.privacy_settings_cyanogenmod,
             R.id.aicp_settings,
-            R.id.supersu_settings
+            R.id.supersu_settings,
+            R.id.button_settings
     };
 
     private static final String[] ENTRY_FRAGMENTS = {

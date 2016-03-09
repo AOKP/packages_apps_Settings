@@ -677,32 +677,15 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     }
 
     private static void writeDisableNavkeysOption(Context context, boolean enabled) {
-        final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        final int defaultBrightness = context.getResources().getInteger(
-                com.android.internal.R.integer.config_buttonBrightnessSettingDefault);
-
         CMSettings.Secure.putInt(context.getContentResolver(),
                 CMSettings.Secure.DEV_FORCE_SHOW_NAVBAR, enabled ? 1 : 0);
-        CMHardwareManager hardware = CMHardwareManager.getInstance(context);
-        hardware.set(CMHardwareManager.FEATURE_KEY_DISABLE, enabled);
- 	 /* Save/restore button timeouts to disable them in softkey mode */
-        if (enabled) {
-            CMSettings.Secure.putInt(context.getContentResolver(),
-                    CMSettings.Secure.BUTTON_BRIGHTNESS, 0);
-        } else {
-            int oldBright = prefs.getInt(ButtonBacklightBrightness.KEY_BUTTON_BACKLIGHT,
-                    defaultBrightness);
-            CMSettings.Secure.putInt(context.getContentResolver(),
-                    CMSettings.Secure.BUTTON_BRIGHTNESS, oldBright);
-        }
-   }
+    }
 
-	private void updateDisableNavkeysOption() {
-	boolean enabled = CMSettings.Secure.getInt(getActivity().getContentResolver(),
+    private void updateDisableNavkeysOption() {
+        boolean enabled = CMSettings.Secure.getInt(getActivity().getContentResolver(),
                 CMSettings.Secure.DEV_FORCE_SHOW_NAVBAR, 0) != 0;
-	mDisableNavigationKeys.setChecked(enabled);
-}
- 
+        mDisableNavigationKeys.setChecked(enabled);
+    }
 
     private void updateDisableNavkeysCategories(boolean navbarEnabled) {
         final PreferenceScreen prefScreen = getPreferenceScreen();
