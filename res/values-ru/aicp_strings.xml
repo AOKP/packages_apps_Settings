@@ -407,6 +407,13 @@
     <string name="dashboard_tileview_dividers_title">Разделители настроек</string>
     <string name="dashboard_tileview_dividers_summary">Скрыть разделители настроек</string>
 
+    <!-- Optional Dashboard Switches -->
+    <string name="dashboard_switches_title">Персонализация переключателей</string>
+    <string name="dashboard_switches_off">Переключатели выключены</string>
+    <string name="dashboard_switches_on">Переключатели включены</string>
+    <string name="dashboard_switches_summary">Изменение положения панели переключателей</string>
+    <string name="dashboard_switches_dialog_title">Выбор состояния переключателя</string>
+
     <!-- Selinux Switch -->
     <string name="selinux_switch_title">Переключение параметров SELinux</string>
     <string name="selinux_switch_summary">SELinux предоставляет набор инструментов ядра и пользовательского пространства. Изменение режима может привести к нежелательным последствиям! Используйте на свой риск</string>
