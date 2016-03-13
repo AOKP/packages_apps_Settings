@@ -100,7 +100,7 @@ import com.nispok.snackbar.listeners.ActionClickListener;
 
 import com.android.internal.util.UserIcons;
 import com.android.settings.UserAdapter.UserDetails;
-import com.android.settings.bluetooth.BluetoothSettings
+import com.android.settings.bluetooth.BluetoothSettings;
 import com.android.settings.dashboard.DashboardTile;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.settingslib.drawable.CircleFramedDrawable;
