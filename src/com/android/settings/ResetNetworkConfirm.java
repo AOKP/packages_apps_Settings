@@ -35,6 +35,7 @@ import android.widget.Spinner;
 
 import com.nispok.snackbar.Snackbar;
 
+import com.android.ims.ImsManager;
 import com.android.internal.logging.MetricsLogger;
 import com.android.internal.telephony.PhoneConstants;
 
@@ -102,6 +103,8 @@ public class ResetNetworkConfirm extends InstrumentedFragment {
             if (btManager != null) {
                 btManager.getAdapter().factoryReset();
             }
+
+            ImsManager.factoryReset(context);
 
             final String message = context.getString(
                     R.string.reset_network_complete_toast);
