@@ -143,6 +143,24 @@
                 android:summary="@string/dashboard_switches_summary"
                 android:persistent="false" />
 
+        <com.android.settings.widget.SeekBarPreferenceCham
+                android:key="settings_category_text_size"
+                android:title="@string/dash_category_text_size"
+                android:max="25"
+                settings:min="4"
+                settings:defaultValue="15"
+                settings:unitsLeft=""
+                settings:unitsRight="dp" />
+
+        <com.android.settings.widget.SeekBarPreferenceCham
+                android:key="settings_title_text_size"
+                android:title="@string/dash_title_text_size"
+                android:max="25"
+                settings:min="4"
+                settings:defaultValue="14"
+                settings:unitsLeft=""
+                settings:unitsRight="dp" />
+
         <ListPreference
                 android:key="dashboard_font_style"
                 android:entries="@array/dashboard_font_style_entries"
