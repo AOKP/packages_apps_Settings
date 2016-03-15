@@ -78,6 +78,9 @@ import com.android.settings.aicp.LockscreenShortcutFragment;
 import com.android.settings.aicp.RecentAppSidebarFragment;
 import com.android.settings.aicp.WakelockBlocker;
 import com.android.settings.applications.DrawOverlayDetails;
+import com.android.settings.aicp.Navbar;
+import com.android.settings.aicp.FlingSettings;
+import com.android.settings.aicp.SmartbarSettings;
 import com.android.settings.applications.InstalledAppDetails;
 import com.android.settings.applications.ManageApplications;
 import com.android.settings.applications.ManageAssist;
@@ -384,7 +387,10 @@ public class SettingsActivity extends Activity
             com.android.settings.aicp.AicpSettingsExternal.class.getName(),
             com.android.settings.aicp.LockscreenShortcutFragment.class.getName(),
             com.android.settings.aicp.RecentAppSidebarFragment.class.getName(),
-            com.android.settings.aicp.WakelockBlocker.class.getName()
+            com.android.settings.aicp.WakelockBlocker.class.getName(),
+            Navbar.class.getName(),
+            FlingSettings.class.getName(),
+            SmartbarSettings.class.getName()
     };
 
 
