@@ -109,6 +109,14 @@
                     android:targetClass="com.lordclockan.aicpextras.MainActivity" />
         </dashboard-tile>
 
+        <!-- Data Usage -->
+        <dashboard-tile
+                android:id="@+id/navbar"
+                android:title="@string/aicp_navbar_settings"
+                android:fragment="com.android.settings.aicp.Navbar"
+                android:icon="@drawable/aicp_navbar_icon"
+                />
+
         <!-- Themes -->
         <!-- NOTE: Intent.parseIntent looks for "categories" tag and not "category" -->
         <dashboard-tile
