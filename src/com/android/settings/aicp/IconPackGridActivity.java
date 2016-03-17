@@ -177,7 +177,6 @@ public class IconPackGridActivity extends Activity {
                 e.printStackTrace();
             }
 
-
             for (String drawableName : set) {
                 int resId = mIconRes.getIdentifier(drawableName, "drawable", packageName);
                 if (resId > 0) {
