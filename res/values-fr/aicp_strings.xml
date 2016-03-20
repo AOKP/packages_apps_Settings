@@ -405,6 +405,13 @@
     <string name="dashboard_tileview_dividers_title">Séparateurs</string>
     <string name="dashboard_tileview_dividers_summary">Masquer les séparateurs du tableau de bord</string>
 
+    <!-- Optional Dashboard Switches -->
+    <string name="dashboard_switches_title">Interrupteurs</string>
+    <string name="dashboard_switches_off">Désactivé</string>
+    <string name="dashboard_switches_on">Activé</string>
+    <string name="dashboard_switches_summary">Modifier la position des interrupteurs du tableau de bord</string>
+    <string name="dashboard_switches_dialog_title">État des interrupteurs</string>
+
     <!-- Selinux Switch -->
     <string name="selinux_switch_title">Options de changement du mode SElinux</string>
     <string name="selinux_switch_summary">Le SELinux est un lot de modifications du kernel et des outils et de l\'espace utilisateur. Changer de mode peut causer des effets indésirables. À utiliser à vos risques et périls.</string>
@@ -437,5 +444,131 @@
     <string name="nfc_sound_mode_default">Son</string>
     <string name="nfc_sound_mode_vibration">Vibration</string>
     <string name="nfc_sound_mode_mute">Muet</string>
+
+    <!-- Power menu torch -->
+    <string name="power_menu_torch_title">Lampe de poche</string>
+
+    <string name="aicp_navbar_settings">Barre de navigation</string>
+
+    <!-- Navigation Bar -->
+    <string name="navbar_interface_title">Interface</string>
+    <string name="navbar_size">Dimensions</string>
+    <string name="navbar_mode">Mode de navigation</string>
+    <string name="navbar_visibility">Activer la barre de navigation</string>
+    <string name="navigationbar_settings_title">Barre de navigation</string>
+    <string name="aosp_navigation_bar">Barre de navigation</string>
+    <string name="aosp_navigation_bar_settings">Paramètres barre de navigation</string>
+    <string name="navigationbar_settings_summary">Style et comportement de la barre de navigation</string>
+    <string name="navbar_general_title">Options avancées</string>
+    <string name="navigation_bar_left_title">Mode gaucher</string>
+    <string name="navigation_bar_left_summary">En mode paysage, afficher la barre de navigation à gauche</string>
+    <string name="info_pref_note_title">Note</string>
+    <string name="smartbar_interface">SmartBar</string>
+    <string name="icon_pack_picker_dialog_title">Packs d\'icônes</string>
+
+    <!-- Actions dialog and default task values set in ActionPreference xml-->
+    <string name="choose_action_title">Type de raccourci</string>
+    <string name="action_entry_default_action">Par défaut</string>
+    <string name="action_entry_select_app">Application</string>
+    <string name="action_entry_custom_action">Action</string>
+    <string name="action_value_default_action">Par défaut</string>
+    <string name="action_value_select_app">Application</string>
+    <string name="action_value_custom_action">Action</string>
+
+    <string name="action_value_default_action">Par défaut</string>
+    <string name="action_value_select_app">Application</string>
+    <string name="action_value_back">Retour</string>
+    <string name="action_value_home">Accueil</string>
+    <string name="action_value_search_assist">Google Now On Tap</string>
+    <string name="action_value_recent_apps">Applications récentes</string>
+    <string name="action_value_voice_search">Recherche vocale</string>
+    <string name="action_value_menu">Menu</string>
+
+    <!-- Fling -->
+    <string name="fling_settings">Paramètres Fling</string>
+    <string name="fling_interface">Fling</string>
+    <string name="fling_enable_title">Activer</string>
+    <string name="fling_back_home_policy">Les fonctionnalités \"Retour\" et \"Accueil\" doivent toujours être définies. Pour modifier les raccourcis grisés, il faut d\'abord définir les fonctions \"Retour\" et \"Accueil\" sur un autre raccourci</string>
+    <string name="fling_split_bar_policy">Lorsqu\'une seule action (de gauche ou de droite) est définie, elle s\'applique aux deux côtés de la barre</string>
+    <string name="fling_def_summary">Aucune action définie</string>
+    <string name="fling_swipe_actions">Glissements</string>
+    <string name="fling_tap_actions">Appuis</string>
+    <string name="fling_short_swipe_right">Glissement vers la droite</string>
+    <string name="fling_short_swipe_left">Glissement vers la gauche</string>
+    <string name="fling_long_swipe_right">Glissement prolongé vers la droite</string>
+    <string name="fling_long_swipe_left">Glissement prolongé vers la gauche</string>
+    <string name="fling_single_tap">Appui droit simple</string>
+    <string name="fling_double_tap">Double appui droit</string>
+    <string name="fling_long_press">Appui droit prolongé</string>
+    <string name="fling_single_left_tap">Appui gauche simple</string>
+    <string name="fling_double_left_tap">Double appui gauche</string>
+    <string name="fling_long_left_press">Appui gauche prolongé</string>
+    <string name="long_swipe_portrait_title">Portrait</string>
+    <string name="long_swipe_landscape_title">Paysage</string>
+    <string name="right_swipe_title">Glissement vers la droite</string>
+    <string name="left_swipe_title">Glissement vers la gauche</string>
+    <string name="up_swipe_title">Glissement vers le haut</string>
+    <string name="down_swipe_title">Glissement vers le bas</string>
+    <string name="long_swipe_reset">Configuration d\'origine</string>
+    <string name="fling_advanced">Avancé</string>
+    <string name="fling_long_swipe_title">Seuil du glissement prolongé</string>
+    <string name="fling_long_swipe_summary">Définir la zone de déclenchement selon un pourcentage de la hauteur ou de la largeur</string>
+    <string name="fling_trails_enable_title">Tracé des gestes</string>
+    <string name="fling_trails_enable_summary">Afficher le tracé des gestes par glissement</string>
+    <string name="fling_trails_color_title">Couleur du tracé</string>
+    <string name="fling_appearance">Apparence</string>
+    <string name="fling_show_logo_title">Logo Fling</string>
+    <string name="fling_animate_logo_title">Animer le logo</string>
+    <string name="fling_animate_logo_summary">Le logo s\'anime lors des événements tactiles</string>
+    <string name="fling_logo_color">Couleur du logo</string>
+    <string name="fling_logo_custom_logo_pick_title">Définir l\'icône du logo</string>
+    <string name="fling_logo_custom_logo_reset_title">Réinitialiser l\'icône du logo</string>
+    <string name="fling_show_ripple_title">Ondulation</string>
+    <string name="fling_show_ripple_summary">Effet d\'ondulation lors des événements tactiles</string>
+    <string name="fling_ripple_color">Couleur de l\'ondulation</string>
+    <string name="fling_longpress_timeout_label_left">Diminution du délai</string>
+    <string name="fling_longpress_timeout_label_right">Augmentation du délai</string>
+    <string name="fling_longpress_title">Délai d\'appui prolongé</string>
+    <string name="fling_longpress_summary">Augmenter ou diminuer délai d\'appui prolongé</string>
+
+    <!-- Pulse navigation bar music visualizer -->
+    <string name="pulse_help_policy_notice_title">À propos Pulse</string>
+    <string name="pulse_help_policy_notice_summary">Pulse est une barre de visualisation au style d\'un égaliseur audio qui s\'affiche sur la barre de navigation lors de l\'écoute de musique. Pulse ne fonctionne pas avec certaines sources audio lors de l\'écoute de musique sur le(s) haut-parleur(s) de l\'appareil.</string>
+    <string name="pulse_settings">Pulse</string>
+    <string name="pulse_settings_summary">Égaliseur audio sur la barre de navigation</string>
+    <string name="fling_show_pulse_title">Pulse</string>
+    <string name="fling_show_pulse_summary">Visualisation au style d\'un égaliseur audio la barre de navigation</string>
+    <string name="fling_pulse_color">Couleur de Pulse</string>
+    <string name="eos_fling_lavalamp_title">Activer la lampe Lava</string>
+    <string name="eos_fling_lavalamp_summary">Pulse anime la lampe Lava</string>
+
+    <!-- Navbar height -->
+    <string name="navigation_bar_size_title">Dimensions de la barre de navigation</string>
+    <string name="portrait_title">Hauteur (Portrait)</string>
+    <string name="land_vert_title">Largeur (Paysage)</string>
+    <string name="land_hor_title">Hauteur (Paysage)</string>
+    <string name="positive_done">OK</string>
+
+    <!-- SmartBar -->
+    <string name="smartbar_category">SmartBar</string>
+    <string name="smartbar_settings_title">Paramètres SmartBar</string>
+    <string name="smartbar_editor_title">Démarrer/Arrêter l\'édition des Boutons</string>
+    <string name="smartbar_editor_summary">Maintenir appuyé et faire glisser le bouton, pour en modifier la position.\nAfficher le menu d\'édition du bouton par appui prolongé.\nLa position du bouton peut être modifiée lors de l\'affichage du menu d\'édition.</string>
+    <string name="smartbar_context_menu_position_title">Boutons contextuels</string>
+    <string name="smartbar_context_menu_position_summary">Définir la position des boutons contextuels tels que le bouton Menu ou le sélecteur de clavier</string>
+    <string name="smartbar_right">À droite</string>
+    <string name="smartbar_left">À gauche</string>
+    <string name="smartbar_button_animation_title">Animation du bouton</string>
+    <string name="smartbar_button_animation_summary">Définir le mode d\'animation des boutons lorsqu\'ils sont appuyés</string>
+    <string name="smartbar_button_animation_ripple">Ondulation</string>
+    <string name="smartbar_button_animation_spring">Rebond</string>
+    <string name="smartbar_factory_reset_title">Réinitialiser les paramètres</string>
+    <string name="smartbar_factory_reset_summary">Rétablir la configuration d\'origine de SmartBar</string>
+    <string name="smartbar_factory_reset_confirm">Revenir à la configuration d\'origine de SmartBar\u00A0?</string>
+    <string name="smartbar_ime_action_title">Modes de saisie</string>
+    <string name="smartbar_ime_action_summary">Définir les boutons à afficher lors de l\'affichage du clavier</string>
+    <string name="smartbar_ime_action_none">Aucun</string>
+    <string name="smartbar_ime_action_arrows">Touches de direction</string>
+    <string name="smartbar_ime_action_switcher">Sélecteur de clavier</string>
 
 </resources>
