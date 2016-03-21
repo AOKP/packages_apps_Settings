@@ -449,7 +449,7 @@
     <!-- Power menu torch -->
     <string name="power_menu_torch_title">Torch</string>
 
-    <string name="aicp_navbar_settings">Navbar</string>
+    <string name="aicp_navbar_settings">Tha Navbar</string>
 
     <!-- Navigation Bar -->
     <string name="navbar_interface_title">Interface</string>
