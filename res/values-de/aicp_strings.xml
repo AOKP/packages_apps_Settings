@@ -47,7 +47,7 @@
     <string name="ring_notification_volume_option_title">Lautstärke für Klingelton und Benachrichtigung</string>
 
     <!-- Hold back to kill timeout -->
-    <string name="hold_back_to_kill_timeout_title">Timeout der Zurücktaste zum Beenden der aktuellen App</string>
+    <string name="hold_back_to_kill_timeout_title">Zeit bis App über Zurück-Taste beendet wird</string>
     <string name="default_string">Standard</string>
 
     <!-- Volume Steps -->
@@ -358,7 +358,7 @@
     <string name="battery_stats_message">Die Statistiken des Akku-Verbrauchs werden zurückgesetzt</string>
     <string name="ok_string">Ok</string>
 
-   <!-- Slim Recent App Sidebar  -->
+    <!-- Slim Recent App Sidebar  -->
     <string name="recent_panel_category">Slim Recents</string>
     <string name="recent_app_sidebar_title">Seitenleiste für Apps</string>
     <string name="recent_app_sidebar_summary">Zeige App-Verknüpfungen auf der anderen Seite</string>
@@ -448,5 +448,128 @@
 
     <!-- Power menu torch -->
     <string name="power_menu_torch_title">Taschenlampe</string>
+
+    <string name="aicp_navbar_settings">Navigationsleiste</string>
+
+    <!-- Navigation Bar -->
+    <string name="navbar_interface_title">Schnittstelle</string>
+    <string name="navbar_size">Größe der Leiste</string>
+    <string name="navbar_mode">Navigationsmodus</string>
+    <string name="navbar_visibility">Navigationsleiste aktivieren</string>
+    <string name="navigationbar_settings_title">Navigation</string>
+    <string name="aosp_navigation_bar">Navigationsleiste</string>
+    <string name="aosp_navigation_bar_settings">Einstellungen der Navigationsleiste</string>
+    <string name="navigationbar_settings_summary">Stil und Verhalten für die Navigation anpassen</string>
+    <string name="navbar_general_title">Weitere Einstellungen</string>
+    <string name="navigation_bar_left_title">Linkshänder-Modus</string>
+    <string name="navigation_bar_left_summary">Platziert die Navigationsleiste auf der linken Bildschirmseite, wenn das Gerät waagerecht gehalten wird</string>
+    <string name="info_pref_note_title">Anmerkung</string>
+    <string name="smartbar_interface">SmartBar</string>
+    <string name="icon_pack_picker_dialog_title">Symbolpakete</string>
+
+    <!-- Actions dialog and default task values set in ActionPreference xml-->
+    <string name="choose_action_title">Aktion wählen</string>
+    <string name="action_entry_default_action">Standard Einstellungen</string>
+    <string name="action_entry_select_app">Anwendung auswählen</string>
+    <string name="action_entry_custom_action">Eigene Aktion wählen</string>
+    <string name="action_value_default_action">action_default</string>
+    <string name="action_value_select_app">action_app</string>
+    <string name="action_value_custom_action">action_custom</string>
+
+    <string name="action_value_default_action">default</string>
+    <string name="action_value_select_app">app</string>
+    <string name="action_value_back">task_back</string>
+    <string name="action_value_home">task_home</string>
+    <string name="action_value_search_assist">task_assist</string>
+    <string name="action_value_recent_apps">task_recents</string>
+    <string name="action_value_voice_search">task_voice_search</string>
+    <string name="action_value_menu">task_menu</string>
+
+    <!-- Fling -->
+    <string name="fling_settings">Fling Einstellungen</string>
+    <string name="fling_interface">Fling Gesten-Schnittstelle</string>
+    <string name="fling_enable_title">Fling aktivieren</string>
+    <string name="fling_back_home_policy">Die Funktionen Zurück und \"Home\" werden immer benötigt. Um die Zuordnung von Zurück und \"Home\" zu ändern, bitte zuerst die gewünschte Zuordnung setzen</string>
+    <string name="fling_split_bar_policy">Wenn nur eine Aktion für Rechts oder Links zugeordnet wird, gilt die Aktion für die gesamte Leiste</string>
+    <string name="fling_def_summary">Keine Aktion gesetzt</string>
+    <string name="fling_swipe_actions">Wisch-Gesten</string>
+    <string name="fling_tap_actions">Tipp-Gesten</string>
+    <string name="fling_short_swipe_right">Kurzes Wischen nach rechts</string>
+    <string name="fling_short_swipe_left">Kurzes Wischen nach links</string>
+    <string name="fling_long_swipe_right">Langes Wischen nach rechts</string>
+    <string name="fling_long_swipe_left">Langes Wischen nach links</string>
+    <string name="fling_single_tap">Einmal rechts Tippen</string>
+    <string name="fling_double_tap">Zweimal rechts Tippen</string>
+    <string name="fling_long_press">Lange rechts Drücken</string>
+    <string name="fling_single_left_tap">Einmal links Tippen</string>
+    <string name="fling_double_left_tap">Zweimal links Tippen</string>
+    <string name="fling_long_left_press">Lange links Drücken</string>
+    <string name="long_swipe_portrait_title">Hochformat</string>
+    <string name="long_swipe_landscape_title">Querformat</string>
+    <string name="right_swipe_title">Nach rechts Wischen</string>
+    <string name="left_swipe_title">Nach links Wischen</string>
+    <string name="up_swipe_title">Nach oben Wischen</string>
+    <string name="down_swipe_title">Nach unten Wischen</string>
+    <string name="long_swipe_reset">Zurücksetzen</string>
+    <string name="fling_advanced">Weitere Einstellungen</string>
+    <string name="fling_long_swipe_title">Schwellenwert für Langes Wischen</string>
+    <string name="fling_long_swipe_summary">Feineinstellung für Langes Wischen basierend auf der prozentualen Breite und Höhe der Fling Schnittstelle</string>
+    <string name="fling_trails_enable_title">Spur für Gesten aktivieren</string>
+    <string name="fling_trails_enable_summary">Zeigt eine Spur bei Wisch-Gesten</string>
+    <string name="fling_trails_color_title">Farbe der Spur</string>
+    <string name="fling_appearance">Darstellung</string>
+    <string name="fling_show_logo_title">Zeige Fling-Logo</string>
+    <string name="fling_animate_logo_title">Logo animieren</string>
+    <string name="fling_animate_logo_summary">Das Logo wird bei Berührung animiert</string>
+    <string name="fling_logo_color">Farbe des Logos</string>
+    <string name="fling_logo_custom_logo_pick_title">Eigenes Symbol als Logo</string>
+    <string name="fling_logo_custom_logo_reset_title">Symbol des Logos zurücksetzen</string>
+    <string name="fling_show_ripple_title">Zeige Wellen-Effekt</string>
+    <string name="fling_show_ripple_summary">Wellen-Effekt bei Berührung</string>
+    <string name="fling_ripple_color">Farbe der Wellen</string>
+    <string name="fling_longpress_timeout_label_left">Weniger Verzögerung</string>
+    <string name="fling_longpress_timeout_label_right">Mehr Verzögerung</string>
+    <string name="fling_longpress_title">Verzögerung für Langes Drücken</string>
+    <string name="fling_longpress_summary">Verzögerung bis zur Ausführung eines \"langen Drucks\" verlängern oder verkürzen</string>
+
+    <!-- Pulse navigation bar music visualizer -->
+    <string name="pulse_help_policy_notice_title">Über Pulse</string>
+    <string name="pulse_help_policy_notice_summary">\"Pulse\" ist eine Musik-Visualisierung auf Basis eines Mehrband-Equalizers in der Navigationsleiste, wenn Musik abgespielt wird. \"Pulse\" arbeitet leider nicht mit allen Audioquellen zusammen, wenn über den Lautsprecher Musik abgespielt wird</string>
+    <string name="pulse_settings">Pulse</string>
+    <string name="pulse_settings_summary">Musik-Visualisierung in der Navigationsleiste</string>
+    <string name="fling_show_pulse_title">Pulse zeigen</string>
+    <string name="fling_show_pulse_summary">Zeigt die Visualisierung in der Navigationsleiste an</string>
+    <string name="fling_pulse_color">Farbe für Pulse</string>
+    <string name="eos_fling_lavalamp_title">Lavalampe einschalten</string>
+    <string name="eos_fling_lavalamp_summary">Pulse nutzt eine Lavalampen-artige Farbmischung bei der Darstellung</string>
+
+    <!-- Navbar height -->
+    <string name="navigation_bar_size_title">Größe der Leiste</string>
+    <string name="portrait_title">Höhe im Hochformat</string>
+    <string name="land_vert_title">Breite im Querformat</string>
+    <string name="land_hor_title">Höhe im Querformat</string>
+    <string name="positive_done">Fertig</string>
+
+    <!-- SmartBar -->
+    <string name="smartbar_category">SmartBar</string>
+    <string name="smartbar_settings_title">SmartBar Einstellungen</string>
+    <string name="smartbar_editor_title">Tasten-Editor ein-/ausschalten</string>
+    <string name="smartbar_editor_summary">Mittellang Drücken und Ziehen, um die Position zu ändern. Lange Drücken, um das Menü des Editors anzuzeigen. Die Tastenpositionen können verändert werden, während das Menü angezeigt wird.</string>
+    <string name="smartbar_context_menu_position_title">Position von Kontexttasten</string>
+    <string name="smartbar_context_menu_position_summary">Die Position von Kontexttasten, wie die Menü-Taste oder der Eingabemethoden-Auswahl, festlegen.</string>
+    <string name="smartbar_right">Rechts</string>
+    <string name="smartbar_left">Links</string>
+    <string name="smartbar_button_animation_title">Tasten-Animation bei Berührung</string>
+    <string name="smartbar_button_animation_summary">Animationstyp für die primären Tasten festlegen, wenn diese gedrückt werden</string>
+    <string name="smartbar_button_animation_ripple">Wellen</string>
+    <string name="smartbar_button_animation_spring">Hüpfen</string>
+    <string name="smartbar_factory_reset_title">Grundeinstellungen wiederherstellen</string>
+    <string name="smartbar_factory_reset_summary">SmartBar auf die Grundeinstellungen zurücksetzen</string>
+    <string name="smartbar_factory_reset_confirm">Sind Sie sicher, dass die SmartBar auf Standardwerte zurückgesetzt werden soll?</string>
+    <string name="smartbar_ime_action_title">Aktionen zur Eingabemethode</string>
+    <string name="smartbar_ime_action_summary">Festlegen, welche Tasten in der Leiste angezeigt werden, wenn die Tastatur aktiv ist</string>
+    <string name="smartbar_ime_action_none">Nichts</string>
+    <string name="smartbar_ime_action_arrows">Eingabe-Pfeile</string>
+    <string name="smartbar_ime_action_switcher">Tastatur-Umschalter</string>
 
 </resources>
