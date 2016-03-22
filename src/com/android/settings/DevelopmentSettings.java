@@ -87,6 +87,7 @@ import com.android.settings.util.CMDProcessor;
 import com.android.settings.util.Helpers;
 import com.android.settings.widget.SwitchBar;
 import com.android.settings.widget.SeekBarPreferenceCham;
+
 import cyanogenmod.providers.CMSettings;
 
 import java.io.File;
@@ -479,6 +480,14 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
                 Settings.System.HOLD_BACK_TO_KILL_TIMEOUT, 750);
         mHoldBackToKillTimeout.setValue(holdBackToKillTimeout / 1);
         mHoldBackToKillTimeout.setOnPreferenceChangeListener(this);
+        boolean hasNavBarByDefault = getResources().getBoolean(
+                    com.android.internal.R.bool.config_showNavigationBar);
+        boolean enableNavigationBar = Settings.Secure.getInt(getActivity().getContentResolver(),
+                Settings.Secure.NAVIGATION_BAR_VISIBLE, hasNavBarByDefault ? 1 : 0) == 1;
+        if (hasNavBarByDefault || enableNavigationBar) {
+             removePreference(mKillAppLongpressBack);
+             removePreference(mHoldBackToKillTimeout);
+        }
 
         //SELinux
         mSelinux = (SwitchPreference) findPreference(SELINUX);
