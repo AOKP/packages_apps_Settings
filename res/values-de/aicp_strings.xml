@@ -449,7 +449,7 @@
     <!-- Power menu torch -->
     <string name="power_menu_torch_title">Taschenlampe</string>
 
-    <string name="aicp_navbar_settings">Navigationsleiste</string>
+    <string name="aicp_navbar_settings">DU Navigationsleiste</string>
 
     <!-- Navigation Bar -->
     <string name="navbar_interface_title">Schnittstelle</string>
@@ -523,6 +523,7 @@
     <string name="fling_animate_logo_summary">Das Logo wird bei Berührung animiert</string>
     <string name="fling_logo_color">Farbe des Logos</string>
     <string name="fling_logo_custom_logo_pick_title">Eigenes Symbol als Logo</string>
+    <string name="fling_logo_custom_logo_image_pick_title">Eigenes Bild als Logo</string>
     <string name="fling_logo_custom_logo_reset_title">Symbol des Logos zurücksetzen</string>
     <string name="fling_show_ripple_title">Zeige Wellen-Effekt</string>
     <string name="fling_show_ripple_summary">Wellen-Effekt bei Berührung</string>
