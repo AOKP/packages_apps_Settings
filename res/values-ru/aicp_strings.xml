@@ -453,7 +453,7 @@
 
     <!-- Navigation Bar -->
     <string name="aicp_navbar_settings">Панель навигации</string>
-    <string name="navbar_interface_title">Интерфейс навигационной панели</string>
+    <string name="navbar_interface_title">Персонализация навигационной панели</string>
     <string name="navbar_size">Размер панель навигации</string>
     <string name="navbar_mode">Режим панели навигации</string>
     <string name="navbar_visibility">Включить панель навигации</string>
@@ -464,7 +464,7 @@
     <string name="navbar_general_title">Дополнительные настройки</string>
     <string name="navigation_bar_left_title">Режим Левша</string>
     <string name="navigation_bar_left_summary">Поместите панель навигации с левой стороны экрана в горизонтальном положении</string>
-    <string name="info_pref_note_title">Заметки</string>
+    <string name="info_pref_note_title">Памятка</string>
     <string name="smartbar_interface">Смарт-панель</string>
     <string name="icon_pack_picker_dialog_title">Икон-пак</string>
 
@@ -477,20 +477,20 @@
     <string name="action_value_select_app">приложение действия</string>
     <string name="action_value_custom_action">действие на заказ</string>
 
-    <string name="action_value_default_action">по умолчанию</string>
-    <string name="action_value_select_app">приложение</string>
-    <string name="action_value_back">действие назад</string>
-    <string name="action_value_home">действие домой</string>
-    <string name="action_value_search_assist">вспомагательные задачи</string>
-    <string name="action_value_recent_apps">недавние задачи</string>
-    <string name="action_value_voice_search">задача голосового поиска</string>
+    <string name="action_value_default_action">По умолчанию</string>
+    <string name="action_value_select_app">Приложение</string>
+    <string name="action_value_back">Действие назад</string>
+    <string name="action_value_home">Действие домой</string>
+    <string name="action_value_search_assist">Вспомагательные задачи</string>
+    <string name="action_value_recent_apps">Недавние задачи</string>
+    <string name="action_value_voice_search">Задача голосового поиска</string>
     <string name="action_value_menu">Меню задач</string>
 
     <!-- Fling -->
     <string name="fling_settings">Управление жестами</string>
     <string name="fling_interface">Управление жестами</string>
     <string name="fling_enable_title">Включить</string>
-    <string name="fling_back_home_policy">Назад и Домой должны быть установлены в любое время. Чтобы изменить Назад или домашнего задания, установите желаемое назначение первого</string>
+    <string name="fling_back_home_policy">Кнопки назад и Home должны быть установлены в разной последовательности. Чтобы изменить значение кнопки назад или кнопки Home, установите желаемое значение по очереди</string>
     <string name="fling_split_bar_policy">Когда правое или левое действие назначено, действие распространяется на всю панель</string>
     <string name="fling_def_summary">Нет набор действий</string>
     <string name="fling_swipe_actions">Жесты свайпом</string>
@@ -513,8 +513,8 @@
     <string name="down_swipe_title">Свайп снизу</string>
     <string name="long_swipe_reset">Сбросить</string>
     <string name="fling_advanced">Дополнительные настройки</string>
-    <string name="fling_long_swipe_title">Начало длительного свайпа</string>
-    <string name="fling_long_swipe_summary">Точная регулировка длинные Размах пороги, основанные на процентах от ширины Fling интерфейса или высоты</string>
+    <string name="fling_long_swipe_title">Настройка длительного свайпа</string>
+    <string name="fling_long_swipe_summary">Точная регулировка длинны розмаха порога, основанные на процентах от ширины жеста или высоты</string>
     <string name="fling_trails_enable_title">Отображать след</string>
     <string name="fling_trails_enable_summary">Отображать след при жестах</string>
     <string name="fling_trails_color_title">Цвет следа</string>
@@ -524,18 +524,19 @@
     <string name="fling_animate_logo_summary">Анимировать лого при нажатии</string>
     <string name="fling_logo_color">Цвет лого</string>
     <string name="fling_logo_custom_logo_pick_title">Лого</string>
+    <string name="fling_logo_custom_logo_image_pick_title">Выбрать свое лого</string>
     <string name="fling_logo_custom_logo_reset_title">Сбросить лого</string>
     <string name="fling_show_ripple_title">Эфект пульсации</string>
     <string name="fling_show_ripple_summary">Анимировать панель навигации при свайпе</string>
     <string name="fling_ripple_color">Цвет эфекта пульсации</string>
     <string name="fling_longpress_timeout_label_left">Меньше задержка</string>
     <string name="fling_longpress_timeout_label_right">Больше задержки</string>
-    <string name="fling_longpress_title">Задержка длительного нажатия</string>
+    <string name="fling_longpress_title">Настройка задержки длительности нажатии</string>
     <string name="fling_longpress_summary">Увеличение или уменьшение времени, которое требуется, чтобы выполнить длинное нажатие</string>
 
     <!-- Pulse navigation bar music visualizer -->
     <string name="pulse_help_policy_notice_title">О Визуализации панели навигации</string>
-    <string name="pulse_help_policy_notice_summary">Визуализация панели навигации, стиль визуализации звука, когда музыка играет. Визуализация не работает с некоторыми источниками звука при прослушивании на динамик устройства</string>
+    <string name="pulse_help_policy_notice_summary">Визуализация панели навигации, стиль визуализации звука , когда музыка играет. Визуализация не работает с некоторыми источниками звука при прослушивании на динамик устройства</string>
     <string name="pulse_settings">Настройки визуализации</string>
     <string name="pulse_settings_summary">Навигационная панель визуализации звука</string>
     <string name="fling_show_pulse_title">Показать Визуализацию</string>
@@ -545,17 +546,17 @@
     <string name="eos_fling_lavalamp_summary">Визуализатор одушевляет гладкую смесь стиля цветов</string>
 
     <!-- Navbar height -->
-    <string name="navigation_bar_size_title">Высота панели навигации</string>
-    <string name="portrait_title">Высота в вертикальном положении</string>
-    <string name="land_vert_title">Ширина в вертикальном положении</string>
+    <string name="navigation_bar_size_title">Размер панели навигации</string>
+    <string name="portrait_title">Высота панели навигации</string>
+    <string name="land_vert_title">Ширина панели навигации</string>
     <string name="land_hor_title">Высота в горизонтальном положении</string>
     <string name="positive_done">Готово</string>
 
     <!-- SmartBar -->
     <string name="smartbar_category">Смарт-панель</string>
     <string name="smartbar_settings_title">Настройки Смарт-панели</string>
-    <string name="smartbar_editor_title">Редактор кнопок</string>
-    <string name="smartbar_editor_summary">Нажмите и перетащите, чтобы изменить положение. Длительное нажатие, чтобы показать меню редактирования. Положение Кнопки может быть изменено во время отображения меню.</string>
+    <string name="smartbar_editor_title">Редактирование панели навигации</string>
+    <string name="smartbar_editor_summary">Нажмите и перетащите иконки, чтобы изменить положение.Длительное нажатие на иконку вызывает контексное меню для выбора дейстия.Добавить можно как приложение так и действи и отредактировать его.</string>
     <string name="smartbar_context_menu_position_title">Позиция контекстных кнопки</string>
     <string name="smartbar_context_menu_position_summary">Установите положение контекстных кнопок</string>
     <string name="smartbar_right">Справа</string>
