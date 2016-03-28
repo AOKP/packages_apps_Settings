@@ -297,4 +297,14 @@
     <string name="dashboard_tileview_double_lines_title">Dashboard tile view title</string>
     <string name="dashboard_tileview_double_lines_summary_on">Show dashboard tile titles in 1 line</string>
     <string name="dashboard_tileview_double_lines_summary_off">Show dashboard tile titles in 2 lines</string>
+
+    <!-- Heads Up Timeout -->
+    <string name="heads_up_time_out_title">Time out</string>
+    <string name="heads_up_time_out_summary">Notification will show for <xliff:g id="number">%d</xliff:g> seconds</string>
+    <string name="heads_up_time_out_2sec">2 seconds</string>
+    <string name="heads_up_time_out_4sec">4 seconds</string>
+    <string name="heads_up_time_out_5sec">5 seconds</string>
+    <string name="heads_up_time_out_6sec">6 seconds</string>
+    <string name="heads_up_time_out_8sec">8 seconds</string>
+    <string name="heads_up_time_out_10sec">10 seconds</string>
 </resources>
