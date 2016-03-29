@@ -44,11 +44,14 @@ public class OnBoot extends BroadcastReceiver {
             SharedPreferences sharedpreferences = settingsContext.getSharedPreferences("com.android.settings_preferences",
                     Context.MODE_PRIVATE);
             if(sharedpreferences.getBoolean("selinux", true)) {
-                CMDProcessor.runSuCommand("setenforce 1");
-                // showToast("setenforce 1", context);
+                if (CMDProcessor.runShellCommand("getenforce").getStdout().contains("Permissive")) {
+                    CMDProcessor.runSuCommand("setenforce 1");
+                }
             } else if (!sharedpreferences.getBoolean("selinux", true)) {
-                CMDProcessor.runSuCommand("setenforce 0");
-                showToast(context.getString(R.string.selinux_permissive_toast_title), context);
+                if (CMDProcessor.runShellCommand("getenforce").getStdout().contains("Enforcing")) {
+                    CMDProcessor.runSuCommand("setenforce 0");
+                    showToast(context.getString(R.string.selinux_permissive_toast_title), context);
+                }
             }
         }
     }
