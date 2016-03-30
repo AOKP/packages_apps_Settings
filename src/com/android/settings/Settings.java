@@ -124,6 +124,7 @@ public class Settings extends SettingsActivity {
     public static class ProfilesSettingsActivity extends SettingsActivity { /* empty */ }
     public static class SoundSettingsActivity extends SettingsActivity { /* empty */ }
     public static class LockScreenSettingsActivity extends SettingsActivity { /* empty */ }
+    public static class LiveLockScreenSettingsActivity extends SettingsActivity { /* empty */ }
     public static class AicpSettingsExternalActivity extends SettingsActivity { /* empty */ }
     public static class NotificationManagerActivity extends SettingsActivity { /* empty */ }
     public static class NavigationSettingsActivity extends SettingsActivity { /* empty */ }
