@@ -349,19 +349,16 @@ public class SecuritySettings extends SettingsPreferenceFragment
             PreferenceGroup generalCategory = (PreferenceGroup)
                     root.findPreference(KEY_GENERAL_CATEGORY);
             if (pm.hasSystemFeature(LIVE_LOCK_SCREEN_FEATURE) && generalCategory != null) {
+                boolean moveToTop = getResources().getBoolean(
+                        R.bool.config_showLiveLockScreenSettingsFirst);
+
+                PreferenceGroup groupToAddTo = moveToTop ? root : generalCategory;
                 Preference liveLockPreference = new Preference(getContext(), null);
                 liveLockPreference.setIntent(new Intent(ACTION_OPEN_LIVE_LOCKSCREEN_SETTINGS));
-                liveLockPreference.setOrder(0);
+                liveLockPreference.setOrder(-1);
                 liveLockPreference.setTitle(R.string.live_lock_screen_title);
-                if (!mLockPatternUtils.isSecure(MY_USER_ID) &&
-                        mLockPatternUtils.isLockScreenDisabled(MY_USER_ID)) {
-                    // disable live lock screen preference when no lock screen set
-                    liveLockPreference.setEnabled(false);
-                    liveLockPreference.setSummary(R.string.disabled_because_no_backup_security);
-                } else {
-                    liveLockPreference.setSummary(R.string.live_lock_screen_summary);
-                }
-                generalCategory.addPreference(liveLockPreference);
+                liveLockPreference.setSummary(R.string.live_lock_screen_summary);
+                groupToAddTo.addPreference(liveLockPreference);
             }
         }
 
