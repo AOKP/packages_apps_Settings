@@ -522,6 +522,7 @@
     <string name="fling_animate_logo_summary">Le logo s\'anime lors des événements tactiles</string>
     <string name="fling_logo_color">Couleur du logo</string>
     <string name="fling_logo_custom_logo_pick_title">Définir l\'icône du logo</string>
+    <string name="fling_logo_custom_logo_image_pick_title">Définir l\'icône du logo (image personnalisée)</string>
     <string name="fling_logo_custom_logo_reset_title">Réinitialiser l\'icône du logo</string>
     <string name="fling_show_ripple_title">Ondulation</string>
     <string name="fling_show_ripple_summary">Effet d\'ondulation lors des événements tactiles</string>
@@ -570,5 +571,15 @@
     <string name="smartbar_ime_action_none">Aucun</string>
     <string name="smartbar_ime_action_arrows">Touches de direction</string>
     <string name="smartbar_ime_action_switcher">Sélecteur de clavier</string>
+
+    <!-- Heads Up Timeout -->
+    <string name="heads_up_time_out_title">Délai d\'affichage</string>
+    <string name="heads_up_time_out_summary">Affichage des notifications pendant <xliff:g id="number">%d</xliff:g> secondes</string>
+    <string name="heads_up_time_out_2sec">2 secondes</string>
+    <string name="heads_up_time_out_4sec">4 secondes</string>
+    <string name="heads_up_time_out_5sec">5 secondes</string>
+    <string name="heads_up_time_out_6sec">6 secondes</string>
+    <string name="heads_up_time_out_8sec">8 secondes</string>
+    <string name="heads_up_time_out_10sec">10 secondes</string>
 
 </resources>
