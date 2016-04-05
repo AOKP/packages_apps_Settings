@@ -34,5 +34,7 @@
 
     <!-- App ops -->
     <color name="switch_accent_color">@*android:color/accent_device_default_light</color>
+    <!-- Power Usage Hard colors-->
+    <color name="power_usage_ab_icon_tint">@android:color/white</color>
 
 </resources>
