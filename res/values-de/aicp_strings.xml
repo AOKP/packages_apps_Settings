@@ -573,4 +573,14 @@
     <string name="smartbar_ime_action_arrows">Eingabe-Pfeile</string>
     <string name="smartbar_ime_action_switcher">Tastatur-Umschalter</string>
 
+    <!-- Heads Up Timeout -->
+    <string name="heads_up_time_out_title">Time-out</string>
+    <string name="heads_up_time_out_summary">Benachrichtigungen werden für <xliff:g id="number">%d</xliff:g> Sekunden angezeigt</string>
+    <string name="heads_up_time_out_2sec">2 Sekunden</string>
+    <string name="heads_up_time_out_4sec">4 Sekunden</string>
+    <string name="heads_up_time_out_5sec">5 Sekunden</string>
+    <string name="heads_up_time_out_6sec">6 Sekunden</string>
+    <string name="heads_up_time_out_8sec">8 Sekunden</string>
+    <string name="heads_up_time_out_10sec">10 Sekunden</string>
+
 </resources>
