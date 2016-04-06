@@ -317,7 +317,6 @@
     <string name="clock_font_notoserif_bold">NotoSerif Bold</string>
     <string name="clock_font_notoserif_bold_italic">NotoSerif Bold Italic</string>
     <string name="clock_font_size_title">Font size</string>
-    <string name="status_bar_show_clock_second_title">Clock seconds</string>
     <string name="clock_font_size_4">4</string>
     <string name="clock_font_size_5">5</string>
     <string name="clock_font_size_6">6</string>
