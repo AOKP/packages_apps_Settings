@@ -200,8 +200,8 @@
 
     <!-- Battery Saver Settings -->
     <!-- Disable Battery Saver Warning Color -->
-    <string name="battery_saver_color_title">Оповещение цветовое</string>
-    <string name="battery_saver_color_summary">Изменить цвет панели навигации, когда активируется оповещение</string>
+    <string name="battery_saver_color_title">Цветовое оповещение</string>
+    <string name="battery_saver_color_summary">Изменить цвет панели навигации и строки состояния, когда активируется режим энергосбережения</string>
 
     <!-- Doze options -->
     <string name="display_category_doze_options_title">Захват дисплея</string>
@@ -266,10 +266,10 @@
     <string name="less_notification_sounds_5m">5 минут</string>
 
     <!-- Battery notifications -->
-    <string name="battery_saver_notif_title">Уведомление режима энэргосбережения</string>
-    <string name="battery_saver_notif_summary">Показывать уведомление режима энэргосбережения, когда включены</string>
-    <string name="battery_low_notif_title">Уведомление низкого уровня батареи</string>
-    <string name="battery_low_notif_summary">Показывать уведомление низкого уровня батареи, когда включены</string>
+    <string name="battery_saver_notif_title">Уведомление о режиме энергосбережения</string>
+    <string name="battery_saver_notif_summary">Показывать уведомление о режиме энергосбережения</string>
+    <string name="battery_low_notif_title">Уведомление о низком уровне заряда батареи</string>
+    <string name="battery_low_notif_summary">Показывать уведомление о низком уровне заряда батареи</string>
 
     <!--Status bar date -->
     <string name="status_bar_date_title">Дата</string>
