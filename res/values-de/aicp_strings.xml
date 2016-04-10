@@ -315,7 +315,6 @@
     <string name="clock_font_notoserif_bold">NotoSerif fett</string>
     <string name="clock_font_notoserif_bold_italic">NotoSerif fett &amp; kursiv</string>
     <string name="clock_font_size_title">Schriftgröße</string>
-    <string name="status_bar_show_clock_second_title">Uhr-Sekundenanzeige</string>
     <string name="clock_font_size_4">4</string>
     <string name="clock_font_size_5">5</string>
     <string name="clock_font_size_6">6</string>
@@ -582,5 +581,24 @@
     <string name="heads_up_time_out_6sec">6 Sekunden</string>
     <string name="heads_up_time_out_8sec">8 Sekunden</string>
     <string name="heads_up_time_out_10sec">10 Sekunden</string>
+
+    <!-- Heads Up Snooze -->
+    <string name="heads_up_snooze">Dösen</string>
+    <string name="heads_up_snooze_summary">Benachrichtigungen werden während der nächsten <xliff:g id="number">%d</xliff:g> Minuten NICHT gezeigt</string>
+    <string name="heads_up_snooze_1min">1 Minute</string>
+    <string name="heads_up_snooze_5min">5 Minuten</string>
+    <string name="heads_up_snooze_10min">10 Minuten</string>
+    <string name="heads_up_snooze_15min">15 Minuten</string>
+    <string name="heads_up_snooze_20min">20 Minuten</string>
+    <string name="heads_up_snooze_30min">30 Minuten</string>
+    <string name="heads_up_snooze_45min">45 Minuten</string>
+    <string name="heads_up_snooze_60min">60 Minuten</string>
+    <string name="force_headsup_title">Erzwinge Pop-up Benachrichtigungen</string>
+    <string name="force_headsup_summary">Erzwinge Pop-up Benachrichtigungen in allen Anwendungen</string>
+
+    <!-- DoubleTap2Wake Doze -->
+    <string name="doze_wakeup_doubletap_title">DT2W während Inaktivität</string>
+    <string name="doze_wakeup_doubletap_summary_on">Zweimal auf das Display tippen, damit das Gerät bei pulsierendem Bildschirm aus der Inaktivität erwacht</string>
+    <string name="doze_wakeup_doubletap_summary_off">Einmal auf das Display tippen, damit das Gerät bei pulsierendem Bildschirm aus der Inaktivität erwacht (Standard)</string>
 
 </resources>
