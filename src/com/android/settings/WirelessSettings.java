@@ -252,10 +252,11 @@ public class WirelessSettings extends SettingsPreferenceFragment implements
                 Settings.System.NFC_POLLING_MODE, 3)) + "");
         updateNfcPolling();
 
+        int nfcSoundMode = Settings.System.getIntForUser(activity.getContentResolver(),
+                Settings.System.NFC_SOUND_MODE, 0, UserHandle.USER_CURRENT);
         mNfcSoundMode = (ListPreference) findPreference(KEY_NFC_SOUND_MODE);
+        mNfcSoundMode.setValue(String.valueOf(nfcSoundMode));
         mNfcSoundMode.setOnPreferenceChangeListener(this);
-        mNfcSoundMode.setValue((Settings.System.getInt(activity.getContentResolver(),
-                Settings.System.NFC_SOUND_MODE, 0)) + "");
         updateNfcSoundMode();
 
         mAirplaneModeEnabler = new AirplaneModeEnabler(activity, mAirplaneModePreference);
@@ -496,7 +497,7 @@ public class WirelessSettings extends SettingsPreferenceFragment implements
             updateNfcPolling();
             return true;
         } else if (preference == mNfcSoundMode) {
-            int newVal = Integer.parseInt((String) newValue);
+            int newVal = Integer.parseInt(((String) newValue).toString());
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.NFC_SOUND_MODE, newVal);
             updateNfcSoundMode();
