@@ -314,7 +314,6 @@
     <string name="clock_font_notoserif_bold">NotoSerif Gras</string>
     <string name="clock_font_notoserif_bold_italic">NotoSerif Gras Italique</string>
     <string name="clock_font_size_title">Taille de la police</string>
-    <string name="status_bar_show_clock_second_title">Horloge avec les secondes</string>
     <string name="clock_font_size_4">4</string>
     <string name="clock_font_size_5">5</string>
     <string name="clock_font_size_6">6</string>
@@ -581,5 +580,24 @@
     <string name="heads_up_time_out_6sec">6 secondes</string>
     <string name="heads_up_time_out_8sec">8 secondes</string>
     <string name="heads_up_time_out_10sec">10 secondes</string>
+
+    <!-- Heads Up Snooze -->
+    <string name="heads_up_snooze">Roupillon</string>
+    <string name="heads_up_snooze_summary">Les notifications ne seront pas affichés pour les prochaines<xliff:g id="number">%d</xliff:g> minutes</string>
+    <string name="heads_up_snooze_1min">1 minute</string>
+    <string name="heads_up_snooze_5min">5 minutes</string>
+    <string name="heads_up_snooze_10min">10 minutes</string>
+    <string name="heads_up_snooze_15min">15 minutes</string>
+    <string name="heads_up_snooze_20min">20 minutes</string>
+    <string name="heads_up_snooze_30min">30 minutes</string>
+    <string name="heads_up_snooze_45min">45 minutes</string>
+    <string name="heads_up_snooze_60min">60 minutes</string>
+    <string name="force_headsup_title">Forcer les notifications flottantes</string>
+    <string name="force_headsup_summary">Forcer les notifications flottantes dans toutes les applications</string>
+
+    <!-- DoubleTap2Wake Doze -->
+    <string name="doze_wakeup_doubletap_title">Appuyez deux fois pour activer</string>
+    <string name="doze_wakeup_doubletap_summary_on">Nécessite d\'appuyer deux fois pour activer l\'appareil en mode veille (doze)</string>
+    <string name="doze_wakeup_doubletap_summary_off">Nécessite d\'appuyer une seule fois pour activer l\'appareil en mode veille (doze) (default)</string>
 
 </resources>
