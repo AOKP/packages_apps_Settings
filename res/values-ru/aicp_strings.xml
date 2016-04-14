@@ -458,7 +458,7 @@
     <string name="navbar_mode">Режим панели навигации</string>
     <string name="navbar_visibility">Включить панель навигации</string>
     <string name="navigationbar_settings_title">Навигация</string>
-    <string name="aosp_navigation_bar">Панель навигации</string>
+    <string name="aosp_navigation_bar">Экранные кнопки</string>
     <string name="aosp_navigation_bar_settings">Настройки навигационной панели</string>
     <string name="navigationbar_settings_summary">Настройка панели навигации, стиль и поведение</string>
     <string name="navbar_general_title">Дополнительные настройки</string>
@@ -542,7 +542,7 @@
     <string name="fling_show_pulse_title">Показать Визуализацию</string>
     <string name="fling_show_pulse_summary">Аудио визуализация на панели навигации</string>
     <string name="fling_pulse_color">Цвет визуализации</string>
-    <string name="eos_fling_lavalamp_title">Включите лава лампы</string>
+    <string name="eos_fling_lavalamp_title">Включите лаву</string>
     <string name="eos_fling_lavalamp_summary">Визуализатор одушевляет гладкую смесь стиля цветов</string>
 
     <!-- Navbar height -->
@@ -556,9 +556,9 @@
     <string name="smartbar_category">Экранные кнопки</string>
     <string name="smartbar_settings_title">Экранные кнопки</string>
     <string name="smartbar_editor_title">Редактирование панели навигации</string>
-    <string name="smartbar_editor_summary">Нажмите и перетащите кнопки, чтобы изменить положение. Длительное нажатие на кнопку вызывает контексное меню для выбора дейстия.Добавить можно как приложение так и действи и отредактировать его.</string>
+    <string name="smartbar_editor_summary">Нажмите и перетащите кнопки, чтобы изменить положение.Длительное нажатие на кнопку вызывает контексное меню для выбора дейстия.Добавить можно как приложение так и действи и отредактировать его.</string>
     <string name="smartbar_context_menu_position_title">Позиция контекстных кнопки</string>
-    <string name="smartbar_context_menu_position_summary">Установите положение контекстных кнопок</string>
+    <string name="smartbar_context_menu_position_summary">Установите положение кнопок</string>
     <string name="smartbar_right">Справа</string>
     <string name="smartbar_left">Слева</string>
     <string name="smartbar_button_animation_title">Анимация нажатий на кнопки</string>
@@ -566,13 +566,13 @@
     <string name="smartbar_button_animation_ripple">Пульсация</string>
     <string name="smartbar_button_animation_spring">Пружина</string>
     <string name="smartbar_factory_reset_title">Восстановление стоковых настроек</string>
-    <string name="smartbar_factory_reset_summary">Смарт-панель будет сброшены к заводским настройкам</string>
+    <string name="smartbar_factory_reset_summary">Экранные кнопки будут сброшены к стоковым настройкам</string>
     <string name="smartbar_factory_reset_confirm">Вы уверены, что хотите сбросить панель навигации?</string>
     <string name="smartbar_ime_action_title">Метод ввода действия</string>
     <string name="smartbar_ime_action_summary">Установить, какие кнопки, служат для показа экранной клавиатуры</string>
     <string name="smartbar_ime_action_none">Нету</string>
-    <string name="smartbar_ime_action_arrows">Стрелки ввода</string>
-    <string name="smartbar_ime_action_switcher">Переключатель клавиатуры</string> 
+    <string name="smartbar_ime_action_arrows">Стрелки</string>
+    <string name="smartbar_ime_action_switcher">Переключатель</string>
 
     <!-- Heads Up Timeout -->
     <string name="heads_up_time_out_title">Время отображения</string>
@@ -595,6 +595,8 @@
     <string name="heads_up_snooze_30min">30 минут</string>
     <string name="heads_up_snooze_45min">45 минут</string>
     <string name="heads_up_snooze_60min">60 минут</string>
+    <string name="force_headsup_title">Принудительное отображение</string>
+    <string name="force_headsup_summary">Принудительное отображение во всех приложениях</string>
 
     <!-- DoubleTap2Wake Doze -->
     <string name="doze_wakeup_doubletap_title">Двойное нажатие для пробуждения doze</string>
