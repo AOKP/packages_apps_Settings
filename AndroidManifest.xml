@@ -2291,6 +2291,9 @@
                 android:value="com.android.settings.aicp.FlingSettings" />
         </activity>
 
+        <!-- Hide Apps from Recents (HAFR) -->
+        <activity android:name=".aicp.HAFRAppListActivity" />
+
         <!-- AICP activities End -->
 
         <!-- CyanogenMod activities Start -->

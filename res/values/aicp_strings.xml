@@ -605,4 +605,7 @@
     <string name="doze_wakeup_doubletap_summary_on">Require a double-tap to wake the device on a doze pulse screen</string>
     <string name="doze_wakeup_doubletap_summary_off">Require a simple-tap to wake the device on a doze pulse screen (default)</string>
 
+    <!-- Hide apps from recents -->
+    <string name="hide_from_recents_add_app">Add App</string>
+
 </resources>
