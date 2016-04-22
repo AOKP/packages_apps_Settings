@@ -129,4 +129,5 @@ public class Settings extends SettingsActivity {
     public static class LiveLockScreenSettingsActivity extends SettingsActivity { /* empty */ }
     public static class NotificationManagerActivity extends SettingsActivity { /* empty */ }
     public static class WeatherProviderServicesActivity extends SettingsActivity { /* empty */ }
+    public static class HeadsUpSettingsActivity extends SettingsActivity { /* empty */ }
 }

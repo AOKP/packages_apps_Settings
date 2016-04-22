@@ -97,6 +97,7 @@ import com.android.settings.deviceinfo.PublicVolumeSettings;
 import com.android.settings.deviceinfo.StorageSettings;
 import com.android.settings.fuelgauge.PowerUsageDetail;
 import com.android.settings.fuelgauge.PowerUsageSummary;
+import com.android.settings.headsup.HeadsUpSettings;
 import com.android.settings.livedisplay.LiveDisplay;
 import com.android.settings.notification.NotificationManagerSettings;
 import com.android.settings.notification.OtherSoundSettings;
@@ -392,7 +393,8 @@ public class SettingsActivity extends Activity
             ContributorsCloudFragment.class.getName(),
             NotificationManagerSettings.class.getName(),
             LiveLockScreenSettings.class.getName(),
-            WeatherServiceSettings.class.getName()
+            WeatherServiceSettings.class.getName(),
+            HeadsUpSettings.class.getName()
     };
 
 
