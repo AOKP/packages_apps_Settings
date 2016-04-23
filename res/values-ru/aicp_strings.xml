@@ -499,6 +499,8 @@
     <string name="fling_short_swipe_left">Короткий свайп слева</string>
     <string name="fling_long_swipe_right">Длинный свайп справа</string>
     <string name="fling_long_swipe_left">Длинный свайп слева</string>
+    <string name="fling_right_up_swipe">Right side swipe up</string>
+    <string name="fling_left_up_swipe">Left side swipe up</string>
     <string name="fling_single_tap">Одно нажатие справа</string>
     <string name="fling_double_tap">Двойное нажатие справа</string>
     <string name="fling_long_press">Длительное нажатие справа</string>
@@ -602,5 +604,8 @@
     <string name="doze_wakeup_doubletap_title">Двойное нажатие для пробуждения doze</string>
     <string name="doze_wakeup_doubletap_summary_on">Ддвойное нажатие, чтобы разбудить устройство  doze импульсов</string>
     <string name="doze_wakeup_doubletap_summary_off">Простое нажатие, чтобы разбудить устройство doze импульсов (по умолчанию)</string>
+
+    <!-- Hide apps from recents -->
+    <string name="hide_from_recents_add_app">Добавить приложение</string>
 
 </resources>
