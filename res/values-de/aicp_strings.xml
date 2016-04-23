@@ -204,7 +204,7 @@
 
     <!-- Doze options -->
     <string name="display_category_doze_options_title">Inaktivitätsdisplay</string>
-    <string name="doze_settings_title">Erweiterte Inaktivitätsoptionen (Doze)</string>
+    <string name="doze_settings_title">Erweiterte Inaktivitätsoptionen (Ambient Display)</string>
     <string name="doze_timeout_title">Timeout für das Pulsieren bei Inaktivität</string>
     <string name="doze_timeout_summary">Zeit, die das Display für pulsierende Benachrichtigungen anbleibt</string>
     <string name="doze_trigger_pickup_title">Auslösung bei Aufnahme des Geräts</string>
@@ -315,6 +315,7 @@
     <string name="clock_font_notoserif_bold">NotoSerif fett</string>
     <string name="clock_font_notoserif_bold_italic">NotoSerif fett &amp; kursiv</string>
     <string name="clock_font_size_title">Schriftgröße</string>
+    <string name="status_bar_show_clock_second_title">Sekundenanzeige</string>
     <string name="clock_font_size_4">4</string>
     <string name="clock_font_size_5">5</string>
     <string name="clock_font_size_6">6</string>
@@ -497,6 +498,8 @@
     <string name="fling_short_swipe_left">Kurzes Wischen nach links</string>
     <string name="fling_long_swipe_right">Langes Wischen nach rechts</string>
     <string name="fling_long_swipe_left">Langes Wischen nach links</string>
+    <string name="fling_right_up_swipe">Nach oben-rechts wischen</string>
+    <string name="fling_left_up_swipe">Nach oben-links wischen</string>
     <string name="fling_single_tap">Einmal rechts Tippen</string>
     <string name="fling_double_tap">Zweimal rechts Tippen</string>
     <string name="fling_long_press">Lange rechts Drücken</string>
@@ -583,8 +586,9 @@
     <string name="heads_up_time_out_10sec">10 Sekunden</string>
 
     <!-- Heads Up Snooze -->
-    <string name="heads_up_snooze">Dösen</string>
-    <string name="heads_up_snooze_summary">Benachrichtigungen werden während der nächsten <xliff:g id="number">%d</xliff:g> Minuten NICHT gezeigt</string>
+    <string name="heads_up_snooze">Dösen von Pop-Ups</string>
+    <string name="heads_up_snooze_disabled_summary">Das Dösen ist deaktiviert</string>
+    <string name="heads_up_snooze_summary">Benachrichtigungen werden während der nächsten <xliff:g id="number">%d</xliff:g> Minuten für diese App NICHT angezeigt, wenn über die Benachrichtigung nach oben gewischt wurde.</string>
     <string name="heads_up_snooze_1min">1 Minute</string>
     <string name="heads_up_snooze_5min">5 Minuten</string>
     <string name="heads_up_snooze_10min">10 Minuten</string>
