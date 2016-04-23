@@ -2690,7 +2690,7 @@
     <!-- Master clear progress screen title [CHAR LIMIT=30] -->
     <string name="master_clear_progress_title" >Erasing</string>
     <!-- Master clear progress screen text [CHAR LIMIT=75] -->
-    <string name="master_clear_progress_text">Please wait...</string>
+    <string name="master_clear_progress_text">Please wait\u2026</string>
 
     <!-- Main settings screen, Call settings title for item to go into the call settings -->
     <string name="call_settings_title">Call settings</string>
@@ -4504,7 +4504,7 @@
     <string name="tts_status_not_supported"><xliff:g id="locale" example="English (United States)">%1$s</xliff:g> is not supported</string>
     <!-- On main TTS Settings screen, current TTS engine status for the current default language,
          tts engine is queried for status [CHAR LIMIT=150] -->
-    <string name="tts_status_checking">Checking...</string>
+    <string name="tts_status_checking">Checking\u2026</string>
     <!-- On main TTS Settings screen, text for divider under which all TTS engines are listed -->
     <string name="tts_engines_section">Engines</string>
     <!-- On main TTS Settings screen, text preceded by the TTS engine name, clicking this button will launch the engine settings -->
@@ -5653,7 +5653,7 @@
     <!-- Button the user can click to indicate he understood and dismiss the screen -->
     <string name="nfc_how_it_works_got_it">Got it</string>
     <!-- NFC More... title.  [CHAR LIMIT=40] -->
-    <string name="nfc_more_title">More...</string>
+    <string name="nfc_more_title">More\u2026</string>
     <!-- Label for the dialog that is shown when the user is asked to set a
          preferred payment application -->
     <string name="nfc_payment_set_default_label">Set as your preference?</string>
@@ -5855,7 +5855,7 @@
     <!-- Message for selecting sim for data in settings.  [CHAR LIMIT=40] -->
     <string name="select_sim_for_data">Select a SIM for data</string>
     <!-- Message for switching data SIM; switching takes a while -->
-    <string name="data_switch_started">Switching data SIM, this may take up to a minute...</string>
+    <string name="data_switch_started">Switching data SIM, this may take up to a minute\u2026</string>
     <!-- Message for selecting sim for call in settings.  [CHAR LIMIT=40] -->
     <string name="select_sim_for_calls">Call with</string>
     <!-- Title for selecting a SIM card.  [CHAR LIMIT=40] -->
@@ -5981,7 +5981,7 @@
     <!-- Text for button to confirm writing tag -->
     <string name="write_tag">Write</string>
     <!-- Text to inform the user to tap a tag to complete the setup process -->
-    <string name="status_awaiting_tap">Tap a tag to write...</string>
+    <string name="status_awaiting_tap">Tap a tag to write\u2026</string>
     <!-- Text to inform the user that the network key entered was incorrect -->
     <string name="status_invalid_password">Invalid password, try again.</string>
     <!-- Text displayed when tag successfully writen -->
@@ -6151,7 +6151,7 @@
     <string name="zen_access_empty_text">No installed apps have requested Do Not Disturb access</string>
 
     <!-- [CHAR LIMIT=NONE] Text when loading app list in notification settings -->
-    <string name="loading_notification_apps">Loading apps...</string>
+    <string name="loading_notification_apps">Loading apps\u2026</string>
 
     <!-- [CHAR LIMIT=NONE] App notification settings: Block option title -->
     <string name="app_notification_block_title">Block all</string>
