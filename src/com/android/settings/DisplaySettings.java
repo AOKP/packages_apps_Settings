@@ -71,6 +71,8 @@ import java.util.List;
 import com.android.settings.Utils;
 import com.android.settings.cyanogenmod.DisplayRotation;
 import com.android.settings.dashboard.DashboardContainerView;
+
+import cyanogenmod.hardware.LiveDisplayManager;
 import cyanogenmod.providers.CMSettings;
 
 public class DisplaySettings extends SettingsPreferenceFragment implements
@@ -103,11 +105,13 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
 
     private static final String DASHBOARD_COLUMNS = "dashboard_columns";
     private static final String DASHBOARD_SWITCHES = "dashboard_switches";
+    private static final String KEY_LIVEDISPLAY = "live_display";
 
     private static final int DLG_GLOBAL_CHANGE_WARNING = 1;
 
     private FontDialogPreference mFontSizePref;
     private PreferenceScreen mDisplayRotationPreference;
+    private PreferenceScreen mLiveDisplayPreference;
 
     private final Configuration mCurConfig = new Configuration();
 
@@ -164,6 +168,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         mAccelerometer = (SwitchPreference) findPreference(DisplayRotation.KEY_ACCELEROMETER);
         if (mAccelerometer != null) {
             mAccelerometer.setPersistent(false);
+        }
+
+        mLiveDisplayPreference = (PreferenceScreen) findPreference(KEY_LIVEDISPLAY);
+        if (!LiveDisplayManager.getInstance(getActivity()).getConfig().isAvailable()) {
+            displayPrefs.removePreference(mLiveDisplayPreference);
         }
 
         mScreenSaverPreference = findPreference(KEY_SCREEN_SAVER);
