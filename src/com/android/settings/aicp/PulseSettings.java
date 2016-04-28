@@ -37,11 +37,13 @@ public class PulseSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
     private static final String TAG = PulseSettings.class.getSimpleName();
     private static final String CUSTOM_DIMEN = "pulse_custom_dimen";
+    private static final String CUSTOM_DIV = "pulse_custom_div";
 
     SwitchPreference mShowPulse;
     SwitchPreference mLavaLampEnabled;
     ColorPickerPreference mPulseColor;
     ListPreference mCustomDimen;
+    ListPreference mCustomDiv;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -77,6 +79,13 @@ public class PulseSettings extends SettingsPreferenceFragment implements
         mCustomDimen.setSummary(mCustomDimen.getEntry());
         mCustomDimen.setOnPreferenceChangeListener(this);
 
+        mCustomDiv = (ListPreference) findPreference(CUSTOM_DIV);
+        int customdiv = Settings.System.getIntForUser(getContentResolver(),
+                    Settings.System.PULSE_CUSTOM_DIV, 0,
+                    UserHandle.USER_CURRENT);
+        mCustomDiv.setValue(String.valueOf(customdiv));
+        mCustomDiv.setSummary(mCustomDiv.getEntry());
+        mCustomDiv.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -103,6 +112,14 @@ public class PulseSettings extends SettingsPreferenceFragment implements
                     Settings.System.PULSE_CUSTOM_DIMEN, customdimen,
                         UserHandle.USER_CURRENT);
             mCustomDimen.setSummary(mCustomDimen.getEntries()[index]);
+            return true;
+        }  else if (preference == mCustomDiv) {
+            int customdiv = Integer.valueOf((String) newValue);
+            int index = mCustomDiv.findIndexOfValue((String) newValue);
+            Settings.System.putIntForUser(getContentResolver(), 
+		    Settings.System.PULSE_CUSTOM_DIV, customdiv,
+                        UserHandle.USER_CURRENT);
+            mCustomDiv.setSummary(mCustomDiv.getEntries()[index]);
             return true;
 	}
         return false;
