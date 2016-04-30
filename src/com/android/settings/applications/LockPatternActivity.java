@@ -48,9 +48,12 @@ public class LockPatternActivity extends Activity implements OnNotifyAccountRese
     public static final String PATTERN_LOCK_PROTECTED_APPS = "pattern_lock_protected_apps";
     public static final String RECREATE_PATTERN = "recreate_pattern_lock";
 
+    private static String TIMEOUT_PREF_KEY = "retry_timeout";
+
     private static final int MIN_PATTERN_SIZE = 4;
     private static final int MAX_PATTERN_RETRY = 5;
     private static final int PATTERN_CLEAR_TIMEOUT_MS = 2000;
+    private static final long FAILED_ATTEMPT_RETRY = 30;
 
     private static final int MENU_RESET = 0;
 
@@ -70,6 +73,7 @@ public class LockPatternActivity extends Activity implements OnNotifyAccountRese
     boolean mRetryPattern = true;
     boolean mConfirming = false;
     boolean mFingerPrintSetUp = false;
+    boolean mRetryLocked = false;
 
     private FingerprintManager mFingerprintManager;
     private FingerprintUiHelper mFingerPrintUiHelper;
@@ -139,14 +143,16 @@ public class LockPatternActivity extends Activity implements OnNotifyAccountRese
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         menu.clear();
-        if (!mCreate) {
-            menu.add(0, MENU_RESET, 0, R.string.lockpattern_reset_button)
-                    .setIcon(R.drawable.ic_lockscreen_ime_white)
-                    .setAlphabeticShortcut('r')
-                    .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM |
-                            MenuItem.SHOW_AS_ACTION_WITH_TEXT);
-            mItem = menu.findItem(0);
+        menu.add(0, MENU_RESET, 0, R.string.lockpattern_reset_button)
+                .setIcon(R.drawable.ic_lockscreen_ime_white)
+                .setAlphabeticShortcut('r')
+                .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM |
+                        MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+        mItem = menu.findItem(0);
+        if (mRetryLocked) {
+            mItem.setIcon(R.drawable.ic_settings_lockscreen_white);
         }
+
         return true;
     }
 
@@ -175,6 +181,9 @@ public class LockPatternActivity extends Activity implements OnNotifyAccountRese
     }
 
     private void switchToPattern(boolean reset) {
+        if (isRetryLocked()) {
+            return;
+        }
         if (reset) {
             resetPatternState(false);
         }
@@ -190,7 +199,9 @@ public class LockPatternActivity extends Activity implements OnNotifyAccountRese
     private void switchToAccount() {
         mPatternLockHeader.setText(getResources()
                 .getString(R.string.lockpattern_settings_reset_summary));
-        mItem.setIcon(R.drawable.ic_settings_lockscreen_white);
+        if (mItem != null) {
+            mItem.setIcon(R.drawable.ic_settings_lockscreen_white);
+        }
         mAccountView.setVisibility(View.VISIBLE);
         mLockPatternView.setVisibility(View.GONE);
     }
@@ -342,9 +353,11 @@ public class LockPatternActivity extends Activity implements OnNotifyAccountRese
                     mLockPatternView.postDelayed(mCancelPatternRunnable, PATTERN_CLEAR_TIMEOUT_MS);
 
                     if (mRetry >= MAX_PATTERN_RETRY) {
+                        setPatternTimeout();
                         mLockPatternView.removeCallbacks(mCancelPatternRunnable);
                         final String message = getResources().getString(
-                                R.string.lockpattern_too_many_failed_confirmation_attempts);
+                                R.string.lockpattern_too_many_failed_confirmation_attempts,
+                                        FAILED_ATTEMPT_RETRY);
                         Utils.showSnackbar(message, Snackbar.SnackbarDuration.LENGTH_SHORT,
                                 null, null, getApplicationContext());
                         switchToAccount();
@@ -398,5 +411,22 @@ public class LockPatternActivity extends Activity implements OnNotifyAccountRese
             mPatternLockHeader.setText(getString(R.string.pa_pattern_or_fingerprint_header));
             mFingerPrintUiHelper.startListening();
         }
+        if (isRetryLocked()) {
+            invalidateOptionsMenu();
+            switchToAccount();
+        }
+    }
+
+    private boolean isRetryLocked() {
+        long time = System.currentTimeMillis();
+        SharedPreferences prefs = getSharedPreferences(getPackageName(), MODE_PRIVATE);
+        long retryTime = prefs.getLong(TIMEOUT_PREF_KEY, 0);
+        mRetryLocked = (time - retryTime) < (FAILED_ATTEMPT_RETRY * 1000);
+        return mRetryLocked;
+    }
+
+    private void setPatternTimeout() {
+        SharedPreferences prefs = getSharedPreferences(getPackageName(), MODE_PRIVATE);
+        prefs.edit().putLong(TIMEOUT_PREF_KEY, System.currentTimeMillis()).apply();
     }
 }
