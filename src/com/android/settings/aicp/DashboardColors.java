@@ -215,24 +215,6 @@ public class DashboardColors extends SettingsPreferenceFragment implements
                     .setTitle(R.string.reset)
                     .setMessage(R.string.reset_message)
                     .setNegativeButton(R.string.cancel, null)
-                    .setNeutralButton(R.string.reset,
-                        new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            Settings.System.putInt(getOwner().mResolver,
-                                    Settings.System.SETTINGS_BG_COLOR,
-                                    WHITE);
-                            Settings.System.putInt(getOwner().mResolver,
-                                    Settings.System.SETTINGS_ICON_COLOR,
-                                    HOLO_BLUE_LIGHT);
-                            Settings.System.putInt(getOwner().mResolver,
-                                    Settings.System.SETTINGS_TITLE_TEXT_COLOR,
-                                    BLACK);
-                            Settings.System.putInt(getOwner().mResolver,
-                                    Settings.System.SETTINGS_CATEGORY_TEXT_COLOR,
-                                    HOLO_BLUE_LIGHT);
-                            getOwner().refreshSettings();
-                        }
-                    })
                     .setPositiveButton(R.string.reset,
                         new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
@@ -247,7 +229,7 @@ public class DashboardColors extends SettingsPreferenceFragment implements
                                     BLACK);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.SETTINGS_CATEGORY_TEXT_COLOR,
-                                    BLACK);
+                                    HOLO_BLUE_LIGHT);
                             getOwner().refreshSettings();
                         }
                     })

@@ -143,6 +143,18 @@
                 android:summary="@string/dashboard_switches_summary"
                 android:persistent="false" />
 
+        <PreferenceScreen
+                android:key="settings_colors"
+                android:title="@string/settings_colors_title"
+                android:fragment="com.android.settings.aicp.DashboardColors"
+                android:summary="@string/settings_colors_summary" />
+
+        <ListPreference
+                android:key="dashboard_font_style"
+                android:entries="@array/dashboard_font_style_entries"
+                android:entryValues="@array/dashboard_font_style_values"
+                android:title="@string/dashboard_font_style_title" />
+
         <com.android.settings.widget.SeekBarPreferenceCham
                 android:key="settings_category_text_size"
                 android:title="@string/dash_category_text_size"
@@ -160,18 +172,6 @@
                 settings:defaultValue="14"
                 settings:unitsLeft=""
                 settings:unitsRight="dp" />
-
-        <ListPreference
-                android:key="dashboard_font_style"
-                android:entries="@array/dashboard_font_style_entries"
-                android:entryValues="@array/dashboard_font_style_values"
-                android:title="@string/dashboard_font_style_title" />
-
-        <PreferenceScreen
-                android:key="settings_colors"
-                android:title="@string/settings_colors_title"
-                android:fragment="com.android.settings.aicp.DashboardColors"
-                android:summary="@string/settings_colors_summary" />
 
     </PreferenceCategory>
 

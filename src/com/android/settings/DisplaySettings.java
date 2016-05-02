@@ -675,13 +675,13 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     Settings.System.DASHBOARD_FONT_STYLE, val);
             mDashFontStyle.setSummary(mDashFontStyle.getEntries()[index]);
             return true;
-        } 
+        }
         if (preference == mDashTitleTextSize) {
             int width = ((Integer)objValue).intValue();
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.SETTINGS_TITLE_TEXT_SIZE, width);
             return true;
-        } 
+        }
         if (preference == mDashCategoryTextSize) {
             int width = ((Integer)objValue).intValue();
             Settings.System.putInt(getActivity().getContentResolver(),
