@@ -54,11 +54,13 @@ public class DashboardColors extends SettingsPreferenceFragment implements
     private static final String PREF_ICON_COLOR = "settings_icon_color";
     private static final String PREF_TEXT_COLOR = "settings_title_text_color";
     private static final String PREF_CAT_TEXT_COLOR = "settings_category_text_color";
+    private static final String PREF_TOOLBAR_COLOR = "settings_toolbar_text_color";
 
     private ColorPickerPreference mBgColor;
     private ColorPickerPreference mIconColor;
     private ColorPickerPreference mTextColor;
     private ColorPickerPreference mCatTextColor;
+    private ColorPickerPreference mToolbarTextColor;
 
     private static final int TRANSLUCENT_BLACK = 0x80000000;
     private static final int CYANIDE_BLUE = 0xff1976D2;
@@ -125,6 +127,15 @@ public class DashboardColors extends SettingsPreferenceFragment implements
         mCatTextColor.setSummary(hexColor);
         mCatTextColor.setOnPreferenceChangeListener(this);
 
+        mToolbarTextColor =
+                (ColorPickerPreference) findPreference(PREF_TOOLBAR_COLOR);
+        intColor = Settings.System.getInt(mResolver,
+                Settings.System.SETTINGS_CATEGORY_TEXT_COLOR, WHITE);
+        hexColor = String.format("#%08x", (0xffffffff & intColor));
+        mToolbarTextColor.setNewPreviewColor(intColor);
+        mToolbarTextColor.setSummary(hexColor);
+        mToolbarTextColor.setOnPreferenceChangeListener(this);
+
         setHasOptionsMenu(true);
     }
 
@@ -182,6 +193,14 @@ public class DashboardColors extends SettingsPreferenceFragment implements
                     Settings.System.SETTINGS_ICON_COLOR, intHex);
             preference.setSummary(hex);
             return true;
+        } else if (preference == mToolbarTextColor) {
+            hex = ColorPickerPreference.convertToARGB(
+                    Integer.valueOf(String.valueOf(newValue)));
+            intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(mResolver,
+                    Settings.System.SETTINGS_TOOLBAR_TEXT_COLOR, intHex);
+            preference.setSummary(hex);
+            return true;
         }
         return false;
     }
@@ -230,6 +249,9 @@ public class DashboardColors extends SettingsPreferenceFragment implements
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.SETTINGS_CATEGORY_TEXT_COLOR,
                                     HOLO_BLUE_LIGHT);
+                            Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.SETTINGS_TOOLBAR_TEXT_COLOR,
+                                    WHITE);
                             getOwner().refreshSettings();
                         }
                     })

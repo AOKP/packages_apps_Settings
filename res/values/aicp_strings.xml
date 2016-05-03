@@ -453,6 +453,7 @@
     <string name="icons_title">Icons</string>
     <string name="background_title">Background</string>
     <string name="text_title">Text</string>
+    <string name="toolbar_title">Toolbar</string>
 
 
     <!-- Dashboard Text Size -->

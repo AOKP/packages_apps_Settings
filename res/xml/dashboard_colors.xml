@@ -36,4 +36,9 @@
             android:title="@string/text_cat_title"
             android:defaultValue="0xffc0c0c0" />
 
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="settings_toolbar_text_color"
+            android:title="@string/toolbar_title"
+            android:defaultValue="0xffffffff" />
+
 </PreferenceScreen>
