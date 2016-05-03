@@ -449,7 +449,7 @@
 
     <!-- Dashboard Colors -->
     <string name="db_customizations_title">Dashboard customizations</string>
-    <string name="db_customizations_summary">Modify elements of dashboard below. Your selections will override any theme settings.\nToggle off to go back to defaults</string>
+    <string name="db_customizations_summary">Modify elements of dashboard below. Your selections will override any theme settings.\nUse Reset toolbar option to go back to defaults</string>
     <string name="dashboard_colors_title">Colors</string>
     <string name="dashboard_colors_summary">Set custom colors for dashboard background, text, categories etc</string>
     <string name="text_cat_title">Category text</string>
