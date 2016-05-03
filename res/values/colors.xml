@@ -18,7 +18,6 @@
     <color name="black">#000</color>
     <color name="red">#F00</color>
     <color name="blue">#00F</color>
-    <color name="white">#ffffffff</color>
 
     <color name="material_empty_color_light">#FFCED7DB</color>
 
@@ -73,7 +72,7 @@
     <color name="running_processes_apps_ram">#ff009587</color>
     <color name="running_processes_free_ram">#ffced7db</color>
 
-    <color name="card_background">@color/white</color>
+    <color name="card_background">#ffffffff</color>
 
     <color name="switchbar_background_color">#ff37474f</color>
     <color name="switch_accent_color">#ff7fcac3</color>

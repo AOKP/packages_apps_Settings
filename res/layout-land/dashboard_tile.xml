@@ -74,7 +74,8 @@
 
         <View android:id="@+id/tile_divider"
               android:layout_width="match_parent"
-              android:layout_height="1dp" />
+              android:layout_height="1dp"
+              android:background="?android:attr/dividerVertical" />
 
     </LinearLayout>
 

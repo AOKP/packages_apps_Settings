@@ -21,8 +21,8 @@
         android:paddingStart="@dimen/dashboard_category_padding_start"
         android:paddingEnd="@dimen/dashboard_category_padding_end"
         android:orientation="vertical"
-        android:layout_marginBottom="@dimen/dashboard_category_margin_bottom"
         android:background="@color/dashboard_category_background_color"
+        android:layout_marginBottom="@dimen/dashboard_category_margin_bottom"
         android:elevation="@dimen/dashboard_category_elevation">
 
     <TextView android:id="@+id/category_title"

@@ -21,7 +21,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager.NameNotFoundException;
-import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -56,7 +55,6 @@ public class DashboardSummary extends InstrumentedFragment {
     private LayoutInflater mLayoutInflater;
     private ViewGroup mDashboard;
 
-    private static boolean mCustomDashBoard = false;
     private static final int MSG_REBUILD_UI = 1;
     private Handler mHandler = new Handler() {
         @Override
@@ -144,9 +142,6 @@ public class DashboardSummary extends InstrumentedFragment {
         List<DashboardCategory> categories =
                 ((SettingsActivity) context).getDashboardCategories(true);
 
-        mCustomDashBoard = Settings.System.getInt(context.getContentResolver(),
-                Settings.System.DASHBOARD_CUSTOMIZATIONS, 0) == 1;
-
         final int count = categories.size();
 
         for (int n = 0; n < count; n++) {
@@ -154,18 +149,9 @@ public class DashboardSummary extends InstrumentedFragment {
 
             View categoryView = mLayoutInflater.inflate(R.layout.dashboard_category, mDashboard,
                     false);
+
             TextView categoryLabel = (TextView) categoryView.findViewById(R.id.category_title);
             categoryLabel.setText(category.getTitle(res));
-            if (mCustomDashBoard) {
-                categoryView.setBackgroundResource(R.drawable.dashboard_tile_background);
-                categoryView.setBackgroundColor(Settings.System.getInt(context.getContentResolver(),
-                        Settings.System.SETTINGS_BG_COLOR, 0xff000000));
-                categoryLabel.setTextColor(Settings.System.getInt(context.getContentResolver(),
-                        Settings.System.SETTINGS_CATEGORY_TEXT_COLOR, 0xff1976D2));
-                categoryLabel.setTextSize(Settings.System.getIntForUser(context.getContentResolver(),
-                        Settings.System.SETTINGS_CATEGORY_TEXT_SIZE, 14,
-                        UserHandle.USER_CURRENT));
-            }
 
             ViewGroup categoryContent =
                     (ViewGroup) categoryView.findViewById(R.id.category_content);
@@ -194,8 +180,6 @@ public class DashboardSummary extends InstrumentedFragment {
     public void updateTileView(Context context, Resources res, DashboardTile tile,
             ImageView tileIcon, TextView tileTextView, TextView statusTextView, Switch switchBar) {
 
-        final int iconColor = Settings.System.getInt(context.getContentResolver(),
-                Settings.System.SETTINGS_ICON_COLOR, 0xff1976D2);
         if (!TextUtils.isEmpty(tile.iconPkg)) {
             try {
                 Drawable drawable = context.getPackageManager()
@@ -211,11 +195,7 @@ public class DashboardSummary extends InstrumentedFragment {
                                 tintColorValue, true);
                     }
                     drawable.setTintMode(android.graphics.PorterDuff.Mode.SRC_ATOP);
-                    if (mCustomDashBoard) {
-                         drawable.setTint(iconColor);
-                    } else {
-                         drawable.setTint(tintColorValue.data);
-                    }
+                    drawable.setTint(tintColorValue.data);
                 }
                 tileIcon.setImageDrawable(drawable);
             } catch (NameNotFoundException | Resources.NotFoundException e) {
