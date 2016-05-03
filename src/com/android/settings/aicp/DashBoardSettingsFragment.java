@@ -219,6 +219,9 @@ public class DashBoardSettingsFragment extends SettingsPreferenceFragment implem
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.SETTINGS_CATEGORY_TEXT_SIZE,
                                     16);
+                            Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.DASHBOARD_CUSTOMIZATIONS,
+                                    0);
                             getOwner().refreshSettings();
                         }
                     })

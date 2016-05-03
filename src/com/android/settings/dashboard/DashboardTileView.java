@@ -49,6 +49,7 @@ public class DashboardTileView extends FrameLayout implements View.OnClickListen
     private View mDivider;
     private Switch mSwitch;
     private GenericSwitchToggle mSwitchToggle;
+    private boolean mCustomDashBoard = false;
     private int mIconColor;
     private int mDashTextSize = 14;
 
@@ -64,6 +65,9 @@ public class DashboardTileView extends FrameLayout implements View.OnClickListen
         super(context, attrs);
 
         final View view = LayoutInflater.from(context).inflate(R.layout.dashboard_tile, this);
+
+        mCustomDashBoard = Settings.System.getInt(context.getContentResolver(),
+                Settings.System.DASHBOARD_CUSTOMIZATIONS, 0) == 1;
 
         mImageView = (ImageView) view.findViewById(R.id.icon);
 
@@ -88,25 +92,26 @@ public class DashboardTileView extends FrameLayout implements View.OnClickListen
 
         setOnClickListener(this);
         setBackgroundResource(R.drawable.dashboard_tile_background);
-        setBackgroundColor(Settings.System.getInt(context.getContentResolver(),
-            Settings.System.SETTINGS_BG_COLOR, 0xff000000));
-        mDivider.setBackgroundResource(R.drawable.dashboard_tile_background);
-        mDivider.setBackgroundColor(Settings.System.getInt(context.getContentResolver(),
-            Settings.System.SETTINGS_BG_COLOR, 0xff000000));
-        mTitleTextView.setTextColor(Settings.System.getInt(context.getContentResolver(),
-            Settings.System.SETTINGS_TITLE_TEXT_COLOR, 0xff1976D2));
-        mStatusTextView.setTextColor(Settings.System.getInt(context.getContentResolver(),
-            Settings.System.SETTINGS_CATEGORY_TEXT_COLOR, 0xff1976D2));
-        mStatusTextView.setTextSize(Settings.System.getIntForUser(context.getContentResolver(),
-            Settings.System.SETTINGS_TITLE_TEXT_SIZE, 14,
-               UserHandle.USER_CURRENT));
-        mTitleTextView.setTextSize(Settings.System.getIntForUser(context.getContentResolver(),
-            Settings.System.SETTINGS_TITLE_TEXT_SIZE, 18,
-               UserHandle.USER_CURRENT));
-
+        if (mCustomDashBoard) {
+            setBackgroundColor(Settings.System.getInt(context.getContentResolver(),
+                Settings.System.SETTINGS_BG_COLOR, 0xff000000));
+            mDivider.setBackgroundResource(R.drawable.dashboard_tile_background);
+            mDivider.setBackgroundColor(Settings.System.getInt(context.getContentResolver(),
+                Settings.System.SETTINGS_BG_COLOR, 0xff000000));
+            mTitleTextView.setTextColor(Settings.System.getInt(context.getContentResolver(),
+                Settings.System.SETTINGS_TITLE_TEXT_COLOR, 0xff1976D2));
+            mStatusTextView.setTextColor(Settings.System.getInt(context.getContentResolver(),
+                Settings.System.SETTINGS_CATEGORY_TEXT_COLOR, 0xff1976D2));
+            mStatusTextView.setTextSize(Settings.System.getIntForUser(context.getContentResolver(),
+                Settings.System.SETTINGS_TITLE_TEXT_SIZE, 14,
+                   UserHandle.USER_CURRENT));
+            mTitleTextView.setTextSize(Settings.System.getIntForUser(context.getContentResolver(),
+                Settings.System.SETTINGS_TITLE_TEXT_SIZE, 18,
+                   UserHandle.USER_CURRENT));
+            updateDashFont();
+            updateIconColor();
+        }
         setFocusable(true);
-        updateDashFont();
-        updateIconColor();
     }
 
     public TextView getTitleTextView() {

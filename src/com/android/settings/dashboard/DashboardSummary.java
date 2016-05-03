@@ -56,6 +56,7 @@ public class DashboardSummary extends InstrumentedFragment {
     private LayoutInflater mLayoutInflater;
     private ViewGroup mDashboard;
 
+    private static boolean mCustomDashBoard = false;
     private static final int MSG_REBUILD_UI = 1;
     private Handler mHandler = new Handler() {
         @Override
@@ -143,6 +144,9 @@ public class DashboardSummary extends InstrumentedFragment {
         List<DashboardCategory> categories =
                 ((SettingsActivity) context).getDashboardCategories(true);
 
+        mCustomDashBoard = Settings.System.getInt(context.getContentResolver(),
+                Settings.System.DASHBOARD_CUSTOMIZATIONS, 0) == 1;
+
         final int count = categories.size();
 
         for (int n = 0; n < count; n++) {
@@ -150,17 +154,18 @@ public class DashboardSummary extends InstrumentedFragment {
 
             View categoryView = mLayoutInflater.inflate(R.layout.dashboard_category, mDashboard,
                     false);
-
-            categoryView.setBackgroundResource(R.drawable.dashboard_tile_background);
-            categoryView.setBackgroundColor(Settings.System.getInt(context.getContentResolver(),
-                    Settings.System.SETTINGS_BG_COLOR, 0xff000000));
             TextView categoryLabel = (TextView) categoryView.findViewById(R.id.category_title);
             categoryLabel.setText(category.getTitle(res));
-            categoryLabel.setTextColor(Settings.System.getInt(context.getContentResolver(),
-                    Settings.System.SETTINGS_CATEGORY_TEXT_COLOR, 0xff1976D2));
-            categoryLabel.setTextSize(Settings.System.getIntForUser(context.getContentResolver(),
-                    Settings.System.SETTINGS_CATEGORY_TEXT_SIZE, 14,
-                    UserHandle.USER_CURRENT));
+            if (mCustomDashBoard) {
+                categoryView.setBackgroundResource(R.drawable.dashboard_tile_background);
+                categoryView.setBackgroundColor(Settings.System.getInt(context.getContentResolver(),
+                        Settings.System.SETTINGS_BG_COLOR, 0xff000000));
+                categoryLabel.setTextColor(Settings.System.getInt(context.getContentResolver(),
+                        Settings.System.SETTINGS_CATEGORY_TEXT_COLOR, 0xff1976D2));
+                categoryLabel.setTextSize(Settings.System.getIntForUser(context.getContentResolver(),
+                        Settings.System.SETTINGS_CATEGORY_TEXT_SIZE, 14,
+                        UserHandle.USER_CURRENT));
+            }
 
             ViewGroup categoryContent =
                     (ViewGroup) categoryView.findViewById(R.id.category_content);
@@ -190,23 +195,27 @@ public class DashboardSummary extends InstrumentedFragment {
             ImageView tileIcon, TextView tileTextView, TextView statusTextView, Switch switchBar) {
 
         final int iconColor = Settings.System.getInt(context.getContentResolver(),
-                    Settings.System.SETTINGS_ICON_COLOR, 0xff1976D2);
+                Settings.System.SETTINGS_ICON_COLOR, 0xff1976D2);
         if (!TextUtils.isEmpty(tile.iconPkg)) {
             try {
                 Drawable drawable = context.getPackageManager()
                         .getResourcesForApplication(tile.iconPkg).getDrawable(tile.iconRes, null);
                 if (!tile.iconPkg.equals(context.getPackageName()) && drawable != null) {
                     // If this drawable is coming from outside Settings, tint it to match the color.
-                    /* TypedValue tintColorValue = new TypedValue();
+                    TypedValue tintColorValue = new TypedValue();
                     context.getResources().getValue(R.color.external_tile_icon_tint_color,
                             tintColorValue, true);
                     // If tintColorValue is TYPE_ATTRIBUTE, resolve it
                     if (tintColorValue.type == TypedValue.TYPE_ATTRIBUTE) {
                         context.getTheme().resolveAttribute(tintColorValue.data,
                                 tintColorValue, true);
-                    }*/
+                    }
                     drawable.setTintMode(android.graphics.PorterDuff.Mode.SRC_ATOP);
-                    drawable.setTint(iconColor);
+                    if (mCustomDashBoard) {
+                         drawable.setTint(iconColor);
+                    } else {
+                         drawable.setTint(tintColorValue.data);
+                    }
                 }
                 tileIcon.setImageDrawable(drawable);
             } catch (NameNotFoundException | Resources.NotFoundException e) {
