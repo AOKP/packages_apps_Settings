@@ -208,6 +208,12 @@ public class DashBoardSettingsFragment extends SettingsPreferenceFragment implem
                                     Settings.System.DASHBOARD_SWITCHES,
                                     0);
                             Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.DASHBOARD_TILEVIEW_DIVIDERS,
+                                    0);
+                            Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.DASHBOARD_TILEVIEW_DOUBLE_LINES,
+                                    0);
+                            Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.DASHBOARD_COLUMNS,
                                     1);
                             Settings.System.putInt(getOwner().mResolver,
