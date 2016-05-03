@@ -130,7 +130,7 @@ public class DashboardColors extends SettingsPreferenceFragment implements
         mToolbarTextColor =
                 (ColorPickerPreference) findPreference(PREF_TOOLBAR_COLOR);
         intColor = Settings.System.getInt(mResolver,
-                Settings.System.SETTINGS_CATEGORY_TEXT_COLOR, WHITE);
+                Settings.System.SETTINGS_TOOLBAR_TEXT_COLOR, WHITE);
         hexColor = String.format("#%08x", (0xffffffff & intColor));
         mToolbarTextColor.setNewPreviewColor(intColor);
         mToolbarTextColor.setSummary(hexColor);
@@ -185,20 +185,20 @@ public class DashboardColors extends SettingsPreferenceFragment implements
                     Settings.System.SETTINGS_CATEGORY_TEXT_COLOR, intHex);
             preference.setSummary(hex);
             return true;
-        } else if (preference == mIconColor) {
-            hex = ColorPickerPreference.convertToARGB(
-                    Integer.valueOf(String.valueOf(newValue)));
-            intHex = ColorPickerPreference.convertToColorInt(hex);
-            Settings.System.putInt(mResolver,
-                    Settings.System.SETTINGS_ICON_COLOR, intHex);
-            preference.setSummary(hex);
-            return true;
         } else if (preference == mToolbarTextColor) {
             hex = ColorPickerPreference.convertToARGB(
                     Integer.valueOf(String.valueOf(newValue)));
             intHex = ColorPickerPreference.convertToColorInt(hex);
             Settings.System.putInt(mResolver,
                     Settings.System.SETTINGS_TOOLBAR_TEXT_COLOR, intHex);
+            preference.setSummary(hex);
+            return true;
+        } else if (preference == mIconColor) {
+            hex = ColorPickerPreference.convertToARGB(
+                    Integer.valueOf(String.valueOf(newValue)));
+            intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(mResolver,
+                    Settings.System.SETTINGS_ICON_COLOR, intHex);
             preference.setSummary(hex);
             return true;
         }

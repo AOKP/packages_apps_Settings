@@ -113,65 +113,11 @@
             android:key="dashboard_category"
             android:title="@string/dashboard_category">
 
-        <ListPreference
-                android:key="dashboard_columns"
-                android:title="@string/dashboard_columns_title"
-                android:dialogTitle="@string/dashboard_columns_dialog_title"
-                android:entries="@array/dashboard_columns_entries"
-                android:entryValues="@array/dashboard_columns_values"
-                android:summary="@string/dashboard_columns_summary"
-                android:persistent="false" />
-
-        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-                android:key="dashboard_tileview_double_lines"
-                android:title="@string/dashboard_tileview_double_lines_title"
-                android:summary="@string/dashboard_tileview_double_lines_summary"
-                android:defaultValue="false" />
-
-        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-                android:key="dashboard_tileview_dividers"
-                android:title="@string/dashboard_tileview_dividers_title"
-                android:summary="@string/dashboard_tileview_dividers_summary"
-                android:defaultValue="false" />
-
-        <ListPreference
-                android:key="dashboard_switches"
-                android:title="@string/dashboard_switches_title"
-                android:dialogTitle="@string/dashboard_switches_dialog_title"
-                android:entries="@array/dashboard_switches_entries"
-                android:entryValues="@array/dashboard_switches_values"
-                android:summary="@string/dashboard_switches_summary"
-                android:persistent="false" />
-
         <PreferenceScreen
-                android:key="settings_colors"
-                android:title="@string/settings_colors_title"
-                android:fragment="com.android.settings.aicp.DashboardColors"
-                android:summary="@string/settings_colors_summary" />
-
-        <ListPreference
-                android:key="dashboard_font_style"
-                android:entries="@array/dashboard_font_style_entries"
-                android:entryValues="@array/dashboard_font_style_values"
-                android:title="@string/dashboard_font_style_title" />
-
-        <com.android.settings.widget.SeekBarPreferenceCham
-                android:key="settings_category_text_size"
-                android:title="@string/dash_category_text_size"
-                android:max="25"
-                settings:min="4"
-                settings:defaultValue="15"
-                settings:unitsLeft=""
-                settings:unitsRight="dp" />
-
-        <com.android.settings.widget.SeekBarPreferenceCham
-                android:key="settings_title_text_size"
-                android:title="@string/dash_title_text_size"
-                android:max="25"
-                settings:min="4"
-                settings:defaultValue="14"
-                settings:unitsLeft=""
-                settings:unitsRight="dp" />
+                android:fragment="com.android.settings.aicp.DashBoardSettingsFragment"
+                android:key="dashboard_settings"
+                android:title="@string/dashboard_settings_title"
+                android:summary="@string/dashboard_settings_summary" />
 
     </PreferenceCategory>
 
@@ -179,7 +125,7 @@
       android:key="category_doze_options"
       android:title="@string/display_category_doze_options_title" >
 
-        <!-- Doze // Ambient display -->s
+        <!-- Doze // Ambient display -->
         <SwitchPreference
                 android:key="doze"
                 android:title="@string/doze_title"
