@@ -45,6 +45,7 @@ import com.android.settings.HelpUtils;
 import com.android.settings.InstrumentedFragment;
 import com.android.settings.R;
 import com.android.settings.SettingsActivity;
+import com.android.settings.Utils;
 import com.android.settings.widget.SwitchBar;
 
 import java.util.List;
@@ -107,6 +108,10 @@ public class DashboardSummary extends InstrumentedFragment {
         filter.addAction(Intent.ACTION_PACKAGE_REPLACED);
         filter.addDataScheme("package");
         getActivity().registerReceiver(mHomePackageReceiver, filter);
+
+        final IntentFilter airplaneModeFilter
+                = new IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED);
+        getActivity().registerReceiver(mHomePackageReceiver, airplaneModeFilter);
     }
 
     @Override
@@ -167,6 +172,9 @@ public class DashboardSummary extends InstrumentedFragment {
 
                 tileView.setTile(tile);
 
+                if (tile.id == R.id.mobile_networks) {
+                    tileView.setEnabledTile(!Utils.isAirplaneModeEnabled(context));
+                }
                 categoryContent.addView(tileView);
             }
 
