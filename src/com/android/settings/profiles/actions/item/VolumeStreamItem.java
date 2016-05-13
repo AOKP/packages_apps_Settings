@@ -74,8 +74,8 @@ public class VolumeStreamItem implements Item {
             desc.setText(context.getString(R.string.profile_action_none));
         }
 
-        final boolean volumeLinkNotification = Settings.Secure.getInt(context
-                .getContentResolver(), Settings.Secure.VOLUME_LINK_NOTIFICATION, 1) == 1;
+        final boolean volumeLinkNotification = Settings.System.getInt(context
+                .getContentResolver(), Settings.System.VOLUME_LINK_NOTIFICATION, 1) == 1;
         mEnabled = true;
         if (mStreamId == AudioManager.STREAM_NOTIFICATION && volumeLinkNotification) {
             mEnabled = false;
