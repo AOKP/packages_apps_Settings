@@ -26,7 +26,7 @@
 
     <string name="general_options_title">Основные</string>
 
-    <string name="allow_lights_title">Индикатор событий в режиме не беспокоить</string>
+    <string name="allow_lights_title">События в режиме не беспокоить</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Изменить цвет</string>
@@ -51,7 +51,7 @@
     <string name="default_string">По умолчанию</string>
 
     <!-- Volume Steps -->
-    <string name="volume_steps_title">Уровень громкости</string>
+    <string name="volume_steps_title">Уровни громкости</string>
     <string name="volume_steps_alarm_title">Уровень громкости: Будильник</string>
     <string name="volume_steps_dtmf_title">Уровень громкости: DTMF</string>
     <string name="volume_steps_music_title">Уровень громкости: Музыка</string>
@@ -397,22 +397,22 @@
     <!-- Dashboard columns -->
     <string name="dashboard_category">Персонализация настроек</string>
     <string name="dashboard_columns_title">Количество столбцов в настройках</string>
-    <string name="dashboard_columns_summary">Изменение количества отображаемых столбцов в настройках</string>
-    <string name="dashboard_columns_dialog_title">Выбрать количество столбцов</string>
+    <string name="dashboard_columns_summary">Изменение количества столбцов в настройках</string>
+    <string name="dashboard_columns_dialog_title">Количество столбцов</string>
     <string name="dashboard_columns_one">Один</string>
     <string name="dashboard_columns_two">Два</string>
     <string name="dashboard_columns_three">Три</string>
     <string name="dashboard_tileview_double_lines_title">Вид настроек</string>
-    <string name="dashboard_tileview_double_lines_summary">Показывать в две строки</string>
+    <string name="dashboard_tileview_double_lines_summary">В две строки</string>
     <string name="dashboard_tileview_dividers_title">Разделители настроек</string>
-    <string name="dashboard_tileview_dividers_summary">Скрыть разделители настроек</string>
+    <string name="dashboard_tileview_dividers_summary">Скрыть разделители</string>
 
     <!-- Optional Dashboard Switches -->
-    <string name="dashboard_switches_title">Персонализация переключателей</string>
-    <string name="dashboard_switches_off">Переключатели выключены</string>
-    <string name="dashboard_switches_on">Переключатели включены</string>
+    <string name="dashboard_switches_title">Переключатели</string>
+    <string name="dashboard_switches_off">Выключить</string>
+    <string name="dashboard_switches_on">Включить</string>
     <string name="dashboard_switches_summary">Изменение положения панели переключателей</string>
-    <string name="dashboard_switches_dialog_title">Выбор состояния переключателя</string>
+    <string name="dashboard_switches_dialog_title">Переключатели</string>
 
     <!-- Selinux Switch -->
     <string name="selinux_switch_title">Переключение параметров SELinux</string>
@@ -567,6 +567,7 @@
     <string name="pulse_dimen17">24dp</string>
     <string name="pulse_dimen18">25dp</string>
     <string name="pulse_dimen19">26dp</string>
+
     <string name="pulse_custom_div">Расстояние</string>
     <string name="default_div">По умолчанию</string>
     <string name="div1">18</string>
@@ -577,6 +578,7 @@
     <string name="div6">28</string>
     <string name="div7">30</string>
     <string name="div8">32</string>
+
     <string name="default_fill">4dp(По умолчанию)</string>
     <string name="pulse_bar_style">Стиль визуализации</string>
     <string name="default_pulse_empty">1dp(По умолчанию)</string>
@@ -590,6 +592,7 @@
     <string name="pulse_empty2">3dp</string>
     <string name="pulse_empty3">4dp</string>
     <string name="pulse_empty4">0(Нету)</string>
+
     <string name="factor0">Обычный</string>
     <string name="factor1">Расслабленный</string>
     <string name="factor2">Медленный</string>
@@ -599,8 +602,8 @@
 
     <!-- Navbar height -->
     <string name="navigation_bar_size_title">Размер панели навигации</string>
-    <string name="portrait_title">Высота панели навигации</string>
-    <string name="land_vert_title">Ширина панели навигации</string>
+    <string name="portrait_title">Высота</string>
+    <string name="land_vert_title">Ширина</string>
     <string name="land_hor_title">Высота в горизонтальном положении</string>
     <string name="positive_done">Готово</string>
 
