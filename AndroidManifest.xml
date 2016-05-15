@@ -1281,6 +1281,7 @@
 
         <activity android:name="SetFullBackupPassword"
                 android:theme="@style/Theme.SubSettingsDialogWhenLarge"
+                android:label="@string/local_backup_password_title"
                 android:exported="false">
         </activity>
 
