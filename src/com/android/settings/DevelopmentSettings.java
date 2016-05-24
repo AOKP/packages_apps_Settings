@@ -1815,7 +1815,9 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         DialogInterface.OnClickListener onConfirmListener = new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Utils.setOemUnlockEnabled(getActivity(), true);
+                if (which == DialogInterface.BUTTON_POSITIVE) {
+                    Utils.setOemUnlockEnabled(getActivity(), true);
+                }
                 updateAllOptions();
             }
         };
@@ -1824,7 +1826,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
                 .setTitle(R.string.confirm_enable_oem_unlock_title)
                 .setMessage(R.string.confirm_enable_oem_unlock_text)
                 .setPositiveButton(R.string.enable_text, onConfirmListener)
-                .setNegativeButton(android.R.string.cancel, null)
+                .setNegativeButton(android.R.string.cancel, onConfirmListener)
                 .create()
                 .show();
     }
