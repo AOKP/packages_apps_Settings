@@ -30,7 +30,7 @@
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Farbwähler</string>
-    <string name="press_color_to_apply">Wähle unten eine Farbe</string>
+    <string name="press_color_to_apply">Wähle unten eine Farbe, um diese anzuwenden</string>
     <string name="hex">Hex:</string>
     <string name="hex_hint">#ff000000</string>
     <string name="set">Setzen</string>
@@ -337,6 +337,14 @@
     <string name="clock_font_size_22">22</string>
     <string name="clock_font_size_23">23</string>
 
+    <!-- Smart pulldown -->
+    <string name="smart_pulldown_title">Intelligentes Runterziehen</string>
+    <string name="smart_pulldown_summary">Öffnet die Schnelleinstellungen, wenn %1$s Benachrichtigungen vorhanden sind</string>
+    <string name="smart_pulldown_off">Aus</string>
+    <string name="smart_pulldown_dismissable">keine verwerfbaren</string>
+    <string name="smart_pulldown_persistent">keine anhaltenden</string>
+    <string name="smart_pulldown_all">keine verwerfbaren oder anhaltenden</string>
+
     <!-- Quick unlock -->
     <string name="unlock_quick_unlock_control_title">Schnelles Entsperren</string>
     <string name="unlock_quick_unlock_control_summary">Automatisch Entsperren, wenn PIN oder Passwort korrekt eingegeben wurden</string>
@@ -466,6 +474,7 @@
     <string name="info_pref_note_title">Anmerkung</string>
     <string name="smartbar_interface">SmartBar</string>
     <string name="icon_pack_picker_dialog_title">Symbolpakete</string>
+    <string name="invalid_icon_from_uri">Kann das Bild vom Anbieter des Inhalts nicht laden</string>
 
     <!-- Actions dialog and default task values set in ActionPreference xml-->
     <string name="choose_action_title">Aktion wählen</string>
@@ -658,5 +667,8 @@
     <string name="doze_wakeup_doubletap_title">DT2W während Inaktivität</string>
     <string name="doze_wakeup_doubletap_summary_on">Zweimal auf das Display tippen, damit das Gerät bei pulsierendem Bildschirm aus der Inaktivität erwacht</string>
     <string name="doze_wakeup_doubletap_summary_off">Einmal auf das Display tippen, damit das Gerät bei pulsierendem Bildschirm aus der Inaktivität erwacht (Standard)</string>
+
+    <!-- Hide apps from recents -->
+    <string name="hide_from_recents_add_app">App hinzufügen</string>
 
 </resources>
