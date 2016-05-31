@@ -468,7 +468,6 @@
     <string name="info_pref_note_title">Note</string>
     <string name="smartbar_interface">SmartBar</string>
     <string name="icon_pack_picker_dialog_title">Icon packs</string>
-    <string name="invalid_icon_from_uri">Unable to load image from content provider</string>
 
     <!-- Actions dialog and default task values set in ActionPreference xml-->
     <string name="choose_action_title">Choose action</string>
@@ -584,7 +583,7 @@
 
     <string name="default_fill">4dp(default)</string>
     <string name="pulse_bar_style">Pulse Bar Style</string>
-    <string name="default_pulse_empty">1dp(default)</string>
+    <string name="default_pulse_empty">1dp(default)</string>	
     <string name="pulse_filled_block_size">Block Size</string>
     <string name="pulse_empty_block_size">Block Spacing</string>
     <string name="pulse_fill1">5dp</string>

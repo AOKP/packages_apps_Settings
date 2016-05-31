@@ -19,20 +19,11 @@
 
 package com.android.settings.aicp;
 
-import java.io.File;
-
-import com.android.internal.utils.du.ImageHelper;
-
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.net.Uri;
-import android.os.Environment;
 import android.util.Log;
-import android.widget.Toast;
-
-import com.android.settings.R;
 
 public class IconPickHelper {
     private static final String TAG = "IconPickHelper";
@@ -68,39 +59,9 @@ public class IconPickHelper {
                     mListener.iconPicked(iconType, iconPackage, iconName);
                     break;
                 case REQUEST_CODE_GALLERY:
-                    Bitmap b = null;
-                    try {
-                        b = ImageHelper.getBitmapFromUri(mParent, data.getData());
-                    } catch (Exception e) {
-                        Toast.makeText(mParent, mParent.getString(R.string.invalid_icon_from_uri),
-                                Toast.LENGTH_SHORT)
-                                .show();
-                        mListener.imagePicked(null);
-                    }
-                    if (b != null) {
-                        File dir = new File(Environment.getExternalStorageDirectory()
-                                + File.separator
-                                + "dui_icons");
-                        dir.mkdirs();
-                        String fileName = "dui_icons_"
-                                + String.valueOf(System.currentTimeMillis());
-                        Uri newUri = ImageHelper.addBitmapToStorage(dir, fileName, b);
-                        if (newUri == null) {
-                            Toast.makeText(mParent,
-                                    mParent.getString(R.string.invalid_icon_from_uri),
-                                    Toast.LENGTH_SHORT)
-                                    .show();
-                            mListener.imagePicked(null);
-                        } else {
-                            mListener.imagePicked(newUri);
-                        }
-                    } else {
-                        Toast.makeText(mParent, mParent.getString(R.string.invalid_icon_from_uri),
-                                Toast.LENGTH_SHORT)
-                                .show();
-                        mListener.imagePicked(null);
-                    }
-                    break;
+                    Uri uri = data.getData();
+                    Log.d(TAG, uri.toString());
+                    mListener.imagePicked(uri);
             }
         }
     }
