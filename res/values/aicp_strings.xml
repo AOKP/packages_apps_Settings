@@ -40,7 +40,7 @@
 
     <!-- Media art -->
     <string name="media_art_title">Media cover art</string>
-    <string name="media_art_summary">Enable media cover art on the lockscreen</string>
+    <string name="media_art_summary">Enable media cover art on the lock screen</string>
 
     <!-- Sound & Notification Settings -->
     <!-- Linked / unlinked notification volume -->
@@ -576,7 +576,7 @@
 
     <string name="default_fill">4dp(default)</string>
     <string name="pulse_bar_style">Pulse Bar Style</string>
-    <string name="default_pulse_empty">1dp(default)</string>	
+    <string name="default_pulse_empty">1dp(default)</string>
     <string name="pulse_filled_block_size">Block Size</string>
     <string name="pulse_empty_block_size">Block Spacing</string>
     <string name="pulse_fill1">5dp</string>
