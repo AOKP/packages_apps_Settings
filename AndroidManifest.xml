@@ -2309,6 +2309,19 @@
         <!-- Hide Apps from Recents (HAFR) -->
         <activity android:name=".aicp.HAFRAppListActivity" />
 
+        <!-- Doze settings Activity -->
+        <activity android:name="Settings$DozeSettingsFragmentActivity"
+            android:label="@string/doze_settings_title"
+            android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.SHORTCUT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.slim.fragments.DozeSettingsFragment" />
+        </activity>
+
         <!-- AICP activities End -->
 
         <!-- CyanogenMod activities Start -->

@@ -131,4 +131,5 @@ public class Settings extends SettingsActivity {
     public static class FlingSettingsActivity extends SettingsActivity { /* empty */ }
     public static class SmartbarSettingsActivity extends SettingsActivity { /* empty */ }
     public static class HeadsUpSettingsActivity extends SettingsActivity { /* empty */ }
+    public static class DozeSettingsFragmentActivity extends SettingsActivity { /* empty */ }
 }
