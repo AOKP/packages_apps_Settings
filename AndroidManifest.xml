@@ -2191,7 +2191,8 @@
         <!-- Aicp Extras -->
         <activity android:name="Settings$AicpSettingsExternalActivity"
             android:label="@string/aicp_settings_external_title"
-            android:taskAffinity="">
+            android:taskAffinity="com.android.settings"
+            android:parentActivityName="Settings" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -2232,6 +2233,8 @@
         <!-- Navigation settings activity. -->
         <activity android:name="Settings$NavigationSettingsActivity"
                 android:label="@string/navigationbar_settings_title"
+                android:taskAffinity="com.android.settings"
+                android:parentActivityName="Settings"
                 android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -2282,6 +2285,8 @@
         <!-- Navigation settings activity. -->
         <activity android:name="Settings$SmartbarSettingsActivity"
                 android:label="@string/smartbar_settings_title"
+                android:taskAffinity="com.android.settings"
+                android:parentActivityName="Settings"
                 android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -2294,6 +2299,8 @@
         <!-- Navigation settings activity. -->
         <activity android:name="Settings$FlingSettingsActivity"
                 android:label="@string/fling_settings"
+                android:taskAffinity="com.android.settings"
+                android:parentActivityName="Settings"
                 android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -2309,6 +2316,8 @@
         <!-- Doze settings Activity -->
         <activity android:name="Settings$DozeSettingsFragmentActivity"
             android:label="@string/doze_settings_title"
+            android:taskAffinity="com.android.settings"
+            android:parentActivityName="Settings"
             android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
