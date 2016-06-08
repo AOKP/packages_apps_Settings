@@ -29,12 +29,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.nispok.snackbar.Snackbar;
-
+import android.widget.Toast;
 import com.android.internal.widget.LockPatternUtils;
 import com.android.internal.widget.LockPatternView;
 import com.android.settings.R;
-import com.android.settings.Utils;
 import com.android.settings.cyanogenmod.ProtectedAccountView;
 import com.android.settings.cyanogenmod.ProtectedAccountView.OnNotifyAccountReset;
 import com.android.settings.fingerprint.FingerprintUiHelper;
@@ -391,11 +389,11 @@ public class LockPatternActivity extends Activity implements OnNotifyAccountRese
                     if (mRetry >= MAX_PATTERN_RETRY) {
                         setPatternTimeout();
                         mLockPatternView.removeCallbacks(mCancelPatternRunnable);
-                        final String message = getResources().getString(
-                                R.string.lockpattern_too_many_failed_confirmation_attempts,
-                                        FAILED_ATTEMPT_RETRY);
-                        Utils.showSnackbar(message, Snackbar.SnackbarDuration.LENGTH_SHORT,
-                                null, null, getApplicationContext());
+                        Toast.makeText(getApplicationContext(),
+                                getResources().getString(
+                                        R.string.lockpattern_too_many_failed_confirmation_attempts,
+                                        FAILED_ATTEMPT_RETRY),
+                                Toast.LENGTH_SHORT).show();
                         switchToAccount();
                     }
                 }
