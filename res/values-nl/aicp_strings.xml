@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2015 AICP
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Aicp Settings -->
+    <string name="aicp_settings_title">AICP Extras</string>
+    <string name="aicp_settings_external_title">AICP Extern</string>
+    <string name="header_category_personalization">Personalisatie</string>
+    <string name="supersu_title">SuperSU</string>
+    <string name="reset">Herstellen</string>
+    <string name="attention">Attentie</string>
+    <string name="easter_egg_snack">"A. I. C. P."</string>
+
+    <string name="general_options_title">Algemeen</string>
+
+    <string name="allow_lights_title">Verlichting aan tijdens \"Niet storen\"-modus</string>
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Kleurkiezer</string>
+    <string name="press_color_to_apply">Kies hieronder een kleur</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#ff000000</string>
+    <string name="set">Instellen</string>
+    <string name="color_default">Standaard</string>
+
+    <!-- Media art -->
+    <string name="media_art_title">Media cover art</string>
+    <string name="media_art_summary">Media cover art op het vergrendelscherm activeren</string>
+
+    <!-- Sound & Notification Settings -->
+    <!-- Linked / unlinked notification volume -->
+    <string name="link_volume_option_title">Volumes van beltoon en notificatie koppelen</string>
+    <string name="notification_volume_option_title">Volume van notificatie</string>
+    <string name="ring_notification_volume_option_title">Volumes van beltoon en notificatie</string>
+
+    <!-- Hold back to kill timeout -->
+    <string name="hold_back_to_kill_timeout_title">Vertraging bij app afsluiten via Terug-toets</string>
+    <string name="default_string">Standaard</string>
+
+    <!-- Volume Steps -->
+    <string name="volume_steps_title">Volume-stappen</string>
+    <string name="volume_steps_alarm_title">Volume-stappen: Alarm</string>
+    <string name="volume_steps_dtmf_title">Volume-stappen: DTMF-tonen</string>
+    <string name="volume_steps_music_title">Volume-stappen: Muziek</string>
+    <string name="volume_steps_notification_title">Volume-stappen: Notoficatie</string>
+    <string name="volume_steps_ring_title">Volume-stappen: Beltoon</string>
+    <string name="volume_steps_system_title">Volume-stappen: Systeem</string>
+    <string name="volume_steps_voice_call_title">Volume-stappen: Spraak</string>
+    <string name="volume_steps_reset">Herstellen</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
+
+    <!-- Navigation Bar -->
+    <string name="navigation_bar_dimensions_reset_message">Alle grootte-aanpassingen terugzetten naar standaard?</string>
+    <string name="navigation_bar_dimensions_title"><b>Grootte van de navigatiebalk</b></string>
+    <string name="navigation_bar_dimensions_title_summary">Grootte van de navigatiebalk aanpassen</string>
+    <string name="navigation_bar_height_title">Hoogte van de navigatiebalk</string>
+    <string name="navigation_bar_height_summary">Hoogte van de navigatiebalk in portrait-modus</string>
+    <string name="navigation_bar_height_landscape_title">Hoogte van de navigatiebalk (landscape)</string>
+    <string name="navigation_bar_height_landscape_summary">Hoogte de navigatiebalk in landscape-modus.</string>
+    <string name="navigation_bar_width_title">Breedte van de navigatiebalk</string>
+    <string name="navigation_bar_width_summary">Breedte van de navigatiebalk, indien aan de zijkant van het display (landscape)</string>
+    <string name="navigation_bar_size_48_dp_default">48 dp (standaard)</string>
+    <string name="navigation_bar_size_44_dp">44 dp</string>
+    <string name="navigation_bar_size_42_dp_default">42 dp (standaard)</string>
+    <string name="navigation_bar_size_42_dp">42 dp</string>
+    <string name="navigation_bar_size_40_dp">40 dp</string>
+    <string name="navigation_bar_size_36_dp">36 dp</string>
+    <string name="navigation_bar_size_30_dp">30 dp</string>
+    <string name="navigation_bar_size_24_dp">24 dp</string>
+    <string name="navigation_bar_size_0_dp">0 dp (uit)</string>
+    <string name="nav_bar_title">Navigatiebalk</string>
+    <string name="navbar_enable_bar_title">Navigatiebalk-toetsen</string>
+    <string name="navbar_enable_bar_summary">Inschakelen van de on-screen toetsen voor de navigatiebalk</string>
+
+    <!-- Navigation bar button color -->
+    <string name="navbar_button_tint_title">Kleurtint navigatiebalk-toetsen</string>
+    <string name="navbar_button_tint_switch_title">Navigatiebalk-toetsen kleuren</string>
+
+    <!-- Slim lockscreen shortcuts -->
+    <string name="shortcut_action_none">Geen</string>
+    <string name="shortcut_action_longpress">Lang indrukken:</string>
+    <string name="shortcut_action_select_action_longpress">Actie bij lang indrukken:</string>
+    <string name="shortcut_action_select_action">Kies actie:</string>
+    <string name="shortcut_action_select_action_newaction">Kies nieuwe actie:</string>
+    <string name="shortcut_action_reset">Terugzetten</string>
+    <string name="shortcut_action_add">Toevoegen</string>
+    <string name="shortcut_action_reset_message">Alle items terugzetten naar standaard?</string>
+    <string name="shortcut_action_max">Het maximum aantal items is bereikt</string>
+    <string name="shortcut_action_warning">Waarschuwing</string>
+    <string name="shortcut_action_warning_message">Het laatste item kan niet worden gewist</string>
+    <string name="shortcut_action_disable_message">Uitgeschakeld\nVoeg een item toe om deze optie te activeren</string>
+    <string name="shortcut_image_not_valid">De gekozen app heeft geen geldig icoon of staat geen bijsnijden toe. Kies een andere app.</string>
+    <string name="shortcut_duplicate_entry">De gekozen actie kan niet twee keer worden toegevoegd</string>
+    <string name="shortcut_action_help_shortcut">Snelkoppeling</string>
+    <string name="shortcut_action_help_button">Toets</string>
+    <string name="shortcut_action_help_app">App</string>
+    <string name="shortcut_action_help_icon">, terwijl selectie van het icoon de aanpassingsopties toont</string>
+    <string name="shortcut_action_help_main">Om een %1$s toe te voegen, selecteer het \"Plus\" Symbol. Als de %1$s is toegevoegd, zal selectie van de rij het doel veranderen%2$s\n\nOm een %1$s te verwijderen, veegt u in horizontale richting. Verplaats een %1$s in de lijst door het ankerpunt links naar boven of onder te verslepen.\n\nOm te wissen of naar standaar terug te zetten, selecteer het \"Terugzetten\" Symbol.</string>
+    <string name="shortcut_action_help_delete_last_entry">Als alle %1$s uit de lijst worden verwijderd, zal deze hele optie worden gedeactiveerd.</string>
+    <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Als alle %1$s uit de lijst worden verwijderd, zal de tweede PIE-laag worden gedeactiveerd.</string>
+    <string name="shortcuts_applications">Toepassingen</string>
+    <string name="shortcuts_select_custom_app_title">Kies specifieke toepassing</string>
+    <string name="shortcuts_icon_picker_type">Kies icoontype:</string>
+    <string name="shortcuts_icon_default">Standaard</string>
+    <string name="shortcuts_icon_presets">Systeem iconen</string>
+    <string name="shortcuts_icon_custom">Galerij</string>
+    <string name="shortcuts_icon_picker_choose_icon_title">Kies icoon</string>
+    <string name="shortcuts_icon_picker_alarm">Alarm</string>
+    <string name="shortcuts_icon_picker_andy">Andy</string>
+    <string name="shortcuts_icon_picker_battery">Accu</string>
+    <string name="shortcuts_icon_picker_browser">Browser</string>
+    <string name="shortcuts_icon_picker_calendar">Kalender</string>
+    <string name="shortcuts_icon_picker_camera">Camera</string>
+    <string name="shortcuts_icon_picker_cloud">Cloud</string>
+    <string name="shortcuts_icon_picker_contact">Contact</string>
+    <string name="shortcuts_icon_picker_directdial">Direct Kiezen</string>
+    <string name="shortcuts_icon_picker_directmessage">Direct Bericht</string>
+    <string name="shortcuts_icon_picker_drive">Drive</string>
+    <string name="shortcuts_icon_picker_dropbox">Dropbox</string>
+    <string name="shortcuts_icon_picker_email">E-mail</string>
+    <string name="shortcuts_icon_picker_email2">Alternatieve e-mail</string>
+    <string name="shortcuts_icon_picker_evernote">Evernote</string>
+    <string name="shortcuts_icon_picker_facebook">Facebook</string>
+    <string name="shortcuts_icon_picker_favorite">Favoriet</string>
+    <string name="shortcuts_icon_picker_file_browser">Bestandsbeheerder</string>
+    <string name="shortcuts_icon_picker_file_browser2">Alternatieve bestandsbeheerder</string>
+    <string name="shortcuts_icon_picker_fitness">Fitness</string>
+    <string name="shortcuts_icon_picker_gallery">Galerij</string>
+    <string name="shortcuts_icon_picker_gears">Gears</string>
+    <string name="shortcuts_icon_picker_google_small">Google</string>
+    <string name="shortcuts_icon_picker_gplus">Google Plus</string>
+    <string name="shortcuts_icon_picker_gtalk">Hangouts</string>
+    <string name="shortcuts_icon_picker_help">Help</string>
+    <string name="shortcuts_icon_picker_joystick">Joystick</string>
+    <string name="shortcuts_icon_picker_key">Keys/Accounts</string>
+    <string name="shortcuts_icon_picker_laptop">Laptop</string>
+    <string name="shortcuts_icon_picker_notes">Notities</string>
+    <string name="shortcuts_icon_picker_luggage">Reizen</string>
+    <string name="shortcuts_icon_picker_maps">Maps</string>
+    <string name="shortcuts_icon_picker_market">Markt</string>
+    <string name="shortcuts_icon_picker_movie">Films</string>
+    <string name="shortcuts_icon_picker_music">Muziek</string>
+    <string name="shortcuts_icon_picker_nav">Navigatie</string>
+    <string name="shortcuts_icon_picker_phone">Telefoon</string>
+    <string name="shortcuts_icon_picker_package">Pakket</string>
+    <string name="shortcuts_icon_picker_pinterest">Pinterest</string>
+    <string name="shortcuts_icon_picker_play">Play</string>
+    <string name="shortcuts_icon_picker_pocket">Pocket</string>
+    <string name="shortcuts_icon_picker_quicksettings">Snelle instellingen</string>
+    <string name="shortcuts_icon_picker_rss">RSS-Feed</string>
+    <string name="shortcuts_icon_picker_sdcard">SD-Card</string>
+    <string name="shortcuts_icon_picker_search">Zoeken</string>
+    <string name="shortcuts_icon_picker_sms">SMS</string>
+    <string name="shortcuts_icon_picker_tasks">Taken</string>
+    <string name="shortcuts_icon_picker_terminal">Terminal</string>
+    <string name="shortcuts_icon_picker_transit">Transit</string>
+    <string name="shortcuts_icon_picker_tv">TV</string>
+    <string name="shortcuts_icon_picker_twitter">Twitter</string>
+    <string name="shortcuts_icon_picker_unlock">Vrijgeven</string>
+    <string name="reset_message">Alle items terugzetten naar standaard?</string>
+    <string name="lockscreen_shortcuts_title">Mid-Screen snelkoppelingen</string>
+    <string name="lockscreen_shortcuts_summary">Bekijken of wijzigen van de aangepaste snelkoppelingen</string>
+    <string name="lockscreen_shorcuts_launch_type_title">Selectiemodus voor snelkoppeling</string>
+    <string name="lockscreen_shortcuts_single_tap">Eenmaal tikken</string>
+    <string name="lockscreen_shortcuts_double_tap">Tweemaal tikken</string>
+    <string name="lockscreen_shortcuts_longpress">Lang indrukken</string>
+    <string name="help">Help</string>
+    <string name="shortcut_action_app">Eigen App</string>
+    <string name="shortcut_action_home">Startscherm</string>
+    <string name="shortcut_action_back">Terug</string>
+    <string name="shortcut_action_menu">Menu</string>
+    <string name="shortcut_action_ime">Open IME schakelaar</string>
+    <string name="shortcut_action_power_menu">Aan-/Uit-menu</string>
+    <string name="shortcut_action_recent">Recente apps</string>
+    <string name="shortcut_action_power">Scherm uit</string>
+    <string name="shortcut_action_search">Zoeken in App</string>
+
+    <!-- Double tap power button camera vibration toggle -->
+    <string name="dbl_tap_vib_title">Aan-/Uit-knop tweemaal indrukken voor camera-vibratie</string>
+    <string name="dbl_tap_vib_summary">Vibreren als de Aan-/Uit-knop tweemaal wordt ingedrukt.</string>
+
+    <!-- Battery Saver Settings -->
+    <!-- Disable Battery Saver Warning Color -->
+    <string name="battery_saver_color_title">Kleur voor waarschuwing bij batterijbesparing</string>
+    <string name="battery_saver_color_summary">Activeer oranje status- en navigatiebalk bij ingeschakelde batterijbesparing</string>
+
+    <!-- Doze options -->
+    <string name="display_category_doze_options_title">Sluimerscherm</string>
+    <string name="doze_settings_title">Geavanceerde sluimeropties</string>
+    <string name="doze_timeout_title">Timeout voor sluimeren</string>
+    <string name="doze_timeout_summary">Tijd dat het scherm aan blijft voor notificaties</string>
+    <string name="doze_trigger_pickup_title">Gebaar waarmee de telefoon wordt beantwoord</string>
+    <string name="doze_trigger_pickup_summary_on">Sluimer-impuls wordt geactiveerd door gebaar van telefoon opnemen</string>
+    <string name="doze_trigger_pickup_summary_off">Opnemen van de telefoon wordt niet als activering gebruikt</string>
+    <string name="doze_trigger_sigmotion_title">Activering door significante beweging</string>
+    <string name="doze_trigger_sigmotion_summary_on">Sluimer-impuls zal worden geactiveerd door significante bewegingen (sensor)</string>
+    <string name="doze_trigger_sigmotion_summary_off">Significante bewegingen zullen niet worden gebruikt voor het activeren</string>
+    <string name="doze_trigger_notification_title">Activering door notificaties</string>
+    <string name="doze_trigger_notification_summary_on">Sluimer-impuls wordt door notificaties geactiveerd</string>
+    <string name="doze_trigger_notification_summary_off">Notificaties worden niet als activering gebruikt</string>
+    <string name="doze_schedule_title">Sluimer-schema</string>
+    <string name="doze_schedule_summary_on">Voorgedefinieerde herhalingsintervallen (normaal gesproken [1s,10s,30s,60s,120s]) worden gebruikt (standaard)</string>
+    <string name="doze_schedule_summary_off">Notificatie knippert eenmalig in sluimerstand</string>
+    <string name="doze_brightness_title">Helderheidsniveau bij sluimeren</string>
+    <string name="doze_brightness_summary">Helderheidsniveau van het sluimerscherm (% van de max. toegestane helderheid)</string>
+
+    <!-- Doze notification color invert -->
+    <string name="doze_notification_color_invert_title">Kleurinversie</string>
+    <string name="doze_notification_color_invert_summary_off">Kleur van de notificaties bij sluimeren niet omdraaien. Gebruiken bij donkere thema\'s.</string>
+    <string name="doze_notification_color_invert_summary_on">Kleur van de notificaties bij sluimeren omdraaien. Gebruiken bij licht of standaard thema.</string>
+
+    <!-- On-The-Go -->
+    <string name="power_menu_onthego_title">On-The-Go modus</string>
+    <string name="onthego_alpha_title">On-The-Go transparantie</string>
+    <string name="onthego_alpha_summary">Transparantiewaarde voor de On-The-Go overlay.</string>
+
+    <!-- SlimDim -->
+    <string name="dim_nav_buttons_category">Slim Dim</string>
+    <string name="dim_nav_buttons_title">Toetsen dimmen bij inactiviteit</string>
+    <string name="dim_nav_buttons_summary">Navigatietietoetsen dimmen als er een bepaalde tijd geen toetsen gebruikt zijn</string>
+    <string name="dim_nav_buttons_timeout_title">Time out voor het dimmen</string>
+    <string name="dim_nav_buttons_timeout_summary">Tijd (in milliseconden) voordat de toetsen dimmen</string>
+    <string name="dim_nav_buttons_alpha_title">Dim-transparantie</string>
+    <string name="dim_nav_buttons_alpha_summary">Transparantie tot hoever gedimd wordt</string>
+    <string name="dim_nav_buttons_animate_title">Dim-animatie</string>
+    <string name="dim_nav_buttons_animate_summary">Animatie van de dim-transparantie</string>
+    <string name="dim_nav_buttons_animate_duration_title">Animatieduur</string>
+    <string name="dim_nav_buttons_animate_duration_summary">Tijd (in milliseconden) totdat het dimmen de ingestelde waarde bereikt</string>
+    <string name="dim_nav_buttons_touch_anywhere_title">Luister naar scherm-aanraking</string>
+    <string name="dim_nav_buttons_touch_anywhere_summary_on">Raak het scherm aan om het dimmen op te heffen</string>
+    <string name="dim_nav_buttons_touch_anywhere_summary_off">Alleen de navigatiebalk aanraken zorgt voor het opheffen van het dim-effect</string>
+
+    <!-- Less Notification sounds -->
+    <string name="notifications_category_title">Notificaties</string>
+    <string name="less_notification_sounds_title">Minder vaak gebruikte notificatiegeluiden</string>
+    <string name="less_notification_sounds_summary">Beperk de notificaties per app tot een bepaald aantal per ingestelde tijdsperiode</string>
+    <string name="less_notification_sounds_default">Standaardinstelling</string>
+    <string name="less_notification_sounds_3s">3 seconden</string>
+    <string name="less_notification_sounds_5s">5 seconden</string>
+    <string name="less_notification_sounds_10s">10 seconden</string>
+    <string name="less_notification_sounds_15s">15 seconden</string>
+    <string name="less_notification_sounds_30s">30 seconden</string>
+    <string name="less_notification_sounds_45s">45 seconden</string>
+    <string name="less_notification_sounds_1m">1 minuut</string>
+    <string name="less_notification_sounds_2m">2 minuten</string>
+    <string name="less_notification_sounds_5m">5 minuten</string>
+
+<!-- Battery notifications -->
+    <string name="battery_saver_notif_title">Notificatie energiebespaarmodus</string>
+    <string name="battery_saver_notif_summary">Toont een notificatie bij het inschakelen van de energiebespaarmodus</string>
+    <string name="battery_low_notif_title">Notificatie bij lage accuspanning</string>
+    <string name="battery_low_notif_summary">Toont een notificatie bij lage accuspanning</string>
+
+    <!--Status bar date -->
+    <string name="status_bar_date_title">Datum</string>
+    <string name="status_bar_date_none">Verborgen (standaard)</string>
+    <string name="status_bar_date_small">Klein</string>
+    <string name="status_bar_date_normal">Normaal</string>
+    <string name="status_bar_date_format_title">Datumformaat</string>
+    <string name="status_bar_date_style">Datumstijl</string>
+    <string name="status_bar_date_style_normal">Normaal</string>
+    <string name="status_bar_date_style_lowercase">Kleine letters</string>
+    <string name="status_bar_date_style_uppercase">Hoofdletters</string>
+    <string name="status_bar_date_format_custom">Eigen datumformat (Java)</string>
+    <string name="status_bar_date_string_edittext_title">Moet in een datumformaat worden ingevoerd, bijv. dd/MM/yy</string>
+    <string name="status_bar_date_string_edittext_summary">Invoer</string>
+
+    <!-- Status bar - Clock -->
+    <string name="status_bar_clock_category">Klok</string>
+    <string name="clock_color_title">Kleur</string>
+    <string name="status_bar_clock_style_reset">Kleur terugzetten</string>
+    <string name="status_bar_clock_style_reset_message">Klokkleur terugzetten?</string>
+    <string name="clock_font_style_title">Lettertype</string>
+    <string name="clock_font_normal">Normaal</string>
+    <string name="clock_font_italic">Italic</string>
+    <string name="clock_font_bold">Bold</string>
+    <string name="clock_font_bold_italic">Bold &amp; Italic</string>
+    <string name="clock_font_light">Light</string>
+    <string name="clock_font_light_italic">Light &amp; Italic</string>
+    <string name="clock_font_thin">Thin</string>
+    <string name="clock_font_thin_italic">Thin Italic</string>
+    <string name="clock_font_condensed">Condensed</string>
+    <string name="clock_font_condensed_italic">Condensed Italic</string>
+    <string name="clock_font_condensed_light">Condensed Light</string>
+    <string name="clock_font_condensed_light_italic">Condensed Light Italic</string>
+    <string name="clock_font_condensed_bold">Condensed Bold</string>
+    <string name="clock_font_condensed_bold_italic">Condensed Bold Italic</string>
+    <string name="clock_font_medium">Medium</string>
+    <string name="clock_font_medium_italic">Medium Italic</string>
+    <string name="clock_font_black">Black</string>
+    <string name="clock_font_black_italic">Black Italic</string>
+    <string name="clock_font_dancingscript">DancingScript</string>
+    <string name="clock_font_dancingscript_bold">DancingScript Bold</string>
+    <string name="clock_font_comingsoon">ComingSoon</string>
+    <string name="clock_font_notoserif">NotoSerif Normal</string>
+    <string name="clock_font_notoserif_italic">NotoSerif Italic</string>
+    <string name="clock_font_notoserif_bold">NotoSerif Bold</string>
+    <string name="clock_font_notoserif_bold_italic">NotoSerif Bold Italic</string>
+    <string name="clock_font_size_title">Lettergrootte</string>
+    <string name="status_bar_show_clock_second_title">Seconden</string>
+    <string name="clock_font_size_4">4</string>
+    <string name="clock_font_size_5">5</string>
+    <string name="clock_font_size_6">6</string>
+    <string name="clock_font_size_7">7</string>
+    <string name="clock_font_size_8">8</string>
+    <string name="clock_font_size_9">9</string>
+    <string name="clock_font_size_10">10</string>
+    <string name="clock_font_size_11">11</string>
+    <string name="clock_font_size_12">12</string>
+    <string name="clock_font_size_13">13</string>
+    <string name="clock_font_size_14">14</string>
+    <string name="clock_font_size_15">15</string>
+    <string name="clock_font_size_16">16</string>
+    <string name="clock_font_size_17">17</string>
+    <string name="clock_font_size_18">18</string>
+    <string name="clock_font_size_19">19</string>
+    <string name="clock_font_size_20">20</string>
+    <string name="clock_font_size_21">21</string>
+    <string name="clock_font_size_22">22</string>
+    <string name="clock_font_size_23">23</string>
+
+    <!-- Quick unlock -->
+    <string name="unlock_quick_unlock_control_title">Snel ontgrendelen</string>
+    <string name="unlock_quick_unlock_control_summary">Automatisch ontgrendelen als de PIN-code of het wachtwoord correct is ingevoerd</string>
+
+    <!-- Keyboard and Input ASS methods  -->
+    <string name="title_keyboard_input">Geavanceerde opties</string>
+    <string name="disable_fullscreen_keyboard_title">Toetsenbord op volledig scherm uitschakelen</string>
+    <string name="disable_fullscreen_keyboard_summary">In landscape-modus zal het toetsenbord nooit het volledige scherm gebruiken</string>
+    <string name="keyboard_rotation_toggle_title">Automatische toetsenbord-rotatie</string>
+    <string name="keyboard_rotation_toggle_summary">Automatisch roteren afdwingen als het toetsenbord wordt getoond</string>
+    <string name="keyboard_rotation_timeout_title">Timeout van de automatische rotatie</string>
+    <string name="keyboard_rotation_timeout_summary">Schakelt de sensor voor automatisch roteren uit, <xliff:g id="rotate_timeout">%1$s</xliff:g> seconden nadat het toetsenbord is verborgen</string>
+    <string name="keyboard_rotation_dialog">Deze optie dwingt automatisch roteren tijdelijk af, als het toetsenbord getoond wordt. Deze optie werkt niet als automatisch roteren al is ingeschakeld.</string>
+    <string name="show_enter_key_title">Toon enter-toets</string>
+    <string name="show_enter_key_summary">Toon enter-toets in plaats van emoticons</string>
+
+    <!-- Battery stats reset -->
+    <string name="battery_stats_reset">Statistieken terugzetten</string>
+    <string name="battery_stats_message">De statistieken van het accugebruik worden terug gezet</string>
+    <string name="ok_string">OK</string>
+
+    <!-- Slim Recent App Sidebar  -->
+    <string name="recent_panel_category">Slim Recents</string>
+    <string name="recent_app_sidebar_title">App-zijbalk</string>
+    <string name="recent_app_sidebar_summary">Toon app-snelkoppelingen aan de andere rand</string>
+    <string name="recent_app_sidebar_style_title">Stijl van de app-zijbalk</string>
+    <string name="recent_app_sidebar_style_summary">Verander de stijl van de app-zijbalk</string>
+    <string name="recent_app_sidebar_hide_labels_title">Verberg icoon-labels</string>
+    <string name="recent_app_sidebar_label_color_title">Kleur van het label</string>
+    <string name="recent_app_sidebar_bg_color_title">Achtergrondkleur</string>
+    <string name="recent_app_sidebar_scale_title">Grootte</string>
+
+    <!-- Wakelock blocker -->
+    <string name="wakelock_blocker_title">Wakelock Blocker</string>
+    <string name="wakelock_blocker_summary">Blokkeert systeem-wakelocks</string>
+    <string name="wakelock_blocker_save">Opslaan</string>
+    <string name="wakelock_list_header">Beschikbare wakelocks</string>
+    <string name="wakelock_blocker_reload">Opnieuw laden</string>
+    <string name="wakelock_blocker_warning_title">Ga voorzichtig door</string>
+    <string name="wakelock_blocker_warning">Blokkeren van wakelocks kan tot instabiliteit, crashes of dataverlies leiden</string>
+
+    <!-- UI debug setting: show CPU info? [CHAR LIMIT=25] -->
+    <string name="show_cpu_info">Toon CPU-info</string>
+    <!-- UI debug setting: show cpu usage summary [CHAR LIMIT=50] -->
+    <string name="show_cpu_info_summary">Scherm overlay toont actuele CPU-info</string>
+
+    <!-- Snackbar action button -->
+    <string name="dev_settings_action_button">Instellingen</string>
+
+    <!-- Dashboard settings -->
+    <string name="dashboard_category">Dashboard instellingen</string>
+    <string name="dashboard_columns_title">Dashboard kolommen</string>
+    <string name="dashboard_columns_summary">Pas het aantal kolommen in het dashboard aan</string>
+    <string name="dashboard_columns_dialog_title">Kies dashboard kolommen</string>
+    <string name="dashboard_columns_one">Een</string>
+    <string name="dashboard_columns_two">Twee</string>
+    <string name="dashboard_columns_three">Drie</string>
+    <string name="dashboard_tileview_double_lines_title">Dashboard titel</string>
+    <string name="dashboard_tileview_double_lines_summary">Toon tegelnamen op het dashboard in 2 regels</string>
+    <string name="dashboard_tileview_dividers_title">Dashboard verdelers</string>
+    <string name="dashboard_tileview_dividers_summary">Verberg verdelers tussen de tegelnamen op het dashboard</string>
+
+    <!-- Optional Dashboard Switches -->
+    <string name="dashboard_switches_title">Dashboard schakelaars</string>
+    <string name="dashboard_switches_off">Schakelt Uit</string>
+    <string name="dashboard_switches_on">Schakelt Aan</string>
+    <string name="dashboard_switches_summary">Verander de positie van de dashboard schakelaars</string>
+    <string name="dashboard_switches_dialog_title">Kies schakeloptie</string>
+
+    <!-- Selinux Switch -->
+    <string name="selinux_switch_title">SELinux-Switch opties</string>
+    <string name="selinux_switch_summary">SELinux is een set van verschillende kernel-wijzigingeen en \"user-space\" tools. Een aanpassing in de modus kan leiden tot ongewenste resultaten. Gebruiken op eigen risico!</string>
+    <string name="selinux_title">SELinux-modus</string>
+    <string name="selinux_permissive_title">Tolerant</string>
+    <string name="selinux_enforcing_title">Afgedwongen</string>
+    <string name="selinux_permissive_toast_title">SELinux-modus ingesteld op \"tolerant\"!</string>
+
+    <!-- Navbar buttons rotating icons -->
+    <string name="nav_buttons_rotation_title">Animatie voor icoon-rotatie</string>
+    <string name="nav_buttons_rotation_summary">Iconen laten roteren als het scherm wordt gedraaid of de navigatiebalk opnieuw wordt opgebouwd.</string>
+
+    <!-- Date position -->
+    <string name="clock_date_position">Datumpositie</string>
+    <string name="clock_date_right">Rechts van de tijd</string>
+    <string name="clock_date_left">Links van de tijd</string>
+
+    <!-- The volume key answer -->
+    <string name="volume_answer_call_title">Oproep beantwoorden met volumetoets</string>
+    <string name="volume_answer_call_summary">Oproep beantwoorden met \"Volume up\"-toets</string>
+
+    <!-- Nfc settings -->
+    <string name="nfc_polling_mode_title">NFC transfermodus</string>
+    <string name="nfc_polling_mode_screen_off">Beeldscherm uit</string>
+    <string name="nfc_polling_mode_screen_locked">Beeldscherm aan en vergrendeld</string>
+    <string name="nfc_polling_mode_screen_unlocked">Beeldscherm aan en ontgrendeld (standaard)</string>
+
+    <!-- Nfc sound mode -->
+    <string name="nfc_sound_mode_title">Geluid bij NFC verbinding</string>
+    <string name="nfc_sound_mode_default">Geluid</string>
+    <string name="nfc_sound_mode_vibration">Vibratie</string>
+    <string name="nfc_sound_mode_mute">Mute</string>
+
+    <!-- Power menu torch -->
+    <string name="power_menu_torch_title">Zaklamp</string>
+
+    <string name="aicp_navbar_settings">De Navigatiebalk</string>
+
+    <!-- Navigation Bar -->
+    <string name="navbar_interface_title">Interface</string>
+    <string name="navbar_size">Grootte van de balk</string>
+    <string name="navbar_mode">Navigatiemodus</string>
+    <string name="navbar_visibility">Navigatiebalk inschakelen</string>
+    <string name="navigationbar_settings_title">Navigatie</string>
+    <string name="aosp_navigation_bar">Navigatiebalk</string>
+    <string name="aosp_navigation_bar_settings">Instellingen van de navigatiebalk</string>
+    <string name="navigationbar_settings_summary">Stijl en gedrag van de navigatie aanpassen</string>
+    <string name="navbar_general_title">Meer instellingen</string>
+    <string name="navigation_bar_left_title">Modus voor linkshandigen</string>
+    <string name="navigation_bar_left_summary">Plaatst de navigatiebalk aan de linkerkant van het scherm, indien in landscape-modus</string>
+    <string name="info_pref_note_title">Opmerking</string>
+    <string name="smartbar_interface">SmartBar</string>
+    <string name="icon_pack_picker_dialog_title">Icoonpakketten</string>
+
+    <!-- Actions dialog and default task values set in ActionPreference xml-->
+    <string name="choose_action_title">Actie kiezen</string>
+    <string name="action_entry_default_action">Standaard instellingen</string>
+    <string name="action_entry_select_app">App selecteren</string>
+    <string name="action_entry_custom_action">Kies aangepaste actie</string>
+    <string name="action_value_default_action">action_default</string>
+    <string name="action_value_select_app">action_app</string>
+    <string name="action_value_custom_action">action_custom</string>
+
+    <string name="action_value_default_action">standaard</string>
+    <string name="action_value_select_app">app</string>
+    <string name="action_value_back">task_back</string>
+    <string name="action_value_home">task_home</string>
+    <string name="action_value_search_assist">task_assist</string>
+    <string name="action_value_recent_apps">task_recents</string>
+    <string name="action_value_voice_search">task_voice_search</string>
+    <string name="action_value_menu">task_menu</string>
+
+    <!-- Fling -->
+    <string name="fling_settings">Fling instellingen</string>
+    <string name="fling_interface">Fling gebaar-interface</string>
+    <string name="fling_enable_title">Fling inschakelen</string>
+    <string name="fling_back_home_policy">De functies Terug en \"Home\" moeten altijd worden ingesteld. Om de toewijzing voor Terug en \"Home\" te veranderen, moet eerst de gewenste opdracht worden ingesteld</string>
+    <string name="fling_split_bar_policy">Als alleen een actie voor links of rechts is toegewezen, geldt de actie voor de volledige balk</string>
+    <string name="fling_def_summary">Geen actie ingesteld</string>
+    <string name="fling_swipe_actions">Veeggebaren</string>
+    <string name="fling_tap_actions">Tikgebaren</string>
+    <string name="fling_short_swipe_right">Korte veegbeweging naar rechts</string>
+    <string name="fling_short_swipe_left">Korte veegbeweging naar links</string>
+    <string name="fling_long_swipe_right">Lange veegbeweging naar rechts</string>
+    <string name="fling_long_swipe_left">Lange veegbeweging naar links</string>
+    <string name="fling_right_up_swipe">Veegbeweging naar rechtsboven</string>
+    <string name="fling_left_up_swipe">Veegbeweging naar linksboven</string>
+    <string name="fling_single_tap">Eenmaal rechts tikken</string>
+    <string name="fling_double_tap">Tweemaal rechts tikken</string>
+    <string name="fling_long_press">Lang indrukken rechts</string>
+    <string name="fling_single_left_tap">Eenmaal links tikken</string>
+    <string name="fling_double_left_tap">Tweemaal links tikken</string>
+    <string name="fling_long_left_press">Lang indrukken links</string>
+    <string name="long_swipe_portrait_title">Portrait</string>
+    <string name="long_swipe_landscape_title">Landscape</string>
+    <string name="right_swipe_title">Naar rechts vegen</string>
+    <string name="left_swipe_title">Naar links vegen</string>
+    <string name="up_swipe_title">Naar boven vegen</string>
+    <string name="down_swipe_title">Naar onder vegen</string>
+    <string name="long_swipe_reset">Terugzetten</string>
+    <string name="fling_advanced">Meer instellingen</string>
+    <string name="fling_long_swipe_title">Drempelwaarde voor lange veegbeweging</string>
+    <string name="fling_long_swipe_summary">Fijninstelling voor lange veegbeweging gebaseerd op procentuele breedte en hoogte van de Fling interface</string>
+    <string name="fling_trails_enable_title">Spoor voor veegbewegingen inschakelen</string>
+    <string name="fling_trails_enable_summary">Toont een spoor bij veegbewegingen</string>
+    <string name="fling_trails_color_title">Kleur van het spoor</string>
+    <string name="fling_appearance">Uiterlijk</string>
+    <string name="fling_show_logo_title">Toon Fling-logo</string>
+    <string name="fling_animate_logo_title">Bewegend logo</string>
+    <string name="fling_animate_logo_summary">Het logo beweegt bij aanraking</string>
+    <string name="fling_logo_color">Kleur van het logo</string>
+    <string name="fling_logo_custom_logo_pick_title">Aangepast icoon als logo</string>
+    <string name="fling_logo_custom_logo_image_pick_title">Aangepast plaatje als logo</string>
+    <string name="fling_logo_custom_logo_reset_title">Logo-icoon terugzetten</string>
+    <string name="fling_show_ripple_title">Toon rimpel-effect</string>
+    <string name="fling_show_ripple_summary">Toon rimpel-effect bij aanraking</string>
+    <string name="fling_ripple_color">Kleur van de rimpels</string>
+    <string name="fling_longpress_timeout_label_left">Minder vertraging</string>
+    <string name="fling_longpress_timeout_label_right">Meer vertraging</string>
+    <string name="fling_longpress_title">Vertraging bij lang drukken</string>
+    <string name="fling_longpress_summary">Verleng of verkort de tijd die het duurt voordat een opdracht wordt uitgevoerd bij \"lang indrukken\"</string>
+
+    <!-- Pulse navigation bar music visualizer -->
+    <string name="pulse_help_policy_notice_title">Over Pulse</string>
+    <string name="pulse_help_policy_notice_summary">\"Pulse\" is een prachtige audio-visualisatie in de vorm van een meerkanaals equalizer in de navigatiebalk. \"Pulse\" werkt helaas niet met alle audiobronnen, als de muziek over de speaker wordt afgespeeld. Druk nogmaals op Play/Pause nadat de Pulse-grootte is aangepast.</string>
+    <string name="pulse_settings">Pulse</string>
+    <string name="pulse_settings_summary">Audio-visualisatie in de navigatiebalk</string>
+    <string name="fling_show_pulse_title">Pulse tonen</string>
+    <string name="fling_show_pulse_summary">Toont de audio-visualisatie in de navigatiebalk</string>
+    <string name="fling_pulse_color">Kleur voor Pulse</string>
+    <string name="eos_fling_lavalamp_title">Lavalamp inschakelen</string>
+    <string name="eos_fling_lavalamp_summary">Pulse gebruikt een lavalamp-achtige kleurstelling voor de weergave</string>
+
+    <string name="pulse_custom_dimen">Breedte van de Puls-balk</string>
+    <string name="pulse_dimen0">Standaard</string>
+    <string name="pulse_dimen1">7dp</string>
+    <string name="pulse_dimen2">8dp</string>
+    <string name="pulse_dimen3">9dp</string>
+    <string name="pulse_dimen4">10dp</string>
+    <string name="pulse_dimen5">11dp</string>
+    <string name="pulse_dimen6">12dp</string>
+    <string name="pulse_dimen7">13dp</string>
+    <string name="pulse_dimen8">15dp</string>
+    <string name="pulse_dimen9">16dp</string>
+    <string name="pulse_dimen10">17dp</string>
+    <string name="pulse_dimen11">18dp</string>
+    <string name="pulse_dimen12">19dp</string>
+    <string name="pulse_dimen13">20dp</string>
+    <string name="pulse_dimen14">21dp</string>
+    <string name="pulse_dimen15">22dp</string>
+    <string name="pulse_dimen16">23dp</string>
+    <string name="pulse_dimen17">24dp</string>
+    <string name="pulse_dimen18">25dp</string>
+    <string name="pulse_dimen19">26dp</string>
+
+    <string name="pulse_custom_div">Tussenruimte in de Pulse-balk</string>
+    <string name="default_div">Standaard</string>
+    <string name="div1">18</string>
+    <string name="div2">20</string>
+    <string name="div3">22</string>
+    <string name="div4">24</string>
+    <string name="div5">26</string>
+    <string name="div6">28</string>
+    <string name="div7">30</string>
+    <string name="div8">32</string>
+
+    <string name="default_fill">4dp (standaard)</string>
+    <string name="pulse_bar_style">Stijl van de Pulse-balk</string>
+    <string name="default_pulse_empty">1dp (standaard)</string>
+    <string name="pulse_filled_block_size">Grootte van de blokken</string>
+    <string name="pulse_empty_block_size">Tussenruimte van de blokken</string>
+    <string name="pulse_fill1">5dp</string>
+    <string name="pulse_fill2">6dp</string>
+    <string name="pulse_fill3">7dp</string>
+    <string name="pulse_fill4">8dp</string>
+    <string name="pulse_empty1">2dp</string>
+    <string name="pulse_empty2">3dp</string>
+    <string name="pulse_empty3">4dp</string>
+    <string name="pulse_empty4">0dp (geen tussenruimte)</string>
+
+    <string name="factor0">Normaal</string>
+    <string name="factor1">Ontspannen</string>
+    <string name="factor2">Langzaam</string>
+    <string name="factor3">Hyper</string>
+    <string name="factor4">Krankzinnig</string>
+    <string name="pulse_custom_fudge_factor">Reactietijd van de EQ-balken</string>
+
+    <!-- Navbar height -->
+    <string name="navigation_bar_size_title">Grootte van de balk</string>
+    <string name="portrait_title">Hoogte in portrait-modus</string>
+    <string name="land_vert_title">Breedte in landscape-modus</string>
+    <string name="land_hor_title">Hoogte in landscape-modus</string>
+    <string name="positive_done">Klaar</string>
+
+    <!-- SmartBar -->
+    <string name="smartbar_category">SmartBar</string>
+    <string name="smartbar_settings_title">SmartBar instellingen</string>
+    <string name="smartbar_editor_title">Toetsen-editor in-/uitschakelen</string>
+    <string name="smartbar_editor_summary">Middellang drukken en trekken om de positie te veranderen. Lang drukken om het menu te tonen. De toetsposities kunnen veranderd worden wanneer het menu getoond wordt.</string>
+    <string name="smartbar_context_menu_position_title">Positie van de context-afhankelijke toetsen</string>
+    <string name="smartbar_context_menu_position_summary">De positie van de context-afhankelijke toetsen, zoals de menu- of invoerkeuze, bevestigen.</string>
+    <string name="smartbar_right">Rechts</string>
+    <string name="smartbar_left">Links</string>
+    <string name="smartbar_button_animation_title">Toets-animatie bij aanraken</string>
+    <string name="smartbar_button_animation_summary">Animatietype voor de primaire toetsen instellen, als deze worden ingedrukt</string>
+    <string name="smartbar_button_animation_ripple">Golven</string>
+    <string name="smartbar_button_animation_spring">Veren</string>
+    <string name="smartbar_factory_reset_title">Standaard instellingen terugzetten</string>
+    <string name="smartbar_factory_reset_summary">SmartBar naar de standaard instellingen terugzetten</string>
+    <string name="smartbar_factory_reset_confirm">Weet je zeker dat je de SmartBar naar de standaard instellingen wil terugzetten?</string>
+    <string name="smartbar_ime_action_title">Akties voor invoermethoden</string>
+    <string name="smartbar_ime_action_summary">Instellen welke toetsen getoond worden als een on-screen toetsenbord actief is</string>
+    <string name="smartbar_ime_action_none">Niets</string>
+    <string name="smartbar_ime_action_arrows">Invoer-pijlen</string>
+    <string name="smartbar_ime_action_switcher">Toetsenbord schakelaar</string>
+
+    <!-- Heads Up Timeout -->
+    <string name="heads_up_time_out_title">Time out</string>
+    <string name="heads_up_time_out_summary">Notificaties worden gedurende <xliff:g id="number">%d</xliff:g> seconden getoond</string>
+    <string name="heads_up_time_out_2sec">2 seconden</string>
+    <string name="heads_up_time_out_4sec">4 seconden</string>
+    <string name="heads_up_time_out_5sec">5 seconden</string>
+    <string name="heads_up_time_out_6sec">6 seconden</string>
+    <string name="heads_up_time_out_8sec">8 seconden</string>
+    <string name="heads_up_time_out_10sec">10 seconden</string>
+
+    <!-- Heads Up Snooze -->
+    <string name="heads_up_snooze">Sluimeren</string>
+    <string name="heads_up_snooze_disabled_summary">Sluimeren is uitgeschakeld</string>
+    <string name="heads_up_snooze_summary">Heads up-notificaties worden gedurende de volgende <xliff:g id="number">%d</xliff:g> minu(u)t(en) niet getoond voor deze app, als de notificatie naar boven geveegd wordt.</string>
+    <string name="heads_up_snooze_1min">1 minuut</string>
+    <string name="heads_up_snooze_5min">5 minuten</string>
+    <string name="heads_up_snooze_10min">10 minuten</string>
+    <string name="heads_up_snooze_15min">15 minuten</string>
+    <string name="heads_up_snooze_20min">20 minuten</string>
+    <string name="heads_up_snooze_30min">30 minuten</string>
+    <string name="heads_up_snooze_45min">45 minuten</string>
+    <string name="heads_up_snooze_60min">60 minuten</string>
+    <string name="force_headsup_title">Heads up-notificaties afdwingen</string>
+    <string name="force_headsup_summary">Heads up-notificaties afdwingen voor alle apps</string>
+
+    <!-- DoubleTap2Wake Doze -->
+    <string name="doze_wakeup_doubletap_title">DT2W tijdens sluimeren</string>
+    <string name="doze_wakeup_doubletap_summary_on">Tweemaal op het beeldscherm tikken om het apparaat te wekken in sluimerstand</string>
+    <string name="doze_wakeup_doubletap_summary_off">Eenmaal op het beeldscherm tikken om het apparaat te wekken in sluimerstand (standaard)</string>
+
+    <!-- Hide apps from recents -->
+    <string name="hide_from_recents_add_app">App toevoegen</string>
+
+</resources>
