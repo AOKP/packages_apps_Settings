@@ -167,9 +167,6 @@ public class ApnSettings extends SettingsPreferenceFragment implements
                 SubscriptionManager.INVALID_SUBSCRIPTION_ID);
 
         mImsi = activity.getIntent().getStringExtra(EXTRA_IMSI);
-        if (mImsi == null) {
-            mImsi = "";
-        }
 
         mUm = (UserManager) getSystemService(Context.USER_SERVICE);
 
@@ -435,7 +432,7 @@ public class ApnSettings extends SettingsPreferenceFragment implements
 
         ContentValues values = new ContentValues();
         values.put(APN_ID, mSelectedKey);
-        if (TelephonyManager.getDefault().getPhoneCount() > 1) {
+        if (TelephonyManager.getDefault().getPhoneCount() > 1 && mImsi != null) {
             Uri qUri = Uri.withAppendedPath(PREFERRED_MSIM_APN_URI,
                     String.valueOf(mSubscriptionInfo.getSubscriptionId()));
             qUri = Uri.withAppendedPath(qUri, mImsi);
@@ -449,7 +446,7 @@ public class ApnSettings extends SettingsPreferenceFragment implements
         String key = null;
 
         Uri uri;
-        if (TelephonyManager.getDefault().getPhoneCount() > 1) {
+        if (TelephonyManager.getDefault().getPhoneCount() > 1 && mImsi != null)  {
             uri = Uri.withAppendedPath(PREFERRED_MSIM_APN_URI,
                     String.valueOf(mSubscriptionInfo.getSubscriptionId()));
             uri = Uri.withAppendedPath(uri, mImsi);
