@@ -473,8 +473,6 @@
     <string name="action_value_select_app">action_app</string>
     <string name="action_value_custom_action">action_custom</string>
 
-    <string name="action_value_default_action">default</string>
-    <string name="action_value_select_app">app</string>
     <string name="action_value_back">task_back</string>
     <string name="action_value_home">task_home</string>
     <string name="action_value_search_assist">task_assist</string>
