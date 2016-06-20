@@ -7,7 +7,8 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
     android-support-v13 \
     jsr305 \
     org.cyanogenmod.platform.internal \
-    android-snackbar
+    android-snackbar \
+    libphonenumber
 
 LOCAL_MODULE_TAGS := optional
 
