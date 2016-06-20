@@ -27,7 +27,7 @@
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Kleurkiezer</string>
-    <string name="press_color_to_apply">Kies hieronder een kleur</string>
+    <string name="press_color_to_apply">Kies hieronder een kleur:</string>
     <string name="hex">Hex:</string>
     <string name="hex_hint">#ff000000</string>
     <string name="set">Instellen</string>
@@ -52,7 +52,7 @@
     <string name="volume_steps_alarm_title">Volume-stappen: Alarm</string>
     <string name="volume_steps_dtmf_title">Volume-stappen: DTMF-tonen</string>
     <string name="volume_steps_music_title">Volume-stappen: Muziek</string>
-    <string name="volume_steps_notification_title">Volume-stappen: Notoficatie</string>
+    <string name="volume_steps_notification_title">Volume-stappen: Notificatie</string>
     <string name="volume_steps_ring_title">Volume-stappen: Beltoon</string>
     <string name="volume_steps_system_title">Volume-stappen: Systeem</string>
     <string name="volume_steps_voice_call_title">Volume-stappen: Spraak</string>
@@ -188,7 +188,7 @@
     <string name="shortcut_action_power_menu">Aan-/Uit-menu</string>
     <string name="shortcut_action_recent">Recente apps</string>
     <string name="shortcut_action_power">Scherm uit</string>
-    <string name="shortcut_action_search">Zoeken in App</string>
+    <string name="shortcut_action_search">Zoeken in app</string>
 
     <!-- Double tap power button camera vibration toggle -->
     <string name="dbl_tap_vib_title">Aan-/Uit-knop tweemaal indrukken voor camera-vibratie</string>
@@ -227,7 +227,7 @@
     <!-- On-The-Go -->
     <string name="power_menu_onthego_title">On-The-Go modus</string>
     <string name="onthego_alpha_title">On-The-Go transparantie</string>
-    <string name="onthego_alpha_summary">Transparantiewaarde voor de On-The-Go overlay.</string>
+    <string name="onthego_alpha_summary">Transparantiewaarde voor de On-The-Go overlay</string>
 
     <!-- SlimDim -->
     <string name="dim_nav_buttons_category">Slim Dim</string>
@@ -352,7 +352,7 @@
 
     <!-- Battery stats reset -->
     <string name="battery_stats_reset">Statistieken terugzetten</string>
-    <string name="battery_stats_message">De statistieken van het accugebruik worden terug gezet</string>
+    <string name="battery_stats_message">De statistieken van het accugebruik worden teruggezet</string>
     <string name="ok_string">OK</string>
 
     <!-- Slim Recent App Sidebar  -->
