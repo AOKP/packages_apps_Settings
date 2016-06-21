@@ -69,8 +69,8 @@
   <!-- About phone screen, Free memory info -->
   <string name="mem_info">Μνήμη</string>
   <!-- About phone screen, AICP device maintainer name -->
-  <string name="device_maintainer">Συντηρητής συσκευή</string>
-  <string name="device_maintainers">Συντηρητές συσκευή</string>
+  <string name="device_maintainer">Συντηρητής συσκευής</string>
+  <string name="device_maintainers">Συντηρητές συσκευής</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">Ενημερώσεις CyanogenMod</string>
   <!-- Settings switch for updating Cyanogen recovery -->
