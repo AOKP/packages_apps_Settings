@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2015 AICP
+
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
+
           http://www.apache.org/licenses/LICENSE-2.0
+
      Unless required by applicable law or agreed to in writing, software
      distributed under the License is distributed on an "AS IS" BASIS,
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -27,7 +30,7 @@
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Kleurkiezer</string>
-    <string name="press_color_to_apply">Kies hieronder een kleur:</string>
+    <string name="press_color_to_apply">Kies hieronder een kleur</string>
     <string name="hex">Hex:</string>
     <string name="hex_hint">#ff000000</string>
     <string name="set">Instellen</string>
@@ -52,7 +55,7 @@
     <string name="volume_steps_alarm_title">Volume-stappen: Alarm</string>
     <string name="volume_steps_dtmf_title">Volume-stappen: DTMF-tonen</string>
     <string name="volume_steps_music_title">Volume-stappen: Muziek</string>
-    <string name="volume_steps_notification_title">Volume-stappen: Notificatie</string>
+    <string name="volume_steps_notification_title">Volume-stappen: Notoficatie</string>
     <string name="volume_steps_ring_title">Volume-stappen: Beltoon</string>
     <string name="volume_steps_system_title">Volume-stappen: Systeem</string>
     <string name="volume_steps_voice_call_title">Volume-stappen: Spraak</string>
@@ -188,7 +191,7 @@
     <string name="shortcut_action_power_menu">Aan-/Uit-menu</string>
     <string name="shortcut_action_recent">Recente apps</string>
     <string name="shortcut_action_power">Scherm uit</string>
-    <string name="shortcut_action_search">Zoeken in app</string>
+    <string name="shortcut_action_search">Zoeken in App</string>
 
     <!-- Double tap power button camera vibration toggle -->
     <string name="dbl_tap_vib_title">Aan-/Uit-knop tweemaal indrukken voor camera-vibratie</string>
@@ -227,7 +230,7 @@
     <!-- On-The-Go -->
     <string name="power_menu_onthego_title">On-The-Go modus</string>
     <string name="onthego_alpha_title">On-The-Go transparantie</string>
-    <string name="onthego_alpha_summary">Transparantiewaarde voor de On-The-Go overlay</string>
+    <string name="onthego_alpha_summary">Transparantiewaarde voor de On-The-Go overlay.</string>
 
     <!-- SlimDim -->
     <string name="dim_nav_buttons_category">Slim Dim</string>
@@ -352,7 +355,7 @@
 
     <!-- Battery stats reset -->
     <string name="battery_stats_reset">Statistieken terugzetten</string>
-    <string name="battery_stats_message">De statistieken van het accugebruik worden teruggezet</string>
+    <string name="battery_stats_message">De statistieken van het accugebruik worden terug gezet</string>
     <string name="ok_string">OK</string>
 
     <!-- Slim Recent App Sidebar  -->
@@ -456,6 +459,8 @@
     <string name="info_pref_note_title">Opmerking</string>
     <string name="smartbar_interface">SmartBar</string>
     <string name="icon_pack_picker_dialog_title">Icoonpakketten</string>
+    <string name="navigation_bar_left_title">Linkshandige modus</string>
+    <string name="navigation_bar_left_summary">Schakel dit ALLEEN in als het nodig is. Pulse en thema-weergave worden uitgeschakeld.</string>
 
     <!-- Actions dialog and default task values set in ActionPreference xml-->
     <string name="choose_action_title">Actie kiezen</string>
