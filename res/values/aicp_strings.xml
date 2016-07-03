@@ -659,4 +659,7 @@
     <!-- Hide apps from recents -->
     <string name="hide_from_recents_add_app">Add App</string>
 
+    <!-- Volume dialog timeout -->
+    <string name="volume_dialog_timeout_title">Volume dialog timeout</string>
+
 </resources>

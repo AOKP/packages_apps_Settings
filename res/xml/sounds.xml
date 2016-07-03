@@ -59,6 +59,10 @@
                 android:title="@string/volume_steps_title"
                 android:fragment="com.android.settings.aicp.VolumeSteps" />
 
+        <SlimSeekBarPreference
+                android:key="volume_dialog_timeout"
+                android:title="@string/volume_dialog_timeout_title" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
