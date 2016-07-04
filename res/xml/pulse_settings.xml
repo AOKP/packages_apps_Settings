@@ -31,6 +31,13 @@
             android:title="@string/fling_show_pulse_title"
             android:summary="@string/fling_show_pulse_summary" />
 
+        <ListPreference
+            android:key="pulse_render_mode"
+            android:title="@string/pulse_render_mode_title"
+            android:entries="@array/pulse_render_mode_entries"
+            android:entryValues="@array/pulse_render_mode_values"
+            android:dependency="eos_fling_show_pulse" />
+
         <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="eos_fling_pulse_color"
             android:title="@string/fling_pulse_color"
