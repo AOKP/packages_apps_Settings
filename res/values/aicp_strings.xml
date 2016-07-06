@@ -539,9 +539,13 @@
     <string name="pulse_settings_summary">Navigation bar audio visualization</string>
     <string name="fling_show_pulse_title">Show Pulse</string>
     <string name="fling_show_pulse_summary">Audio visualization on the navigation bar</string>
+    <string name="pulse_render_mode_title">Render mode</string>
+    <string name="pulse_render_mode_legacy">Old school</string>
+    <string name="pulse_render_mode_cm">CM style</string>
     <string name="fling_pulse_color">Pulse color</string>
     <string name="eos_fling_lavalamp_title">Turn on Lava Lamp</string>
     <string name="eos_fling_lavalamp_summary">Pulse animates a smooth lava lamp style color blend</string>
+    <string name="pulse_legacy_mode_advanced_category">Old school mode settings</string>
 
     <string name="pulse_custom_dimen">Pulse Bar Width</string>
     <string name="pulse_dimen0">Default</string>
