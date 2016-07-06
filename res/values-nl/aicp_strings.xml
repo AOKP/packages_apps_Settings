@@ -657,4 +657,11 @@
     <!-- Hide apps from recents -->
     <string name="hide_from_recents_add_app">App toevoegen</string>
 
+    <!-- Volume dialog timeout-->
+    <string name="volume_dialog_timeout_title">Time-out dialoogvenster Volume</string>
+
+    <!-- Volume Dialog Expanded -->
+    <string name="volume_dialog_force_expanded_title">Uitgebreid dialoogvenster Volume</string>
+    <string name="volume_dialog_force_expanded_summary">Open het dialoogvenster Volume altijd in uitgebreide modus. De eerste keer moet op de expand toets worden gedrukt.</string>
+
 </resources>
