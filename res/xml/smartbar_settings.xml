@@ -43,9 +43,4 @@
         android:entries="@array/smartbar_button_animation_entries"
         android:entryValues="@array/smartbar_button_animation_values"
         android:summary="@string/smartbar_button_animation_summary" />
-
-    <Preference
-        android:key="smartbar_factory_reset"
-        android:title="@string/smartbar_factory_reset_title"
-        android:summary="@string/smartbar_factory_reset_summary" />
 </PreferenceScreen>
