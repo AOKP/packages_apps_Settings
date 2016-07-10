@@ -31,6 +31,8 @@
     <!-- Color Picker -->
     <string name="dialog_color_picker">Farbwähler</string>
     <string name="press_color_to_apply">Wähle unten eine Farbe, um diese anzuwenden</string>
+    <!-- <string name="arrow_right" translatable="false">→</string>
+    <string name="arrow_down" translatable="false">↓</string> -->
     <string name="hex">Hex:</string>
     <string name="hex_hint">#ff000000</string>
     <string name="set">Setzen</string>
@@ -269,6 +271,14 @@
     <string name="battery_low_notif_title">Benachrichtigung bei schwachem Akku</string>
     <string name="battery_low_notif_summary">Zeigt eine Benachrichtigung bei sehr niedrigem Akkustand</string>
 
+    <!-- Status bar -->
+    <string name="smart_pulldown_title">Intelligentes Öffnen</string>
+    <string name="smart_pulldown_summary">Öffnet die Schnelleinstellungen sofort, wenn %1$s Benachrichtigungen vorhanden sind</string>
+    <string name="smart_pulldown_off">Aus</string>
+    <string name="smart_pulldown_dismissable">keine löschbaren</string>
+    <string name="smart_pulldown_persistent">keine andauernden</string>
+    <string name="smart_pulldown_all">keine löschbaren oder andauernden</string>
+
     <!--Status bar date -->
     <string name="status_bar_date_title">Datum</string>
     <string name="status_bar_date_none">Versteckt (Standard)</string>
@@ -337,14 +347,6 @@
     <string name="clock_font_size_22">22</string>
     <string name="clock_font_size_23">23</string>
 
-    <!-- Smart pulldown -->
-    <string name="smart_pulldown_title">Intelligentes Runterziehen</string>
-    <string name="smart_pulldown_summary">Öffnet die Schnelleinstellungen, wenn %1$s Benachrichtigungen vorhanden sind</string>
-    <string name="smart_pulldown_off">Aus</string>
-    <string name="smart_pulldown_dismissable">keine verwerfbaren</string>
-    <string name="smart_pulldown_persistent">keine anhaltenden</string>
-    <string name="smart_pulldown_all">keine verwerfbaren oder anhaltenden</string>
-
     <!-- Quick unlock -->
     <string name="unlock_quick_unlock_control_title">Schnelles Entsperren</string>
     <string name="unlock_quick_unlock_control_summary">Automatisch Entsperren, wenn PIN oder Passwort korrekt eingegeben wurden</string>
@@ -376,13 +378,6 @@
     <string name="recent_app_sidebar_label_color_title">Farbe des Etiketts</string>
     <string name="recent_app_sidebar_bg_color_title">Hintergrundfarbe</string>
     <string name="recent_app_sidebar_scale_title">Größe</string>
-
-   <!-- app notifications hide on lockscreen -->
-    <string name="app_notification_no_keyguard_title">Verstecken bei Sperre</string>
-    <string name="app_notification_no_keyguard_summary">Versteckt Benachrichtigungen dieser App, wenn das Gerät gesperrt ist</string>
-    <string name="filter_notif_no_keyguard">Ausgeblendet bei Sperre</string>
-    <string name="notifications_no_keyguard">Ausgeblendet bei Sperre</string>
-    <string name="notifications_four_items"><xliff:g id="notif_state" example="Priority">%1$s</xliff:g> / <xliff:g id="notif_state" example="Priority">%2$s</xliff:g> / <xliff:g id="notif_state" example="Priority">%3$s</xliff:g> / <xliff:g id="notif_state" example="Priority">%4$s</xliff:g></string>
 
     <!-- Wakelock blocker -->
     <string name="wakelock_blocker_title">Wakelock Blockierer</string>
@@ -474,7 +469,8 @@
     <string name="info_pref_note_title">Anmerkung</string>
     <string name="smartbar_interface">SmartBar</string>
     <string name="icon_pack_picker_dialog_title">Symbolpakete</string>
-    <string name="invalid_icon_from_uri">Kann das Bild vom Anbieter des Inhalts nicht laden</string>
+    <string name="navigation_bar_left_title">Modus für Linkshänder</string>
+    <string name="navigation_bar_left_summary">NUR einschalten, wenn es gebraucht wird. Pulse und Designanpassungen fallen dann weg.</string>
 
     <!-- Actions dialog and default task values set in ActionPreference xml-->
     <string name="choose_action_title">Aktion wählen</string>
@@ -485,8 +481,6 @@
     <string name="action_value_select_app">action_app</string>
     <string name="action_value_custom_action">action_custom</string>
 
-    <string name="action_value_default_action">default</string>
-    <string name="action_value_select_app">app</string>
     <string name="action_value_back">task_back</string>
     <string name="action_value_home">task_home</string>
     <string name="action_value_search_assist">task_assist</string>
@@ -629,14 +623,22 @@
     <string name="smartbar_button_animation_summary">Animationstyp für die primären Tasten festlegen, wenn diese gedrückt werden</string>
     <string name="smartbar_button_animation_ripple">Wellen</string>
     <string name="smartbar_button_animation_spring">Hüpfen</string>
-    <string name="smartbar_factory_reset_title">Grundeinstellungen wiederherstellen</string>
-    <string name="smartbar_factory_reset_summary">SmartBar auf die Grundeinstellungen zurücksetzen</string>
+    <string name="smartbar_factory_reset_title">Auf Grundeinstellung zurücksetzen</string>
     <string name="smartbar_factory_reset_confirm">Sind Sie sicher, dass die SmartBar auf Standardwerte zurückgesetzt werden soll?</string>
     <string name="smartbar_ime_action_title">Aktionen zur Eingabemethode</string>
     <string name="smartbar_ime_action_summary">Festlegen, welche Tasten in der Leiste angezeigt werden, wenn die Tastatur aktiv ist</string>
     <string name="smartbar_ime_action_none">Nichts</string>
     <string name="smartbar_ime_action_arrows">Eingabe-Pfeile</string>
     <string name="smartbar_ime_action_switcher">Tastatur-Umschalter</string>
+    <string name="smartbar_backup_current_config_title">Profil speichern</string>
+    <string name="smartbar_restore_config_title">Profil wiederherstellen</string>
+    <string name="smartbar_config_name_edit_dialog_title">SmartBar-Profilname</string>
+    <string name="smartbar_config_name_edit_dialog_message">Namen eingeben oder leer lassen</string>
+    <string name="smartbar_config_dialog_title">SmartBar-Profile</string>
+    <string name="smartbar_config_backup_success_toast">SmartBar-Profil erfolgreich gespeichert</string>
+    <string name="smartbar_config_restore_success_toast">SmartBar-Profil erfolgreich wiederhergestellt</string>
+    <string name="smartbar_config_backup_error_toast">Fehler beim Speichern des SmartBar-Profils</string>
+    <string name="smartbar_config_restore_error_toast">Fehler beim Wiederherstellen des SmartBar-Profils</string>
 
     <!-- Heads Up Timeout -->
     <string name="heads_up_time_out_title">Time-out</string>
@@ -670,5 +672,12 @@
 
     <!-- Hide apps from recents -->
     <string name="hide_from_recents_add_app">App hinzufügen</string>
+
+    <!-- Volume dialog timeout -->
+    <string name="volume_dialog_timeout_title">Ausblendzeit des Lautstärkedialogs</string>
+
+    <!-- Volume Dialog Expanded -->
+    <string name="volume_dialog_force_expanded_title">Erweiterter Lautstärkedialog</string>
+    <string name="volume_dialog_force_expanded_summary">Erzwingt immer die erweiterte Ansicht des Lautstärkedialogs. Beim ersten Mal bitte den Pfeil zum Erweitern drücken.</string>
 
 </resources>
