@@ -55,7 +55,7 @@
     <string name="volume_steps_alarm_title">Volume-stappen: Alarm</string>
     <string name="volume_steps_dtmf_title">Volume-stappen: DTMF-tonen</string>
     <string name="volume_steps_music_title">Volume-stappen: Muziek</string>
-    <string name="volume_steps_notification_title">Volume-stappen: Notoficatie</string>
+    <string name="volume_steps_notification_title">Volume-stappen: Notificatie</string>
     <string name="volume_steps_ring_title">Volume-stappen: Beltoon</string>
     <string name="volume_steps_system_title">Volume-stappen: Systeem</string>
     <string name="volume_steps_voice_call_title">Volume-stappen: Spraak</string>
@@ -616,13 +616,21 @@
     <string name="smartbar_button_animation_ripple">Golven</string>
     <string name="smartbar_button_animation_spring">Veren</string>
     <string name="smartbar_factory_reset_title">Standaard instellingen terugzetten</string>
-    <string name="smartbar_factory_reset_summary">SmartBar naar de standaard instellingen terugzetten</string>
     <string name="smartbar_factory_reset_confirm">Weet je zeker dat je de SmartBar naar de standaard instellingen wil terugzetten?</string>
     <string name="smartbar_ime_action_title">Akties voor invoermethoden</string>
     <string name="smartbar_ime_action_summary">Instellen welke toetsen getoond worden als een on-screen toetsenbord actief is</string>
     <string name="smartbar_ime_action_none">Niets</string>
     <string name="smartbar_ime_action_arrows">Invoer-pijlen</string>
     <string name="smartbar_ime_action_switcher">Toetsenbord schakelaar</string>
+    <string name="smartbar_backup_current_config_title">Save profile</string>
+    <string name="smartbar_restore_config_title">Profiel terugzetten</string>
+    <string name="smartbar_config_name_edit_dialog_title">Smartbar profielnaam</string>
+    <string name="smartbar_config_name_edit_dialog_message">Voer naam in of laat leeg</string>
+    <string name="smartbar_config_dialog_title">Smartbar profielen</string>
+    <string name="smartbar_config_backup_success_toast">Smartbar profiel successvol opgeslagen</string>
+    <string name="smartbar_config_restore_success_toast">Smartbar profiel successvol teruggezet</string>
+    <string name="smartbar_config_backup_error_toast">Fout bij opslaan Smartbar profiel</string>
+    <string name="smartbar_config_restore_error_toast">Fout bij herstellen Smartbar profiel</string>
 
     <!-- Heads Up Timeout -->
     <string name="heads_up_time_out_title">Time out</string>
