@@ -100,13 +100,13 @@ public class PulseSettings extends SettingsPreferenceFragment implements
         mLavaLampEnabled.setOnPreferenceChangeListener(this);
 
         int customdimen = Settings.Secure.getIntForUser(getContentResolver(),
-                Settings.Secure.PULSE_CUSTOM_DIMEN, 7, UserHandle.USER_CURRENT);
+                Settings.Secure.PULSE_CUSTOM_DIMEN, 14, UserHandle.USER_CURRENT);
         mCustomDimen = (SeekBarPreferenceCham) findPreference(CUSTOM_DIMEN);
         mCustomDimen.setValue(customdimen / 1);
         mCustomDimen.setOnPreferenceChangeListener(this);
 
         int customdiv = Settings.Secure.getIntForUser(getContentResolver(),
-                Settings.Secure.PULSE_CUSTOM_DIV, 0, UserHandle.USER_CURRENT);
+                Settings.Secure.PULSE_CUSTOM_DIV, 2, UserHandle.USER_CURRENT);
         mCustomDiv = (SeekBarPreferenceCham) findPreference(CUSTOM_DIV);
         mCustomDiv.setValue(customdiv / 1);
         mCustomDiv.setOnPreferenceChangeListener(this);

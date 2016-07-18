@@ -57,8 +57,8 @@
            <com.android.settings.widget.SeekBarPreferenceCham
                 android:key="pulse_custom_dimen"
                 android:title="@string/pulse_custom_dimen"
-                android:max="19"
-                settings:minimum="0"
+                android:max="30"
+                settings:minimum="1"
                 settings:unitsLeft=""
                 settings:unitsRight="px"
                 android:persistent="false" />
@@ -66,10 +66,10 @@
            <com.android.settings.widget.SeekBarPreferenceCham
                 android:key="pulse_custom_div"
                 android:title="@string/pulse_custom_div"
-                android:max="8"
+                android:max="15"
                 settings:minimum="0"
                 settings:unitsLeft=""
-                settings:unitsRight="px"
+                settings:unitsRight=""
                 android:persistent="false" />
 
            <com.android.settings.widget.SeekBarPreferenceCham
