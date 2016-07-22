@@ -61,16 +61,18 @@
                 settings:minimum="1"
                 settings:unitsLeft=""
                 settings:unitsRight="px"
+                settings:defaultVal="14"
                 android:dependency="pulse_fading_bars_category"
                 android:persistent="false" />
 
            <com.android.settings.widget.SeekBarPreferenceCham
                 android:key="pulse_custom_div"
                 android:title="@string/pulse_custom_div"
-                android:max="15"
-                settings:minimum="0"
+                android:max="23"
+                settings:minimum="1"
                 settings:unitsLeft=""
                 settings:unitsRight=""
+                settings:defaultVal="8"
                 android:dependency="pulse_fading_bars_category"
                 android:persistent="false" />
 
@@ -81,6 +83,7 @@
                 settings:minimum="0"
                 settings:unitsLeft=""
                 settings:unitsRight="px"
+                settings:defaultVal="2"
                 android:dependency="pulse_fading_bars_category"
                 android:persistent="false" />
 
@@ -91,6 +94,7 @@
                 settings:minimum="0"
                 settings:unitsLeft=""
                 settings:unitsRight="px"
+                settings:defaultVal="1"
                 android:dependency="pulse_fading_bars_category"
                 android:persistent="false" />
 
@@ -101,6 +105,7 @@
                 settings:minimum="0"
                 settings:unitsLeft=""
                 settings:unitsRight=""
+                settings:defaultVal="2"
                 android:dependency="pulse_fading_bars_category"
                 android:persistent="false" />
 
@@ -111,6 +116,7 @@
                 settings:minimum="200"
                 settings:unitsLeft=""
                 settings:unitsRight="ms"
+                settings:defaultVal="1000"
                 android:dependency="pulse_fading_bars_category"
                 android:persistent="false" />
 	</PreferenceCategory>
@@ -126,6 +132,7 @@
             settings:minimum="0"
             settings:unitsLeft=""
             settings:unitsRight=""
+            settings:defaultVal="0"
             android:dependency="pulse_2"
             android:persistent="false" />
 
@@ -136,6 +143,7 @@
             settings:minimum="200"
             settings:unitsLeft=""
             settings:unitsRight="ms"
+            settings:defaultVal="1000"
             android:dependency="pulse_2"
             android:persistent="false" />
 	</PreferenceCategory>

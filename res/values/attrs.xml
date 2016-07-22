@@ -136,6 +136,7 @@
         <attr name="unitsLeft" format="string" />
         <attr name="unitsRight" format="string" />
         <attr name="interval" format="integer" />
+        <attr name="defaultVal" format="integer" />
     </declare-styleable>
 
     <!-- For DSLV -->
