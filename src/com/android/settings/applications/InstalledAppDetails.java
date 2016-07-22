@@ -417,7 +417,9 @@ public class InstalledAppDetails extends AppInfoBase
         mUpdatedSysApp = (mAppEntry.info.flags & ApplicationInfo.FLAG_UPDATED_SYSTEM_APP) != 0;
         menu.findItem(UNINSTALL_UPDATES).setVisible(mUpdatedSysApp && !mAppControlRestricted);
 
-        menu.findItem(OPEN_PROTECTED_APPS).setVisible(mPackageInfo.applicationInfo.protect);
+        if (mPackageInfo.applicationInfo != null) {
+            menu.findItem(OPEN_PROTECTED_APPS).setVisible(mPackageInfo.applicationInfo.protect);
+        }
 
         // Utils.isSystemPackage doesn't include all aosp built apps, like Contacts etc. Add them
         // and grab the Google Play Store itself (com.android.vending) in the process
