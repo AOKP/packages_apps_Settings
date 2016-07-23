@@ -181,6 +181,12 @@
                 android:title="@string/build_number"
                 android:summary="@string/device_info_default"/>
 
+        <!-- Vendor Version -->
+        <Preference android:key="vendor_version"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/vendor_version"
+                android:summary="@string/vendor_version_default" />
+
         <!-- SELinux status information -->
         <Preference android:key="selinux_status"
                 style="?android:preferenceInformationStyle"
