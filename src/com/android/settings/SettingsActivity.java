@@ -1279,9 +1279,6 @@ public class SettingsActivity extends Activity
 
         final UserManager um = (UserManager) getSystemService(Context.USER_SERVICE);
 
-        final int myUserId = UserHandle.myUserId();
-        final boolean isSecondaryUser = myUserId != UserHandle.USER_OWNER;
-
         final int size = target.size();
         for (int i = 0; i < size; i++) {
 
@@ -1302,13 +1299,6 @@ public class SettingsActivity extends Activity
                 } else if (id == R.id.wifi_settings) {
                     // Remove WiFi Settings if WiFi service is not available.
                     if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_WIFI)) {
-                        removeTile = true;
-                    }
-                } else if (id == R.id.mobile_networks) {
-                    // Remove Mobile Data Settings if Mobile network is not available (wifi only).
-                    if (isSecondaryUser || Utils.isWifiOnly(getApplicationContext())
-                                        || um.hasUserRestriction(UserManager.DISALLOW_CONFIG_MOBILE_NETWORKS)
-                                        || Utils.isSwitchesEnabled(this)) {
                         removeTile = true;
                     }
                 } else if (id == R.id.bluetooth_settings) {
