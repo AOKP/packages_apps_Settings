@@ -1517,9 +1517,4 @@ public final class Utils {
         }
         return estimatedTotal;
     }
-
-    public static boolean isSwitchesEnabled(Context context) {
-        return Settings.System.getInt(context.getContentResolver(),
-                Settings.System.DASHBOARD_SWITCHES, 0) != 1;
-    }
 }
