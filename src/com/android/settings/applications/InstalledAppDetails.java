@@ -702,7 +702,8 @@ public class InstalledAppDetails extends AppInfoBase
     }
 
     private boolean isAicp(String packageName) {
-        return packageName.contains("com.lordclockan") || packageName.contains("com.aicp");
+        return packageName.contains("com.lordclockan") || packageName.contains("com.aicp")
+                || packageName.contains("com.srbodroid");
     }
 
     private void uninstallPkg(String packageName, boolean allUsers, boolean andDisable) {
