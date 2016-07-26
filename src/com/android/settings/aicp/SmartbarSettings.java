@@ -60,11 +60,18 @@ import com.android.internal.utils.du.Config.ButtonConfig;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
+
 public class SmartbarSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
     private ListPreference mSmartBarContext;
     private ListPreference mImeActions;
     private ListPreference mButtonAnim;
+
+    private static final String NAVBAR_COLOR = "navbar_button_color";
+    private ColorPickerPreference mNavbuttoncolor;
+
+    static final int DEFAULT_TINT_COLOR = 0xFFFFFFFF;
 
     private Context mContext;
 
@@ -86,6 +93,8 @@ public class SmartbarSettings extends SettingsPreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.smartbar_settings);
+        int intColor;
+        String hexColor;
 
         mContext = getContext();
 
@@ -106,6 +115,14 @@ public class SmartbarSettings extends SettingsPreferenceFragment implements
         mButtonAnim = (ListPreference) findPreference("smartbar_button_animation");
         mButtonAnim.setValue(String.valueOf(buttonAnimVal));
         mButtonAnim.setOnPreferenceChangeListener(this);
+
+        mNavbuttoncolor = (ColorPickerPreference) findPreference(NAVBAR_COLOR);
+        mNavbuttoncolor.setOnPreferenceChangeListener(this);
+        intColor = Settings.System.getInt(mContext.getContentResolver(),
+                Settings.System.NAVBAR_BUTTON_COLOR, DEFAULT_TINT_COLOR);
+        hexColor = String.format("#%08x", (0xffffffff & intColor));
+        mNavbuttoncolor.setSummary(hexColor);
+        mNavbuttoncolor.setNewPreviewColor(intColor);
 
         setHasOptionsMenu(true);
     }
@@ -237,6 +254,14 @@ public class SmartbarSettings extends SettingsPreferenceFragment implements
             int val = Integer.parseInt(((String) newValue).toString());
             Settings.Secure.putInt(getContentResolver(), "smartbar_ime_hint_mode",
                     val);
+            return true;
+        } else if (preference == mNavbuttoncolor) {
+            String hex = ColorPickerPreference.convertToARGB(
+                    Integer.valueOf(String.valueOf(newValue)));
+            preference.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.NAVBAR_BUTTON_COLOR, intHex);
             return true;
         }
         return false;
