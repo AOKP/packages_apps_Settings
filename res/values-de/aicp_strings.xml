@@ -554,7 +554,7 @@
     <string name="eos_fling_lavalamp_summary">\"Pulse\" nutzt eine Lavalampen-artige Farbmischung bei der Darstellung</string>
     <string name="pulse_advanced_category">Erweitert</string>
     <string name="pulse_legacy_mode_advanced_category">Einstellungen für verblassende Blöcke</string>
-    <string name="pulse_custom_fudge_factor">Sanity level</string>
+    <string name="pulse_custom_fudge_factor">Reaktionsgeschwindigkeit</string>
     <string name="lavamp_solid_speed_title">Geschwindigkeit der Lavalampe</string>
     <string name="pulse_solid_dimen_category">Einstellungen für durchgehende Balken</string>
 
@@ -640,5 +640,9 @@
     <!-- Vendor version -->
     <string name="vendor_version">Herstellerversion</string>
     <string name="vendor_version_default">Unbekannt</string>
+
+    <!-- Application Settings -->
+    <!-- App details: open play store link if app is user installed -->
+    <string name="app_play_store">Google Play</string>
 
 </resources>
