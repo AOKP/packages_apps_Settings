@@ -637,4 +637,9 @@
     <!-- App details: open play store link if app is user installed -->
     <string name="app_play_store">Google Play</string>
 
+    <!-- Development Settings -->
+    <!-- ADB always notify -->
+    <string name="adb_always_notify">Debugging always notify</string>
+    <string name="adb_always_notify_summary">Always display a notification when debugging is enabled, even if not connected</string>
+
 </resources>
