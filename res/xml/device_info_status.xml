@@ -39,6 +39,12 @@
         <intent android:targetPackage="com.android.settings"
             android:targetClass="com.android.settings.deviceinfo.ImeiInformation" />
     </PreferenceScreen>
+    <PreferenceScreen android:key="radioinfo"
+        android:title="@string/device_info_title"
+        android:persistent="false">
+        <intent android:targetPackage="com.android.settings"
+            android:targetClass="com.android.settings.RadioInfo" />
+    </PreferenceScreen>
     <Preference android:key="wifi_ip_address"
         style="?android:attr/preferenceInformationStyle"
         android:title="@string/wifi_advanced_ip_address_title"

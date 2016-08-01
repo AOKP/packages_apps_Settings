@@ -647,4 +647,7 @@
     <string name="toggle_package_install_overlay_check_title">Disable permission overlay check</string>
     <string name="toggle_package_install_overlay_check_summary">WARNING\u003A this disables a security check to prevent possible tapjacking! Use only if you understand the consequences.</string>
 
+   <!-- Phone info shortcut -->
+    <string name="device_info_title">Phone info</string>
+
 </resources>
