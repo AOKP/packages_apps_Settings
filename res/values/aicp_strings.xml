@@ -648,4 +648,15 @@
     <!-- Navbar buttons transparency -->
     <string name="navbar_buttons_alpha_title">Buttons transparency</string>
 
+    <!-- Halo -->
+    <!-- Label for are-halo-notifications-allowed checkbox in app details [CHAR LIMIT=20] -->
+    <string name="app_halo_label_black">Blacklist from HALO</string>
+    <string name="app_halo_label_white">Whitelist from HALO</string>
+
+    <!-- Halo blacklist -->
+    <string name="app_notification_halo_title">Show notification in HALO</string>
+    <string name="app_notification_halo_summary">Let this app show notifications in HALO</string>
+    <string name="filter_notif_no_halo">No notifications in HALO</string>
+    <string name="notifications_four_items"><xliff:g id="notif_state" example="Priority">%1$s</xliff:g> / <xliff:g id="notif_state" example="Priority">%2$s</xliff:g> / <xliff:g id="notif_state" example="Priority">%3$s</xliff:g> / <xliff:g id="notif_state" example="Priority">%4$s</xliff:g></string>
+
 </resources>
