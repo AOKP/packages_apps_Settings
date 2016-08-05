@@ -37,6 +37,10 @@
     <string name="root_access_adb">ADB only</string>
     <string name="root_access_all">Apps and ADB</string>
 
+    <!-- Preference link for root appops -->
+    <string name="root_appops_title">Manage root accesses</string>
+    <string name="root_appops_summary">View and control the root rules</string>
+
     <!-- About phone screen, CyanogenMod Api Level -->
     <string name="mod_api_level">CyanogenMod API level</string>
     <string name="mod_api_level_default">Unknown</string>
