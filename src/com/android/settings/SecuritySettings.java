@@ -125,6 +125,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private static final String KEY_SMS_SECURITY_CHECK_PREF = "sms_security_check_limit";
     private static final String KEY_GENERAL_CATEGORY = "general_category";
     private static final String KEY_LIVE_LOCK_SCREEN = "live_lock_screen";
+    private static final String KEY_PACKAGE_INSTALL_OVERLAY_CHECK = "toggle_package_install_overlay_check";
 
     // These switch preferences need special handling since they're not all stored in Settings.
     private static final String SWITCH_PREFERENCE_KEYS[] = { KEY_LOCK_AFTER_TIMEOUT,
@@ -170,6 +171,8 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private int mFilterType = TYPE_SECURITY_EXTRA;
 
     private Preference mLockscreenDisabledPreference;
+
+    private SwitchPreference mPackageInstallOverlayCheck;
 
     @Override
     protected int getMetricsCategory() {
@@ -487,6 +490,9 @@ public class SecuritySettings extends SettingsPreferenceFragment
                 }
             }
 
+            mPackageInstallOverlayCheck = (SwitchPreference) findPreference(
+                    KEY_PACKAGE_INSTALL_OVERLAY_CHECK);
+
             // The above preferences come and go based on security state, so we need to update
             // the index. This call is expected to be fairly cheap, but we may want to do something
             // smarter in the future.
@@ -761,6 +767,11 @@ public class SecuritySettings extends SettingsPreferenceFragment
             mResetCredentials.setEnabled(!mKeyStore.isEmpty());
         }
 
+        if (mPackageInstallOverlayCheck != null) {
+            mPackageInstallOverlayCheck.setChecked(Settings.Secure.getInt(getContentResolver(),
+                    Settings.Secure.PACKAGE_INSTALL_OVERLAY_CHECK_DISABLED, 0) != 0);
+        }
+
         updateOwnerInfo();
     }
 
@@ -796,6 +807,9 @@ public class SecuritySettings extends SettingsPreferenceFragment
             mLockscreenDisabledPreference.setEnabled(false);
             mLockscreenDisabledPreference.setSummary(
                     R.string.lockscreen_disabled_by_qs_tile_summary_enabled);
+        } else if (KEY_PACKAGE_INSTALL_OVERLAY_CHECK.equals(key)) {
+            Settings.Secure.putInt(getContentResolver(), Settings.Secure.PACKAGE_INSTALL_OVERLAY_CHECK_DISABLED,
+                    mPackageInstallOverlayCheck.isChecked() ? 1 : 0);
         } else {
             // If we didn't handle it, let preferences handle it.
             return super.onPreferenceTreeClick(preferenceScreen, preference);
