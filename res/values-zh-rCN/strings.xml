@@ -3202,20 +3202,6 @@
     <string name="power_menu_onthego_title">行走模式</string>
     <string name="onthego_alpha_title">行走模式的透明度</string>
     <string name="onthego_alpha_summary">设置行走模式的透明度.</string>
-    <string name="dim_nav_buttons_category">动态虚拟摁键</string>
-    <string name="dim_nav_buttons_title">启动动态的摁键</string>
-    <string name="dim_nav_buttons_summary">与导航栏交互指定的时间后，变暗的导航栏按钮</string>
-    <string name="dim_nav_buttons_timeout_title">超时之前变暗</string>
-    <string name="dim_nav_buttons_timeout_summary">按键变暗的等待时间(毫秒)</string>
-    <string name="dim_nav_buttons_alpha_title">变暗的程度</string>
-    <string name="dim_nav_buttons_alpha_summary">虚拟摁键将变暗到何种程度(建议30%以上)</string>
-    <string name="dim_nav_buttons_animate_title">变暗动画</string>
-    <string name="dim_nav_buttons_animate_summary">渐隐透明度动画</string>
-    <string name="dim_nav_buttons_animate_duration_title">动画时长</string>
-    <string name="dim_nav_buttons_animate_duration_summary">持续时间(毫秒)</string>
-    <string name="dim_nav_buttons_touch_anywhere_title">恢复默认亮度的触发条件</string>
-    <string name="dim_nav_buttons_touch_anywhere_summary_on">触摸屏幕上的任何地方都会恢复默认亮度</string>
-    <string name="dim_nav_buttons_touch_anywhere_summary_off">只有触碰到导航栏才会恢复默认亮度</string>
     <string name="notifications_category_title">通知</string>
     <string name="less_notification_sounds_title">限制通知频率</string>
     <string name="less_notification_sounds_summary">限制每个应用程序的通知，每设定的时间段只能通知一次</string>
@@ -4254,7 +4240,7 @@
     <string name="factory_reset_personal_content">个人内容</string>
     <string name="factory_reset_erase_stored_content">擦除已存储的内容</string>
     <string name="factory_reset_erase_stored_content_summary">擦除此设备上的音乐、照片、视频和其他用户数据。</string>
-    <string name="factory_reset_erase_stored_content_summary_forced">"擦除音乐、照片、视频，并且存储在此设备上的其他用户数据。 
+    <string name="factory_reset_erase_stored_content_summary_forced">"擦除音乐、照片、视频，并且存储在此设备上的其他用户数据。
 
 "<b>由于设备加密，将无法保存内容。</b></string>
     <string name="factory_reset_erase_sd_card">格式化 SD 卡</string>
@@ -6267,7 +6253,7 @@ PIN码可能不正确。"</string>
     <string name="sync_gmail">Gmail</string>
     <string name="sync_calendar">日历</string>
     <string name="sync_contacts">联系人</string>
-    <string name="sync_plug"><font fgcolor="#ffffffff">欢迎使用 Google Sync！</font>" 
+    <string name="sync_plug"><font fgcolor="#ffffffff">欢迎使用 Google Sync！</font>"
 这款数据同步工具可让您随时随地查看您的联系人、约会以及更多信息。"</string>
     <string name="header_application_sync_settings">应用同步设置</string>
     <string name="header_data_and_synchronization">数据与同步</string>

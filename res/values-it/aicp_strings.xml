@@ -231,22 +231,6 @@
     <string name="onthego_alpha_title">Modalità trasparenza On-The-Go</string>
     <string name="onthego_alpha_summary">Valore di trasparenza della modalità On-The-Go.</string>
 
-    <!-- SlimDim -->
-    <string name="dim_nav_buttons_category">SlimDim</string>
-    <string name="dim_nav_buttons_title">Oscurare i pulsanti dopo inattività</string>
-    <string name="dim_nav_buttons_summary">Oscurare i pulsanti della barra di navigazione per un periodo di tempo specificato dopo che non si interaggisce più con la stessa</string>
-    <string name="dim_nav_buttons_timeout_title">Tempo prima dello spegnimento dello schermo</string>
-    <string name="dim_nav_buttons_timeout_summary">Il tempo (in millisecondi) di attesa prima di spegnere i pulsanti</string>
-    <string name="dim_nav_buttons_alpha_title">Valore alfa di oscuramento</string>
-    <string name="dim_nav_buttons_alpha_summary">Valore alfa applicato hai pulsanti</string>
-    <string name="dim_nav_buttons_animate_title">Animazione di spegnimento</string>
-    <string name="dim_nav_buttons_animate_summary">Animare la dissolvenza alpha</string>
-    <string name="dim_nav_buttons_animate_duration_title">Durata animazione</string>
-    <string name="dim_nav_buttons_animate_duration_summary">Durata (in millisecondi) dell\'animazione alpha</string>
-    <string name="dim_nav_buttons_touch_anywhere_title">Tocca tutto lo schermo</string>
-    <string name="dim_nav_buttons_touch_anywhere_summary_on">Toccando un punto qualsiasi dello schermo farà sì che i pulsanti non si oscureranno</string>
-    <string name="dim_nav_buttons_touch_anywhere_summary_off">Toccando solamente sulla barra di navigazione i pulsanti non si oscureranno</string>
-
     <!-- Less Notification sounds -->
     <string name="notifications_category_title">Notifiche</string>
     <string name="less_notification_sounds_title">Suoni di notifica meno frequenti</string>
@@ -375,7 +359,7 @@
     <string name="filter_notif_no_keyguard">Nascosto quando è bloccato</string>
     <string name="notifications_no_keyguard">Nascosto quando è bloccato</string>
     <string name="notifications_four_items"><xliff:g id="notif_state" example="Priority">%1$s</xliff:g> / <xliff:g id="notif_state" example="Priority">%2$s</xliff:g> / <xliff:g id="notif_state" example="Priority">%3$s</xliff:g> / <xliff:g id="notif_state" example="Priority">%4$s</xliff:g></string>
-    
+
     <!-- Wakelock blocker -->
     <string name="wakelock_blocker_title">Wakelock Blocker</string>
     <string name="wakelock_blocker_summary">Blocco di sistema Wakelocks</string>

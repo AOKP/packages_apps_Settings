@@ -231,22 +231,6 @@
     <string name="onthego_alpha_title">Transparence du mode On-The-Go</string>
     <string name="onthego_alpha_summary">Valeur de la transparence du mode On-The-Go</string>
 
-    <!-- SlimDim -->
-    <string name="dim_nav_buttons_category">SlimDim</string>
-    <string name="dim_nav_buttons_title">Atténuer les boutons après inactivité</string>
-    <string name="dim_nav_buttons_summary">Atténuer les boutons de la barre de navigation après un temps définit d\'inactivité sur la barre de navigation</string>
-    <string name="dim_nav_buttons_timeout_title">Temps avant atténuation</string>
-    <string name="dim_nav_buttons_timeout_summary">Temps (en millisecondes) d\'attente avant l\'atténuation des boutons</string>
-    <string name="dim_nav_buttons_alpha_title">Niveau d\'atténuation</string>
-    <string name="dim_nav_buttons_alpha_summary">Niveau d\'atténuation appliqué aux boutons</string>
-    <string name="dim_nav_buttons_animate_title">Animation d\'atténuation</string>
-    <string name="dim_nav_buttons_animate_summary">Animer l\'atténuation</string>
-    <string name="dim_nav_buttons_animate_duration_title">Durée de l\'animation</string>
-    <string name="dim_nav_buttons_animate_duration_summary">Durée (en millisecondes) de l\'animation</string>
-    <string name="dim_nav_buttons_touch_anywhere_title">Prendre en compte tout l\'écran</string>
-    <string name="dim_nav_buttons_touch_anywhere_summary_on">Un appui n\'importe où sur l\'écran empêchera l\'atténuation des boutons</string>
-    <string name="dim_nav_buttons_touch_anywhere_summary_off">Seul un appui dans la barre de navigation empêchera l\'atténuation de l\'écran</string>
-
     <!-- Less Notification sounds -->
     <string name="notifications_category_title">Notifications</string>
     <string name="less_notification_sounds_title">Limiter les notification sonores</string>
