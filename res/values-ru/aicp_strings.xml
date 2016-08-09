@@ -113,7 +113,7 @@
     <string name="shortcut_action_help_button">кнопка</string>
     <string name="shortcut_action_help_app">приложение</string>
     <string name="shortcut_action_help_icon">, в процессе выбора значка будут показаны настройки кастомизации</string>
-    <string name="shortcut_action_help_main">Чтобы добавить %1$s, нажмите значок \"Добавить\". Когда %1$s добавлено, выбором ряда можно изменить цель%2$s\n\nЧтобы удалить %1$s, сдвиньте ряд по горизонтали. 
+    <string name="shortcut_action_help_main">Чтобы добавить %1$s, нажмите значок \"Добавить\". Когда %1$s добавлено, выбором ряда можно изменить цель%2$s\n\nЧтобы удалить %1$s, сдвиньте ряд по горизонтали.
        Изменить порядок %1$s в списке можно вертикальным перетаскиванием якоря слева.\n\nЧтобы сбросить все к значениям по умолчанию, нажмите значок \"Сбросить\".</string>
     <string name="shortcut_action_help_delete_last_entry">Удаление последнего(-ей) %1$s в списке отключит эту функцию.</string>
     <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Удаление последнего %1$s отключит весь второй уровень pie.</string>
@@ -233,22 +233,6 @@
     <string name="power_menu_onthego_title">Режим \"На ходу\"</string>
     <string name="onthego_alpha_title">\"На ходу\" альфа</string>
     <string name="onthego_alpha_summary">Значение режима при ходьбе.</string>
-
-    <!-- SlimDim -->
-    <string name="dim_nav_buttons_category">Затемнение кнопок</string>
-    <string name="dim_nav_buttons_title">Затемнять кнопки при отсутствии активности</string>
-    <string name="dim_nav_buttons_summary">Затемнять кнопки панели навигации, когда их не трогают в течение определенного времени</string>
-    <string name="dim_nav_buttons_timeout_title">Длительность отсутствия активности</string>
-    <string name="dim_nav_buttons_timeout_summary">Время ожидания (мсек) до затемнения кнопок</string>
-    <string name="dim_nav_buttons_alpha_title">Степень затухания</string>
-    <string name="dim_nav_buttons_alpha_summary">Насколько сильно затемнять кнопки</string>
-    <string name="dim_nav_buttons_animate_title">Анимация затемнения</string>
-    <string name="dim_nav_buttons_animate_summary">Анимировать затухание</string>
-    <string name="dim_nav_buttons_animate_duration_title">Длительность анимации</string>
-    <string name="dim_nav_buttons_animate_duration_summary">Длительность (в миллисекундах) анимации затухания</string>
-    <string name="dim_nav_buttons_touch_anywhere_title">Учитывать касания со всего экрана</string>
-    <string name="dim_nav_buttons_touch_anywhere_summary_on">Прикосновение к любой части экрана зажжет кнопки обратно</string>
-    <string name="dim_nav_buttons_touch_anywhere_summary_off">Только прикосновение к панели навигации зажигает кнопки</string>
 
     <!-- Less Notification sounds -->
     <string name="notifications_category_title">Уведомления</string>

@@ -232,22 +232,6 @@
     <string name="onthego_alpha_title">On-The-Go transparantie</string>
     <string name="onthego_alpha_summary">Transparantiewaarde voor de On-The-Go overlay.</string>
 
-    <!-- SlimDim -->
-    <string name="dim_nav_buttons_category">Slim Dim</string>
-    <string name="dim_nav_buttons_title">Toetsen dimmen bij inactiviteit</string>
-    <string name="dim_nav_buttons_summary">Navigatietietoetsen dimmen als er een bepaalde tijd geen toetsen gebruikt zijn</string>
-    <string name="dim_nav_buttons_timeout_title">Time out voor het dimmen</string>
-    <string name="dim_nav_buttons_timeout_summary">Tijd (in milliseconden) voordat de toetsen dimmen</string>
-    <string name="dim_nav_buttons_alpha_title">Dim-transparantie</string>
-    <string name="dim_nav_buttons_alpha_summary">Transparantie tot hoever gedimd wordt</string>
-    <string name="dim_nav_buttons_animate_title">Dim-animatie</string>
-    <string name="dim_nav_buttons_animate_summary">Animatie van de dim-transparantie</string>
-    <string name="dim_nav_buttons_animate_duration_title">Animatieduur</string>
-    <string name="dim_nav_buttons_animate_duration_summary">Tijd (in milliseconden) totdat het dimmen de ingestelde waarde bereikt</string>
-    <string name="dim_nav_buttons_touch_anywhere_title">Luister naar scherm-aanraking</string>
-    <string name="dim_nav_buttons_touch_anywhere_summary_on">Raak het scherm aan om het dimmen op te heffen</string>
-    <string name="dim_nav_buttons_touch_anywhere_summary_off">Alleen de navigatiebalk aanraken zorgt voor het opheffen van het dim-effect</string>
-
     <!-- Less Notification sounds -->
     <string name="notifications_category_title">Notificaties</string>
     <string name="less_notification_sounds_title">Minder vaak gebruikte notificatiegeluiden</string>

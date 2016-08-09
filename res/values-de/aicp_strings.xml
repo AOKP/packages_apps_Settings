@@ -234,22 +234,6 @@
     <string name="onthego_alpha_title">On-The-Go Transparenz</string>
     <string name="onthego_alpha_summary">Transparenzwert für die On-The-Go Überlagerung.</string>
 
-    <!-- SlimDim -->
-    <string name="dim_nav_buttons_category">Slim Dim</string>
-    <string name="dim_nav_buttons_title">Dimme Navigationstasten bei Inaktivität</string>
-    <string name="dim_nav_buttons_summary">Navigationstasten abdunkeln, wenn nach einer bestimmten Zeitspanne keine Taste gedrückt wurde</string>
-    <string name="dim_nav_buttons_timeout_title">Wartezeit bis zum Ausblenden (Dimmen)</string>
-    <string name="dim_nav_buttons_timeout_summary">Wartezeit (in Millisekunden) bevor die Tasten abgedunkelt werden</string>
-    <string name="dim_nav_buttons_alpha_title">Transparenz der Abdunklung</string>
-    <string name="dim_nav_buttons_alpha_summary">Transparenz bis zu welcher abgedunkelt wird</string>
-    <string name="dim_nav_buttons_animate_title">Abdunklungsanimation</string>
-    <string name="dim_nav_buttons_animate_summary">Animiere den Transparenz-Status</string>
-    <string name="dim_nav_buttons_animate_duration_title">Animationslänge</string>
-    <string name="dim_nav_buttons_animate_duration_summary">Zeit (in Millisekunden) für das Abdunkeln bis zum eingestellten Wert</string>
-    <string name="dim_nav_buttons_touch_anywhere_title">Bemerke das Berühren des Displays</string>
-    <string name="dim_nav_buttons_touch_anywhere_summary_on">Berühre das Display irgendwo, um die Abdunklung aufzuheben</string>
-    <string name="dim_nav_buttons_touch_anywhere_summary_off">Nur das Berühren der Navigationsleiste hebt die Abdunklung auf</string>
-
     <!-- Less Notification sounds -->
     <string name="notifications_category_title">Benachrichtigungen</string>
     <string name="less_notification_sounds_title">Weniger häufige Benachrichtigungstöne</string>
