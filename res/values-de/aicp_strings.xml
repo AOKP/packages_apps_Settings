@@ -255,14 +255,6 @@
     <string name="battery_low_notif_title">Benachrichtigung bei schwachem Akku</string>
     <string name="battery_low_notif_summary">Zeigt eine Benachrichtigung bei sehr niedrigem Akkustand</string>
 
-    <!-- Status bar -->
-    <string name="smart_pulldown_title">Intelligentes Öffnen</string>
-    <string name="smart_pulldown_summary">Öffnet die Schnelleinstellungen sofort, wenn %1$s Benachrichtigungen vorhanden sind</string>
-    <string name="smart_pulldown_off">Aus</string>
-    <string name="smart_pulldown_dismissable">keine löschbaren</string>
-    <string name="smart_pulldown_persistent">keine andauernden</string>
-    <string name="smart_pulldown_all">keine löschbaren oder andauernden</string>
-
     <!--Status bar date -->
     <string name="status_bar_date_title">Datum</string>
     <string name="status_bar_date_none">Versteckt (Standard)</string>
@@ -355,14 +347,17 @@
 
     <!-- Slim Recent App Sidebar  -->
     <string name="recent_panel_category">Slim Recents</string>
-    <string name="recent_app_sidebar_title">Seitenleiste für Apps</string>
+    <string name="recent_app_sidebar_title">App-Seitenleiste</string>
     <string name="recent_app_sidebar_summary">Zeige App-Verknüpfungen auf der anderen Seite</string>
+    <string name="use_recent_app_sidebar">App-Seitenleiste aktivieren</string>
     <string name="recent_app_sidebar_style_title">Stil der Seitenleiste</string>
     <string name="recent_app_sidebar_style_summary">Ändere den Stil der App-Seitenleiste</string>
     <string name="recent_app_sidebar_hide_labels_title">Beschriftung der Symbole ausblenden</string>
     <string name="recent_app_sidebar_label_color_title">Farbe des Etiketts</string>
     <string name="recent_app_sidebar_bg_color_title">Hintergrundfarbe</string>
     <string name="recent_app_sidebar_scale_title">Größe</string>
+    <string name="recent_app_sidebar_open_simultaneously_title">Gleichzeitig mit dem Verlauf öffnen</string>
+    <string name="recent_app_sidebar_open_simultaneously_summary">Bei Deaktivierung reduziert die VerzögerungBeim Öffnen des Verlaufs</string>
 
     <!-- Wakelock blocker -->
     <string name="wakelock_blocker_title">Wakelock Blockierer</string>
@@ -507,6 +502,7 @@
     <string name="fling_trails_enable_title">Spur für Gesten aktivieren</string>
     <string name="fling_trails_enable_summary">Zeigt eine Spur bei Wisch-Gesten</string>
     <string name="fling_trails_color_title">Farbe der Spur</string>
+    <string name="fling_trails_width_title">Breite der Spur</string>
     <string name="fling_appearance">Darstellung</string>
     <string name="fling_show_logo_title">Zeige Fling-Logo</string>
     <string name="fling_animate_logo_title">Logo animieren</string>
@@ -515,9 +511,9 @@
     <string name="fling_logo_custom_logo_pick_title">Eigenes Symbol als Logo</string>
     <string name="fling_logo_custom_logo_image_pick_title">Eigenes Bild als Logo</string>
     <string name="fling_logo_custom_logo_reset_title">Symbol des Logos zurücksetzen</string>
-    <string name="fling_show_ripple_title">Zeige Wellen-Effekt</string>
-    <string name="fling_show_ripple_summary">Wellen-Effekt bei Berührung</string>
-    <string name="fling_ripple_color">Farbe der Wellen</string>
+    <string name="fling_show_ripple_title">Zeige Strudel-Effekt</string>
+    <string name="fling_show_ripple_summary">Strudel-Effekt bei Berührung</string>
+    <string name="fling_ripple_color">Farbe des Strudels</string>
     <string name="fling_longpress_timeout_label_left">Weniger Verzögerung</string>
     <string name="fling_longpress_timeout_label_right">Mehr Verzögerung</string>
     <string name="fling_longpress_title">Verzögerung für Langes Drücken</string>
@@ -566,7 +562,7 @@
     <string name="smartbar_left">Links</string>
     <string name="smartbar_button_animation_title">Tasten-Animation bei Berührung</string>
     <string name="smartbar_button_animation_summary">Animationstyp für die primären Tasten festlegen, wenn diese gedrückt werden</string>
-    <string name="smartbar_button_animation_ripple">Wellen</string>
+    <string name="smartbar_button_animation_ripple">Strudel</string>
     <string name="smartbar_button_animation_spring">Hüpfen</string>
     <string name="smartbar_factory_reset_title">Auf Grundeinstellung zurücksetzen</string>
     <string name="smartbar_factory_reset_confirm">Sind Sie sicher, dass die SmartBar auf Standardwerte zurückgesetzt werden soll?</string>
@@ -628,5 +624,45 @@
     <!-- Application Settings -->
     <!-- App details: open play store link if app is user installed -->
     <string name="app_play_store">Google Play</string>
+
+    <!-- Development Settings -->
+    <!-- ADB always notify -->
+    <string name="adb_always_notify">Beim Debuggen immer benachrichtigen</string>
+    <string name="adb_always_notify_summary">Immer eine Benachrichtigung beim Debuggen zeigen, auch wenn das Gerät nicht verbunden ist</string>
+
+    <!-- Navbar buttons transparency -->
+    <string name="navbar_buttons_alpha_title">Transparenz der Tasten</string>
+
+    <!-- Halo -->
+    <!-- Label for are-halo-notifications-allowed checkbox in app details [CHAR LIMIT=20] -->
+    <string name="app_halo_label_black">Für HALO verweigert</string>
+    <string name="app_halo_label_white">Für HALO zugelassen</string>
+
+    <!-- Halo blacklist -->
+    <string name="app_notification_halo_title">Zeige Benachrichtigungen in HALO</string>
+    <string name="app_notification_halo_summary">Zulassen, dass diese App Benachrichtigungen in HALO zeigt</string>
+    <string name="filter_notif_no_halo">Keine Benachrichtigungen in HALO</string>
+    <string name="notifications_four_items"><xliff:g id="notif_state" example="Priority">%1$s</xliff:g> / <xliff:g id="notif_state" example="Priority">%2$s</xliff:g> / <xliff:g id="notif_state" example="Priority">%3$s</xliff:g> / <xliff:g id="notif_state" example="Priority">%4$s</xliff:g></string>
+
+    <string name="toggle_package_install_overlay_check_title">Prüfung der Overlay-Berechtigung deaktivieren</string>
+    <string name="toggle_package_install_overlay_check_summary">WARNUNG\u003A Dies deaktiviert eine Sicherheitsüberprüfung zur Verhinderung von \"Tapjacking\"! Nur benutzen, wenn man die Konsequenzen versteht.</string>
+
+    <!-- Status bar -->
+    <string name="smart_pulldown_title">Intelligentes Öffnen</string>
+    <string name="smart_pulldown_summary">Öffnet die Schnelleinstellungen sofort, wenn %1$s Benachrichtigungen vorhanden sind</string>
+    <string name="smart_pulldown_off">Aus</string>
+    <string name="smart_pulldown_dismissable">keine löschbaren</string>
+    <string name="smart_pulldown_persistent">keine andauernden</string>
+    <string name="smart_pulldown_all">keine löschbaren oder andauernden</string>
+
+    <!-- Heads up -->
+    <string name="add_heads_up_package">App hinzufügen</string>
+    <string name="add_heads_up_dnd_summary">Zeige keine Pop-up-Benachrichtigungen in diesen Anwendungen</string>
+    <string name="add_heads_up_blacklist_summary">Zeige keine Pop-up-Benachrichtigungen von diesen Anwendungen</string>
+    <string name="add_heads_up_whitelist_summary">Zeige alle Benachrichtigungen von diesen Anwendungen als Pop-up</string>
+    <string name="heads_up_dnd_title">\"Nicht stören\"</string>
+    <string name="heads_up_blacklist_title">Schwarze Liste</string>
+    <string name="heads_up_whitelist_title">Weiße Liste</string>
+    <string name="heads_up_contains_key">Die Anwendung wurde bereits zur Liste hinzugefügt</string>
 
 </resources>
