@@ -647,6 +647,30 @@
     <string name="toggle_package_install_overlay_check_title">Prüfung der Overlay-Berechtigung deaktivieren</string>
     <string name="toggle_package_install_overlay_check_summary">WARNUNG\u003A Dies deaktiviert eine Sicherheitsüberprüfung zur Verhinderung von \"Tapjacking\"! Nur benutzen, wenn man die Konsequenzen versteht.</string>
 
+    <!-- Phone info shortcut -->
+    <string name="device_info_title">Telefon Detailinformationen</string>
+
+    <!--  About device screen, Hardware info -->
+    <string name="hardware_info">Hardware-Informationen</string>
+    <!--  About device Screen, hardware info, chipset -->
+    <string name="chipset_info">Chipsatz</string>
+    <!--  About device Screen, hardware info, rear camera -->
+    <string name="device_rear_camera">Hauptkamera (Rückseite)</string>
+    <!--  About device Screen, hardware info, front camera -->
+    <string name="device_front_camera">Frontkamera</string>
+    <!--  About device Screen, hardware info, screen res -->
+    <string name="device_screen_resolution">Bildschirmauflösung</string>
+    <!--  About device Screen, hardware info, GPU info -->
+    <string name="gpu_info">Graphik-Prozessor</string>
+    <!-- About device screen, Cpu info. -->
+    <string name="cpu_info">Haupt-Prozessor(en)</string>
+    <!-- About phone screen, Free memory info -->
+    <string name="mem_info">Arbeitsspeicher</string>
+
+    <!-- About phone screen, AICP device maintainer name -->
+    <string name="device_maintainer">Geräte-Maintainer</string>
+    <string name="device_maintainers">Geräte-Maintainer</string>
+
     <!-- Status bar -->
     <string name="smart_pulldown_title">Intelligentes Öffnen</string>
     <string name="smart_pulldown_summary">Öffnet die Schnelleinstellungen sofort, wenn %1$s Benachrichtigungen vorhanden sind</string>
