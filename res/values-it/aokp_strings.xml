@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2015 The Android Open Source Project
+     Copyright (C) 2015 AOKP
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- About phone screen, AOKP version -->
+    <string name="aokp_version_title">Versione AOKP</string>
+    <string name="aokp_version_default">Sconosciuto</string>
+
+    <!-- About device screen, CPU and RAM info. -->
+    <string name="cpu_info">CPU</string>
+    <string name="mem_info">Memoria</string>
+
+    <!-- Rom Control -->
+    <string name="rom_control_title">ROM Control</string>
+
+    <!-- SuperSU -->
+    <string name="supersu_title">SuperSU</string>
+
+    <!-- Viper4Android -->
+    <string name="viper_title">Viper4Android</string>
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Color Picker</string>
+    <string name="press_color_to_apply">Premere sul colore qui sotto per applicare</string>
+    <string name="arrow_right">→</string>
+    <string name="arrow_down">↓</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#ff000000</string>
+    <string name="set">Imposta</string>
+    <string name="color_default">Predefinito</string>
+
+    <!-- UI debug setting: show CPU info? [CHAR LIMIT=25] -->
+    <string name="show_cpu_info">Mostra le informazioni della CPU</string>
+    <!-- UI debug setting: show cpu usage summary [CHAR LIMIT=50] -->
+    <string name="show_cpu_info_summary">Lo schermo mostra le informazioni correnti della CPU</string>
+
+    <!-- Doze options -->
+    <string name="display_category_doze_options_title">Display ambiente</string>
+    <string name="doze_settings_title">Opzioni avanzate Doze</string>
+    <string name="doze_timeout_title">Tempo di impulso doze</string>
+    <string name="doze_timeout_summary">È il tempo dello schermo che rimane acceso per impulso di notifica</string>
+    <string name="doze_trigger_pickup_title">Scegliere un gesto di avvio</string>
+    <string name="doze_trigger_pickup_summary_on">Doze sarà attivato dal gesto evento del sensore</string>
+    <string name="doze_trigger_pickup_summary_off">Pick up sensore gesto non sarà  utilizzato come un meccanismo di attivazione</string>
+    <string name="doze_trigger_sigmotion_title">Movimento significativo di avvio</string>
+    <string name="doze_trigger_sigmotion_summary_on">Doze sarà attivato dagli eventi del sensore di movimento significativo</string>
+    <string name="doze_trigger_sigmotion_summary_off">Sensore di movimento significativo non sarà utilizzato come un meccanismo di attivazione</string>
+    <string name="doze_trigger_notification_title">Avvio notifica</string>
+    <string name="doze_trigger_notification_summary_on">Doze sarà attivato dalle notifiche</string>
+    <string name="doze_trigger_notification_summary_off">Le notifiche non saranno utilizzati come obbiettivo</string>
+    <string name="doze_schedule_title">Programma di doze</string>
+    <string name="doze_schedule_summary_on">Doze ripete gli intervalli che (di norma [1s, 10s, 30s, 60s, 120s]) saranno utilizzati (predefinito)</string>
+    <string name="doze_schedule_summary_off">Doze sarà avviato solo una volta per ogni notifica</string>
+    <string name="doze_brightness_title">Livello di luminosità doze</string>
+    <string name="doze_brightness_summary">Livello di luminosità di avvio dello schermo (% massimo consentito luminosità )</string>
+
+    <!-- long press back to kill configurable timeout -->
+    <string name="kill_app_longpress_timeout_title">Premere a lungo il tasto indietro</string>
+    <string name="timeout_2000">2 Secondi(Predefinito)</string>
+    <string name="timeout_1500">1,5 Secondi</string>
+    <string name="timeout_1000">1 Secondi</string>
+    <string name="timeout_500">0,5 Secondi</string>
+
+    <!-- Battery saver color -->
+    <string name="battery_saver_color_title">Colore avviso</string>
+    <string name="battery_saver_color_summary">Attiva il colore arancio nella barra di stato quando viene attivato il risparmio batteria</string>
+    
+    <!-- Unaccounted and overcounted battery stats -->
+    <string name="show_unac_and_overcounted_stats_title">Mostra statistiche dispersi/sovrastima</string>
+    <string name="show_unac_and_overcounted_stats_summary">Mostra nelle statistiche della batteria l\'utilizzo dispersi e sovrastima.</string>
+
+    <!-- Slim Lockscreen shorcut. -->
+    <string name="shortcut_action_none">Nessuna</string>
+    <string name="shortcut_action_longpress">Premere a lungo:</string>
+    <string name="shortcut_action_home">Home</string>
+    <string name="shortcut_action_back">Indietro</string>
+    <string name="shortcut_action_menu">Menu</string>
+    <string name="shortcut_action_ime">Apri IME Switcher</string>
+    <string name="shortcut_action_power_menu">Power menu</string>
+    <string name="shortcut_action_recent">Recenti</string>
+    <string name="shortcut_action_power">Spegni schermo</string>
+    <string name="shortcut_action_search">Cerca in app</string>
+    <string name="shortcut_action_longpress">Pressione prolungata:</string>
+    <string name="shortcut_action_select_action_longpress">Scegli azione pressione prolungata:</string>
+    <string name="shortcut_action_select_action">Scegli azione:</string>
+    <string name="shortcut_action_select_action_newaction">Scegli nuova azione:</string>
+    <string name="shortcut_action_reset">Ripristina</string>
+    <string name="shortcut_action_add">Aggiungere</string>
+    <string name="shortcut_action_reset_message">Ripristina tutte le voci di default?</string>
+    <string name="shortcut_action_max">Dimensioni massime sono state raggiunte</string>
+    <string name="shortcut_action_warning">Avvertimento</string>
+    <string name="shortcut_action_warning_message">Non è possibile eliminare ultima voce</string>
+    <string name="shortcut_action_disable_message">Disabilita\nAggiungi una voce per attivare questa funzione</string>
+    <string name="shortcut_image_not_valid">L\'applicazione scelta non ha restituito l\'icona valida o non supporta ritaglio immagine. Utilizzare un\'altra applicazione.</string>
+    <string name="shortcut_duplicate_entry">L\'azione scelta non può essere aggiunto due volte</string>
+    <string name="shortcut_action_help_shortcut">Scorciatoia</string>
+    <string name="shortcut_action_help_button">Pulsante</string>
+    <string name="shortcut_action_help_app">App</string>
+    <string name="shortcut_action_help_icon">, mentre selezionando l\'icona, si aprono possibilità  di personalizzazione</string>
+	  <string name="shortcut_action_help_main">Per aggiungere un %1$s, selezionare l\'icona aggiungi. Una volta che un %1$s si aggiunge, selezionando la riga cambierà l\'obiettivo %2$s\n\n per rimuovere un %1$s, striscia la fila orizzontale verso sinistra o destra. Riordina il %1$s nella lista trascinando verticalmente ancora a sinistra.\n\n Per trasparente o ripristinare le impostazioni, selezionare l\'icona per ripristinare.</string>
+    <string name="shortcut_action_help_delete_last_entry">La rimozione di ogni %1$s dall\'elenco la funzione verrà disattivata completamente.</string>
+    <string name="shortcut_action_help_pie_second_layer_delete_last_entry">La rimozione di ogni %1$ s nell\'elenco disattiverà il secondo strato di torta interamente.</string>
+    
+	
+	  <string name="shortcuts_applications">Applicazioni</string>
+    <string name="shortcuts_select_custom_app_title">Selezionare un\'applicazione personalizzata</string>
+    <string name="shortcuts_icon_picker_type">Selezionare il tipo di icona:</string>
+    <string name="shortcuts_icon_default">Predefinito</string>
+    <string name="shortcuts_icon_presets">Icone di sistema</string>
+    <string name="shortcuts_icon_custom">Galleria</string>
+    <string name="shortcuts_icon_picker_choose_icon_title">Scegli un\'icona</string>
+    
+	  <string name="shortcuts_icon_picker_alarm">Allarme</string>
+    <string name="shortcuts_icon_picker_andy">Andy</string>
+    <string name="shortcuts_icon_picker_battery">Batteria</string>
+    <string name="shortcuts_icon_picker_browser">Browser</string>
+    <string name="shortcuts_icon_picker_calendar">Calendario</string>
+    <string name="shortcuts_icon_picker_camera">Macchina fotografica</string>
+    <string name="shortcuts_icon_picker_cloud">Cloud</string>
+    <string name="shortcuts_icon_picker_contact">Contatto</string>
+    <string name="shortcuts_icon_picker_directdial">Chiamata diretta</string>
+    <string name="shortcuts_icon_picker_directmessage">Messaggio diretto</string>
+    <string name="shortcuts_icon_picker_drive">Guidare</string>
+    <string name="shortcuts_icon_picker_dropbox">Dropbox</string>
+    <string name="shortcuts_icon_picker_email">E-mail</string>
+    <string name="shortcuts_icon_picker_email2">Email alternativo</string>
+    <string name="shortcuts_icon_picker_evernote">Evernote</string>
+    <string name="shortcuts_icon_picker_facebook">Facebook</string>
+    <string name="shortcuts_icon_picker_favorite">Preferito</string>
+    <string name="shortcuts_icon_picker_file_browser">File Browser</string>
+    <string name="shortcuts_icon_picker_file_browser2">File Browser alternativo</string>
+    <string name="shortcuts_icon_picker_fitness">Fitness</string>
+    <string name="shortcuts_icon_picker_gallery">Galleria</string>
+    <string name="shortcuts_icon_picker_gears">Ingranaggi</string>
+    <string name="shortcuts_icon_picker_google_small">Google</string>
+    <string name="shortcuts_icon_picker_gplus">Google Plus</string>
+    <string name="shortcuts_icon_picker_gtalk">luoghi di ritrovo</string>
+    <string name="shortcuts_icon_picker_help">Aiuto</string>
+    <string name="shortcuts_icon_picker_joystick">joystick</string>
+    <string name="shortcuts_icon_picker_key">Tasti / Accounts</string>
+    <string name="shortcuts_icon_picker_laptop">Il computer portatile</string>
+    <string name="shortcuts_icon_picker_notes">Note</string>
+    <string name="shortcuts_icon_picker_luggage">Viaggio</string>
+    <string name="shortcuts_icon_picker_maps">Mappe</string>
+    <string name="shortcuts_icon_picker_market">Mercato</string>
+    <string name="shortcuts_icon_picker_movie">Film</string>
+    <string name="shortcuts_icon_picker_music">Musica</string>
+    <string name="shortcuts_icon_picker_nav">Navigazione</string>
+    <string name="shortcuts_icon_picker_phone">Telefono</string>
+    <string name="shortcuts_icon_picker_package">Pacchetto</string>
+    <string name="shortcuts_icon_picker_pinterest">Pinterest</string>
+    <string name="shortcuts_icon_picker_play">Giocare</string>
+    <string name="shortcuts_icon_picker_pocket">Tasca</string>
+    <string name="shortcuts_icon_picker_quicksettings">Impostazioni rapide</string>
+    <string name="shortcuts_icon_picker_rss">RSS Feed</string>
+    <string name="shortcuts_icon_picker_sdcard">Scheda SD</string>
+    <string name="shortcuts_icon_picker_search">Ricerca</string>
+    <string name="shortcuts_icon_picker_sms">Messaging</string>
+    <string name="shortcuts_icon_picker_tasks">Compiti</string>
+    <string name="shortcuts_icon_picker_terminal">terminale</string>
+    <string name="shortcuts_icon_picker_transit">Transito</string>
+    <string name="shortcuts_icon_picker_tv">Tv</string>
+    <string name="shortcuts_icon_picker_twitter">Twitter</string>
+    <string name="shortcuts_icon_picker_unlock">Sbloccare</string>
+    <string name="airplay">Airplay</string>
+    <string name="android">Android</string>
+    <string name="badoo">Badoo</string>
+    <string name="battery">Batteria</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="bookmarks">Preferiti</string>
+    <string name="browser">Browser</string>
+    <string name="browser2">Browser2</string>
+    <string name="calculator">Calcolatrice</string>
+    <string name="calendar">Calendario</string>
+    <string name="calls">Chiamate</string>
+    <string name="camera">Macchina fotografica</string>
+    <string name="chrome">Cromo</string>
+    <string name="clock">Orologio</string>
+    <string name="cnn">Cnn</string>
+    <string name="deezer2">Deezer2</string>
+    <string name="deezer">Deezer</string>
+    <string name="dolphin2">Delfino</string>
+    <string name="downloads">download</string>
+    <string name="dropbox">Dropbox</string>
+    <string name="ebay">Ebay</string>
+    <string name="email">E-mail</string>
+    <string name="evernote">Evernote</string>
+    <string name="explorer">Esploratore</string>
+    <string name="falcon">Falco</string>
+    <string name="fb">Facebook</string>
+    <string name="flipboard">Flipboard</string>
+    <string name="foursquare">Foursquare</string>
+    <string name="firefox">Firefox</string>
+    <string name="googlebuzz">Google Buzz</string>
+    <string name="googledocs">Documenti Google</string>
+    <string name="googlewallet">Google wallet</string>
+    <string name="line">linea</string>
+    <string name="mic">Mic</string>
+    <string name="newyorktimes">New York Times</string>
+    <string name="rootexplorer">Root Explorer</string>
+    <string name="sim">Sim</string>
+    <string name="teamviewer">Teamviewer</string>
+    <string name="totalcommander">Total commander</string>
+    <string name="weather">Tempo</string>
+    <string name="golocker">Locker Go</string>   
+    <string name="googlecurrents">Google Currents</string>
+    <string name="googletalk">Google Talk</string>
+    <string name="gosms">GO SMS</string>
+    <string name="meebo">Meebo</string>
+    <string name="maps2">Maps2</string>
+    <string name="memorycleaner">Pulizia della memoria</string>
+    <string name="navigation">Navigazione</string>
+    <string name="pulse">Impulso</string>
+    <string name="shazam">Shazam</string>
+    <string name="swiftkey">Swiftkey</string>
+    <string name="tmobile">Tmobile</string>
+    <string name="trash">Spazzatura</string>
+    <string name="games">Giochi</string>
+    <string name="gmail">Gmail</string>
+    <string name="docs">Documenti</string>
+    <string name="googledrive">Google Drive</string>
+    <string name="googleearth">Google Earth</string>
+    <string name="googlehangouts">Luoghi di ritrovo di Google</string>
+    <string name="googlekeep">Google mantenere</string>
+    <string name="googleplay">Google Play</string>
+    <string name="googletranslate">Google Traduttore</string>
+    <string name="google">Google</string>
+    <string name="googleplus">Google Plus</string>
+    <string name="imdb">IMDb</string>
+    <string name="instagram">Instagram</string>
+    <string name="lastfm">Lastfm</string>   
+    <string name="maps">Mappe</string>
+    <string name="messages">Messaggi</string>
+    <string name="music">Musica</string>
+    <string name="mxplayer">Mxplayer</string>
+    <string name="notepad">Messaggio diretto</string>
+    <string name="opera">Musica lirica</string>
+    <string name="paint">Vernice</string>
+    <string name="paypal">Paypal</string>
+    <string name="phone">Telefono</string>
+    <string name="picasa">Picasa</string>
+    <string name="pictures2">Pictures2</string>
+    <string name="player_pro">Pro Player</string>
+    <string name="playstation">Stazione di gioco</string>
+    <string name="reddit">Reddit</string>
+    <string name="settings">impostazioni</string>
+    <string name="skype">Skype</string>
+    <string name="soundscloud">suoni nuvola</string>
+    <string name="spotifiy">Spotifiy</string>
+    <string name="tapatalk">Tapatalk</string>
+    <string name="tunein">Sintonizzarsi</string>
+    <string name="twitter">Twitter</string>
+    <string name="viber">Viber</string>
+    <string name="videocamera">Videocamera</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="wifi">Wifi</string>
+    <string name="xda">Xda</string>
+    <string name="yahoo">Yahoo</string>
+    <string name="youtube">Youtube</string>
+    <string name="zedge">Zedge</string>
+
+    <!-- Lockscreen Shortcuts -->
+    <string name="lockscreen_shortcuts_title">Shortcuts</string>
+    <string name="lockscreen_shortcuts_summary">View or change custom lock screen shortcuts</string>
+    <string name="lockscreen_shorcuts_launch_type_title">Shortcut click type</string>
+    <string name="lockscreen_shortcuts_single_tap">Click</string>
+    <string name="lockscreen_shortcuts_double_tap">Double tap</string>
+    <string name="lockscreen_shortcuts_longpress">Longpress</string>
+
+    <!-- Restart SystemUI -->
+    <string name="restart_systemui">Riavvia SystemUI</string>
+
+    <!-- Dashboard columns -->
+    <string name="dashboard_columns_title">Colonne del pannello</string>
+    <string name="dashboard_columns_summary">Modificare il numero di colonne da visualizzate nel pannello</string>
+    <string name="dashboard_columns_dialog_title">Selezionare le colonne del pannello</string>
+    <string name="dashboard_columns_one">Uno</string>
+    <string name="dashboard_columns_two">Due</string>
+    <string name="dashboard_columns_three">Tre</string>
+
+    <!-- Dashboard tileview double lines -->
+    <string name="dashboard_category">Pannello impostazioni</string>
+    <string name="dashboard_tileview_double_lines_title">Visualizzazione titolo tile</string>
+    <string name="dashboard_tileview_double_lines_summary_on">Mostra il titolo dei tile su 1 linea</string>
+    <string name="dashboard_tileview_double_lines_summary_off">Mostra il titolo dei tile su 2 linee</string>
+</resources>
