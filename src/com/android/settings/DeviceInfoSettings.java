@@ -41,7 +41,6 @@ import android.telephony.CarrierConfigManager;
 import android.text.TextUtils;
 import android.text.format.DateFormat;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.nispok.snackbar.Snackbar;
 import com.nispok.snackbar.SnackbarManager;
@@ -110,7 +109,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     int mDevHitCountdown;
     int mDevIdCountdown;
     SnackbarManager mDevHitSnackbar;
-    Toast mDevIdToast;
+    SnackbarManager mDevIdSnackbar;
 
     @Override
     protected int getMetricsCategory() {
@@ -260,7 +259,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
                         android.os.Build.TYPE.equals("eng")) ? -1 : TAPS_TO_BE_A_DEVELOPER;
         mDevHitSnackbar = null;
         mDevIdCountdown = TAPS_TO_SHOW_DEVICEID;
-        mDevIdToast = null;
+        mDevIdSnackbar = null;
     }
 
     @Override
@@ -315,22 +314,21 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
                     msg = getResources().getString(
                             R.string.show_device_id_copied_cm, deviceID);
                 }
-
-                mDevIdToast = Toast.makeText(getActivity(), msg,
-                        Toast.LENGTH_LONG);
-                mDevIdToast.show();
+                Utils.showSnackbar(msg.toString(), Snackbar.SnackbarDuration.LENGTH_LONG,
+                            null, null, getActivity());
                 mDevIdCountdown = TAPS_TO_SHOW_DEVICEID;
             }
             else if (mDevIdCountdown > 0
                     && mDevIdCountdown < (TAPS_TO_SHOW_DEVICEID-2)) {
 
-                if (mDevIdToast != null) {
-                    mDevIdToast.cancel();
+                if (mDevIdSnackbar != null) {
+                    mDevIdSnackbar.dismiss();
                 }
-                mDevIdToast = Toast.makeText(getActivity(), getResources().getQuantityString(
-                        R.plurals.show_device_id_countdown_cm, mDevIdCountdown, mDevIdCountdown),
-                        Toast.LENGTH_SHORT);
-                mDevIdToast.show();
+                final String message = getResources().getQuantityString(
+                        R.plurals.show_device_id_countdown_cm,
+                        mDevIdCountdown, mDevIdCountdown);
+                Utils.showSnackbar(message, Snackbar.SnackbarDuration.LENGTH_SHORT,
+                        null, null, getActivity());
             }
 
         } else if (preference.getKey().equals(KEY_BUILD_NUMBER)) {
