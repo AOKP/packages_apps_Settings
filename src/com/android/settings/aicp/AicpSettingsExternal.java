@@ -35,6 +35,12 @@ public class AicpSettingsExternal extends SettingsPreferenceFragment {
 
     private static final String PREF_RECENT_APP_SIDEBAR = "recent_app_sidebar_content";
 
+    public static final String INTENT_EXTRA_SHORTCUT = "aicp.settings.external.shortcut";
+
+    public static final String EXTRA_SHORTCUT_RECENT_APP_SIDEBAR = "recent_app_sidebar";
+
+    public static final String EXTRA_SHORTCUT_WAKELOCK_BLOCKER = "wakelock_blocker";
+
     private PreferenceScreen mRecentAppSidebar;
 
     @Override
@@ -54,6 +60,22 @@ public class AicpSettingsExternal extends SettingsPreferenceFragment {
             prefSet.removePreference(mRecentAppSidebar);
         }
 
+        // Launch shortcut if available
+        String shortcut = getActivity().getIntent().getStringExtra(INTENT_EXTRA_SHORTCUT);
+        if (EXTRA_SHORTCUT_RECENT_APP_SIDEBAR.equals(shortcut)) {
+            Bundle extras = new Bundle();
+            extras.putInt("actionMode", 7);
+            extras.putInt("maxAllowedActions", -1);
+            extras.putBoolean("useAppPickerOnly", true);
+            extras.putString("fragment", "com.android.settings.aicp.RecentAppSidebarFragment");
+            startFragment(this, "com.android.settings.aicp.dslv.ActionListViewSettings",
+                    R.string.recent_app_sidebar_title, 0, extras);
+            getActivity().finish();
+        } else if (EXTRA_SHORTCUT_WAKELOCK_BLOCKER.equals(shortcut)) {
+            startFragment(this, "com.android.settings.aicp.WakelockBlocker",
+                    R.string.wakelock_blocker_title, 0, null);
+            getActivity().finish();
+        }
     }
 
     @Override
