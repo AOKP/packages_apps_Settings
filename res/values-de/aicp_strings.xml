@@ -357,7 +357,7 @@
     <string name="recent_app_sidebar_bg_color_title">Hintergrundfarbe</string>
     <string name="recent_app_sidebar_scale_title">Größe</string>
     <string name="recent_app_sidebar_open_simultaneously_title">Gleichzeitig mit dem Verlauf öffnen</string>
-    <string name="recent_app_sidebar_open_simultaneously_summary">Bei Deaktivierung reduziert die VerzögerungBeim Öffnen des Verlaufs</string>
+    <string name="recent_app_sidebar_open_simultaneously_summary">Deaktivieren, um die Verzögerung beim Öffnen des Verlaufs zu reduzieren</string>
 
     <!-- Wakelock blocker -->
     <string name="wakelock_blocker_title">Wakelock Blockierer</string>
