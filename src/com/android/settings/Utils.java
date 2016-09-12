@@ -1191,27 +1191,4 @@ public final class Utils extends com.android.settingslib.Utils {
         }
         return false;
     }
-
-    /**
-     * Trigger client initiated action (send intent) on system update
-     */
-    public static void ciActionOnSysUpdate(Context context, PersistableBundle b) {
-        String intentStr = b.getString(CarrierConfigManager.
-                KEY_CI_ACTION_ON_SYS_UPDATE_INTENT_STRING);
-        if (!TextUtils.isEmpty(intentStr)) {
-            String extra = b.getString(CarrierConfigManager.
-                    KEY_CI_ACTION_ON_SYS_UPDATE_EXTRA_STRING);
-            String extraVal = b.getString(CarrierConfigManager.
-                    KEY_CI_ACTION_ON_SYS_UPDATE_EXTRA_VAL_STRING);
-
-            Intent intent = new Intent(intentStr);
-            if (!TextUtils.isEmpty(extra)) {
-                intent.putExtra(extra, extraVal);
-            }
-            Log.d(TAG, "ciActionOnSysUpdate: broadcasting intent " + intentStr +
-                    " with extra " + extra + ", " + extraVal);
-            context.getApplicationContext().sendBroadcast(intent);
-        }
-    }
 }
-

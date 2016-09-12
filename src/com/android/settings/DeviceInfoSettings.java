@@ -56,7 +56,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
 
     private static final String KEY_MANUAL = "manual";
     private static final String KEY_REGULATORY_INFO = "regulatory_info";
-    private static final String KEY_SYSTEM_UPDATE_SETTINGS = "system_update_settings";
     private static final String PROPERTY_URL_SAFETYLEGAL = "ro.url.safetylegal";
     private static final String PROPERTY_SELINUX_STATUS = "ro.build.selinux";
     private static final String KEY_KERNEL_VERSION = "kernel_version";
@@ -66,7 +65,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_BASEBAND_VERSION = "baseband_version";
     private static final String KEY_FIRMWARE_VERSION = "firmware_version";
     private static final String KEY_SECURITY_PATCH = "security_patch";
-    private static final String KEY_UPDATE_SETTING = "additional_system_update_settings";
     private static final String KEY_EQUIPMENT_ID = "fcc_equipment_id";
     private static final String PROPERTY_EQUIPMENT_ID = "ro.ril.fccid";
     private static final String KEY_DEVICE_FEEDBACK = "device_feedback";
@@ -169,28 +167,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
          * info.
          */
         final Activity act = getActivity();
-
-        // These are contained by the root preference screen
-        PreferenceGroup parentPreference = getPreferenceScreen();
-
-        if (mUm.isAdminUser()) {
-            Utils.updatePreferenceToSpecificActivityOrRemove(act, parentPreference,
-                    KEY_SYSTEM_UPDATE_SETTINGS,
-                    Utils.UPDATE_PREFERENCE_FLAG_SET_TITLE_TO_MATCHING_ACTIVITY);
-        } else {
-            // Remove for secondary users
-            removePreference(KEY_SYSTEM_UPDATE_SETTINGS);
-        }
-
-        boolean isRJILlayout = getResources().getBoolean(R.bool.config_settings_rjil_layout);
-
-        if(isRJILlayout){
-            removePreference(KEY_SYSTEM_UPDATE_SETTINGS);
-        }
-
-        // Read platform settings for additional system update setting
-        removePreferenceIfBoolFalse(KEY_UPDATE_SETTING,
-                R.bool.config_additional_system_update_setting_enable);
 
         // Remove manual entry if none present.
         removePreferenceIfBoolFalse(KEY_MANUAL, R.bool.config_show_manual);
@@ -302,13 +278,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
             }
         } else if (preference.getKey().equals(KEY_DEVICE_FEEDBACK)) {
             sendFeedback();
-        } else if(preference.getKey().equals(KEY_SYSTEM_UPDATE_SETTINGS)) {
-            CarrierConfigManager configManager =
-                    (CarrierConfigManager) getSystemService(Context.CARRIER_CONFIG_SERVICE);
-            PersistableBundle b = configManager.getConfig();
-            if (b.getBoolean(CarrierConfigManager.KEY_CI_ACTION_ON_SYS_UPDATE_BOOL)) {
-                ciActionOnSysUpdate(b);
-            }
         } else if (preference.getKey().equals(KEY_AOKP_VERSION)) {
             System.arraycopy(mHits, 1, mHits, 0, mHits.length-1);
             mHits[mHits.length-1] = SystemClock.uptimeMillis();
@@ -479,14 +448,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
                     keys.add(KEY_DEVICE_FEEDBACK);
                 }
                 final UserManager um = UserManager.get(context);
-                // TODO: system update needs to be fixed for non-owner user b/22760654
-                if (!um.isAdminUser()) {
-                    keys.add(KEY_SYSTEM_UPDATE_SETTINGS);
-                }
-                if (!context.getResources().getBoolean(
-                        R.bool.config_additional_system_update_setting_enable)) {
-                    keys.add(KEY_UPDATE_SETTING);
-                }
                 return keys;
             }
 
