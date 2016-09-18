@@ -503,4 +503,7 @@
     <string name="show_enter_key_title">Show enter key</string>
     <string name="show_enter_key_summary">Force keyboard to show enter instead of emoticon key</string>
 
+    <string name="ambient_display_show_battery_title">Battery Status</string>
+    <string name="ambient_display_show_battery_summary">Show battery indicator during pulse</string>
+
 </resources>
