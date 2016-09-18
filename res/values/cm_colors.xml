@@ -31,4 +31,7 @@ limitations under the License.
     <color name="condition_card_divider_color">@android:color/white</color>
     <color name="condition_card_first_button_text_color">@*android:color/primary_text_material_dark</color>
     <color name="condition_card_second_button_text_color">@*android:color/primary_text_material_dark</color>
+
+    <color name="dashboard_category_title_background">@color/card_background</color>
+    <color name="selectable_card_background">@color/card_background</color>
 </resources>
