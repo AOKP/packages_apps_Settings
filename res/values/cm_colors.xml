@@ -21,4 +21,14 @@ limitations under the License.
 
     <!-- Storage Summary Title -->
     <color name="storage_summary_title_color">#ff607d8b</color>
+
+    <!-- Condition card colors -->
+    <color name="condition_card_background_color">@*android:color/material_deep_teal_500</color>
+    <color name="condition_card_icon_color">@*android:color/primary_text_material_dark</color>
+    <color name="condition_card_title_text_color">@*android:color/primary_text_material_dark</color>
+    <color name="condition_card_expander_color">@*android:color/primary_text_material_dark</color>
+    <color name="condition_card_summary_text_color">@*android:color/primary_text_material_dark</color>
+    <color name="condition_card_divider_color">@android:color/white</color>
+    <color name="condition_card_first_button_text_color">@*android:color/primary_text_material_dark</color>
+    <color name="condition_card_second_button_text_color">@*android:color/primary_text_material_dark</color>
 </resources>
