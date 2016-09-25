@@ -73,6 +73,8 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_MBN_VERSION = "mbn_version";
     private static final String PROPERTY_MBN_VERSION = "persist.mbn.version";
     private static final String KEY_AOKP_VERSION = "aokp_version";
+    private static final String KEY_MOD_VERSION = "mod_version";
+    private static final String KEY_DEVICE_MAINTAINER = "device_maintainer";
     private static final String KEY_MOD_BUILD_DATE = "build_date";
     private static final String KEY_MOD_API_LEVEL = "mod_api_level";
     private static final String KEY_QGP_VERSION = "qgp_version";
@@ -137,6 +139,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
         setExplicitValueSummary(KEY_MOD_API_LEVEL, constructApiLevelString());
         findPreference(KEY_MOD_API_LEVEL).setEnabled(true);
+        setMaintainerSummary(KEY_DEVICE_MAINTAINER, "ro.aokp.maintainer");
 
         if (!SELinux.isSELinuxEnabled()) {
             String status = getResources().getString(R.string.selinux_status_disabled);
@@ -385,6 +388,20 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private void setExplicitValueSummary(String preference, String value) {
         try {
             findPreference(preference).setSummary(value);
+        } catch (RuntimeException e) {
+            // No recovery
+        }
+    }
+
+    private void setMaintainerSummary(String preference, String property) {
+        try {
+            String maintainers = SystemProperties.get(property,
+                    getResources().getString(R.string.device_info_default));
+            findPreference(preference).setSummary(maintainers);
+            if (maintainers.contains(",")) {
+                findPreference(preference).setTitle(
+                        getResources().getString(R.string.device_maintainers));
+            }
         } catch (RuntimeException e) {
             // No recovery
         }

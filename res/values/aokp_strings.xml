@@ -493,4 +493,7 @@
     <string name="ambient_display_show_battery_title">Battery Status</string>
     <string name="ambient_display_show_battery_summary">Show battery indicator during pulse</string>
 
+    <!-- About phone screen, AOKP device maintainer name -->
+    <string name="device_maintainer">Device maintainer</string>
+    <string name="device_maintainers">Device maintainers</string>
 </resources>
