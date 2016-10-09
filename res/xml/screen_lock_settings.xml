@@ -68,6 +68,12 @@
         <extra android:name="useAppPickerOnly" android:value="true" />
         <extra android:name="fragment" android:value="com.android.settings.slim.fragments.LockscreenShortcutFragment" />
 	</PreferenceScreen>
+	
+	<lineageos.preference.SystemSettingSwitchPreference
+            android:key="lockscreen_quick_unlock_control"
+            android:title="@string/unlock_quick_unlock_control_title"
+            android:summary="@string/unlock_quick_unlock_control_summary"
+            android:defaultValue="false" />
 
     <!-- Lineage additions, available in pin/pattern/password/slide -->
     <SwitchPreference
