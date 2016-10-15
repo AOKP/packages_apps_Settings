@@ -2980,6 +2980,106 @@
                 android:resource="@string/wifi_calling_suggestion_summary" />
         </activity>
 
+        <!-- Global DUI settings activity. -->
+        <activity android:name="Settings$NavigationSettingsActivity"
+            android:label="@string/navigation_category"
+            android:icon="@drawable/du_navbar_icon"
+            android:taskAffinity="">
+            <intent-filter android:priority="2">
+                <action android:name="com.android.settings.du.NavbarSettings" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.VOICE_LAUNCH" />
+                <category android:name="com.android.settings.SHORTCUT" />
+            </intent-filter>
+            <intent-filter android:priority="9">
+                <action android:name="com.android.settings.action.SETTINGS" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.category"
+                android:value="com.android.settings.category.romcontrol" />
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.du.NavbarSettings" />
+            <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
+                android:value="true" />
+        </activity>
+
+        <!-- Smartbar settings activity. -->
+        <activity android:name="Settings$SmartbarSettingsActivity"
+                android:label="@string/smartbar_settings_title"
+                android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.du.SmartbarSettings" />
+        </activity>
+
+        <!-- Fling settings activity. -->
+        <activity android:name="Settings$FlingSettingsActivity"
+                android:label="@string/fling_settings"
+                android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.du.FlingSettings" />
+        </activity>
+
+        <!-- Pulse settings activity. -->
+        <activity android:name="Settings$PulseSettingsActivity"
+                android:label="@string/pulse_settings"
+                android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.du.PulseSettings" />
+        </activity>
+
+       <!-- System action picker -->
+        <activity android:name="com.android.settings.du.utils.ActionPickerDialogActivity"
+                android:theme="@*android:style/Theme.Material.Light.Dialog.Alert"
+                android:label="@string/choose_action_title"
+                android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+       <!-- Icon pack picker -->
+        <activity android:name="com.android.settings.du.utils.IconPickerActivity"
+                android:theme="@*android:style/Theme.Material.Light.Dialog.Alert"
+                android:label="@string/icon_pack_picker_dialog_title"
+                android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <!-- Icon picker proxy for gallery -->
+        <activity android:name="com.android.settings.du.utils.IconPickerGallery"
+            android:theme="@*android:style/Theme.Material.Light.Dialog.Alert"
+            android:label="@string/icon_pack_picker_dialog_title"
+            android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+       <!-- Icon pack grid -->
+        <activity android:name="com.android.settings.du.utils.IconPackGridActivity"
+                android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
         <provider
             android:name=".search.SettingsSearchIndexablesProvider"
             android:authorities="com.android.settings"
