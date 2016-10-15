@@ -24,7 +24,13 @@
     <!-- DSLV fab color -->
     <color name="floating_action_button_touch_tint">#80ffffff</color>
 
+
     <color name="fab_ripple">#1fffffff</color><!-- 12% white -->
     <color name="fab_shape">?android:attr/colorAccent</color>
+
+    <color name="theme_accent">#ff009688</color>
+    <color name="action_picker_fab_background">@color/theme_accent</color>
+    <color name="icon_tint_color">@color/material_deep_teal_500</color>
+    <color name="white">#FFF</color>
 
 </resources>
