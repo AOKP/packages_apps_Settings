@@ -87,6 +87,10 @@ import com.android.settings.deviceinfo.SimStatus;
 import com.android.settings.deviceinfo.Status;
 import com.android.settings.deviceinfo.StorageSettings;
 import com.android.settings.display.NightDisplaySettings;
+import com.android.settings.du.FlingSettings;
+import com.android.settings.du.NavbarSettings;
+import com.android.settings.du.SmartbarSettings;
+import com.android.settings.du.PulseSettings;
 import com.android.settings.fuelgauge.BatterySaverSettings;
 import com.android.settings.fuelgauge.PowerUsageDetail;
 import com.android.settings.fuelgauge.PowerUsageSummary;
@@ -287,6 +291,11 @@ public class SettingsActivity extends SettingsDrawerActivity
             DragSortListView.class.getName(),
             LockscreenShortcutFragment.class.getName(),
             ShortcutPickerHelper.class.getName(),
+            //DU
+            NavbarSettings.class.getName(),
+            FlingSettings.class.getName(),
+            SmartbarSettings.class.getName(),
+            PulseSettings.class.getName(),
             //CM
             WirelessSettings.class.getName(),
             WifiSettings.class.getName(),
