@@ -307,6 +307,10 @@ public class ColorPickerPreference extends Preference implements
         return "#" + alpha + red + green + blue;
     }
 
+    public void setDefaultColor(int color) {
+        mDefValue = color;
+    }
+
     /**
      * For custom purposes. Not used by ColorPickerPreferrence
      *
