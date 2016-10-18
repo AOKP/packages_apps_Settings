@@ -81,7 +81,7 @@
         <Preference android:key="firmware_version"
                 android:title="@string/firmware_version"
                 android:summary="@string/summary_placeholder"/>
-
+                
         <!-- LineageOS version -->
         <org.lineageos.internal.preference.deviceinfo.LineageVersionPreference
                 android:key="lineage_version" />
