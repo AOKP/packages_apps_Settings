@@ -23,7 +23,7 @@
                 android:shouldDisableView="false"
                 android:title="@string/aokp_version_title"
                 android:summary="@string/aokp_version_default"
-                android:icon="@drawable/ic_aokp_about" />
+                android:icon="@drawable/ic_aokp_alpha" />
 
 
         <!-- Device status - launches activity -->
