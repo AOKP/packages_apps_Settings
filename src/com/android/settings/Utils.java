@@ -59,7 +59,6 @@ import android.os.ServiceManager;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.os.storage.StorageManager;
-import android.os.PersistableBundle;
 import android.preference.PreferenceFrameLayout;
 import android.provider.ContactsContract.CommonDataKinds;
 import android.provider.ContactsContract.Contacts;
@@ -72,7 +71,6 @@ import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceGroup;
 import android.support.v7.preference.PreferenceManager;
 import android.support.v7.preference.PreferenceScreen;
-import android.telephony.CarrierConfigManager;
 import android.telephony.TelephonyManager;
 import android.text.Spannable;
 import android.text.SpannableString;
@@ -1173,26 +1171,6 @@ public final class Utils extends com.android.settingslib.Utils {
             return context.getPackageManager().getApplicationInfo(packageName, 0).enabled;
         } catch (NameNotFoundException e) {
             // Thrown by PackageManager.getApplicationInfo if the package does not exist
-        }
-        return false;
-    }
-
-    /**
-     * check whether NetworkSetting apk exist in system, if yes, return true, else
-     * return false.
-     */
-    public static boolean isNetworkSettingsApkAvailable(Context context) {
-        // check whether the target handler exist in system
-        Intent intent = new Intent("org.codeaurora.settings.NETWORK_OPERATOR_SETTINGS_ASYNC");
-        PackageManager pm = context.getPackageManager();
-        List<ResolveInfo> list = pm.queryIntentActivities(intent, 0);
-        for (ResolveInfo resolveInfo : list){
-            // check is it installed in system.img, exclude the application
-            // installed by user
-            if ((resolveInfo.activityInfo.applicationInfo.flags &
-                    ApplicationInfo.FLAG_SYSTEM) != 0) {
-                return true;
-            }
         }
         return false;
     }

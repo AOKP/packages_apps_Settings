@@ -17,15 +17,14 @@ package com.android.settings.dashboard;
 
 import android.content.ComponentName;
 import android.content.Context;
-import android.content.Intent;
-import android.content.pm.ResolveInfo;
-import android.text.TextUtils;
+import android.util.Log;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.Icon;
 import android.provider.Settings;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.util.ArrayMap;
 import android.util.TypedValue;
 import android.view.ContextThemeWrapper;
@@ -123,6 +122,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
     public Lte4GEnabler getLte4GEnabler(){
         return mLte4GEnabler;
     }
+
     public void updateLte4GEnabler(){
         if(mLte4GEnablerHolder == null) {
             return;
