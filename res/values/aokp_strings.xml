@@ -343,6 +343,7 @@
     <string name="info_pref_note_title">Note</string>
     <string name="smartbar_interface">SmartBar</string>
     <string name="icon_pack_picker_dialog_title">Icon packs</string>
+    <string name="image_exceeds_max_allowed_size">Image must not exceed 512x512</string>
     <string name="invalid_icon_from_uri">Unable to load image from content provider</string>
     <string name="picker_activities">Activities</string>
     <string name="select_custom_app_title">Select custom app</string>
