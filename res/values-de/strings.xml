@@ -3210,4 +3210,6 @@
     <string name="oem_unlock_enable_disabled_summary_connectivity_or_locked" msgid="5884723935668892613">"Stelle eine Internetverbindung her oder kontaktiere deinen Mobilfunkanbieter"</string>
     <string name="oem_unlock_enable_disabled_summary_sim_locked_device" msgid="4149387448213399630">"Auf vom Mobilfunkanbieter gesperrten Geräten nicht verfügbar"</string>
     <string name="automatic_storage_manager_freed_bytes" msgid="7517560170441007788">"Insgesamt <xliff:g id="SIZE">%1$s</xliff:g> freigegeben\n\nZuletzt ausgeführt am <xliff:g id="DATE">%2$s</xliff:g>"</string>
+    <string name="advanced_reboot_title">Erweiterter Neustart</string>
+    <string name="advanced_reboot_summary">Wenn aktiviert werden Optionen zum Neustarten in die Recovery, Bootloader und für schnellen Neustart angezeigt</string>
 </resources>
