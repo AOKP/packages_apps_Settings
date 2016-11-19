@@ -270,12 +270,12 @@
     <string name="zedge">Zedge</string>
 
     <!-- Lockscreen Shortcuts -->
-    <string name="lockscreen_shortcuts_title">Shortcuts</string>
-    <string name="lockscreen_shortcuts_summary">View or change custom lock screen shortcuts</string>
-    <string name="lockscreen_shorcuts_launch_type_title">Shortcut click type</string>
-    <string name="lockscreen_shortcuts_single_tap">Click</string>
-    <string name="lockscreen_shortcuts_double_tap">Double tap</string>
-    <string name="lockscreen_shortcuts_longpress">Longpress</string>
+    <string name="lockscreen_shortcuts_title">Scorciatoie rapide</string>
+    <string name="lockscreen_shortcuts_summary">Visualizza o modifica le scorciatoie rapide personalizzate della schermata di blocco</string>
+    <string name="lockscreen_shorcuts_launch_type_title">Tipo di tocco sulla scorciatoia</string>
+    <string name="lockscreen_shortcuts_single_tap">Tocco</string>
+    <string name="lockscreen_shortcuts_double_tap">Doppio tocco</string>
+    <string name="lockscreen_shortcuts_longpress">Pressione prolungata</string>
 
     <!-- Restart SystemUI -->
     <string name="restart_systemui">Riavvia SystemUI</string>
