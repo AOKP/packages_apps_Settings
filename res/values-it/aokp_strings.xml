@@ -31,11 +31,11 @@
     <string name="viper_title">Viper4Android</string>
 
     <!-- Color Picker -->
-    <string name="dialog_color_picker">Color Picker</string>
+    <string name="dialog_color_picker">Seleziona colore</string>
     <string name="press_color_to_apply">Premere sul colore qui sotto per applicare</string>
     <string name="arrow_right">→</string>
     <string name="arrow_down">↓</string>
-    <string name="hex">Hex:</string>
+    <string name="hex">Esadecimale:</string>
     <string name="hex_hint">#ff000000</string>
     <string name="set">Imposta</string>
     <string name="color_default">Predefinito</string>
@@ -75,7 +75,11 @@
     <!-- Battery saver color -->
     <string name="battery_saver_color_title">Colore avviso</string>
     <string name="battery_saver_color_summary">Attiva il colore arancio nella barra di stato quando viene attivato il risparmio batteria</string>
-    
+  
+    <!-- Battery fully charged notification -->
+    <string name="battery_fully_charged_notif_title">Notifica batteria carica</string>
+    <string name="battery_fully_charged_notif_summary">Visualizza una notifica quando la batteria è completamente carica</string>
+  
     <!-- Unaccounted and overcounted battery stats -->
     <string name="show_unac_and_overcounted_stats_title">Mostra statistiche dispersi/sovrastima</string>
     <string name="show_unac_and_overcounted_stats_summary">Mostra nelle statistiche della batteria l\'utilizzo dispersi e sovrastima.</string>
