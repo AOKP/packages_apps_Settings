@@ -67,4 +67,7 @@ limitations under the License.
     <color name="condition_card_first_button_text_color">@*android:color/primary_text_default_material_dark</color>
     <color name="condition_card_second_button_text_color">@*android:color/primary_text_default_material_dark</color>
 
+    <!-- Gesture settings switchbar background -->
+    <color name="gestures_switchbar_color">@android:color/white</color>
+
 </resources>
