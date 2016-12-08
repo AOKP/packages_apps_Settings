@@ -34,4 +34,13 @@ limitations under the License.
 
     <color name="dashboard_category_title_background">@color/card_background</color>
     <color name="selectable_card_background">@color/card_background</color>
+
+    <!-- Storage icons -->
+    <color name="storage_public">#ff9e9e9e</color>
+    <color name="storage_warning">#fff4511e</color>
+    <color name="storage_private_1">#ff26a69a</color>
+    <color name="storage_private_2">#ffab47bc</color>
+    <color name="storage_private_3">#fff2a600</color>
+    <color name="storage_private_4">#ffec407a</color>
+    <color name="storage_private_5">#ffc0ca33</color>
 </resources>
