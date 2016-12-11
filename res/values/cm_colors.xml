@@ -34,6 +34,7 @@ limitations under the License.
 
     <color name="dashboard_category_title_background">@color/card_background</color>
     <color name="selectable_card_background">@color/card_background</color>
+    <color name="switchbar_background_color">#ff37474f</color>
 
     <!-- Storage icons -->
     <color name="storage_public">#ff9e9e9e</color>
