@@ -493,6 +493,10 @@
     <string name="smartbar_config_restore_error_toast">Error restoring Smartbar profile</string>
     <string name="navbar_buttons_alpha_title">Button transparency</string>
 
+    <!-- Navbar dynamic color -->
+    <string name="nav_bar_dynamic_title">Dynamic navbar color</string>
+    <string name="nav_bar_dynamic_summary">Enables the navbar to adapt app\'s primary dark color. Restart your desired app to see effect.</string>
+
     <!-- Keyboard and Input ASS methods  -->
     <string name="attention">Attention</string>
     <string name="title_keyboard_input">Advanced options</string>
