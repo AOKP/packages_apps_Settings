@@ -80,4 +80,8 @@
     <color name="text_color_white">@android:color/white</color>
     <color name="background_color_white">@android:color/white</color>
 
+    <!-- Color engine -->
+    <color name="pixel_primary_color">#242424</color>
+    <color name="pixel_secondary_color">#3a3a3a</color>
+
 </resources>

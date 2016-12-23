@@ -640,4 +640,26 @@
     <string name="dnd_when_call_title">Do not Disturb</string>
     <string name="dnd_when_call_summary">Enable Do not Disturb when call active</string>
 
+    <!-- Color engine -->
+    <string name="theme_switch_palette">Switch between primary and accent colors</string>
+    <string name="theme_title">Color engine</string>
+    <string name="theme_summary">Select different colors for your current theme</string>
+    <string name="theme_accent_color">Accent color</string>
+    <string name="theme_primary_color">Primary color</string>
+    <string name="theme">Theme</string>
+    <string name="oms_enabled">Theme modes unavailable because a Substratum theme is currently applied</string>
+    <string name="red">Torch Red</string>
+    <string name="orange">Vermilion</string>
+    <string name="blue">Pixel Blue</string>
+    <string name="green">Lima</string>
+    <string name="yellow">Supernova</string>
+    <string name="purple">Purple Heat</string>
+    <string name="pink">Rose</string>
+    <string name="dark">Dark</string>
+    <string name="pixel">Pixel</string>
+    <string name="teal">Default</string>
+    <string name="cyan">Scooter</string>
+    <string name="grey">Grey</string>
+    <string name="default_string">Default</string>
+
 </resources>
