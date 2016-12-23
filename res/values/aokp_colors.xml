@@ -29,4 +29,7 @@
     <color name="icon_tint_color">@color/material_deep_teal_500</color>
     <color name="white">#FFF</color>
 
+    <!-- External Icon Tint -->
+    <color name="external_tile_icon_tint_color">?android:attr/colorAccent</color>
+
 </resources>
