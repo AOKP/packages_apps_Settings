@@ -967,6 +967,7 @@
                 android:value="true" />
         </activity>
 
+        <!-- ROMControl settings activity. -->
         <activity android:name="Settings$ROMControlActivity"
                 android:label="@string/rom_control_title"
                 android:icon="@drawable/ic_settings_rom_control_teal"
@@ -976,7 +977,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="com.android.settings.SHORTCUT" />
             </intent-filter>
-            <intent-filter android:priority="1">
+            <intent-filter android:priority="4">
                 <action android:name="com.android.settings.action.SETTINGS" />
             </intent-filter>
             <meta-data android:name="com.android.settings.category"
