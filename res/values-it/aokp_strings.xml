@@ -288,7 +288,7 @@
     <string name="dashboard_columns_title">Colonne del pannello</string>
     <string name="dashboard_columns_summary">Modificare il numero di colonne da visualizzate nel pannello</string>
     <string name="dashboard_columns_dialog_title">Selezionare le colonne del pannello</string>
-    <string name="dashboard_columns_one">Uno</string>
+    <string name="dashboard_columns_dialog_title">Uno (predefinito)</string>
     <string name="dashboard_columns_two">Due</string>
     <string name="dashboard_columns_three">Tre</string>
 
