@@ -35,4 +35,7 @@
     <!-- Shortcut picker -->
     <dimen name="shortcut_picker_left_padding">70dip</dimen>
 
+    <!-- Dashboard -->
+    <dimen name="dashboard_category_padding_bottom">8dip</dimen>
+
 </resources>
