@@ -62,6 +62,7 @@ import com.android.settings.accounts.AccountSettings;
 import com.android.settings.accounts.AccountSyncSettings;
 import com.android.settings.accounts.ChooseAccountActivity;
 import com.android.settings.accounts.ManagedProfileSettings;
+import com.android.settings.aokp.AmbientSettings;
 import com.android.settings.applications.AdvancedAppSettings;
 import com.android.settings.applications.DrawOverlayDetails;
 import com.android.settings.applications.InstalledAppDetails;
@@ -288,6 +289,7 @@ public class SettingsActivity extends SettingsDrawerActivity
     private static final String[] ENTRY_FRAGMENTS = {
             //AOKP
             ActionListViewSettings.class.getName(),
+            AmbientSettings.class.getName(),
             DragSortController.class.getName(),
             DragSortItemView.class.getName(),
             DragSortListView.class.getName(),
