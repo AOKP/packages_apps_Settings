@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+                  xmlns:cm="http://schemas.android.com/apk/res/cyanogenmod.platform"
+                  android:title="@string/doze_title">
+
+    <SwitchPreference
+        android:key="doze"
+        android:title="@string/doze_title"
+        android:summary="@string/doze_summary"
+        android:persistent="false" />
+
+    <com.android.settings.preference.SystemSettingSwitchPreference
+        android:key="doze_overwrite_value"
+        android:title="@string/doze_overwrite_value_title"
+        android:summary="@string/doze_overwrite_value_summary"
+        android:dependency="doze" />
+
+    <cyanogenmod.preference.SystemSettingSwitchPreference
+        android:key="ambient_display_show_battery"
+        android:title="@string/ambient_display_show_battery_title"
+        android:summary="@string/ambient_display_show_battery_summary"
+        cm:requiresConfig="@*android:bool/config_dozeAfterScreenOff"
+        android:dependency="doze"
+        android:defaultValue="true" />
+
+    <PreferenceCategory
+        android:key="doze_pulse_category"
+        android:title="@string/doze_pulse_title" >
+
+        <Preference
+            android:key="doze_brightness_level"
+            android:title="@string/doze_brightness_level_title"
+            android:persistent="false"
+            android:dependency="doze_overwrite_value" />
+
+        <ListPreference
+            android:entries="@array/doze_pulse_duration_in_entries"
+            android:entryValues="@array/doze_pulse_duration_in_values"
+            android:key="doze_pulse_in"
+            android:title="@string/doze_pulse_duration_in_title"
+            android:summary="@string/doze_pulse_duration_in_summary"
+            android:persistent="false"
+            android:dependency="doze_overwrite_value" />
+
+        <ListPreference
+            android:entries="@array/doze_pulse_duration_visible_entries"
+            android:entryValues="@array/doze_pulse_duration_visible_values"
+            android:key="doze_pulse_visible"
+            android:title="@string/doze_pulse_duration_visible_title"
+            android:summary="@string/doze_pulse_duration_visible_summary"
+            android:persistent="false"
+            android:dependency="doze_overwrite_value" />
+
+        <ListPreference
+            android:entries="@array/doze_pulse_duration_in_entries"
+            android:entryValues="@array/doze_pulse_duration_in_values"
+            android:key="doze_pulse_out"
+            android:title="@string/doze_pulse_duration_out_title"
+            android:summary="@string/doze_pulse_duration_out_summary"
+            android:persistent="false"
+            android:dependency="doze_overwrite_value" />
+    </PreferenceCategory>
+</PreferenceScreen>
