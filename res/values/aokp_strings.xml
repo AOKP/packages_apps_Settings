@@ -637,4 +637,7 @@
     <string name="dashboard_summary_double_lines_summary_on">Show dashboard tile summaries in more lines</string>
     <string name="dashboard_summary_double_lines_summary_off">Show dashboard tile summaries in 1 line</string>
 
+    <string name="dnd_when_call_title">Do not Disturb</string>
+    <string name="dnd_when_call_summary">Enable Do not Disturb when call active</string>
+
 </resources>

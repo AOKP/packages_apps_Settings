@@ -36,4 +36,10 @@
             android:key="visual_interruptions_settings"
             android:title="@string/zen_mode_visual_interruptions_settings_title"
             android:fragment="com.android.settings.notification.ZenModeVisualInterruptionSettings" />
+
+    <com.android.settings.preference.SystemSettingSwitchPreference
+             android:key="dnd_when_call"
+             android:title="@string/dnd_when_call_title"
+             android:summary="@string/dnd_when_call_summary"
+             android:defaultValue="true" />
 </PreferenceScreen>
