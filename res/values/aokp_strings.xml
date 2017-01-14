@@ -488,6 +488,8 @@
     <string name="smartbar_config_backup_error_toast">Error saving Smartbar profile</string>
     <string name="smartbar_config_restore_error_toast">Error restoring Smartbar profile</string>
     <string name="navbar_buttons_alpha_title">Button transparency</string>
+    <string name="smartbar_doubletap_sleep_title">Double tap to sleep</string>
+    <string name="smartbar_doubletap_sleep_summary">Double tap on navbar empty areas to switch off the screen</string>
     <string name="one_handed_mode_title">One handed mode</string>
     <string name="one_handed_mode_summary">Allows swiping on the navigation bar to enable one handed mode</string>
 

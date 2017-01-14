@@ -44,6 +44,12 @@
         android:entryValues="@array/smartbar_button_animation_values"
         android:summary="@string/smartbar_button_animation_summary" />
 
+    <com.android.settings.preference.SystemSettingSwitchPreference
+        android:key="smartbar_doubletap_sleep"
+        android:title="@string/smartbar_doubletap_sleep_title"
+        android:summary="@string/smartbar_doubletap_sleep_summary"
+        android:defaultValue="false" />
+
     <com.android.settings.preference.SecureSettingSwitchPreference
         android:key="one_handed_mode_ui"
         android:title="@string/one_handed_mode_title"
@@ -57,6 +63,4 @@
         settings:min="0"
         settings:units=""
         android:persistent="false" />
-
-
 </PreferenceScreen>
