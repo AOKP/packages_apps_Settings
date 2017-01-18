@@ -28,6 +28,19 @@
   <string name="show_dev_already_cm">Não é preciso, você já ativou as configurações de desenvolvedor.</string>
   <!-- Launch Dev Tools -->
   <string name="development_tools_title">Ferramentas de desenvolvedor</string>
+
+    <!-- Per-app data restrictions -->
+    <string name="data_usage_app_restrict_data_category_title">Acesso a dados celulares</string>
+    <string name="data_usage_app_restrict_wifi_category_title">Wi\u2011Fi acesso a dados</string>
+    <!-- Title for switch to block app data usage [CHAR LIMIT=30] -->
+    <string name="data_usage_app_restrict_all_data_title">Desabilitar todos acessos a dados</string>
+    <!-- Summary for switch to block app data usage [CHAR LIMIT=NONE] -->
+    <string name="data_usage_app_restrict_all_data_summary">Impedir qualquer uso de acesso a dados através de redes celulares</string>
+    <!-- Title for switch to block app data usage [CHAR LIMIT=30] -->
+    <string name="data_usage_app_restrict_all_wifi_title">Desativar todos os Wi\u2011Fi acesso a dados</string>
+    <!-- Summary for switch to block app data usage [CHAR LIMIT=NONE] -->
+    <string name="data_usage_app_restrict_all_wifi_summary">Impedir qualquer uso de acesso a dados via Wi\u2011Fi redes</string>
+
   <!-- Setting checkbox title for root access -->
   <string name="root_access">Acesso superusuário</string>
   <string name="root_access_warning_title">Permitir acesso superusuário?</string>
