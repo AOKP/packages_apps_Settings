@@ -33,6 +33,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.android.internal.logging.MetricsLogger;
@@ -86,6 +87,8 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
 
     private Condition mExpandedCondition = null;
     private SuggestionParser mSuggestionParser;
+
+    private int mNumColumns = 1;
 
     public DashboardAdapter(Context context, SuggestionParser parser, Bundle savedInstanceState,
                 List<Condition> conditions) {
@@ -497,5 +500,13 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
             title = (TextView) itemView.findViewById(android.R.id.title);
             summary = (TextView) itemView.findViewById(android.R.id.summary);
         }
+    }
+
+    public boolean isPositionFullSpan(int position) {
+        return mTypes.get(position) != R.layout.dashboard_tile;
+    }
+
+    public void setNumColumns(int numColumns) {
+        mNumColumns = numColumns;
     }
 }
