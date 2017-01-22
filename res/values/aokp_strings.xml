@@ -612,4 +612,14 @@
     <string name="dots_anim_duration_title">Dots duration</string>
     <string name="home_resize_anim_duration_title">Home button resize duration</string>
 
+    <!-- Dashboard options -->
+    <string name="dashboard_category">Dashboard options</string>
+    <string name="disable_suggestions_title">Disable suggestions</string>
+    <string name="disable_suggestions_summary">Disable the suggestions that appear on top of the dashboard</string>
+    <string name="remove_tile_summaries_title">Remove tile summaries</string>
+    <string name="remove_tile_summaries_summary">Remove tiles summaries that display underneath tile titles</string>
+    <string name="dashboard_conditions_title">Dashboard conditions</string>
+    <string name="summary_dashboard_conditions_enabled">Dashboard conditions are enabled</string>
+    <string name="summary_dashboard_conditions_disabled">Dashboard conditions are disabled</string>
+
 </resources>
