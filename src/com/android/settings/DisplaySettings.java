@@ -58,6 +58,8 @@ import com.android.settings.search.Indexable;
 import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.RestrictedPreference;
 
+import com.android.settings.du.preference.CustomSeekBarPreference;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -98,13 +100,15 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_VR_DISPLAY_PREF = "vr_display_pref";
     private static final String KEY_WAKE_WHEN_PLUGGED_OR_UNPLUGGED = "wake_when_plugged_or_unplugged";
     private static final String KEY_DOZE_FRAGMENT = "doze_fragment";
-    private static final String KEY_DASHBOARD_COLUMNS = "dashboard_columns";
+    private static final String KEY_DASHBOARD_PORTRAIT_COLUMNS = "dashboard_portrait_columns";
+    private static final String KEY_DASHBOARD_LANDSCAPE_COLUMNS = "dashboard_landscape_columns";
+
+    private CustomSeekBarPreference mDashboardPortraitColumns;
+    private CustomSeekBarPreference mDashboardLandscapeColumns;
+
+    private ListPreference mNightModePreference;
 
     private Preference mFontSizePref;
-
-    private TimeoutListPreference mScreenTimeoutPreference;
-    private ListPreference mDashboardColumns;
-    private ListPreference mNightModePreference;
     private Preference mScreenSaverPreference;
 
     private PreferenceScreen mDozeFragment;
@@ -113,6 +117,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private SwitchPreference mAutoBrightnessPreference;
     private SwitchPreference mCameraGesturePreference;
     private SwitchPreference mWakeWhenPluggedOrUnplugged;
+
+    private TimeoutListPreference mScreenTimeoutPreference;
 
     @Override
     protected int getMetricsCategory() {
@@ -276,11 +282,17 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             mNightModePreference.setOnPreferenceChangeListener(this);
         }
 
-        mDashboardColumns = (ListPreference) findPreference(KEY_DASHBOARD_COLUMNS);
-        mDashboardColumns.setValue(String.valueOf(Settings.System.getInt(
-                getContentResolver(), Settings.System.DASHBOARD_COLUMNS, DashboardSummary.mNumColumns)));
-        mDashboardColumns.setSummary(mDashboardColumns.getEntry());
-        mDashboardColumns.setOnPreferenceChangeListener(this);
+        mDashboardPortraitColumns = (CustomSeekBarPreference) findPreference(KEY_DASHBOARD_PORTRAIT_COLUMNS);
+        int columnsPortrait = Settings.System.getInt(resolver,
+                Settings.System.DASHBOARD_PORTRAIT_COLUMNS, DashboardSummary.mNumColumns);
+        mDashboardPortraitColumns.setValue(columnsPortrait / 1);
+        mDashboardPortraitColumns.setOnPreferenceChangeListener(this);
+
+        mDashboardLandscapeColumns = (CustomSeekBarPreference) findPreference(KEY_DASHBOARD_LANDSCAPE_COLUMNS);
+        int columnsLandscape = Settings.System.getInt(resolver,
+                Settings.System.DASHBOARD_LANDSCAPE_COLUMNS, 2);
+        mDashboardLandscapeColumns.setValue(columnsLandscape / 1);
+        mDashboardLandscapeColumns.setOnPreferenceChangeListener(this);
 
         mWakeWhenPluggedOrUnplugged =
                 (SwitchPreference) findPreference(KEY_WAKE_WHEN_PLUGGED_OR_UNPLUGGED);
@@ -487,11 +499,16 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 Log.e(TAG, "could not persist night mode setting", e);
             }
         }
-        if (preference == mDashboardColumns) {
-            Settings.System.putInt(getContentResolver(), Settings.System.DASHBOARD_COLUMNS,
-                    Integer.valueOf((String) objValue));
-            mDashboardColumns.setValue(String.valueOf(objValue));
-            mDashboardColumns.setSummary(mDashboardColumns.getEntry());
+        if (preference == mDashboardPortraitColumns) {
+            int columnsPortrait = (Integer) objValue;
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.DASHBOARD_PORTRAIT_COLUMNS, columnsPortrait * 1);
+            return true;
+        }
+        if (preference == mDashboardLandscapeColumns) {
+            int columnsLandscape = (Integer) objValue;
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.DASHBOARD_LANDSCAPE_COLUMNS, columnsLandscape * 1);
             return true;
         }
         return true;
