@@ -20,6 +20,7 @@ import android.app.admin.DevicePolicyManager;
 import android.app.NotificationManager;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.res.Resources;
 import android.database.ContentObserver;
 import android.net.Uri;
 import android.os.Bundle;
@@ -56,6 +57,7 @@ public class ConfigureNotificationSettings extends SettingsPreferenceFragment
     private static final String KEY_LOCK_SCREEN_PROFILE_NOTIFICATIONS =
             "lock_screen_notifications_profile";
     private static final String PREF_HEADS_UP_TIME_OUT = "heads_up_time_out";
+    private static final String PREF_HEADS_UP_SNOOZE_TIME = "heads_up_snooze_time";
 
     private final SettingsObserver mSettingsObserver = new SettingsObserver();
 
@@ -70,6 +72,7 @@ public class ConfigureNotificationSettings extends SettingsPreferenceFragment
     private int mLockscreenSelectedValueProfile;
     private int mProfileChallengeUserId;
     private ListPreference mHeadsUpTimeOut;
+    private ListPreference mHeadsUpSnoozeTime;
 
     @Override
     protected int getMetricsCategory() {
@@ -80,6 +83,7 @@ public class ConfigureNotificationSettings extends SettingsPreferenceFragment
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mContext = getActivity();
+        final ContentResolver resolver = getActivity().getContentResolver();
         mProfileChallengeUserId = Utils.getManagedProfileId(
                 UserManager.get(mContext), UserHandle.myUserId());
 
@@ -116,6 +120,15 @@ public class ConfigureNotificationSettings extends SettingsPreferenceFragment
                 Settings.System.HEADS_UP_TIMEOUT, defaultTimeOut);
         mHeadsUpTimeOut.setValue(String.valueOf(headsUpTimeOut));
         updateHeadsUpTimeOutSummary(headsUpTimeOut);
+
+        int defaultSnooze = systemUiResources.getInteger(systemUiResources.getIdentifier(
+                   "com.android.systemui:integer/heads_up_default_snooze_length_ms", null, null));
+        mHeadsUpSnoozeTime = (ListPreference) findPreference(PREF_HEADS_UP_SNOOZE_TIME);
+        mHeadsUpSnoozeTime.setOnPreferenceChangeListener(this);
+        int headsUpSnooze = Settings.System.getInt(resolver,
+               Settings.System.HEADS_UP_NOTIFICATION_SNOOZE, defaultSnooze);
+        mHeadsUpSnoozeTime.setValue(String.valueOf(headsUpSnooze));
+        updateHeadsUpSnoozeTimeSummary(headsUpSnooze);
     }
 
     @Override
@@ -413,6 +426,13 @@ public class ConfigureNotificationSettings extends SettingsPreferenceFragment
                     headsUpTimeOut);
             updateHeadsUpTimeOutSummary(headsUpTimeOut);
             return true;
+        } else if (preference == mHeadsUpSnoozeTime) {
+            int headsUpSnooze = Integer.valueOf((String) newValue);
+            Settings.System.putInt(resolver,
+                    Settings.System.HEADS_UP_NOTIFICATION_SNOOZE,
+                    headsUpSnooze);
+            updateHeadsUpSnoozeTimeSummary(headsUpSnooze);
+            return true;
         }
         return false;
     }
@@ -421,5 +441,16 @@ public class ConfigureNotificationSettings extends SettingsPreferenceFragment
         String summary = getResources().getString(R.string.heads_up_time_out_summary,
                 value / 1000);
         mHeadsUpTimeOut.setSummary(summary);
+    }
+
+    private void updateHeadsUpSnoozeTimeSummary(int value) {
+        if (value == 0) {
+            mHeadsUpSnoozeTime.setSummary(getResources().getString(R.string.heads_up_snooze_disabled_summary));
+        } else if (value == 60000) {
+            mHeadsUpSnoozeTime.setSummary(getResources().getString(R.string.heads_up_snooze_summary_one_minute));
+        } else {
+            String summary = getResources().getString(R.string.heads_up_snooze_summary, value / 60 / 1000);
+            mHeadsUpSnoozeTime.setSummary(summary);
+        }
     }
 }
