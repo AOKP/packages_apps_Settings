@@ -27,6 +27,13 @@
             android:summaryOn="@string/summary_heads_up_enabled"
             android:summaryOff="@string/summary_heads_up_disabled" />
 
+    <ListPreference
+        android:key="heads_up_time_out"
+        android:title="@string/heads_up_time_out_title"
+        android:entries="@array/heads_up_time_out_entries"
+        android:entryValues="@array/heads_up_time_out_values"
+        android:persistent="false" />
+
     <!-- When device is locked -->
     <com.android.settings.notification.RestrictedDropDownPreference
             android:key="lock_screen_notifications"
