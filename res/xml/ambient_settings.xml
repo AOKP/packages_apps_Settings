@@ -11,6 +11,13 @@
         android:persistent="false" />
 
     <com.android.settings.preference.SystemSettingSwitchPreference
+        android:key="double_tap_wake_doze"
+        android:title="@string/double_tap_wake_doze_title"
+        android:summary="@string/double_tap_wake_doze_summary"
+        android:defaultValue="true"
+        android:dependency="doze" />
+
+    <com.android.settings.preference.SystemSettingSwitchPreference
         android:key="doze_overwrite_value"
         android:title="@string/doze_overwrite_value_title"
         android:summary="@string/doze_overwrite_value_summary"
