@@ -17,28 +17,42 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
                   xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
                   xmlns:cm="http://schemas.android.com/apk/res/cyanogenmod.platform"
-        android:title="@string/configure_notification_settings"
-        android:key="configure_notification_settings" >
+                  android:title="@string/configure_notification_settings"
+                  android:key="configure_notification_settings" >
 
     <!-- Heads up -->
-    <com.android.settings.cyanogenmod.GlobalSettingSwitchPreference
+    <PreferenceCategory
+        android:key="heads_up"
+        android:title="@string/heads_up_category">
+
+       <com.android.settings.cyanogenmod.GlobalSettingSwitchPreference
             android:key="heads_up_notifications_enabled"
             android:title="@string/heads_up_notifications"
             android:summaryOn="@string/summary_heads_up_enabled"
             android:summaryOff="@string/summary_heads_up_disabled" />
 
-    <ListPreference
-        android:key="heads_up_time_out"
-        android:title="@string/heads_up_time_out_title"
-        android:entries="@array/heads_up_time_out_entries"
-        android:entryValues="@array/heads_up_time_out_values"
-        android:persistent="false" />
+        <ListPreference
+            android:key="heads_up_time_out"
+            android:title="@string/heads_up_time_out_title"
+            android:entries="@array/heads_up_time_out_entries"
+            android:entryValues="@array/heads_up_time_out_values"
+            android:dependency="heads_up_notifications_enabled"
+            android:persistent="false" />
+
+        <ListPreference
+            android:key="heads_up_snooze_time"
+            android:title="@string/heads_up_snooze_title"
+            android:entries="@array/heads_up_snooze_entries"
+            android:entryValues="@array/heads_up_snooze_values"
+            android:dependency="heads_up_notifications_enabled"
+            android:persistent="false" />
+    </PreferenceCategory>
 
     <!-- When device is locked -->
     <com.android.settings.notification.RestrictedDropDownPreference
-            android:key="lock_screen_notifications"
-            android:title="@string/lock_screen_notifications_title"
-            android:summary="%s" />
+        android:key="lock_screen_notifications"
+        android:title="@string/lock_screen_notifications_title"
+        android:summary="%s" />
 
     <!-- importance -->
     <PreferenceScreen
