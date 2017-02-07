@@ -95,7 +95,7 @@
                 android:key="ambient_display_show_battery"
                 android:title="@string/ambient_display_show_battery_title"
                 android:summary="@string/ambient_display_show_battery_summary"
-                android:dependency="doze"
+                cm:requiresConfig="@*android:bool/config_dozeAfterScreenOff"
                 android:defaultValue="true" />
 
         <cyanogenmod.preference.RemotePreference
