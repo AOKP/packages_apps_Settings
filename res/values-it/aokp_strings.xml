@@ -67,7 +67,8 @@
     <string name="power_notifications_ringtone_silent">Silenzioso</string>
     
     <!-- Heads up -->
-    <string name="heads_up_notifications">Notifiche Fluttuanti</string>
+    <string name="heads_up_category">Notifiche Fluttuanti</string>
+    <string name="heads_up_notifications">Passa alle notifiche fluttuanti</string>
     <string name="summary_heads_up_enabled">Le notifiche pop-up sono abilitati</string>
     <string name="summary_heads_up_disabled">Le notifiche pop-up sono disabilitati</string>
 
@@ -478,20 +479,30 @@
   <string name="nav_bar_dynamic_title">Colore barra di navigazione dinamico</string>
   <string name="nav_bar_dynamic_summary">Attiva disattiva questo pulsante per adattare la barra di navigazione al colore scuro primario delle applicazioni. Riavvia l\'applicazione desiderata per vedere l\'effetto</string>
 
-  <!-- Keyboard and Input ASS methods  -->
-  <string name="attention">Attenzione</string>
-  <string name="title_keyboard_input">Opzioni di input</string>
-  <string name="disable_fullscreen_keyboard_title">Disabilita tastiera a schermo intero</string>
-  <string name="disable_fullscreen_keyboard_summary">La tastiera in modalità orizzontale non occuperà mai tutto lo schermo</string>
-  <string name="keyboard_rotation_toggle_title">Rotazione automatica della tastiera</string>
-  <string name="keyboard_rotation_toggle_summary">Forza la rotazione automatica quando la tastiera è visualizzata</string>
-  <string name="keyboard_rotation_timeout_title">Timeout rotazione automatica</string>
-  <string name="keyboard_rotation_timeout_summary">Disabilita il sensore di rotazione automatica <xliff:g id="rotate_timeout"> %1$s </xliff:g> secondi dopo che la tastiera viene nascosta</string>
-  <string name="keyboard_rotation_dialog">Questa funzione forza temporaneamente la rotazione automatica durante la visualizzazione della tastiera. Non ha effetti quando la rotazione automatica è già attivata.</string>
-  <string name="show_enter_key_title">Mostra tasto invio</string>
-  <string name="show_enter_key_summary">Forza la tastiera a mostrare il tasto invio invece che il tasto delle emoticon</string>
-
   <string name="ambient_display_show_battery_title">Stato Batteria</string>
   <string name="ambient_display_show_battery_summary">Mostra l\'indicatore della batteria durante l\'impulso</string>
 
+  <!-- Heads up timeout -->
+  <string name="heads_up_time_out_title">Tempo di visualizzazione</string>
+  <string name="heads_up_time_out_summary">Le notifiche saranno mostrate per <xliff:g id="number">%d</xliff:g> secondi</string>
+  <string name="heads_up_time_out_2sec">2 secondi</string>
+  <string name="heads_up_time_out_4sec">4 secondi</string>
+  <string name="heads_up_time_out_5sec">5 secondi</string>
+  <string name="heads_up_time_out_6sec">6 secondi</string>
+  <string name="heads_up_time_out_8sec">8 secondi</string>
+  <string name="heads_up_time_out_10sec">10 secondi</string>
+  
+  <string name="heads_up_snooze_disabled">Disabilitato</string>
+  <string name="heads_up_snooze_disabled_summary">Posticipo disabilitato</string>
+
+  <string name="heads_up_snooze_1min">1 minuto</string>
+  <string name="heads_up_snooze_3min">3 minuti</string>
+  <string name="heads_up_snooze_5min">5 minuti</string>
+  <string name="heads_up_snooze_10min">10 minuti</string>
+  <string name="heads_up_snooze_15min">15 minuti</string>
+  <string name="heads_up_snooze_20min">20 minuti</string>
+
+  <!-- EdgeGesture service -->
+  <string name="edge_gesture_service_title">Blocco evento gesti</string>
+  <string name="edge_gesture_service_summary">Non inviare gli eventi dei gesti della barra di navigazione e della barra di stato per le applicazioni</string>
 </resources>
