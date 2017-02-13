@@ -190,6 +190,7 @@ public abstract class DeviceListPreferenceFragment extends
         }
 
         initDevicePreference(preference);
+
         mDevicePreferenceMap.put(cachedDevice, preference);
     }
 
