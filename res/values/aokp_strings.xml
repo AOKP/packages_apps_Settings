@@ -516,6 +516,9 @@
     <string name="heads_up_snooze_10min">10 minutes</string>
     <string name="heads_up_snooze_15min">15 minutes</string>
     <string name="heads_up_snooze_20min">20 minutes</string>
+    <string name="heads_up_snooze_30min">30 minutes</string>
+    <string name="heads_up_snooze_60min">60 minutes</string>
+
 
     <!-- EdgeGesture service -->
     <string name="edge_gesture_service_title">Block gesture touch events</string>
