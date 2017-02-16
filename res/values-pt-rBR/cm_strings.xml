@@ -28,19 +28,6 @@
   <string name="show_dev_already_cm">Não é preciso, você já ativou as configurações de desenvolvedor.</string>
   <!-- Launch Dev Tools -->
   <string name="development_tools_title">Ferramentas de desenvolvedor</string>
-
-    <!-- Per-app data restrictions -->
-    <string name="data_usage_app_restrict_data_category_title">Acesso a dados celulares</string>
-    <string name="data_usage_app_restrict_wifi_category_title">Wi\u2011Fi acesso a dados</string>
-    <!-- Title for switch to block app data usage [CHAR LIMIT=30] -->
-    <string name="data_usage_app_restrict_all_data_title">Desabilitar todos acessos a dados</string>
-    <!-- Summary for switch to block app data usage [CHAR LIMIT=NONE] -->
-    <string name="data_usage_app_restrict_all_data_summary">Impedir qualquer uso de acesso a dados através de redes celulares</string>
-    <!-- Title for switch to block app data usage [CHAR LIMIT=30] -->
-    <string name="data_usage_app_restrict_all_wifi_title">Desativar todos os Wi\u2011Fi acesso a dados</string>
-    <!-- Summary for switch to block app data usage [CHAR LIMIT=NONE] -->
-    <string name="data_usage_app_restrict_all_wifi_summary">Impedir qualquer uso de acesso a dados via Wi\u2011Fi redes</string>
-
   <!-- Setting checkbox title for root access -->
   <string name="root_access">Acesso superusuário</string>
   <string name="root_access_warning_title">Permitir acesso superusuário?</string>
@@ -355,16 +342,6 @@
   <string name="security_settings_fingerprint_sensor_location_front">frente</string>
   <string name="security_settings_fingerprint_sensor_location_left">lado esquerdo</string>
   <string name="security_settings_fingerprint_sensor_location_right">lado direito</string>
-  <!-- Tethering & portable hotspot other category -->
-  <string name="tethering_other_category_text">Outros</string>
-  <!-- Wi-Fi tethering inactivity timeout -->
-  <string name="hotstpot_inactivity_timeout_text">Tempo limite de hotspot Wi\u2011Fi</string>
-  <string name="hotstpot_inactivity_timeout_never">Nunca</string>
-  <string name="hotstpot_inactivity_timeout_1_minute">1 minuto</string>
-  <string name="hotstpot_inactivity_timeout_5_minutes">5 minutos</string>
-  <string name="hotstpot_inactivity_timeout_10_minutes">10 minutos</string>
-  <string name="hotstpot_inactivity_timeout_never_summary_text">O ponto de acesso Wi\u2011Fi nunca desliga</string>
-  <string name="hotstpot_inactivity_timeout_summary_text">O ponto de acesso Wi\u2011Fi irá desligar-se após <xliff:g id="timeout">%1$s</xliff:g></string>
   <!-- Wi-Fi region code -->
   <string name="wifi_setting_countrycode_title">Código de região Wi\u2011Fi</string>
   <!-- Wi-Fi settings screen, setting summary for setting the wifi frequency band [CHAR LIMIT=50]-->
@@ -383,6 +360,16 @@
   <string name="crypt_keeper_choose_your_password_header">Definir a senha de criptografia</string>
   <string name="crypt_keeper_replace_password_title">Substituir a senha de criptografia</string>
   <string name="crypt_keeper_replace_password_summary">Remover a senha de criptografia separada</string>
+  <!-- Tethering & portable hotspot other category -->
+  <string name="tethering_other_category_text">Outros</string>
+  <!-- Wi-Fi tethering inactivity timeout -->
+  <string name="hotstpot_inactivity_timeout_text">Tempo limite de hotspot Wi\u2011Fi</string>
+  <string name="hotstpot_inactivity_timeout_never">Nunca</string>
+  <string name="hotstpot_inactivity_timeout_1_minute">1 minuto</string>
+  <string name="hotstpot_inactivity_timeout_5_minutes">5 minutos</string>
+  <string name="hotstpot_inactivity_timeout_10_minutes">10 minutos</string>
+  <string name="hotstpot_inactivity_timeout_never_summary_text">O ponto de acesso Wi\u2011Fi nunca desliga</string>
+  <string name="hotstpot_inactivity_timeout_summary_text">O ponto de acesso Wi\u2011Fi irá desligar-se após <xliff:g id="timeout">%1$s</xliff:g></string>
   <!-- Per-app data restrictions -->
   <string name="data_usage_app_restrict_data_category_title">Acesso a dados móveis</string>
   <string name="data_usage_app_restrict_wifi_category_title">Acesso a dados Wi\u2011Fi</string>
