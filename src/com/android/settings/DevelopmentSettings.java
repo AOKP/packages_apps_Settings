@@ -2679,8 +2679,8 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
             int oemUnlockSummary = R.string.oem_unlock_enable_summary;
             if (isBootloaderUnlocked()) {
                 oemUnlockSummary = R.string.oem_unlock_enable_disabled_summary_bootloader_unlocked;
-            } else if (isSimLockedDevice()) {
-                oemUnlockSummary = R.string.oem_unlock_enable_disabled_summary_sim_locked_device;
+            /*} else if (isSimLockedDevice()) {
+                oemUnlockSummary = R.string.oem_unlock_enable_disabled_summary_sim_locked_device;*/
             } else if (!isOemUnlockAllowed()) {
                 // If the device isn't SIM-locked but OEM unlock is disabled by the system via the
                 // user restriction, this means either some other carrier restriction is in place or
