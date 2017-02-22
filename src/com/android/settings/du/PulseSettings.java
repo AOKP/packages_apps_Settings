@@ -47,6 +47,7 @@ public class PulseSettings extends SettingsPreferenceFragment implements
     private static final String SOLID_FUDGE = "pulse_solid_fudge_factor";
     private static final String SOLID_LAVAMP_SPEED = "lavamp_solid_speed";
     private static final String FADING_LAVAMP_SPEED = "fling_pulse_lavalamp_speed";
+    private static final String PULSE_SOLID_UNITS_COUNT = "pulse_solid_units_count";
 
     SwitchPreference mShowPulse;
     ListPreference mRenderMode;
@@ -62,6 +63,7 @@ public class PulseSettings extends SettingsPreferenceFragment implements
     CustomSeekBarPreference mSolidFudge;
     CustomSeekBarPreference mSolidSpeed;
     CustomSeekBarPreference mFadingSpeed;
+    CustomSeekBarPreference mSolidCount;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -158,6 +160,13 @@ public class PulseSettings extends SettingsPreferenceFragment implements
                 (CustomSeekBarPreference) findPreference(FADING_LAVAMP_SPEED);
         mFadingSpeed.setValue(fspeed);
         mFadingSpeed.setOnPreferenceChangeListener(this);
+
+        int count = Settings.Secure.getIntForUser(getContentResolver(),
+                Settings.Secure.PULSE_SOLID_UNITS_COUNT, 64, UserHandle.USER_CURRENT);
+        mSolidCount =
+                (CustomSeekBarPreference) findPreference(PULSE_SOLID_UNITS_COUNT);
+        mSolidCount.setValue(count);
+        mSolidCount.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -238,6 +247,11 @@ public class PulseSettings extends SettingsPreferenceFragment implements
             int val = (Integer) newValue;
             Settings.Secure.putIntForUser(getContentResolver(),
                     Settings.Secure.FLING_PULSE_LAVALAMP_SPEED, val, UserHandle.USER_CURRENT);
+            return true;
+        } else if (preference == mSolidCount) {
+            int val = (Integer) newValue;
+            Settings.Secure.putIntForUser(getContentResolver(),
+                    Settings.Secure.PULSE_SOLID_UNITS_COUNT, val, UserHandle.USER_CURRENT);
             return true;
         }
         return false;
