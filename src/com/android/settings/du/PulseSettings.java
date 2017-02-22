@@ -48,6 +48,7 @@ public class PulseSettings extends SettingsPreferenceFragment implements
     private static final String SOLID_LAVAMP_SPEED = "lavamp_solid_speed";
     private static final String FADING_LAVAMP_SPEED = "fling_pulse_lavalamp_speed";
     private static final String PULSE_SOLID_UNITS_COUNT = "pulse_solid_units_count";
+    private static final String PULSE_SOLID_UNITS_OPACITY = "pulse_solid_units_opacity";
 
     SwitchPreference mShowPulse;
     ListPreference mRenderMode;
@@ -64,6 +65,7 @@ public class PulseSettings extends SettingsPreferenceFragment implements
     CustomSeekBarPreference mSolidSpeed;
     CustomSeekBarPreference mFadingSpeed;
     CustomSeekBarPreference mSolidCount;
+    CustomSeekBarPreference mSolidOpacity;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -167,6 +169,13 @@ public class PulseSettings extends SettingsPreferenceFragment implements
                 (CustomSeekBarPreference) findPreference(PULSE_SOLID_UNITS_COUNT);
         mSolidCount.setValue(count);
         mSolidCount.setOnPreferenceChangeListener(this);
+
+        int opacity = Settings.Secure.getIntForUser(getContentResolver(),
+                Settings.Secure.PULSE_SOLID_UNITS_OPACITY, 200, UserHandle.USER_CURRENT);
+        mSolidOpacity =
+                (CustomSeekBarPreference) findPreference(PULSE_SOLID_UNITS_OPACITY);
+        mSolidOpacity.setValue(opacity);
+        mSolidOpacity.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -252,6 +261,11 @@ public class PulseSettings extends SettingsPreferenceFragment implements
             int val = (Integer) newValue;
             Settings.Secure.putIntForUser(getContentResolver(),
                     Settings.Secure.PULSE_SOLID_UNITS_COUNT, val, UserHandle.USER_CURRENT);
+            return true;
+        } else if (preference == mSolidOpacity) {
+            int val = (Integer) newValue;
+            Settings.Secure.putIntForUser(getContentResolver(),
+                    Settings.Secure.PULSE_SOLID_UNITS_OPACITY, val, UserHandle.USER_CURRENT);
             return true;
         }
         return false;
