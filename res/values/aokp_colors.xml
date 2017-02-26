@@ -32,4 +32,7 @@
     <!-- External Icon Tint -->
     <color name="external_tile_icon_tint_color">?android:attr/colorAccent</color>
 
+    <!-- App ops -->
+    <color name="switch_accent_color">@*android:color/accent_device_default_light</color>
+
 </resources>
