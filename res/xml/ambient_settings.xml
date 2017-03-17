@@ -31,6 +31,14 @@
         android:dependency="doze"
         android:defaultValue="true" />
 
+    <cyanogenmod.preference.RemotePreference
+        android:key="doze_device_settings"
+        android:title="@string/doze_title"
+        android:summary="@string/doze_summary"
+        cm:replacesKey="doze">
+        <intent android:action="org.cyanogenmod.settings.device.DOZE_SETTINGS" />
+    </cyanogenmod.preference.RemotePreference>
+
     <PreferenceCategory
         android:key="doze_pulse_category"
         android:title="@string/doze_pulse_title" >
