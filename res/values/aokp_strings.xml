@@ -591,4 +591,8 @@
     <string name="night_bright_low">Low brightness</string>
     <string name="night_bright_medium">Medium brightness</string>
 
+    <!-- Navigation bar button color -->
+    <string name="navbar_button_tint_title">Navigation button tint</string>
+    <string name="navbar_button_tint_switch_title">Navigation button tinting</string>
+
 </resources>
