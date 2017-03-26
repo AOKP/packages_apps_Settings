@@ -412,13 +412,6 @@
     <!-- Wi-Fi settings screen, error message when the frequency band could not be set [CHAR LIMIT=50]. -->
     <string name="wifi_setting_countrycode_error">There was a problem setting the region code.</string>
 
-    <!-- Encryption password -->
-    <string name="crypt_keeper_change_password_title">Change encryption password</string>
-    <string name="crypt_keeper_change_password_summary">Change the password used for device encryption</string>
-    <string name="crypt_keeper_choose_your_password_header">Set encryption password</string>
-    <string name="crypt_keeper_replace_password_title">Replace encryption password</string>
-    <string name="crypt_keeper_replace_password_summary">Remove the separate encryption password</string>
-
     <!-- Per-app data restrictions -->
     <string name="data_usage_app_restrict_data_category_title">Cellular data access</string>
     <string name="data_usage_app_restrict_wifi_category_title">Wi\u2011Fi data access</string>
