@@ -594,5 +594,6 @@
     <!-- Navigation bar button color -->
     <string name="navbar_button_tint_title">Navigation button tint</string>
     <string name="navbar_button_tint_switch_title">Navigation button tinting</string>
+    <string name="navbar_button_custom_icon_switch_title">Add color filter to application buttons</string>
 
 </resources>
