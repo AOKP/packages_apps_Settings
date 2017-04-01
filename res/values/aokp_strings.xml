@@ -598,4 +598,17 @@
     <string name="navbar_button_tint_switch_title">Navigation button tinting</string>
     <string name="navbar_button_custom_icon_switch_title">Add color filter to application buttons</string>
 
+    <!-- Pixel Animation Duration -->
+    <string name="pixel_anim_title">Pixel navbar animation duration</string>
+    <string name="pixel_anim_summary">Customize various durations of pixel animation on navbar</string>
+    <string name="pixel_anim_warning">Customize various durations of pixel animation on navbar. WARNING! Changing default values can cause performance drop in animation.Proceed at your own risk</string>
+    <string name="pixel_anim_x_title">Horizontal duration</string>
+    <string name="pixel_anim_y_title">Vertical duration</string>
+    <string name="collapse_anim_duration_ry_title">Collapse duration</string>
+    <string name="collapse_anim_duration_bg_title">Collapse background</string>
+    <string name="retract_anim_duration_title">Retract duration</string>
+    <string name="diamond_anim_duration_title">Diamond duration</string>
+    <string name="dots_anim_duration_title">Dots duration</string>
+    <string name="home_resize_anim_duration_title">Home button resize duration</string>
+
 </resources>

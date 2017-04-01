@@ -44,6 +44,12 @@
         android:entryValues="@array/smartbar_button_animation_values"
         android:summary="@string/smartbar_button_animation_summary" />
 
+    <PreferenceScreen
+        android:key="pixel_anim"
+        android:fragment="com.android.settings.aicp.PixelAnimDurationSettings"
+        android:title="@string/pixel_anim_title"
+        android:summary="@string/pixel_anim_summary"/>
+
     <com.android.settings.preference.SystemSettingSwitchPreference
         android:key="smartbar_doubletap_sleep"
         android:title="@string/smartbar_doubletap_sleep_title"
