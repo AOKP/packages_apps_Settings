@@ -92,6 +92,7 @@ import com.android.settings.display.NightDisplaySettings;
 import com.android.settings.du.FlingSettings;
 import com.android.settings.du.NavbarSettings;
 import com.android.settings.du.SmartbarSettings;
+import com.android.settings.du.PixelAnimDurationSettings;
 import com.android.settings.du.PulseSettings;
 import com.android.settings.fuelgauge.BatterySaverSettings;
 import com.android.settings.fuelgauge.PowerUsageDetail;
@@ -301,6 +302,7 @@ public class SettingsActivity extends SettingsDrawerActivity
             NavbarSettings.class.getName(),
             FlingSettings.class.getName(),
             SmartbarSettings.class.getName(),
+            PixelAnimDurationSettings.class.getName(),
             PulseSettings.class.getName(),
             //CM
             WirelessSettings.class.getName(),
