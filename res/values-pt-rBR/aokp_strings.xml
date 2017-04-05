@@ -243,15 +243,6 @@
     <string name="action_entry_select_app">Selecionar aplicativo</string>
     <string name="action_entry_custom_action">Selecionar ação personalizada</string>
 
-    <string name="action_value_default_action" translatable="false">padrão</string>
-    <string name="action_value_custom_action" translatable="false">personalizado</string>
-    <string name="action_value_back" translatable="false">tarefa_back</string>
-    <string name="action_value_home" translatable="false">tarefa_home</string>
-    <string name="action_value_search_assist" translatable="false">tarefa_assist</string>
-    <string name="action_value_recent_apps" translatable="false">tarefa_recentes</string>
-    <string name="action_value_voice_search" translatable="false">tarefa_voice_search</string>
-    <string name="action_value_menu" translatable="false">tarefa_menu</string>
-
     <!-- Fling -->
     <string name="fling_settings">Configurações de arremesso</string>
     <string name="fling_interface">Arremessar</string>
