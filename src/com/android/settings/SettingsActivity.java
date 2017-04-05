@@ -1237,7 +1237,8 @@ public class SettingsActivity extends SettingsDrawerActivity
             }
         }
         setTileEnabled(new ComponentName(packageName,
-                BackupSettingsActivity.class.getName()), hasBackupActivity, isAdmin, pm);
+                BackupSettingsActivity.class.getName()), hasBackupActivity,
+                isAdmin || Utils.isCarrierDemoUser(this), pm);
 
     }
 
