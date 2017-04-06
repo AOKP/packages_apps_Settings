@@ -44,7 +44,7 @@
             android:defaultValue="0xffffff"
             android:dependency="eos_fling_show_pulse" />
 
-        <com.android.settings.aicp.preference.CustomSeekBarPreference
+        <com.android.settings.du.preference.CustomSeekBarPreference
             android:key="pulse_custom_buttons_opacity"
             android:title="@string/pulse_custom_buttons_opacity_title"
             settings:max="255"
