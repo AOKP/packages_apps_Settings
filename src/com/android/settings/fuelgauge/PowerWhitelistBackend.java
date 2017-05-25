@@ -59,7 +59,11 @@ public class PowerWhitelistBackend {
 
     public void addApp(String pkg) {
         try {
-            mDeviceIdleService.addPowerSaveWhitelistApp(pkg);
+            if (isSysWhitelisted(pkg)) {
+                mDeviceIdleService.addSystemPowerSaveWhitelistApp(pkg);
+            } else {
+                mDeviceIdleService.addPowerSaveWhitelistApp(pkg);
+            }
             mWhitelistedApps.add(pkg);
         } catch (RemoteException e) {
             Log.w(TAG, "Unable to reach IDeviceIdleController", e);
@@ -68,7 +72,11 @@ public class PowerWhitelistBackend {
 
     public void removeApp(String pkg) {
         try {
-            mDeviceIdleService.removePowerSaveWhitelistApp(pkg);
+            if (isSysWhitelisted(pkg)) {
+                mDeviceIdleService.removeSystemPowerSaveWhitelistApp(pkg);
+            } else {
+                mDeviceIdleService.removePowerSaveWhitelistApp(pkg);
+            }
             mWhitelistedApps.remove(pkg);
         } catch (RemoteException e) {
             Log.w(TAG, "Unable to reach IDeviceIdleController", e);
@@ -84,7 +92,7 @@ public class PowerWhitelistBackend {
             for (String app : whitelistedApps) {
                 mWhitelistedApps.add(app);
             }
-            String[] sysWhitelistedApps = mDeviceIdleService.getSystemPowerWhitelist();
+            String[] sysWhitelistedApps = mDeviceIdleService.getSystemPowerWhitelistOriginal();
             for (String app : sysWhitelistedApps) {
                 mSysWhitelistedApps.add(app);
             }
