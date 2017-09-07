@@ -15,7 +15,24 @@
      limitations under the License.
 -->
 
+<<<<<<< HEAD:res/values/lineage_attrs.xml
 <resources>
     <attr name="customPreferenceStyle" format="reference" />
+=======
+    <!-- Night mode tile brightness value  -->
+    <string-array name="night_brightness_value_entries" translatable="false">
+        <item>@string/night_bright_disabled</item>
+        <item>@string/night_bright_minimum</item>
+        <item>@string/night_bright_low</item>
+        <item>@string/night_bright_medium</item>
+    </string-array>
+
+    <string-array name="night_brightness_value_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+>>>>>>> d0fe460... Night Light brightness mode options [2/2]:res/values/eos_arrays.xml
 </resources>
 

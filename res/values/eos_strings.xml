@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2016 The CyanogenMod Project
+     Copyright (C) 2017      The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Rom version -->
+    <string name="elixir_version">ElixirOS Version</string>
+    <string name="elixir_version_default">Unknown</string>
+    
+    <string name="elixir_settings_title">Magical World</string>
+    <string name="elixir_settings_summary">Customize your Android</string>
+
+    <!-- Encryption and credential -->
+    <string name="custom_encryption_and_credential_settings_summary_on">Device is encrypted</string>
+    <string name="custom_encryption_and_credential_settings_summary_off">Device is decrypted</string>
+
+    <!-- Root Management -->
+    <string name="rootmanagement_title">Root management</string>
+    <string name="rootmanagement_dashboard_summary">Manage root access</string>
+
+    <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
+    <string name="supersu_title">SuperSU</string>
+
+    <!-- Format string for fingerprint location message -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_message_cm">Locate the fingerprint sensor on the <xliff:g id="sensor_location">%1$s</xliff:g> of your phone.</string>
+
+    <!-- Fingerprint sensor locations -->
+    <string name="security_settings_fingerprint_sensor_location_back">back</string>
+    <string name="security_settings_fingerprint_sensor_location_front">front</string>
+    <string name="security_settings_fingerprint_sensor_location_left">left side</string>
+    <string name="security_settings_fingerprint_sensor_location_right">right side</string>
+
+    <!-- Manual provisioning support -->
+    <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g> is <xliff:g id="status" example="disabled">%2$s</xliff:g></string>
+    <string name="sim_disabled">disabled</string>
+    <string name="sim_missing">missing or faulty</string>
+    <string name="sim_enabler_need_disable_sim">SIM card will be deactivated. Do you want to continue?</string>
+    <string name="sim_enabler_will_disable_sim_title">Attention</string>
+    <string name="sim_enabler_need_switch_data_service">This SIM will be disabled and SIM <xliff:g id="slotid">%1$s</xliff:g> will be used for data services. Are you sure you want to continue?</string>
+    <string name="sim_enabler_airplane_on">Unable to perform the operation while airplane mode is on.</string>
+    <string name="sim_enabler_in_call">Unable to perform the operation while in call.</string>
+    <string name="sim_enabler_both_inactive">Can\'t disable all SIM cards</string>
+    <string name="sim_enabler_enabling">Activating\u2026</string>
+    <string name="sim_enabler_disabling">Deactivating\u2026</string>
+    <string name="sub_activate_success">SIM activated.</string>
+    <string name="sub_activate_failed">Activation failed.</string>
+    <string name="sub_deactivate_success">SIM deactivated.</string>
+    <string name="sub_deactivate_failed">Deactivation failed.</string>
+
+   <!-- Advanced night mode brightness -->
+   <string name="night_brightness_category">Brightness</string>
+   <string name="night_brightness_value_title">Lower brightness if Night Light</string>
+   <string name="night_bright_disabled">Disabled</string>
+   <string name="night_bright_minimum">Minimum brightness</string>
+   <string name="night_bright_low">Low brightness</string>
+    <string name="night_bright_medium">Medium brightness</string>
+
+
+</resources>
+

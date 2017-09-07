@@ -39,4 +39,16 @@
             android:key="night_display_temperature"
             android:title="@string/night_display_temperature_title"/>
 
+    <PreferenceCategory
+            android:title="@string/night_brightness_category">
+
+        <DropDownPreference
+                android:key="night_brightness_value"
+                android:title="@string/night_brightness_value_title"
+                android:entries="@array/night_brightness_value_entries"
+                android:entryValues="@array/night_brightness_value_values"
+                android:defaultValue="0" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
