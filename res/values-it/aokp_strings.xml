@@ -627,5 +627,27 @@
   
     <string name="dnd_when_call_title">Non disturbare durante chiamate</string>
     <string name="dnd_when_call_summary">Attiva automaticamente \"non disturbare\" durante le chiamate</string>
+  
+    <!-- Color engine -->
+    <string name="theme_switch_palette">Cambia i colori di sfondo, del testo e delle icone</string>
+    <string name="theme_title">Colori del tema</string>
+    <string name="theme_summary">Seleziona diversi colori per il tuo tema corrente</string>
+    <string name="theme_accent_color">Colore icone e testo</string>
+    <string name="theme_primary_color">Colore di sfondo</string>
+    <string name="theme">Tema</string>
+    <string name="oms_enabled">Modalità tema non disponibile perché è attulamente applicato un tema di substrato</string>
+    <string name="red">Torcia rossa</string>
+    <string name="orange">Vermiglio</string>
+    <string name="blue">Pixel Blu</string>
+    <string name="green">Lima</string>
+    <string name="yellow">Supernova</string>
+    <string name="purple">Viola caldo</string>
+    <string name="pink">Rosa</string>
+    <string name="dark">Nero</string>
+    <string name="pixel">Pixel</string>
+    <string name="teal">Predefinito</string>
+    <string name="cyan">Scooter</string>
+    <string name="grey">Grigio</string>
+    <string name="default_string">Predefinito</string>
 
 </resources>
