@@ -461,4 +461,8 @@
     <string name="navbar_button_tint_title">Navigation button tint</string>
     <string name="navbar_button_tint_switch_title">Navigation button tinting</string>
 
+    <!-- Substratum -->
+    <string name="themes_title">Themes</string>
+    <string name="themes_dashboard_summary">Manage your themes</string>
+
 </resources>
