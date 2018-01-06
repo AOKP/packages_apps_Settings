@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (c) 2016-2017 Projekt Substratum
+<!-- Copyright (c) 2016-2018 Projekt Substratum
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -51,4 +51,10 @@
     <color name="suggestion_condition_card_header_title_text_color">@*android:color/accent_device_default_light</color>
     <color name="suggestion_condition_card_header_summary_text_color">@*android:color/accent_device_default_light</color>
 
+    <!-- MSIM Color picker dialog colors -->
+    <color name="sim_color_picker_edit_text_color">@android:color/black</color>
+    <color name="sim_color_picker_list_text_color">@android:color/black</color>
+    <color name="sim_color_picker_carrier_text_color">@android:color/black</color>
+    <color name="sim_color_picker_number_text_color">@android:color/black</color>
+    
 </resources>
