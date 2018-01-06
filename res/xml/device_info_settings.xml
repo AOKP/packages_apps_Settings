@@ -18,12 +18,6 @@
         xmlns:lineage="http://schemas.android.com/apk/res/lineageos.platform"
         android:title="@string/about_settings">
 
-        <!-- LineageOS updates -->
-        <org.lineageos.internal.preference.deviceinfo.LineageUpdatesPreference
-                android:key="lineage_updates"
-                lineage:requiresOwner="true"
-                lineage:requiresPackage="org.lineageos.updater" />
-
         <!-- Device status - launches activity -->
         <Preference android:key="status_info"
                 android:title="@string/device_status"
@@ -59,10 +53,6 @@
         <Preference android:key="device_feedback"
                 android:title="@string/device_feedback" />
 
-        <!-- Contributors cloud -->
-        <org.lineageos.internal.lineageparts.LineagePartsPreference
-                android:key="contributors" />
-
         <!-- Device hardware model -->
         <Preference
                 android:key="device_model"
@@ -74,13 +64,14 @@
                 android:title="@string/firmware_version"
                 android:summary="@string/summary_placeholder"/>
 
-        <!-- LineageOS version -->
+        <!-- AOKP firmware version -->
         <org.lineageos.internal.preference.deviceinfo.LineageVersionPreference
-                android:key="lineage_version" />
-
-        <!-- LineageOS API version -->
-        <org.lineageos.internal.preference.deviceinfo.LineageAPIVersionPreference
-                android:key="lineage_api_level" />
+                android:key="aokp_version"
+                android:enabled="false"
+                android:shouldDisableView="false"
+                android:title="@string/aokp_version_title"
+                android:summary="@string/aokp_version_default"
+                android:icon="@drawable/ic_aokp_alpha" />
 
         <!-- Security patch level -->
         <Preference android:key="security_patch"
