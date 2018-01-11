@@ -18,6 +18,15 @@
         xmlns:lineage="http://schemas.android.com/apk/res/lineageos.platform"
         android:title="@string/about_settings">
 
+        <!-- AOKP firmware version -->
+        <org.lineageos.internal.preference.deviceinfo.LineageVersionPreference
+                android:key="aokp_version"
+                android:enabled="false"
+                android:shouldDisableView="false"
+                android:title="@string/aokp_version_title"
+                android:summary="@string/aokp_version_default"
+                android:icon="@drawable/ic_aokp_alpha" />
+
         <!-- Device status - launches activity -->
         <Preference android:key="status_info"
                 android:title="@string/device_status"
@@ -63,15 +72,6 @@
         <Preference android:key="firmware_version"
                 android:title="@string/firmware_version"
                 android:summary="@string/summary_placeholder"/>
-
-        <!-- AOKP firmware version -->
-        <org.lineageos.internal.preference.deviceinfo.LineageVersionPreference
-                android:key="aokp_version"
-                android:enabled="false"
-                android:shouldDisableView="false"
-                android:title="@string/aokp_version_title"
-                android:summary="@string/aokp_version_default"
-                android:icon="@drawable/ic_aokp_alpha" />
 
         <!-- Security patch level -->
         <Preference android:key="security_patch"
