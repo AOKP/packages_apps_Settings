@@ -23,7 +23,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/suggestion_card_background_color"
+        android:background="?android:attr/colorBackground"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:minHeight="@dimen/dashboard_tile_minimum_height">
