@@ -57,6 +57,7 @@ public class AmbientDisplaySettings extends DashboardFragment {
                 metricsFeatureProvider));
         controllers.add(new AmbientDisplayAlwaysOnPreferenceController(context, config,
                 aodCallback));
+        controllers.add(new AmbientDisplayCustomPreferenceController(context));
         controllers.add(new DoubleTapScreenPreferenceController(context, lifecycle, config,
                 MY_USER_ID, KEY_AMBIENT_DISPLAY_DOUBLE_TAP));
         controllers.add(new PickupGesturePreferenceController(context, lifecycle, config,
