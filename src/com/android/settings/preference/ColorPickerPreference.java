@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package net.margaritov.preference.colorpicker;
+package com.android.settings.preference.colorpicker;
 
 import android.content.Context;
 import android.content.res.TypedArray;

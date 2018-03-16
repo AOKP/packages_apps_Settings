@@ -18,7 +18,7 @@ package com.android.settings.du;
 
 import java.util.ArrayList;
 
-import net.margaritov.preference.colorpicker.ColorPickerPreference;
+import com.android.settings.preference.colorpicker.ColorPickerPreference;
 
 import com.android.settings.du.preference.CustomSeekBarPreference;
 
