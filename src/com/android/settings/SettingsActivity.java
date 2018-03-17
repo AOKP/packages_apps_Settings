@@ -153,6 +153,7 @@ public class SettingsActivity extends SettingsDrawerActivity
     private static final int REQUEST_SUGGESTION = 42;
 
     private static final String ROMCONTROL_FRAGMENT = "com.android.settings.ROMControl";
+    private static final String NAVBAR_FRAGMENT = "com.android.settings.du.NavbarSettings";
 
     private String mFragmentClass;
 
@@ -721,6 +722,14 @@ public class SettingsActivity extends SettingsDrawerActivity
             Intent ROMControlIntent = new Intent();
             ROMControlIntent.setClassName("com.aokp.romcontrol", "com.aokp.romcontrol.MainActivity");
             startActivity(ROMControlIntent);
+            finish();
+            return null;
+        }
+
+        if (NAVBAR_FRAGMENT.equals(fragmentName)) {
+            Intent navbarIntent = new Intent();
+            navbarIntent.setClassName("com.android.settings", "com.android.settings.du.NavbarSettings");
+            startActivity(navbarIntent);
             finish();
             return null;
         }
