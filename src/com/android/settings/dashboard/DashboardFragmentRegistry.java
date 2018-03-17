@@ -38,6 +38,11 @@ import com.android.settingslib.drawer.CategoryKey;
 
 import com.aokp.romcontrol.MainActivity;
 
+import com.android.settings.du.FlingSettings;
+import com.android.settings.du.NavbarSettings;
+import com.android.settings.du.PulseSettings;
+import com.android.settings.du.SmartbarSettings;
+
 import java.util.Map;
 
 /**
@@ -92,6 +97,8 @@ public class DashboardFragmentRegistry {
         PARENT_TO_CATEGORY_KEY_MAP.put(LockscreenDashboardFragment.class.getName(),
                 CategoryKey.CATEGORY_SECURITY_LOCKSCREEN);
         PARENT_TO_CATEGORY_KEY_MAP.put(MainActivity.class.getName(),
+                CategoryKey.CATEGORY_SYSTEM_DEVELOPMENT);
+        PARENT_TO_CATEGORY_KEY_MAP.put(NavbarSettings.class.getName(),
                 CategoryKey.CATEGORY_SYSTEM_DEVELOPMENT);
 
         CATEGORY_KEY_TO_PARENT_MAP = new ArrayMap<>(PARENT_TO_CATEGORY_KEY_MAP.size());
