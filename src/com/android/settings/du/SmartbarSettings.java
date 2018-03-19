@@ -52,9 +52,11 @@ import com.android.internal.utils.du.ActionConstants;
 import com.android.internal.utils.du.ActionHandler;
 import com.android.internal.utils.du.Config;
 import com.android.internal.utils.du.Config.ButtonConfig;
+import com.android.settings.du.preference.CustomSeekBarPreference;
+import com.android.settings.preference.colorpicker.ColorPickerPreference;
+
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.du.preference.CustomSeekBarPreference;
 
 public class SmartbarSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
@@ -64,10 +66,12 @@ public class SmartbarSettings extends SettingsPreferenceFragment implements
     private ListPreference mButtonLongpressDelay;
     private CustomSeekBarPreference mButtonsAlpha;
     private CustomSeekBarPreference mCustomButtonScaling;
+    private ColorPickerPreference mNavbuttoncolor;
 
     private static final int MENU_RESET = Menu.FIRST;
     private static final int MENU_SAVE = Menu.FIRST + 1;
     private static final int MENU_RESTORE = Menu.FIRST + 2;
+    private static final int DEFAULT_TINT_COLOR = 0xFFFFFFFF;
 
     private static final int DIALOG_RESET_CONFIRM = 1;
     private static final int DIALOG_RESTORE_PROFILE = 2;
@@ -79,12 +83,16 @@ public class SmartbarSettings extends SettingsPreferenceFragment implements
     private static final String KEY_SMARTBAR_BACKUP = "smartbar_profile_save";
     private static final String KEY_SMARTBAR_RESTORE = "smartbar_profile_restore";
     private static final String PREF_NAVBAR_BUTTONS_ALPHA = "navbar_buttons_alpha";
+    private static final String NAVBAR_COLOR = "navbar_button_color";
     private static final String PREF_SMARTBAR_CUSTOM_ICON_SIZE = "smartbar_custom_icon_size";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.smartbar_settings);
+
+        int intColor;
+        String hexColor;
 
         mFooterPreferenceMixin.createFooterPreference().setTitle(R.string.smartbar_help_policy_notice_summary);
 
@@ -112,6 +120,14 @@ public class SmartbarSettings extends SettingsPreferenceFragment implements
                 "navbar_buttons_alpha", 255, UserHandle.USER_CURRENT);
         mButtonsAlpha.setValue(bAlpha / 1);
         mButtonsAlpha.setOnPreferenceChangeListener(this);
+
+        mNavbuttoncolor = (ColorPickerPreference) findPreference(NAVBAR_COLOR);
+        mNavbuttoncolor.setOnPreferenceChangeListener(this);
+        intColor = Settings.System.getInt(getContentResolver(),
+                Settings.System.NAVBAR_BUTTON_COLOR, DEFAULT_TINT_COLOR);
+        hexColor = String.format("#%08x", (0xffffffff & intColor));
+        mNavbuttoncolor.setSummary(hexColor);
+        mNavbuttoncolor.setNewPreviewColor(intColor);
 
         int longpressDelayVal = Settings.Secure.getIntForUser(getContentResolver(),
                 "smartbar_longpress_delay", 0, UserHandle.USER_CURRENT);
@@ -289,6 +305,14 @@ public class SmartbarSettings extends SettingsPreferenceFragment implements
             int val = (Integer) newValue;
             Settings.Secure.putIntForUser(getContentResolver(),
                     "smartbar_custom_icon_size", val, UserHandle.USER_CURRENT);
+            return true;
+        } else if (preference == mNavbuttoncolor) {
+            String hex = ColorPickerPreference.convertToARGB(
+                    Integer.valueOf(String.valueOf(newValue)));
+            preference.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.NAVBAR_BUTTON_COLOR, intHex);
             return true;
         }
         return false;
