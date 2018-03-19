@@ -59,6 +59,17 @@
         settings:units=""
         android:persistent="false" />
 
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+        android:key="navbar_tint_switch"
+        android:title="@string/navbar_button_tint_switch_title"
+        android:defaultValue="false" />
+
+     <com.android.settings.preference.colorpicker.ColorPickerPreference
+        android:key="navbar_button_color"
+        android:title="@string/navbar_button_tint_title"
+        android:defaultValue="0xffffffff"
+        android:dependency="navbar_tint_switch"/>
+
     <com.android.settings.du.preference.CustomSeekBarPreference
         android:key="smartbar_custom_icon_size"
         android:title="@string/smartbar_custom_icon_size_title"
