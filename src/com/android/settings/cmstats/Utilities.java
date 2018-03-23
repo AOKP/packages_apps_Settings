@@ -23,19 +23,44 @@ import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 
-import cyanogenmod.providers.CMSettings;
+import lineageos.providers.LineageSettings;
 
 import java.math.BigInteger;
 import java.net.NetworkInterface;
 import java.security.MessageDigest;
 
 public class Utilities {
-    public static String getUniqueID(Context context) {
+    public static String getDeviceID(Context context) {
         final String id = Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
         return digest(context.getPackageName() + id);
     }
 
-    public static String getCarrier(Context context) {
+    public static String getDeviceName() {
+        return SystemProperties.get("ro.product.device", Build.DEVICE);
+    }
+
+    public static String getBuildVersion() {
+        return SystemProperties.get("ro.build.version.release", Build.VERSION.RELEASE);
+    }
+
+    public static String getBuildDate() {
+        return SystemProperties.get("ro.build.date.utc", "0");
+    }
+
+    public static String getReleaseType() {
+        return SystemProperties.get("ro.aokp.releasetype", "unofficial");
+    }
+
+    public static String getCountryCode(Context context) {
+        TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+        String countryCode = tm.getNetworkCountryIso();
+        if (TextUtils.isEmpty(countryCode)) {
+            countryCode = "Unknown";
+        }
+        return countryCode;
+    }
+
+    public static String getCarrierName(Context context) {
         TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
         String carrier = tm.getNetworkOperatorName();
         if (TextUtils.isEmpty(carrier)) {
@@ -53,23 +78,6 @@ public class Utilities {
         return carrierId;
     }
 
-    public static String getCountryCode(Context context) {
-        TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
-        String countryCode = tm.getNetworkCountryIso();
-        if (TextUtils.isEmpty(countryCode)) {
-            countryCode = "Unknown";
-        }
-        return countryCode;
-    }
-
-    public static String getDevice() {
-        return SystemProperties.get("ro.cm.device", Build.PRODUCT);
-    }
-
-    public static String getModVersion() {
-        return SystemProperties.get("ro.cm.version", Build.DISPLAY);
-    }
-
     public static String digest(String input) {
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
@@ -85,8 +93,8 @@ public class Utilities {
      * @return Whether or not stats collection is enabled.
      */
     public static boolean isStatsCollectionEnabled(Context context) {
-        return CMSettings.Secure.getInt(context.getContentResolver(),
-                CMSettings.Secure.STATS_COLLECTION, 1) != 0;
+        return LineageSettings.Secure.getInt(context.getContentResolver(),
+                LineageSettings.Secure.STATS_COLLECTION, 1) != 0;
     }
 
     /**
@@ -96,7 +104,7 @@ public class Utilities {
      */
     public static void setStatsCollectionEnabled(Context context, boolean enabled) {
         int enable = (enabled) ? 1 : 0;
-        CMSettings.Secure.putInt(context.getContentResolver(),
-                CMSettings.Secure.STATS_COLLECTION, enable);
+        LineageSettings.Secure.putInt(context.getContentResolver(),
+                LineageSettings.Secure.STATS_COLLECTION, enable);
     }
 }

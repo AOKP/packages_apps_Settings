@@ -24,8 +24,6 @@ import android.os.Bundle;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import org.cyanogenmod.internal.logging.CMMetricsLogger;
-
 public class AnonymousStats extends SettingsPreferenceFragment {
 
     private static final String PREF_FILE_NAME = "CMStats";
@@ -72,10 +70,5 @@ public class AnonymousStats extends SettingsPreferenceFragment {
         }
         setLastJobId(context, lastId);
         return lastId;
-    }
-
-    @Override
-    protected int getMetricsCategory() {
-        return CMMetricsLogger.ANONYMOUS_STATS;
     }
 }

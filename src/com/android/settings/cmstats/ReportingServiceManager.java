@@ -26,7 +26,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.UserHandle;
 import android.util.Log;
-import cyanogenmod.providers.CMSettings;
+import lineageos.providers.LineageSettings;
 
 public class ReportingServiceManager extends BroadcastReceiver {
     private static final long MILLIS_PER_HOUR = 60L * 60L * 1000L;
