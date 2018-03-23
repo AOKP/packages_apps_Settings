@@ -1133,11 +1133,13 @@
     <string name="anonymous_learn_more">Learn more</string>
 
     <!-- Anonymous Statistics - Preview -->
-    <string name="preview_id_title">Unique ID</string>
-    <string name="preview_device_title">Device</string>
-    <string name="preview_version_title">Version</string>
-    <string name="preview_country_title">Country</string>
-    <string name="preview_carrier_title">Carrier</string>
+    <string name="preview_device_id_title">Device ID</string>
+    <string name="preview_device_name_title">Device name</string>
+    <string name="preview_build_version_title">Build version</string>
+    <string name="preview_build_date_title">Build date</string>
+    <string name="preview_release_type_title">Release type</string>
+    <string name="preview_country_code_title">Country code</string>
+    <string name="preview_carrier_name_title">Carrier</string>
     <string name="stats_collection_title">Stats collection</string>
     <string name="stats_collection_summary">When enabled, allows metrics collection.</string>
 </resources>
