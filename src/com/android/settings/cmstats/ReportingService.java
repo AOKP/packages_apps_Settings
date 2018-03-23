@@ -42,29 +42,29 @@ public class ReportingService extends IntentService {
     protected void onHandleIntent(Intent intent) {
         JobScheduler js = (JobScheduler) getSystemService(Context.JOB_SCHEDULER_SERVICE);
 
-        String deviceId = Utilities.getUniqueID(getApplicationContext());
-        String deviceName = Utilities.getDevice();
-        String deviceVersion = Utilities.getModVersion();
-        String deviceCountry = Utilities.getCountryCode(getApplicationContext());
-        String deviceCarrier = Utilities.getCarrier(getApplicationContext());
-        String deviceCarrierId = Utilities.getCarrierId(getApplicationContext());
+        String deviceId = Utilities.getDeviceID(getApplicationContext());
+        String deviceName = Utilities.getDeviceName();
+        String buildVersion = Utilities.getBuildVersion();
+        String buildDate = Utilities.getBuildDate();
+        String releaseType = Utilities.getReleaseType();
+        String countryCode = Utilities.getCountryCode(getApplicationContext());
+        String carrierName = Utilities.getCarrierName(getApplicationContext());
+        String carrierId = Utilities.getCarrierId(getApplicationContext());
 
         final int cmOrgJobId = AnonymousStats.getNextJobId(getApplicationContext());
 
         if (DEBUG) Log.d(TAG, "scheduling job id: " + cmOrgJobId);
 
-        PersistableBundle cmBundle = new PersistableBundle();
-        cmBundle.putString(StatsUploadJobService.KEY_DEVICE_NAME, deviceName);
-        cmBundle.putString(StatsUploadJobService.KEY_UNIQUE_ID, deviceId);
-        cmBundle.putString(StatsUploadJobService.KEY_VERSION, deviceVersion);
-        cmBundle.putString(StatsUploadJobService.KEY_COUNTRY, deviceCountry);
-        cmBundle.putString(StatsUploadJobService.KEY_CARRIER, deviceCarrier);
-        cmBundle.putString(StatsUploadJobService.KEY_CARRIER_ID, deviceCarrierId);
-        cmBundle.putLong(StatsUploadJobService.KEY_TIMESTAMP, System.currentTimeMillis());
-
-        // set job types
-        cmBundle.putInt(StatsUploadJobService.KEY_JOB_TYPE,
-                StatsUploadJobService.JOB_TYPE_CMORG);
+        PersistableBundle bundle = new PersistableBundle();
+        bundle.putString(StatsUploadJobService.KEY_DEVICE_ID, deviceId);
+        bundle.putString(StatsUploadJobService.KEY_DEVICE_NAME, deviceName);
+        bundle.putString(StatsUploadJobService.KEY_BUILD_VERSION, buildVersion);
+        bundle.putString(StatsUploadJobService.KEY_BUILD_DATE, buildDate);
+        bundle.putString(StatsUploadJobService.KEY_RELEASE_TYPE, releaseType);
+        bundle.putString(StatsUploadJobService.KEY_COUNTRY_CODE, countryCode);
+        bundle.putString(StatsUploadJobService.KEY_CARRIER_NAME, carrierName);
+        bundle.putString(StatsUploadJobService.KEY_CARRIER_ID, carrierId);
+        bundle.putLong(StatsUploadJobService.KEY_TIMESTAMP, System.currentTimeMillis());
 
         // schedule cmorg stats upload
         js.schedule(new JobInfo.Builder(cmOrgJobId, new ComponentName(getPackageName(),

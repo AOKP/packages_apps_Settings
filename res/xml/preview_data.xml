@@ -20,33 +20,45 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <Preference
-        android:key="preview_id"
+        android:key="preview_device_id"
         style="?android:preferenceInformationStyle"
-        android:title="@string/preview_id_title"
+        android:title="@string/preview_device_id_title"
         android:summary="%s" />
 
     <Preference
-        android:key="preview_device"
+        android:key="preview_device_name"
         style="?android:preferenceInformationStyle"
-        android:title="@string/preview_device_title"
+        android:title="@string/preview_device_name_title"
         android:summary="%s" />
 
     <Preference
-        android:key="preview_version"
+        android:key="preview_build_version"
         style="?android:preferenceInformationStyle"
-        android:title="@string/preview_version_title"
+        android:title="@string/preview_build_version_title"
         android:summary="%s" />
 
     <Preference
-        android:key="preview_country"
+        android:key="preview_build_date"
         style="?android:preferenceInformationStyle"
-        android:title="@string/preview_country_title"
+        android:title="@string/preview_build_date_title"
         android:summary="%s" />
 
     <Preference
-        android:key="preview_carrier"
+        android:key="preview_release_type"
         style="?android:preferenceInformationStyle"
-        android:title="@string/preview_carrier_title"
+        android:title="@string/preview_release_type_title"
+        android:summary="%s" />
+
+    <Preference
+        android:key="preview_country_code"
+        style="?android:preferenceInformationStyle"
+        android:title="@string/preview_country_code_title"
+        android:summary="%s" />
+
+    <Preference
+        android:key="preview_carrier_name"
+        style="?android:preferenceInformationStyle"
+        android:title="@string/preview_carrier_name_title"
         android:summary="%s" />
 
 </PreferenceScreen>
