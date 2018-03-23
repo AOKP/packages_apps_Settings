@@ -46,14 +46,13 @@ public class StatsUploadJobService extends JobService {
     private static final String TAG = StatsUploadJobService.class.getSimpleName();
     private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
 
-    public static final String KEY_JOB_TYPE = "job_type";
-    public static final int JOB_TYPE_CMORG = 1;
-
-    public static final String KEY_UNIQUE_ID = "uniqueId";
+    public static final String KEY_DEVICE_ID = "deviceId";
     public static final String KEY_DEVICE_NAME = "deviceName";
-    public static final String KEY_VERSION = "version";
-    public static final String KEY_COUNTRY = "country";
-    public static final String KEY_CARRIER = "carrier";
+    public static final String KEY_BUILD_VERSION = "buildVersion";
+    public static final String KEY_BUILD_DATE = "buildDate";
+    public static final String KEY_RELEASE_TYPE = "releaseType";
+    public static final String KEY_COUNTRY_CODE = "countryCode";
+    public static final String KEY_CARRIER_NAME = "carrierName";
     public static final String KEY_CARRIER_ID = "carrierId";
     public static final String KEY_TIMESTAMP = "timeStamp";
 
@@ -105,27 +104,25 @@ public class StatsUploadJobService extends JobService {
 
             PersistableBundle extras = mJobParams.getExtras();
 
-            String deviceId = extras.getString(KEY_UNIQUE_ID);
+            String deviceId = extras.getString(KEY_DEVICE_ID);
             String deviceName = extras.getString(KEY_DEVICE_NAME);
-            String deviceVersion = extras.getString(KEY_VERSION);
-            String deviceCountry = extras.getString(KEY_COUNTRY);
-            String deviceCarrier = extras.getString(KEY_CARRIER);
-            String deviceCarrierId = extras.getString(KEY_CARRIER_ID);
+            String buildVersion = extras.getString(KEY_BUILD_VERSION);
+            String buildDate = extras.getString(KEY_BUILD_DATE);
+            String releaseType = extras.getString(KEY_RELEASE_TYPE);
+            String countryCode = extras.getString(KEY_COUNTRY_CODE);
+            String carrierName = extras.getString(KEY_CARRIER_NAME);
+            String carrierId = extras.getString(KEY_CARRIER_ID);
             long timeStamp = extras.getLong(KEY_TIMESTAMP);
 
             boolean success = false;
-            int jobType = extras.getInt(KEY_JOB_TYPE, -1);
             if (!isCancelled()) {
-                switch (jobType) {
-                    case JOB_TYPE_CMORG:
-                        try {
-                            success = uploadToCM(deviceId, deviceName, deviceVersion, deviceCountry,
-                                    deviceCarrier, deviceCarrierId);
-                        } catch (IOException e) {
-                            Log.e(TAG, "Could not upload stats checkin to commnity server", e);
-                            success = false;
-                        }
-                        break;
+                try {
+                    success = upload(deviceId, deviceName,
+                            buildVersion, buildDate, releaseType,
+                            countryCode, carrierName, carrierId);
+                } catch (IOException e) {
+                    Log.e(TAG, "Could not upload stats checkin to aokp server", e);
+                    success = false;
                 }
             }
             if (DEBUG)
@@ -142,22 +139,41 @@ public class StatsUploadJobService extends JobService {
     }
 
 
-    private boolean uploadToCM(String deviceId, String deviceName, String deviceVersion,
-                               String deviceCountry, String deviceCarrier, String deviceCarrierId)
+    private boolean upload(String deviceId, String deviceName,
+                           String buildVersion, String buildDate, String releaseType,
+                           String countryCode, String carrierName, String carrierId)
             throws IOException {
 
-        final Uri uri = Uri.parse(getString(R.string.stats_cm_url)).buildUpon()
-                .appendQueryParameter("device_hash", deviceId)
+        final URL url = new URL(getString(R.string.stats_aokp_url));
+        Uri uri = new Uri.Builder()
+                .appendQueryParameter("device_id", deviceId)
                 .appendQueryParameter("device_name", deviceName)
-                .appendQueryParameter("device_version", deviceVersion)
-                .appendQueryParameter("device_country", deviceCountry)
-                .appendQueryParameter("device_carrier", deviceCarrier)
-                .appendQueryParameter("device_carrier_id", deviceCarrierId).build();
-        URL url = new URL(uri.toString());
-        HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+                .appendQueryParameter("build_version", buildVersion)
+                .appendQueryParameter("build_date", buildDate)
+                .appendQueryParameter("release_type", releaseType)
+                .appendQueryParameter("country_code", countryCode)
+                .appendQueryParameter("carrier_name", carrierName)
+                .appendQueryParameter("carrier_id", carrierId)
+                .build();
+
+        HttpURLConnection urlConnection = (HttpURLConnection)url.openConnection();
         try {
+            urlConnection.setConnectTimeout(60000);
+            urlConnection.setReadTimeout(60000);
             urlConnection.setInstanceFollowRedirects(true);
+            urlConnection.setRequestMethod("POST");
+            urlConnection.setDoInput(true);
             urlConnection.setDoOutput(true);
+            urlConnection.connect();
+
+            OutputStream os = urlConnection.getOutputStream();
+            BufferedWriter writer = new BufferedWriter(
+                    new OutputStreamWriter(os, "UTF-8"));
+            writer.write(uri.getEncodedQuery());
+            writer.flush();
+            writer.close();
+            os.close();
+
             urlConnection.connect();
 
             final int responseCode = urlConnection.getResponseCode();
