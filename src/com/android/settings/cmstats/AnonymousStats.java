@@ -21,10 +21,9 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-
-import org.cyanogenmod.internal.logging.CMMetricsLogger;
 
 public class AnonymousStats extends SettingsPreferenceFragment {
 
@@ -75,7 +74,7 @@ public class AnonymousStats extends SettingsPreferenceFragment {
     }
 
     @Override
-    protected int getMetricsCategory() {
-        return CMMetricsLogger.ANONYMOUS_STATS;
+    public int getMetricsCategory() {
+        return MetricsProto.MetricsEvent.ANONYMOUS_STATS;
     }
 }

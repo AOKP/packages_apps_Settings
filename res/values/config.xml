@@ -133,6 +133,6 @@
     <bool name="confirm_to_switch_data_service">false</bool>
 
     <!-- Metrics server endpoint -->
-    <string name="stats_cm_url">https://stats.cyanogenmod.org/submit</string>
+    <string name="stats_aokp_url">http://stats.aokp.co/submit.php</string>
 
 </resources>
