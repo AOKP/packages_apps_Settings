@@ -243,10 +243,11 @@ public class ConversationMessageView extends FrameLayout {
         final int timestampColorResId = mIncoming ? R.color.timestamp_text_incoming
                 : R.color.timestamp_text_outgoing;
         final int messageColor = getContext().getColor(messageColorResId);
+        final int timestampColor = getContext().getColor(timestampColorResId);
 
         mMessageTextView.setTextColor(messageColor);
         mMessageTextView.setLinkTextColor(messageColor);
-        mStatusTextView.setTextColor(timestampColorResId);
+        mStatusTextView.setTextColor(timestampColor);
     }
 
     private static Drawable getTintedDrawable(final Context context, final Drawable drawable,
