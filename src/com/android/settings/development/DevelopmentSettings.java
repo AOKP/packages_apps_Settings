@@ -142,6 +142,7 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
     private static final String ENABLE_OEM_UNLOCK = "oem_unlock_enable";
     private static final String HDCP_CHECKING_KEY = "hdcp_checking";
     private static final String HDCP_CHECKING_PROPERTY = "persist.sys.hdcp_checking";
+    private static final String FORCE_ALLOW_BACKUP_KEY = "force_allow_backup";
     private static final String LOCAL_BACKUP_PASSWORD = "local_backup_password";
     private static final String HARDWARE_UI_PROPERTY = "persist.sys.ui.hw";
     private static final String MSAA_PROPERTY = "debug.egl.force_msaa";
@@ -298,6 +299,7 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
     private SwitchPreference mDebugViewAttributes;
     private SwitchPreference mForceAllowOnExternal;
 
+    private SwitchPreference mBackupAllApps;
     private Preference mPassword;
     private String mDebugApp;
     private Preference mDebugAppPref;
@@ -487,6 +489,9 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
 
         mDebugViewAttributes = findAndInitSwitchPref(DEBUG_VIEW_ATTRIBUTES);
         mForceAllowOnExternal = findAndInitSwitchPref(FORCE_ALLOW_ON_EXTERNAL_KEY);
+        mBackupAllApps = (SwitchPreference)findPreference(FORCE_ALLOW_BACKUP_KEY);
+        mBackupAllApps.setOnPreferenceChangeListener(this);
+        mAllPrefs.add(mBackupAllApps);
         mPassword = findPreference(LOCAL_BACKUP_PASSWORD);
         mAllPrefs.add(mPassword);
         mForceAuthorizeSubstratumPackages = findAndInitSwitchPref(FORCE_AUTHORIZE_SUBSTRATUM_PACKAGES);
@@ -882,6 +887,7 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         updateSwitchPreference(mForceAllowOnExternal, Settings.Global.getInt(cr,
                 Settings.Global.FORCE_ALLOW_ON_EXTERNAL, 0) != 0);
         updateHdcpValues();
+        updateBackupAllAppsOptions();
         updatePasswordSummary();
         updateDebuggerOptions();
         updateMockLocation();
@@ -1009,6 +1015,17 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         updateAllOptions();
         mDontPokeProperties = false;
         pokeSystemProperties();
+    }
+
+    private void updateBackupAllAppsOptions() {
+        boolean value = SystemProperties.getBoolean(ApplicationInfo.PROPERTY_FORCE_ALLOW_BACKUP, false);
+        mBackupAllApps.setChecked(value);
+    }
+
+    private void writeBackupAllAppsOptions(Object newValue) {
+        SystemProperties.set(ApplicationInfo.PROPERTY_FORCE_ALLOW_BACKUP,
+                newValue == null ? "" : newValue.toString());
+        updateBackupAllAppsOptions();
     }
 
     private void resetAdbNotifyOptions() {
@@ -2890,6 +2907,8 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
                 writeRootAccessOptions(newValue);
             }
             return true;
+        } else if (preference == mBackupAllApps) {
+            writeBackupAllAppsOptions(newValue);
         }
         return false;
     }
